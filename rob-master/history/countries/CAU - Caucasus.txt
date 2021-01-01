@@ -1,0 +1,57 @@
+capital = 217
+oob = "CAU_1934"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	early_fighter = 1
+	basic_submarine = 1
+	basic_light_cruiser = 1
+	basic_carrier = 1
+	transport = 1
+}
+
+add_ideas = {
+extensive_conscription
+}
+
+set_country_flag = RUS_warlord
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1930.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 1
+	conservative = 2
+	authoritharian = 8
+	reactionary = 89
+	pelekist = 0
+}
+
+create_country_leader = {
+	name = "Pyotr Wrangel"
+	desc = "POLITICS_Afrikan_Bogaevsky_DESC"
+	picture = "Portrait_Soviet_Pjotr_Nikolajewitsch_Wrangel_3.tga"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+		
+	}
+}
+
+create_faction = south_russian_army
+add_to_faction = CAU
+add_to_faction = CAA
+add_to_faction = CRM

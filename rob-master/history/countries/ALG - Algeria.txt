@@ -1,0 +1,36 @@
+﻿capital = 459
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = authoritharian
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 4
+	socialist = 4
+	democratic_socialist = 2
+	social_democracy = 2
+	social_liberal = 2
+	conservative = 2
+	authoritharian = 2
+	reactionary = 81
+	pelekist = 2
+}
+
+create_country_leader = {
+	name = "Ahmed Ben Bella"
+	desc = ""
+	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}

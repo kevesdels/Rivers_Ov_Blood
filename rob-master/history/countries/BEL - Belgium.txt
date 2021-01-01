@@ -1,0 +1,136 @@
+capital = 295
+
+oob = "BEL_1934"
+
+
+set_research_slots = 2
+set_stability = 0.3
+set_war_support = 0.5
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	trench_warfare = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+	add_ideas = {
+		extensive_conscription
+		BEL_kingdom_in_exile
+		BEL_british_dominance
+		BEL_native_ignorance
+	}
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 5
+	authoritharian = 5
+	reactionary = 85
+	pelekist = 5
+}
+
+
+
+set_convoys = 80
+
+create_country_leader = {
+	name = "Leopold III of Belgium"
+	desc = "POLITICS_HUBERT_PIERLOT_DESC"
+	picture = "BEL_King_Leopold_III.tga"
+	expire = "1965.1.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Leopold III of Belgium"
+	desc = "POLITICS_JOSEPH_JACQUEMOTTE_DESC"
+	picture = "BEL_King_Leopold_III.tga"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Leopold III of Belgium"
+	desc = "POLITICS_LEON_DEGRELLE_DESC"
+	picture = "BEL_King_Leopold_III.tga"
+	expire = "1965.1.1"
+	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Leopold III of Belgium"
+	desc = "POLITICS_LEON_DEGRELLE_DESC"
+	picture = "BEL_King_Leopold_III.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Leopold III of Belgium"
+	desc = "POLITICS_LEON_DEGRELLE_DESC"
+	picture = "BEL_King_Leopold_III.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Leopold III of Belgium"
+	desc = "POLITICS_LEON_DEGRELLE_DESC"
+	picture = "BEL_King_Leopold_III.tga"
+	expire = "1965.1.1"
+	ideology = social_democracy_subtype
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "M.C.L. Keyaerts"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { trait_mountaineer hill_fighter }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_navy_leader = {
+	name = "Georges Timmermans"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+	traits = { bold }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 4
+}

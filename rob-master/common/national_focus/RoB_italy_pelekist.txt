@@ -1,0 +1,1275 @@
+focus_tree = {
+	id = italy_pelekist
+	country = {
+		factor = 0
+
+	}
+	#Focus for Knights of Pelekism
+	focus = {
+		id = ITAp_knightsofpelekism
+		icon = GFX_goal_unknown
+		x = 8
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAp_repaganizetheitalians 
+		}
+		prerequisite = { 
+			focus = ITAp_internationalepelekista 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Pelekist Italy!
+	focus = {
+		id = ITAp_pelekistitaly
+		icon = GFX_goal_unknown
+		x = 17
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Evola Becomes the Leader
+	focus = {
+		id = ITAp_evolabecomestheleader
+		icon = GFX_goal_unknown
+		x = 7
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_pelekistitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Marrineti Becomes the Leader
+	focus = {
+		id = ITAp_marrinetibecomestheleader
+		icon = GFX_goal_unknown
+		x = 13
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_pelekistitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Fontaine Becomes the Leader
+	focus = {
+		id = ITAp_fontainebecomestheleader
+		icon = GFX_goal_unknown
+		x = 19
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_pelekistitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Everyone Armed!
+	focus = {
+		id = ITAp_everyonearmed
+		icon = GFX_goal_unknown
+		x = 13
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_militarizethefactories }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Take Land from Natives
+	focus = {
+		id = ITAp_takelandfromnatives
+		icon = GFX_goal_unknown
+		x = 7
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_italinizationcampaigns }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Roman Spirit
+	focus = {
+		id = ITAp_romanspirit
+		icon = GFX_goal_unknown
+		x = 5
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_abloodandsoilpolicy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Italinization Campaigns
+	focus = {
+		id = ITAp_italinizationcampaigns
+		icon = GFX_goal_unknown
+		x = 7
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_farmlandforitaliansonly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Blood and Soil Policy
+	focus = {
+		id = ITAp_abloodandsoilpolicy
+		icon = GFX_goal_unknown
+		x = 5
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_revivetheitalianwarriorspirit }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Restore the old Powers of the Church
+	focus = {
+		id = ITAp_restoretheoldpowersofthechurch
+		icon = GFX_goal_unknown
+		x = 17
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_formstateownedcharities }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Form State Owned Charities
+	focus = {
+		id = ITAp_formstateownedcharities
+		icon = GFX_goal_unknown
+		x = 17
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_CSlydtFR }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Christus Rex
+	focus = {
+		id = ITAp_christusrex
+		icon = GFX_goal_unknown
+		x = 19
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAp_restoretheoldpowersofthechurch 
+		}
+		prerequisite = { 
+			focus = ITAp_christianizehistory 
+		}
+		prerequisite = { 
+			focus = ITAp_anationonlyforchristians 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Nation Only For Christians
+	focus = {
+		id = ITAp_anationonlyforchristians
+		icon = GFX_goal_unknown
+		x = 21
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_purgetheheathenandheretic }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Christianize History
+	focus = {
+		id = ITAp_christianizehistory
+		icon = GFX_goal_unknown
+		x = 19
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_armedpriests }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Mandatory Church Attendance
+	focus = {
+		id = ITAp_mandatorychurchattendance
+		icon = GFX_goal_unknown
+		x = 19
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_destroydemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Purge the Heathen and Heretic
+	focus = {
+		id = ITAp_purgetheheathenandheretic
+		icon = GFX_goal_unknown
+		x = 21
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_purgetheleft }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Armed Priests
+	focus = {
+		id = ITAp_armedpriests
+		icon = GFX_goal_unknown
+		x = 19
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_mandatorychurchattendance }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Cult of Personality
+	focus = {
+		id = ITAp_cultofpersonality
+		icon = GFX_goal_unknown
+		x = 17
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_destroydemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Stricten the Army
+	focus = {
+		id = ITAp_strictenthearmy
+		icon = GFX_goal_unknown
+		x = 17
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_bzhRQvXc }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Destroy Democracy
+	focus = {
+		id = ITAp_destroydemocracy
+		icon = GFX_goal_unknown
+		x = 19
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAp_militarybasedeconomy 
+		}
+		prerequisite = { 
+			focus = ITAp_autonomyforchristians 
+		}
+		prerequisite = { 
+			focus = ITAp_strictenthearmy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Corporatist Economics
+	focus = {
+		id = ITAp_corporatisteconomics
+		icon = GFX_goal_unknown
+		x = 19
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_fontainebecomestheleader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Tackle Defeatism
+	focus = {
+		id = ITAp_tackledefeatism
+		icon = GFX_goal_unknown
+		x = 17
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_fontainebecomestheleader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Unite State and Church
+	focus = {
+		id = ITAp_unitestateandchurch
+		icon = GFX_goal_unknown
+		x = 21
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_fontainebecomestheleader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Form Christian Militia's
+	focus = {
+		id = ITAp_formchristianmilitias
+		icon = GFX_goal_unknown
+		x = 21
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_unitestateandchurch }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Military Based Economy
+	focus = {
+		id = ITAp_militarybasedeconomy
+		icon = GFX_goal_unknown
+		x = 19
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_conscripttheunemployed }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Conscript the Unemployed
+	focus = {
+		id = ITAp_conscripttheunemployed
+		icon = GFX_goal_unknown
+		x = 19
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_corporatisteconomics }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Autonomy for Christians
+	focus = {
+		id = ITAp_autonomyforchristians
+		icon = GFX_goal_unknown
+		x = 21
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_formchristianmilitias }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Nationalist Education
+	focus = {
+		id = ITAp_nationalisteducation
+		icon = GFX_goal_unknown
+		x = 17
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_tackledefeatism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Purge the Left
+	focus = {
+		id = ITAp_purgetheleft
+		icon = GFX_goal_unknown
+		x = 21
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_destroydemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Revive the Italian Warrior Spirit
+	focus = {
+		id = ITAp_revivetheitalianwarriorspirit
+		icon = GFX_goal_unknown
+		x = 5
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_evolabecomestheleader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Farmland for Italians Only
+	focus = {
+		id = ITAp_farmlandforitaliansonly
+		icon = GFX_goal_unknown
+		x = 7
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_evolabecomestheleader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Look at foreign examples
+	focus = {
+		id = ITAp_lookatforeignexamples
+		icon = GFX_goal_unknown
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_evolabecomestheleader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Pelekist Education
+	focus = {
+		id = ITAp_apelekisteducation
+		icon = GFX_goal_unknown
+		x = 9
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_lookatforeignexamples }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Italian Pride
+	focus = {
+		id = ITAp_italianpride
+		icon = GFX_goal_unknown
+		x = 9
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_apelekisteducation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Evola Becomes Rex
+	focus = {
+		id = ITAp_evolabecomesrex
+		icon = GFX_goal_unknown
+		x = 7
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAp_romanspirit 
+		}
+		prerequisite = { 
+			focus = ITAp_italianpride 
+		}
+		prerequisite = { 
+			focus = ITAp_takelandfromnatives 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Create Racial Policies
+	focus = {
+		id = ITAp_createracialpolicies
+		icon = GFX_goal_unknown
+		x = 5
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_evolabecomesrex }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Promote Esoterism
+	focus = {
+		id = ITAp_promoteesoterism
+		icon = GFX_goal_unknown
+		x = 7
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_evolabecomesrex }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Indo-Europeanism
+	focus = {
+		id = ITAp_indoeuropeanism
+		icon = GFX_goal_unknown
+		x = 9
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_evolabecomesrex }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Vedic Example
+	focus = {
+		id = ITAp_thevedicexample
+		icon = GFX_goal_unknown
+		x = 5
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_createracialpolicies }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Italian Kshatriya Officers
+	focus = {
+		id = ITAp_italiankshatriyaofficers
+		icon = GFX_goal_unknown
+		x = 5
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_thevedicexample }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for An Esoteric Upper Class
+	focus = {
+		id = ITAp_anesotericupperclass
+		icon = GFX_goal_unknown
+		x = 7
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_promoteesoterism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Fund Foreign Pelekists
+	focus = {
+		id = ITAp_fundforeignpelekists
+		icon = GFX_goal_unknown
+		x = 9
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_indoeuropeanism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Internationale Pelekista
+	focus = {
+		id = ITAp_internationalepelekista
+		icon = GFX_goal_unknown
+		x = 9
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_fundforeignpelekists }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Repaganize the Italians
+	focus = {
+		id = ITAp_repaganizetheitalians
+		icon = GFX_goal_unknown
+		x = 7
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_anesotericupperclass }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Italian Brahmins
+	focus = {
+		id = ITAp_italianbrahmins
+		icon = GFX_goal_unknown
+		x = 6
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAp_repaganizetheitalians 
+		}
+		prerequisite = { 
+			focus = ITAp_italiankshatriyaofficers 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The New Pontifex Maximus
+	focus = {
+		id = ITAp_thenewpontifexmaximus
+		icon = GFX_goal_unknown
+		x = 7
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAp_italianbrahmins 
+		}
+		prerequisite = { 
+			focus = ITAp_knightsofpelekism 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Change the Education
+	focus = {
+		id = ITAp_changetheeducation
+		icon = GFX_goal_unknown
+		x = 15
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_marrinetibecomestheleader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Industrialize Italy
+	focus = {
+		id = ITAp_industrializeitaly
+		icon = GFX_goal_unknown
+		x = 13
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_marrinetibecomestheleader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Warrior Spirit
+	focus = {
+		id = ITAp_thewarriorspirit
+		icon = GFX_goal_unknown
+		x = 11
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_marrinetibecomestheleader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Cult of war
+	focus = {
+		id = ITAp_cultofwar
+		icon = GFX_goal_unknown
+		x = 11
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_thewarriorspirit }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Change Italian Culture
+	focus = {
+		id = ITAp_changeitalianculture
+		icon = GFX_goal_unknown
+		x = 15
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_changetheeducation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Militarize the Factories
+	focus = {
+		id = ITAp_militarizethefactories
+		icon = GFX_goal_unknown
+		x = 13
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_industrializeitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The First Campaign
+	focus = {
+		id = ITAp_thefirstcampaign
+		icon = GFX_goal_unknown
+		x = 11
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_cultofwar }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Futurist Ministry of Culture
+	focus = {
+		id = ITAp_futuristministryofculture
+		icon = GFX_goal_unknown
+		x = 15
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_changeitalianculture }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Duce!
+	focus = {
+		id = ITAp_duce
+		icon = GFX_goal_unknown
+		x = 13
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAp_thefirstcampaign 
+		}
+		prerequisite = { 
+			focus = ITAp_futuristministryofculture 
+		}
+		prerequisite = { 
+			focus = ITAp_everyonearmed 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Further Militarization
+	focus = {
+		id = ITAp_furthermilitarization
+		icon = GFX_goal_unknown
+		x = 13
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_duce }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for State Orchestrated Burnings
+	focus = {
+		id = ITAp_stateorchestratedburnings
+		icon = GFX_goal_unknown
+		x = 13
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_furthermilitarization }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Give Animals More Rights than Women
+	focus = {
+		id = ITAp_giveanimalsmorerightsthanwomen
+		icon = GFX_goal_unknown
+		x = 15
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_duce }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Ban "Anti-Futurist" Items
+	focus = {
+		id = ITAp_banantifuturistitems
+		icon = GFX_goal_unknown
+		x = 15
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_giveanimalsmorerightsthanwomen }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Futurist Architecture
+	focus = {
+		id = ITAp_futuristarchitecture
+		icon = GFX_goal_unknown
+		x = 13
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_stateorchestratedburnings }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Warrior Culture
+	focus = {
+		id = ITAp_awarriorculture
+		icon = GFX_goal_unknown
+		x = 11
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_duce }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Let the Soldiers do what they want
+	focus = {
+		id = ITAp_letthesoldiersdowhattheywant
+		icon = GFX_goal_unknown
+		x = 11
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_awarriorculture }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Slaver Army
+	focus = {
+		id = ITAp_aslaverarmy
+		icon = GFX_goal_unknown
+		x = 11
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_letthesoldiersdowhattheywant }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Start Mass Terror Campaigns
+	focus = {
+		id = ITAp_startmassterrorcampaigns
+		icon = GFX_goal_unknown
+		x = 15
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_banantifuturistitems }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Futurist Italy!
+	focus = {
+		id = ITAp_afuturistitaly
+		icon = GFX_goal_unknown
+		x = 13
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAp_aslaverarmy 
+		}
+		prerequisite = { 
+			focus = ITAp_startmassterrorcampaigns 
+		}
+		prerequisite = { 
+			focus = ITAp_futuristarchitecture 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Armored Warfare
+	focus = {
+		id = ITAp_armoredwarfare
+		icon = GFX_goal_unknown
+		x = 28
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_anewdoctrine }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Reform the General Staff
+	focus = {
+		id = ITAp_reformthegeneralstaff
+		icon = GFX_goal_unknown
+		x = 31
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_anewdoctrine }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Mass Warfare
+	focus = {
+		id = ITAp_masswarfare
+		icon = GFX_goal_unknown
+		x = 34
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_anewdoctrine }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Armored Exercises
+	focus = {
+		id = ITAp_armoredexercises
+		icon = GFX_goal_unknown
+		x = 28
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_italiantankproject }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Continue Armor Research
+	focus = {
+		id = ITAp_continuearmorresearch
+		icon = GFX_goal_unknown
+		x = 28
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_armoredexercises }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Open New Officer Schools
+	focus = {
+		id = ITAp_opennewofficerschools
+		icon = GFX_goal_unknown
+		x = 31
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_reformthegeneralstaff }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Modernize Infantry Equipment
+	focus = {
+		id = ITAp_modernizeinfantryequipment
+		icon = GFX_goal_unknown
+		x = 31
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_opennewofficerschools }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Continue Modernization
+	focus = {
+		id = ITAp_continuemodernization
+		icon = GFX_goal_unknown
+		x = 31
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_modernizeinfantryequipment }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Mass Armament Production
+	focus = {
+		id = ITAp_massarmamentproduction
+		icon = GFX_goal_unknown
+		x = 34
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_masswarfare }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Citizen Militias
+	focus = {
+		id = ITAp_citizenmilitias
+		icon = GFX_goal_unknown
+		x = 34
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_massarmamentproduction }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The New Italian Amry
+	focus = {
+		id = ITAp_thenewitalianamry
+		icon = GFX_goal_unknown
+		x = 29
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAp_directrulefromrome
+			focus = ITAp_continuemodernization
+		}
+		prerequisite = { 
+			focus = ITAp_continuearmorresearch
+		}
+		prerequisite = { 
+			focus = ITAp_KgIpfdLx
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Bring the Army in Line
+	focus = {
+		id = ITAp_bringthearmyinline
+		icon = GFX_goal_unknown
+		x = 27
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_pelekistitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Loyal Administrators
+	focus = {
+		id = ITAp_loyaladministrators
+		icon = GFX_goal_unknown
+		x = 24
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_supresspartisans }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Direct Rule From Rome
+	focus = {
+		id = ITAp_directrulefromrome
+		icon = GFX_goal_unknown
+		x = 24
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_loyaladministrators }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A New Doctrine
+	focus = {
+		id = ITAp_anewdoctrine
+		icon = GFX_goal_unknown
+		x = 31
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_bringthearmyinline }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Send Blueshirts to Colonies
+	focus = {
+		id = ITAp_sendblueshirtstocolonies
+		icon = GFX_goal_unknown
+		x = 24
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_bringthearmyinline }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Subjugate the local Administrations
+	focus = {
+		id = ITAp_subjugatethelocaladministrations
+		icon = GFX_goal_unknown
+		x = 24
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_sendblueshirtstocolonies }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Supress Partisans
+	focus = {
+		id = ITAp_supresspartisans
+		icon = GFX_goal_unknown
+		x = 24
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_subjugatethelocaladministrations }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Italian Tank Project
+	focus = {
+		id = ITAp_italiantankproject
+		icon = GFX_goal_unknown
+		x = 28
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_armoredwarfare }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Expand Conscription
+	focus = {
+		id = ITAp_expandconscription
+		icon = GFX_goal_unknown
+		x = 34
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAp_citizenmilitias }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#End of focuses 
+ }

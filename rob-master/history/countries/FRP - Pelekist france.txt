@@ -1,0 +1,57 @@
+capital = 23
+
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	early_fighter = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+set_politics = {
+	ruling_party = pelekist
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 0
+	authoritharian = 5
+	reactionary = 4
+	pelekist = 91
+}
+
+create_country_leader = {
+	name = "United Pelekist Congress"
+	desc = "POLITICS_KONSTANTIN_PATS_DESC"
+	picture = "french_pelekist_council.tga"
+	expire = "1965.1.1"
+	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}

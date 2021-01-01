@@ -1,0 +1,253 @@
+##### Division Templates #####
+division_template = {
+name = "Pelekist Militia"
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Division d'Infanterie"		
+	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. de Forteresse
+	# Difference is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+	}
+}
+
+units = {
+division = {
+name = "Pelekist Militia"
+location = 11565
+division_template = "Pelekist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.6
+}
+division = {
+name = "Pelekist Militia"
+location = 595
+division_template = "Pelekist Militia"
+start_experience_factor = 0.3
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Pelekist Militia"
+location = 11582
+division_template = "Pelekist Militia"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "Pelekist Militia"
+location = 629
+division_template = "Pelekist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.4
+
+}
+division = {
+name = "Pelekist Militia"
+location = 11596
+division_template = "Pelekist Militia"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "Pelekist Militia"
+location = 9478
+division_template = "Pelekist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Pelekist Militia"
+location = 11463
+division_template = "Pelekist Militia"
+start_experience_factor = 0.3
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Pelekist Militia"
+location = 3509
+division_template = "Pelekist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.3
+
+}
+division = {
+name = "Pelekist Militia"
+location = 3523
+division_template = "Pelekist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.3
+
+}
+division = {
+name = "Pelekist Militia"
+location = 527
+division_template = "Pelekist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Pelekist Militia"
+location = 11508
+division_template = "Pelekist Militia"
+start_experience_factor = 0.4
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Pelekist Militia"
+location = 13340
+division_template = "Pelekist Militia"
+start_experience_factor = 0.3
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Pelekist Militia"
+location = 13342
+division_template = "Pelekist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Pelekist Militia"
+location = 6572
+division_template = "Pelekist Militia"
+start_experience_factor = 0.4
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "Pelekist Militia"
+location = 9732
+division_template = "Pelekist Militia"
+start_experience_factor = 0.1
+
+
+}
+division = {
+name = "Pelekist Militia"
+location = 9738
+division_template = "Pelekist Militia"
+start_experience_factor = 0.1
+
+
+}
+division = {
+name = "Pelekist Militia"
+location = 11716
+division_template = "Pelekist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Pelekist Militia"
+location = 3770
+division_template = "Pelekist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Pelekist Militia"
+location = 6613
+division_template = "Pelekist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Pelekist Militia"
+location = 11593
+division_template = "Pelekist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Pelekist Militia"
+location = 6639
+division_template = "Pelekist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Pelekist Militia"
+location = 11565
+division_template = "Pelekist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Pelekist Militia"
+location = 595
+division_template = "Pelekist Militia"
+start_experience_factor = 0.5
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "Pelekist Militia"
+location = 11582
+division_template = "Pelekist Militia"
+start_experience_factor = 0.5
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "Pelekist Militia"
+location = 629
+division_template = "Pelekist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+}
+
+division = {
+name = "23ème Division d'Infanterie"
+location = 6657
+division_template = "Division d'Infanterie"
+start_experience_factor = 0.5
+
+}
+division = {
+name = "44ème Division d'Infanterie"
+location = 11465
+division_template = "Division d'Infanterie"
+start_experience_factor = 0.5
+
+}
+division = {
+name = "43ème Division d'Infanterie"
+location = 6613
+division_template = "Division d'Infanterie"
+start_experience_factor = 0.5
+}
+
+}

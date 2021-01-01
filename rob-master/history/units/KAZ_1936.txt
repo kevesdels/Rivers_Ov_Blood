@@ -1,0 +1,170 @@
+division_template = {
+	name = "Kazakh Cavalry"
+
+	division_names_group = KAZ_INF_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Kazakh Infantry"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = KAZ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Cavalry with Tanks"
+
+	division_names_group = KAZ_INF_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+	}
+	priority = 2
+}
+
+
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = AFG_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	#Kazakh Army
+	division = {
+		name = "Kazakh Guard"
+		location = 10218
+		division_template = "Cavalry with Tanks"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Russian Brigade"
+		location = 10218
+		division_template = "Kazakh Infantry"
+		start_experience_factor = 0.5
+	}
+
+
+	division = {
+		name = "1st Kazakh Cavalry"
+		location = 10202
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "2nd Kazakh Cavalry"
+		location = 1840
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "3rd Kazakh Cavalry"
+		location = 1554
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4th Kazakh Cavalry"
+		location = 10348
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "5th Kazakh Cavalry"
+		location = 11455
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "6th Kazakh Cavalry"
+		location = 508
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "7th Kazakh Cavalry"
+		location = 12229
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "8th Kazakh Cavalry"
+		location = 12185
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "9th Kazakh Cavalry"
+		location = 7741
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "1st Kazakh Infantry"
+		location = 1591
+		division_template = "Kazakh Infantry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd Kazakh Infantry"
+		location = 4294
+		division_template = "Kazakh Infantry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd Kazakh Infantry"
+		location = 12619
+		division_template = "Kazakh Infantry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Kirghiz Garrison"
+		location = 1384
+		division_template = "Kazakh Infantry"
+		start_equipment_factor = 0.5
+	}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "KAZ"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

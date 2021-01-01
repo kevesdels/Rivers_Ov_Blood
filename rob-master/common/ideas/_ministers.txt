@@ -1,0 +1,2148 @@
+ideas = {
+ 
+  goverment_head = {
+ ###Russian Soviet Republic
+ RSR_alexei_rykov_hog = {
+     allowed = { original_tag = SOV }
+	 picture = RSR_alexei_rykov
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      democratic_socialist_min
+      goverment_head
+      hog_old_guard
+     }   
+    }
+	
+ RSR_andrey_vlasov_hog = {
+     allowed = { original_tag = SOV }
+	 picture = RSR_andrei_vlaslov
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      national_socialist_min
+      goverment_head
+      hog_war_hero
+     }   
+    }
+	
+ RSR_nikolai_bukharin_hog = {
+     allowed = { original_tag = SOV }
+	 picture = RSR_nikolai_bukharin
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      democratic_socialist_min
+      goverment_head
+      hog_agrarian
+     }   
+    }
+	
+ RSR_vasily_blokhin_hog = {
+     allowed = { original_tag = SOV }
+	 picture = RSR_vasiliy_blokhin
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      national_socialist_min
+      goverment_head
+      hog_vanguardist_socialist
+     }   
+    }
+	
+ RSR_mikhail_tomsky_hog = {
+     allowed = { original_tag = SOV }
+	 picture = RSR_mikhail_tomsky
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      democratic_socialist_min
+      goverment_head
+      hog_staunch_democrat
+     }   
+    }
+	
+ RSR_grigory_zinoviev_hog = {
+     allowed = { original_tag = SOV }
+	 picture = RSR_georgy_zinoviev
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      socialist_min
+      goverment_head
+      hog_socialist_revolutionary
+     }   
+    }
+	
+ RSR_lev_kamenev_hog = {
+     allowed = { original_tag = SOV }
+	 picture = RSR_lev_kamenev
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      socialist_min
+      goverment_head
+      hog_industrialist
+     }   
+    }
+	
+ RSR_vyacheslav_molotov_hog = {
+     allowed = { original_tag = SOV }
+	 picture = RSR_vyacheslav_molotv
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      socialist_min
+      goverment_head
+      hog_industrialist
+     }   
+    }
+ 
+ 
+ ###Lithuania
+ LIT_aleksandras_stulginskis_hog = {
+     allowed = { original_tag = LIT }
+	 picture = LIT_stulginsiksi
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      conservative_min
+      goverment_head
+      hog_agrarian
+     }   
+    }
+
+ LIT_visuomis_hog = {
+     allowed = { original_tag = LIT }
+	 picture = LIT_visoumis
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      pelekist_min
+      goverment_head
+      hog_pelekist
+     }   
+    }
+
+ LIT_mironas_hog = {
+     allowed = { original_tag = LIT }
+	 picture = LIT_vladas_mironas
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      pelekist_min
+      goverment_head
+      hog_reactionary
+     }   
+    }
+
+ LIT_antanas_smetona_hog = {
+     allowed = { original_tag = LIT }
+	 picture = LIT_antonas_smetona
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      reactionary_min
+      goverment_head
+      hog_industrialist
+     }   
+    }
+
+ LIT_kazys_skirpa_hog = {
+     allowed = { original_tag = LIT }
+	 picture = LIT_kazys_skirpa
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      authoritharian_min
+      goverment_head
+      hog_war_hero
+     }   
+    }
+
+ LIT_kazys_grinius_hog = {
+     allowed = { 
+	 original_tag = LIT
+	 }
+	 picture = LIT_kazys_grinius
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+	  NOT = { has_country_flag = LIT_kazys_dead }
+  	 }
+  	}
+     traits = {
+      social_democracy_min
+      goverment_head
+      hog_staunch_democrat
+     }   
+    }
+
+ LIT_antanas_snieckus_hog = {
+     allowed = { original_tag = LIT }
+	 picture = LIT_antanas_snieckus
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      democratic_socialist_min
+      goverment_head
+      hog_socialist_revolutionary
+     }   
+    }	
+ 
+ 
+ ###Socialist Germany
+ GER_ernst_nieksch_hog = {
+     allowed = { original_tag = GER }
+	 picture = GER_ernst_nieksch
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      national_socialist_min
+      goverment_head
+      hog_vanguardist_socialist
+     }   
+    }
+ 
+  GER_karl_liebknacht_hog = {
+     allowed = { original_tag = GER }
+	 picture = GER_karl_lieknacht
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      socialist_min
+      goverment_head
+      hog_industrialist
+     }   
+    }
+ 
+   GER_erich_muhsam_hog = {
+     allowed = { original_tag = GER }
+	 picture = GER_erich_muhsam
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+  	 }
+  	}
+     traits = {
+      democratic_socialist_min
+      goverment_head
+      hog_socialist_revolutionary
+     }   
+    }
+ 
+ ###Prussia
+ 
+    PRS_hindenburg_hog = {
+     allowed = { original_tag = PRS }
+	 picture = PRS_paul_von_hindenburg
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government
+      NOT = {
+       has_country_flag = PRS_hindenburg_dead
+      }
+      DEMOCRATIC_ALIGNED_GOVERNMENT = yes  
+  	 }
+  	}
+     traits = {
+      authoritharian_min
+      goverment_head
+      hog_old_guard
+     }   
+    }
+    PRS_otto_braun_hog = {
+     allowed = { original_tag = PRS }
+	 picture = PRS_otto_braun
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government 
+  	 }
+  	}
+     traits = {
+      social_democracy_min
+      goverment_head
+      hog_agrarian
+     }   
+    }
+    PRS_alfred_hugenberg_hog = {
+     allowed = { original_tag = PRS }
+	 picture = PRS_alfred_hugenberg
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government 
+  	 }
+  	}
+     traits = {
+      conservative_min
+      goverment_head
+      hog_reactionary
+     }   
+    }
+	
+    PRS_ernst_junger_hog = {
+     allowed = { original_tag = PRS }
+	 picture = PRS_ersnt_junger
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government 
+  	 }
+  	}
+     traits = {
+      reactionary_min
+      goverment_head
+      hog_war_hero
+     }   
+    }
+	
+    PRS_alfred_rosenberg_hog = {
+     allowed = { original_tag = PRS }
+	 picture = PRS_alfred_rosenberg
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government 
+  	 }
+  	}
+     traits = {
+      pelekist_min
+      goverment_head
+      hog_pelekist
+     }   
+    }
+	
+    PRS_rudolf_hess_hog = {
+     allowed = { original_tag = PRS }
+	 picture = PRS_rudolf_hess
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government 
+  	 }
+  	}
+     traits = {
+      pelekist_min
+      goverment_head
+      hog_pelekist
+     }   
+    }
+	
+    PRS_vydunas_hog = {
+     allowed = { original_tag = PRS }
+	 picture = PRS_vydunas
+     available = { 
+     custom_trigger_tooltip = { 
+      tooltip = replace_hog 
+      has_country_flag = can_replace_head_of_government 
+  	 }
+  	}
+     traits = {
+      pelekist_min
+      goverment_head
+      hog_agrarian
+     }   
+    }
+  }
+ interior_minister = {
+ 
+ ###Russian Soviet Republic
+ RSR_nikolai_bukharin_im = {
+   allowed = { original_tag = SOV }
+   picture = RSR_nikolai_bukharin
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+    NOT = { has_country_leader = { name = "Vasily Blokhin" ruling_only = yes } }	
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    interior_minister
+    im_progressive
+    }   
+   }
+   
+  RSR_vasily_blokhin_im = {
+   allowed = { original_tag = SOV }
+   picture = RSR_vasiliy_blokhin
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    interior_minister
+    im_harsh_tyrannt
+    }   
+   }
+   
+  RSR_mikhail_kalinin_im = {
+   allowed = { original_tag = SOV }
+   picture = RSR_mikhail_kalinin
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+    NOT = { has_country_leader = { name = "Vasily Blokhin" ruling_only = yes } }	
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    interior_minister
+    im_man_of_the_people
+    }   
+   }
+   
+  RSR_genrikh_yagoda_im = {
+   allowed = { original_tag = SOV }
+   picture = RSR_gehrih_yagoda
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    interior_minister
+    im_sociopath
+    }   
+   }
+   
+  RSR_alexandra_kollontai_im = {
+   allowed = { original_tag = SOV }
+   picture = RSR_aleksandra_kollontaj
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+    NOT = { has_country_leader = { name = "Vasily Blokhin" ruling_only = yes } }	
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    interior_minister
+    im_union_background
+    }   
+   }
+
+  RSR_alexander_beloborodov_im = {
+   allowed = { original_tag = SOV }
+   picture = RSR_alexander_beloborodov
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    interior_minister
+    im_militarist
+    }   
+   } 
+
+  RSR_vladimir_smirnov_im = {
+   allowed = { original_tag = SOV }
+   picture = RSR_vladimir_smirnov
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    interior_minister
+    im_marxist_revolutionary
+    }   
+   } 
+
+  RSR_sergei_kirov_im = {
+   allowed = { original_tag = SOV }
+   picture = RSR_sergei_kirov
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    interior_minister
+    im_efficent_planner
+    }   
+   }    
+   
+ ###Lithuania
+ LIT_jokubas_sernas_im = {
+   allowed = { original_tag = LIT }
+   picture = LIT_jokubas_sernas
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    conservative_min
+    interior_minister
+    im_capitalist
+    }   
+   }
+ 
+ LIT_antanas_smulkstys_im = {
+   allowed = { original_tag = LIT }
+   picture = LIT_antanas_smulkstys
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = pelekist 
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    interior_minister
+    im_feudalist
+    }   
+   }
+   
+ LIT_zenonas_blynas_im = {
+   allowed = { original_tag = LIT }
+   picture = LIT_zenonas_blinius
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = pelekist 
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    interior_minister
+    im_harsh_tyrannt
+    }   
+   }
+  
+  
+ LIT_augustinas_voldemaras_im = {
+   allowed = { original_tag = LIT }
+   picture = LIT_augustinas_voldemaras
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	NOT = { has_country_flag = LIT_voldemaras_dead }
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    interior_minister
+    im_man_of_the_people
+    }   
+   }
+   
+ LIT_petras_kubiliunas_im = {
+   allowed = { original_tag = LIT }
+   picture = LIT_peteras_kubilunas
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    interior_minister
+    im_iron_fisted
+    }   
+   }
+   
+  
+ LIT_kazys_boruta_im = {
+   allowed = { original_tag = LIT }
+   picture = LIT_kazys_boruta
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    social_democracy_min
+    interior_minister
+    im_progressive
+    }   
+   }
+ 
+ LIT_icikas_meskupas_adomas_im = {
+   allowed = { original_tag = LIT }
+   picture = LIT_ickas_adomas
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    interior_minister
+    im_efficent_planner
+    }   
+   } 
+ 
+ ###Socialist Germany
+ 
+ GER_heinrich_laufenberg_im = {
+   allowed = { original_tag = GER }
+   picture = GER_heinrich_laufenberg
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    interior_minister
+    im_efficent_planner
+    }   
+   }
+   
+  GER_kurt_eisner_im = {
+   allowed = { original_tag = GER }
+   picture = GER_kurt_eisner
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    interior_minister
+    im_man_of_the_people
+    }   
+   } 
+
+  GER_karl_berngardovich_radek_im = {
+   allowed = { original_tag = GER }
+   picture = GER_karl_radek
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    interior_minister
+    im_progressive
+    }   
+   }     
+ 
+ ###Prussia
+
+  PRS_erich_kochweser_im = {
+   allowed = { original_tag = PRS }
+   picture = PRS_erich_kochwesser
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    social_liberal_min
+    interior_minister
+    im_capitalist
+    }   
+   }
+ 
+  PRS_arthur_crispien_im = {
+   allowed = { original_tag = PRS }
+   picture = PRS_arhtur_crispien
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    social_democracy_min
+    interior_minister
+    im_progressive
+    }   
+   }
+ 
+   PRS_oskar_hergt_im = {
+   allowed = { original_tag = PRS }
+   picture = PRS_oskar_hergt
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    conservative_min
+    interior_minister
+    im_inexperienced_buercrat
+    }   
+   }
+   
+   PRS_franz_halder_im = {
+   allowed = { original_tag = PRS }
+   picture = PRS_franz_halder
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    interior_minister
+    im_militarist
+    }   
+   }
+   
+   PRS_vydunas_im = {
+   allowed = { original_tag = PRS }
+   picture = PRS_vydunas
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = pelekist 
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    interior_minister
+    im_feudalist
+    }   
+   }
+   
+   PRS_hans_frank_im = {
+   allowed = { original_tag = PRS }
+   picture = PRS_hans_frank
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = pelekist 
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    interior_minister
+    im_harsh_tyrannt
+    }   
+   }
+   
+   PRS_vilius_gaigalaitis_im = {
+   allowed = { original_tag = PRS }
+   picture = PRS_vilious_gaigalaitis
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = pelekist 
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    interior_minister
+    im_efficent_planner
+    }   
+   }
+  }
+  
+  foreign_head = {
+  ###Russian Soviet Republic
+  RSR_lev_kamenev_fm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_lev_kamenev
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    foreign_head
+    fm_revolutionary
+    }   
+   }
+   
+  RSR_mikhail_meandrov_fm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_mikhail_meandrov
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    foreign_head
+    fm_imperialist
+    }   
+   }
+   
+  RSR_boris_pasternak_fm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_boris_pasternak
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+    NOT = { has_country_leader = { name = "Vasily Blokhin" ruling_only = yes } }	
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    foreign_head
+    fm_realpolitik
+    }   
+   }
+   
+  RSR_mikhail_frinovsky_fm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_mikhail_frinovsky
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    foreign_head
+    fm_isolationism
+    }   
+   }
+   
+  RSR_konstantin_yurenev_fm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_konstantin_yurenev
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+    NOT = { has_country_leader = { name = "Vasily Blokhin" ruling_only = yes } }	
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    foreign_head
+    fm_neutral_bystander
+    }   
+   }
+   
+  RSR_christian_rakovsky_fm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_christian_rakovsky
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    foreign_head
+    fm_revolutionary
+    }   
+   }
+   
+  RSR_andrei_bubnov_fm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_andrei_bubnov
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    foreign_head
+    fm_militant_socialist
+    }   
+   }
+   
+  RSR_anastas_mikoyan_fm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_anastas_mikoyan
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    foreign_head
+    fm_realpolitik
+    }   
+   }
+
+  
+  ###Lithuania
+  LIT_voldemaras_vytautas_fm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_voldemaras_vytautas
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    conservative_min
+    foreign_head
+    fm_neutral_bystander
+    }   
+   }
+   
+  LIT_jonas_pyragius_fm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_jonas_pyragius
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    foreign_head
+    fm_imperialist
+    }  
+   }
+   
+  LIT_bronys_raila_fm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_bronys_raila
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    foreign_head
+    fm_isolationism
+    }   
+   }
+   
+  LIT_leonas_bistras_fm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_leonas_bistras
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    foreign_head
+    fm_realpolitik
+    }   
+   }
+   
+  LIT_povilas_plechavicius_fm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_povilas_plechiavius
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    foreign_head
+    fm_realpolitik
+    }   
+   }
+   
+   
+  LIT_jonas_sliupas_fm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_jonas_silupas
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    social_democracy_min
+    foreign_head
+    fm_neutral_bystander
+    }   
+   }
+   
+  LIT_justas_paleckis_fm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_justas_paleckis
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    foreign_head
+    fm_revolutionary
+    }   
+   }
+  
+  ###Socialist Germany
+  
+  GER_paul_frolich_fm = {
+   allowed = { original_tag = GER }
+   picture = GER_paul_frohlich
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    foreign_head
+    fm_neutral_bystander
+    }   
+   }
+  
+  GER_ernst_toller_fm = {
+   allowed = { original_tag = GER }
+   picture = GER_ernst_toller
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    foreign_head
+    fm_revolutionary
+    }   
+   } 
+  
+  GER_franz_mehring_fm = {
+   allowed = { original_tag = GER }
+   picture = GER_franz_erdmann_mehrin
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    foreign_head
+    fm_revolutionary
+    }   
+   } 
+  
+  ###Prussia
+
+   PRS_viktoras_gailius_fm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_viktoras_gailius
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = pelekist 
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    foreign_head
+    fm_realpolitik
+    }   
+   }
+
+   PRS_konrad_hallgren_fm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_konrad_hallgren
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = pelekist 
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    foreign_head
+    fm_imperialist
+    }   
+   }    
+ 
+   PRS_max_erwin_von_scheubner_richter_fm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_max_erwin
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = pelekist 
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    foreign_head
+    fm_imperialist
+    }   
+   }
+   
+   PRS_theodor_duesterberg_fm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_theodor_duselrberg
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    OR = {
+	has_government = reactionary
+	has_government = conservative
+	has_government = authoritharian
+	}
+	}
+   }
+   traits = {
+    reactionary_min
+    foreign_head
+    fm_imperialist
+    }   
+  }
+  
+   PRS_ulrich_von_hassell_fm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_ulrich_von_hassel
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+   }
+   traits = {
+    conservative_min
+    foreign_head
+    fm_imperialist
+    }   
+  }
+
+   PRS_kurt_riezler_fm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_kurt_riezehl
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+   }
+   traits = {
+    social_liberal_min
+    foreign_head
+    fm_realpolitik
+    }   
+  }
+  
+   PRS_hermann_muller_fm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_hermann_muller
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+   }
+   traits = {
+    social_democracy_min
+    foreign_head
+    fm_neutral_bystander
+    }   
+   }
+ }
+ 
+ economy_head = {
+ 
+ ###Russian Soviet Republic
+  RSR_nikolai_uglanov_em = {
+   allowed = { original_tag = SOV }
+   picture = RSR_nicolai_uglanov
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+    NOT = { has_country_leader = { name = "Vasily Blokhin" ruling_only = yes } }	
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    economy_head
+    em_welfare_supporter
+    }   
+   }
+   
+  RSR_nikolai_voznesensky_em = {
+   allowed = { original_tag = SOV }
+   picture = RSR_nikolai_voznesnky
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    economy_head
+    em_central_planner
+    }   
+   }
+   
+  RSR_georgy_pyatakov_em = {
+   allowed = { original_tag = SOV }
+   picture = RSR_pyatakov_pg
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+    NOT = { has_country_leader = { name = "Vasily Blokhin" ruling_only = yes } }	
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    economy_head
+    em_market_socialist
+    }   
+   }
+   
+  RSR_lavrentiy_beria_em = {
+   allowed = { original_tag = SOV }
+   picture = RSR_laventiy_beria
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    economy_head
+    em_autarchist
+    }   
+   }
+   
+  RSR_alexander_shliapnikov_em = {
+   allowed = { original_tag = SOV }
+   picture = RSR_alexander_shliapnikov
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+    NOT = { has_country_leader = { name = "Vasily Blokhin" ruling_only = yes } }	
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    economy_head
+    em_union_man
+    }   
+   }
+   
+  RSR_yevgeni_preobrazhensky_em = {
+   allowed = { original_tag = SOV }
+   picture = RSR_yevgeni_preobrazhensky
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    economy_head
+    em_militant_planner
+    }   
+   }
+ 
+  RSR_alexei_kosygin_em = {
+   allowed = { original_tag = SOV }
+   picture = RSR_alexei_kosygin
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    economy_head
+    em_central_planner
+    }   
+   }
+ 
+ ###Lithuania
+ 
+  LIT_juozas_paknys_em = {
+   allowed = { original_tag = LIT }
+   picture = LIT_jouzas_paknys
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    social_democracy_min
+    economy_head
+    em_welfare_supporter
+    }   
+   }
+   
+  LIT_leonas_prapuolenis_em = {
+   allowed = { original_tag = LIT }
+   picture = LIT_leonas_prapulenas
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = pelekist
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    economy_head
+    em_feudalist
+    }   
+   }
+   
+  LIT_klemensas_brunius_em = {
+   allowed = { original_tag = LIT }
+   picture = LIT_klemensas_brunius
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    economy_head
+    em_pelekist_economist
+    }   
+   }
+   
+  LIT_pranas_barkauskas_em = {
+   allowed = { original_tag = LIT }
+   picture = LIT_pranas_barkauskas
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    economy_head
+    em_corporatist
+    }   
+   }
+   
+   
+  LIT_vytautas_zemaitis_em = {
+   allowed = { original_tag = LIT }
+   picture = LIT_jonas_zemaitis
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    economy_head
+    em_corporatist
+    }   
+   }
+   
+   
+   LIT_steponas_kairys_em = {
+   allowed = { original_tag = LIT }
+   picture = LIT_steponas_kairys
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    social_democracy_min
+    economy_head
+    em_union_man
+    }   
+   }
+   
+   LIT_aaron_soltz_em = {
+   allowed = { original_tag = LIT }
+   picture = LIT_aron_solts
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    economy_head
+    em_central_planner
+    }   
+   }
+   
+   
+
+ 
+ ###Socialist Germany
+ 
+  GER_greorg_strasser_em = {
+   allowed = { original_tag = GER }
+   picture = GER_greorg_strasser
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    economy_head
+    em_central_planner
+    }   
+   }
+ 
+  GER_paul_levi_em = {
+   allowed = { original_tag = GER }
+   picture = GER_paul_levi
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    economy_head
+    em_union_man
+    }   
+   }
+
+  GER_johann_rudolf_rocker_em = {
+   allowed = { original_tag = GER }
+   picture = GER_johann_rocker
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    economy_head
+    em_anarchist
+    }   
+      
+ }
+ ###Prussia
+ 
+  PRS_hans_staudinger_em = {
+   allowed = { original_tag = PRS }
+   picture = PRS_hans_straudiger
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+   }
+   traits = {
+    social_democracy_min
+    economy_head
+    em_welfare_supporter
+    }   
+  }
+ 
+  PRS_hjalmar_schacht_em = {
+   allowed = { original_tag = PRS }
+   picture = PRS_hjamar_schatch
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+   }	
+   traits = {
+    social_liberal_min
+    economy_head
+    em_laissez_faire
+    }   
+  }
+ 
+  PRS_johannes_popitz_em = {
+   allowed = { original_tag = PRS }
+   picture = PRS_johnes_poptiz
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+   }
+   traits = {
+    conservative_min
+    economy_head
+    em_robber_baron
+    }   
+  }
+  
+  PRS_richard_walther_darre_em = {
+   allowed = { original_tag = PRS }
+   picture = PRS_richard_darre
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = pelekist 
+	}
+  }
+   traits = {
+    pelekist_min
+    economy_head
+    em_pelekist_economist
+    }   
+  }
+  
+  PRS_vilhelms_kuze_em = {
+   allowed = { original_tag = PRS }
+   picture = PRS_vilhelms_kuze
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = pelekist 
+	}
+}
+   traits = {
+    pelekist_min
+    economy_head
+    em_feudalist
+    }   
+  }
+  
+  PRS_franz_seldte_em = {
+   allowed = { original_tag = PRS }
+   picture = PRS_fraz_seltde
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    OR = {
+     has_government = authoritharian
+	 has_government = reactionary
+    }	
+	}
+	}
+	
+   traits = {
+    reactionary_min
+    economy_head
+    em_corporatist
+    }   
+   }
+  }
+  
+  defense_minister = {
+  
+ ###Russian Soviet Republic
+ 
+  RSR_nikolai_bulganin_dm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_nikolai_bulganin
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    defense_minister
+    dm_civilian_administator
+    }   
+      
+ }
+ 
+ 
+  RSR_bronislav_kaminski_dm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_borislaw_kaminski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    defense_minister
+    dm_elitist
+    }   
+      
+ }
+ 
+  RSR_viktor_nogin_dm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_viktor_nogin
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+    NOT = { has_country_leader = { name = "Vasily Blokhin" ruling_only = yes } }	
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    defense_minister
+    dm_militarist
+    }   
+      
+ }
+ 
+  RSR_yakov_agranov_dm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_yakov_agranov
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    defense_minister
+    dm_carrer_general
+    }   
+      
+ }
+ 
+  RSR_valerian_osinsky_dm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_valerian_osinsky
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+    NOT = { has_country_leader = { name = "Vasily Blokhin" ruling_only = yes } }	
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    defense_minister
+    dm_mass_revolutionary
+    }   
+      
+ }
+ 
+  RSR_mikhail_lashevich_dm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_mikhail_lashevich
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    defense_minister
+    dm_mass_conscription_supporter
+    }   
+      
+ }
+ 
+  RSR_kliment_voroshilov_dm = {
+   allowed = { original_tag = SOV }
+   picture = RSR_kliment_vorshilov
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    defense_minister
+    dm_experienced_soldier
+    }   
+      
+ }
+  
+ ###Lithuania
+ 
+  LIT_stasys_rastikis_dm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_stasys_rastikis
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    conservative_min
+    defense_minister
+    dm_militarist
+    }   
+      
+ }
+ 
+ 
+  LIT_petras_kubiliunas_dm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_peteras_kubilunas
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    defense_minister
+    dm_experienced_soldier
+    }   
+      
+ }
+ 
+ 
+  LIT_ignas_vylius_dm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_ignas_vylius
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    defense_minister
+    dm_elitist
+    }   
+      
+ }
+ 
+ 
+  LIT_povilas_plechavicius_dm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_povilas_plechiavius
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    defense_minister
+    dm_militarist
+    }   
+      
+ }
+
+ 
+  LIT_kazys_musteikis_dm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_kazys_musteikis
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    defense_minister
+    dm_mass_conscription_supporter
+    }   
+      
+ }
+ 
+  LIT_albinas_cepas_dm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_albinas_cepas
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    social_democracy_min
+    defense_minister
+    dm_civilian_administator
+    }   
+      
+ }
+ 
+ 
+  LIT_vincas_vitauskas_dm = {
+   allowed = { original_tag = LIT }
+   picture = LIT_vincas_vitauskas
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    defense_minister
+    dm_carrer_general
+    }   
+      
+ }
+ ###Socialist Germany 
+  
+  GER_fritz_wolffheim_dm = {
+   allowed = { original_tag = GER }
+   picture = GER_frizt_wolffheim
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    defense_minister
+    dm_militarist
+    }   
+      
+ }
+ 
+  GER_emil_eichhorn_dm = {
+   allowed = { original_tag = GER }
+   picture = GER_emil_eichorn
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    socialist_min
+    defense_minister
+    dm_experienced_soldier
+    }   
+      
+ }
+ 
+  GER_gustav_sobottka_dm = {
+   allowed = { original_tag = GER }
+   picture = GER_gustav_sobottka
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes 
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    defense_minister
+    dm_civilian_administator
+    }   
+      
+ }
+
+  ###Prussia
+
+   PRS_kurt_schumacher_dm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_kurt_schumacher
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes	
+	}
+	}
+	
+   traits = {
+    social_liberal_min
+    defense_minister
+    dm_civilian_administator
+    }   
+   }
+   
+   PRS_otto_gessler_dm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_otto_gessler
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes	
+	}
+	}
+	
+   traits = {
+    social_democracy_min
+    defense_minister
+    dm_inept_administator
+    }   
+   }
+  
+   PRS_gustav_ritter_von_kahr_dm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_gustav_kahr
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes	
+	}
+	}
+	
+   traits = {
+    authoritharian_min
+    defense_minister
+    dm_mass_conscription_supporter
+    }   
+   }
+  
+   PRS_fedor_von_bock_dm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_fedor_von_bocvk
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    OR = {
+	DEMOCRATIC_ALIGNED_GOVERNMENT = yes	
+	has_government = reactionary
+	}
+	}
+	}
+	
+   traits = {
+    reactionary_min
+    defense_minister
+    dm_experienced_soldier
+    }   
+   }
+  
+   
+   PRS_rudolf_hess_dm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_rudolf_hess
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = pelekist
+	}
+	}
+	
+   traits = {
+    pelekist_min
+    defense_minister
+    dm_militarist
+    }   
+   }
+   
+   PRS_reinhard_heydrich_dm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_reinhard_heydrich
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = pelekist
+	}
+	}
+	
+   traits = {
+    pelekist_min
+    defense_minister
+    dm_elitist
+    }   
+   }
+   
+   PRS_zygfrydas_milius_dm = {
+   allowed = { original_tag = PRS }
+   picture = PRS_zygfriedas_milius
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = pelekist
+	}
+	}
+	
+   traits = {
+    pelekist_min
+    defense_minister
+    dm_elitist
+    }   
+   }
+  }
+ }
+ 
+ 

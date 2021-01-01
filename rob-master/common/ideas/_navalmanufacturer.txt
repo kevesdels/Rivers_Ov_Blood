@@ -1,0 +1,105 @@
+ideas = {
+ naval_manufacturer = {
+ 
+ ###Russian Soviet Republic
+   RSR_nevskoye_design_bureau = {
+   
+   allowed = { original_tag = SOV }
+   picture = RSR_nevskoye_design_bureau
+   research_bonus = { naval_equipment = 0.1 }
+   cost = 150
+    modifier = {
+    navy_screen_attack_factor = 0.06
+	navy_screen_defence_factor = 0.06
+   }
+  }
+ 
+ ###Lithuania
+  LIT_palangos_uostas = {
+   
+   allowed = { original_tag = LIT }
+   picture = LIT_palangos_uostas
+   research_bonus = { naval_equipment = 0.1 }
+   cost = 150
+    modifier = {
+    navy_screen_attack_factor = 0.06
+	navy_screen_defence_factor = 0.06
+   }
+  }
+ 
+ ###Prussia
+  PRS_konigsberger_werften = {
+   
+   allowed = { original_tag = PRS }
+   picture = PRS_konigsberg_wrften
+   research_bonus = { naval_equipment = 0.1 }
+   cost = 150
+   modifier = {
+    navy_capital_ship_attack_factor = 0.04
+	navy_capital_ship_defence_factor = 0.04
+   }
+  }
+  
+  PRS_konigsberg_marineacademie = {
+   
+   allowed = { original_tag = PRS }
+   picture = PRS_konigsberg_marineacademie
+   research_bonus = { naval_equipment = 0.1 }
+   cost = 150
+   modifier = {
+    navy_screen_attack_factor = 0.06
+	navy_screen_defence_factor = 0.06
+   }
+  }
+  
+  PRS_memel_weften = {
+   
+   allowed = { original_tag = PRS }
+   picture = PRS_memel_wrfen
+   research_bonus = { naval_equipment = 0.1 }
+   cost = 150
+   modifier = {
+    navy_submarine_attack_factor = 0.1
+	navy_submarine_defence_factor = 0.1
+   }
+  }
+
+ 
+ ###Germany (Socialist) 
+  GER_hamburg_schiffen = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_hamburg_marine
+   research_bonus = { naval_equipment = 0.1 }
+   cost = 150
+   modifier = {
+    navy_capital_ship_attack_factor = 0.1
+	navy_capital_ship_defence_factor = 0.1
+   }
+  }
+  
+  GER_kiel_commune = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_kiel_marine
+   cost = 150
+   research_bonus = { naval_equipment = 0.1 }
+   modifier = {
+    navy_submarine_attack_factor = 0.1
+	navy_submarine_defence_factor = 0.1
+   }
+  }
+  
+  GER_rostock_marine_geschelshafft = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_rostock_marine
+   cost = 150
+   research_bonus = { naval_equipment = 0.1 }
+   modifier = {
+    navy_screen_attack_factor = 0.1
+	navy_screen_defence_factor = 0.1
+   }
+  }
+ }
+}

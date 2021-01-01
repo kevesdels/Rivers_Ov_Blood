@@ -1,0 +1,79 @@
+division_template = {
+	name = "Ceylonese Infantry"
+
+	division_names_group = SRL_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	priority = 1
+}
+
+
+units = {
+	#Ceylon Army
+	division = {
+		name = "1. Ceylonese Infantry"
+		location = 10201
+		division_template = "Ceylonese Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "2. Ceylonese Infantry"
+		location = 10201
+		division_template = "Ceylonese Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "3. Ceylonese Infantry"
+		location = 10201
+		division_template = "Ceylonese Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "4. Ceylonese Infantry"
+		location = 10201
+		division_template = "Ceylonese Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "5. Ceylonese Infantry"
+		location = 10201
+		division_template = "Ceylonese Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+	division = {
+		name = "6. Ceylonese Infantry"
+		location = 10201
+		division_template = "Ceylonese Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.2
+	}
+}
+
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "BAL"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

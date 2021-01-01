@@ -1,0 +1,184 @@
+division_template = {
+	name = "Volkspolizei"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+  		}
+	}
+division_template = {
+	name = "Sturmabteilung Infanterie"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+       
+	}
+}
+
+division_template = {
+	name = "Gebirgs-Brigade"		# Gebirgsbrigade
+	#Note: precursor to Gebirgs-Divisions
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+	    mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+
+	#####Volkspolizei#####
+
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 13372
+		division_template = "Volkspolizei"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 12
+		}
+		location = 6680
+		division_template = "Volkspolizei"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 3675
+		division_template = "Volkspolizei"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 23
+		}
+		location = 732
+		division_template = "Volkspolizei"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 6723
+		division_template = "Volkspolizei"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+
+		#####Sturmabteilung Infanterie#####
+
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 13383
+		division_template = "Sturmabteilung Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+
+	}
+
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 13390
+		division_template = "Volkspolizei"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "Volkspolizei Salzbrug"				
+		location = 13380 #Salzburg
+		division_template = "Volkspolizei"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+
+	}
+
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 13366
+		division_template = "Sturmabteilung Infanterie"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 14
+		}
+		location = 13357
+		division_template = "Sturmabteilung Infanterie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 24
+		}
+		location = 11651
+		division_template = "Sturmabteilung Infanterie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 25
+		}
+		location = 9650
+		division_template = "Sturmabteilung Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 25
+		}
+		location = 9665
+		division_template = "Sturmabteilung Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+
+
+
+
+
+	}

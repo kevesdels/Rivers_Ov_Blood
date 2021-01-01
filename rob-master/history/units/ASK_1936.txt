@@ -1,0 +1,104 @@
+division_template = {
+	name = "Schutztruppe"			# Infantry Division
+
+	division_names_group = GER_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Askari Infantry"			# Infantry Division
+
+	division_names_group = TZN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+
+
+units = {
+	##### Askari Army #####
+	division = {
+		name = "Schutztruppe Freikorps"
+		location = 2196
+		division_template = "Schutztruppe"	
+		start_experience_factor = 0.5
+
+	}
+	division = {
+		name = "Schutztruppe Freikorps"
+		location = 2196
+		division_template = "Schutztruppe"	
+		start_experience_factor = 0.5
+
+	}
+	division = {
+		name = "Askari Infantry"
+		location = 2308
+		division_template = "Askari Infantry"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "Askari Infantry"
+		location = 5180
+		division_template = "Askari Infantry"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "Askari Infantry"
+		location = 10845
+		division_template = "Askari Infantry"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "Askari Infantry"
+		location = 10988
+		division_template = "Askari Infantry"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+
+}
+
+
+air_wings = {
+	### Royal Iraqi Air Force (RIrAF)
+	291 = {
+		# 1st Squadron -- Hawker Audax
+		CAS_equipment_1 =  {
+			owner = "IRQ" 
+			amount = 25
+		}
+	}
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "IRQ"
+		}
+		requested_factories = 1
+		progress = 0.22
+		efficiency = 100
+	}
+}

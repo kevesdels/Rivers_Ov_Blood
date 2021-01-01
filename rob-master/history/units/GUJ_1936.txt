@@ -1,0 +1,120 @@
+division_template = {
+	name = "Gujarati Infantry"
+
+	division_names_group = RAJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "British Infantry"
+
+	division_names_group = BRJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Gujarati Cavalry"
+
+	division_names_group = RAJ_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+	priority = 1
+}
+
+units = {
+	#RPF
+	division = {
+		name = "1st Gujarati Infantry"
+		location = 9975
+		division_template = "Gujarati Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd Gujarati Infantry"
+		location = 9975
+		division_template = "Gujarati Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd Gujarati Infantry"
+		location = 9975
+		division_template = "Gujarati Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4th Gujarati Infantry"
+		location = 9975
+		division_template = "Gujarati Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "1st British-Gurkha Infantry Division"
+		location = 9975
+		division_template = "British Infantry"
+		start_experience_factor = 0.4
+}
+	division = {
+		name = "2nd British-Gurkha Infantry Division"
+		location = 9975
+		division_template = "British Infantry"
+		start_experience_factor = 0.4
+}
+
+	division = {
+		name = "1st Gujarati Cavalry"
+		location = 9975
+		division_template = "Gujarati Cavalry"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+	}
+}
+
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "BAL"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

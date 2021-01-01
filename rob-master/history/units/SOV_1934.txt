@@ -1,0 +1,167 @@
+﻿division_template = {
+	name = "Strelkovaya Diviziya"			# Rifle Division
+	division_names_group = SOV_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		#recon = { x = 0 y = 0 } 		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		#engineer = { x = 0 y = 1 } 	# (semi-mot) Engineer bn
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Motostrelkovaya Diviziya"		# Motor Rifle Division
+	division_names_group = SOV_MOT_01
+											# Note: only represents Moscow Proletariat Division in 1936; after 1938-40, Motor Rifle Divisions had +1 mot regiment (3 bns) 
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+	}
+	support = {
+		#recon = { x = 0 y = 0 } 		# Recon bn had 16x L tanks, 45 ACs #Eng and recon removed and they seem rather OP. Could revisit if balance changes 
+		#engineer = { x = 0 y = 1 } 	# (mot) Engineer bn
+		#light_armor = { x = 0 y = 3 }	# Tank bn had 51 L tanks, 3 ACs - (removed)
+	}
+}
+
+division_template = {
+	name = "Krasnaya Gvardiya"			# Red Guard
+	division_names_group = SOV_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+
+	}
+}
+
+###OOB
+units = {
+division = {
+name = "Strelkovaya Diviziya"
+location = 3151
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+division = {
+name = "Strelkovaya Diviziya"
+location = 3151
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+division = {
+name = "Strelkovaya Diviziya"
+location = 6380
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+division = {
+name = "Strelkovaya Diviziya"
+location = 6380
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+division = {
+name = "Motostrelkovaya Diviziya"
+location = 6380
+division_template = "Motostrelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+division = {
+name = "Strelkovaya Diviziya"
+location = 11202
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+division = {
+name = "Strelkovaya Diviziya"
+location = 11234
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+division = {
+name = "Krasnaya Gvardiya"
+location = 11336
+division_template = "Krasnaya Gvardiya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+}
+division = {
+name = "Krasnaya Gvardiya"
+location = 6262
+division_template = "Krasnaya Gvardiya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+}
+division = {
+name = "Strelkovaya Diviziya"
+location = 6262
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+division = {
+name = "Strelkovaya Diviziya"
+location = 11248
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+division = {
+name = "Strelkovaya Diviziya"
+location = 11375
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+division = {
+name = "Krasnaya Gvardiya"
+location = 3338
+division_template = "Krasnaya Gvardiya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+}
+}
+
+air_wings = {
+	# LVO Aviatsya Komandovaniya -- Leningrad
+	195 = { 
+		# 15ya Istrebitel'nye Aviabrigada
+		fighter_equipment_0 = {
+			owner = "SOV" 
+			amount = 94
+		  }
+		}
+		
+	219 = {
+		# 2ya Istrebitel'nye Aviabrigada
+		fighter_equipment_0 = {
+			owner = "SOV" 
+			amount = 94
+		  }
+		 }
+		}

@@ -1,0 +1,2747 @@
+####################
+###Annexation Events
+####################
+
+add_namespace = annex
+
+country_event = {
+ id = annex.1
+ desc = annex.1.d
+ title = "Fate of Austria"
+ fire_only_once = yes
+
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  ACM = { NOT = { is_puppet_of = ROOT } }
+  1018 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = THR
+   tag = AUS
+   tag = ACM
+  }
+ }
+ 
+ option = { ###liberate Austrian Socialist Republic
+  name = "Liberate Austrian Socialist Republic"
+  ai_chance = { factor = 150 modifier = { factor = 0 tag = GER has_government = national_socialist  } }
+  trigger = { SOCIALIST_ALIGNED_GOVERNMENT = yes }
+  puppet = ACM
+  ACM = { remove_ideas = { 	austrian_bad_econ austrian_civil_war loose_coalition } }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = AUS
+	 is_core_of = THR
+	 is_core_of = ACM
+	 }
+	}
+	add_core_of = ACM
+	ACM = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###liberate Austrian Republic
+  name = "Liberate Austrian Republic"
+  ai_chance = { factor = 150 }
+  trigger = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes }
+  puppet = AUS
+  AUS = { remove_ideas = { crotian_economic_pact austrian_bad_econ austria_monarchist_growing austrian_socialist_paramilitaries austrian_brownshirt_terror austrian_civil_war } }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = AUS
+	 is_core_of = THR
+	 is_core_of = ACM
+	 }
+	}
+	add_core_of = AUS
+	AUS = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###liberate Austrian State
+  name = "Liberate Austrian State"
+  ai_chance = { factor = 150  }
+  trigger = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes }
+  puppet = THR
+  THR = { remove_ideas = { austrian_bad_econ austrian_civil_war } }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = AUS
+	 is_core_of = THR
+	 is_core_of = ACM
+	 }
+	}
+	add_core_of = THR
+	THR = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###continue occupation
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.06
+  add_war_support =-0.06
+  add_political_power =-60
+ 
+  if = {
+   limit = { tag = GER }
+   every_owned_state = {
+    limit = { OR = { is_core_of = AUS is_core_of = ACM is_core_of = THR } }
+	add_core_of = GER
+   }
+  }
+ 
+ }
+
+}
+
+
+country_event = {
+ id = annex.2
+ desc = annex.2.d
+ title = "Fate of Switzerland"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  SWI = { NOT = { is_puppet_of = ROOT } }
+  3 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = SWI
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = SWI
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = SWI
+	}
+	SWI = { transfer_state = PREV }
+	
+  }
+   if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  SWI = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.03
+  add_war_support =-0.03
+  add_political_power =-30
+ }
+ 
+ option = {
+  name = "Split Switzerland"
+  ai_chance = { factor = 150 }
+  puppet = SWI
+  if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  SWI = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }
+  trigger = { 
+   OR = {
+    GER = { is_allied_country = yes }
+	FRA = { is_allied_country = yes }
+	FRS = { is_allied_country = yes }
+	FRL = { is_allied_country = yes }
+	FRR = { is_allied_country = yes }
+	FRP = { is_allied_country = yes }
+	ITA = { is_allied_country = yes }
+   }
+  }
+  if = {
+   limit = { GER = { is_allied_country = yes } }
+   GER = { transfer_state = 3 }
+   GER = { transfer_state = 151 }
+  }
+  
+  if = {
+   limit = { 
+    OR = { 
+     FRA = { is_allied_country = yes } 
+	 FRR = { is_allied_country = yes } 
+	 FRL = { is_allied_country = yes } 
+	 FRP = { is_allied_country = yes } 
+	 FRS = { is_allied_country = yes } 
+	 }
+	 }
+
+     PREV = { transfer_state = 892 }
+  }
+  
+  if = {
+   limit = { ITA = { is_allied_country = yes } }
+   ITA = { transfer_state = 894 }
+   ITA = { transfer_state = 893 }
+  }
+ }
+}
+
+
+country_event = {
+ id = annex.3
+ desc = annex.3.d
+ title = "Fate of France"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  FRA = { NOT = { is_puppet_of = ROOT } }
+  FRR = { NOT = { is_puppet_of = ROOT } }
+  FRL = { NOT = { is_puppet_of = ROOT } }
+  FRS = { NOT = { is_puppet_of = ROOT } }
+  16 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = FRA
+   tag = FRR
+   tag = FRL
+   tag = FRS
+  }
+ }
+ 
+option = { ###liberate French Socialist Republic
+  name = "Liberate French Socialist Republic"
+  ai_chance = { factor = 150 }
+  trigger = { SOCIALIST_ALIGNED_GOVERNMENT = yes }
+  puppet = FRS
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = FRA
+	 is_core_of = FRS
+	 is_core_of = FRR
+	 is_core_of = FRL
+	 is_core_of = FRP
+	 }
+	}
+	add_core_of = FRS
+	FRS = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###liberate French Republic
+  name = "Liberate French Republic"
+  ai_chance = { factor = 150 }
+  trigger = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes }
+  puppet = FRA
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = FRA
+	 is_core_of = FRS
+	 is_core_of = FRR
+	 is_core_of = FRL
+	 is_core_of = FRP
+	 }
+	}
+	add_core_of = FRA
+	FRA = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###liberate French State
+  name = "Liberate French State"
+  ai_chance = { factor = 150 }
+  trigger = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes }
+  puppet = FRR
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = FRA
+	 is_core_of = FRS
+	 is_core_of = FRR
+	 is_core_of = FRL
+	 is_core_of = FRP
+	 }
+	}
+	add_core_of = FRP
+	FRP = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###continue occupation
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.15
+  add_war_support =-0.15
+  add_political_power =-150
+ 
+ 
+ }
+}
+
+
+country_event = {
+ id = annex.4
+ desc = annex.4.d
+ title = "Fate of Spain"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  SPR = { NOT = { is_puppet_of = ROOT } }
+  41 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = SPR
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = SPR
+  ai_chance = { factor = 150 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = SPR
+	}
+	SPR = { transfer_state = PREV }
+  }
+   if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  SPR = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.08
+  add_war_support =-0.08
+  add_political_power =-80
+ }
+ 
+ option = {
+  name = "Split Spain"
+  ai_chance = { factor = 50 }
+  puppet = SPR
+  puppet = BSQ
+  puppet = CAT
+  trigger = { 
+   OR = {
+    165 = { is_owned_and_controlled_by = ROOT }
+	172 = { is_owned_and_controlled_by = ROOT }
+   }
+  }
+ every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = BSQ
+	}
+	BSQ = { transfer_state = PREV }
+  }
+   if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  BSQ = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }
+
+ every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = CAT
+	}
+	CAT = { transfer_state = PREV }
+  }
+   if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  CAT = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }
+
+ every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = SPR
+	}
+	SPR = { transfer_state = PREV }
+  }
+   if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  SPR = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+}
+
+
+country_event = {
+ id = annex.5
+ desc = annex.5.d
+ title = "Fate of Portugal"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  POR = { NOT = { is_puppet_of = ROOT } }
+  112 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = POR
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = POR
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = POR
+	}
+	POR = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ POR = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.03
+  add_war_support =-0.03
+  add_political_power =-30
+ }
+
+}
+
+
+country_event = {
+ id = annex.6
+ desc = annex.6.d
+ title = "Fate of British Isles"
+ fire_only_once = yes
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  BRU = { NOT = { is_puppet_of = ROOT } }
+  BRL = { NOT = { is_puppet_of = ROOT } }
+  BLF = { NOT = { is_puppet_of = ROOT } }
+  126 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = ENG
+   tag = BRU
+   tag = BRL
+   tag = BRC
+   tag = BLF
+  }
+ }
+ 
+option = { ###liberate British Socialist Republic
+  name = "Liberate British Socialist Republic"
+  ai_chance = { factor = 150 }
+  trigger = { SOCIALIST_ALIGNED_GOVERNMENT = yes }
+  puppet = BLF
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = ENG
+	 is_core_of = BRU
+	 is_core_of = BRL
+	 is_core_of = BRC
+	 is_core_of = BLF
+	 }
+	}
+	add_core_of = BLF
+	BLF = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###liberate French Republic
+  name = "Liberate British Republic"
+  ai_chance = { factor = 150 }
+  trigger = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes }
+  puppet = BRL
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = ENG
+	 is_core_of = BRU
+	 is_core_of = BRL
+	 is_core_of = BRC
+	 is_core_of = BLF
+	 }
+	}
+	add_core_of = BRL
+	BRL = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###liberate French State
+  name = "Liberate British State"
+  ai_chance = { factor = 150 }
+  trigger = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes }
+  puppet = BRU
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = ENG
+	 is_core_of = BRU
+	 is_core_of = BRL
+	 is_core_of = BRC
+	 is_core_of = BLF
+	 }
+	}
+	add_core_of = BRU
+	BRU = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###continue occupation
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.2
+  add_war_support =-0.2
+  add_political_power =-200
+ 
+ 
+ }
+}
+
+
+
+country_event = {
+ id = annex.7
+ desc = annex.7.d
+ title = "Fate of Ireland"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  IRE = { NOT = { is_puppet_of = ROOT } }
+  1114 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = IRE
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = IRE
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = IRE
+	}
+	IRE = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ IRE = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.03
+  add_war_support =-0.03
+  add_political_power =-30
+ }
+
+}
+
+
+country_event = {
+ id = annex.8
+ desc = annex.8.d
+ title = "Fate of Luxembourg"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  LUX = { NOT = { is_puppet_of = ROOT } }
+  8 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = LUX
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = LUX
+  ai_chance = { factor = 50 modifier = { factor = 0 tag = GER has_government = national_socialist } }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = LUX
+	}
+	LUX = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ LUX = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 modifier = { factor = 2000 tag = GER has_government = national_socialist } }
+  add_stability =-0.01
+  add_war_support =-0.01
+  add_political_power =-10
+ }
+
+}
+
+
+country_event = {
+ id = annex.9
+ desc = annex.9.d
+ title = "Fate of Wallonia"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  WLL = { NOT = { is_puppet_of = ROOT } }
+  34 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = WLL
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = WLL
+  ai_chance = { factor = 50 modifier = { factor = 0 tag = GER has_government = national_socialist } }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = WLL
+	}
+	WLL = { transfer_state = PREV }
+	
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ WLL = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Annex Eastern Wallonia and Puppet the Rest"
+  trigger = { tag = GER 812 = { is_owned_and_controlled_by = GER } 813 = { is_owned_and_controlled_by = GER } }
+  puppet = WLL
+  ai_chance = { factor = 0 modifier = { factor = 2000 tag = GER has_government = national_socialist } }
+  WLL = { transfer_state = 34 }
+   if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+   WLL = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }
+  }
+
+ option = {
+  name = "Create Flanders-Wallonia"
+  trigger = { 6 = { is_owned_and_controlled_by = ROOT } }
+  puppet = WLL
+    every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = WLL
+	  is_core_of = FLA
+	}
+	WLL = { transfer_state = PREV }
+  }
+  WLL = { set_cosmetic_tag = FLA_WLL }
+   if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ WLL = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }
+
+ } 
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.03
+  add_war_support =-0.03
+  add_political_power =-30
+ }
+
+}
+
+
+country_event = {
+ id = annex.10
+ desc = annex.10.d
+ title = "Fate of Flanders"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  FLA = { NOT = { is_puppet_of = ROOT } }
+  6 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = FLA
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = FLA
+  ai_chance = { factor = 500 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = FLA
+	}
+	FLA = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ FLA = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Create Flanders-Wallonia"
+  trigger = { 34 = { is_owned_and_controlled_by = ROOT } }
+  puppet = WLL
+    every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      OR ={
+	  is_core_of = WLL
+	  is_core_of = FLA
+	  }
+	}
+	WLL = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ WLL = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.03
+  add_war_support =-0.03
+  add_political_power =-30
+  }
+ }
+ 
+ 
+country_event = {
+ id = annex.11
+ desc = annex.11.d
+ title = "Fate of Netherlands"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  HOL = { NOT = { is_puppet_of = ROOT } }
+  7 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = HOL
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = HOL
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = HOL
+	}
+	HOL = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ HOL = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.06
+  add_war_support =-0.06
+  add_political_power =-60
+ }
+
+}
+
+country_event = {
+ id = annex.12
+ desc = annex.12.d
+ title = "Fate of Denmark"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  DEN = { NOT = { is_puppet_of = ROOT } }
+  37 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = DEN
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = DEN
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = DEN
+	}
+	DEN = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ DEN = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.04
+  add_war_support =-0.04
+  add_political_power =-40
+ }
+
+}
+
+
+country_event = {
+ id = annex.13
+ desc = annex.13.d
+ title = "Fate of Sweden"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  SWE = { NOT = { is_puppet_of = ROOT } }
+  141 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = SWE
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = SWE
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = SWE
+	}
+	SWE = { transfer_state = PREV }
+  } 
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ SWE = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.07
+  add_war_support =-0.07
+  add_political_power =-70
+ }
+
+}
+
+
+country_event = {
+ id = annex.14
+ desc = annex.14.d
+ title = "Fate of Finland"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  FIN = { NOT = { is_puppet_of = ROOT } }
+  111 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = FIN
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = FIN
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = FIN
+	}
+	FIN = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ FIN = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.07
+  add_war_support =-0.07
+  add_political_power =-70
+ }
+
+}
+
+
+country_event = {
+ id = annex.15
+ desc = annex.15.d
+ title = "Fate of Poland"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  POL = { NOT = { is_puppet_of = ROOT } }
+  10 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = POL
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = POL
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = POL
+	}
+	POL = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ POL = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.1
+  add_war_support =-0.1
+  add_political_power =-100
+ }
+
+}
+
+
+country_event = {
+ id = annex.16
+ desc = annex.16.d
+ title = "Fate of Bohemia"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  CZE = { NOT = { is_puppet_of = ROOT } }
+  9 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = CZE
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = CZE
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = CZE
+	}
+	CZE = { transfer_state = PREV }
+  }
+  if = { 
+   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  CZE = {
+   set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.1
+  add_war_support =-0.1
+  add_political_power =-100
+ }
+
+}
+
+
+country_event = {
+ id = annex.17
+ desc = annex.17.d
+ title = "Fate of Slovakia"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  SLO = { NOT = { is_puppet_of = ROOT } }
+  70 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = SLO
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = SLO
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = SLO
+	}
+	SLO = { transfer_state = PREV }
+  }
+  if = { 
+   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  SLO = {
+   set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.05
+  add_war_support =-0.05
+  add_political_power =-50
+ }
+
+}
+
+
+country_event = {
+ id = annex.18
+ desc = annex.18.d
+ title = "Fate of Hungary"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  HUN = { NOT = { is_puppet_of = ROOT } }
+  1025 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = HUN
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = HUN
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = HUN
+	}
+	HUN = { transfer_state = PREV }
+  } 
+  if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  HUN = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.05
+  add_war_support =-0.05
+  add_political_power =-50
+ }
+
+}
+
+
+country_event = {
+ id = annex.19
+ desc = annex.19.d
+ title = "Fate of Croatia"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  CRO = { NOT = { is_puppet_of = ROOT } }
+  109 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = CRO
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = CRO
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = CRO
+	}
+	CRO = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ CRO = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.05
+  add_war_support =-0.05
+  add_political_power =-50
+ }
+
+}
+
+
+country_event = {
+ id = annex.20
+ desc = annex.20.d
+ title = "Fate of Bosnia"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  BOS = { NOT = { is_puppet_of = ROOT } }
+  104 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = SER
+   tag = BOS
+   tag = CRO
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = BOS
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = BOS
+	}
+	BOS = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ BOS = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.05
+  add_war_support =-0.05
+  add_political_power =-50
+ }
+
+}
+
+country_event = {
+ id = annex.21
+ desc = annex.21.d
+ title = "Fate of Serbia"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  SER = { NOT = { is_puppet_of = ROOT } }
+  1140 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = SER
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = SER
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = SER
+	}
+	SER = { transfer_state = PREV }
+  }
+  if = { 
+   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  SER = {
+   set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.07
+  add_war_support =-0.07
+  add_political_power =-70
+ }
+
+}
+
+
+country_event = {
+ id = annex.22
+ desc = annex.22.d
+ title = "Fate of Romania"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  ROM = { NOT = { is_puppet_of = ROOT } }
+  46 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = ROM
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = ROM
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = ROM
+	}
+	ROM = { transfer_state = PREV }
+  }
+  if = { 
+   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  ROM = {
+   set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.07
+  add_war_support =-0.07
+  add_political_power =-70
+ }
+
+}
+
+
+country_event = {
+ id = annex.23
+ desc = annex.23.d
+ title = "Fate of Bulgaria"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  BUL = { NOT = { is_puppet_of = ROOT } }
+  48 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = BUL
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = BUL
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = BUL
+	}
+	BUL = { transfer_state = PREV }
+  }
+  if = { 
+   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  BUL = {
+   set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.07
+  add_war_support =-0.07
+  add_political_power =-70
+ }
+
+}
+
+
+country_event = {
+ id = annex.24
+ desc = annex.24.d
+ title = "Fate of Albania"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  ALB = { NOT = { is_puppet_of = ROOT } }
+  1135 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = ALB
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = ALB
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = ALB
+	}
+	ALB = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  ALB = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.03
+  add_war_support =-0.03
+  add_political_power =-30
+ }
+
+}
+
+country_event = {
+ id = annex.25
+ desc = annex.25.d
+ title = "Fate of Greece"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  GRE = { NOT = { is_puppet_of = ROOT } }
+  47 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = GRE
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = GRE
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = GRE
+	}
+	GRE = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  GRE = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.03
+  add_war_support =-0.03
+  add_political_power =-30
+ }
+
+}
+
+country_event = {
+ id = annex.26
+ desc = annex.26.d
+ title = "Fate of Turkey"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  TUR = { NOT = { is_puppet_of = ROOT } }
+  49 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = TUR
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = TUR
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = TUR
+	}
+	TUR = { transfer_state = PREV }
+  }
+  if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  TUR = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ } 
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.1
+  add_war_support =-0.1
+  add_political_power =-100
+ }
+
+}
+
+
+country_event = {
+ id = annex.27
+ desc = annex.27.d
+ title = "Fate of Lithuania"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  LIT = { NOT = { is_puppet_of = ROOT } }
+  784 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = LIT
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = LIT
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = LIT
+	}
+	LIT = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ LIT = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.06
+  add_war_support =-0.06
+  add_political_power =-60
+ }
+
+}
+
+
+country_event = {
+ id = annex.28
+ desc = annex.28.d
+ title = "Fate of Norway"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  NOR = { NOT = { is_puppet_of = ROOT } }
+  110 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = NOR
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = NOR
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = NOR
+	}
+	NOR = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ NOR = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.04
+  add_war_support =-0.04
+  add_political_power =-40
+ }
+
+}
+
+
+
+country_event = {
+ id = annex.29
+ desc = annex.29.d
+ title = "Fate of White Ruthenia"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  BLR = { NOT = { is_puppet_of = ROOT } }
+  CBR = { NOT = { is_puppet_of = ROOT } }
+  DBR = { NOT = { is_puppet_of = ROOT } }
+  206 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = BLR
+   tag = CBR
+   tag = DBR
+  }
+ }
+ 
+ option = { ###liberate Bealrusian Socialist Republic
+  name = "Liberate Belarusian Socialist Republic"
+  ai_chance = { factor = 150 }
+  trigger = { SOCIALIST_ALIGNED_GOVERNMENT = yes CBR = { exists = no } }
+  puppet = CBR
+  CBR = { remove_ideas = { belarusian_civil_war CBR_russian_influence } }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = BLR
+	 is_core_of = CBR
+	 is_core_of = DBR
+	 }
+	}
+	add_core_of = CBR
+	CBR = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###liberate French Republic
+  name = "Liberate Belarusian Republic"
+  ai_chance = { factor = 150 }
+  trigger = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes BLR = { exists = no } }
+  puppet = BLR
+  DBR = { remove_ideas = { belarusian_civil_war DBR_polish_dominance } }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = BLR
+	 is_core_of = CBR
+	 is_core_of = DBR
+	 }
+	}
+	add_core_of = BLR
+	BLR = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###liberate French State
+  name = "Liberate Belarusian State"
+  ai_chance = { factor = 150 }
+  trigger = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes BLR = { exists = no } }
+  puppet = BLR
+  BLR = { remove_ideas = { belarusian_civil_war BLR_lithuanian_influence } }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = BLR
+	 is_core_of = CBR
+	 is_core_of = DBR
+	 }
+	}
+	add_core_of = BLR
+	BLR = { transfer_state = PREV }
+}
+ }
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.04
+  add_war_support =-0.04
+  add_political_power =-40
+ }
+
+}
+
+
+country_event = {
+ id = annex.30
+ desc = annex.30.d
+ title = "Fate of Ukraine"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  DSU = { NOT = { is_puppet_of = ROOT } }
+  UKR = { NOT = { is_puppet_of = ROOT } }
+  202 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = DSU
+   tag = UKR
+  }
+ }
+ 
+ option = { ###liberate Bealrusian Socialist Republic
+  name = "Liberate Ukrainian Socialist Republic"
+  ai_chance = { factor = 150 }
+  trigger = { SOCIALIST_ALIGNED_GOVERNMENT = yes DSU = { exists = no } }
+  puppet = DSU
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = DSU
+	 is_core_of = UKR
+	 }
+	}
+	add_core_of = DSU
+	DSU = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###liberate French Republic
+  name = "Liberate Ukrainian Republic"
+  ai_chance = { factor = 150 }
+  trigger = { SOCIALIST_ALIGNED_GOVERNMENT = no }
+  puppet = UKR
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = UKR
+	 is_core_of = DSU
+	 }
+	}
+	add_core_of = UKR
+	UKR = { transfer_state = PREV }
+  }
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.1
+  add_war_support =-0.1
+  add_political_power =-100
+ }
+
+}
+
+
+
+country_event = {
+ id = annex.31
+ desc = annex.31.d
+ title = "Fate of Western Russia"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  SOV = { NOT = { is_puppet_of = ROOT } }
+  RDR = { NOT = { is_puppet_of = ROOT } }
+  219 = { is_owned_and_controlled_by = ROOT }
+  257 = { is_owned_and_controlled_by = ROOT }
+  217 = { is_owned_and_controlled_by = ROOT }
+  249 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = SOV
+   tag = RUS
+   tag = RDR
+   tag = CAA
+   tag = CAU
+   tag = CRM
+   tag = LES
+   has_country_flag = RUS_warlord
+  }
+ }
+ 
+option = { ###liberate Russian Socialist Republic
+  name = "Liberate Russian Socialist Republic"
+  ai_chance = { factor = 150 }
+  trigger = { SOCIALIST_ALIGNED_GOVERNMENT = yes }
+  puppet = SOV
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = SOV
+	 is_core_of = CAU
+	 is_core_of = CAA
+	 is_core_of = CRM
+	 is_core_of = RDR
+	 is_core_of = RUS
+	 }
+	}
+	add_core_of = SOV
+	SOV = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###liberate French Republic
+  name = "Liberate Russian Republic"
+  ai_chance = { factor = 150 }
+  trigger = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes }
+  puppet = RDR
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = SOV
+	 is_core_of = CAU
+	 is_core_of = CAA
+	 is_core_of = CRM
+	 is_core_of = RDR
+	 is_core_of = RUS
+	 }
+	}
+	add_core_of = RDR
+	RDR = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###liberate French State
+  name = "Liberate Russian State"
+  ai_chance = { factor = 150 }
+  trigger = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes }
+  puppet = RDR
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = SOV
+	 is_core_of = CAU
+	 is_core_of = CAA
+	 is_core_of = CRM
+	 is_core_of = RDR
+	 is_core_of = RUS
+	 }
+	}
+	add_core_of = RDR
+	RDR = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###continue occupation
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.3
+  add_war_support =-0.3
+  add_political_power =-300
+ 
+ 
+ }
+}
+
+
+
+country_event = {
+ id = annex.32
+ desc = annex.32.d
+ title = "Fate of Italy"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  ITA = { NOT = { is_puppet_of = ROOT } }
+  2 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = ITA
+   tag = PIE
+   tag = SIC
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = ITA
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = ITA
+	}
+	ITA = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ ITA = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.3
+  add_war_support =-0.3
+  add_political_power =-300
+ }
+
+}
+
+
+
+country_event = {
+ id = annex.33
+ desc = annex.33.d
+ title = "Fate of Persia"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  PER = { NOT = { is_puppet_of = ROOT } }
+  266 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = PER
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = PER
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = PER
+	}
+	PER = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ PER = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.1
+  add_war_support =-0.1
+  add_political_power =-100
+ }
+
+}
+
+
+country_event = {
+ id = annex.34
+ desc = annex.34.d
+ title = "Fate of Turkmenistan"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  TRS = { NOT = { is_puppet_of = ROOT } }
+  584 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = TRS
+   tag = TMS
+  }
+ }
+ 
+ option = {
+  name = "Create a Socialist Turkmeni State"
+  trigger = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  puppet = TRS
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+     OR = { 
+	  is_core_of = TRS
+	  is_core_of = TMS
+	  }
+	}
+	TRS = { transfer_state = PREV }
+  }
+ }
+ 
+  option = {
+  name = "Create Turkmeni State"
+  trigger = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } }
+  puppet = TMS
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+     OR = { 
+	  is_core_of = TRS
+	  is_core_of = TMS
+	  }
+	}
+	TMS = { transfer_state = PREV }
+  } 
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.04
+  add_war_support =-0.04
+  add_political_power =-40
+ }
+
+}
+
+
+country_event = {
+ id = annex.35
+ desc = annex.35.d
+ title = "Fate of Khiva"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  KHV = { NOT = { is_puppet_of = ROOT } }
+  1176 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = KHV
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = KHV
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = KHV
+	}
+	KHV = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ KHV = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.01
+  add_war_support =-0.01
+  add_political_power =-10
+ }
+
+}
+
+country_event = {
+ id = annex.36
+ desc = annex.36.d
+ title = "Fate of Kirghiz State"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  KYR = { NOT = { is_puppet_of = ROOT } }
+  1217 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = KYR
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = KYR
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = KYR
+	}
+	KYR = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ KYR = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.04
+  add_war_support =-0.04
+  add_political_power =-40
+ }
+
+}
+
+
+country_event = {
+ id = annex.37
+ desc = annex.37.d
+ title = "Fate of Alash Orda"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  KZR = { NOT = { is_puppet_of = ROOT } }
+  583 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = KZR
+   tag = KAZ
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = KZR
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = KAZ
+	}
+	KZR = { transfer_state = PREV }
+	PREV = { add_core_of = KZR }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ KZR = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.15
+  add_war_support =-0.15
+  add_political_power =-150
+ }
+
+}
+
+
+country_event = {
+ id = annex.38
+ desc = annex.38.d
+ title = "Fate of Bukhara"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  UZB = { NOT = { is_puppet_of = ROOT } }
+  1177 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = UZB
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = UZB
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = UZB
+	}
+	UZB = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ UZB = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.1
+  add_war_support =-0.1
+  add_political_power =-100
+ }
+
+}
+
+country_event = {
+ id = annex.39
+ desc = annex.39.d
+ title = "Fate of United Baltic Provinces"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  EST = { NOT = { is_puppet_of = ROOT } }
+  LAT = { NOT = { is_puppet_of = ROOT } }
+  12 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = LAT
+   tag = EST
+  }
+ }
+ 
+ option = {
+  name = "Liberate Latvia and Estonia"
+  puppet = EST
+  puppet = LAT
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = LAT
+	}
+	LAT = { transfer_state = PREV }
+  }
+  
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	  is_core_of = LAT
+	 }
+	 is_core_of = EST
+	}
+	EST = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ LAT = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }
+ EST = { set_cosmetic_tag = EST_liberated }  
+ }
+ 
+  option = {
+  name = "Create a New Baltic State"
+  puppet = EST
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = EST
+	}
+	EST = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ EST = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }
+ }
+ 
+ option = {
+  name = "Annex Latvia, Puppet Estonia"
+  trigger = { tag = LIT }
+  puppet = EST
+  EST = { set_cosmetic_tag = EST_liberated }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	  is_core_of = LAT
+	 }
+	}
+	EST = { transfer_state = PREV }
+  }
+ 
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.1
+  add_war_support =-0.1
+  add_political_power =-100
+ }
+
+}
+
+
+country_event = {
+ id = annex.40
+ desc = annex.40.d
+ title = "Fate of Prussia"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  PRS = { NOT = { is_puppet_of = ROOT } }
+  763 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = PRS
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = PRS
+  trigger = { NOT = { tag = GER } }
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = PRS
+	}
+	PRS = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ PRS = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 
+ option = {
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.03
+  add_war_support =-0.03
+  add_political_power =-30
+ }
+
+}
+
+
+country_event = {
+ id = annex.41
+ desc = annex.41.d
+ title = "Fate of Germany"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  GER = { NOT = { is_puppet_of = ROOT } }
+  64 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = PRS
+   tag = GER
+   tag = BDB
+   tag = BAV
+  }
+ }
+ 
+option = { ###liberate French Socialist Republic
+  name = "Liberate German Socialist Republic"
+  ai_chance = { factor = 150 }
+  trigger = { SOCIALIST_ALIGNED_GOVERNMENT = yes }
+  puppet = GER
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = GER
+	 is_core_of = PRS
+	 is_core_of = BAV
+	 is_core_of = BDB
+	 }
+	}
+	add_core_of = GER
+	GER = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###liberate German Republic
+  name = "Liberate German Republic"
+  ai_chance = { factor = 150 }
+  trigger = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes }
+  puppet = GER
+  GER = { set_cosmetic_tag = GER_reactionary }
+  hidden_effect = {
+  GER = {
+  set_party_name = { ideology = social_liberal long_name = "Fortschrittliche Volkspartei" name = "FVP" }
+  set_party_name = { ideology = conservative long_name = "Deutschkonservative Partei" name = "DkP" }
+  set_party_name = { ideology = authoritharian long_name = "Deutsche Generäle" name = "DG" }
+  set_party_name = { ideology = reactionary long_name = "Deutsche Generäle" name = "DG" }
+  set_party_name = { ideology = pelekist long_name = "Wandervögel" name = "W" }
+  create_country_leader = {
+	name = "Franz Blücher"
+	desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+	picture = "Franz_Blücher.tga"
+	expire = "1965.1.1"
+	ideology = conservative_subtype
+	traits = {
+	}
+}
+  create_country_leader = {
+	name = "Eugen Schiffer"
+	desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+	picture = "Eugen_Schiffer.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+	}
+}
+
+  create_country_leader = {
+	name = "Heinrich Brüning"
+	desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+	picture = "Heinrich_Brüning.tga"
+	expire = "1965.1.1"
+	ideology = social_democracy_subtype
+	traits = {
+	}
+}
+
+  create_country_leader = {
+	name = "Paul Hausser"
+	desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+	picture = "Paul_Hausser.tga"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+	}
+}
+
+  create_country_leader = {
+	name = "Paul Hausser"
+	desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+	picture = "Paul_Hausser.tga"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+	}
+}
+
+  create_country_leader = {
+	name = "Hans Blüher"
+	desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+	picture = "Hans_Blüher.tga"
+	expire = "1965.1.1"
+	ideology = pagan_pelekism
+	traits = {
+	}
+}
+  
+  
+  
+  }
+  
+  }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = GER
+	 is_core_of = PRS
+	 is_core_of = BAV
+	 is_core_of = BDB
+	 }
+	}
+	add_core_of = GER
+	GER = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###liberate German State
+  name = "Liberate German State"
+  ai_chance = { factor = 150 }
+  trigger = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes }
+  puppet = GER
+  GER = { set_cosmetic_tag = GER_reactionary }
+ hidden_effect = {
+  GER = {
+  set_party_name = { ideology = social_liberal long_name = "Fortschrittliche Volkspartei" name = "FVP" }
+  set_party_name = { ideology = conservative long_name = "Deutschkonservative Partei" name = "DkP" }
+  set_party_name = { ideology = authoritharian long_name = "Deutsche Generäle" name = "DG" }
+  set_party_name = { ideology = reactionary long_name = "Deutsche Generäle" name = "DG" }
+  set_party_name = { ideology = pelekist long_name = "Wandervögel" name = "W" }
+  create_country_leader = {
+	name = "Franz Blücher"
+	desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+	picture = "Franz_Blücher.tga"
+	expire = "1965.1.1"
+	ideology = conservative_subtype
+	traits = {
+	}
+}
+  create_country_leader = {
+	name = "Eugen Schiffer"
+	desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+	picture = "Eugen_Schiffer.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+	}
+}
+
+  create_country_leader = {
+	name = "Heinrich Brüning"
+	desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+	picture = "Heinrich_Brüning.tga"
+	expire = "1965.1.1"
+	ideology = social_democracy_subtype
+	traits = {
+	}
+}
+
+  create_country_leader = {
+	name = "Paul Hausser"
+	desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+	picture = "Paul_Hausser.tga"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+	}
+}
+
+  create_country_leader = {
+	name = "Paul Hausser"
+	desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+	picture = "Paul_Hausser.tga"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+	}
+}
+
+  create_country_leader = {
+	name = "Hans Blüher"
+	desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+	picture = "Hans_Blüher.tga"
+	expire = "1965.1.1"
+	ideology = pagan_pelekism
+	traits = {
+	}
+}
+  
+  
+  
+  }
+  
+  }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = GER
+	 is_core_of = PRS
+	 is_core_of = BAV
+	 is_core_of = BDB
+	 }
+	}
+	add_core_of = GER
+	GER = { transfer_state = PREV }
+}
+ }
+ 
+ option = { ###continue occupation
+  name = "Continue Military Occupation"
+  ai_chance = { factor = 0 }
+  add_stability =-0.25
+  add_war_support =-0.25
+  add_political_power =-250
+ 
+ 
+ }
+}
+
+country_event = {
+ id = annex.42
+ desc = annex.42.d
+ title = "Fate of Afghanistan"
+ fire_only_once = yes
+ 
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+  has_war = no
+  AFG = { NOT = { is_puppet_of = ROOT } }
+  267 = { is_owned_and_controlled_by = ROOT }
+  NOT = {
+   tag = AFG
+  }
+ }
+ 
+ option = {
+  name = "Create a Puppet State"
+  puppet = AFG
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = AFG
+	}
+	AFG = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ AFG = {
+  set_cosmetic_tag = ITA_socialist
+  } 
+ }  
+ }
+ 

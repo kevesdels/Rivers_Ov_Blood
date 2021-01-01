@@ -1,0 +1,73 @@
+﻿capital = 50
+
+set_research_slots = 3
+
+oob = "WUR_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+set_politics = {
+	ruling_party = authoritharian
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 3
+	democratic_socialist = 7
+	social_democracy = 5
+	social_liberal = 6
+	conservative = 4
+	authoritharian = 19
+	reactionary = 27
+	pelekist = 29
+}
+
+create_country_leader = {
+	name = "Karl Wendlinger"
+	desc = ""
+	picture = "gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+	expire = "1960.1.1"
+	ideology = pagan_pelekism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Heinrich Daluege"
+	desc = ""
+	picture = "gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
+	expire = "1960.1.1"
+	ideology = national_socialist_subtype
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Johann Ungerer"
+	desc = ""
+	picture = "gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
+	expire = "1960.1.1"
+	ideology = socialist_subtype
+	traits = {
+		
+	}
+}
+
+create_corps_commander  = {
+	name = "Richard Ruoff"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 1
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 1
+}

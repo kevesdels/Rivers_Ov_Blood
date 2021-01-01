@@ -1,0 +1,70 @@
+division_template = {
+	name = "Bukharan Cavalry"
+
+	division_names_group = AFG_ARM_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = AFG_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	#Royal Bukharan Army
+	division = {
+		name = "Royal Bukharan Cavalry"
+		location = 1573
+		division_template = "Bukharan Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Southeast Cavalry Garrison"
+		location = 12239
+		division_template = "Bukharan Cavalry"
+		start_equipment_factor = 0.8
+
+	}
+	division = {
+		name = "Northwest Cavalry Garrison"
+		location = 4499
+		division_template = "Bukharan Cavalry"
+		start_equipment_factor = 0.8
+
+	}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "UZB"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

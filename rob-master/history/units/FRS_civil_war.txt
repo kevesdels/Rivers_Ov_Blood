@@ -1,0 +1,301 @@
+##### Division Templates #####
+division_template = {
+name = "Socialist Brigade"
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Division d'Infanterie"		
+	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. de Forteresse
+	# Difference is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+	}
+}
+
+units = {
+division = {
+name = "Socialist Brigade"
+location = 3552
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.6
+}
+division = {
+name = "Socialist Brigade"
+location = 542
+division_template = "Socialist Brigade"
+start_experience_factor = 0.3
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Socialist Brigade"
+location = 9550
+division_template = "Socialist Brigade"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "Socialist Brigade"
+location = 13344
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.4
+
+}
+division = {
+name = "Socialist Brigade"
+location = 539
+division_template = "Socialist Brigade"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "Socialist Brigade"
+location = 11521
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Socialist Brigade"
+location = 553
+division_template = "Socialist Brigade"
+start_experience_factor = 0.3
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Socialist Brigade"
+location = 3534
+division_template = "Socialist Brigade"
+start_experience_factor = 0.1
+start_equipment_factor = 0.3
+
+}
+division = {
+name = "Socialist Brigade"
+location = 3549
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.3
+
+}
+division = {
+name = "Socialist Brigade"
+location = 9523
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Socialist Brigade"
+location = 9725
+division_template = "Socialist Brigade"
+start_experience_factor = 0.4
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Socialist Brigade"
+location = 11491
+division_template = "Socialist Brigade"
+start_experience_factor = 0.3
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Socialist Brigade"
+location = 6949
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Socialist Brigade"
+location = 11518
+division_template = "Socialist Brigade"
+start_experience_factor = 0.4
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "Socialist Brigade"
+location = 11506
+division_template = "Socialist Brigade"
+start_experience_factor = 0.1
+
+
+}
+division = {
+name = "Socialist Brigade"
+location = 9534
+division_template = "Socialist Brigade"
+start_experience_factor = 0.1
+
+
+}
+division = {
+name = "Socialist Brigade"
+location = 6569
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Socialist Brigade"
+location = 485
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Socialist Brigade"
+location = 743
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Socialist Brigade"
+location = 9710
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Socialist Brigade"
+location = 6762
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Socialist Brigade"
+location = 9737
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Socialist Brigade"
+location = 11834
+division_template = "Socialist Brigade"
+start_experience_factor = 0.5
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "Socialist Brigade"
+location = 3594
+division_template = "Socialist Brigade"
+start_experience_factor = 0.5
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "Socialist Brigade"
+location = 3652
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+}
+division = {
+name = "Socialist Brigade"
+location = 678
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+}
+division = {
+name = "Socialist Brigade"
+location = 9503
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+}
+division = {
+name = "Socialist Brigade"
+location = 9559
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+}
+division = {
+name = "Socialist Brigade"
+location = 3552
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+}
+division = {
+name = "Socialist Brigade"
+location = 542
+division_template = "Socialist Brigade"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+}
+
+division = {
+name = "Division d'Infanterie"
+location = 11506
+division_template = "Division d'Infanterie"
+start_experience_factor = 0.5
+
+}
+division = {
+name = "Division d'Infanterie"
+location = 11483
+division_template = "Division d'Infanterie"
+start_experience_factor = 0.5
+
+}
+division = {
+name = "Division d'Infanterie"
+location = 6449
+division_template = "Division d'Infanterie"
+start_experience_factor = 0.5
+}
+division = {
+name = "Division d'Infanterie"
+location = 9737
+division_template = "Division d'Infanterie"
+start_experience_factor = 0.5
+}
+division = {
+name = "Division d'Infanterie"
+location = 9898
+division_template = "Division d'Infanterie"
+start_experience_factor = 0.5
+}
+
+}

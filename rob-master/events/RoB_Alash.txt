@@ -1,0 +1,303 @@
+#################
+###Alash Events
+#################
+
+add_namespace = alash
+
+
+###Kazakh Civil War
+
+country_event = {
+id = alash.99
+title = alash.99.t
+desc = alash.99.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = KAZ
+date > 1935.1.13
+}
+
+option = {
+name = alash.99.a
+ai_chance = { factor = 100}
+kill_country_leader = yes
+create_country_leader = {
+	name = "Mirjaqip Dulatuli"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+		
+	}
+}
+remove_ideas = KAZ_triumverate
+        hidden_effect = { country_event = { id = alash.100 days = 15 } } 
+}
+
+}
+
+country_event = {
+id = alash.100
+title = alash.100.t
+desc = alash.100.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = KAZ
+}
+
+immediate = { 
+KZR = { transfer_state = 583 }
+KZR = { transfer_state = 402 }
+KZR = { transfer_state = 582 }
+KZR = { transfer_state = 407 }
+KZR = { transfer_state = 406 }
+KZR = { transfer_state = 585 }
+KZR = { transfer_state = 587 }
+583 = { add_core_of = KZR }
+402 = { add_core_of = KZR }
+582 = { add_core_of = KZR }
+407 = { add_core_of = KZR }
+406 = { add_core_of = KZR }
+585 = { add_core_of = KZR }
+587 = { add_core_of = KZR }
+590 = { add_core_of = KZR }
+404 = { add_core_of = KZR }
+984 = { add_core_of = KZR }
+405 = { add_core_of = KZR }
+586 = { add_core_of = KZR }
+588 = { add_core_of = KZR }
+589 = { add_core_of = KZR }
+
+
+
+
+}
+
+option = {
+name = alash.100.a
+add_political_power = -100
+add_stability = -0.1
+declare_war_on = {
+    target = KZR
+    type = annex_everything
+}
+KZR = { load_oob = "KZR_1936" }
+
+
+}
+option = {
+name = alash.100.b
+add_political_power = -100
+add_stability = -0.1
+declare_war_on = {
+    target = KZR
+    type = annex_everything
+}
+KZR = { load_oob = "KZR_1936" }
+KZR = { change_tag_from = KAZ }
+}
+}
+
+###Kirghizian Intervention
+
+country_event = {
+id = alash.101
+title = alash.101.t
+desc = alash.101.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = KYR
+KAZ = { has_war_with = KZR }
+}
+
+option = {
+name = alash.101.a
+ai_chance = { factor = 100}
+start_border_war = {
+    change_state_after_war = yes
+    attacker = {
+        state = 732
+        num_provinces = 4
+        on_win = alash.102
+        on_lose = alash.103
+        on_cancel = alash.104
+    }
+				
+    defender = {
+        state = 586
+        num_provinces = 3
+        on_win = alash.103
+        on_lose = alash.102
+        on_cancel = alash.104
+    }
+}
+732 = { create_unit = {
+    division = "name = \"1st Kirghiz Militia\" division_template = \"Militia Forces\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+    owner = KYR
+prioritize_location = 1825
+
+}
+}
+732 = { create_unit = {
+    division = "name = \"2nd Kirghiz Militia\" division_template = \"Militia Forces\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+    owner = KYR
+prioritize_location = 4224
+
+}
+}
+add_manpower = 5000
+KAZ = { diplomatic_relation = {
+    country = KYR
+    relation = guarantee
+    active = no
+}
+}
+
+
+KAZ = { diplomatic_relation = {
+    country = KYR
+    relation = military_access
+    active = no
+}
+}
+
+
+}
+option = {
+name = alash.101.b
+ai_chance = { factor = 0}
+add_political_power = -50
+}
+}
+
+country_event = {
+id = alash.102
+title = alash.102.t
+desc = alash.102.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+}
+
+option = {
+name = alash.102.a
+ai_chance = { factor = 100}
+
+}
+
+}
+country_event = {
+id = alash.103
+title = alash.103.t
+desc = alash.103.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+}
+
+option = {
+name = alash.103.a
+ai_chance = { factor = 100}
+
+}
+
+}
+country_event = {
+id = alash.104
+title = alash.104.t
+desc = alash.104.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+}
+
+option = {
+name = alash.104.a
+ai_chance = { factor = 100}
+
+}
+
+}
+
+country_event = {
+id = alash.105
+title = alash.105.t
+desc = alash.105.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = UZB
+KYR = { owns_state = 742 }
+NOT = { KYR = { owns_state = 732 } } 
+}
+
+option = {
+name = alash.105.a
+ai_chance = { factor = 100}
+
+742 = { add_core_of = UZB }
+UZB = { transfer_state = 742 } 
+
+}
+
+}
+
+###Kirghizian Intervention Tashkent
+
+country_event = {
+id = alash.106
+title = alash.106.t
+desc = alash.106.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = KYR
+KAZ = { has_war_with = KZR }
+owns_state = 586
+}
+
+option = {
+name = alash.106.a
+ai_chance = { factor = 40}
+start_border_war = {
+    change_state_after_war = yes
+    attacker = {
+        state = 586
+        num_provinces = 2
+        on_win = alash.102
+        on_lose = alash.103
+        on_cancel = alash.104
+    }
+				
+    defender = {
+        state = 405
+        num_provinces = 2
+        on_win = alash.103
+        on_lose = alash.102
+        on_cancel = alash.104
+    }
+}
+add_manpower = 1000
+}
+option = {
+name = alash.106.b
+ai_chance = { factor = 60}
+add_political_power = -50
+}
+}

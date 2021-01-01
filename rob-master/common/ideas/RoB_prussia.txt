@@ -1,0 +1,966 @@
+ideas = {
+ 
+ 
+ #######################
+ ###National Spirits
+ #######################
+ country = {
+ 
+ minority_troubles = {
+  picture = GFX_idea_minority_troubles
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				consumer_goods_factor = 0.15
+				production_factory_max_efficiency_factor = -0.15
+				}
+ 
+ }
+ 
+ weak_king = {
+   picture = GFX_idea_weak_king
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	 army_morale_factor = -0.05
+	 political_power_gain = -0.25
+
+		}
+ 
+ }
+ 
+  prussian_army = {
+   picture = GFX_idea_prussian_army
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	 stability_factor = 0.08
+	 conscription = 0.015
+
+		}
+ 
+ }
+ 
+   prussian_high_command = {
+   picture = GFX_idea_prussian_high_command
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	 planning_speed = 0.25
+	 army_org_factor = 0.1
+	 army_attack_factor = 0.1
+	 
+
+		}
+ 
+ }
+ 
+   PRS_ksd_expanded = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+    political_power_gain = 0.2
+	 
+}
+ 
+ }
+   PRS_concentration_camps = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+    
+	consumer_goods_factor = 0.03
+	production_speed_buildings_factor = 0.1
+   }
+ 
+ }
+    PRS_german_socialism = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+    
+	industrial_capacity_factory = 0.1
+	production_speed_buildings_factor = 0.25
+}
+ 
+ }
+     PRS_ss = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+    
+	conscription = 0.005
+	army_morale_factor = 0.1
+}
+ 
+ }
+     PRS_militarized_youth = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+    
+	conscription = 0.015
+	war_support_factor = 0.1
+}
+ 
+ }
+ 
+     PRS_strenght_through_joy = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+    consumer_goods_factor = 0.05
+	industrial_capacity_factory = 0.1
+	production_factory_max_efficiency_factor = 0.05
+}
+ 
+ }
+     PRS_prussian_socialism_rosenberg = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	industrial_capacity_factory = 0.05
+	production_factory_max_efficiency_factor = 0.05
+}
+ 
+ }
+    PRS_class_collabritiaon = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	production_speed_buildings_factor = 0.15
+	production_factory_efficiency_gain_factor = 0.08
+}
+ 
+ }
+ 
+    PRS_ss_kshatriyas = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	army_attack_factor = 0.1
+	army_org_factor = 0.1
+}
+ 
+ }
+     PRS_prussian_youth = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	conscription = 0.005
+	training_time_factor =-0.15
+}
+ 
+ }
+   PRS_rosenberg_pereniallism = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	political_power_gain = 0.25
+	stability_factor = 0.05
+    }
+ 
+ }
+   PRS_odinism = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	war_support_factor = 0.1
+	stability_factor = -0.05
+	army_attack_factor = 0.1
+    }
+ 
+ }
+    PRS_positive_christianity = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	war_support_factor = -0.05
+	stability_factor = 0.1
+	production_factory_efficiency_gain_factor = 0.1
+    }
+ 
+ }
+    PRS_vydunas_corporatism = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	production_factory_max_efficiency_factor = 0.1
+	consumer_goods_factor =-0.1
+    }
+ 
+ }
+ 
+   PRS_baltic_kshatriyas = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	conscription = -0.003
+	winter_attrition_factor =-0.1
+	army_morale_factor = 0.1
+	army_attack_factor = 0.1
+    }
+ 
+ }
+ 
+   PRS_romuva_faith = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+    war_support_factor = 0.1
+	political_power_gain = 0.2
+    }
+ 
+ }
+ 
+    PRS_new_security = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	political_power_gain = 0.15
+    }
+ 
+ }
+ 
+   PRS_army_with_a_state = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	conscription = 0.025
+	consumer_goods_factor = 0.1
+    }
+ 
+ }
+ 
+    PRS_eliet_training = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	army_org_factor = 0.15
+	army_attack_factor = 0.05
+    }
+ 
+ }
+ 
+    PRS_social_workersrights = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	consumer_goods_factor = 0.05
+	industrial_capacity_factory = 0.15
+    }
+ 
+ }
+    PRS_consumer_goods = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	consumer_goods_factor = -0.15
+	
+    }
+ 
+ }
+    PRS_open_borders = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	MONTHLY_POPULATION = 0.55
+	
+    }
+ 
+ }
+ 
+     PRS_future_ahead = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	production_speed_buildings_factor = 0.25
+	industrial_capacity_factory = 0.15
+    }
+ 
+ }
+     PRS_foundaition_behind = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	army_org_factor = 0.15
+	stability_factor = 0.15
+    }
+ 
+ }
+      PRS_fanatic_army = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	conscription = -0.001
+	army_attack_factor = 0.1
+	army_org_factor = 0.05
+    }
+ 
+ }
+       PRS_industrialization = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	production_speed_buildings_factor = 0.15
+    }
+ 
+ }
+        PRS_pruss_soc = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	industrial_capacity_factory = 0.07
+    }
+ 
+ }
+         PRS_eco_reforms_1 = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	production_factory_max_efficiency_factor = 0.05
+    }
+ 
+ }
+          PRS_eco_reforms_2 = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	production_factory_max_efficiency_factor = 0.05
+	consumer_goods_factor =-0.04
+	
+    }
+ 
+ }
+           PRS_eco_reforms_3 = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	production_factory_max_efficiency_factor = 0.05
+	consumer_goods_factor =-0.04
+	political_power_gain = 0.1
+	
+    }
+ 
+ }
+            PRS_land_reforms_1 = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	consumer_goods_factor =-0.05
+	}
+ 
+ }
+            PRS_land_reforms_2 = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	consumer_goods_factor =-0.05
+	stability_factor = 0.05
+	}
+ 
+ }
+            PRS_no_unemployment = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	industrial_capacity_factory =0.15
+	production_factory_max_efficiency_factor = 0.05
+	}
+ 
+ }
+ 
+   PRS_elite_army = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	conscription =-0.006
+	army_attack_factor = 0.08
+	army_org_factor =0.08
+	army_morale_factor = 0.05
+	}
+ 
+ }
+   PRS_prussian_tank_corps = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	
+	army_armor_attack_factor = 0.1
+	army_armor_speed_factor =0.1
+	motorized_attack_factor = 0.05
+	}
+ 
+ }
+   PRS_core_army = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+			equipment_bonus = {
+			artillery_equipment = {
+			 build_cost_ic = -0.1 instant = yes
+           }
+		  }
+	 modifier = {
+	
+	army_artillery_attack_factor = 0.1
+	army_artillery_defence_factor =0.1
+
+	}
+ 
+ }
+    PRS_infantry_primacy = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	
+	army_infantry_attack_factor = 0.15
+	army_infantry_defence_factor =0.15
+	}
+ 
+ }
+    PRS_new_age = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	
+	research_speed_factor = 0.05
+	land_reinforce_rate =0.03
+	}
+ 
+ }
+    PRS_old_methods = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	
+	attrition = -0.1
+	experience_loss_factor =-0.08
+	}
+ 
+ }
+   PRS_massive_army = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	conscription =0.006
+	army_attack_factor = -0.05
+	army_org_factor =-0.05
+	army_morale_factor =-0.05
+	}
+ 
+ }
+ 
+   PRS_fighter_modernaztion = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+			equipment_bonus = {
+			fighter_equipment = {
+			 build_cost_ic = -0.1 instant = yes
+           }
+		  } 
+	 modifier = {
+
+	air_air_superiority_agility_factor = 0.03
+	air_air_superiority_defence_factor = 0.03
+	air_air_superiority_attack_factor = 0.03
+	}
+ 
+ }
+   PRS_bomber_modernaztion = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+			equipment_bonus = {
+			CAS_equipment = {
+			 build_cost_ic = -0.07 instant = yes
+           }
+		  } 
+	 modifier = {
+
+	air_close_air_support_attack_factor = 0.03
+	air_close_air_support_defence_factor = 0.03
+	air_close_air_support_agility_factor = 0.03
+	air_cas_present_factor = 0.08
+	}
+ 
+ }
+   PRS_submarine_modernaztion = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+			equipment_bonus = {
+			ss_tech = {
+			 build_cost_ic = -0.15 instant = yes
+           }
+		  } 
+	 modifier = {
+	}
+ 
+ }
+    PRS_better_subs = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+			equipment_bonus = {
+		  } 
+	 modifier = {
+    navy_submarine_attack_factor = 0.2
+	navy_submarine_defence_factor = 0.2
+	}
+ 
+ }
+    PRS_marine_core = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+			equipment_bonus = {
+		  } 
+	 modifier = {
+    amphibious_invasion = 0.25
+	special_forces_cap = 0.05
+	}
+ 
+ }
+    PRS_navy_modernaztion = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+ 
+	 modifier = {
+	 industrial_capacity_dockyard = 0.06
+	}
+ 
+ }
+    PRS_plan_z = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+ 
+	 modifier = {
+	 industrial_capacity_dockyard = 0.02
+	 naval_hit_chance = 0.05
+	 naval_coordination = 0.02
+	}
+ 
+ }	
+ }
+ 
+###ARMY STAFF###
+
+army_chief = {
+
+ PRS_walther_nehring = {
+ cost = 150
+ picture = PRS_walther_nehring
+ allowed = { original_tag = PRS }
+ traits = { army_chief_offensive_2 }
+ }
+ 
+ PRS_fedor_von_bock = {
+ cost = 150
+ picture = PRS_fedor_von_bocvk
+ allowed = { original_tag = PRS }
+ traits = { army_artillery_2 }
+ }
+ 
+ PRS_willy_langkeit = {
+ cost = 150
+ picture = PRS_willy_langheit
+ allowed = { original_tag = PRS }
+ traits = { army_armored_2 }
+ }
+ 
+ PRS_walter_model = {
+ cost = 150
+ picture = PRS_walther_model
+ allowed = { original_tag = PRS }
+ traits = { army_entrenchment_3 }
+ }
+}
+
+navy_chief = {
+
+ PRS_karl_donitz = {
+ cost = 150
+ picture = PRS_karl_donitz
+ allowed = { original_tag = PRS }
+ traits = { navy_chief_commerce_raiding_3 }
+ }
+
+ PRS_erich_raeder = {
+ cost = 150
+ picture = PRS_erich_raeder
+ allowed = { original_tag = PRS }
+ traits = { navy_chief_decisive_battle_3 }
+ }
+
+}
+
+air_chief = {
+
+ PRS_hermann_von_der_lieth = {
+ cost = 150
+ picture = PRS_herman_von_der_lieht
+ allowed = { tag = PRS }
+ traits = { air_air_superiority_3 }
+ }
+ 
+ PRS_karl_bodenschatz = {
+ cost = 150
+ picture = PRS_karl_bodenschatz
+ allowed = { tag = PRS }
+ traits = { air_close_air_support_2 }
+ }
+ 
+ PRS_heinrich_danckelmann = {
+ cost = 150
+ picture = PRS_heinrich_danckelmann
+ allowed = { tag = PRS }
+ traits = { air_bomber_interception_2 }
+ }
+ 
+}
+
+high_command = { 
+ PRS_wilhelm_keitel = {
+ cost = 150
+ picture = PRS_willhelm_keitel
+ allowed = { original_tag = PRS }
+ traits = { army_entrenchment_2 }
+ }
+
+ PRS_alfred_jodl = {
+ cost = 150
+ picture = PRS_alfred_jodl
+ allowed = { original_tag = PRS }
+ traits = { army_infantry_1 }
+ }
+ 
+ PRS_wilhelm_ritter_von_leeb = {
+ cost = 150
+ picture = PRS_willhelm_ritter_von_leeb
+ allowed = { original_tag = PRS }
+ traits = { army_artillery_2 }
+ }
+ 
+ PRS_gerd_von_rundstedt = {
+ cost = 150
+ picture = PRS_gerd_von_rundstedt
+ allowed = { original_tag = PRS }
+ traits = { army_chief_maneuver_3 }
+ }
+ 
+ PRS_gunther_von_kluge = {
+ cost = 150
+ picture = PRS_gunterh_von_kluge
+ allowed = { original_tag = PRS }
+ traits = { army_chief_morale_2 }
+ }
+ 
+ PRS_georg_von_kuchler = {
+ cost = 150
+ picture = PRS_georg_von_kuchler
+ allowed = { original_tag = PRS }
+ traits = { army_chief_planning_3 }
+ }
+
+}
+}

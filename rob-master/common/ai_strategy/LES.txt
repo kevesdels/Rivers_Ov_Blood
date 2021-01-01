@@ -1,0 +1,40 @@
+
+
+LES_when_justifyin = {
+
+	enable = {
+		original_tag = LES
+		has_country_flag = LES_justifying_OMS
+	}
+	abort = { NOT = { has_country_flag = LES_justifying_OMS } }
+	ai_strategy = {
+		type = prepare_for_war 
+		id = "OMS"
+		value = 120
+		}
+	ai_strategy = {
+		type = invade
+		id = "OMS"
+		value = 100
+		}
+}
+
+
+LES_when_justifyin_2 = {
+
+	enable = {
+		original_tag = LES
+		has_country_flag = LES_justifying_KAR
+	}
+	abort = { NOT = { has_country_flag = LES_justifying_KAR } }
+	ai_strategy = {
+		type = prepare_for_war 
+		id = "KAR"
+		value = 120
+		}
+	ai_strategy = {
+		type = invade
+		id = "KAR"
+		value = 100
+		}
+}

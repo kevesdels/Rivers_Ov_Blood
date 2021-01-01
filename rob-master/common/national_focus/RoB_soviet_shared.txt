@@ -1,0 +1,3614 @@
+#Focus for Every Farm A Tractor
+shared_focus = { 
+id = SOV_everyfarmatractor
+icon = GFX_focus_SOV_bukharins_every_farm_a_tractor
+x = 37
+y = 13
+cost = 5
+available_if_capitulated = yes 
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.4
+				uses = 1
+				category = industry
+			}
+		}
+prerequisite = { focus = SOV_mo } 
+ai_will_do = { 
+ factor = 10
+ } 
+} 
+
+#Focus for Railway To Leningrad
+shared_focus = { 
+id = SOV_railwaytoleningrad
+icon = GFX_focus_SOV_bukharins_railway_to_leningrad
+x = 47
+y = 10
+cost = 5
+available_if_capitulated = yes 
+completion_reward = {
+219 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+246 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+263 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+244 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+195 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+}
+prerequisite = { focus = SOV_continuemoderatenationalization } 
+ai_will_do = { 
+ factor = 10
+ } 
+} 
+
+#Focus for Electrical Grid
+shared_focus = { 
+id = SOV_electricalgrid
+icon = GFX_focus_SOV_bukharins_electrical_grid
+x = 47
+y = 11
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_railwaytoleningrad } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  add_tech_bonus = {
+	name = electronics_bonus
+	bonus = 0.5
+    ahead_reduction = 1
+	uses = 1
+	category = electronics
+}
+ }
+} 
+
+#Focus for Smolensk Industrial Plants
+shared_focus = { 
+id = SOV_smolenskindustrialplants
+icon = GFX_focus_SOV_bukharins_smolensk_industry
+x = 45
+y = 14
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_everyfarmatractor } 
+prerequisite = { focus = SOV_agriculturalgrants } 
+prerequisite = { focus = SOV_mandatoryworkmonthsinschool } 
+prerequisite = { focus = SOV_mandatoryeducationforpeasantry } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  242 = {
+  add_extra_state_shared_building_slots = 2
+  add_building_construction = {
+  
+	type = industrial_complex
+	level = 2
+	instant_build = yes
+}
+
+ }
+ }
+ } 
+
+#Focus for Expanding Urban Infrastructure
+shared_focus = { 
+id = SOV_expandingurbaninfrastructure
+icon = GFX_focus_SOV_bukharins_expand_urban_infr
+x = 39
+y = 15
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_encouragepeacefulimmigration } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ 219 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+195 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+214 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+}
+ } 
+
+#Focus for Bukharinyovka
+shared_focus = { 
+id = SOV_bukharinyovka
+icon = GFX_focus_SOV_bukharins_bukharinovyka
+x = 45
+y = 15
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_smolenskindustrialplants } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = assembly_bonus
+	bonus = 0.25
+	uses = 1
+	technology = improved_machine_tools	
+	technology = advanced_machine_tools
+	technology = assembly_line_production
+	technology = flexible_line
+	technology = streamlined_line
+}
+
+}
+ } 
+
+#Focus for Mandatory Work For Everybody
+shared_focus = { 
+id = SOV_mandatoryworkforeverybody
+icon = GFX_focus_SOV_bukharins_mandatory_work_for_everyone
+x = 42
+y = 15
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_encouragepeacefulimmigration } 
+prerequisite = { focus = SOV_smolenskindustrialplants } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  more_work_bukharin
+ }
+}
+ } 
+
+#Focus for Agricultural Grants
+shared_focus = { 
+id = SOV_agriculturalgrants
+icon = GFX_focus_SOV_bukharins_agricultural_grants
+x = 41
+y = 13
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_mo } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  agriculture_grants_bukarin
+ }
+}
+ } 
+
+#Focus for Encourage Peaceful Immigration
+shared_focus = { 
+id = SOV_encouragepeacefulimmigration
+icon = GFX_focus_SOV_bukharins_peaceful_immigartion
+x = 39
+y = 14
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_everyfarmatractor } 
+prerequisite = { focus = SOV_agriculturalgrants } 
+prerequisite = { focus = SOV_mandatoryworkmonthsinschool } 
+prerequisite = { focus = SOV_mandatoryeducationforpeasantry } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  peasants_replaced
+ }
+}
+ } 
+
+#Focus for Defence Minister Voroshilov
+shared_focus = { 
+id = SOV_defenceministervoroshilov
+icon = GFX_focus_SOV_minester_vorshilov
+x = 64
+y = 3
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_reformredguard } 
+mutually_exclusive = { focus = SOV_defenceministerbudyonny }
+available = { has_tech = trench_warfare }
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_popularity = {ideology = socialist popularity =0.04}
+}
+ } 
+
+#Focus for Defence Minister Budyonny
+shared_focus = { 
+id = SOV_defenceministerbudyonny
+icon = GFX_focus_SOV_minester_budyonny
+x = 72
+y = 3
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_reformredguard } 
+mutually_exclusive = { focus = SOV_defenceministervoroshilov }
+available = { has_tech = mass_assault }
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_popularity = {ideology = democratic_socialist popularity =0.04}
+}
+ } 
+
+#Focus for Defence Minister Zhukov
+shared_focus = { 
+id = SOV_defenceministerzhukov
+icon = GFX_focus_SOV_minester_zhukov
+x = 49
+y = 3
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_shaposhnikovsplan }
+mutually_exclusive = { focus = SOV_defenceministershaposhnikov }
+available = { has_tech = mobile_warfare } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_popularity = {ideology = national_socialist popularity =0.04}
+}
+ } 
+
+#Focus for Defence Minister Shaposhnikov
+shared_focus = { 
+id = SOV_defenceministershaposhnikov
+icon = GFX_focus_SOV_minester_shaposhnikov
+x = 57
+y = 3
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_shaposhnikovsplan }
+mutually_exclusive = { focus = SOV_defenceministerzhukov } 
+available = { has_tech = superior_firepower }
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_popularity = {ideology = national_socialist popularity =0.02}
+ add_popularity = {ideology = socialist popularity =0.02}
+}
+ } 
+
+#Focus for Shaposhnikov's Plan
+shared_focus = { 
+id = SOV_shaposhnikovsplan
+icon = GFX_focus_SOV_shapkivos_plan
+x = 53
+y = 2
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_bolsheviklandforces } 
+mutually_exclusive = { focus = SOV_reformredguard }
+available = {
+ has_country_flag = SOV_shaposhnikovs_plan
+} 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ army_experience = 25
+}
+ } 
+
+#Focus for T-26
+shared_focus = { 
+id = SOV_t26
+icon = GFX_focus_SOV_t_26
+x = 47
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_repairrenaultftunits } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_tech_bonus = {
+	name = zhukov_tanks
+	bonus = 1.0
+	uses = 1
+	technology = basic_light_tank	
+
+}
+}
+ } 
+
+#Focus for Gorkovsky Avtomobilny Zavod
+shared_focus = { 
+id = SOV_gorkovskyavtomobilnyzavod
+icon = GFX_focus_SOV_motorised_gaz
+x = 51
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_developarmoreddoctrines } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ 
+252 = {
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+	type = arms_factory
+	level = 1
+	instant_build = yes
+}
+}
+add_tech_bonus = {
+	name = zhukov_mot
+	bonus = 1.0
+	uses = 1
+	technology = motorised_infantry	
+	technology = mechanised_infantry
+}
+
+}
+ } 
+
+#Focus for Repair Renault FT Units
+shared_focus = { 
+id = SOV_repairrenaultftunits
+icon = GFX_focus_SOV_renault_ft
+x = 47
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_developarmoreddoctrines } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_equipment_to_stockpile = {
+  type = gw_tank_equipment
+					amount = 132
+					producer = FRA
+ }
+}
+ } 
+
+#Focus for Develop Armored Doctrines
+shared_focus = { 
+id = SOV_developarmoreddoctrines
+icon = GFX_focus_SOV_armored_doctrines
+x = 49
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_defenceministerzhukov } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = zhukov
+	bonus = 1.0
+	uses = 2
+	category = cat_mobile_warfare
+}
+}
+ } 
+#Focus for Refresh The Officer Pool
+shared_focus = { 
+id = SOV_refreshtheofficerpool
+icon = GFX_focus_SOV_refresh_officer_pool
+x = 64
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_defenceministervoroshilov } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = vorshilov
+	bonus = 1.0
+	uses = 2
+	category = cat_grand_battle_plan
+}
+}
+ } 
+
+#Focus for Communication Modernization
+shared_focus = { 
+id = SOV_communicationmodernization
+icon = GFX_focus_SOV_modernize_army_communications
+x = 62
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_refreshtheofficerpool } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  add_tech_bonus = {
+	name = electronics_bonus
+	bonus = 0.5
+    ahead_reduction = 1
+	uses = 2
+	category = electronics
+}
+ }
+ } 
+#Focus for Ramp up food imports
+shared_focus = { 
+id = SOV_rampupfoodimports
+icon = GFX_goal_generic_trade
+x = 13
+y = 7
+cost = 6
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_americanexperts } 
+prerequisite = { focus = SOV_internationalvolunteers } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  swap_ideas = {
+   remove_idea = famine_of_1933
+   add_idea = famine_of_1933_food_imports
+  }
+ }
+ } 
+
+#Focus for Our friends in Italy
+shared_focus = { 
+id = SOV_ourfriendsinitaly
+icon = GFX_focus_SOV_friends_in_italy
+x = 10
+y = 6
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_dealwithwesternsocialists } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  add_manpower = 8000
+ }
+ } 
+
+#Focus for Famine Under Control
+shared_focus = { 
+id = SOV_famineundercontrol
+icon = GFX_focus_SOV_famine_under_controll
+x = 12
+y = 8
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_socialistcharityorganization } 
+prerequisite = { focus = SOV_rampupfoodimports } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  
+  remove_ideas ={
+  famine_of_1933_food_imports
+  }
+  add_timed_idea = { idea = famine_of_1933_control days = 365 }
+  }
+ } 
+
+#Focus for Socialist Charity Organization
+shared_focus = { 
+id = SOV_socialistcharityorganization
+icon = GFX_focus_SOV_socialist_charity_organization
+x = 11
+y = 7
+cost = 6
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_ourfriendsinitaly } 
+prerequisite = { focus = SOV_internationalvolunteers } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  add_political_power = 100
+ }
+ } 
+
+#Focus for International Volunteers
+shared_focus = { 
+id = SOV_internationalvolunteers
+icon = GFX_focus_SOV_international_volunteers
+x = 12
+y = 6
+cost = 4
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_internationalcommitte } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+ swap_ideas = {
+  remove_idea = sov_international_commite
+  add_idea = sov_international_commite_2
+ }
+ 
+ }
+ } 
+
+#Focus for American Experts
+shared_focus = { 
+id = SOV_americanexperts
+icon = GFX_focus_SOV_american_help
+x = 14
+y = 6
+cost = 4
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_inviteredcross } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  add_ideas = {
+   sov_american_experts
+  }
+ }
+ } 
+
+#Focus for Famine Under Control
+shared_focus = { 
+id = SOV_VgFWuqQj
+icon = GFX_focus_SOV_famine_under_controll
+x = 18
+y = 8
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_localstorages } 
+prerequisite = { focus = SOV_voluntaryruralworkers } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  
+  remove_ideas ={
+  famine_of_1933
+  }
+  add_timed_idea = { idea = famine_of_1933_control days = 365 }
+  }
+ }
+
+
+#Focus for International Committe
+shared_focus = { 
+id = SOV_internationalcommitte
+icon = GFX_focus_generic_diplomatic_treaty
+x = 12
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_askforoutsidehelp } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  sov_international_commite
+ }
+}
+ } 
+
+#Focus for Helping Units
+shared_focus = { 
+id = SOV_helpingunits
+icon = GFX_focus_SOV_helping_units
+x = 20
+y = 5
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_formemergencycommittee } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_political_power = 10
+add_war_support = 0.04
+}
+ } 
+
+#Focus for Mobilize the Red Youth
+shared_focus = { 
+id = SOV_mobilizetheredyouth
+icon = GFX_focus_SOV_red_youth
+x = 20
+y = 6
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_helpingunits } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_manpower = 20000
+add_war_support = 0.04
+}
+ } 
+
+#Focus for Voluntary Rural Workers
+shared_focus = { 
+id = SOV_voluntaryruralworkers
+icon = GFX_focus_SOV_rural_volunteers
+x = 19
+y = 7
+cost = 6
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_redistributefood } 
+prerequisite = { focus = SOV_mobilizetheredyouth } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_war_support = 0.05
+}
+ } 
+
+#Focus for Invite Red Cross
+shared_focus = { 
+id = SOV_inviteredcross
+icon = GFX_focus_SOV_red_cross
+x = 14
+y = 5
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_ontheinternationalstage } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  add_manpower = 10000
+ }
+ } 
+
+#Focus for Deal with Western Socialists
+shared_focus = { 
+id = SOV_dealwithwesternsocialists
+icon = GFX_focus_SOV_western_socialists
+x = 10
+y = 5
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_ourtiesineurope } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  add_manpower = 12000
+ }
+ } 
+
+#Focus for Socialist Relief Act
+shared_focus = { 
+id = SOV_socialistreliefact
+icon = GFX_focus_SOV_socialist_relief_act
+x = 16
+y = 4
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_wellmanageonourown } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_stability = 0.04
+}
+ } 
+
+#Focus for ...to the countryside
+shared_focus = { 
+id = SOV_tothecountryside
+icon = GFX_focus_SOV_to_the_country
+x = 16
+y = 6
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_fromthecities } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_stability = 0.04
+}
+ } 
+
+#Focus for Redistribute Food
+shared_focus = { 
+id = SOV_redistributefood
+icon = GFX_focus_SOV_redistrubete_food
+x = 18
+y = 6
+cost = 4
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_grainquota } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+ swap_ideas = {
+ remove_idea = sov_grain_quta
+ add_idea = sov_grain_quta_2
+ }
+ } 
+ }
+
+#Focus for Local Storages
+shared_focus = { 
+id = SOV_localstorages
+icon = GFX_goal_generic_construct_civilian
+x = 17
+y = 7
+cost = 6
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_tothecountryside } 
+prerequisite = { focus = SOV_redistributefood } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ swap_ideas = {
+ remove_idea = sov_grain_quta_2
+ add_idea = sov_grain_quta_3
+ }
+}
+ } 
+
+#Focus for On the International Stage
+shared_focus = { 
+id = SOV_ontheinternationalstage
+icon = GFX_focus_SOV_international_stage
+x = 14
+y = 4
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_askforoutsidehelp } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  add_political_power = 20
+ }
+ } 
+
+#Focus for Our ties in Europe
+shared_focus = { 
+id = SOV_ourtiesineurope
+icon = GFX_focus_SOV_friends_in_europe
+x = 10
+y = 4
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_askforoutsidehelp } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  add_manpower = 10000
+ }
+ } 
+
+#Focus for Grain Quota
+shared_focus = { 
+id = SOV_grainquota
+icon = GFX_focus_SOV_grain_quatas
+x = 18
+y = 5
+cost = 6
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_wellmanageonourown } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_ideas = {
+ sov_grain_quta
+}
+}
+ } 
+
+#Focus for From the cities...
+shared_focus = { 
+id = SOV_fromthecities
+icon = GFX_focus_SOV_from_the_cities
+x = 16
+y = 5
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_socialistreliefact } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_stability = 0.04
+}
+ } 
+
+#Focus for Form Emergency Committee
+shared_focus = { 
+id = SOV_formemergencycommittee
+icon = GFX_focus_SOV_emergency_commite
+x = 20
+y = 4
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_wellmanageonourown } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_war_support = 0.04
+}
+ } 
+
+#Focus for Effects of Famine
+shared_focus = { 
+id = SOV_effectsoffamine
+icon = GFX_focus_SOV_effects_of_famine
+x = 15
+y = 1
+cost = 1
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1000
+ } 
+ completion_reward = {
+ add_political_power = 20
+ }
+
+ } 
+
+#Focus for Locate Affected Areas
+shared_focus = { 
+id = SOV_locateaffectedareas
+icon = GFX_focus_SOV_locate_affected_areas
+x = 15
+y = 2
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_effectsoffamine } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_stability = 0.05
+}
+ } 
+
+#Focus for Ask for outside help
+shared_focus = { 
+id = SOV_askforoutsidehelp
+icon = GFX_focus_SOV_outside_help
+x = 12
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_locateaffectedareas } 
+mutually_exclusive = { focus = SOV_wellmanageonourown } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_manpower = 10000
+}
+ } 
+
+#Focus for We'll manage on our own!
+shared_focus = { 
+id = SOV_wellmanageonourown
+icon = GFX_focus_SOV_on_our_won
+x = 18
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_locateaffectedareas } 
+mutually_exclusive = { focus = SOV_askforoutsidehelp } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_stability = 0.03
+ add_war_support = 0.03
+}
+ } 
+
+#Focus for Bukharin's Reforms
+shared_focus = { 
+id = SOV_bukharinsreforms
+icon = GFX_SOV_bukharins_reforms
+x = 42
+y = 7
+cost = 5
+available_if_capitulated = yes 
+available = {
+ has_country_flag = bukharin_seizes_power
+}
+prerequisite = { focus = SOV_newcourse } 
+mutually_exclusive = { focus = SOV_proclaimnepdead } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_stability = 0.1
+}
+ } 
+
+#Focus for Expand Industry in Moscow
+shared_focus = { 
+id = SOV_expandindustryinmoscow
+icon = GFX_SOV_industry_in_moscow
+x = 26
+y = 9
+cost = 7
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_firstfiveyearplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+hidden_effect = {
+country_event = { id = bolshevik_russia.38 days = 10 }
+}
+219 = { 
+add_extra_state_shared_building_slots = 3
+ add_building_construction = {
+ 
+	type = industrial_complex
+	level = 3
+	instant_build = yes
+}
+}
+}
+ } 
+
+#Focus for Volkhov HES
+shared_focus = { 
+id = SOV_volkhovhes
+icon = GFX_SOV_volkhov_hes
+x = 32
+y = 9
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_firstfiveyearplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+hidden_effect = {
+country_event = { id = bolshevik_russia.37 days = 1 }
+}
+244 = { 
+ add_building_construction = {
+ add_extra_state_shared_building_slots = 1
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+}
+}
+}
+ } 
+
+#Focus for Proclaim NEP Dead
+shared_focus = { 
+id = SOV_proclaimnepdead
+icon = GFX_SOV_nep_dead
+x = 29
+y = 7
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_newcourse } 
+mutually_exclusive = { focus = SOV_bukharinsreforms } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_stability = 0.1
+}
+ } 
+
+#Focus for New Course
+shared_focus = { 
+id = SOV_newcourse
+icon = GFX_focus_SOV_soviet_new_course
+x = 35
+y = 6
+cost = 5
+available_if_capitulated = yes
+available = {
+ OR = {
+ has_country_flag = bukharin_seizes_power
+ has_country_flag = tomsky_seizes_power
+ has_government = socialist
+ has_government = national_socialist
+}
+}
+
+bypass = {
+OR = {
+ has_country_flag = bukharin_seizes_power
+ has_country_flag = tomsky_seizes_power
+ has_government = socialist
+ has_government = national_socialist
+}
+}
+prerequisite = { focus = SOV_trytoimprovefarmingtechnology } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Hand In Hand With Bourgeoisie
+shared_focus = { 
+id = SOV_handinhandwithbourgeoisie
+icon = GFX_focus_SOV_hand_in_hand
+x = 37
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_civilianindustry }
+available = {
+ has_country_flag = SOV_rykov_holds_on
+} 
+bypass = {
+ has_country_flag = rykov_resigned
+}
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Connect Major Cities
+shared_focus = { 
+id = SOV_connectmajorcities
+icon = GFX_goal_generic_construct_infrastructure
+x = 33
+y = 3
+cost = 5
+available_if_capitulated = yes
+available = {
+ has_country_flag = SOV_rykov_holds_on
+} 
+    bypass = {
+        has_country_flag = rykov_resigned
+    }
+prerequisite = { focus = SOV_continuenep } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Try To Improve Farming Technology
+shared_focus = { 
+id = SOV_trytoimprovefarmingtechnology
+icon = GFX_SOV_try_to_improve_farming
+x = 35
+y = 5
+cost = 5
+available_if_capitulated = yes 
+available = {
+ has_country_flag = SOV_rykov_holds_on
+}
+    bypass = {
+        has_country_flag = rykov_resigned
+    }
+prerequisite = { focus = SOV_rebuildinginfrastructure } 
+prerequisite = { focus = SOV_handinhandwithbourgeoisie } 
+prerequisite = { focus = SOV_subsidisingfarmers } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Civilian Industry
+shared_focus = { 
+id = SOV_civilianindustry
+icon = GFX_focus_SOV_civilian_industry
+x = 37
+y = 3
+cost = 5
+available_if_capitulated = yes 
+available = {
+ has_country_flag = SOV_rykov_holds_on
+}
+    bypass = {
+        has_country_flag = rykov_resigned
+    }
+prerequisite = { focus = SOV_continuenep } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Rebuilding Infrastructure
+shared_focus = { 
+id = SOV_rebuildinginfrastructure
+icon = GFX_focus_SOV_soviet_infrastructure
+x = 33
+y = 4
+cost = 5
+available_if_capitulated = yes 
+available = {
+ has_country_flag = SOV_rykov_holds_on
+}
+    bypass = {
+        has_country_flag = rykov_resigned
+    }
+prerequisite = { focus = SOV_connectmajorcities } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Subsidising Farmers
+shared_focus = { 
+id = SOV_subsidisingfarmers
+icon = GFX_focus_SOV_subside_farmers
+x = 35
+y = 3
+cost = 5
+available_if_capitulated = yes 
+available = {
+ has_country_flag = SOV_rykov_holds_on
+}
+    bypass = {
+        has_country_flag = rykov_resigned
+    }
+prerequisite = { focus = SOV_continuenep } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Rebuilding Moscow-Leningrad Railway
+shared_focus = { 
+id = SOV_rebuildingmoscowleningradrailway
+icon = GFX_goal_generic_construction2
+x = 24
+y = 10
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_expandindustryinmoscow } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ 219 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+        }
+    }
+}
+246 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+        }
+    }
+}
+263 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+        }
+    }
+}
+244 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+        }
+    }
+}
+195 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+        }
+    }
+}
+}
+}
+
+
+#Focus for Bring Peasants into Moscow
+shared_focus = { 
+id = SOV_bringpeasantsintomoscow
+icon = GFX_goal_generic_production2
+x = 28
+y = 10
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_expandindustryinmoscow } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+253 = {
+ add_manpower = -142645
+}
+248 = {
+ add_manpower = -267221
+}
+247 = {
+ add_manpower = -56312
+}
+219 = {
+ add_manpower = 453278
+}
+}
+ } 
+
+#Focus for Industry in Leningrad
+shared_focus = { 
+id = SOV_industryinleningrad
+icon = GFX_SOV_leningrad_industry
+x = 24
+y = 11
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_rebuildingmoscowleningradrailway } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+195 = {
+add_extra_state_shared_building_slots = 4
+add_building_construction = {
+	type = industrial_complex
+	level = 2
+	instant_build = yes
+}
+add_building_construction = {
+	type = arms_factory
+	level = 2
+	instant_build = yes
+}
+
+}
+}
+ } 
+
+#Focus for Form Labour Battalions
+shared_focus = { 
+id = SOV_formlabourbattalions
+icon = GFX_SOV_labour_battalions
+x = 28
+y = 11
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_bringpeasantsintomoscow } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = { labour_battalions_five_year }
+}
+ } 
+
+#Focus for Gorky Industrial Plants
+shared_focus = { 
+id = SOV_gorkyindustrialplants
+icon = GFX_SOV_gorky_plants
+x = 24
+y = 13
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_heavyvehicleindustry } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ 252 = {
+ add_extra_state_shared_building_slots = 2
+  add_building_construction = {
+	type = arms_factory
+	level = 2
+	instant_build = yes
+}
+
+ }
+}
+ } 
+
+#Focus for Novgorod Industrial Plants
+shared_focus = { 
+id = SOV_novgorodindustrialplants
+icon = GFX_SOV_novgorod_plants
+x = 28
+y = 13
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_heavyvehicleindustry } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ 263 = {
+ add_extra_state_shared_building_slots = 2
+add_building_construction = {
+	type = industrial_complex
+	level = 2
+	instant_build = yes
+}
+}
+}
+ } 
+
+#Focus for Electrification Efforts
+shared_focus = { 
+id = SOV_electrificationefforts
+icon = GFX_SOV_elecrification
+x = 30
+y = 10
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_volkhovhes } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 1.0
+					uses = 1
+					category = electronics
+				}
+}
+ } 
+
+#Focus for Expand Telecommunications
+shared_focus = { 
+id = SOV_expandtelecommunications
+icon = GFX_SOV_telecommunications
+x = 34
+y = 10
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_volkhovhes } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = electronics_bonus
+	bonus = 0.5
+    ahead_reduction = 1
+	uses = 1
+	category = electronics
+}
+}
+ } 
+
+#Focus for Smolensk-Moscow Highway
+shared_focus = { 
+id = SOV_smolenskmoscowhighway
+icon = GFX_SOV_moscowsmolnesk_highway
+x = 34
+y = 11
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_expandtelecommunications } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ 242 = {
+ 
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 4
+            instant_build = yes
+        }
+    
+}
+ }
+}
+ } 
+
+#Focus for Gorky GES
+shared_focus = { 
+id = SOV_gorkyges
+icon = GFX_SOV_gorky_ges
+x = 30
+y = 11
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_electrificationefforts } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+252 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 3
+            instant_build = yes
+        }
+    }
+}
+}
+ } 
+
+#Focus for Heavy Metallurgy
+shared_focus = { 
+id = SOV_heavymetallurgy
+icon = GFX_focus_SOV_heavy_metalurgy
+x = 32
+y = 12
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_gorkyges } 
+prerequisite = { focus = SOV_smolenskmoscowhighway } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+				add_tech_bonus = {
+					name = resources
+					bonus = 1.0
+					uses = 3
+					category = excavation_tech
+				}
+}
+ } 
+
+#Focus for Using Criminal Labour
+shared_focus = { 
+id = SOV_usingcriminallabour
+icon = GFX_SOV_criminal_labour
+x = 32
+y = 14
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_gorkyindustrialplants } 
+prerequisite = { focus = SOV_novgorodindustrialplants } 
+prerequisite = { focus = SOV_rzhevironore } 
+prerequisite = { focus = SOV_syntheticoilexperiments } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  criminal_labour
+ }
+}
+ } 
+
+#Focus for Encouraging Immigrattion
+shared_focus = { 
+id = SOV_encouragingimmigrattion
+icon = GFX_SOV_encourage_immigration
+x = 26
+y = 15
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_continuereplacmentofpeasants } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  add_ideas = {
+   immigration_to_cities_1
+  }
+ }
+ } 
+
+#Focus for Forced Replacement
+shared_focus = { 
+id = SOV_forcedreplacement
+icon = GFX_SOV_forced_replacment
+x = 26
+y = 16
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_encouragingimmigrattion } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  swap_ideas = {
+   remove_idea = immigration_to_cities_1
+   add_idea = immigration_to_cities_2
+  }
+ }
+ } 
+
+#Focus for Forced Labour For Petty Crimes
+shared_focus = { 
+id = SOV_forcedlabourforpettycrimes
+icon = GFX_SOV_forced_labour_for_crimes
+x = 32
+y = 15
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_usingcriminallabour } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ swap_ideas = {
+  remove_idea = criminal_labour
+  add_idea = criminal_labour_2
+ }
+}
+ } 
+
+#Focus for Industrialized Russia
+shared_focus = { 
+id = SOV_industrializedrussia
+icon = GFX_goal_support_communism
+x = 29
+y = 17
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_forcedreplacement } 
+prerequisite = { focus = SOV_usecommunistyouth } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ remove_ideas = {
+  civil_war_attrition
+ }
+}
+ } 
+
+#Focus for Silently Privatize State Land
+shared_focus = { 
+id = SOV_silentlyprivatizestateland
+icon = GFX_focus_SOV_bukharins_privatize_state_land
+x = 37
+y = 10
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_allocateresourcestoagriculture } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+263 = {
+add_extra_state_shared_building_slots = 2
+ add_building_construction = {
+	type = industrial_complex
+	level = 2
+	instant_build = yes
+}
+}
+ }
+}
+
+
+#Focus for Continue Replacment of Peasants
+shared_focus = { 
+id = SOV_continuereplacmentofpeasants
+icon = GFX_SOV_replace_peasants
+x = 26
+y = 14
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_gorkyindustrialplants } 
+prerequisite = { focus = SOV_novgorodindustrialplants } 
+prerequisite = { focus = SOV_rzhevironore } 
+prerequisite = { focus = SOV_syntheticoilexperiments } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  peasants_replaced
+ }
+}
+ } 
+
+#Focus for Synthetic Oil Experiments
+shared_focus = { 
+id = SOV_syntheticoilexperiments
+icon = GFX_SOV_synthetic_oil
+x = 34
+y = 13
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_heavymetallurgy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = oil
+	bonus = 0.5
+    uses = 2
+	category = synth_resources
+}
+}
+ } 
+
+#Focus for Support Insitute Of Agriculture
+shared_focus = { 
+id = SOV_supportinsituteofagriculture
+icon = GFX_focus_SOV_bukharins_institute_of_agriculture
+x = 37
+y = 11
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_silentlyprivatizestateland } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  agricultural_research_bukharin_1
+ }
+}
+ } 
+
+#Focus for Modernize Farmin Techniques
+shared_focus = { 
+id = SOV_modernizefarmintechniques
+icon = GFX_focus_SOV_bukharins_modern_farming_tech
+x = 41
+y = 11
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_copyforeigndesigns } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+  add_tech_bonus = {
+	name = moderntech
+	bonus = 0.5
+    uses = 2
+	category = construction_tech
+}
+}
+ } 
+
+#Focus for MoТЗ
+shared_focus = { 
+id = SOV_mo
+icon = GFX_focus_SOV_bukharins_moT3
+x = 39
+y = 12
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_supportinsituteofagriculture } 
+prerequisite = { focus = SOV_modernizefarmintechniques } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ 219 = {
+ add_extra_state_shared_building_slots = 4
+  add_building_construction = {
+	type = industrial_complex
+	level = 4
+	instant_build = yes
+}
+
+ }
+}
+ } 
+
+#Focus for Continue Moderate Nationalization
+shared_focus = { 
+id = SOV_continuemoderatenationalization
+icon = GFX_focus_SOV_bukharins_nationalization
+x = 45
+y = 9
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_emergencycouncilofeconomicaffairs } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+ 219 = {
+ add_extra_state_shared_building_slots = 1
+  add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+}
+}
+ 195 = {
+ add_extra_state_shared_building_slots = 1
+  add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+}
+}
+ 246 = {
+ add_extra_state_shared_building_slots = 1
+  add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+}
+ }
+}
+} 
+
+#Focus for Get Rid Of Unloyal Bourgeoisie
+shared_focus = { 
+id = SOV_getridofunloyalbourgeoisie
+icon = GFX_focus_SOV_bukharins_fuck_bourgeosie
+x = 43
+y = 10
+cost = 5
+available_if_capitulated = yes
+available = {
+ has_completed_focus = SOV_negotiationswithbourgeosie
+} 
+prerequisite = { focus = SOV_continuemoderatenationalization } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ if = {
+  limit = {
+   has_idea = bourgeoisie_influence_2
+   }
+  swap_ideas = {
+  remove_idea = bourgeoisie_influence_2
+  add_idea = bourgeoisie_influence_3
+ }
+ else = {
+  swap_ideas = {
+  remove_idea = bourgeoisie_influence
+  add_idea = bourgeoisie_influence_3
+ }
+ }
+}
+ }
+} 
+
+#Focus for Start Building BBK
+shared_focus = { 
+id = SOV_startbuildingbbk
+icon = GFX_SOV_start_bbk
+x = 29
+y = 15
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_usingcriminallabour } 
+prerequisite = { focus = SOV_continuereplacmentofpeasants } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ country_event = { id = bolshevik_russia.34 days = 1 }
+}
+ } 
+
+#Focus for Soviet Economy
+shared_focus = { 
+id = SOV_sovieteconomy
+icon = GFX_goal_generic_soviet_construction
+x = 35
+y = 1
+cost = 5
+    bypass = {
+        has_country_flag = rykov_resigned
+    }
+available_if_capitulated = yes 
+available = {
+ has_country_flag = SOV_rykov_holds_on
+}
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Continue NEP
+shared_focus = { 
+id = SOV_continuenep
+icon = GFX_focus_SOV_continue_NEP
+x = 35
+y = 2
+cost = 5
+available_if_capitulated = yes 
+available = {
+ has_country_flag = SOV_rykov_holds_on
+}
+    bypass = {
+        has_country_flag = rykov_resigned
+    }
+prerequisite = { focus = SOV_sovieteconomy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_stability = 0.1
+}
+ } 
+
+#Focus for First Five Year Plan
+shared_focus = { 
+id = SOV_firstfiveyearplan
+icon = GFX_SOV_five_year_plan
+x = 29
+y = 8
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_proclaimnepdead } 
+ai_will_do = { 
+ factor = 1
+ } 
+		completion_reward = {
+		hidden_effect = {
+         country_event = { id = bolshevik_russia.36 days = 2 }
+}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+ } 
+
+#Focus for Heavy Vehicle Industry
+shared_focus = { 
+id = SOV_heavyvehicleindustry
+icon = GFX_SOV_heavy_industry
+x = 26
+y = 12
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_formlabourbattalions } 
+prerequisite = { focus = SOV_industryinleningrad } 
+ai_will_do = { 
+ factor = 1
+ } 
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+ } 
+
+#Focus for Rzhev Iron Ore
+shared_focus = { 
+id = SOV_rzhevironore
+icon = GFX_SOV_rhezv_iron
+x = 30
+y = 13
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_heavymetallurgy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ 246 = {
+  add_resource = {
+		type = steel
+		amount = 24
+	}
+ }
+}
+ } 
+
+#Focus for Use Communist Youth
+shared_focus = { 
+id = SOV_usecommunistyouth
+icon = GFX_SOV_use_communist_youth
+x = 32
+y = 16
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_forcedlabourforpettycrimes } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+ red_youth_economics
+ }
+}
+ } 
+
+#Focus for Rural Telecommunications
+shared_focus = { 
+id = SOV_ruraltelecommunications
+icon = GFX_focus_SOV_bukharins_telecommunication
+x = 45
+y = 16
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_bukharinyovka } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_tech_bonus = {
+	name = electronics_bonus
+	bonus = 0.75
+        
+	uses = 2
+	category = electronics
+}
+}
+ } 
+
+#Focus for Ramping Up Grain Export
+shared_focus = { 
+id = SOV_rampingupgrainexport
+icon = GFX_focus_SOV_bukharins_grain_export
+x = 39
+y = 16
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_expandingurbaninfrastructure } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  more_export_bukharin
+ }
+}
+ } 
+#Focus for Bolshevik Land Forces
+shared_focus = { 
+id = SOV_bolsheviklandforces
+icon = GFX_focus_SOV_bolshevik_land_forces
+x = 60
+y = 1
+cost = 5
+available_if_capitulated = yes 
+available = {
+OR = {
+ has_country_flag = SOV_rykov_holds_on
+ has_country_flag = bukharin_seizes_power
+ has_country_flag = tomsky_seizes_power
+ has_government = national_socialist
+ has_government = socialist
+}
+}
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ country_event = { id = bolshevik_russia.39 days = 2 }
+}
+ } 
+
+#Focus for Look Outwards
+shared_focus = { 
+id = SOV_lookoutwards
+icon = GFX_focus_SOV_look_outwards
+x = 16
+y = 10
+cost = 5
+available_if_capitulated = yes
+available = {
+ date > 1938.1.1
+} 
+		completion_reward = {
+			army_experience = 5
+			add_political_power = 50
+			}
+ai_will_do = { 
+ factor = 100
+ 	} 
+ } 
+
+#Focus for 107mm M1940 (M-60)
+shared_focus = { 
+id = SOV_107mmm1940m60
+icon = GFX_focus_SOV_107mm
+x = 57
+y = 8
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_expanduseofartillery } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_tech_bonus = {
+	name = more_arty
+	bonus = 1.0
+	uses = 1
+	technology = artillery1	
+
+}
+}
+ } 
+
+#Focus for Comrades Abroad
+shared_focus = { 
+id = SOV_comradesabroad
+icon = GFX_focus_SOV_comrades_abroad
+x = 21
+y = 11
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_lookoutwards } 
+available_if_capitulated = yes 
+		completion_reward = {
+			add_ideas = {
+			 SOV_comrades_abroad
+			}
+		}
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Siberian Comrades
+shared_focus = { 
+id = SOV_siberiancomrades
+icon = GFX_focus_SOV_siberian_comrades
+x = 13
+y = 12
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_enemiesonallsides } 
+prerequisite = { focus = SOV_comradesabroad } 
+		completion_reward = {
+         OMS = {
+		  if = {
+		   limit = { exists = yes }
+		   		add_equipment_to_stockpile = {
+                type = infantry_equipment_0
+					amount = 5000
+					producer = SOV
+             }
+		  }
+		 }
+		 JOB = {
+		  if = {
+		   limit = { exists = yes }
+		   		add_equipment_to_stockpile = {
+                type = infantry_equipment_0
+					amount = 5000
+					producer = SOV
+             }
+		  }
+		 }
+		 JSW = {
+		  if = {
+		   limit = { exists = yes }
+		   		add_equipment_to_stockpile = {
+                type = infantry_equipment_0
+					amount = 5000
+					producer = SOV
+             }
+		  }
+		 }
+		}
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Southern Russian Direction
+shared_focus = { 
+id = SOV_southernrussiandirection
+icon = GFX_focus_SOV_southern_russia
+x = 11
+y = 13
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_siberiancomrades } 
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = CRM
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = CAU
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = CAA
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = CHE
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = MRP
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = DAG
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = GEO
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = AZR
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = ARM
+			}
+		}
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Eastern European Campaign
+shared_focus = { 
+id = SOV_easterneuropeancampaign
+icon = GFX_focus_SOV_eastern_europe
+x = 13
+y = 13
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_siberiancomrades } 
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = RUS
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = RDR
+			}
+		}
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Expand Conscription
+shared_focus = { 
+id = SOV_expandconscription
+icon = GFX_focus_SOV_expand_conscription
+x = 72
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_defenceministerbudyonny } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = doctrine
+	bonus = 1.0
+	uses = 2
+	category = cat_mass_assault
+}
+}
+ } 
+
+#Focus for Act Of Rural Education
+shared_focus = { 
+id = SOV_actofruraleducation
+icon = GFX_focus_SOV_bukharins_rural_education
+x = 45
+y = 12
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_electricalgrid } 
+prerequisite = { focus = SOV_industrializationofnovgorod } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  rural_education
+ }
+}
+ } 
+
+#Focus for Emergency Council of Economic Affairs
+shared_focus = { 
+id = SOV_emergencycouncilofeconomicaffairs
+icon = GFX_focus_SOV_bukharins_economic_affairs
+x = 42
+y = 8
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_bukharinsreforms } 
+ai_will_do = { 
+ factor = 1
+ } 
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+ } 
+
+#Focus for Mandatory Education For Peasantry
+shared_focus = { 
+id = SOV_mandatoryeducationforpeasantry
+icon = GFX_focus_SOV_bukharins_madatory_education
+x = 43
+y = 13
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_actofruraleducation } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_research_slot = 1
+}
+ } 
+
+#Focus for Mandatory Work Months In School
+shared_focus = { 
+id = SOV_mandatoryworkmonthsinschool
+icon = GFX_focus_SOV_bukharins_madatory_work_in_schools
+x = 47
+y = 13
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_actofruraleducation } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  work_in_schools
+ }
+}
+ } 
+
+#Focus for Allocate Resources To Agriculture
+shared_focus = { 
+id = SOV_allocateresourcestoagriculture
+icon = GFX_focus_SOV_bukharins_agriculture
+x = 39
+y = 9
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_emergencycouncilofeconomicaffairs } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  agriculture_resources_bukarin
+}
+}
+ } 
+
+#Focus for Reform Red Guard
+shared_focus = { 
+id = SOV_reformredguard
+icon = GFX_focus_SOV_reform_red_guard
+x = 68
+y = 2
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_bolsheviklandforces } 
+mutually_exclusive = { focus = SOV_shaposhnikovsplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = {
+ has_country_flag = SOV_reform_red_guard
+}
+completion_reward = {
+ army_experience = 25
+}
+ } 
+
+#Focus for Siberian Campaign
+shared_focus = { 
+id = SOV_siberiancampaign
+icon = GFX_focus_SOV_siberian_campaing
+x = 13
+y = 14
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_southernrussiandirection } 
+prerequisite = { focus = SOV_easterneuropeancampaign } 
+prerequisite = { focus = SOV_centralasiandirection } 
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = UGC
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = LES
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = AGR
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = OMS
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = TOW
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = BRW
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = KRW
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = BWR
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = JSW
+			}
+		}
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Central Asian Direction
+shared_focus = { 
+id = SOV_centralasiandirection
+icon = GFX_focus_SOV_central_asia
+x = 15
+y = 13
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_siberiancomrades } 
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = KAZ
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = TMS
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = UZB
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = KYR
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = KHV
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = TRS
+			}
+		}
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Copy Foreign Designs
+shared_focus = { 
+id = SOV_copyforeigndesigns
+icon = GFX_focus_SOV_bukharins_cop_foreign_designs
+x = 41
+y = 10
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_allocateresourcestoagriculture } 
+ai_will_do = { 
+ factor = 1
+ } 
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+ } 
+
+#Focus for Industrialization Of Novgorod
+shared_focus = { 
+id = SOV_industrializationofnovgorod
+icon = GFX_focus_SOV_bukharins_industriliaze_novgorod
+x = 43
+y = 11
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_getridofunloyalbourgeoisie } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+263 = {
+                add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+}
+ } 
+}
+#Focus for Russia Reborn
+shared_focus = { 
+id = SOV_russiareborn
+icon = GFX_focus_generic_soviet_politics
+x = 42
+y = 17
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_rampingupgrainexport } 
+prerequisite = { focus = SOV_ruraltelecommunications } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ remove_ideas = {
+  civil_war_attrition
+ }
+}
+ } 
+
+#Focus for Expand Support Units
+shared_focus = { 
+id = SOV_expandsupportunits
+icon = GFX_focus_SOV_expand_support
+x = 59
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_reorganizehighcommand } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = sup_fire_3
+	bonus = 0.5
+	uses = 3
+	category = support_tech
+}
+ }
+ } 
+
+#Focus for 76mm M1936 (F-22)
+shared_focus = { 
+id = SOV_artilery_focus
+icon = GFX_focus_SOV_76mm
+x = 55
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_allocatingoldartilery } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = sup_fire_2
+	bonus = 1.0
+	uses = 1
+	category = artillery
+}
+ }
+} 
+
+#Focus for Allocating Old Artilery
+shared_focus = { 
+id = SOV_allocatingoldartilery
+icon = GFX_focus_SOV_allocate_old_artillery
+x = 55
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_reorganizehighcommand } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_equipment_to_stockpile = {
+  type = artillery_equipment_1
+					amount = 432
+					producer = SOV
+ }
+}
+
+}
+ 
+
+#Focus for Reorganize High Command
+shared_focus = { 
+id = SOV_reorganizehighcommand
+icon = GFX_focus_SOV_reorganize_high_command
+x = 57
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_defenceministershaposhnikov } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = sup_fire
+	bonus = 1.0
+	uses = 2
+	category = cat_superior_firepower
+}
+}
+ } 
+
+#Focus for Ford-A Izhorskiy
+shared_focus = { 
+id = SOV_fordaizhorskiy
+icon = GFX_focus_SOV_forda_izhorskiy
+x = 51
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_gorkovskyavtomobilnyzavod } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+set_technology = {
+    motorised_infantry = 1 
+	mechanised_infantry = 1
+}
+
+ add_equipment_to_stockpile = {
+  type = mechanized_equipment_1
+					amount = 147
+					producer = SOV
+ }
+}
+ } 
+
+#Focus for Deep Battle Doctrine
+shared_focus = { 
+id = SOV_deepbattledoctrine
+icon = GFX_focus_SOV_deep_battle
+x = 49
+y = 7
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_t26 } 
+prerequisite = { focus = SOV_fordaizhorskiy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = zhukov
+	bonus = 1.0
+	uses = 2
+	category = cat_mobile_warfare
+}
+}
+ } 
+
+#Focus for BT Project
+shared_focus = { 
+id = SOV_btproject
+icon = GFX_focus_SOV_BT_project
+x = 49
+y = 8
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_deepbattledoctrine } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = zhukov_tanks
+	bonus = 0.75
+	uses = 2
+	category = armor
+}
+}
+ } 
+
+ 
+
+#Focus for PPSh-41
+shared_focus = { 
+id = SOV_ppsh41
+icon = GFX_focus_SOV_ppsh
+x = 64
+y = 8
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_massexercises } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = ppsh
+	bonus = 1.0
+	uses = 1
+	category = infantry_weapons
+}
+}
+ } 
+
+#Focus for Mass Exercises
+shared_focus = { 
+id = SOV_massexercises
+icon = GFX_focus_SOV_mass_exercise
+x = 64
+y = 7
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_modernizereconunits } 
+prerequisite = { focus = SOV_ds39 } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = doctrine
+	bonus = 1.0
+	uses = 2
+	category = cat_grand_battle_plan
+}
+}
+ } 
+
+#Focus for Refit Old Rifles
+shared_focus = { 
+id = SOV_refitoldrifles
+icon = GFX_focus_SOV_refit_old_rifles
+x = 70
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_expandconscription } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_equipment_to_stockpile = {
+  type = infantry_equipment_0
+					amount = 12000
+					producer = SOV
+ }
+}
+ } 
+
+#Focus for Modernize Recon Units
+shared_focus = { 
+id = SOV_modernizereconunits
+icon = GFX_focus_SOV_modernize_recon_units
+x = 62
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_communicationmodernization} 
+ai_will_do = { 
+ factor = 1
+ }
+  completion_reward = {
+  add_tech_bonus = {
+	name = recon_bonus
+	bonus = 1.0
+
+	uses = 2
+	category = recon_tech
+}
+ }
+ } 
+
+#Focus for Mosin–Nagant 91/30
+shared_focus = { 
+id = SOV_mosinnagant9130
+icon = GFX_focus_SOV_mosin_nagant
+x = 70
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_refitoldrifles } 
+ai_will_do = { 
+ factor = 1
+ } 
+  completion_reward = {
+  add_tech_bonus = {
+	name = infantry_bonus
+	bonus = 2.0
+    
+	uses = 1
+	category = infantry_weapons
+}
+ }
+ } 
+
+#Focus for DS-39
+shared_focus = { 
+id = SOV_ds39
+icon = GFX_focus_SOV_ds_39
+x = 66
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_modernizeinfantryequipment } 
+ai_will_do = { 
+ factor = 1
+ } 
+  completion_reward = {
+  add_tech_bonus = {
+	name = infantry_bonus
+	bonus = 1.0
+    ahead_reduction = 2
+	uses = 1
+	category = infantry_tech
+}
+ }
+ } 
+
+#Focus for Modernize Infantry Equipment
+shared_focus = { 
+id = SOV_modernizeinfantryequipment
+icon = GFX_focus_SOV_modernize_infantry_equipment
+x = 66
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_refreshtheofficerpool } 
+ai_will_do = { 
+ factor = 1
+ } 
+  completion_reward = {
+  add_tech_bonus = {
+	name = infantry_bonus
+	bonus = 0.75
+
+	uses = 3
+	category = infantry_weapons
+}
+ }
+ } 
+
+#Focus for Supplies For Army
+shared_focus = { 
+id = SOV_suppliesforarmy
+icon = GFX_focus_SOV_supplies_for_army
+x = 74
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_rebuildsupplycorps } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+ add_tech_bonus = {
+	name = infantry_bonus
+	bonus = 1.0  
+	uses = 1
+	category = infantry_tech
+}
+ } 
+ }
+
+#Focus for Lower Age Of Conscription
+shared_focus = { 
+id = SOV_lowerageofconscription
+icon = GFX_focus_SOV_lower_age
+x = 72
+y = 7
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_mosinnagant9130 } 
+prerequisite = { focus = SOV_suppliesforarmy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_manpower = 100000
+ add_tech_bonus = {
+	name = doctrine_bonus
+	bonus = 1.0
+	uses = 2
+	category = cat_mass_assault
+}
+}
+ } 
+
+#Focus for Rebuild Supply Corps
+shared_focus = { 
+id = SOV_rebuildsupplycorps
+icon = GFX_focus_SOV_supply_corps
+x = 74
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_expandconscription } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_tech_bonus = {
+	name = infantry_bonus
+	bonus = 1.0
+	uses = 3
+	category = logistics_tech	
+
+}
+}
+ } 
+
+#Focus for 37mm M1939 (61-K)
+shared_focus = { 
+id = SOV_anti_air
+icon = GFX_focus_SOV_37mm_aa
+x = 59
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_expandsupportunits } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_tech_bonus = {
+	name = anti_air
+	bonus = 1.0
+	uses = 1
+	technology = interwar_antiair	
+
+}
+}
+} 
+
+#Focus for Expand Use Of Artillery
+shared_focus = { 
+id = SOV_expanduseofartillery
+icon = GFX_focus_SOV_expand_use_of_artillery
+x = 57
+y = 7
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_artilery_focus } 
+prerequisite = { focus = SOV_anti_air } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = shap
+	bonus = 1.0
+	uses = 2
+	category = cat_superior_firepower
+}
+}
+ } 
+
+#Focus for The New Soviet Army
+shared_focus = { 
+id = SOV_thenewsovietarmy
+icon = GFX_focus_SOV_new_soviet_army
+x = 60
+y = 10
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_107mmm1940m60 focus = SOV_ppsh41 focus = SOV_btproject focus = SOV_mosinnagantm38 } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ remove_ideas = { southern_defeat }
+}
+ } 
+
+#Focus for Mosin–Nagant M38
+shared_focus = { 
+id = SOV_mosinnagantm38
+icon = GFX_focus_SOV_new_mosin_m38
+x = 72
+y = 8
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_lowerageofconscription } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_tech_bonus = {
+	name = infantry_bonus
+	bonus = 1.0
+	uses = 1
+	category = infantry_weapons	
+
+}
+}
+ } 
+
+#Focus for Proclaim Soviet Union
+shared_focus = { 
+id = SOV_proclaimsovietunion
+icon = GFX_focus_SOV_soviet_union
+x = 16
+y = 16
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_thefareast } 
+prerequisite = { focus = SOV_socialistinternationale } 
+available = {
+ has_war = no
+ owns_state = 195
+ owns_state = 219
+ owns_state = 249
+ owns_state = 571
+ owns_state = 570
+ owns_state = 567
+ owns_state = 561
+ 
+}
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ set_cosmetic_tag = SOV_SOV
+ every_state = {
+    limit = { 
+	OR = {
+	is_core_of = RDR 
+	is_core_of = RUS
+    is_core_of = SOV
+    is_core_of = OMS 
+    is_core_of = CAA
+    is_core_of = CRM
+    is_core_of = CAU
+    is_core_of = DAG
+    is_core_of = CHE
+    is_core_of = MRP
+    is_core_of = KAZ
+    is_core_of = TRS
+    is_core_of = KHV
+	is_core_of = TMS
+	is_core_of = UZB
+	is_core_of = KYR
+	is_core_of = LES
+	is_core_of = UGC
+	is_core_of = TOW
+	is_core_of = KRW
+	is_core_of = JSW
+	is_core_of = FER
+	is_core_of = WFE
+	is_core_of = SFS
+	is_core_of = JVD
+	is_core_of = AZR
+	is_core_of = GEO
+	is_core_of = ARM
+	is_core_of = AGR
+	is_core_of = KAR
+	is_core_of = FTT
+	is_core_of = DSU
+	is_core_of = UKR
+	is_core_of = CBR
+	is_core_of = BLR
+	is_core_of = DBR
+	is_core_of = EST
+	is_core_of = FIN
+	is_core_of = LIT
+	is_core_of = IRK
+	is_core_of = TAN
+	is_core_of = JOB
+	}
+	}
+	add_core_of = ROOT
+
+}
+}
+ } 
+
+#Focus for Socialist Internationale
+shared_focus = { 
+id = SOV_socialistinternationale
+icon = GFX_focus_SOV_socialist_internationale
+x = 19
+y = 13
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_sovietgermanpact } 
+bypass = {
+ is_in_faction = yes
+}
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+if = {
+ limit = { SOV = { has_government = national_socialist } }
+ create_faction = "Internationale of National Liberation"
+ else = {
+ create_faction = "Socialist Internationale"
+     }
+   }
+  }
+ }
+
+#Focus for The Far East
+shared_focus = { 
+id = SOV_thefareast
+icon = GFX_focus_SOV_far_east
+x = 13
+y = 15
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_siberiancampaign } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+create_wargoal = {
+type = annex_everything
+target = WFE
+}
+create_wargoal = {
+type = annex_everything
+target = SFS
+}
+create_wargoal = {
+type = annex_everything
+target = IRK
+}
+create_wargoal = {
+type = annex_everything
+target = JOB
+}
+create_wargoal = {
+type = annex_everything
+target = FER
+}
+}
+} 
+#Focus for Enemies on All Sides
+shared_focus = { 
+id = SOV_enemiesonallsides
+icon = GFX_focus_SOV_enemies_on_all_sides
+x = 11
+y = 11
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_lookoutwards } 
+		completion_reward = {
+			add_war_support = 0.1
+			}
+ai_will_do = { 
+ factor = 1
+ } 
+} 
+ 
+#Focus for Soviet-German Pact
+shared_focus = { 
+id = SOV_sovietgermanpact
+icon = GFX_focus_SOV_german_treaty
+x = 19
+y = 12
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_enemiesonallsides } 
+prerequisite = { focus = SOV_comradesabroad } 
+
+ai_will_do = { 
+ factor = 1
+ }
+bypass = {
+ GER = {
+  NOT = {
+   has_government = national_socialist
+   has_government = socialist
+   has_government = democratic_socialist
+  }
+ }
+} 
+ completion_reward = {
+  GER = { give_guarantee = SOV }
+  SOV = { give_guarantee = GER }
+  diplomatic_relation = {
+    country = GER
+    relation = non_aggression_pact
+    active = yes
+}
+
+ }
+} 
+
+#Focus for Bolshevik Air Forces
+shared_focus = { 
+id = SOV_bolshevikairforces
+icon = GFX_focus_SOV_bolshevik_air_forces
+x = 84
+y = 1
+cost = 5
+available_if_capitulated = yes
+available = {
+OR = {
+ has_country_flag = SOV_rykov_holds_on
+ has_country_flag = bukharin_seizes_power
+ has_country_flag = tomsky_seizes_power
+ has_government = national_socialist
+ has_government = socialist
+}
+} 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ country_event = { 
+  id = bolshevik_russia.40
+  days = 2
+ }
+}
+ }
+
+ #Focus for Novikov's Plan
+shared_focus = { 
+id = SOV_novikovsplan
+icon = GFX_focus_SOV_novikovs_plan
+x = 80
+y = 2
+cost = 5
+available_if_capitulated = yes 
+available = { 
+ has_country_flag = SOV_novikovs_plan
+ }
+prerequisite = { focus = SOV_bolshevikairforces } 
+mutually_exclusive = { focus = SOV_alksnisplan } 
+ai_will_do = { 
+ factor = 1
+ }
+ completion_reward = {
+  air_experience = 25
+ }
+} 
+
+ #Focus for Alksnis Plan
+shared_focus = { 
+id = SOV_alksnisplan
+icon = GFX_focus_SOV_alksnis_plan
+x = 88
+y = 2
+cost = 5
+available_if_capitulated = yes 
+available = { 
+ has_country_flag = SOV_alksnis_plan
+ }
+prerequisite = { focus = SOV_bolshevikairforces } 
+mutually_exclusive = { focus = SOV_novikovsplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  air_experience = 25
+  set_technology = {
+    early_bomber = 1 
+}
+ }
+ } 
+ 
+ #Focus for Operational Integrity Doctrine
+shared_focus = { 
+id = SOV_operationalintegritydoctrine
+icon = GFX_focus_SOV_operational_integrty
+x = 86
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_alksnisplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = doctrine_bonus
+	bonus = 1.0
+	uses = 2
+	category = cat_operational_integrity
+}
+}
+ } 
+ 
+ #Focus for Refit Civilian Aircraft
+shared_focus = { 
+id = SOV_refitcivilianaircraft
+icon = GFX_focus_SOV_refit_civilian_planes
+x = 86
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_operationalintegritydoctrine } 
+ai_will_do = { 
+ factor = 1
+ } 
+  completion_reward = {
+  add_equipment_to_stockpile = {
+  type = tac_bomber_equipment_0
+					amount = 50
+					producer = SOV
+ }
+ }
+ }
+ 
+ #Focus for Ilyushin DB-3
+shared_focus = { 
+id = SOV_ilyushindb3
+icon = GFX_focus_SOV_db_3
+x = 88
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_refitcivilianaircraft } 
+prerequisite = { focus = SOV_bolkhovitinovdba } 
+ai_will_do = { 
+ factor = 1
+ } 
+  completion_reward = {
+  add_equipment_to_stockpile = {
+  type = tac_bomber_equipment_0
+					amount = 45
+					producer = SOV
+ }
+ }
+ }
+ 
+ #Focus for Investigate Tsarist Designs
+shared_focus = { 
+id = SOV_investigatetsaristdesigns
+icon = GFX_focus_SOV_tsarist_designs
+x = 90
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_alksnisplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = doctrine_bonus
+	bonus = 0.75
+	uses = 1
+	category = tactical_bomber
+}
+
+}
+ } 
+ 
+ #Focus for Bolkhovitinov DB-A
+shared_focus = { 
+id = SOV_bolkhovitinovdba
+icon = GFX_focus_SOV_db_a
+x = 90
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_investigatetsaristdesigns } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = doctrine_bonus
+	bonus = 0.75
+	uses = 2
+	category = cat_strategic_bomber
+}
+}
+ }
+ 
+ #Focus for Battlefield Support Doctrine
+shared_focus = { 
+id = SOV_battlefieldsupportdoctrine
+icon = GFX_focus_SOV_battlefield_support
+x = 78
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_novikovsplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = doctrine_bonus
+	bonus = 1.0
+	uses = 2
+	category = cat_battlefield_support
+}
+}
+ }
+ 
+ #Focus for Refit Training Planes
+shared_focus = { 
+id = SOV_refittrainingplanes
+icon = GFX_focus_SOV_refit_training_planes
+x = 78
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_battlefieldsupportdoctrine } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_equipment_to_stockpile = {
+  type = CAS_equipment_1
+					amount = 60
+					producer = ENG
+ }
+
+}
+ }
+ 
+ #Focus for Buy Foreign Designs
+shared_focus = { 
+id = SOV_buyforeigndesigns
+icon = GFX_focus_SOV_foreign_designs
+x = 82
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_novikovsplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_equipment_to_stockpile = {
+  type = CAS_equipment_1
+					amount = 2
+					producer = USA
+ }
+ add_equipment_to_stockpile = {
+  type = CAS_equipment_1
+					amount = 3
+					producer = FRA
+ }
+  add_equipment_to_stockpile = {
+  type = CAS_equipment_1
+					amount = 1
+					producer = GER
+ }
+  add_tech_bonus = {
+	name = cas_bonus
+	bonus = 0.75
+	uses = 1
+	category = cas_bomber
+}
+}
+ } 
+ 
+ #Focus for Expand Aircraft Industry
+shared_focus = { 
+id = SOV_expandaircraftindustry
+icon = GFX_focus_SOV_aircraft_industry
+x = 82
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_buyforeigndesigns } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+219 = {
+ add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+
+}
+ }
+} 
+ 
+ #Focus for Ilyushin Il-2
+shared_focus = { 
+id = SOV_ilyushinil2
+icon = GFX_focus_SOV_il_2
+x = 80
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_refittrainingplanes } 
+prerequisite = { focus = SOV_expandaircraftindustry } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = cas_bonus
+	bonus = 1.0
+	uses = 1
+	technology = CAS2
+}
+}
+ }
+ 
+ #Focus for Soviet Fighter Project
+shared_focus = { 
+id = SOV_sovietfighterproject
+icon = GFX_focus_SOV_fighter_project
+x = 84
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_ilyushinil2 focus = SOV_ilyushindb3 } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = air_doctrine
+	bonus = 1.0
+	uses = 2
+	category = air_doctrine
+}
+  
+  add_equipment_to_stockpile = {
+  type = fighter_equipment_0
+					amount = 40
+					producer = SOV
+ }
+ 
+}
+ } 
+ 
+ #Focus for Polikarpov I-16
+shared_focus = { 
+id = SOV_polikarpovi16
+icon = GFX_focus_SOV_i_16
+x = 84
+y = 7
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_sovietfighterproject } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_tech_bonus = {
+	name = fighter_bonus
+	bonus = 1.0
+	uses = 1
+	category = light_fighter
+}
+}
+ }

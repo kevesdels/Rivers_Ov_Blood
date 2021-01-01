@@ -1,0 +1,616 @@
+LIT_lith_raids = {
+  icon = GFX_decision_oppression
+  picture = GFX_decision_lithuanian_army
+	visible = {
+    tag = LIT
+          }
+	available = {
+	 NOT = {
+	  has_government = democratic_socialist
+	  has_government = social_democracy
+	 }
+	}
+		  priority = {
+		  base = 10
+		  }
+}
+
+LIT_baltificiation = {
+  icon = GFX_decision_oppression
+  picture = GFX_decision_germany_partisans
+	visible = {
+    tag = LIT
+	has_government = pelekist
+	date < 1236.9.22
+          }
+	available = {
+    tag = LIT
+	has_government = pelekist   
+	date < 1236.9.22
+	}
+		  priority = {
+		  base = 10
+		  }
+}
+
+GER_german_partisans = {
+  icon = GFX_decision_oppression
+  picture = GFX_decision_germany_partisans
+	visible = {
+    tag = GER
+	has_country_flag = anti_partisan_campaing
+          }
+		  priority = {
+		  base = 10
+		  }
+}
+
+GER_german_export_revolution = {
+  icon = GFX_decision_category_sov_great_patriotic_war
+  picture = GFX_decision_cat_picture_generic_border_conflicts
+  visible = {
+   NOT = { has_government = national_socialist }
+   tag = GER
+  }
+  priority = {
+   base = 1000
+		  }
+	available = {
+	tag = GER
+	has_country_flag = GER_expansion_LUX_DS
+	OR = {
+	has_government = socialist
+    has_government = democratic_socialist
+      }	
+	 }
+    }
+GER_german_expansion = {
+  icon = GFX_decision_category_border_conflicts
+  picture = GFX_decision_cat_picture_gateway_to_europe
+	available = {
+    tag = GER
+	has_country_flag = GER_expansion
+    }
+	priority = {
+     base = 100
+    }
+	visible = {
+	has_government = national_socialist
+	tag = GER
+	}
+	}
+
+	
+BLR_power_struggle = {
+  icon = GFX_decision_oppression
+  picture = GFX_decision_germany_partisans
+	visible = {
+    tag = BLR
+	has_country_flag = BLR_pelekist_aid
+          }
+		  priority = {
+		  base = 10
+		  }
+}
+
+SPR_spanish_revanschism = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_cat_picture_concessions_to_the_trade_unions
+	visible = {
+    tag = SPR
+	OR = {
+	has_government = national_socialist
+	has_government = pelekist
+ 	}
+	
+          }
+		  priority = {
+		  base = 10
+		  }
+}
+
+IND_indian_unification = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_cat_picture_concessions_to_the_trade_unions
+	visible = {
+ 	OR = { 	
+	tag = DEL	
+	tag = BRJ
+	tag = ASM
+		}
+	if = {
+    limit = {
+        tag = ASM
+    }
+   has_cosmetic_tag = ASM_eastindia
+}
+
+	if = {
+    limit = {
+        tag = BRJ
+    }
+   owns_state = 423
+OR = {
+has_government = pelekist
+has_government = socialist
+}
+
+}
+
+	if = {
+    limit = {
+        tag = DEL
+    }
+   owns_state = 440
+}
+	
+          }
+		  priority = {
+		  base = 10
+		  }
+}
+
+PRS_foreign_policy = {
+  icon = GFX_decision_oppression
+	visible = {
+    tag = PRS
+          }
+		  priority = {
+		  base = 10
+		  }
+}
+PRS_baltic_ambition = {
+  icon = GFX_decision_oppression
+	visible = {
+    tag = PRS
+          }
+		  priority = {
+		  base = 10
+		  }
+}
+PRS_german_expansion = {
+  icon = GFX_decision_oppression
+	visible = {
+    tag = PRS
+          }
+		  priority = {
+		  base = 10
+		  }
+}
+BLR_raids = {
+  icon = GFX_decision_oppression
+  picture = GFX_decision_germany_partisans
+	visible = {
+    tag = BLR
+	}
+		  priority = {
+		  base = 100
+		  }
+}
+
+DSU_ukrainian_ambition = {
+  icon = GFX_decision_oppression
+  picture = GFX_decision_germany_partisans
+	visible = {
+    tag = DSU
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+DSU_allies = {
+  icon = GFX_decision_oppression
+  picture = GFX_decision_germany_partisans
+	visible = {
+    tag = DSU
+	}
+	allowed = {
+	
+	}
+		  priority = {
+		  base = 90
+		  }
+
+
+}
+
+UKR_ukrainian_ambition = {
+  icon = GFX_decision_oppression
+  picture = GFX_decision_germany_partisans
+	visible = {
+    tag = UKR
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+RUS_russian_reunification = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+    OR = {
+	 tag = TOW
+	 tag = BWR
+	}
+	}
+	available = {
+	ROOT = {
+	has_full_control_of_state = 578
+	has_full_control_of_state = 570
+	has_full_control_of_state = 40
+	has_full_control_of_state = 569 
+	has_full_control_of_state = 654
+	}
+	has_country_flag = ROM_victory_in_war
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+RUS_russian_reformation = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+    OR = {
+	 tag = TOW
+	 tag = BWR
+	}
+	}
+	available = {
+	ROOT = {
+	has_full_control_of_state = 570
+	has_full_control_of_state = 40
+	has_full_control_of_state = 580 
+	has_full_control_of_state = 571
+	}
+	has_country_flag = ROM_victory_in_war
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+RUS_russian_reformation = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+    OR = {
+	 tag = TOW
+	 tag = BWR
+	}
+	}
+	available = {
+	ROOT = {
+	has_full_control_of_state = 570
+	has_full_control_of_state = 40
+	has_full_control_of_state = 580 
+	has_full_control_of_state = 571
+	}
+	has_country_flag = ROM_victory_in_war
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+SFS_german_reformation = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+	tag = SFS
+	}
+	available = {
+	ROOT = {
+	tag = SFS
+	}
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+FIC_indochinese_unrest = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+	tag = FIC
+	}
+	available = {
+	ROOT = {
+	tag = FIC
+	}
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+RUS_expansion_question = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+    OR = {
+	 tag = CRM
+	 tag = CAA
+	 tag = CAU
+	}
+	}
+	available = {
+	ROOT = {
+	has_cosmetic_tag = RUS_SOU
+	 }
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+RUS_southern_initiative = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+    tag = RUS
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+RUS_russian_revolution_siberia = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+    OR = {
+	 has_government = national_socialist
+	 has_government = socialist
+	 has_government = democratic_socialist
+	}
+	OR = {
+	tag = OMS
+	tag = JSW
+	}
+	}
+	available = {
+	ROOT = {
+	has_full_control_of_state = 570
+	has_full_control_of_state = 40
+	has_full_control_of_state = 580 
+	has_full_control_of_state = 571
+	}
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+TOW_search_for_allies = {
+ icon = GFX_decision_category_military_operation
+ picture = GFX_decision_germany_partisans
+
+ visible = {
+    has_country_flag = TOW_search_for_allies
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+BWR_search_for_allies = {
+ icon = GFX_decision_category_military_operation
+ picture = GFX_decision_germany_partisans
+
+ visible = {
+    has_country_flag = BWR_search_for_allies
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+ AFG_afghan_expansionism = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+    tag = AFG
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+ BUL_bulgarian_expansionism = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+    tag = BUL
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+ HUN_intervention_in_aus_cw = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+    tag = HUN
+    NOT = { has_idea = occupied_country}
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+ SLV_unification = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+    tag = SLV
+	}
+		  priority = {
+		  base = 100
+		  }
+
+}
+
+SLV_austrian_civil_war = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_decision_germany_partisans
+	visible = {
+    tag = SLV
+    	OR = {
+    		has_war_with = ACM
+    		has_war_with = THR
+    		has_war_with = AUS
+		}
+	}
+	priority = {
+	base = 120
+	}
+
+}
+
+LES_russian_expansion = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+	 tag = LES
+	 has_country_flag = triumph
+	}
+	available = {
+	LES = {
+	has_full_control_of_state = 572
+	has_country_flag = triumph }
+	}
+		  priority = {
+		  base = 100
+		  }
+
+
+}
+
+LES_unite = {
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+	 tag = LES
+	 has_country_flag = LES_gadjahasconsolidedpower
+	}
+		  priority = {
+		  base = 120
+		  }
+
+
+}
+
+LES_the_state = {
+
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+	 tag = LES
+	 has_country_flag = triumph
+	}
+	available = {
+	ROOT = {
+	has_full_control_of_state = 572/
+	}
+	has_country_flag = LES_gadjahasconsolidedpower
+	}
+		  priority = {
+		  base = 120
+		  }
+
+
+}
+
+LES_invasion = {
+
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+	 tag = LES
+	 has_country_flag = triumph
+	}
+	available = {
+	ROOT = {
+	has_full_control_of_state = 572
+	}
+	}
+		  priority = {
+		  base = 120
+		  }
+
+
+}
+
+LES_banishaliens = {
+
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+  	visible = {
+  	tag = LES
+  	}
+    available = {
+    ROOT = {
+	NOT = { is_ai = yes }
+	}
+    }
+     }
+		  priority = {
+		  base = 120
+		  }
+}
+
+
+ALL_executive = {
+
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+	visible = {
+	NOT = { is_ai = yes }
+	NOT = { has_country_flag = no_executives }
+	}
+	available = {
+	ROOT = {
+	NOT = { is_ai = yes }
+	}
+	}
+		  priority = {
+		  base = 120
+		  }
+
+
+}

@@ -1,0 +1,282 @@
+division_template = {
+
+name = "British Infantry Division"
+
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+		recon = { x = 0 y = 1 }  
+		artillery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+
+name = "BNP Militia"
+
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+
+}
+
+
+units = {
+
+division = {
+name = "1.British Infantry Division"
+location = 6103
+division_template = "British Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 1.0
+
+}
+division = {
+name = "2.British Infantry Division"
+location = 13401
+division_template = "British Infantry Division"
+start_experience_factor = 0.2
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "3.British Infantry Division"
+location = 11374
+division_template = "British Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "4.British Infantry Division"
+location = 3369
+division_template = "British Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "5.British Infantry Division"
+location = 9297
+division_template = "British Infantry Division"
+start_experience_factor = 0.2
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "1.BNP Division "Windsor""
+location = 13400
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "2.BNP Division "Britannia""
+location = 11333
+division_template = "BNP Militia"
+start_experience_factor = 0.3
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "1.Plymouth BNP Militia"
+location = 13413
+division_template = "BNP Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.4
+
+}
+division = {
+name = "2.Plymouth BNP Militia"
+location = 13399
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "3.Plymouth BNP Militia"
+location = 11406
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "1.Newcastle BNP Militia"
+location = 351
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "2.Newcastle BNP Militia"
+location = 11299
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "1.Royal Scottish BNP Division"
+location = 13412
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "2.Royal Scottish BNP Division"
+location = 219
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "3.Royal Scottish BNP Division"
+location = 11332
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "4.Royal Scottish BNP Division"
+location = 6399
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "Scottish BNP Militia"
+location = 13411
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "Scottish BNP Militia"
+location = 3273
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "Scottish BNP Militia"
+location = 6320
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "Scottish BNP Militia"
+location = 9392
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "1.Hull BNP Militia"
+location = 11297
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "2.Hull BNP Militia"
+location = 13408
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "1.Midlands BNP Militia"
+location = 3301
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "2.Midlands BNP Militia"
+location = 3301
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "3.Midlands BNP Militia"
+location = 11279
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "4.Midlands BNP Militia"
+location = 11279
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "5.Midlands BNP Militia"
+location = 11279
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "6.Midlands BNP Militia"
+location = 11471
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "7.Midlands BNP Militia"
+location = 11471
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "8.Midlands BNP Militia"
+location = 11471
+division_template = "BNP Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+}

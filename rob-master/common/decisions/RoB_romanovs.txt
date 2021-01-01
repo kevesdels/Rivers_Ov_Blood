@@ -1,0 +1,606 @@
+TOW_search_for_allies = {
+ 
+ ROM_scramble_for_Siberia = {
+ 	 fire_only_once = yes
+	 priority = 10
+	 activation = {
+	 has_country_flag = TOW_search_for_allies
+	 }
+	 available = {
+	  BWR = {
+	   exists = no
+	   }
+	 }
+	is_good = no
+	days_mission_timeout = 250
+	timeout_effect = {
+	hidden_effect = {
+	TOW = { declare_war_on = { target = BWR type = annex_everything } }
+	every_other_country = {
+ limit = { is_in_faction_with = TOW }
+ BWR = { declare_war_on = { target = PREV type = annex_everything }}
+}
+ 	every_other_country = {
+ limit = { is_in_faction_with = BWR }
+ TOW = { declare_war_on = { target = PREV type = annex_everything }}
+}
+ }
+ }
+ }
+ 
+ TOW_ally_Krasnoyarsk = {
+ fire_only_once = yes
+  available = {
+  check_variable = {
+    var = TOW_clergy_support
+    value = 4
+    compare = greater_than
+}
+KRW = { 
+is_in_faction = no 
+exists = yes
+}
+}
+ cost = 20
+ 
+ complete_effect = {
+ KRW = {
+ country_event = { id = romanov.5 days = 2 }
+ }
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ 
+ TOW_ally_Bratsk = {
+ fire_only_once = yes
+  
+ available = {
+  check_variable = {
+    var = TOW_military_support
+    value = 4
+    compare = greater_than
+}
+BRW = { 
+is_in_faction = no
+exists = yes
+ }
+}
+ cost = 20
+ 
+ complete_effect = {
+ BRW = {
+ country_event = { id = romanov.5 days = 2 }
+ }
+ }
+ ai_will_do = {
+  base = 200
+ }
+ 
+ }
+ TOW_give_money_to_clergy = {
+ fire_only_once = yes
+ cost = 40
+ available = {
+  KRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = TOW_clergy_support
+    value = 1
+  }
+  add_war_support =-0.05
+ }
+  ai_will_do = {
+  base = 200
+  modifier = {
+   BWR = { is_in_faction_with = BRW }
+  }
+ }
+ }
+ TOW_expand_religious_education = {
+ fire_only_once = yes
+ cost = 40
+  available = {
+  KRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = TOW_clergy_support
+    value = 1
+  }
+  add_war_support =-0.06
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ TOW_offer_priests_government_positions = {
+ fire_only_once = yes
+ cost = 40
+  available = {
+  KRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = TOW_clergy_support
+    value = 1
+  }
+  add_war_support =-0.1
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ TOW_arm_the_church = {
+ fire_only_once = yes
+ cost = 40
+  available = {
+  KRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = TOW_clergy_support
+    value = 1
+  }
+  add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -200
+    producer = TOW
+}
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ TOW_promise_new_guns = {
+ fire_only_once = yes
+  cost = 40
+   available = {
+  BRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = TOW_military_support
+    value = 1
+  }
+  add_stability =-0.05
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ TOW_militarize_education = {
+ fire_only_once = yes
+   cost = 40
+      available = {
+    BRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = TOW_military_support
+    value = 1
+  }
+  add_stability =-0.07
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ TOW_publically_support_diethrikhs= {
+ fire_only_once = yes
+   cost = 40
+      available = {
+    BRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = TOW_military_support
+    value = 1
+  }
+  add_stability =-0.05
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ TOW_militarize_society = {
+ fire_only_once = yes
+   cost = 40
+      available = {
+  BRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = TOW_military_support
+    value = 1
+  }
+  add_stability =-0.1
+  add_manpower = 20000
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+
+
+}
+RUS_russian_reformation = {
+ 
+ ROM_proclaim_kingdom_of_siberia = {
+ fire_only_once = yes
+  available = {
+ 
+ }
+ complete_effect = {
+  set_cosmetic_tag = ROM_SIB
+  every_state = {
+    limit = { 
+	OR = {
+	is_core_of = FER 
+	is_core_of = UGC
+    is_core_of = LES
+    is_core_of = OMS 
+    is_core_of = IRK
+    is_core_of = JSW
+    is_core_of = JOB
+    is_core_of = WFE   	   	
+	}
+	}
+	add_core_of = ROOT
+
+}
+ }
+ ai_will_do = {
+  base = 200
+ }
+ }
+ 
+  ROM_proclaim_kingdom_of_russia = {
+ fire_only_once = yes
+  available = {
+ has_cosmetic_tag = ROM_SIB
+ has_full_control_of_state = 219
+ has_full_control_of_state = 217
+ has_full_control_of_state = 572
+ has_full_control_of_state = 561
+ }
+ complete_effect = {
+  set_cosmetic_tag = ROM_KIN
+    every_state = {
+    limit = { 
+	OR = {
+	is_core_of = RDR 
+	is_core_of = RUS
+    is_core_of = SOV
+    is_core_of = OMS 
+    is_core_of = CAA
+    is_core_of = CRM
+    is_core_of = CAU
+    is_core_of = DAG
+    is_core_of = CHE
+    is_core_of = MRP	
+	}
+	}
+	add_core_of = ROOT
+
+}
+ }
+ ai_will_do = {
+  base = 200
+ }
+ }
+ 
+   ROM_proclaim_empire_of_russia = {
+ fire_only_once = yes
+  available = {
+ has_cosmetic_tag = ROM_KIN
+ has_full_control_of_state = 195
+ has_full_control_of_state = 202
+ has_full_control_of_state = 206
+ has_full_control_of_state = 561
+ has_full_control_of_state = 12
+ }
+ complete_effect = {
+  set_cosmetic_tag = ROM_EMP
+      every_state = {
+    limit = { 
+	OR = {
+	is_core_of = FIN 
+	is_core_of = EST
+    is_core_of = LIT
+    is_core_of = UKR 
+    is_core_of = DCU
+    is_core_of = BLR
+	}
+	}
+	add_core_of = ROOT
+
+}
+ }
+ ai_will_do = {
+  base = 200
+ }
+ }
+
+}
+
+BWR_search_for_allies = {
+ 
+ ROM_scramble_for_Siberia = {
+ 	 fire_only_once = yes
+	 priority = 10
+	 activation = {
+	 has_country_flag = BWR_search_for_allies
+	 }
+	 available = {
+	  TOW = {
+	   exists = no
+	   }
+	 }
+	is_good = no
+	days_mission_timeout = 240
+	timeout_effect = {
+	hidden_effect = {
+	BWR = { declare_war_on = { target = TOW type = annex_everything } }
+	}
+	}
+
+ 
+ }
+ 
+ BWR_ally_Krasnoyarsk = {
+ fire_only_once = yes
+  cost = 20
+  available = {
+  check_variable = {
+    var = BWR_clergy_support
+    value = 4
+    compare = greater_than
+}
+KRW = { is_in_faction = no }
+}
+
+ 
+ complete_effect = {
+ KRW = {
+ country_event = { id = romanov.6 days = 2 }
+ }
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ 
+ BWR_ally_Bratsk = {
+ fire_only_once = yes
+  
+ available = {
+  check_variable = {
+    var = BWR_military_support
+    value = 4
+    compare = greater_than
+}
+BRW = { is_in_faction = no }
+}
+ cost = 20
+ 
+ complete_effect = {
+ BRW = {
+ country_event = { id = romanov.6 days = 2 }
+ }
+ }
+ ai_will_do = {
+  base = 200
+ }
+ 
+ }
+ BWR_give_money_to_clergy = {
+ fire_only_once = yes
+ cost = 40
+    available = {
+    KRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = BWR_clergy_support
+    value = 1
+  }
+  add_war_support =-0.05
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ BWR_expand_religious_education = {
+ fire_only_once = yes
+ cost = 40
+     available = {
+  KRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = BWR_clergy_support
+    value = 1
+  }
+  add_war_support =-0.06
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ BWR_offer_priests_government_positions = {
+ fire_only_once = yes
+ cost = 40
+     available = {
+  KRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = BWR_clergy_support
+    value = 1
+  }
+  add_war_support =-0.1
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ BWR_arm_the_church = {
+ fire_only_once = yes
+ cost = 40
+     available = {
+  KRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = BWR_clergy_support
+    value = 1
+  }
+  add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -200
+    producer = BWR
+}
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ BWR_promise_new_guns = {
+ fire_only_once = yes
+  cost = 40
+      available = {
+  BRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = BWR_military_support
+    value = 1
+  }
+  add_stability =-0.05
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ BWR_militarize_education = {
+ fire_only_once = yes
+   cost = 40
+         available = {
+  BRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = BWR_military_support
+    value = 1
+  }
+  add_stability =-0.07
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ BWR_publically_support_diethrikhs= {
+ fire_only_once = yes
+   cost = 40
+         available = {
+  BRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = BWR_military_support
+    value = 1
+  }
+  add_stability =-0.05
+ }
+  ai_will_do = {
+  base = 200
+ }
+ }
+ BWR_militarize_society = {
+ fire_only_once = yes
+   cost = 40
+         available = {
+  BRW = { 
+is_in_faction = no 
+exists = yes
+}
+  has_war = no
+ }
+ complete_effect = {
+  add_to_variable = {
+    var = BWR_military_support
+    value = 1
+  }
+  add_stability =-0.1
+  add_manpower = 20000
+ }
+ ai_will_do = {
+  base = 200
+ }
+ }
+
+
+}

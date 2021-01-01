@@ -1,0 +1,532 @@
+focus_tree = {
+	id = soviet_focus_molotov
+	country = {
+		factor = 0
+	}
+continuous_focus_position = { x = 50 y = 2000 }
+
+shared_focus = SOV_effectsoffamine
+shared_focus = SOV_sovieteconomy
+shared_focus = SOV_bolsheviklandforces
+shared_focus = SOV_lookoutwards
+shared_focus = SOV_bolshevikairforces
+
+#Focus for Premier Molotov
+	focus = {
+		id = SOV_premiermolotov
+		icon = GFX_focus_SOV_Premier_Molotov
+		x = 5
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 country_event = { id = bolshevik_russia.73 days = 2 } 
+		 add_political_power = 50
+		}
+	}
+	
+	#Focus for Purging Union Leaders
+	focus = {
+		id = SOV_purgingunionleaders
+		icon = GFX_focus_SOV_purge_trade_unions
+		x = 3
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_premiermolotov }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 country_event = { id = bolshevik_russia.74 days = 2 } 
+		}
+	}
+	
+	#Focus for Form camps
+	focus = {
+		id = SOV_formcamps
+		icon = GFX_focus_SOV_form_camps
+		x = 3
+		y = 3
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_purgingunionleaders }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 country_event = { id = bolshevik_russia.75 days = 2 } 
+		}
+	}
+	
+		#Focus for Socialize the system
+	focus = {
+		id = SOV_socializethesystem
+		icon = GFX_focus_SOV_socialize_system
+		x = 3
+		y = 4
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_formcamps }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 country_event = { id = bolshevik_russia.76 days = 2 } 
+		}
+	}
+	
+	#Focus for NKVD Units In the Cities
+	focus = {
+		id = SOV_nkvdunitsinthecities
+		icon = GFX_focus_SOV_nkvd_units
+		x = 7
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_premiermolotov }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 country_event = { id = bolshevik_russia.77 days = 2 } 
+		}
+	}
+	
+		#Focus for Commisar officers
+	focus = {
+		id = SOV_commisarofficers
+		icon = GFX_focus_SOV_commiser_officers
+		x = 7
+		y = 3
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_nkvdunitsinthecities }
+		ai_will_do = {
+			factor = 100
+		}
+	   completion_reward = {
+		 country_event = { id = bolshevik_russia.78 days = 2 } 
+		}
+	}
+	
+	#Focus for Kill all traitors
+	focus = {
+		id = SOV_killalltraitors
+		icon = GFX_focus_SOV_kill_all_traitors
+		x = 7
+		y = 4
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_commisarofficers }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 country_event = { id = bolshevik_russia.79 days = 2 } 
+		}
+	}
+	
+		#Focus for Molotov's Russia
+	focus = {
+		id = SOV_molotovsrussia
+		icon = GFX_focus_SOV_molotovs_russia
+		x = 5
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SOV_socializethesystem 
+		}
+		prerequisite = { 
+			focus = SOV_killalltraitors 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+          remove_ideas = {
+            mass_unrest
+          }
+         remove_ideas = {
+           bolshevik_strike 
+         }
+         add_political_power = 150
+}
+	}
+	
+		#Focus for Use the camps for ''projects''
+	focus = {
+		id = SOV_usethecampsforprojects
+		icon = GFX_focus_SOV_use_camps_for_projects
+		x = 2
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_molotovsrussia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  molotov_camps
+		 }
+		}
+	}
+	
+	#Focus for Mass industrilisation
+	focus = {
+		id = SOV_massindustrilisation
+		icon = GFX_focus_SOV_mass_industry
+		x = 2
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_usethecampsforprojects }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  molotov_industry
+		 }
+		}
+	}
+	
+		#Focus for Increase the kolkhozes
+	focus = {
+		id = SOV_increasethekolkhozes
+		icon = GFX_focus_SOV_increase_kolkhozes
+		x = 2
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_massindustrilisation }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		
+		}
+	}
+	
+	#Focus for Remind the workers
+	focus = {
+		id = SOV_remindtheworkers
+		icon = GFX_focus_SOV_remind_the_workers
+		x = 2
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_increasethekolkhozes }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  soviet_worker
+		 }
+		}
+	}
+
+	#Focus for Work for all!
+	focus = {
+		id = SOV_workforall
+		icon = GFX_focus_SOV_work_for_all
+		x = 2
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_remindtheworkers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_stability = 0.1
+		}
+	}
+	
+		#Focus for Modernize the red army
+	focus = {
+		id = SOV_modernizetheredarmy
+		icon = GFX_focus_SOV_modernize_red_army
+		x = 5
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_molotovsrussia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	#Focus for Mass Conscription
+	focus = {
+		id = SOV_massconscription
+		icon = GFX_focus_SOV_mass_mobilizations_molotov
+		x = 5
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_modernizetheredarmy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  mass_conscription
+		 }
+		}
+	}
+	
+	#Focus for Blood for freedom
+	focus = {
+		id = SOV_bloodforfreedom
+		icon = GFX_focus_SOV_freedom_for_blood
+		x = 5
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_massconscription }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  mass_army
+		 }
+		}
+	}
+	
+		#Focus for Indoctrinate the men
+	focus = {
+		id = SOV_indoctrinatethemen
+		icon = GFX_focus_SOV_SOV_indoctrinate_molotov
+		x = 5
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_bloodforfreedom }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 swap_ideas = {
+		  remove_idea = mass_army
+		  add_idea = mass_army_2
+		 }
+		}
+	}
+	
+		#Focus for Liberational Army
+	focus = {
+		id = SOV_liberationalarmy
+		icon = GFX_focus_SOV_liberational_army
+		x = 5
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_indoctrinatethemen }
+		ai_will_do = {
+			factor = 1
+		}
+	   completion_reward = {
+		   swap_ideas = {
+		  remove_idea = mass_army_2
+		  add_idea = mass_army_3
+		 }
+		}
+	}
+	
+	#Focus for A Soviet Education
+	focus = {
+		id = SOV_asovieteducation
+		icon = GFX_focus_SOV_soviet_education
+		x = 8
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_molotovsrussia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		 rural_education
+		 }
+		}
+	}
+	
+	#Focus for Cult of Personality
+	focus = {
+		id = SOV_cultofpersonality
+		icon = GFX_focus_SOV_cult_of_persoanlity
+		x = 8
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_asovieteducation }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_popularity = {ideology = socialist popularity =0.18}
+		}
+	}
+	
+	#Focus for There is no god
+	focus = {
+		id = SOV_thereisnogod
+		icon = GFX_focus_SOV_no_god
+		x = 8
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_cultofpersonality }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  atheist_state
+		 }
+		}
+	}
+	
+	#Focus for Get rid of the bourgeoisie
+	focus = {
+		id = SOV_getridofthebourgeoisie
+		icon = GFX_focus_SOV_get_rid_of_bourgeosie
+		x = 8
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_thereisnogod }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 remove_ideas = {
+		  bourgeoisie_influence_2
+		 }
+		}
+	}
+	
+	#Focus for The Soviet Identity
+	focus = {
+		id = SOV_thesovietidentity
+		icon = GFX_focus_SOV_soviet_identity
+		x = 8
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SOV_getridofthebourgeoisie }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_stability = 0.15
+		}
+	}
+	
+	#Focus for March till our death!
+	focus = {
+		id = SOV_marchtillourdeath
+		icon = GFX_focus_SOV_march_til_our_death
+		x = 5
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SOV_workforall 
+		}
+		prerequisite = { 
+			focus = SOV_liberationalarmy 
+		}
+		prerequisite = { 
+			focus = SOV_thesovietidentity 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  march_until_death
+		 }
+		}
+	}
+
+
+
+}

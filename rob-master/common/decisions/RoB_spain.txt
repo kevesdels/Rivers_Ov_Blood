@@ -1,0 +1,156 @@
+SPR_spanish_revanschism = {
+
+ SPR_destroy_france = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  BSQ = { exists = no }
+  CAT = { exists = no }
+  171 = { is_owned_by = SPR }
+  1162 = { is_owned_by = SPR }
+  date > 1939.1.1
+  has_army_manpower = {
+   size > 500000
+  }
+  has_war = no 
+  NOT = {
+   is_in_faction_with = FRA
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+
+   every_country = {
+	limit = { controls_state = 16 }
+	SPR = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+  }
+ }
+
+ SPR_retake_galicia = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+   ENG = { has_country_flag = ENG_civil_war }
+   NOT = {
+   171 = { is_owned_by = SPR }
+   1162 = { is_owned_by = SPR }
+   }
+   has_war = no 
+   NOT = {
+   is_in_faction_with = POR
+   is_puppet = yes
+  }
+  }
+  complete_effect = {
+   171 = { add_core_of = SPR }
+   1162 = { add_core_of = SPR }
+   every_country = {
+	limit = { controls_state = 171 }
+	SPR = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+  }
+ }
+  SPR_seize_gibralatar = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+   ENG = { has_country_flag = ENG_civil_war }
+   NOT = {
+   is_in_faction_with = ENG
+   is_puppet = yes
+  }
+  }
+  complete_effect = {
+   118 = { add_core_of = SPR }
+   SPR = { transfer_state = 118 }
+ }
+ }
+ SPR_destroy_basque = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+   has_war = no
+   date > 1936.1.1
+   NOT = {
+   1164 = { is_owned_by = SPR }
+   172 = { is_owned_by = SPR }
+   }
+   NOT = {
+   is_in_faction_with = CAT
+   is_puppet = yes
+  }
+  }
+  complete_effect = {
+   172 = { add_core_of = SPR }
+   1164 = { add_core_of = SPR }
+   every_country = {
+	limit = { controls_state = 172 }
+	SPR = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+  }
+ }
+
+ SPR_destroy_catalonia = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+   has_war = no
+   date > 1937.1.1
+   NOT = {
+   167 = { is_owned_by = SPR }
+   165 = { is_owned_by = SPR }
+   } 
+   NOT = {
+   is_in_faction_with = CAT
+   is_puppet = yes
+        }
+  }
+  complete_effect = {
+   165 = { add_core_of = SPR }
+   167 = { add_core_of = SPR }
+   177 = { add_core_of = SPR }
+   1151 = { add_core_of = SPR }
+   1152 = { add_core_of = SPR }
+   1153 = { add_core_of = SPR }
+   1154 = { add_core_of = SPR }
+   1155 = { add_core_of = SPR }
+  
+  every_country = {
+	limit = { controls_state = 165 }
+	SPR = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+  }
+ 
+}

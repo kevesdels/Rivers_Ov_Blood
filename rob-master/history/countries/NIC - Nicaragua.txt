@@ -1,0 +1,51 @@
+capital = 317
+
+oob = "NIC_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+}
+
+set_war_support = 0.1
+set_convoys = 10
+set_politics = {
+	ruling_party = social_liberal
+	last_election = "1932.5.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 60
+	conservative = 0
+	authoritharian = 40
+	reactionary = 0
+	pelekist = 0
+}
+create_country_leader = {
+	name = "José María Moncada"
+	desc = "POLITICS_JUAN_BAUTISTA_SACASA_DESC"
+	picture = "Jose_Maria_Moncada.dds"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+		name = "Anastasio Somoza García"
+		desc = "POLITICS_ANASTASIO_SOMOZA_GARCIA_DESC"
+		picture = "GFX_portrait_nicaragua_portrait_anastasio_somoza_garcia"
+		expire = "1965.1.1"
+		ideology = authoritharian_subtype
+		traits = {
+			#
+		}
+	}

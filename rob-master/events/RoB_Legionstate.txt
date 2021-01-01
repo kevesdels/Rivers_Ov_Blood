@@ -1,0 +1,705 @@
+####################
+###Legions Events
+####################
+
+add_namespace = legion
+
+###Starting Event
+country_event = { 
+id = legion.0
+title = legion.0.t
+desc = legion.0.d
+fire_only_once = yes
+
+trigger = {
+ tag = LES
+ date > 1934.1.2
+}
+
+option = {
+ name = legion.0.a
+ add_political_power = 5
+}
+}
+
+###Picks Path
+country_event = { 
+id = legion.1
+title = legion.1.t
+desc = legion.1.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.1.a
+ ai_chance = { factor = 5 }
+ set_country_flag = christ
+ hidden_effect = { country_event = { id = legion.2 days = 14 }}
+}
+option = {
+ name = legion.1.b
+ ai_chance = { factor = 5 }
+ set_country_flag = pagan
+ hidden_effect = { country_event = { id = legion.2 days = 14 }}
+}
+option = {
+ name = legion.1.c
+ ai_chance = { factor = 5 }
+ set_country_flag = poets
+ hidden_effect = { country_event = { id = legion.2 days = 14 }}
+}
+}
+
+###invitation to butchers nest
+country_event = { 
+id = legion.2
+title = legion.2.t
+desc = legion.2.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.2.a
+ hidden_effect = { country_event = { id = legion.3 days = 7 }}
+}
+}
+
+
+###nigga knows shit might happen
+country_event = { 
+id = legion.3
+title = legion.3.t
+desc = legion.3.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.3.a
+ ai_chance = {
+			factor = 0
+		}
+ hidden_effect = { country_event = { id = legion.4 days = 1 }}
+}
+option = {
+ name = legion.3.b
+ ai_chance = {
+			factor = 10
+		}
+ hidden_effect = { country_event = { id = legion.6 days = 7 }}
+}
+}
+
+###he chads up and goes anyway
+country_event = { 
+id = legion.4
+title = legion.4.t
+desc = legion.4.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.4.a
+ hidden_effect = { country_event = { id = legion.5 days = 1 }}
+}
+}
+
+### Nigga = Dead, Sergey the man now
+country_event = { 
+id = legion.5
+title = legion.5.t
+desc = legion.5.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.5.a
+
+ set_politics = {
+ ruling_party = reactionary
+ elections_allowed = no
+}
+
+ create_country_leader = {
+	name = "Sergei Wojciechowski"
+	desc = ""
+	picture = ""
+	expire = "1960.1.1"
+	ideology = military_junta
+	traits = {
+	charismatic_militarist
+	}
+}
+
+add_popularity = {ideology = reactionary popularity =0.3}
+add_stability = -0.1
+}
+}
+
+### Nigga knew shit was up
+country_event = { 
+id = legion.6
+title = legion.6.t
+desc = legion.6.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.6.a
+
+ remove_unit_leader = 5721
+ hidden_effect = {
+ set_country_flag = LES_survives
+	 	if = {
+				limit = {
+					AND = { has_country_flag = poets }
+				}
+ 		AGR = { country_event = { id = agrussia.1 days = 14 } }
+		 }
+	 	if = {
+				limit = {
+					AND = { has_country_flag = pagan }
+				}
+ 		AGR = { country_event = { id = agrussia.1 days = 14 } }
+		 }
+ 		if = {
+				limit = { has_country_flag = christ }
+				}
+ 		AGR = { country_event = { id = agrussia.3 days = 41 } }
+ 		}
+ 	}
+ }
+
+
+
+
+### Christian events
+
+
+### do we get our own patriarch 
+country_event = { 
+id = legion.7
+title = legion.7.t
+desc = legion.7.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+### n-no
+ name = legion.7.a
+ add_political_power = 100
+ add_stability = 0.05
+}
+option = {
+### Yes
+ name = legion.7.b
+ add_political_power = -150
+ add_ideas = {
+ LES_patriarch
+ }
+}
+}
+
+###niggas forgot to say what catholic denomination they follow xD
+country_event = { 
+id = legion.8
+title = legion.8.t
+desc = legion.8.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.8.a
+ set_country_flag = LES_orthodox
+}
+option = {
+ name = legion.8.b
+ set_country_flag = LES_catholic
+}
+}
+
+###JQ
+country_event = { 
+id = legion.9
+title = legion.9.t
+desc = legion.9.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.9.a
+}
+option = {
+ name = legion.9.b
+}
+option = {
+ name = legion.9.c
+}
+}
+
+### niggas gettin them horsepower
+country_event = { 
+id = legion.10
+title = legion.10.t
+desc = legion.10.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.10.a
+ add_timed_idea = {
+    idea = LES_buy_horses
+    days = 120
+}
+hidden_effect = { country_event = { id = legion.11 days = 500 }}
+}
+option = {
+ name = legion.10.b
+ add_timed_idea = {
+    idea = LES_buy_cheap_horses
+    days = 120
+}
+hidden_effect = { country_event = { id = legion.12 days = 500 }}
+}
+option = {
+ name = legion.10.c
+ hidden_effect = { country_event = { id = legion.13 days = 500 }}
+}
+}
+
+###nigga gets 4 civs
+country_event = { 
+id = legion.11
+title = legion.11.t
+desc = legion.11.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.11.a
+  random_owned_controlled_state = {
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+				}
+ }
+  random_owned_controlled_state = {
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+				}
+ }
+  random_owned_controlled_state = {
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+				}
+ }
+  random_owned_controlled_state = {
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+				}
+ }
+}
+}
+
+###nigga gets 2 civs
+country_event = { 
+id = legion.12
+title = legion.12.t
+desc = legion.12.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.12.a
+  random_owned_controlled_state = {
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+				}
+ }
+  random_owned_controlled_state = {
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+				}
+ }
+}
+}
+
+###nigga gets 1 civ
+country_event = { 
+id = legion.13
+title = legion.13.t
+desc = legion.13.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.13.a
+ random_owned_controlled_state = {
+ 	add_extra_state_shared_building_slots = 1
+ 	add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+				}
+ }
+
+}
+}
+###RAAAAAAAAAAAAAAAids DEEEEEEEEppoOOOOOs
+country_event = { 
+id = legion.14
+title = legion.14.t
+desc = legion.14.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.14.a
+ add_manpower = -8673‬
+ hidden_effect = {
+ LES = { country_event = { id = legion.15 days = 21 } }
+ }
+}
+
+option = {
+ name = legion.14.b
+}
+
+}
+
+
+###DAAAAAAAAAAAAAAAAAABBBBBBBBBBB
+country_event = { 
+id = legion.15
+title = legion.15.t
+desc = legion.15.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.15.a
+ add_manpower = 7919‬
+ army_experience = 15
+ add_equipment_to_stockpile = {
+ type = infantry_equipment_0
+ amount = 471
+ producer = RDR
+ }
+ add_equipment_to_stockpile = {
+ type = infantry_equipment_0
+ amount = 14
+ producer = ENG
+ 		}
+}
+
+}
+
+
+
+
+###BLUE BLUE BLUE PRINT
+country_event = { 
+id = legion.16
+title = legion.16.t
+desc = legion.16.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.16.a
+ add_political_power = -50
+ hidden_effect = {
+ LES = { country_event = { id = legion.17 days = 17 } }
+ }
+	}
+
+}
+
+
+###TAAAAAAAAAAAAAAANKS
+country_event = { 
+id = legion.17
+title = legion.17.t
+desc = legion.17.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.17.a
+ add_tech_bonus = {
+	name = gwtank 
+	bonus = 1.0
+	uses = 3
+	technology = gwtank 
+	}
+ 	if = {
+	limit = {
+	has_tech = gwtank
+	}
+	add_tech_bonus = {
+	name = lighttank 
+	bonus = 1.0
+	uses = 1
+	technology = basic_light_tank 
+	}
+	}
+}
+}
+
+
+### Start of truck theft
+country_event = { 
+id = legion.18
+title = legion.18.t
+desc = legion.18.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.18.a
+ add_manpower = -4724
+ hidden_effect = {
+ LES = { country_event = { id = legion.19 days = 17 } }
+}
+}
+}
+
+
+### End of truck theft
+country_event = { 
+id = legion.19
+title = legion.19.t
+desc = legion.19.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.19.a
+ add_manpower = 3083‬
+ army_experience = 15
+ add_equipment_to_stockpile = {
+ type = motorized_equipment_1
+ amount = 231
+ producer = RDR
+ 		}
+}
+  add_tech_bonus = {
+	name = cars 
+	bonus = 1.0
+	uses = 1
+	technology = motorised_infantry 
+	}
+}
+
+
+
+### Futurists joins legion
+country_event = { 
+id = legion.20
+title = legion.20.t
+desc = legion.20.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.20.a
+ annex_country = { target = AGR transfer_troops = yes }
+ hidden_effect = {
+ add_state_core = 1231
+ }
+ }
+}
+
+
+### Karels Forces are defeated
+country_event = { 
+id = legion.21
+title = legion.21.t
+desc = legion.21.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.21.
+ ai_chance = { factor = 9 }
+ LES = { add_state_core = 571 }
+ army_experience = 15
+ add_popularity = {ideology = socialist popularity = 0.15 }
+ LES = { load_oob = LES_Defectors}
+ }
+
+option = {
+ name = legion.21.b
+ai_chance = { factor = 1 }
+LES = { add_state_core = 571 }
+571 = { add_manpower = -6341 }
+}
+}
+
+
+### Them futur niggas join us
+country_event = { 
+id = legion.22
+title = legion.22.t
+desc = legion.22.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.22.a
+}
+
+}
+
+
+### triumph
+country_event = { 
+id = legion.23
+title = legion.23.t
+desc = legion.23.d
+fire_only_once = yes
+trigger = {
+tag = LES
+LES = { owns_state = 571 }
+571 = { is_core_of = LES }
+LES = { owns_state = 572 }
+572 = { is_core_of = LES }
+LES = { owns_state = 1231 }
+1231 = { is_core_of = LES }
+}
+mean_time_to_happen = { days = 3 }
+
+option = {
+ name = legion.23.a
+
+ every_state = {
+    limit = { 
+	is_core_of = LES
+	}
+	remove_core_of = AGR
+	remove_core_of = KAR
+}
+ hidden_effect = {
+ set_country_flag = triumph
+ }
+}
+
+}
+
+### Them futu-something niggas dont like jewsus
+country_event = { 
+id = legion.24
+title = legion.24.t
+desc = legion.24.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.24.a
+ 
+}
+
+}
+
+
+### we will force them to suck on christs cock
+country_event = { 
+id = legion.25
+title = legion.25.t
+desc = legion.25.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.25.a
+ LES = { add_state_core = 1231 }
+}
+}
+
+### karel defectors
+country_event = { 
+id = legion.26
+title = "The plea"
+desc = legion.26.d
+fire_only_once = yes
+trigger = {
+ tag = LES
+ at_war_with = KAR
+ KAR = { surrender_progress > 0.1}
+ country_exists = KAR
+}
+mean_time_to_happen = { days = 3 }
+
+option = {
+name  = "Tell them to prove their words"
+hidden_effect = {
+	AGR = { country_event = { id = agrussia.4 days = 5 } }
+	}
+}
+
+option = {
+name  = "A warm welcome for brothers in arms!"
+ai_chance = { factor = 0 }
+hidden_effect = { LES = { load_oob = "LES_Defectors" }}
+}
+}
+
+###Karel defectors kill karel
+country_event = { 
+id = legion.27.t
+title = "A sunny day for Legion"
+desc = legion.27.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name  = "Good riddance!"
+add_stability = 0.1
+add_war_support = 0.1
+hidden_effect = { LES = { load_oob = "LES_Defectors" } }
+}
+}
+
+
+### 5th Reds are gone
+country_event = { 
+id = legion.28
+title = legion.21.t
+desc = legion.21.d
+fire_only_once = yes
+trigger = {
+ tag = LES
+ NOT = { country_exists = OMS )
+ LES = { owns_state =  }
+}
+mean_time_to_happen = { days = 3 }
+
+option = {
+ name = "Let them join"
+ ai_chance = 8
+ army_experience = 15
+ add_popularity = {ideology = national_socialist popularity = 0.15 }
+ LES = { load_oob = "LES_recruits_OMS"}
+ }
+ option = {
+ name = "Fuck off"
+ ai_chance = 2
+ 653 = { add_manpower = -12341 }
+ }
+ }

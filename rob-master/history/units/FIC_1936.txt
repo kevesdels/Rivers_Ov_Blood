@@ -1,0 +1,167 @@
+##### Division Templates #####
+division_template = {
+	name = "Division d'Infanterie"		
+	division_names_group = FRA_INF_01
+	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. de Forteresse
+	# Difference is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		infantry = { x = 4 y = 0 }
+		infantry = { x = 4 y = 1 }
+		infantry = { x = 4 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+	}
+}
+division_template = {
+	name = "Brigade Coloniale"			# Represents: 2xRgt colonial forces and , usually with old equipment
+	division_names_group = FRA_COL_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 1
+}
+
+##### OOB #####
+units = {
+	##### Indochina Theatre #####
+	### Army Group: Troupes d'Indochine ### -- Saigon
+	division = {
+		name = "Tonkin Division"
+		location = 4075
+		division_template = "Brigade Coloniale"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.2
+
+
+	}	
+	division = {
+		name = "Cambodia Division"
+		location = 10177
+		division_template = "Brigade Coloniale"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.2
+
+
+	}	
+	division = {
+		name = "Saigon Division"
+		location = 4401
+		division_template = "Brigade Coloniale"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.2
+
+
+	}	
+	division = {
+		name = "Laos Protectorate Division"
+		location = 1464
+		division_template = "Brigade Coloniale"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.2
+
+
+	}	
+	division = {
+		name = "Siamese Border Division"
+		location = 10438
+		division_template = "Brigade Coloniale"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.2
+
+
+	}	
+	division = {
+		name = "South China Division"
+		location = 1018
+		division_template = "Brigade Coloniale"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.2
+
+
+	}	
+	division = {
+		name = "Hainan Division"
+		location = 1070
+		division_template = "Brigade Coloniale"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.2
+
+
+	}	
+	division = {
+		name = "1st Indochina Infantry Division"
+		location = 7376
+		division_template = "Division d'Infanterie"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.2
+
+
+	}	
+	division = {
+		name = "2nd Indochina Infantry Division"
+		location = 4401
+		division_template = "Division d'Infanterie"
+		start_equipment_factor = 1.0
+		start_experience_factor = 0.2
+
+
+	}	
+
+}
+
+### Air Wings
+air_wings = {
+	# Z.d'Op. Aériennes Nord -- Lille
+	286 = { 
+		# Groupement de Chasse 21 
+		# Groupement de Chasse 23
+		fighter_equipment_0 = {
+			owner = "FIC" 
+			amount = 50
+		}
+		# Groupement de Bombardment 6
+		# Groupement de Bombardment 9
+		tac_bomber_equipment_1 =  {
+			owner = "FIC" 
+			amount = 10
+		}
+	}
+
+
+}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "FIC"
+		}
+		requested_factories = 2
+		progress = 0.1
+		efficiency = 50
+	}
+
+###################

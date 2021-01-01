@@ -1,0 +1,46 @@
+capital = 718
+
+oob = "STY_1936"
+# Force publique occupation
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+}
+
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	national_socialist = 0
+	socialist = 43
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 24
+	authoritharian = 0
+	reactionary = 33
+	pelekist = 0
+}
+
+add_ideas = {
+limited_conscription
+}
+
+create_country_leader = {
+	name = "Auguste Gilliaert" 
+	desc = ""
+	picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+		#
+	}
+}

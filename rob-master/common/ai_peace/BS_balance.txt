@@ -1,0 +1,82 @@
+
+bs_balance = {
+	enable = {
+		always = yes
+	}
+	annex_randomness = 0
+	liberate_randomness = 0
+	puppet_randomness = 0
+	take_states_randomness = 0
+	force_government_randomness = 0
+
+	# ROOT = Taker, FROM = Liberated
+	liberate = {
+		factor = 0 #100
+		modifier = { #Don't puppet unthinkable countries
+			factor = 0
+			FROM = {
+				OR = {
+					tag = PRS
+					tag = BAV
+					tag = FLA
+					tag = DAN
+					tag = KOS
+					tag = WLL
+					tag = SAX
+					tag = SAR
+					tag = CAL
+					tag = TEX
+					tag = KTS
+					tag = MRV
+					tag = KAR
+					tag = RKU
+					tag = RKO
+					tag = RKK
+					tag = RKM
+					tag = NWG
+					tag = NID
+					tag = GGO
+					tag = PBM
+					tag = CAT
+					tag = SLO
+				}
+			}
+		}
+	}
+
+	# ROOT = Taker, FROM = Giver
+	puppet = {
+		factor = 0 #200
+		modifier = { #Don't puppet unthinkable countries
+			factor = 0
+			FROM = {
+				OR = {
+					tag = PRS
+					tag = BAV
+					tag = FLA
+					tag = DAN
+					tag = KOS
+					tag = WLL
+					tag = SAX
+					tag = SAR
+					tag = CAL
+					tag = TEX
+					tag = KTS
+					tag = MRV
+					tag = KAR
+					tag = RKU
+					tag = RKO
+					tag = RKK
+					tag = RKM
+					tag = NWG
+					tag = NID
+					tag = GGO
+					tag = PBM
+					tag = BNF
+					tag = CAT
+					tag = SLO
+				}
+			}
+		}
+	}
+}

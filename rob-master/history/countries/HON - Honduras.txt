@@ -1,0 +1,41 @@
+﻿capital = 312
+
+oob = "HON_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_war_support = 0.1
+set_convoys = 10
+
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 56
+	conservative = 44
+	authoritharian = 0
+	reactionary = 0
+	pelekist = 0
+}
+
+set_politics = {
+	ruling_party = social_liberal
+	last_election = "1932.10.28"
+	election_frequency = 48
+	elections_allowed = no
+}
+create_country_leader = {
+	name = "Vicente Mejía Colindres"
+	desc = "POLITICS_TIBURCIO_CARIAS_ANDINO_DESC"
+	picture = "Vicente_Mejia_Colindres.dds"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+		#
+	}
+}
+

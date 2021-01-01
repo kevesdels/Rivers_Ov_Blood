@@ -1,0 +1,84 @@
+ideas = {
+
+	country = {
+		brindian_army = {
+			picture = GFX_idea_austrian_socialist_paramilitaries
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+
+			modifier = {
+				conscription = 0.05	
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				army_morale_factor = 0.15
+			}
+		}
+		indian_nationalism = {
+			picture = GFX_idea_austrian_socialist_paramilitaries
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+
+			modifier = {
+			conscription_factor = -0.75
+			attrition = 0.25
+			stability_factor = -0.25	
+			}
+		}
+		pushed_back = {
+			picture = GFX_idea_austrian_socialist_paramilitaries
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+
+			modifier = {
+			ai_focus_defense_factor = 1.0
+			dig_in_speed_factor = 0.5
+			out_of_supply_factor = -0.5
+
+
+
+			}
+		}
+		brindian_war = {
+			picture = GFX_idea_austrian_socialist_paramilitaries
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+
+			modifier = {
+			surrender_limit = 0.5	
+			}
+		}
+
+	}
+}

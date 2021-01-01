@@ -1,0 +1,2675 @@
+focus_tree = {
+	id = far_east
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FER
+		}
+	}
+	#Focus for Model Washington
+	focus = {
+		id = FER_modelwashington
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 13
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_improvethecapital }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Land Grants
+	focus = {
+		id = FER_landgrants
+		icon = GFX_goal_unknown
+		x = 49
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_universalsuffrage }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Universal Suffrage
+	focus = {
+		id = FER_universalsuffrage
+		icon = GFX_goal_unknown
+		x = 49
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_anewkindofdemocracy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Our Greatest Ally
+	focus = {
+		id = FER_ourgreatestally
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 27
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_republicanforeignpolicy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Time to Rebuild
+	focus = {
+		id = FER_timetorebuild
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 6
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_rootoutresistance }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Invite Mining Companies to Kamchatka
+	focus = {
+		id = FER_inviteminingcompaniestokamchatka
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 21
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_kamchatka }
+		available = { 
+		owns_state = 637
+		controls_state = 637
+}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+		637 = { add_manpower = 10000 }
+		637 = { add_resource = {
+    type = oil
+    amount = 10
+}
+}
+		637 = { add_resource = {
+    type = steel
+    amount = 5
+}
+}
+		}
+	}
+
+	#Focus for Okhotsk Dockyard
+	focus = {
+		id = FER_okhotskdockyard
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 19
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_kamchatka }
+		available = {
+		owns_state = 562
+		controls_state = 562
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+		562 = { add_extra_state_shared_building_slots = 1 }
+
+				562 = { add_building_construction = {
+    type = dockyard
+    level = 1
+    instant_build = yes
+}
+		}
+562 = { add_building_construction = {
+    type = naval_base
+    level = 1
+    instant_build = yes
+    province = 12551
+}
+}
+
+
+		}
+	}
+
+	#Focus for Improve Living Conditions
+	focus = {
+		id = FER_improvelivingconditions
+		icon = GFX_goal_unknown
+		x = 37
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_universalbasicincome }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Universal Basic Income
+	focus = {
+		id = FER_universalbasicincome
+		icon = GFX_goal_unknown
+		x = 37
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_abeaconofdemocracy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for A Beacon of Democracy
+	focus = {
+		id = FER_abeaconofdemocracy
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 40
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Encourage Urbanization
+	focus = {
+		id = FER_encourageurbanization
+		icon = GFX_goal_unknown
+		x = 43
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_abeaconofdemocracy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Loyalty to Democracy
+	focus = {
+		id = FER_loyaltytodemocracy
+		icon = GFX_goal_unknown
+		x = 40
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_simplifytheelectionsystem }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Simplify the Election System
+	focus = {
+		id = FER_simplifytheelectionsystem
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 40
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_abeaconofdemocracy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Anti-Partisan Defenses
+	focus = {
+		id = FER_antipartisandefenses
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 15
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_expandtheyakutskarsenal }
+		available = {
+		owns_state = 982
+		controls_state = 982
+		NOT = { owns_state = 575 }
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+		982 = { add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = {
+        all_provinces = yes
+        limit_to_border = yes
+    }
+}
+}
+		}
+	}
+
+	#Focus for Expand the Yakutsk Arsenal
+	focus = {
+		id = FER_expandtheyakutskarsenal
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 15
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_yakutsk }
+		available = { 
+		owns_state = 574
+		controls_state = 574
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+		574 = { add_extra_state_shared_building_slots = 1 }
+
+				574 = { add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+}
+		}
+
+
+		}
+	}
+
+	#Focus for Bodaybo Fortifications
+	focus = {
+		id = FER_bodaybofortifications
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 9
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_bodaybo }
+		available = {
+		owns_state = 565
+		controls_state = 565
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+		565 = { add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 10583
+}
+}
+		}
+	}
+
+	#Focus for Extend the Trans-Siberian Railroad
+	focus = {
+		id = FER_extendthetranssiberianrailroad
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 11
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_bodayboyakutskroad }
+		available = {
+		num_of_factories > 8
+		owns_state = 574
+		controls_state = 574
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+		574 = { add_building_construction = {
+    type = infrastructure
+    level = 2
+    instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Road to the Peninsula
+	focus = {
+		id = FER_roadtothepeninsula
+		icon = GFX_goal_unknown
+		x = 17
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_okhotskyakutskroad }
+		available = {
+		num_of_factories > 5
+		owns_state = 637
+		controls_state = 637
+		owns_state = 562
+		controls_state = 562
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+		637 = { add_building_construction = {
+    type = infrastructure
+    level = 1
+    instant_build = yes
+}
+}
+		562 = { add_building_construction = {
+    type = infrastructure
+    level = 1
+    instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Invite Foreign Companies
+	focus = {
+		id = FER_inviteforeigncompanies
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 52
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_reestablishrussiancorporations }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Three Oblasts
+	focus = {
+		id = FER_thethreeoblasts
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 14
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+		add_political_power = 50
+		}
+	}
+
+	#Focus for Bodaybo
+	focus = {
+		id = FER_bodaybo
+		icon = GFX_goal_unknown
+		x = 8
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_thethreeoblasts }
+		available = {
+		owns_state = 565
+		controls_state = 565
+		owns_state = 982
+		controls_state = 982
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+		565 = { add_extra_state_shared_building_slots = 1 }
+		982 = { add_extra_state_shared_building_slots = 1 }
+		}
+	}
+
+	#Focus for Yakutsk
+	focus = {
+		id = FER_yakutsk
+		icon = GFX_goal_unknown
+		x = 14
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_thethreeoblasts }
+		available = {
+		owns_state = 574
+		controls_state = 574
+
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+		574 = { add_extra_state_shared_building_slots = 2 }
+		}
+	}
+
+	#Focus for Kamchatka
+	focus = {
+		id = FER_kamchatka
+		icon = GFX_goal_unknown
+		x = 20
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_thethreeoblasts }
+		available = {
+		owns_state = 562
+		controls_state = 562
+		owns_state = 637
+		controls_state = 637
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+		562 = { add_extra_state_shared_building_slots = 1 }
+		637 = { add_extra_state_shared_building_slots = 1 }
+		}
+	}
+
+	#Focus for The Governate of the Wastes
+	focus = {
+		id = FER_thegovernateofthewastes
+		icon = GFX_goal_unknown
+		x = 65
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuilding Russia
+	focus = {
+		id = FER_rebuildingrussia
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 14
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for European Russia
+	focus = {
+		id = FER_europeanrussia
+		icon = GFX_goal_unknown
+		x = 8
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_rebuildingrussia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Siberia
+	focus = {
+		id = FER_siberia
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 14
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_rebuildingrussia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Expand Vladivostok Dockyard
+	focus = {
+		id = FER_expandvladivostokdockyard
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 20
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_thefareast }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Bodaybo-Yakutsk Road
+	focus = {
+		id = FER_bodayboyakutskroad
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 11
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_yakutsk 
+		}
+		prerequisite = { 
+			focus = FER_bodaybo 
+		}
+		available = {
+		owns_state = 574
+		controls_state = 574
+		owns_state = 565
+		controls_state = 565
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		574 = { add_building_construction = {
+    type = infrastructure
+    level = 1
+    instant_build = yes
+}
+}
+		565 = { add_building_construction = {
+    type = infrastructure
+    level = 1
+    instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Okhotsk-Yakutsk Road
+	focus = {
+		id = FER_okhotskyakutskroad
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 17
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_yakutsk 
+		}
+		prerequisite = { 
+			focus = FER_kamchatka 
+		}
+		available = {
+		owns_state = 574
+		controls_state = 574
+		owns_state = 562
+		controls_state = 562
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+		574 = { add_building_construction = {
+    type = infrastructure
+    level = 1
+    instant_build = yes
+}
+}
+		562 = { add_building_construction = {
+    type = infrastructure
+    level = 1
+    instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Industry in Bodaybo
+	focus = {
+		id = FER_industryinbodaybo
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 7
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_bodaybo }
+		available = {
+		owns_state = 565
+		controls_state = 565
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+		565 = { add_extra_state_shared_building_slots = 1 }
+		565 = { add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+		}
+}
+
+	}
+
+	#Focus for Farming the Land
+	focus = {
+		id = FER_farmingtheland
+		icon = GFX_goal_unknown
+		x = 8
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_bodaybo }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Improve the Capital
+	focus = {
+		id = FER_improvethecapital
+		icon = GFX_goal_unknown
+		x = 13
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_yakutsk }
+		available = {
+		owns_state = 574
+		controls_state = 574
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+		574 = { add_extra_state_shared_building_slots = 1 }
+		574 = { add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+		}
+		574 = { add_building_construction = {
+    type = infrastructure
+    level = 1
+    instant_build = yes
+}
+		}
+
+
+
+}
+
+	}
+
+	#Focus for Southern Siberian Railroad
+	focus = {
+		id = FER_southernsiberianrailroad
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 48
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_unificationwithirkutsk 
+			focus = FER_conquerirkutskfromthemongols 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Industry in Irkutsk
+	focus = {
+		id = FER_industryinirkutsk
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 50
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_unificationwithirkutsk 
+			focus = FER_conquerirkutskfromthemongols 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Conquer Irkutsk from the Mongols
+	focus = {
+		id = FER_conquerirkutskfromthemongols
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 48
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_russianunification }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Move Capital to Irkutsk
+	focus = {
+		id = FER_movecapitaltoirkutsk
+		icon = GFX_goal_unknown
+		x = 49
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_southernsiberianrailroad 
+		}
+		prerequisite = { 
+			focus = FER_industryinirkutsk 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Proclaim Siberian Republic
+	focus = {
+		id = FER_proclaimsiberianrepublic
+		icon = GFX_goal_unknown
+		x = 45
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_destroythereds }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for On Our Own
+	focus = {
+		id = FER_onourown
+		icon = GFX_goal_unknown
+		x = 53
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_republicanforeignpolicy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Defending our Land
+	focus = {
+		id = FER_defendingourland
+		icon = GFX_goal_unknown
+		x = 53
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_onourown }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Southern Defence Line
+	focus = {
+		id = FER_southerndefenceline
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 54
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_defendingourland }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Western Defence Line
+	focus = {
+		id = FER_westerndefenceline
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 54
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_southerndefenceline }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Protect our Ports
+	focus = {
+		id = FER_protectourports
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 54
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_westerndefenceline }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Reestablish Russian Corporations
+	focus = {
+		id = FER_reestablishrussiancorporations
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 52
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_takeinexiles }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Strike First
+	focus = {
+		id = FER_strikefirst
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 53
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_inviteforeigncompanies 
+		}
+		prerequisite = { 
+			focus = FER_protectourports 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Approach the Admirals
+	focus = {
+		id = FER_approachtheadmirals
+		icon = GFX_goal_unknown
+		x = 41
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_russianunification }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Ties with Nikolayevsk
+	focus = {
+		id = FER_tieswithnikolayevsk
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 41
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_approachtheadmirals }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Befriend the Free State
+	focus = {
+		id = FER_befriendthefreestate
+		icon = GFX_goal_unknown
+		x = 44
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_russianunification }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Donate Food
+	focus = {
+		id = FER_donatefood
+		icon = GFX_goal_unknown
+		x = 44
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_befriendthefreestate }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Approach Irkutsk
+	focus = {
+		id = FER_approachirkutsk
+		icon = GFX_goal_unknown
+		x = 50
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_russianunification }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Unification with Irkutsk
+	focus = {
+		id = FER_unificationwithirkutsk
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 49
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_approachirkutsk }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Reconcile with the Jews
+	focus = {
+		id = FER_reconcilewiththejews
+		icon = GFX_goal_unknown
+		x = 46
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_russianunification }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Adopt Japanese Models
+	focus = {
+		id = FER_adoptjapanesemodels
+		icon = GFX_goal_unknown
+		x = 38
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_invitejapanesecompanies }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Request Unification with Vladivostok
+	focus = {
+		id = FER_requestunificationwithvladivostok
+		icon = GFX_goal_unknown
+		x = 33
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_industryinokhotsk 
+		}
+		prerequisite = { 
+			focus = FER_buyjapaneseships 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Dockyards in Kamchatka
+	focus = {
+		id = FER_dockyardsinkamchatka
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 36
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_buyjapaneseships 
+		}
+		prerequisite = { 
+			focus = FER_japaneseindustrialcooperaton 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Move the Capital to Okhotsk
+	focus = {
+		id = FER_movethecapitaltookhotsk
+		icon = GFX_goal_unknown
+		x = 32
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_opentieswithjapan }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Buy Japanese Ships
+	focus = {
+		id = FER_buyjapaneseships
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 34
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_requesttheijasreturn }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Request the IJA's Return
+	focus = {
+		id = FER_requesttheijasreturn
+		icon = GFX_goal_unknown
+		x = 34
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_opentieswithjapan }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Industry in Okhotsk
+	focus = {
+		id = FER_industryinokhotsk
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 32
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_movethecapitaltookhotsk }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for An Alternative option
+	focus = {
+		id = FER_analternativeoption
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 35
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_republicanforeignpolicy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Open Ties with Japan
+	focus = {
+		id = FER_opentieswithjapan
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 33
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_analternativeoption }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Scouting the Wasteland
+	focus = {
+		id = FER_scoutingthewasteland
+		icon = GFX_goal_unknown
+		x = 69
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_provincialairbases 
+		}
+		prerequisite = { 
+			focus = FER_developnewerplanes 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Invite Japanese Companies
+	focus = {
+		id = FER_invitejapanesecompanies
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 37
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_analternativeoption }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Japanese Industrial Co-operaton
+	focus = {
+		id = FER_japaneseindustrialcooperaton
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 36
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_invitejapanesecompanies }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Request American Guarantees
+	focus = {
+		id = FER_requestamericanguarantees
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 27
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_anglicisefareasternrussian }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Request Protectorate Status
+	focus = {
+		id = FER_requestprotectoratestatus
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 27
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_requestamericanguarantees }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Demand Petropavlovsk
+	focus = {
+		id = FER_demandpetropavlovsk
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 30
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_ourgreatestally }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Demand Free Access to the Pacific
+	focus = {
+		id = FER_demandfreeaccesstothepacific
+		icon = GFX_goal_unknown
+		x = 30
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_demandpetropavlovsk }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Request the AEF's Return
+	focus = {
+		id = FER_requesttheaefsreturn
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 24
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_requestarmsfromamerica }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Destroyers for Bases
+	focus = {
+		id = FER_destroyersforbases
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 28
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_ourgreatestally }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Joint Russo-American Innovation
+	focus = {
+		id = FER_jointrussoamericaninnovation
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 28
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_destroyersforbases }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for American Industrial Co-operation
+	focus = {
+		id = FER_americanindustrialcooperation
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 26
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_inviteamericancompanies }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Request Arms from America
+	focus = {
+		id = FER_requestarmsfromamerica
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 24
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_ourgreatestally }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Anglicise Far Eastern Russian
+	focus = {
+		id = FER_anglicisefareasternrussian
+		icon = GFX_goal_unknown
+		x = 27
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_encourageimmigration }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Reconnect the Railroads
+	focus = {
+		id = FER_reconnecttherailroads
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 8
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_rebuildtheindustry }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Planning for the Future
+	focus = {
+		id = FER_planningforthefuture
+		icon = GFX_goal_unknown
+		x = 8
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_reconnecttherailroads }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Joint Industrialization
+	focus = {
+		id = FER_jointindustrialization
+		icon = GFX_goal_unknown
+		x = 10
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_allunderonebanner }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Civil War Recovery
+	focus = {
+		id = FER_civilwarrecovery
+		icon = GFX_goal_unknown
+		x = 6
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_europeanrussia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Root out Resistance
+	focus = {
+		id = FER_rootoutresistance
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 6
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_civilwarrecovery }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Accessing the Pacific
+	focus = {
+		id = FER_accessingthepacific
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 20
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_kamchatka }
+		available = {
+		owns_state = 637
+		controls_state = 637
+		}
+		ai_will_do = {
+			factor = 25
+		}
+completion_reward = {
+637 = { add_building_construction = {
+    type = naval_base
+    level = 1
+    instant_build = yes
+    province = 1863
+}
+}
+637 = { add_building_construction = {
+    type = infrastructure
+    level = 1
+    instant_build = yes
+}
+}
+
+}
+	}
+
+	#Focus for The Far East
+	focus = {
+		id = FER_thefareast
+		icon = GFX_goal_unknown
+		x = 20
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_rebuildingrussia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Industry in the Far East
+	focus = {
+		id = FER_industryinthefareast
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 22
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_thefareast }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Japanese Border Fortifications
+	focus = {
+		id = FER_japaneseborderfortifications
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 22
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_industryinthefareast }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Provide for the Military
+	focus = {
+		id = FER_provideforthemilitary
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 12
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_establishregionalcapitals }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Wheat Empire
+	focus = {
+		id = FER_thewheatempire
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 14
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_thebreadbasketofrussia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Breadbasket of Russia
+	focus = {
+		id = FER_thebreadbasketofrussia
+		icon = GFX_goal_unknown
+		x = 14
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_expandagriculturalindustry }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Establish Regional Capitals
+	focus = {
+		id = FER_establishregionalcapitals
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 12
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_industrializethedestroyed }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Trans-Siberian Corridor
+	focus = {
+		id = FER_thetranssiberiancorridor
+		icon = GFX_goal_unknown
+		x = 16
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_establishbranchlines }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Establish Branch Lines
+	focus = {
+		id = FER_establishbranchlines
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 16
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_railroadtotheurals }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Expand Agricultural Industry
+	focus = {
+		id = FER_expandagriculturalindustry
+		icon = GFX_goal_unknown
+		x = 14
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_siberia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Railroad to the Urals
+	focus = {
+		id = FER_railroadtotheurals
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 16
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_siberia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Improve River Connections
+	focus = {
+		id = FER_improveriverconnections
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 20
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_industryinchita 
+		}
+		prerequisite = { 
+			focus = FER_khabarovskindustrialsector 
+		}
+		prerequisite = { 
+			focus = FER_movenikolayevskindustrytovladivstok 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Khabarovsk Industrial Sector
+	focus = {
+		id = FER_khabarovskindustrialsector
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 22
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_japaneseborderfortifications }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Industry in Chita
+	focus = {
+		id = FER_industryinchita
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 18
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_rebuildthechitaroute }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Move Nikolayevsk Industry to Vladivstok
+	focus = {
+		id = FER_movenikolayevskindustrytovladivstok
+		icon = GFX_goal_unknown
+		x = 20
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_expandfishingdockyards }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Expand Fishing Dockyards
+	focus = {
+		id = FER_expandfishingdockyards
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 20
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_expandvladivostokdockyard }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuild the Khabarovsk-Vladivostok Railroad
+	focus = {
+		id = FER_rebuildthekhabarovskvladivostokrailroad
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 18
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_thefareast }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuild the Chita Route
+	focus = {
+		id = FER_rebuildthechitaroute
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 18
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_rebuildthekhabarovskvladivostokrailroad }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Industrialize the Destroyed
+	focus = {
+		id = FER_industrializethedestroyed
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 12
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_siberia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Taming the Untamable
+	focus = {
+		id = FER_tamingtheuntamable
+		icon = GFX_goal_unknown
+		x = 14
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_provideforthemilitary 
+		}
+		prerequisite = { 
+			focus = FER_thewheatempire 
+		}
+		prerequisite = { 
+			focus = FER_thetranssiberiancorridor 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuild the Industry
+	focus = {
+		id = FER_rebuildtheindustry
+		icon = GFX_goal_unknown
+		x = 8
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_europeanrussia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Appease the Unions
+	focus = {
+		id = FER_appeasetheunions
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 10
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_europeanrussia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for All Under One Banner
+	focus = {
+		id = FER_allunderonebanner
+		icon = GFX_goal_unknown
+		x = 10
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_appeasetheunions }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for A Newer, Brighter Russia
+	focus = {
+		id = FER_anewerbrighterrussia
+		icon = GFX_goal_unknown
+		x = 8
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_timetorebuild 
+		}
+		prerequisite = { 
+			focus = FER_planningforthefuture 
+		}
+		prerequisite = { 
+			focus = FER_jointindustrialization 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Republican Foreign Policy
+	focus = {
+		id = FER_republicanforeignpolicy
+		icon = GFX_goal_unknown
+		x = 40
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Invite American Companies
+	focus = {
+		id = FER_inviteamericancompanies
+		icon = GFX_goal_unknown
+		x = 26
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_ourgreatestally }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Encourage Immigration
+	focus = {
+		id = FER_encourageimmigration
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 27
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_americanindustrialcooperation 
+		}
+		prerequisite = { 
+			focus = FER_jointrussoamericaninnovation 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Russian Unification
+	focus = {
+		id = FER_russianunification
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 45
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_republicanforeignpolicy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Adopt Naval Doctrines
+	focus = {
+		id = FER_adoptnavaldoctrines
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 40
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_tieswithnikolayevsk }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Connect the Railroads
+	focus = {
+		id = FER_connecttherailroads
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 42
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_tieswithnikolayevsk }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Uniting the East
+	focus = {
+		id = FER_unitingtheeast
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 41
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_adoptnavaldoctrines 
+		}
+		prerequisite = { 
+			focus = FER_connecttherailroads 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Promise Autonomy Under Russia
+	focus = {
+		id = FER_promiseautonomyunderrussia
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 45
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_donatefood 
+		}
+		prerequisite = { 
+			focus = FER_guaranteejewishindependence 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Guarantee Jewish Independence
+	focus = {
+		id = FER_guaranteejewishindependence
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 46
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_reconcilewiththejews }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Destroy the Reds
+	focus = {
+		id = FER_destroythereds
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 45
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_movecapitaltoirkutsk 
+		}
+		prerequisite = { 
+			focus = FER_unitingtheeast 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Take in Exiles
+	focus = {
+		id = FER_takeinexiles
+		icon = GFX_goal_unknown
+		x = 52
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_defendingourland }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Intellectual Railroad
+	focus = {
+		id = FER_intellectualrailroad
+		icon = GFX_goal_unknown
+		x = 43
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_encourageurbanization }
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	#Focus for A New Kind of Democracy
+	focus = {
+		id = FER_anewkindofdemocracy
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 48
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_abeaconofdemocracy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Legalize Unions
+	focus = {
+		id = FER_legalizeunions
+		icon = GFX_goal_unknown
+		x = 47
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_anewkindofdemocracy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Conduct a Census
+	focus = {
+		id = FER_conductacensus
+		icon = GFX_goal_unknown
+		x = 26
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_siberiantradition }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Transforming the Cities
+	focus = {
+		id = FER_transformingthecities
+		icon = GFX_goal_unknown
+		x = 31
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_connectingthepeople }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Resources of the North
+	focus = {
+		id = FER_resourcesofthenorth
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 33
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_expeditionstothenorth }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Connecting the People
+	focus = {
+		id = FER_connectingthepeople
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 31
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_progressisthekeytosuccess }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Trusting in Freedom
+	focus = {
+		id = FER_trustinginfreedom
+		icon = GFX_goal_unknown
+		x = 40
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_loyaltytodemocracy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Towns to Cities
+	focus = {
+		id = FER_townstocities
+		icon = GFX_goal_unknown
+		x = 37
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_improvelivingconditions }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Home of the Free
+	focus = {
+		id = FER_homeofthefree
+		icon = GFX_goal_unknown
+		x = 40
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_townstocities 
+		}
+		prerequisite = { 
+			focus = FER_trustinginfreedom 
+		}
+		prerequisite = { 
+			focus = FER_adoptamericanmethods 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Adopt American Methods
+	focus = {
+		id = FER_adoptamericanmethods
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 43
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_intellectualrailroad }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Progress is the Key to Success
+	focus = {
+		id = FER_progressisthekeytosuccess
+		icon = GFX_goal_unknown
+		x = 32
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_abeaconofdemocracy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Expeditions to the North
+	focus = {
+		id = FER_expeditionstothenorth
+		icon = GFX_goal_unknown
+		x = 33
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_progressisthekeytosuccess }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Siberian Tradition
+	focus = {
+		id = FER_siberiantradition
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 27
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_abeaconofdemocracy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Siberian Autonomy
+	focus = {
+		id = FER_siberianautonomy
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 26
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_conductacensus }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Pacific Expeditions
+	focus = {
+		id = FER_pacificexpeditions
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 28
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_siberiantradition }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Cross the Bering!
+	focus = {
+		id = FER_crossthebering
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 28
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_pacificexpeditions }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Concessions to Socialists
+	focus = {
+		id = FER_concessionstosocialists
+		icon = GFX_goal_unknown
+		x = 47
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_legalizeunions }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Far Eastern Armed Forces
+	focus = {
+		id = FER_fareasternarmedforces
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 65
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Foreign Drill Experts
+	focus = {
+		id = FER_foreigndrillexperts
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 64
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_consolidatethearmy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Using the Winter
+	focus = {
+		id = FER_usingthewinter
+		icon = GFX_goal_unknown
+		x = 66
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_consolidatethearmy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Raise Skirmishers
+	focus = {
+		id = FER_raiseskirmishers
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 67
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_usingthewinter }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Conference of Generals
+	focus = {
+		id = FER_theconferenceofgenerals
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 65
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_modernweapons 
+		}
+		prerequisite = { 
+			focus = FER_raiseskirmishers 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Form The Grand Army
+	focus = {
+		id = FER_formthegrandarmy
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 65
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_theconferenceofgenerals }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Model the Old Russian Fleet
+	focus = {
+		id = FER_modeltheoldrussianfleet
+		icon = GFX_goal_unknown
+		x = 59
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_thefleetoftheeast }
+		mutually_exclusive = { focus = FER_raidingthesea }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Raiding the Sea
+	focus = {
+		id = FER_raidingthesea
+		icon = GFX_goal_unknown
+		x = 61
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_thefleetoftheeast }
+		mutually_exclusive = { focus = FER_modeltheoldrussianfleet }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Strike Enemy Towns
+	focus = {
+		id = FER_strikeenemytowns
+		icon = GFX_goal_unknown
+		x = 71
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_provincialairbases 
+		}
+		prerequisite = { 
+			focus = FER_developnewerplanes 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Attract Japanese Migrants
+	focus = {
+		id = FER_attractjapanesemigrants
+		icon = GFX_goal_unknown
+		x = 63
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_thegovernateofthewastes }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Eliminate Russian Opposition
+	focus = {
+		id = FER_eliminaterussianopposition
+		icon = GFX_goal_unknown
+		x = 67
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_thegovernateofthewastes }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Improve the Industry
+	focus = {
+		id = FER_improvetheindustry
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 62
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_attractjapanesemigrants }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Invest in Progress
+	focus = {
+		id = FER_investinprogress
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 63
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_improvetheindustry 
+		}
+		prerequisite = { 
+			focus = FER_encourageminingcompanies 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Japanese Militarism
+	focus = {
+		id = FER_japanesemilitarism
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 67
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_consolidatethewastes 
+		}
+		prerequisite = { 
+			focus = FER_requestmilitarydivisions 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Use Romanov Wealth
+	focus = {
+		id = FER_useromanovwealth
+		icon = GFX_goal_unknown
+		x = 54
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_themonarchistcompromise }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Win Over the People
+	focus = {
+		id = FER_winoverthepeople
+		icon = GFX_goal_unknown
+		x = 54
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_useromanovwealth }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Monarchist Compromise
+	focus = {
+		id = FER_themonarchistcompromise
+		icon = GFX_goal_unknown
+		x = 53
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_abeaconofdemocracy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Figurehead of the People
+	focus = {
+		id = FER_figureheadofthepeople
+		icon = GFX_goal_unknown
+		x = 52
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_themonarchistcompromise }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for True Constitutional Monarchy
+	focus = {
+		id = FER_trueconstitutionalmonarchy
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 52
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_figureheadofthepeople }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Consolidate the Army
+	focus = {
+		id = FER_consolidatethearmy
+		icon = GFX_goal_unknown
+		x = 65
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_fareasternarmedforces }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Modern Weapons
+	focus = {
+		id = FER_modernweapons
+		icon = GFX_goal_unknown
+		x = 63
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_foreigndrillexperts }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Fleet of the East
+	focus = {
+		id = FER_thefleetoftheeast
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 60
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_fareasternarmedforces }
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	#Focus for Defensive Tactics
+	focus = {
+		id = FER_defensivetactics
+		icon = GFX_goal_unknown
+		x = 65
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_foreigndrillexperts 
+		}
+		prerequisite = { 
+			focus = FER_usingthewinter 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for River Defence Tactics
+	focus = {
+		id = FER_riverdefencetactics
+		icon = GFX_goal_unknown
+		x = 59
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_modeltheoldrussianfleet 
+			focus = FER_raidingthesea 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Skies Above the Snow
+	focus = {
+		id = FER_theskiesabovethesnow
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 70
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_fareasternarmedforces }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Provincial Air Bases
+	focus = {
+		id = FER_provincialairbases
+		icon = GFX_goal_unknown
+		x = 69
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_theskiesabovethesnow }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Foreign Naval Experts
+	focus = {
+		id = FER_foreignnavalexperts
+		icon = GFX_goal_unknown
+		x = 61
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_modeltheoldrussianfleet 
+			focus = FER_raidingthesea 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Develop Newer Planes
+	focus = {
+		id = FER_developnewerplanes
+		icon = GFX_goal_unknown
+		x = 71
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_theskiesabovethesnow }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Encourage Mining Companies
+	focus = {
+		id = FER_encourageminingcompanies
+		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		x = 64
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_attractjapanesemigrants }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Consolidate the Wastes
+	focus = {
+		id = FER_consolidatethewastes
+		icon = GFX_goal_unknown
+		x = 66
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_eliminaterussianopposition }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Request Military Divisions
+	focus = {
+		id = FER_requestmilitarydivisions
+		icon = GFX_goal_unknown
+		x = 68
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = FER_eliminaterussianopposition }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+#End of focuses 
+ }

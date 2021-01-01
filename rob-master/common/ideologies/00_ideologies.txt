@@ -1,0 +1,307 @@
+ideologies = {
+
+national_socialist = {
+ types = {
+  
+  sorelianism = {
+  }
+  german_socialism = {
+  }
+  vlaslovism = {
+  }
+  national_socialist_subtype = {
+  }
+ }
+ rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = no
+			can_join_factions = no
+			
+			can_create_factions = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = no
+		}
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.75
+		
+		modifiers = {
+		
+			
+		}
+ 
+ color = { 102 6 15 }
+ ai_fascist = yes
+ can_be_boosted = no
+}
+
+
+socialist = {
+ types = {
+ 
+  marxism_leninism = {
+  }
+  marxism = {
+  }
+  left_communism = {
+  }
+  socialist_subtype = {
+  }
+}
+rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = no
+			
+			can_join_factions = no
+			can_create_factions = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+		}
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.75
+		
+		modifiers = {
+		
+			
+		}
+color = { 204 8 25 }
+ai_fascist = yes
+can_be_boosted = no
+}
+
+
+democratic_socialist = {
+ types = {
+ 
+  anarcho_socialism = {
+  }
+  syndicalism = {
+  }
+  market_socialism = {
+  }
+  democratic_socialist_subtype = {
+  }
+ 
+ }
+ rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = no
+			
+			can_join_factions = no
+			can_create_factions = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+		}
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.75
+		
+		modifiers = {
+		
+			
+		}
+ color = { 216 52 66 }
+ ai_fascist = yes
+can_be_boosted = no
+}
+
+
+social_democracy = {
+ types = {
+ 
+ social_democracy_subtype = {
+ }
+ 
+ }
+ rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = no
+		}
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.75
+		
+		modifiers = {
+			generate_wargoal_tension = 0.45
+			join_faction_tension = 0.80
+			
+		}
+ color = { 239 139 147 }
+ ai_fascist = yes
+ can_be_boosted = no
+}
+
+social_liberal = {
+ types = {
+ 
+ social_liberal_subtype = {
+ }
+ 
+ }
+ rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = no
+			
+			can_join_factions = no
+			can_create_factions = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = no
+		}
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.75
+		
+		modifiers = {
+			generate_wargoal_tension = 0.45
+			join_faction_tension = 0.80
+			
+		}
+ color = { 209 162 52 }
+ ai_fascist = yes
+ can_be_boosted = no
+}
+
+
+conservative = {
+ types = {
+ 
+ conservative_subtype = {
+ }
+ 
+ }
+ rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = no
+			
+			can_join_factions = no
+			can_create_factions = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = no
+		}
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.75
+		
+		modifiers = {
+			generate_wargoal_tension = 0.45
+			join_faction_tension = 0.80
+		
+		}
+ color = { 226 200 138 }
+ ai_fascist = yes
+ can_be_boosted = no
+}
+
+
+
+authoritharian = {
+ types = {
+ 
+ authoritharian_subtype = {
+ }
+ 
+ }
+ rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+		}
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.75
+		
+		modifiers = {
+		
+		}
+ color = { 183 177 163 }
+ ai_fascist = yes
+ can_be_boosted = no
+}
+
+reactionary = {
+ types = {
+ 
+ reactionary_subtype = {
+ }
+ military_junta = {
+ }
+
+ }
+ rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = no
+			
+			can_join_factions = no
+			can_create_factions = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+		}
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.75
+		
+		modifiers = {
+		
+			
+		}
+ color = { 51 49 45 }
+ ai_fascist = yes
+ can_be_boosted = no
+}
+
+
+pelekist = {
+ types = {
+ 
+ pelekist_subtype = {
+ }
+ pagan_pelekism = {
+ }
+ christian_pelekism = {
+ }
+ futuristic_pelekism = {
+ }
+ }
+ rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = no
+			can_join_factions = no
+			can_create_factions = no
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+		}
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.75
+		
+		modifiers = {
+		
+			
+		}
+ color = { 14 40 104 }
+ ai_fascist = yes
+ can_be_boosted = no
+}
+
+}

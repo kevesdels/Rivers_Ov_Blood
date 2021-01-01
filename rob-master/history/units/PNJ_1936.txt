@@ -1,0 +1,112 @@
+division_template = {
+	name = "Sikh Infantry"
+
+	division_names_group = RAJ_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Infantry Brigade"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = RAJ_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = RAJ_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	#Royal Khivan Army
+	division = {
+		name = "Sikh Guard"
+		location = 10887
+		division_template = "Sikh Infantry"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "1st Punjabi Infantry"
+		location = 12005
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "2nd Punjabi Infantry"
+		location = 9084
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "3rd Punjabi Infantry"
+		location = 10066
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "4th Punjabi Infantry"
+		location = 10887
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "1st West Punjab Militia"
+		location = 8106
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "2nd West Punjab Militia"
+		location = 10139
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+	}
+
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "DEL"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

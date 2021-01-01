@@ -1,0 +1,350 @@
+#################
+###Indochinese Events
+#################
+
+add_namespace = indochina
+
+
+###TO BE REWORKED
+
+###Start of unrest
+country_event = {
+id = indochina.100
+title = indochina.100.t
+desc = indochina.100.d
+fire_only_once = yes
+trigger = { 
+    date > 1934.5.2
+tag = FIC
+
+}
+
+option = {
+name = indochina.100.a
+hidden_effect = {
+ set_country_flag = FIC_unrest
+ set_variable = {
+    var = FIC_vietnamese_unrest
+    value = 60
+}
+ set_variable = {
+    var = FIC_laotian_unrest
+    value = 50
+}
+ set_variable = {
+    var = FIC_khmer_unrest
+    value = 40
+}
+ set_variable = {
+    var = FIC_zhuang_unrest
+    value = 40
+}
+ set_variable = {
+    var = FIC_vietnamese_unrest_v
+    value = 5
+}
+ set_variable = {
+    var = FIC_laotian_unrest_v
+    value = 5
+}
+ set_variable = {
+    var = FIC_khmer_unrest_v
+    value = 5
+}
+ set_variable = {
+    var = FIC_zhuang_unrest_v
+    value = 5
+}
+
+}
+}
+}
+
+###Vietnam Revolts
+country_event = {
+id = indochina.101
+title = indochina.101.t
+desc = indochina.101.d
+fire_only_once = yes
+trigger = { 
+check_variable = {
+FIC_vietnamese_unrest > 99
+
+}
+tag = FIC
+
+}
+option = {
+name = indochina.101.a
+hidden_effect = {
+ set_country_flag = VIN_revolt
+ set_variable = {
+    var = FIC_vietnamese_unrest_v
+    value = 0
+}
+  add_to_variable = {
+    var = FIC_laotian_unrest
+    value = 25
+  }
+  add_to_variable = {
+    var = FIC_khmer_unrest
+    value = 25
+  }
+  add_to_variable = {
+    var = FIC_zhuang_unrest
+    value = 25
+  }
+
+}
+1261 = { add_core_of = VIN }
+286 = { add_core_of = VIN }
+671 = { add_core_of = VIN }
+
+VIN = { transfer_state = 1262 }
+1262 = { add_core_of = VIN }
+VIN = { transfer_state = 1263 }
+1263 = { add_core_of = VIN }
+VIN = { transfer_state = 1264 }
+1264 = { add_core_of = VIN }
+VIN = { transfer_state = 1265 }
+1265 = { add_core_of = VIN }
+declare_war_on = {
+    target = VIN
+    type = annex_everything
+}
+VIN = { load_oob = "VIN_1936" }
+hidden_effect = { 
+FIC = { load_oob = "FIC_GAR" }
+
+}
+}
+}
+
+###Laos Revolts
+country_event = {
+id = indochina.102
+title = indochina.102.t
+desc = indochina.102.d
+fire_only_once = yes
+trigger = { 
+check_variable = {
+FIC_laotian_unrest > 99
+
+}
+tag = FIC
+
+}
+option = {
+name = indochina.102.a
+hidden_effect = {
+ set_country_flag = LAO_revolt
+ set_variable = {
+    var = FIC_laotian_unrest_v
+    value = 0
+}
+  add_to_variable = {
+    var = FIC_vietnamese_unrest
+    value = 25
+  }
+  add_to_variable = {
+    var = FIC_khmer_unrest
+    value = 25
+  }
+  add_to_variable = {
+    var = FIC_zhuang_unrest
+    value = 25
+  }
+
+}
+IF = { limit = { FIC = { owns_state = 1256 } } 
+1256 = { add_core_of = LAO }
+1253 = { add_core_of = LAO }
+1252 = { add_core_of = LAO }
+LAO = { transfer_state = 1256 }
+LAO = { transfer_state = 1253 }
+LAO = { transfer_state = 1252 }
+
+}
+
+LAO = { transfer_state = 670 }
+670 = { add_core_of = LAO }
+LAO = { transfer_state = 1255 }
+1255 = { add_core_of = LAO }
+
+declare_war_on = {
+    target = LAO
+    type = annex_everything
+}
+LAO = { load_oob = "LAO_1936" }
+
+}
+}
+
+###Cambodia Revolts
+country_event = {
+id = indochina.103
+title = indochina.103.t
+desc = indochina.103.d
+fire_only_once = yes
+trigger = { 
+check_variable = {
+FIC_khmer_unrest > 99
+
+}
+tag = FIC
+
+}
+option = {
+name = indochina.103.a
+hidden_effect = {
+ set_country_flag = CAM_revolt
+ set_variable = {
+    var = FIC_khmer_unrest_v
+    value = 0
+}
+  add_to_variable = {
+    var = FIC_vietnamese_unrest
+    value = 25
+  }
+  add_to_variable = {
+    var = FIC_laotian_unrest
+    value = 25
+  }
+  add_to_variable = {
+    var = FIC_zhuang_unrest
+    value = 25
+  }
+
+}
+IF = { limit = { FIC = { owns_state = 1258 } } 
+1257 = { add_core_of = CAM }
+1258 = { add_core_of = CAM }
+CAM = { transfer_state = 1257 }
+CAM = { transfer_state = 1258 }
+
+}
+
+CAM = { transfer_state = 741 }
+741 = { add_core_of = CAM }
+CAM = { transfer_state = 1254 }
+1254 = { add_core_of = CAM }
+
+declare_war_on = {
+    target = CAM
+    type = annex_everything
+}
+CAM = { load_oob = "CAM_1936" }
+
+}
+}
+
+###Hainan-Beihai Revolts
+country_event = {
+id = indochina.104
+title = indochina.104.t
+desc = indochina.104.d
+fire_only_once = yes
+trigger = { 
+check_variable = {
+FIC_zhuang_unrest > 99
+
+}
+tag = FIC
+
+}
+option = {
+name = indochina.104.a
+hidden_effect = {
+ set_country_flag = ZHU_revolt
+ set_variable = {
+    var = FIC_zhuang_unrest_v
+    value = 0
+}
+  add_to_variable = {
+    var = FIC_vietnamese_unrest
+    value = 25
+  }
+  add_to_variable = {
+    var = FIC_laotian_unrest
+    value = 25
+  }
+  add_to_variable = {
+    var = FIC_khmer_unrest
+    value = 25
+  }
+
+}
+
+
+ZHU = { transfer_state = 1260 }
+1260 = { add_core_of = ZHU }
+ZHU = { transfer_state = 591 }
+591 = { add_core_of = ZHU }
+
+declare_war_on = {
+    target = ZHU
+    type = annex_everything
+}
+ZHU = { load_oob = "ZHU_1936" }
+
+}
+}
+
+###French Aid Arrives
+country_event = {
+id = indochina.105
+title = indochina.105.t
+desc = indochina.105.d
+fire_only_once = yes
+trigger = { 
+
+tag = FIC
+has_war = yes
+NOT = { FRA = { has_war = yes } }
+
+}
+option = {
+name = indochina.105.a
+FIC = { load_oob = "FIC_AID" }
+
+}
+}
+
+###France Destroyed
+country_event = {
+id = indochina.106
+title = indochina.106.t
+desc = indochina.106.d
+fire_only_once = yes
+trigger = { 
+
+tag = FIC
+NOT = { FRA = { exists = yes } }
+
+}
+option = {
+name = indochina.106.a
+hidden_effect = {
+ set_country_flag = VIN_revolt
+  add_to_variable = {
+    var = FIC_vietnamese_unrest
+    value = 80
+  }
+  add_to_variable = {
+    var = FIC_laotian_unrest
+    value = 80
+  }
+  add_to_variable = {
+    var = FIC_khmer_unrest
+    value = 80
+  }
+  add_to_variable = {
+    var = FIC_zhuang_unrest
+    value = 80
+  }
+
+}
+
+}
+}
+}

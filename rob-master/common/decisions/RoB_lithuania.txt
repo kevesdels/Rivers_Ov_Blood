@@ -1,0 +1,450 @@
+LIT_lith_raids = {
+
+ LIT_raid_ubd_ammo = {
+  available = { 
+  has_war = no
+  controls_state = 189
+  NOT = { has_country_flag = LIT_active_raid }
+  NOT = { controls_state = 881 }
+  NOT = { OR = { EST = { is_puppet_of = LIT } EST = { exists = no } } }
+  }
+  cost = 25
+  days_remove = 20 
+  ai_will_do = {
+	base = 200
+	}
+  complete_effect = {
+   set_country_flag = LIT_active_raid
+  }
+  remove_effect = {
+   start_border_war = { 
+				change_state_after_war = no
+				attacker = {
+					state = 189
+					num_provinces = 1
+					on_win = lithuania.30
+					on_lose = lithuania.31
+					on_cancel = lithuania.30
+				}
+				
+				defender = {
+					state = 881
+					num_provinces = 1
+					on_win = lithuania.32
+					on_lose = lithuania.32
+					on_cancel = lithuania.32
+				}
+			}
+    }
+  }
+  
+
+ LIT_raid_ubd_banks = {
+  available = { 
+  has_war = no
+  controls_state = 189
+  NOT = { has_country_flag = LIT_active_raid }
+  NOT = { controls_state = 190 }
+  NOT = { OR = { EST = { is_puppet_of = LIT } EST = { exists = no } } }
+  }
+  cost = 25
+  days_remove = 20  
+  ai_will_do = {
+	base = 200
+	}
+  complete_effect = {
+   set_country_flag = LIT_active_raid
+  }
+  remove_effect = {
+   start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 189
+					num_provinces = 1
+					on_win = lithuania.35
+					on_lose = lithuania.36
+					on_cancel = lithuania.35
+				}
+				
+				defender = {
+					state = 190
+					num_provinces = 1
+					on_win = lithuania.32
+					on_lose = lithuania.32
+					on_cancel = lithuania.32
+				}
+			}
+    }
+  }
+  
+  
+
+  LIT_raid_ubd_admin_buildings = {
+  available = { 
+  has_war = no
+  controls_state = 11
+  NOT = { has_country_flag = LIT_active_raid }
+  NOT = { controls_state = 1010 }
+  NOT = { OR = { EST = { is_puppet_of = LIT } EST = { exists = no } } }
+  }
+  cost = 25
+  days_remove = 20
+  ai_will_do = {
+	base = 200
+	}
+  complete_effect = {
+   set_country_flag = LIT_active_raid
+  }
+  remove_effect = {
+   start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 11
+					num_provinces = 1
+					on_win = lithuania.33
+					on_lose = lithuania.34
+					on_cancel = lithuania.33
+				}
+				
+				defender = {
+					state = 1010
+					num_provinces = 1
+					on_win = lithuania.32
+					on_lose = lithuania.32
+					on_cancel = lithuania.32
+				}
+			}
+    }
+  }
+  
+  
+ LIT_raid_blr_ammo = {
+  available = { 
+  has_war = no
+  controls_state = 784
+  NOT = { has_country_flag = LIT_active_raid }
+  NOT = { controls_state = 96 }
+  NOT = { OR = { BLR = { is_puppet_of = LIT } BLR = { exists = no } } }
+  }
+  cost = 25
+  days_remove = 20 
+  ai_will_do = {
+	base = 200
+	}
+  complete_effect = {
+   set_country_flag = LIT_active_raid
+  }
+  remove_effect = {
+   start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 784
+					num_provinces = 1
+					on_win = lithuania.30
+					on_lose = lithuania.31
+					on_cancel = lithuania.30
+				}
+				
+				defender = {
+					state = 96
+					num_provinces = 1
+					on_win = lithuania.32
+					on_lose = lithuania.32
+					on_cancel = lithuania.32
+				}
+			}
+    }
+  }
+  
+
+ LIT_raid_blr_banks = {
+  available = { 
+  has_war = no
+  controls_state = 784
+  NOT = { has_country_flag = LIT_active_raid }
+  NOT = { controls_state = 95 }
+  NOT = { OR = { BLR = { is_puppet_of = LIT } BLR = { exists = no } } }
+  }
+  cost = 25
+  days_remove = 20  
+  ai_will_do = {
+	base = 200
+	}
+  complete_effect = {
+   set_country_flag = LIT_active_raid
+  }
+  remove_effect = {
+   start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 784
+					num_provinces = 1
+					on_win = lithuania.35
+					on_lose = lithuania.36
+					on_cancel = lithuania.36
+				}
+				
+				defender = {
+					state = 95
+					num_provinces = 1
+					on_win = lithuania.32
+					on_lose = lithuania.32
+					on_cancel = lithuania.32
+				}
+			}
+    }
+  }
+  
+  
+
+  LIT_raid_blr_admin_buildings = {
+  available = { 
+  has_war = no
+  controls_state = 784
+  NOT = { has_country_flag = LIT_active_raid }
+  NOT = { controls_state = 96 }
+  NOT = { OR = { BLR = { is_puppet_of = LIT } BLR = { exists = no } } }
+  }
+  cost = 25
+  days_remove = 20
+  ai_will_do = {
+	base = 200
+	}
+  complete_effect = {
+   set_country_flag = LIT_active_raid
+  }
+  remove_effect = {
+   start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 784
+					num_provinces = 1
+					on_win = lithuania.33
+					on_lose = lithuania.34
+					on_cancel = lithuania.33
+				}
+				
+				defender = {
+					state = 96
+					num_provinces = 1
+					on_win = lithuania.32
+					on_lose = lithuania.32
+					on_cancel = lithuania.32
+				}
+			}
+    }
+  }
+  
+  
+ LIT_raid_prs_ammo = {
+  available = { 
+  has_war = no
+  controls_state = 189
+  NOT = { has_country_flag = LIT_active_raid }
+  NOT = { controls_state = 188 }
+  NOT = { OR = { PRS = { is_puppet_of = LIT } PRS = { exists = no } } }
+  NOT = { PRS = { has_country_leader = { name = "Vydūnas" ruling_only = yes } } }
+  has_country_flag = LIT_prussian_raids
+  }
+  cost = 25
+  days_remove = 20 
+  ai_will_do = {
+	base = 20
+	}
+  complete_effect = {
+   set_country_flag = LIT_active_raid
+  }
+  remove_effect = {
+   start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 189
+					num_provinces = 1
+					on_win = lithuania.30
+					on_lose = lithuania.31
+					on_cancel = lithuania.30
+				}
+				
+				defender = {
+					state = 188
+					num_provinces = 1
+					on_win = lithuania.32
+					on_lose = lithuania.32
+					on_cancel = lithuania.32
+				}
+			}
+    }
+  }
+  
+
+ LIT_raid_prs_banks = {
+  available = { 
+  has_war = no
+  controls_state = 189
+  NOT = { has_country_flag = LIT_active_raid }
+  NOT = { controls_state = 188 }
+  NOT = { OR = { PRS = { is_puppet_of = LIT } PRS = { exists = no } } }
+  NOT = { PRS = { has_country_leader = { name = "Vydūnas" ruling_only = yes } } }
+  has_country_flag = LIT_prussian_raids
+  }
+  cost = 25
+  days_remove = 20  
+  ai_will_do = {
+	base = 20
+	}
+  complete_effect = {
+   set_country_flag = LIT_active_raid
+  }
+  remove_effect = {
+   start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 189
+					num_provinces = 1
+					on_win = lithuania.35
+					on_lose = lithuania.36
+					on_cancel = lithuania.35
+				}
+				
+				defender = {
+					state = 188
+					num_provinces = 1
+					on_win = lithuania.32
+					on_lose = lithuania.32
+					on_cancel = lithuania.32
+				}
+			}
+    }
+  }
+  
+  
+
+  LIT_raid_prs_admin_buildings = {
+  available = { 
+  has_war = no
+  controls_state = 879
+  NOT = { has_country_flag = LIT_active_raid }
+  NOT = { controls_state = 763 }
+  NOT = { OR = { PRS = { is_puppet_of = LIT } PRS = { exists = no } } }
+  NOT = { PRS = { has_country_leader = { name = "Vydūnas" ruling_only = yes } } }
+  has_country_flag = LIT_prussian_raids
+  }
+  cost = 25
+  days_remove = 20
+  ai_will_do = {
+	base = 20
+	}
+  complete_effect = {
+   set_country_flag = LIT_active_raid
+  }
+  remove_effect = {
+   start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 879
+					num_provinces = 1
+					on_win = lithuania.33
+					on_lose = lithuania.34
+					on_cancel = lithuania.33
+				}
+				
+				defender = {
+					state = 763
+					num_provinces = 1
+					on_win = lithuania.32
+					on_lose = lithuania.32
+					on_cancel = lithuania.32
+				}
+			}
+    }
+  }
+
+}
+
+
+
+LIT_baltificiation = {
+
+ LIT_remove_minority_schools = {
+  available = {
+   NOT = { has_country_flag = LIT_autonomy }
+  }
+  visible = {
+   NOT = { has_country_flag = LIT_autonomy }
+  }
+  cost = 80
+  days_remove = 50
+  ai_will_do = {
+	base = 20
+	}
+  complete_effect = {
+   set_country_flag = LIT_not_autonomy
+  }
+  remove_effect = {
+   add_ideas = { LIT_min_1_banned }
+  }
+ }
+ 
+ LIT_minority_autonomy = {
+  available = {
+   NOT = { has_country_flag = LIT_not_autonomy }
+  }
+  visible = {
+   NOT = { has_country_flag = LIT_not_autonomy }
+  }
+  cost = 80
+  days_remove = 50
+  ai_will_do = {
+	base = 20
+	}
+  complete_effect = {
+   set_country_flag = LIT_autonomy
+  }
+  remove_effect = {
+   add_ideas = { LIT_min_1_unbanned }
+  }
+ }
+ 
+ LIT_forced_surenames_change = {
+  available = {
+   NOT = { has_country_flag = LIT_left_surnames }
+  }
+  visible = {
+   NOT = { has_country_flag = LIT_left_surnames }
+  }
+  cost = 90
+  days_remove = 50
+  ai_will_do = {
+	base = 20
+	}
+  complete_effect = {
+   set_country_flag = LIT_surname_changes
+  }
+  remove_effect = {
+   add_ideas = { LIT_min_2_banned }
+  }
+ }
+ 
+ LIT_leave_as_it_is = {
+  available = {
+   NOT = { has_country_flag = LIT_not_autonomy }
+  }
+  visible = {
+   NOT = { has_country_flag = LIT_not_autonomy }
+  }
+  cost = 80
+  days_remove = 50
+  ai_will_do = {
+	base = 20
+	}
+  complete_effect = {
+   set_country_flag = LIT_autonomy
+  }
+  remove_effect = {
+   add_ideas = { LIT_min_2_unbanned }
+  }
+ }
+
+
+
+}

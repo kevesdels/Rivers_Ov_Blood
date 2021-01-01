@@ -1,0 +1,43 @@
+﻿capital = 319
+
+oob = "DOM_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+}
+
+set_war_support = 0.1
+set_convoys = 5
+
+
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 2
+	social_democracy = 2
+	social_liberal = 2
+	conservative = 6
+	authoritharian = 88
+	reactionary = 0
+	pelekist = 0
+}
+
+set_politics = {	
+	ruling_party = authoritharian
+	last_election = "1933.5.16"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Rafael Trujillo"
+	desc = "POLITICS_RAFAEL_TRUJILLO_DESC"
+	picture = "GFX_portrait_dominca_rafael_trujillo"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}

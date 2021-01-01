@@ -1,0 +1,199 @@
+ideas = {
+ aircraft_manufacturer = {
+ 
+ ###Russian Soviet Republic
+ RSR_tupolov = {
+   
+   picture = RSR_tupolev
+   allowed = { tag = SOV }
+   available = { has_completed_focus = SOV_alksnisplan }
+   cost = 150
+   research_bonus = { medium_air = 0.1 }
+   equipment_bonus = {
+    tactical_bomber = {
+     build_cost_ic = -0.05 instant = yes
+    }
+   }
+   modifier = {
+    air_cas_present_factor = 0.15
+    }   
+  }
+  
+ RSR_polikarpov = {
+   
+   picture = RSR_polikavorp
+   allowed = { tag = SOV }
+   available = { has_completed_focus = SOV_novikovsplan }
+   cost = 150
+   research_bonus = { light_air = 0.1 }
+   equipment_bonus = {
+    fighter = {
+     build_cost_ic = -0.07 instant = yes
+    }
+   }
+   modifier = {
+    air_air_superiority_attack_factor = 0.05
+	air_air_superiority_defence_factor = 0.05
+    }   
+  }
+ 
+ ###Lithuania
+ 
+  LIT_anbo = {
+   
+   picture = LIT_anbo
+   allowed = { tag = LIT }
+   available = { has_completed_focus = LIT_grantanbomoreprivledges }
+   cost = 150
+   research_bonus = { light_air = 0.1 }
+   equipment_bonus = {
+    fighter = {
+     build_cost_ic = -0.15 instant = yes
+    }
+   }
+   modifier = {
+    air_air_superiority_attack_factor = -0.05
+	air_air_superiority_defence_factor = -0.05
+    }   
+  }
+
+  LIT_lietuvos_aeroklubas = {
+   
+   picture = LIT_lietuvos_aeroklubas
+   allowed = { tag = LIT }
+   cost = 150
+   research_bonus = { light_air = 0.1 }
+   available = { has_completed_focus = LIT_endtheanbomonpoly }
+   equipment_bonus = {
+    fighter = {
+     build_cost_ic = 0.03 instant = yes
+    }
+   }
+   modifier = {
+    air_air_superiority_attack_factor = 0.06
+	air_air_superiority_defence_factor = 0.06
+    }   
+  }  
+ 
+ ###Prussia
+ 
+  GER_heinkel = {
+   
+   picture = PRS_heinkel
+   allowed = { tag = PRS }
+   cost = 150
+   research_bonus = { medium_air = 0.1 }
+   equipment_bonus = {
+    tactical_bomber = {
+     build_cost_ic = 0.05 instant = yes
+    }
+   }
+   modifier = {
+    air_cas_present_factor = 0.1
+    }   
+  }
+  
+  GER_messerschmit = {
+   
+   picture = PRS_meserschimt
+   allowed = { tag = PRS }
+   cost = 150
+   research_bonus = { light_air = 0.1 }
+   equipment_bonus = {
+    fighter = {
+     build_cost_ic = -0.1 instant = yes
+    }
+   }
+   modifier = {
+    air_air_superiority_attack_factor = -0.03
+	air_air_superiority_defence_factor = -0.03
+    }   
+  }
+  
+  GER_focke_wulf = {
+   
+   picture = PRS_albratos
+   allowed = { tag = PRS }
+   cost = 150
+   research_bonus = { light_air = 0.1 }
+   equipment_bonus = {
+    fighter = {
+     build_cost_ic = 0.1 instant = yes
+    }
+   }
+   modifier = {
+    air_air_superiority_attack_factor = 0.05
+	air_air_superiority_defence_factor = 0.05
+    }   
+  }
+ 
+ ###Germany (Socialist)
+  GER_rote_luftwaffe = {
+   
+   picture = GER_kiel_areodome
+   allowed = { original_tag = GER }
+   cost = 150
+   research_bonus = { light_air = 0.1 }
+   equipment_bonus = {
+   fighter = {
+    build_cost_ic = 0.1 instant = yes
+   }
+}   
+   modifier = {
+    air_air_superiority_attack_factor = 0.04
+	air_air_superiority_defence_factor = 0.04
+    }
+   }
+   
+  GER_berlin_commune = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_berlin_areodome
+   cost = 150
+   research_bonus = { light_air = 0.1 }
+   equipment_bonus = {
+   fighter = {
+    build_cost_ic = -0.1 instant = yes
+   }
+   }
+   modifier = {
+    air_air_superiority_attack_factor = -0.04
+	air_air_superiority_defence_factor = -0.04
+    }
+   }
+
+  GER_frankfurt_aresenal = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_frankfurt_arsenal
+   cost = 150
+   research_bonus = { light_air = 0.1 }
+   equipment_bonus = {
+   cas_bomber = {
+    build_cost_ic = -0.1 instant = yes
+   }
+   }
+   modifier = {
+    air_close_air_support_attack_factor = -0.04
+	air_close_air_support_defence_factor = -0.04
+    }
+   }
+
+  GER_munic_areadome = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_munich_aredome
+   cost = 150
+   research_bonus = { light_air = 0.1 }
+   equipment_bonus = {
+   cas_bomber = {
+    build_cost_ic = 0.1 instant = yes
+   }
+   }
+   modifier = {
+    air_close_air_support_attack_factor = 0.04
+	air_close_air_support_defence_factor = 0.04
+    }
+   }   
+  }
+ }

@@ -1,0 +1,395 @@
+leader_traits = {
+
+#####################
+#Ideologies
+#####################
+
+national_socialist_min = {}
+socialist_min = {}
+democratic_socialist_min = {}
+social_democracy_min = {}
+social_liberal_min = {}
+conservative_min = {}
+authoritharian_min = {}
+reactionary_min = {}
+pelekist_min = {}
+
+#####################
+#Minister Types
+#####################
+
+goverment_head = {}
+interior_minister = {}
+foreign_head = {}
+economy_head = {}
+defense_minister = {}
+
+#####################
+#Head of Government
+#####################
+
+hog_old_guard = {
+ political_power_gain = 0.02
+ stability_factor = 0.02
+ 
+ random = no
+}
+
+hog_war_hero = {
+ army_org_factor = 0.02
+ war_support_factor = 0.02
+
+ random = no 
+}
+
+hog_agrarian = {
+ consumer_goods_factor = -0.01
+ stability_factor = 0.02
+ 
+ random = no 
+}
+
+hog_industrialist = {
+ production_factory_max_efficiency_factor = 0.03
+ production_speed_buildings_factor = 0.03
+ 
+ random = no 
+}
+
+hog_socialist_revolutionary = {
+ war_support_factor = 0.03
+ industrial_capacity_factory = 0.03
+ 
+ random = no 
+}
+
+hog_vanguardist_socialist = {
+ conscription_factor = 0.05
+ political_power_factor = 0.05
+ 
+ random = no 
+}
+
+hog_staunch_democrat = {
+ conscription_factor = 0.02
+ stability_factor = 0.05
+ 
+ random = no 
+}
+
+hog_reactionary = {
+ army_attack_factor = 0.03
+ stability_factor = 0.05
+ 
+ random = no 
+}
+
+hog_pelekist = {
+ army_attack_factor = 0.05
+ war_support_factor = 0.05
+ 
+ random = no 
+}
+
+hog_incompetant_leader = {
+ political_power_factor = -0.05
+ stability_factor = 0.01
+ 
+ random = no 
+}
+#####################
+#Interior Minister
+#####################
+
+im_harsh_tyrannt = {
+ non_core_manpower = -0.02
+ resistance_target = -0.2
+ 
+ random = no 
+}
+
+im_sociopath = {
+ non_core_manpower = -0.1
+ resistance_target = -0.45
+ 
+ random = no 
+}
+
+im_man_of_the_people = {
+ consumer_goods_factor = 0.02
+ stability_factor = 0.04
+ 
+ random = no 
+}
+
+im_union_background = {
+ industrial_capacity_factory = 0.05
+ stability_factor = 0.03
+ 
+ random = no 
+}
+
+im_marxist_revolutionary = {
+ army_attack_factor = 0.02
+ war_support_factor = 0.04
+ 
+ random = no 
+}
+
+im_efficent_planner = {
+ local_resources_factor = 0.05
+ production_speed_buildings_factor = 0.04
+ 
+ random = no 
+}
+
+im_militarist = {
+ industrial_capacity_factory = 0.05
+ resistance_target = -0.05
+ 
+ random = no 
+}
+
+im_inexperienced_buercrat = {
+ political_power_factor = -0.08
+ resistance_target = 0.05
+ 
+ random = no 
+}
+
+im_capitalist = {
+ industrial_capacity_factory = 0.02
+ stability_factor = 0.02
+ 
+ random = no 
+}
+
+im_progressive = {
+ research_speed_factor = 0.025
+ production_speed_buildings_factor = 0.05
+ stability_factor = -0.02
+ 
+ random = no 
+}
+
+im_futurist = {
+ research_speed_factor = 0.04
+ stability_factor = -0.07
+ 
+ random = no 
+}
+
+im_feudalist = {
+ research_speed_factor = -0.02
+ stability_factor = 0.07
+ 
+ random = no 
+}
+
+im_iron_fisted = {
+ stability_factor = 0.04
+ resistance_target = -0.07
+ 
+ random = no 
+}
+
+#####################
+#Foreign Minister
+#####################
+
+fm_revolutionary = {
+ justify_war_goal_time = -0.05
+ war_support_factor = 0.02
+ 
+ random = no 
+}
+
+fm_militant_socialist = {
+ justify_war_goal_time = -0.1
+ war_support_factor = 0.05
+ 
+ random = no 
+}
+
+fm_imperialist = {
+ justify_war_goal_time = -0.08
+ stability_factor = -0.02
+ 
+ random = no 
+}
+
+fm_neutral_bystander = {
+ stability_factor = 0.02
+ 
+ random = no 
+}
+
+fm_realpolitik = {
+ stability_factor = 0.02
+ 
+ random = no 
+}
+
+fm_isolationism = {
+ justify_war_goal_time = 0.04
+ stability_factor = 0.01
+ 
+ random = no 
+}
+
+#####################
+#Economy Minister
+#####################
+
+em_central_planner = {
+ production_speed_buildings_factor = 0.08
+ industrial_capacity_factory = 0.02
+ production_factory_max_efficiency_factor = -0.02
+ 
+ random = no 
+}
+
+em_militant_planner = {
+ production_speed_buildings_factor = 0.12
+ industrial_capacity_factory = 0.05
+ production_factory_max_efficiency_factor = -0.1
+ 
+ random = no 
+}
+
+em_autarchist = {
+ industrial_capacity_factory = 0.05
+ production_factory_max_efficiency_factor = -0.1
+ 
+ random = no 
+}
+
+em_market_socialist = {
+ production_speed_buildings_factor = -0.02
+ industrial_capacity_factory = 0.05
+ 
+ random = no 
+}
+
+em_laissez_faire = {
+ production_speed_buildings_factor = -0.04
+ production_factory_max_efficiency_factor = 0.04
+ 
+ random = no 
+}
+
+em_welfare_supporter = {
+ industrial_capacity_factory = 0.05
+ consumer_goods_factor = 0.03
+ 
+ random = no 
+}
+
+em_robber_baron = {
+ local_resources_factor = 0.05
+ consumer_goods_factor = 0.05
+ stability_factor = -0.02
+ 
+ random = no 
+}
+
+em_union_man = {
+ industrial_capacity_factory = 0.05
+ production_speed_buildings_factor = -0.03
+ 
+ random = no 
+}
+
+em_anarchist = {
+ industrial_capacity_factory = 0.07
+ production_speed_buildings_factor = -0.1
+ 
+ random = no 
+}
+
+em_feudalist = {
+ consumer_goods_factor = -0.02
+ stability_factor = 0.08
+ 
+ random = no 
+}
+
+em_pelekist_economist = {
+ consumer_goods_factor = 0.03
+ industrial_capacity_factory = 0.08
+ 
+ random = no 
+}
+
+em_corporatist = {
+ production_speed_buildings_factor = 0.03
+ industrial_capacity_factory = 0.03
+ 
+ random = no 
+}
+
+#####################
+#Defense Minister
+#####################
+
+dm_militarist = {
+ conscription_factor = 0.05
+ justify_war_goal_time = -0.03
+ 
+ random = no 
+}
+
+dm_elitist = {
+ conscription_factor = -0.05
+ army_attack_factor = 0.05
+ army_org_factor = 0.02
+ 
+ random = no 
+}
+
+dm_mass_revolutionary = {
+ conscription_factor = 0.2
+ army_attack_factor = -0.07
+ army_org_factor = -0.07
+ 
+ random = no 
+}
+
+dm_mass_conscription_supporter = {
+ conscription_factor = 0.15
+ army_attack_factor = -0.05
+ army_org_factor = -0.05
+ 
+ random = no 
+}
+
+dm_experienced_soldier = {
+ army_attack_factor = 0.05
+ army_org_factor = 0.05
+ 
+ random = no 
+}
+
+dm_carrer_general = {
+ political_power_factor = 0.1
+ army_org_factor = -0.02
+ 
+ random = no 
+}
+
+dm_civilian_administator = {
+ political_power_factor = 0.12
+ army_org_factor = -0.05
+ army_attack_factor = -0.03
+ 
+ random = no 
+}
+
+dm_inept_administator = {
+ consumer_goods_factor = 0.03
+ army_attack_factor = -0.03
+ 
+ 
+ random = no 
+}
+}

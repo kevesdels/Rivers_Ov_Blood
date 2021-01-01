@@ -1,0 +1,512 @@
+IND_indian_unification = {
+
+ IND_invade_bengal = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  BNL = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = BNL
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = BNL
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = BNl
+    type = annex_everything
+}
+  }
+ }
+
+ IND_invade_odisha = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  ORS = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = ORS
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = ORS
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = ORS
+    type = annex_everything
+}
+  }
+ }
+
+ IND_invade_prf = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  PRF = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = PRF
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = PRF
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = PRF
+    type = annex_everything
+}  
+}
+ }
+
+ IND_invade_rpf = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  RPF = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = RPF
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = RPF
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = RPF
+    type = annex_everything
+} 
+ }
+ }
+
+ IND_invade_mysore = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  MYS = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = MYS
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = MYS
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = MYS
+    type = annex_everything
+}  }
+ }
+
+ IND_invade_tamfed = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  TML = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = TML
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = TML
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = TML
+    type = annex_everything
+}  }
+ }
+
+ IND_invade_madras = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  MRS = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = MRS
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = MRS
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = MRS
+    type = annex_everything
+}  }
+ }
+
+ IND_invade_kashmir = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  JAK = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = JAK
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = JAK
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = JAK
+    type = annex_everything
+}  }
+ }
+
+ IND_invade_gujarat = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  GUJ = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = GUJ
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = GUJ
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = GUJ
+    type = annex_everything
+}  }
+ }
+
+ IND_invade_hyderabad = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  HYD = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = HYD
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = HYD
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = HYD
+    type = annex_everything
+}  }
+ }
+
+
+ IND_invade_bombay = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  BBY = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = BBY
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = BBY
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+	declare_war_on = {
+    target = BBY
+    type = annex_everything
+}  }
+ }
+
+ IND_invade_cir = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  CIR = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = CIR
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = CIR
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = CIR
+    type = annex_everything
+}  }
+ }
+
+ IND_invade_sind = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  SNH = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = SNH
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = SNH
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = SNH
+    type = annex_everything
+}  }
+ }
+
+ IND_invade_baluchistan = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  BAL = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = BAL
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = BAL
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+	declare_war_on = {
+    target = BAL
+    type = annex_everything
+}  }
+ }
+
+ IND_invade_bihar = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  BIH = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = BIH
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = BIH
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = BIH
+    type = annex_everything
+}  }
+ }
+
+ IND_invade_punjab = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  PNJ = { exists = yes }
+  has_army_manpower = {
+   size > 30000
+  }
+is_neighbor_of = PNJ
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = PNJ
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = PNJ
+    type = annex_everything
+}  }
+ }
+
+ IND_invade_delhi = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  DEL = { exists = yes }
+  has_army_manpower = {
+   size > 150000
+  }
+
+is_neighbor_of = DEL
+  date > 1939.1.1
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = DEL
+   is_puppet = yes
+	tag = DEL
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = DEL
+    type = annex_everything
+}  }
+ }
+
+ IND_invade_assam = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  ASM = { exists = yes }
+  has_army_manpower = {
+   size > 150000
+  }
+
+is_neighbor_of = ASM
+  date > 1939.1.1
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = ASM
+   is_puppet = yes
+	tag = ASM
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = ASM
+    type = annex_everything
+}  }
+ }
+
+ IND_invade_braj = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+  BRJ = { exists = yes }
+  has_army_manpower = {
+   size > 150000
+  }
+
+is_neighbor_of = BRJ
+  date > 1939.1.1
+
+  has_war = no 
+  NOT = {
+   is_in_faction_with = BRJ
+   is_puppet = yes
+	tag = BRJ
+  }
+  
+  }
+  complete_effect = {
+		declare_war_on = {
+    target = BRJ
+    type = annex_everything
+}  }
+ }
+
+
+}

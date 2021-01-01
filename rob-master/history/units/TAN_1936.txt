@@ -1,0 +1,62 @@
+division_template = {
+	name = "Tuvan Cavalry"
+
+	division_names_group = TAN_ARM_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+	priority = 1
+}
+
+units = {
+	#TAN Army
+	division = {
+		name = "1st Tuvan Cavalry"
+		location = 10597
+		division_template = "Tuvan Cavalry"
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "2nd Tuvan Cavalry"
+		location = 12610
+		division_template = "Tuvan Cavalry"
+		start_equipment_factor = 0.8
+
+	}
+	division = {
+		name = "3rd Tuvan Cavalry"
+		location = 1877
+		division_template = "Tuvan Cavalry"
+		start_equipment_factor = 0.8
+
+	}
+	division = {
+		name = "4th Tuvan Cavalry"
+		location = 7804
+		division_template = "Tuvan Cavalry"
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Russian Cossacks"
+		location = 10597
+		division_template = "Tuvan Cavalry"
+		start_equipment_factor = 0.3
+
+	}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "TAN"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

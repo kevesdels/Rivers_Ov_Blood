@@ -1,0 +1,231 @@
+BUL_bulgarian_expansionism = {
+
+BUL_demand_macedonia = {
+  cost = 10
+  fire_only_once = yes
+  available = {
+AND = { 
+		country_exists = BOS 
+		CRO = { has_war_with = SER }
+		BOS = { has_war_with = SER }
+		}
+}
+    	ai_will_do = {
+			base = 1000
+			}
+  complete_effect = {
+		country_event = {
+    id = bulgaria.100
+}
+ }
+
+}
+
+BUL_seize_dobby = {
+  cost = 25
+  fire_only_once = yes
+  available = {
+AND = { 
+		country_exists = ROM 
+		OR = { ROM = { has_war_with = TIG }
+		ROM = { has_war_with = RMR } }
+		}
+}
+    	ai_will_do = {
+			base = 1000
+			}
+  complete_effect = {
+		country_event = {
+    id = bulgaria.126
+}
+ }
+
+}
+
+BUL_plovdiv_conference = {
+  cost = 50
+  fire_only_once = yes
+  available = {
+AND = { 
+		country_exists = TUR 
+		NOT = { has_war_with = TUR }
+		}
+date > 1935.07.01
+}
+    	ai_will_do = {
+			base = 1000
+			}
+  complete_effect = {
+		TUR = { country_event = {
+    id = bulgaria.111
+
+}
+}
+ }
+}
+
+BUL_albanian_alliance = {
+  cost = 50
+  fire_only_once = yes
+  available = {
+AND = { 
+		country_exists = ALB 
+		NOT = { has_war_with = ALB }
+		is_in_faction_with = TUR
+
+		}
+date > 1935.07.10
+}
+    	ai_will_do = {
+			base = 1000
+			}
+  complete_effect = {
+		ALB = { country_event = {
+    id = bulgaria.119
+}
+}
+ }
+
+}
+
+BUL_greek_ultimatum = {
+  cost = 100
+  fire_only_once = yes
+  available = {
+AND = { 
+		country_exists = GRE 
+		NOT = { has_war_with = GRE }
+		is_in_faction_with = TUR
+		is_in_faction_with = ALB
+
+		}
+date > 1935.08.01
+}
+    	ai_will_do = {
+			base = 1000
+			}
+  complete_effect = {
+				country_event = {
+    id = bulgaria.114
+}
+ }
+
+}
+
+BUL_macedonian_revolt = {
+  cost = 50
+  fire_only_once = yes
+  available = {
+AND = { 
+		country_exists = GRE 
+		has_war_with = GRE 
+		}
+}
+    	ai_will_do = {
+			base = 1000
+			}
+  complete_effect = {
+				country_event = {
+    id = bulgaria.118
+}
+ }
+
+}
+
+BUL_thracian_revolt = {
+  cost = 50
+  fire_only_once = yes
+  available = {
+AND = { 
+		country_exists = GRE 
+		has_war_with = GRE 
+		}
+}
+    	ai_will_do = {
+			base = 1000
+			}
+  complete_effect = {
+				country_event = {
+    id = bulgaria.122
+}
+ }
+
+}
+
+BUL_men_in_albania = {
+  cost = 50
+  fire_only_once = yes
+  available = {
+AND = { 
+		country_exists = GRE 
+		has_war_with = GRE 
+		}
+manpower > 10000
+is_in_faction_with = ALB
+}
+    	ai_will_do = {
+			base = 1000
+			}
+  complete_effect = {
+				country_event = {
+    id = bulgaria.123
+}
+ }
+
+}
+
+BUL_invade_serbia = {
+  fire_only_once = yes
+  available = {
+AND = { 
+		country_exists = SER 
+		NOT = { has_war_with = SER }
+		}
+date > 1936.01.01
+NOT = { 
+has_war = yes
+controls_state = 106
+controls_state = 870
+controls_state = 871
+}
+is_in_faction_with = TUR
+is_in_faction_with = ALB
+}
+    	ai_will_do = {
+			base = 1000
+			}
+  complete_effect = {
+declare_war_on = {
+    target = SER
+    type = annex_everything
+}
+ }
+
+}
+
+BUL_backstab_turks = {
+  fire_only_once = yes
+  available = {
+AND = { 
+		country_exists = TUR 
+		NOT = { has_war_with = TUR }
+		}
+date > 1939.01.01
+NOT = { has_war = yes }
+is_in_faction_with = TUR
+is_in_faction_with = ALB
+}
+    	ai_will_do = {
+			base = 10
+			}
+  complete_effect = {
+TUR = { leave_faction = yes }
+declare_war_on = {
+    target = TUR
+    type = annex_everything
+}
+ }
+
+}
+ 
+}

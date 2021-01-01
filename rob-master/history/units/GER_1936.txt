@@ -1,0 +1,537 @@
+﻿division_template = {
+	name = "Infanterie-Division"
+
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	
+	support = {
+        artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Rotkorps-Division"
+
+	division_names_group = GER_Arm_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+        engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Gebirgs-Brigade"		# Gebirgsbrigade
+	#Note: precursor to Gebirgs-Divisions
+	division_names_group = GER_Mnt_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+	    mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Kavallerie-Brigade"
+
+	division_names_group = GER_Cav_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	    artillery = { x = 0 y = 1 }
+	}
+}
+
+units = {
+
+	##### Oberkommando des Heeres #####
+	### 1. Armee (Wehrmacht-Gruppenkommando) ###
+	# II. Armeekorps
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 6334
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 12
+		}
+		location = 537
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	# III. Armeekorps
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 478
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 23
+		}
+		location = 478
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	# Panzertruppenkommando
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 6521
+		division_template = "Rotkorps-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 692
+		division_template = "Rotkorps-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 6488
+		division_template = "Rotkorps-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+	}
+
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 11505
+		division_template = "Rotkorps-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+	}
+
+	### 3. Armee (Wehrmacht-Gruppenkommando) ###
+	# IV. Armeekorps
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 514
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 14
+		}
+		location = 514
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 24
+		}
+		location = 514
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	# VIII. Armeekorps
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 8
+		}
+		location = 9496
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 18
+		}
+		location = 9496
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+
+	# I. Armeekorps
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 11372
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 11
+		}
+		location = 3473
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 21
+		}
+		location = 9252
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division= {	
+		name = "Kavallerie-Kommando Insterburg" 
+		location = 11505
+		division_template = "Kavallerie-Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+
+
+	### 2. Armee (Wehrmacht-Gruppenkommando) ###
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 13
+		}
+		location = 6257
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# VI. Armeekorps
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 6
+		}
+		location = 11264
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 16
+		}
+		location = 11264
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	# IX. Armeekorps
+    # V. Armeekorps
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 9517
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+
+	# VII. Armeekorps
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 7
+		}
+		location = 11544
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 10
+		}
+		location = 11497
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 17
+		}
+		location = 586
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}			
+	division= {	
+		name = "Gebirgs-Brigade" 
+		location = 692
+		division_template = "Gebirgs-Brigade" 
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+}
+
+### Air oob
+air_wings = {
+	### I. Luftkreiskommando -- Konigsberg ###
+
+
+	### II. Luftkreiskommando -- Berlin ###
+	794 = { 
+		# Jagdgeschwader 132 'Richtofen'		
+		fighter_equipment_0 =  {		# Ar 68
+			owner = "GER" 
+			amount = 80
+		}
+		name = "Jagdgeschwader 132"
+		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
+			modifier="fighter_genius"
+			name="Erich"
+			surname="Hartmann"
+			callsign="Bubi"
+			portrait=1 # Pick random index here, or make special GFX_GER_ace_Erich_Hartmann to override.
+		}
+		# Kampfgeschwader 153		
+		tac_bomber_equipment_0 = {		# Do 23
+			owner = "GER" 
+			amount = 80
+		}
+		tac_bomber_equipment_0 = {		# Ju 86
+			owner = "GER" 
+			amount = 40
+			version_name = "Ju 86"
+		}
+		name = "Kampfgeschwader 153"
+		# TODO: REMOVE THIS LATER ???
+		transport_plane_equipment_1 = {
+			owner = "GER" 
+			amount = 4
+		}
+	}
+
+	### III. Luftkreiskommando -- Breslau ###
+	66 = { 
+		# Kampfgeschwader 253 'General Wever'		
+		tac_bomber_equipment_0 = {		# He 45 or Do 23 ?
+			owner = "GER" 
+			amount = 120
+		}
+		name = "Kampfgeschwader 253"
+		# Sturzkampfgeschwader 162		
+		CAS_equipment_1 =  {			# Hs 123
+			owner = "GER" 
+			amount = 80
+		}
+		name = "Sturzkampfgeschwader 162"	
+	}
+
+	### IV. Luftkreiskommando -- Kassel ###
+	57 = { 
+		# Jagdgeschwader 134 'Horst Wessel'		
+		fighter_equipment_0 =  {		# He 51 # Ar 68
+			owner = "GER" 
+			amount = 120
+		}
+		name = "Jagdgeschwader 134"
+		# Kampfgeschwader 152 'Hindenburg'	
+		tac_bomber_equipment_1 = {		# Do 23
+			owner = "GER" 
+			amount = 80
+		}
+		name = "Kampfgeschwader 152"
+		# Kampfgeschwader 155	
+		tac_bomber_equipment_0 = {		# He 45 or Do 23 ? (light bomber)
+			owner = "GER" 
+			amount = 80
+		}
+		name = "Kampfgeschwader 155"
+	}
+
+	### V. Luftkreiskommando -- Munich ###
+	52 = { 
+		# Jagdgeschwader 136		
+		fighter_equipment_0 =  {		# He 51
+			owner = "GER" 
+			amount = 40
+		}
+		name = "Jagdgeschwader 136"
+		# Kampfgeschwader 154	
+		tac_bomber_equipment_0 = {		# Do 23
+			owner = "GER" 
+			amount = 80
+		}
+		name = "Kampfgeschwader 154"
+	}
+
+	### VI. Luftkreiskommando -- Kiel ###
+	58 = { 
+		# Küstenfliegergruppe 106		
+		nav_bomber_equipment_1 =  {		# He 59, Do 18
+			owner = "GER" 
+			amount = 72
+		}
+		name = "Küstenfliegergruppe 106"
+		# Küstenfliegergruppe 206
+	}
+}
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "GER"
+		}
+		requested_factories = 10
+		progress = 0.1
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_2
+			creator = "GER" 
+		}
+		requested_factories = 2
+		progress = 0.4
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 2
+		progress = 0.4
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = CAS_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = tac_bomber_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
+}
+
+#####################

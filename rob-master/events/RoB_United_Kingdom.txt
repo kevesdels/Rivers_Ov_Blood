@@ -1,0 +1,1249 @@
+########################
+###United Kingdom Events
+########################
+
+
+add_namespace = united_kingdom
+
+###Main Political Events
+
+###UK in 1934
+country_event = {
+id = united_kingdom.0
+title = united_kingdom.0.t
+desc = united_kingdom.0.d
+fire_only_once = yes
+
+trigger = {
+tag = ENG
+}
+mean_time_to_happen = { days = 2 }
+
+option = {
+name = united_kingdom.0.a
+add_political_power = 10
+hidden_effect = { country_event = { id = united_kingdom.1 days = 3 } }
+}
+}
+
+###Monarchist March on London
+country_event = {
+id = united_kingdom.1
+title = united_kingdom.1.t
+desc = united_kingdom.1.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = united_kingdom.1.a
+add_political_power =-60
+add_stability =-0.08
+add_popularity = { ideology = reactionary popularity = 0.05 }
+hidden_effect = { country_event = { id = united_kingdom.2 days = 5 } }
+}
+}
+
+###Labour MPs killed
+country_event = {
+id = united_kingdom.2
+title = united_kingdom.2.t
+desc = united_kingdom.2.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = united_kingdom.2.a
+add_political_power =-80
+add_stability =-0.07
+add_popularity = { ideology = reactionary popularity = 0.05 }
+add_popularity = { ideology = socialist popularity = 0.05 }
+hidden_effect = { country_event = { id = united_kingdom.3 days = 5 }
+}
+}
+}
+
+###Speech by Edward VIII
+country_event = {
+id = united_kingdom.3
+title = united_kingdom.3.t
+desc = united_kingdom.3.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###Denounce reactionaries
+name = united_kingdom.3.b
+add_political_power = 50
+add_popularity = { ideology = reactionary popularity = 0.03 }
+set_country_flag = ENG_reactionaries_supported
+}
+}
+
+###George V dies
+country_event = {
+id = united_kingdom.4
+title = united_kingdom.4.t
+desc = united_kingdom.4.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = "Rest In Peace."
+create_country_leader = {
+	name = "Edward VIII"
+	desc = ""
+	picture = "ENG_Edward_VIII.tga"
+	expire = "1953.3.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Edward VIII"
+	desc = ""
+	picture = "ENG_Edward_VIII.tga"
+	expire = "1953.3.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Edward VIII"
+	desc = ""
+	picture = "ENG_Edward_VIII.tga"
+	expire = "1953.3.1"
+	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Edward VIII"
+	desc = ""
+	picture = "ENG_Edward_VIII.tga"
+	expire = "1953.3.1"
+	ideology = social_democracy_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Edward VIII"
+	desc = ""
+	picture = "ENG_Edward_VIII.tga"
+	expire = "1953.3.1"
+	ideology = social_liberal_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Edward VIII"
+	desc = ""
+	picture = "ENG_Edward_VIII.tga"
+	expire = "1953.3.1"
+	ideology = conservative_subtype
+	traits = {
+		#
+	}
+}
+}
+}
+
+###ELECTIONS
+country_event = {
+id = united_kingdom.5
+title = united_kingdom.5.t
+desc = united_kingdom.5.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###Conservative Victory
+name = united_kingdom.5.a
+add_political_power = 100
+set_politics = {
+ruling_party = conservative
+elections_allowed = yes
+}
+add_popularity = { ideology = conservative popularity = 0.1 }
+country_event = { id = united_kingdom.6 days = 10 }
+}
+
+option = { ###Reactionary Victory
+name = united_kingdom.5.b
+add_political_power = 100
+set_politics = {
+ruling_party = reactionary
+elections_allowed = yes
+}
+add_popularity = { ideology = reactionary popularity = 0.1 }
+add_popularity = { ideology = authoritharian popularity = 0.02 }
+hidden_effect = { country_event = { id = united_kingdom.8 days = 25 } }
+}
+
+option = { ###Socialist Victory
+name = united_kingdom.5.c
+add_political_power = 100
+set_politics = {
+ruling_party = socialist
+elections_allowed = yes
+}
+add_popularity = { ideology = socialist popularity = 0.1 }
+add_popularity = { ideology = national_socialist popularity = 0.02 }
+add_popularity = { ideology = democratic_socialist popularity = 0.02 }
+hidden_effect = { country_event = { id = united_kingdom.9 days = 25 } }
+}
+
+option = { ###Labour Victory
+name = united_kingdom.5.d
+add_political_power = 100
+set_politics = {
+ruling_party = social_democracy
+elections_allowed = yes
+}
+add_popularity = { ideology = social_democracy popularity = 0.1 }
+hidden_effect = { country_event = { id = united_kingdom.12 days = 25 } }
+}
+
+option = { ###Liberal Victory
+name = united_kingdom.5.e
+add_political_power = 100
+set_politics = {
+ruling_party = social_liberal
+elections_allowed = yes
+}
+add_popularity = { ideology = social_liberal popularity = 0.1 }
+hidden_effect = { country_event = { id = united_kingdom.12 days = 25 } }
+}
+}
+
+
+###Conservative Victory - New Government (Crush Reactionaries)
+country_event = {
+id = united_kingdom.6
+title = united_kingdom.6.t
+desc = united_kingdom.6.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###Squash Reactionaries
+name = united_kingdom.6.a
+add_political_power = -80
+add_stability = -0.05
+hidden_effect = { 
+country_event = { id = united_kingdom.7 days = 25 }
+country_event = { id = united_kingdom.9 days = 45 } 
+}
+add_popularity = { ideology = reactionary popularity = -0.07 }
+}
+}
+
+###Conservative Victory - Crush Socialists
+country_event = {
+id = united_kingdom.7
+title = united_kingdom.7.t
+desc = united_kingdom.7.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###Squash Socialists
+name = united_kingdom.7.a
+add_political_power = -80
+add_stability = -0.05
+hidden_effect = { country_event = { id = united_kingdom.8 days = 20 } }
+add_popularity = { ideology = socialist popularity = -0.07 }
+}
+}
+
+###Labour Riots
+country_event = {
+id = united_kingdom.8
+title = united_kingdom.8.t
+desc = united_kingdom.8.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = united_kingdom.8.a
+add_stability = -0.1
+hidden_effect = { country_event = { id = united_kingdom.10 days = 20 } }
+}
+
+}
+
+###Reactionary Riots
+country_event = {
+id = united_kingdom.9
+title = united_kingdom.9.t
+desc = united_kingdom.9.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = united_kingdom.9.a
+add_political_power = -100
+hidden_effect = { country_event = { id = united_kingdom.11 days = 20 } }
+}
+}
+
+###Labour Absorbed
+country_event = {
+id = united_kingdom.10
+title = united_kingdom.10.t
+desc = united_kingdom.10.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = united_kingdom.10.a
+
+if = {
+  limit = {
+  has_government = socialist
+  }
+  add_political_power = 100
+  add_stability = 0.05
+  
+  else = {
+  add_political_power = -100
+  }
+  }
+add_popularity = { ideology = socialist popularity = 0.16 }
+add_popularity = { ideology = social_democracy popularity = -0.16 }
+set_country_flag = ENG_labour_absorbed
+hidden_effect = { country_event = { id = united_kingdom.11 days = 20 } }
+}
+
+}
+
+###British Union Formed
+country_event = {
+id = united_kingdom.11
+title = united_kingdom.11.t
+desc = united_kingdom.11.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = united_kingdom.11.a
+add_popularity = { ideology = reactionary popularity = 0.15 }
+add_popularity = { ideology = authoritharian popularity = -0.05 }
+add_popularity = { ideology = conservative popularity = -0.08 }
+set_country_flag = ENG_british_union_formed
+}
+}
+
+###Slim Victory
+country_event = {
+id = united_kingdom.12
+title = united_kingdom.12.t
+desc = united_kingdom.12.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = united_kingdom.12.a
+add_political_power =-100
+if = {
+ limit = {
+  has_government = social_democracy
+ }
+ add_popularity = { ideology = social_democracy popularity =-0.04 }
+   else = {
+   add_popularity = { ideology = social_liberal popularity =-0.04 }
+   }
+}
+hidden_effect =  { country_event = { id = united_kingdom.8 days = 25 } }
+hidden_effect =  { country_event = { id = united_kingdom.9 days = 40 } }
+}
+}
+
+###UK STATUS:FUCKED
+country_event = {
+id = united_kingdom.13
+title = united_kingdom.13.t
+desc = united_kingdom.13.d
+fire_only_once = yes
+
+trigger = {
+tag = ENG
+date > 1934.7.5
+has_country_flag = ENG_british_union_formed
+has_country_flag = ENG_labour_absorbed
+}
+
+option = {
+name = united_kingdom.13.a
+add_stability =-0.15
+hidden_effect = { country_event = { id = united_kingdom.14 days = 7 } }
+}
+}
+
+###Last Disscussion
+country_event = {
+id = united_kingdom.14
+title = united_kingdom.14.t
+desc = united_kingdom.14.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = united_kingdom.14.a
+trigger = {
+ OR = { 
+  has_government = socialist
+  has_government = social_democracy
+}
+}
+add_political_power = -150
+add_stability = 0.06
+hidden_effect = { country_event = { id = united_kingdom.15 days = 15 } }
+}
+
+option = {
+name = united_kingdom.14.b
+trigger = {
+ OR = { 
+  has_government = reactionary
+  has_government = conservative
+  has_government = authoritharian
+  has_government = social_liberal
+}
+}
+add_political_power = 150
+add_stability = -0.06
+hidden_effect = { country_event = { id = united_kingdom.15 days = 15 } }
+}
+}
+
+###Reactionary offer to conservatives
+country_event = {
+id = united_kingdom.15
+title = united_kingdom.15.t
+desc = united_kingdom.15.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###They accept
+name = united_kingdom.15.a
+add_political_power = 30
+add_popularity = { ideology = reactionary popularity = 0.15 } 
+add_popularity = { ideology = conservative popularity = -0.15 } 
+set_country_flag = ENG_conservatives_absorbed
+}
+
+option = { ###They reject
+name = united_kingdom.15.b
+add_political_power = 30
+set_country_flag = ENG_conservatives_independant
+}
+}
+
+###STANDOFF
+country_event = {
+id = united_kingdom.16
+title = united_kingdom.16.t
+desc = united_kingdom.16.d
+fire_only_once = yes
+
+trigger = {
+ OR =  {
+ has_country_flag = ENG_conservatives_absorbed
+ has_country_flag = ENG_conservatives_independant
+}
+}
+mean_time_to_happen = { days = 2 }
+option = { ###Rebels rise up
+name = united_kingdom.16.a
+add_political_power = -200
+trigger = {
+has_country_flag = ENG_conservatives_independant
+}
+hidden_effect = {
+set_cosmetic_tag = ENG_navy
+ENG = {
+create_country_leader = {
+	name = "Ernle Chatfield"
+	desc = ""
+	picture = "ENG_Ernle_Chatfield.tga"
+	expire = "1953.3.1"
+	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Ernle Chatfield"
+	desc = ""
+	picture = "ENG_Ernle_Chatfield.tga"
+	expire = "1953.3.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Ernle Chatfield"
+	desc = ""
+	picture = "ENG_Ernle_Chatfield.tga"
+	expire = "1953.3.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Ernle Chatfield"
+	desc = ""
+	picture = ".tga"
+	expire = "1953.3.1"
+	ideology = conservative_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Ernle Chatfield"
+	desc = ""
+	picture = "ENG_Ernle_Chatfield.tga"
+	expire = "1953.3.1"
+	ideology = social_liberal_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Ernle Chatfield"
+	desc = ""
+	picture = "ENG_Ernle_Chatfield.tga"
+	expire = "1953.3.1"
+	ideology = social_democracy_subtype
+	traits = {
+		#
+	}
+}
+}
+
+BRU = {
+create_country_leader = {
+	name = "Edward VIII"
+	desc = ""
+	picture = "ENG_Edward_VIII.tga"
+	expire = "1953.3.1"
+	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Edward VIII"
+	desc = ""
+	picture = "ENG_Edward_VIII.tga"
+	expire = "1953.3.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Edward VIII"
+	desc = ""
+	picture = "ENG_Edward_VIII.tga"
+	expire = "1953.3.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+}
+IRE = { country_event = { id = ireland.1 days = 20 } }
+ENG = { country_event = { id = united_kingdom.18 days = 5 } }
+BLF = { transfer_state = 861 }
+BLF = { transfer_state = 120 }
+BLF = { transfer_state = 1069 }
+BLF = { transfer_state = 1068 }
+BLF = { transfer_state = 1067 }
+BLF = { transfer_state = 1070 }
+BLF = { transfer_state = 136 }
+BLF = { transfer_state = 1071 }
+BLF = { transfer_state = 1073 }
+BLF = { transfer_state = 1072 }
+BLF = { transfer_state = 121 }
+BLF = { transfer_state = 133 }
+BLF = { transfer_state = 1051 }
+BLF = { transfer_state = 129 }
+BLF = { transfer_state = 1042 }
+BLF = { transfer_state = 1043 }
+BLF = { transfer_state = 122 }
+BLF = { transfer_state = 1041 }
+BLF = { transfer_state = 1040 }
+BLF = { transfer_state = 1039 }
+BLF = { transfer_state = 1059 }
+BLF = { transfer_state = 1061 }
+BLF = { transfer_state = 1065 }
+BLF = { transfer_state = 1030 }
+BLF = { transfer_state = 1028 }
+BLF = { transfer_state = 1029 }
+BLF = { transfer_state = 127 }
+BLF = { transfer_state = 1034 }
+BLF = { transfer_state = 125 }
+BLF = { transfer_state = 1032 }
+861 = { add_core_of = BLF }
+120 = { add_core_of = BLF }
+1069 = { add_core_of = BLF }
+1068 = { add_core_of = BLF }
+1067 = { add_core_of = BLF }
+1070 = { add_core_of = BLF }
+136 = { add_core_of = BLF }
+1071 = { add_core_of = BLF }
+1073 = { add_core_of = BLF }
+1072 = { add_core_of = BLF }
+121 = { add_core_of = BLF }
+133 = { add_core_of = BLF }
+1051 = { add_core_of = BLF }
+129 = { add_core_of = BLF }
+1042 = { add_core_of = BLF }
+1043 = { add_core_of = BLF }
+122 = { add_core_of = BLF }
+1041 = { add_core_of = BLF }
+1040 = { add_core_of = BLF }
+1039 = { add_core_of = BLF }
+1059 = { add_core_of = BLF }
+1061 = { add_core_of = BLF }
+1065 = { add_core_of = BLF }
+1030 = { add_core_of = BLF }
+1028 = { add_core_of = BLF }
+1029 = { add_core_of = BLF }
+127 = { add_core_of = BLF }
+1034 = { add_core_of = BLF }
+125 = { add_core_of = BLF }
+1032 = { add_core_of = BLF }
+BRU = { transfer_state = 1066 }
+BRU = { transfer_state = 1075 }
+BRU = { transfer_state = 1076 }
+BRU = { transfer_state = 1074 }
+BRU = { transfer_state = 1036 }
+BRU = { transfer_state = 131 }
+BRU = { transfer_state = 1035 }
+BRU = { transfer_state = 1052 }
+BRU = { transfer_state = 1054 }
+BRU = { transfer_state = 1059 }
+BRU = { transfer_state = 1055 }
+BRU = { transfer_state = 1056 }
+BRU = { transfer_state = 128 }
+BRU = { transfer_state = 1057 }
+BRU = { transfer_state = 126 }
+BRU = { transfer_state = 1027 }
+BRU = { transfer_state = 338 }
+BRU = { transfer_state = 1062 }
+BRU = { transfer_state = 1064 }
+BRU = { transfer_state = 1063 }
+BRU = { transfer_state = 1060 }
+BRU = { transfer_state = 1031 }
+BRU = { transfer_state = 1037 }
+BRU = { transfer_state = 1047 }
+1066 = { add_core_of = BRU }
+1075 = { add_core_of = BRU }
+1076 = { add_core_of = BRU }
+1074 = { add_core_of = BRU }
+1036 = { add_core_of = BRU }
+131 = { add_core_of = BRU }
+1035 = { add_core_of = BRU }
+1052 = { add_core_of = BRU }
+1054 = { add_core_of = BRU }
+1059 = { add_core_of = BRU }
+1055 = { add_core_of = BRU }
+1056 = { add_core_of = BRU }
+128 = { add_core_of = BRU }
+1057 = { add_core_of = BRU }
+126 = { add_core_of = BRU }
+1027 = { add_core_of = BRU }
+338 = { add_core_of = BRU }
+1062 = { add_core_of = BRU }
+1064 = { add_core_of = BRU }
+1063 = { add_core_of = BRU }
+1060 = { add_core_of = BRU }
+1031 = { add_core_of = BRU }
+1037 = { add_core_of = BRU }
+1047 = { add_core_of = BRU }
+BRL = { transfer_state = 1049 }
+BRL = { transfer_state = 132 }
+BRL = { transfer_state = 1050 }
+BRL = { transfer_state = 123 }
+1049 = { add_core_of = BRL }
+132 = { add_core_of = BRL }
+1050 = { add_core_of = BRL }
+123 = { add_core_of = BRL }
+BRU = { transfer_state = 1048 }
+BRU = { transfer_state = 130 }
+BRU = { transfer_state = 1058 }
+BRU = { transfer_state = 1046 }
+BRU = { transfer_state = 1045 }
+BRU = { transfer_state = 1053 }
+BRU = { transfer_state = 1044 }
+1048 = { add_core_of = BRU }
+130 = { add_core_of = BRU }
+1058 = { add_core_of = BRU }
+1046 = { add_core_of = BRU }
+1045 = { add_core_of = BRU }
+1053 = { add_core_of = BRU }
+1044 = { add_core_of = BRU }
+BRU = { load_oob = "BRU_1934" }
+BLF = { load_oob = "BLF_1934" }
+BRC = { load_oob = "BRC_1934" }
+BRL = { load_oob = "BRL_1934" }
+RAJ = { 
+ country_event = {
+    id = raj.100
+    days = 30
+}
+}
+BRJ = {
+ country_event = {
+    id = raj.105
+    days = 15
+}
+}
+ENG = { end_puppet = BRJ }
+BRJ = { leave_faction = yes }
+}
+}
+
+option = { ###Rebels rise up, no conservatives
+name = united_kingdom.16.a
+add_political_power = -200
+trigger = {
+has_country_flag = ENG_conservatives_absorbed
+}
+hidden_effect = {
+set_cosmetic_tag = ENG_navy
+ENG = {
+create_country_leader = {
+	name = "Ernle Chatfield"
+	desc = ""
+	picture = "ENG_Ernle_Chatfield.tga"
+	expire = "1953.3.1"
+	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Ernle Chatfield"
+	desc = ""
+	picture = "ENG_Ernle_Chatfield.tga"
+	expire = "1953.3.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Ernle Chatfield"
+	desc = ""
+	picture = "ENG_Ernle_Chatfield.tga"
+	expire = "1953.3.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Ernle Chatfield"
+	desc = ""
+	picture = "ENG_Ernle_Chatfield.tga"
+	expire = "1953.3.1"
+	ideology = conservative_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Ernle Chatfield"
+	desc = ""
+	picture = "ENG_Ernle_Chatfield.tga"
+	expire = "1953.3.1"
+	ideology = social_liberal_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Ernle Chatfield"
+	desc = ""
+	picture = "ENG_Ernle_Chatfield.tga"
+	expire = "1953.3.1"
+	ideology = social_democracy_subtype
+	traits = {
+		#
+	}
+}
+}
+
+BRU = {
+create_country_leader = {
+	name = "Edward VIII"
+	desc = ""
+	picture = "ENG_Edward_VIII.tga"
+	expire = "1953.3.1"
+	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Edward VIII"
+	desc = ""
+	picture = "ENG_Edward_VIII.tga"
+	expire = "1953.3.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Edward VIII"
+	desc = ""
+	picture = "ENG_Edward_VIII.tga"
+	expire = "1953.3.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+}
+IRE = { country_event = { id = ireland.1 days = 20 } }
+ENG = { country_event = { id = united_kingdom.18 days = 5 } }
+BLF = { transfer_state = 861 }
+BLF = { transfer_state = 120 }
+BLF = { transfer_state = 1069 }
+BLF = { transfer_state = 1068 }
+BLF = { transfer_state = 1067 }
+BLF = { transfer_state = 1070 }
+BLF = { transfer_state = 136 }
+BLF = { transfer_state = 1071 }
+BLF = { transfer_state = 1073 }
+BLF = { transfer_state = 1072 }
+BLF = { transfer_state = 121 }
+BLF = { transfer_state = 133 }
+BLF = { transfer_state = 1051 }
+BLF = { transfer_state = 129 }
+BLF = { transfer_state = 1042 }
+BLF = { transfer_state = 1043 }
+BLF = { transfer_state = 122 }
+BLF = { transfer_state = 1041 }
+BLF = { transfer_state = 1040 }
+BLF = { transfer_state = 1039 }
+BLF = { transfer_state = 1059 }
+BLF = { transfer_state = 1061 }
+BLF = { transfer_state = 1065 }
+BLF = { transfer_state = 1030 }
+BLF = { transfer_state = 1028 }
+BLF = { transfer_state = 1029 }
+BLF = { transfer_state = 127 }
+BLF = { transfer_state = 1034 }
+BLF = { transfer_state = 125 }
+BLF = { transfer_state = 1032 }
+861 = { add_core_of = BLF }
+120 = { add_core_of = BLF }
+1069 = { add_core_of = BLF }
+1068 = { add_core_of = BLF }
+1067 = { add_core_of = BLF }
+1070 = { add_core_of = BLF }
+136 = { add_core_of = BLF }
+1071 = { add_core_of = BLF }
+1073 = { add_core_of = BLF }
+1072 = { add_core_of = BLF }
+121 = { add_core_of = BLF }
+133 = { add_core_of = BLF }
+1051 = { add_core_of = BLF }
+129 = { add_core_of = BLF }
+1042 = { add_core_of = BLF }
+1043 = { add_core_of = BLF }
+122 = { add_core_of = BLF }
+1041 = { add_core_of = BLF }
+1040 = { add_core_of = BLF }
+1039 = { add_core_of = BLF }
+1059 = { add_core_of = BLF }
+1061 = { add_core_of = BLF }
+1065 = { add_core_of = BLF }
+1030 = { add_core_of = BLF }
+1028 = { add_core_of = BLF }
+1029 = { add_core_of = BLF }
+127 = { add_core_of = BLF }
+1034 = { add_core_of = BLF }
+125 = { add_core_of = BLF }
+1032 = { add_core_of = BLF }
+BRU = { transfer_state = 1066 }
+BRU = { transfer_state = 1075 }
+BRU = { transfer_state = 1076 }
+BRU = { transfer_state = 1074 }
+BRU = { transfer_state = 1036 }
+BRU = { transfer_state = 131 }
+BRU = { transfer_state = 1035 }
+BRU = { transfer_state = 1052 }
+BRU = { transfer_state = 1054 }
+BRU = { transfer_state = 1059 }
+BRU = { transfer_state = 1055 }
+BRU = { transfer_state = 1056 }
+BRU = { transfer_state = 128 }
+BRU = { transfer_state = 1057 }
+BRU = { transfer_state = 126 }
+BRU = { transfer_state = 1027 }
+BRU = { transfer_state = 338 }
+BRU = { transfer_state = 1062 }
+BRU = { transfer_state = 1064 }
+BRU = { transfer_state = 1063 }
+BRU = { transfer_state = 1060 }
+BRU = { transfer_state = 1031 }
+BRU = { transfer_state = 1037 }
+BRU = { transfer_state = 1047 }
+1066 = { add_core_of = BRU }
+1075 = { add_core_of = BRU }
+1076 = { add_core_of = BRU }
+1074 = { add_core_of = BRU }
+1036 = { add_core_of = BRU }
+131 = { add_core_of = BRU }
+1035 = { add_core_of = BRU }
+1052 = { add_core_of = BRU }
+1054 = { add_core_of = BRU }
+1059 = { add_core_of = BRU }
+1055 = { add_core_of = BRU }
+1056 = { add_core_of = BRU }
+128 = { add_core_of = BRU }
+1057 = { add_core_of = BRU }
+126 = { add_core_of = BRU }
+1027 = { add_core_of = BRU }
+338 = { add_core_of = BRU }
+1062 = { add_core_of = BRU }
+1064 = { add_core_of = BRU }
+1063 = { add_core_of = BRU }
+1060 = { add_core_of = BRU }
+1031 = { add_core_of = BRU }
+1037 = { add_core_of = BRU }
+1047 = { add_core_of = BRU }
+BRL = { transfer_state = 1049 }
+BRL = { transfer_state = 132 }
+BRL = { transfer_state = 1050 }
+BRL = { transfer_state = 123 }
+1049 = { add_core_of = BRL }
+132 = { add_core_of = BRL }
+1050 = { add_core_of = BRL }
+123 = { add_core_of = BRL }
+BRU = { transfer_state = 1048 }
+BRU = { transfer_state = 130 }
+BRU = { transfer_state = 1058 }
+BRU = { transfer_state = 1046 }
+BRU = { transfer_state = 1045 }
+BRU = { transfer_state = 1053 }
+BRU = { transfer_state = 1044 }
+1048 = { add_core_of = BRU }
+130 = { add_core_of = BRU }
+1058 = { add_core_of = BRU }
+1046 = { add_core_of = BRU }
+1045 = { add_core_of = BRU }
+1053 = { add_core_of = BRU }
+1044 = { add_core_of = BRU }
+BRU = { load_oob = "BRU_1934" }
+BLF = { load_oob = "BLF_1934" }
+BRC = { load_oob = "BRC_1934" }
+BRL = { load_oob = "BRL_1934" }
+RAJ = {
+ country_event = {
+    id = raj.100
+    days = 40
+}
+}
+BRJ = {
+ country_event = {
+    id = raj.105
+    days = 15
+}
+}
+ENG = { end_puppet = BRJ }
+BRJ = { leave_faction = yes }
+}
+}
+}
+
+
+###Irish invasion
+country_event = {
+id = united_kingdom.17
+title = united_kingdom.17.t
+desc = united_kingdom.17.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###we cant afford conflict
+name = united_kingdom.17.a
+add_political_power = -150
+add_stability = -0.05
+IRE = { transfer_state = 1112 }
+IRE = { transfer_state = 1121 }
+IRE = { transfer_state = 1122 }
+IRE = { transfer_state = 119 }
+}
+
+option = { ###fuck the irish
+name = united_kingdom.17.b
+add_political_power = 100
+ENG = { declare_war_on = { type = annex_everything target = IRE } }
+IRE = { transfer_state = 1121 }
+
+}
+}
+
+###Civil War starts 
+country_event = {
+id = united_kingdom.18
+title = united_kingdom.18.t
+desc = united_kingdom.18.d
+fire_only_once = yes
+is_triggered_only = yes
+hidden = yes
+
+immediate = {
+BRL = { declare_war_on = { type = annex_everything target = BRU } }
+BLF = { declare_war_on = { type = annex_everything target = BRU } }
+news_event = { id = news_event.4 days = 1 }
+set_country_flag = ENG_civil_war
+if = {
+  limit = {
+  BRC = {
+  exists = yes
+  }
+  }
+BRC = { declare_war_on = { type = annex_everything target = BRU } }
+BRC = { declare_war_on = { type = annex_everything target = BLF } }
+}
+country_event = { id = united_kingdom.19 days = 15 }
+}
+}
+
+
+###Egypt declares independence
+country_event = {
+id = united_kingdom.19
+title = "Egypt Declares Independence"
+desc = united_kingdom.19.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+ name = "We Can't Do Anything Now..."
+ ENG = { end_puppet = EGY }
+ EGY = { 
+ leave_faction = yes
+ drop_cosmetic_tag = yes
+ }
+ 
+ add_political_power =-30
+}
+}
+
+###Egypt declares independence
+country_event = {
+id = united_kingdom.21
+title = "Egypt Declares Independence"
+desc = united_kingdom.21.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+ name = "We Can't Do Anything Now..."
+ FRA = { end_puppet = FWA }
+ FWA = { 
+ 
+ drop_cosmetic_tag = yes
+ }
+ 
+ add_political_power =-30
+}
+}
+
+
+###British Admirality is annexed
+country_event = {
+id = united_kingdom.22
+title = "Talks With British Admirality"
+desc = united_kingdom.22.d
+fire_only_once = yes
+
+
+trigger = {
+OR = { 
+ has_country_flag = BRU_victory 
+ has_country_flag = BLF_victory 
+ has_country_flag = BRC_victory 
+ has_country_flag = BRL_victory 
+ }
+OR = {
+  AND = { 
+	tag = BRU 
+	BRU = { exists = yes } 
+	}
+  AND = { 
+	tag = BRL 
+	BRU = { exists = yes } 
+	}
+  AND = { 
+	tag = BRC
+	BRU = { exists = yes } 
+	}
+  AND = { 
+	tag = BLF 
+	BRU = { exists = yes } 
+	}
+}
+}
+ mean_time_to_happen = { days = 1 }
+ 
+ option = {
+  name = "Britain Stands Strong Again"
+    every_state = {
+    limit = { is_core_of = ENG }
+	add_core_of = ROOT
+	remove_core_of = ENG
+}
+  ROOT = {
+   annex_country = {
+    target = ENG
+    transfer_troops = yes
+}
+
+  }
+every_country = { 
+limit = { has_war_with = IRE }
+white_peace = IRE
+}
+
+ }
+}
+
+
+###END of civil war
+country_event = {
+id = united_kingdom.23
+title = "Civil War Ends!"
+desc = united_kingdom.23.d
+fire_only_once = yes
+
+trigger = {
+ ENG = { has_country_flag = ENG_civil_war }
+ OR = {
+  BRU = { has_war = no }
+  BRL = { has_war = no }
+  BRC = { has_war = no }
+  BLF = { has_war = no }
+}
+OR = {
+  AND = { 
+	tag = BRU 
+	BRU = { exists = yes } 
+	}
+  AND = { 
+	tag = BRL 
+	BRU = { exists = yes } 
+	}
+  AND = { 
+	tag = BRC
+	BRU = { exists = yes } 
+	}
+  AND = { 
+	tag = BLF 
+	BRU = { exists = yes } 
+	}
+}
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+ name = "The Will Of Worker Has Prevailed!"
+ trigger = { tag = BLF }
+ set_country_flag = BLF_victory
+  every_state = {
+    limit = { is_core_of = BRU }
+	add_core_of = BLF
+	remove_core_of = BRU
+}
+  every_state = {
+    limit = { is_core_of = BRC }
+	add_core_of = BLF
+	remove_core_of = BRC
+}
+  every_state = {
+    limit = { is_core_of = BRL }
+	add_core_of = BLF
+	remove_core_of = BRL
+}
+}
+option = {
+ name = "British Empire Will Rise Again!"
+ trigger = { tag = BRU }
+ set_country_flag = BRU_victory
+   every_state = {
+    limit = { is_core_of = BLF }
+	add_core_of = BRU
+	remove_core_of = BLF
+}
+  every_state = {
+    limit = { is_core_of = BRC }
+	add_core_of = BRU
+	remove_core_of = BRC
+}
+  every_state = {
+    limit = { is_core_of = BRL }
+	add_core_of = BRU
+	remove_core_of = BRL
+}
+}
+option = {
+ name = "For Britain, Free and United!"
+ trigger = { tag = BRC }
+ set_country_flag = BRC_victory
+    every_state = {
+    limit = { is_core_of = BLF }
+	add_core_of = BRC
+	remove_core_of = BLF
+}
+  every_state = {
+    limit = { is_core_of = BRU }
+	add_core_of = BRC
+	remove_core_of = BRU
+}
+  every_state = {
+    limit = { is_core_of = BRL }
+	add_core_of = BRU
+	remove_core_of = BRL
+}
+}
+option = {
+ name = "For Britain, Free and United!"
+ trigger = { tag = BRL }
+ set_country_flag = BRL_victory
+     every_state = {
+    limit = { is_core_of = BLF }
+	add_core_of = BRL
+	remove_core_of = BLF
+}
+  every_state = {
+    limit = { is_core_of = BRU }
+	add_core_of = BRL
+	remove_core_of = BRU
+}
+  every_state = {
+    limit = { is_core_of = BRC }
+	add_core_of = BRL
+	remove_core_of = BRC
+}
+}
+}

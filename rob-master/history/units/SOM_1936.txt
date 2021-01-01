@@ -1,0 +1,53 @@
+division_template = {
+	name = "Warsangali Infantry"
+
+	division_names_group = SOM_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 1
+}
+
+
+units = {
+	#Dervish State
+	division = {
+		name = "Warsangali Royal Guard"
+		location = 1966
+		division_template = "Warsangali Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Warsangali Infantry Division"
+		location = 1966
+		division_template = "Warsangali Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Warsangali Infantry Division"
+		location = 10891
+		division_template = "Warsangali Infantry"
+		start_experience_factor = 0.3
+	}
+}
+
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "BAL"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

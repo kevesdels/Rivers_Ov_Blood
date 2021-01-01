@@ -1,0 +1,552 @@
+add_namespace = rob_austria
+
+#Event: Engelbert Dollfuss Disolves All Parties
+news_event = {
+ id = rob_austria.1
+ title = rob_austria.1.t
+ desc = rob_austria.1.d
+ picture = GFX_news_event_generic_parliament
+  trigger = {
+    date > 1934.1.12
+	tag = AUS
+	}
+ fire_only_once = yes
+ major = yes
+ option = {
+	name = rob_austria.1.a
+	add_popularity = {
+    ideology = reactionary
+    popularity = 0.05
+}
+hidden_effect = { 
+		country_event = {
+		    id = rob_austria.2
+		    days = 5
+		    random = 15
+		}}
+
+}
+}
+
+##Event: Nazis and Commies prepare
+ country_event = {
+ id = rob_austria.2
+ title = rob_austria.2.t
+ desc = rob_austria.2.d
+ picture = GFX_picture_russia_white_soldiers
+ fire_only_once = yes
+ is_triggered_only = yes
+	option = {
+		name = rob_austria.2.a
+		hidden_effect = { 
+            country_event = {
+		    id = rob_austria.3
+		    days = 5
+		    random = 25
+		}}
+		 }
+	}
+
+
+##Event: Engelbert Dollfuss Is Assassinated!
+country_event = {
+ id = rob_austria.3
+ title = rob_austria.3.t
+ desc = rob_austria.3.d
+ picture = GFX_report_event_generic_read_write
+ fire_only_once = yes
+ is_triggered_only = yes
+	option = {
+		name = rob_austria.3.a
+		create_country_leader= {
+			name = "Kurt Schuschnigg" 
+			desc = ""
+			picture = "Kurt_Schuschnigg.dds"
+			expire = "1965.1.1"
+			ideology = reactionary_subtype
+			traits = {
+				}
+			}
+			create_field_marshal = {
+			name = "Kurt Schuschnigg"
+			portrait_path = "Kurt_Schuschnigg.dds"
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+}
+hidden_effect = { 
+            country_event = {
+		    id = rob_austria.4
+		    days = 5
+		    random = 25
+		}
+		}
+		 
+	}
+}
+
+
+
+##Event: Austrian Civil War Beggins
+country_event = {
+ id = rob_austria.4
+ title = rob_austria.4.t
+ desc = rob_austria.4.d
+ picture = GFX_report_event_french_resistance_02
+ fire_only_once = yes
+ is_triggered_only = yes
+	option = {
+		name = rob_austria.4.a
+		hidden_effect = { 
+		        news_event = { id = news_event.1 days = 1 }
+				ACM = { transfer_state = 1018 }
+				ACM = { transfer_state = 1021 }
+				ACM = { transfer_state = 1020 }
+				ACM = { transfer_state = 1019 }
+				ACM = { transfer_state = 1018 }
+				ACM = { transfer_state = 1023 }
+				ACM = { transfer_state = 1022 }
+				THR = { transfer_state = 807 }
+				THR = { transfer_state = 806 }
+				THR = { transfer_state = 152 }
+				THR = { transfer_state = 1017 }
+				1021 = { add_core_of = ACM }
+				1020 = { add_core_of = ACM }
+				1019 = { add_core_of = ACM }
+				1018 = { add_core_of = ACM }
+				1023 = { add_core_of = ACM }
+				1022 = { add_core_of = ACM }
+				807 = { add_core_of = THR }
+				806 = { add_core_of = THR }
+				152 = { add_core_of = THR }
+				1017 = { add_core_of = THR }
+				AUS = { declare_war_on = { target = THR  type = annex_everything } }
+				AUS = { declare_war_on = { target = ACM  type = annex_everything } }
+				THR = { declare_war_on = { target = ACM  type = annex_everything } }
+				delete_unit_template_and_units = { division_template = "Alpenjäger Division" }
+				delete_unit_template_and_units = { division_template = "Infanterie Division" }
+				delete_unit_template_and_units = { division_template = "Schnelle Division" }
+				AUS = { load_oob = "AUS_civil_war" }
+				THR = { load_oob = "THR_civil_war" }
+				ACM = { load_oob = "ACM_civil_war" }
+                set_country_flag = AUS_CIVIL_WAR
+				add_ideas = {
+				    extensive_conscription
+					austrian_civil_war
+				}
+				remove_ideas = {
+				austrian_socialist_paramilitaries
+				austrian_brownshirt_terror
+
+				}
+				AUS = { 
+				country_event = { id = rob_austria.6 days = 14 } 
+				}
+
+	}
+	ACM = { change_tag_from = AUS }
+}
+	
+	option = {
+		name = rob_austria.4.b
+				hidden_effect = {
+                news_event = { id = news_event.1 days = 1 }		
+				ACM = { transfer_state = 1018 }
+				ACM = { transfer_state = 1021 }
+				ACM = { transfer_state = 1020 }
+				ACM = { transfer_state = 1019 }
+				ACM = { transfer_state = 1018 }
+				ACM = { transfer_state = 1023 }
+				ACM = { transfer_state = 1022 }
+				THR = { transfer_state = 807 }
+				THR = { transfer_state = 806 }
+				THR = { transfer_state = 152 }
+				THR = { transfer_state = 1017 }
+				1021 = { add_core_of = ACM }
+				1020 = { add_core_of = ACM }
+				1019 = { add_core_of = ACM }
+				1018 = { add_core_of = ACM }
+				1023 = { add_core_of = ACM }
+				1022 = { add_core_of = ACM }
+				807 = { add_core_of = THR }
+				806 = { add_core_of = THR }
+				152 = { add_core_of = THR }
+				1017 = { add_core_of = THR }
+				AUS = { declare_war_on = { target = THR  type = annex_everything } }
+				AUS = { declare_war_on = { target = ACM  type = annex_everything } }
+				THR = { declare_war_on = { target = ACM  type = annex_everything } }
+				delete_unit_template_and_units = { division_template = "Alpenjäger Division" }
+				delete_unit_template_and_units = { division_template = "Infanterie Division" }
+				delete_unit_template_and_units = { division_template = "Schnelle Division" }
+				AUS = { load_oob = "AUS_civil_war" }
+				THR = { load_oob = "THR_civil_war" }
+				ACM = { load_oob = "ACM_civil_war" }
+				set_country_flag = AUS_CIVIL_WAR
+				add_ideas = {
+				    extensive_conscription
+					austrian_civil_war
+				}
+				remove_ideas = {
+				austrian_socialist_paramilitaries
+				austrian_brownshirt_terror
+
+				}
+				AUS = { 
+				country_event = { id = rob_austria.6 days = 14 } 
+				}
+	}
+		THR = { change_tag_from = AUS }
+	}
+	option = {
+		name = rob_austria.4.c
+		ai_chance = { factor = 1}
+		hidden_effect = {
+                news_event = { id = news_event.1 days = 1 }	
+				ACM = { transfer_state = 1018 }
+				ACM = { transfer_state = 1021 }
+				ACM = { transfer_state = 1020 }
+				ACM = { transfer_state = 1019 }
+				ACM = { transfer_state = 1018 }
+				ACM = { transfer_state = 1023 }
+				ACM = { transfer_state = 1022 }
+				THR = { transfer_state = 807 }
+				THR = { transfer_state = 806 }
+				THR = { transfer_state = 152 }
+				THR = { transfer_state = 1017 }
+				1021 = { add_core_of = ACM }
+				1020 = { add_core_of = ACM }
+				1019 = { add_core_of = ACM }
+				1018 = { add_core_of = ACM }
+				1023 = { add_core_of = ACM }
+				1022 = { add_core_of = ACM }
+				807 = { add_core_of = THR }
+				806 = { add_core_of = THR }
+				152 = { add_core_of = THR }
+				1017 = { add_core_of = THR }
+				AUS = { declare_war_on = { target = THR  type = annex_everything } }
+				AUS = { declare_war_on = { target = ACM  type = annex_everything } }
+				THR = { declare_war_on = { target = ACM  type = annex_everything } }
+				delete_unit_template_and_units = { division_template = "Alpenjäger Division" }
+				delete_unit_template_and_units = { division_template = "Infanterie Division" }
+				delete_unit_template_and_units = { division_template = "Schnelle Division" }
+				AUS = { load_oob = "AUS_civil_war" }
+				THR = { load_oob = "THR_civil_war" }
+				ACM = { load_oob = "ACM_civil_war" }
+				set_country_flag = AUS_CIVIL_WAR
+				add_ideas = {
+				    extensive_conscription
+					austrian_civil_war
+				}
+				remove_ideas = {
+				austrian_socialist_paramilitaries
+				austrian_brownshirt_terror
+
+				}
+				AUS = { 
+				country_event = { id = rob_austria.6 days = 14 } 
+				}
+		}
+	}
+}
+###Gunzzzz
+country_event = {
+ id = rob_austria.13
+ title = rob_austria.13.t
+ desc = rob_austria.13.d
+ picture = GFX_report_event_french_resistance_02
+ fire_only_once = yes
+ trigger = {
+    tag = AUS
+    AUS = {
+    has_war_with = ACM
+    has_war_with = THR
+    }}
+
+    option = {
+    name = rob_austria.13.a
+    AUS = {
+    add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 2000
+    producer = AUS
+                                }
+                                }
+    } 
+    
+ }	
+### ostmarksche_volunteers
+country_event = {
+ id = rob_austria.5
+ title = rob_austria.5.t
+ desc = rob_austria.5.d
+ picture = GFX_report_event_generic_read_write
+ fire_only_once = yes
+	trigger = {
+		OR = {
+			AND = {
+  				tag = AUS
+  				AUS = { surrender_progress > 0.3 } 
+  				has_war_with = ACM
+ 				} 
+			AND = {
+  				tag = AUS
+  				AUS = { surrender_progress > 0.3 } 
+  				has_war_with = THR
+ 				} 
+			}
+		}
+		option = {
+				name = rob_austria.5.a
+				ai_chance = { factor = 1}
+				hidden_effect = { 
+				AUS = { load_oob = ostmarksche_volunteers }}
+				}
+}	
+
+##Slovenia demands autonomy
+country_event = {
+ id = rob_austria.6
+ title = rob_austria.6.t
+ desc = rob_austria.6.d
+ picture = GFX_report_event_generic_read_write
+ fire_only_once = yes
+ is_triggered_only = yes	
+
+	option = {
+
+	    ###Gives autonomy
+		name = rob_austria.6.a
+		ai_chance = { factor = 3}
+			hidden_effect = {
+				AUS = {
+				 country_event = {
+				    id = rob_austria.7 
+				    days = 3
+								 }
+					}
+		}
+	}
+
+		###Fuck off
+		option = {
+		name = rob_austria.6.b
+		ai_chance = { factor = 7}
+			hidden_effect = {
+				AUS = {
+				 country_event = {
+				    id = rob_austria.8 
+				    days = 5
+								 }
+		 			  }
+				}
+				add_political_power = 80
+		}
+}
+###Slovenians get autonomy
+country_event = {
+ id = rob_austria.7
+ title = rob_austria.7.t
+ desc = rob_austria.7.d
+ picture = GFX_report_event_generic_read_write
+ fire_only_once = yes
+ is_triggered_only = yes	
+
+ 	option = {
+ 	name = rob_austria.7.a
+ 	Hidden_effect = { 	
+ 	AUS = { 
+	add_ideas = {
+				slovenian_autonomy
+				}
+		}}		
+	}
+}
+
+##Slovenians rise up
+country_event = {
+ id = rob_austria.8
+ title = rob_austria.8.t
+ desc = rob_austria.8.d
+ picture = GFX_report_event_generic_read_write
+ fire_only_once = yes
+ is_triggered_only = yes	
+
+ 	option = {
+ 		name = rob_austria.8.a
+ 		ai_chance = { factor = 7}
+		hidden_effect = { 	
+		SLV = { transfer_state = 1128 }	
+		SLV = { declare_war_on = { target = AUS  type = annex_everything } }
+        SLV = { load_oob = "SLV_civil_war" }
+        AUS = {
+        remove_state_core = 934
+    	remove_state_core = 1127
+    	remove_state_core = 1128 }
+
+    	ACM = {
+    	remove_state_core = 934
+    	remove_state_core = 1127
+    	remove_state_core = 1128 }
+
+    	THR = {
+    	remove_state_core = 934
+    	remove_state_core = 1127
+    	remove_state_core = 1128 }
+        
+        934 = {
+        add_claim_by = THR
+        add_claim_by = ACM
+        add_claim_by = AUS
+			}
+		1127 = {
+        add_claim_by = THR
+        add_claim_by = ACM
+        add_claim_by = AUS
+			}
+		1128 = {
+        add_claim_by = THR
+        add_claim_by = ACM
+        add_claim_by = AUS
+			}
+	    THR = {
+	    country_event = {  id = third_reich.17 days = 3}
+	    }
+	    ACM = {
+	    country_event = { id = rob_austrian_commune.4 days = 3 } 
+		}
+		}
+        }
+		
+}
+
+###Do we give up?
+country_event = {
+ id = rob_austria.11
+ title = rob_austria.11.t
+ desc = rob_austria.11.d
+ picture = GFX_report_event_generic_read_write
+ fire_only_once = yes
+	trigger = {
+	AUS = {
+	controls_state = 1017
+	num_of_controlled_states < 2
+	}
+}
+
+
+###We wont give in
+option = {
+		name = rob_austria.11.a
+		ai_chance = { factor = 1}
+		hidden_effect = {
+		add_ideas{
+		 festung_bregenz 
+		}
+	 }
+ }
+
+ ###Further conflict is futile
+option = {
+		name = rob_austria.11.b
+		hidden_effect = {
+
+	if = {
+    	limit = {ACM = {controls_state = 153}}
+    	ACM = {
+    	annex_country = {
+    target = AUS
+    transfer_troops = no
+    				}
+	}
+}
+    if = {
+    	limit = {THR = {controls_state = 153}}
+    	THR = {
+    	annex_country = {
+    target = AUS
+    transfer_troops = no
+   						 }
+			}
+    	}
+	}
+}
+}
+
+###We have survived
+country_event = {
+ id = rob_austria.12
+ title = rob_austria.12.t
+ desc = rob_austria.12.d
+ picture = GFX_report_event_generic_read_write
+ fire_only_once = yes
+	trigger = {
+	THR = {
+	has_idea = festung_bregenz
+	num_of_controlled_states > 3
+	}
+}
+
+		option = {
+		name = rob_austria.12.a
+		ai_chance = { factor = 1}
+		hidden_effect = {
+		remove_ideas{
+		 festung_bregenz 
+		}
+		 }
+		 }
+	}	
+
+###Civil War Ends
+country_event = {
+ id = rob_austria.10
+ title = rob_austria.10.t
+ desc = rob_austria.10.d
+ picture = GFX_report_event_french_resistance_02
+ fire_only_once = yes
+ trigger = {
+	tag = AUS
+	has_idea = austrian_civil_war
+	has_full_control_of_state = 4
+	has_full_control_of_state = 152
+	has_full_control_of_state = 153
+	has_full_control_of_state = 806
+	has_full_control_of_state = 807
+	has_full_control_of_state = 1015
+	has_full_control_of_state = 1016
+	has_full_control_of_state = 1017
+	has_full_control_of_state = 1018
+	has_full_control_of_state = 1020
+	has_full_control_of_state = 1021
+	has_full_control_of_state = 1022
+	has_full_control_of_state = 1023
+	}
+	option = {
+		name = rob_austria.10.a
+		ai_chance = { factor = 1}
+		hidden_effect = {
+		AUS = {
+		annex_country = {
+    	target = ACM
+    	transfer_troops = NO
+		}
+		annex_country = {
+    	target = THR
+    	transfer_troops = NO
+		}
+		remove_ideas = {
+		austrian_civil_war
+		extensive_conscription
+		}
+		 add_ideas = {   
+            limited_conscription
+            }
+        set_country_flag = AUS_civil_war_ended
+	}}
+}
+}
+
+}#end

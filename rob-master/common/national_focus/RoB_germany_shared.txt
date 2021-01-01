@@ -1,0 +1,2367 @@
+
+	#Focus for Import foreign artillery pieces
+	shared_focus = {
+		id = GER_importforeignartillerypieces
+		icon = GFX_focus_GER_import_cannons
+		x = 8
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_eFiPJRUs }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_equipment_to_stockpile = {
+         type = artillery_equipment_1
+					amount = 250
+					producer = USA
+             }
+		}
+	}
+
+	#Focus for Attention on paratroopers
+	shared_focus = {
+		id = GER_attentiononparatroopers
+		icon = GFX_focus_GER_attention_to_paratroopers
+		x = 0
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_increasetransportplaneproduction }
+		ai_will_do = {
+			factor = 1
+		}
+	completion_reward = {
+		 add_tech_bonus = {
+	      name = para_bonus
+	      bonus = 1.0
+	      uses = 1
+	      category = para_tech
+           }    
+		}
+	}
+
+	#Focus for Artillery focus
+	shared_focus = {
+		id = GER_eFiPJRUs
+		icon = GFX_focus_GER_artillery_focus
+		x = 8
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_increaserifleproduction }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+	      name = artillery_bonus
+	      bonus = 0.75
+	      uses = 1
+	      category = artillery
+           }    
+		}
+	}
+	#Focus for Military reforms
+	shared_focus = {
+		id = GER_blitzkriegtactics
+		icon = GFX_focus_GER_blitzkrieg_tactics
+		x = 10
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_motorizetheinfantry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+	      name = armor_bonus
+	      bonus = 1.0
+	      uses = 1
+	      category = armor
+           }    
+		}
+	}
+	#Focus for Military reforms
+	shared_focus = {
+		id = GER_militaryreforms
+		icon = GFX_focus_GER_military_reforms
+		x = 4
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_rotevolksarmee }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+	      name = doctrine_bonus
+	      bonus = 0.5
+	      uses = 1
+	      category = land_doctrine
+           }    
+		}
+	}
+
+	#Focus for Armeeplan
+	shared_focus = {
+		id = GER_armeeplan
+		icon = GFX_focus_GER_armeeplan
+		x = 6
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_rapidpromotions 
+		}
+		prerequisite = { 
+			focus = GER_JGsLWUZK 
+		}
+		prerequisite = { 
+			focus = GER_improvetraining 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 country_event = { id = spartakus_germany.26 days = 1 }
+		}
+	}
+
+	#Focus for Improve training
+	shared_focus = {
+		id = GER_improvetraining
+		icon = GFX_focus_GER_improve_training
+		x = 8
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_YjfSNHTm }
+		ai_will_do = {
+			factor = 1
+		}
+	  completion_reward = {
+		 add_tech_bonus = {
+	      name = support_bonus
+	      bonus = 0.7
+	      uses = 1
+	      category = support_tech
+           }    
+		}
+	}
+
+	#Focus for Form the panzerkorps
+	shared_focus = {
+		id = GER_formthepanzerkorps
+		icon = GFX_focus_GER_form_panzer_korps
+		x = 12
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_increasepanzerproduction }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_tanks_elite
+		 }
+		}
+	}
+
+	#Focus for elite training
+	shared_focus = {
+		id = GER_crZWuAyd
+		icon = GFX_focus_GER_elite_panzer_training
+		x = 12
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_formthepanzerkorps }
+		ai_will_do = {
+			factor = 1
+		}
+		 	  completion_reward = {
+		 add_tech_bonus = {
+	      name = doctrine_bonus
+	      bonus = 1.0
+	      uses = 2
+	      category = cat_mobile_warfare
+           }    
+		}
+		}
+
+	#Focus for Panzer, vorwarts!
+	shared_focus = {
+		id = GER_panzervorwarts
+		icon = GFX_focus_GER_panzers_forwards
+		x = 11
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_blitzkriegtactics 
+		}
+		prerequisite = { 
+			focus = GER_crZWuAyd 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+				 	  completion_reward = {
+		 add_tech_bonus = {
+	      name = doctrine_bonus
+	      bonus = 1.0
+	      uses = 2
+	      category = cat_mobile_warfare
+           }    
+		}
+	}
+
+	#Focus for Motorize the infantry
+	shared_focus = {
+		id = GER_motorizetheinfantry
+		icon = GFX_focus_GER_motorize_infantry
+		x = 10
+		y = 15
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_increasepanzerproduction }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_equipment_to_stockpile = {
+         type = motorized_equipment
+					amount = 450
+					producer = GER
+             }
+		}
+	}
+
+	#Focus for infanterie, vorwarts!
+	shared_focus = {
+		id = GER_infanterievorwarts
+		icon = GFX_focus_GER_infanterie_forwards
+		x = 6
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_offensivetactics 
+		}
+		prerequisite = { 
+			focus = GER_importforeignartillerypieces 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	completion_reward = {
+		 add_tech_bonus = {
+	      name = doctrine_bonus
+	      bonus = 1.0
+	      uses = 4
+	      category = cat_grand_battle_plan
+           }    
+		}
+	}
+
+	#Focus for Stormtrooper tactics
+	shared_focus = {
+		id = GER_stormtroopertactics
+		icon = GFX_focus_GER_sturmtruppen_tactics
+		x = 4
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_increaserifleproduction }
+		ai_will_do = {
+			factor = 1
+		}
+	completion_reward = {
+		 add_tech_bonus = {
+	      name = infantry_bonus
+	      bonus = 0.75
+	      uses = 2
+	      category = infantry_weapons
+           }    
+		}
+	}
+
+	#Focus for Offensive Tactics
+	shared_focus = {
+		id = GER_offensivetactics
+		icon = GFX_focus_GER_offensive_tactics
+		x = 4
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_stormtroopertactics }
+		ai_will_do = {
+			factor = 1
+		}
+	completion_reward = {
+		 add_tech_bonus = {
+	      name = doctrine_bonus
+	      bonus = 1.0
+	      uses = 2
+	      category = cat_grand_battle_plan
+           }    
+		}
+	}
+
+	#Focus for Mass assault tactics
+	shared_focus = {
+		id = GER_massassaulttactics
+		icon = GFX_focus_GER_mass_assault
+		x = 2
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_increasetransportplaneproduction }
+		ai_will_do = {
+			factor = 1
+		}
+	completion_reward = {
+		 add_tech_bonus = {
+	      name = doctrine_bonus
+	      bonus = 1.0
+	      uses = 2
+	      category = cat_mass_assault
+           }    
+		}
+	}
+
+	#Focus for Elite of the elite
+	shared_focus = {
+		id = GER_eliteoftheelite
+		icon = GFX_focus_GER_elite_of_elite
+		x = 0
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_attentiononparatroopers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_paratroopers
+		 }
+		}
+	}
+
+	#Focus for Mass conscription
+	shared_focus = {
+		id = GER_TcYFGjMz
+		icon = GFX_focus_GER_expand_conscription_k
+		x = 2
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_massassaulttactics }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  extensive_conscription
+		 }
+		}
+	}
+
+	#Focus for Falschimjager, vorwarts!
+	shared_focus = {
+		id = GER_falschimjagervorwarts
+		icon = GFX_focus_GER_paratroopers_forwards
+		x = 1
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_TcYFGjMz 
+		}
+		prerequisite = { 
+			focus = GER_eliteoftheelite 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		 	completion_reward = {
+		 add_tech_bonus = {
+	      name = doctrine_bonus
+	      bonus = 1.0
+	      uses = 3
+	      category = cat_mass_assault
+           }    
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+	      name = para_bonus
+	      bonus = 1.0
+	      uses = 1
+	      category = para_tech
+           }    
+		}
+	}
+
+	#Focus for Increase transport plane production
+	shared_focus = {
+		id = GER_increasetransportplaneproduction
+		icon = GFX_focus_GER_increase_plane_production
+		x = 1
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_studentplan }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_more_airplanes
+		 }
+		}
+	}
+
+	#Focus for Rapid promotions
+	shared_focus = {
+		id = GER_rapidpromotions
+		icon = GFX_focus_GER_rapid_promotions
+		x = 4
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_militaryreforms }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_command_power = 100
+		}
+	}
+
+	#Focus for Doctrine focus
+	shared_focus = {
+		id = GER_JGsLWUZK
+		icon = GFX_focus_GER_doctrine_focus
+		x = 6
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_rotevolksarmee }
+		ai_will_do = {
+			factor = 1
+		}
+	  completion_reward = {
+		 add_tech_bonus = {
+	      name = doctrine_bonus
+	      bonus = 0.75
+	      uses = 1
+	      category = land_doctrine
+           }    
+		}
+	}
+
+	#Focus for Seydlitzplan
+	shared_focus = {
+		id = GER_seydlitzplan
+		icon = GFX_focus_GER_seydliztplan
+		x = 6
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_armeeplan }
+		mutually_exclusive = { focus = GER_studentplan }
+		mutually_exclusive = { focus = GER_rommelplan }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+         army_experience = 10
+		}
+	}
+
+	#Focus for Rommelplan
+	shared_focus = {
+		id = GER_rommelplan
+		icon = GFX_focus_GER_rommelplan
+		x = 11
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_armeeplan }
+		mutually_exclusive = { focus = GER_studentplan }
+		mutually_exclusive = { focus = GER_seydlitzplan }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+         army_experience = 10
+		}
+	}
+
+	#Focus for Increase rifle production
+	shared_focus = {
+		id = GER_increaserifleproduction
+		icon = GFX_focus_GER_increase_rifle_production
+		x = 6
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_seydlitzplan }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_more_guns
+		 }
+		}
+	}
+
+	#Focus for Rote Volksarmee
+	shared_focus = {
+		id = GER_rotevolksarmee
+		icon = GFX_focus_GER_rote_volksarmee
+		x = 6
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		available = {	
+		 custom_effect_tooltip = GER_tt_3
+         OR = {
+          has_country_flag = GER_lux_ds_victory
+          has_country_flag = GER_dem_victory
+          has_country_flag = GER_lux_victory
+          has_country_flag = GER_lux_nb_victory
+          has_country_flag = GER_nb_vitory
+         }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 army_experience = 25
+		}
+	}
+
+	#Focus for Increase conscription
+	shared_focus = {
+		id = GER_YjfSNHTm
+		icon = GFX_focus_GER_increase_conscription
+		x = 8
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_rotevolksarmee }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  limited_conscription
+		 }
+		}
+	}
+
+	#Focus for Studentplan
+	shared_focus = {
+		id = GER_studentplan
+		icon = GFX_focus_GER_studentplan
+		x = 1
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_armeeplan }
+		mutually_exclusive = { 
+			focus = GER_seydlitzplan 
+		}
+		mutually_exclusive = { 
+			focus = GER_rommelplan 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+         army_experience = 10
+		}
+		}
+
+	#Focus for Increase panzer production
+	shared_focus = {
+		id = GER_increasepanzerproduction
+		icon = GFX_focus_GER_increase_panzer_production
+		x = 11
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_rommelplan }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_more_tanks
+		 }
+		}
+	}
+
+	#Focus for Transport ships
+	shared_focus = {
+		id = GER_transportships
+		icon = GFX_focus_GER_more_transportships
+		x = 17
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_volksmarine }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_equipment_to_stockpile = {
+         type = convoy
+					amount = 100
+					producer = GER
+             }
+		}
+	}
+
+	#Focus for Rebuild the navy
+	shared_focus = {
+		id = GER_rebuildthenavy
+		icon = GFX_focus_GER_rebuild_the_navy
+		x = 15
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_specialtraining 
+		}
+		prerequisite = { 
+			focus = GER_transportships 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_rebuild_navy
+		 }
+		}
+	}
+
+	#Focus for Volksmarine
+	shared_focus = {
+		id = GER_volksmarine
+		icon = GFX_focus_GER_volksmarine
+		x = 15
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_xvmgqaYK 
+			focus = GER_focusondestroyers 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_navy_elite
+		 }
+		}
+	}
+
+	#Focus for Prepare to retake Prussia
+	shared_focus = {
+		id = GER_preparetoretakeprussia
+		icon = GFX_focus_GER_invade_prussia
+		x = 15
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_rebuildthenavy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_red_marines
+		 }
+		}
+	}
+
+	#Focus for Rote Luftwaffe
+	shared_focus = {
+		id = GER_roteluftwaffe
+		icon = GFX_focus_GER_rote_luftwaffe
+		x = 21
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		available = {	
+		 custom_effect_tooltip = GER_tt_3
+         OR = {
+          has_country_flag = GER_lux_ds_victory
+          has_country_flag = GER_dem_victory
+          has_country_flag = GER_lux_victory
+          has_country_flag = GER_lux_nb_victory
+          has_country_flag = GER_nb_vitory
+         }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+		 air_experience = 30
+		}
+	}
+
+	#Focus for Fighter focus
+	shared_focus = {
+		id = GER_fighterfocus
+		icon = GFX_focus_GER_fighter_focus
+		x = 19
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_roteluftwaffe }
+		mutually_exclusive = { focus = GER_bomberfocus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+	      name = air_bonus
+	      bonus = 1.0
+	      uses = 1
+	      category = light_fighter
+		  category = cat_heavy_fighter
+           }    
+		}
+	}
+
+	#Focus for Aerial doctrine focus
+	shared_focus = {
+		id = GER_aerialdoctrinefocus
+		icon = GFX_focus_GER_air_doctrine_focus
+		x = 21
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_fighterfocus 
+		}
+		prerequisite = { 
+			focus = GER_bomberfocus 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+	      name = air_bonus
+	      bonus = 1.0
+	      uses = 2
+	      category = air_doctrine
+           }    
+		}
+	}
+
+	#Focus for Increased pilot training
+	shared_focus = {
+		id = GER_increasedpilottraining
+		icon = GFX_focus_GER_increased_pilot_training
+		x = 19
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_aerialdoctrinefocus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_elite_pilots
+		 }
+		}
+	}
+
+	#Focus for Luftwaffe divisions
+	shared_focus = {
+		id = GER_luftwaffedivisions
+		icon = GFX_focus_GER_luftwaffe_divisons
+		x = 23
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_aerialdoctrinefocus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+	      name = air_bonus
+	      bonus = 1.0
+	      uses = 2
+	      category = air_doctrine
+           }    
+		}
+	}
+
+	#Focus for Build more AA
+	shared_focus = {
+		id = GER_buildmoreaa
+		icon = GFX_focus_GER_build_more_aa
+		x = 23
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_luftwaffedivisions }
+		ai_will_do = {
+			factor = 1
+		}
+        completion_reward = {
+		 add_equipment_to_stockpile = {
+         type = anti_air_equipment_1
+					amount = 180
+					producer = GER
+             }
+		}
+	}
+
+	#Focus for Flug nach Preußen!
+	shared_focus = {
+		id = GER_flugnachpreuen
+		icon = GFX_focus_GER_flug_nach_pruessen
+		x = 21
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_increaseplaneproduction 
+		}
+		prerequisite = { 
+			focus = GER_buildmoreaa 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_elite_airforce
+		 }
+		}
+	}
+
+	#Focus for Increase plane production
+	shared_focus = {
+		id = GER_increaseplaneproduction
+		icon = GFX_focus_GER_increased_plane_production
+		x = 19
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_increasedpilottraining }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_more_planes
+		 }
+		}
+	}
+
+	#Focus for Rote Volksflotte
+	shared_focus = {
+		id = GER_rotevolksflotte
+		icon = GFX_focus_GER_volksflotte
+		x = 15
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		available = {	
+		 custom_effect_tooltip = GER_tt_3
+         OR = {
+          has_country_flag = GER_lux_ds_victory
+          has_country_flag = GER_dem_victory
+          has_country_flag = GER_lux_victory
+          has_country_flag = GER_lux_nb_victory
+          has_country_flag = GER_nb_vitory
+         }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 navy_experience = 50
+		}
+	}
+
+	#Focus for Focus on U-boats
+	shared_focus = {
+		id = GER_xvmgqaYK
+		icon = GFX_focus_GER_focus_on_ss
+		x = 13
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_standardisethenavaldoctrine 
+			focus = GER_focusonshipdesign 
+		}
+		mutually_exclusive = { 
+			focus = GER_focusonbattleships 
+		}
+		mutually_exclusive = { 
+			focus = GER_focusondestroyers 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+	      name = naval_bonus
+	      bonus = 1.0
+	      uses = 1
+	      category = ss_tech
+           }    
+		}
+	}
+
+	#Focus for Focus on Battleships
+	shared_focus = {
+		id = GER_focusonbattleships
+		icon = GFX_focus_GER_focus_on_bb
+		x = 15
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_standardisethenavaldoctrine 
+			focus = GER_xvmgqaYK 
+		}
+		mutually_exclusive = { 
+			focus = GER_xvmgqaYK 
+		}
+		mutually_exclusive = { 
+			focus = GER_focusondestroyers
+		}
+		 
+		ai_will_do = {
+			factor = 1
+		}
+	   completion_reward = {
+		 add_tech_bonus = {
+	      name = naval_bonus
+	      bonus = 1.0
+	      uses = 1
+	      category = bb_tech
+           }    
+		}
+	}
+
+	#Focus for Focus on destroyers
+	shared_focus = {
+		id = GER_focusondestroyers
+		icon = GFX_focus_GER_focus_on_dd
+		x = 17
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_standardisethenavaldoctrine 
+			focus = GER_focusonshipdesign 
+		}
+		mutually_exclusive = { 
+			focus = GER_xvmgqaYK 
+		}
+		mutually_exclusive = { 
+			focus = GER_focusonbattleships
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	   completion_reward = {
+		 add_tech_bonus = {
+	      name = naval_bonus
+	      bonus = 1.0
+	      uses = 1
+	      category = dd_tech
+           }    
+		}
+	}
+
+	#Focus for Focus on ship design
+	shared_focus = {
+		id = GER_focusonshipdesign
+		icon = GFX_focus_GER_focus_on_ship_design
+		x = 17
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_rotevolksflotte }
+		ai_will_do = {
+			factor = 1
+		}
+	    completion_reward = {
+		 add_tech_bonus = {
+	      name = naval_bonus
+	      bonus = 0.75
+	      uses = 2
+	      category = dd_tech
+		  category = cl_tech
+		  category = ca_tech
+		  category = bb_tech
+           }    
+		}
+	}
+
+	#Focus for Standardise the Naval doctrine
+	shared_focus = {
+		id = GER_standardisethenavaldoctrine
+		icon = GFX_focus_GER_naval_doctrine_standart
+		x = 13
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_rotevolksflotte }
+		ai_will_do = {
+			factor = 1
+		}
+	   completion_reward = {
+		 add_tech_bonus = {
+	      name = doctrine_bonus
+	      bonus = 1.0
+	      uses = 3
+	      category = naval_doctrine
+           }    
+		}
+	}
+
+	#Focus for Special training
+	shared_focus = {
+		id = GER_specialtraining
+		icon = GFX_focus_GER_special_training
+		x = 13
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_volksmarine }
+		ai_will_do = {
+			factor = 1
+		}
+	   completion_reward = {
+		 add_tech_bonus = {
+	      name = doctrine_bonus
+	      bonus = 0.75
+	      uses = 2
+	      category = naval_doctrine
+           }    
+		}
+	}
+
+	#Focus for Bomber focus
+	shared_focus = {
+		id = GER_bomberfocus
+		icon = GFX_focus_GER_bomber_focus
+		x = 23
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_roteluftwaffe }
+		mutually_exclusive = { focus = GER_fighterfocus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+	      name = air_bonus
+	      bonus = 1.0
+	      uses = 1
+	      category = tactical_bomber
+		  category = cat_strategic_bomber
+           }    
+		}
+	}
+
+	#Focus for German Economy
+	shared_focus = {
+		id = GER_germaneconomy
+		icon = GFX_focus_generic_join_comintern
+		x = 33
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		add_political_power = 120
+		 add_tech_bonus = {
+	      name = air_bonus
+	      bonus = 0.5
+	      uses = 1
+	      category = industry
+		  
+           } 
+		}
+	}
+
+	#Focus for National Bolshevik Economy
+	shared_focus = {
+		id = GER_nationalbolshevikeconomy
+		icon = GFX_focus_GER_nazbol_eco
+		x = 27
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_germaneconomy }
+		available = {
+		 has_country_flag = GER_ns_economy
+		}
+		mutually_exclusive = { 
+			focus = GER_keepthecurrentline 
+		}
+		mutually_exclusive = { 
+			focus = GER_democraticsocialisteconomy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_war_support = 0.05
+		}
+	}
+
+	#Focus for Keep the Current Line
+	shared_focus = {
+		id = GER_keepthecurrentline
+		icon = GFX_focus_GER_luxemb_eco
+		x = 33
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_country_flag = GER_lux_economy
+		}
+		prerequisite = { focus = GER_germaneconomy }
+		mutually_exclusive = { 
+			focus = GER_nationalbolshevikeconomy 
+		}
+		mutually_exclusive = { 
+			focus = GER_democraticsocialisteconomy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_stability = 0.05
+		}
+	}
+
+	#Focus for Democratic Socialist Economy
+	shared_focus = {
+		id = GER_democraticsocialisteconomy
+		icon = GFX_focus_GER_demsoc_eco
+		x = 39
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_country_flag = GER_ds_economy
+		}
+		prerequisite = { focus = GER_germaneconomy }
+		mutually_exclusive = { 
+			focus = GER_nationalbolshevikeconomy 
+		}
+		mutually_exclusive = { 
+			focus = GER_keepthecurrentline 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_political_power = 50
+		}
+	}
+
+	#Focus for German Agriculture
+	shared_focus = {
+		id = GER_germanagriculture
+		icon = GFX_focus_SOV_redistrubete_food
+		x = 25
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_nationalbolshevikeconomy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_nazbol_agriculture
+		 }
+		}
+	}
+
+	#Focus for Decentralization
+	shared_focus = {
+		id = GER_decentralization
+		icon = GFX_focus_SOV_rural_volunteers
+		x = 25
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_germanagriculture }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_nazbol_decentralization
+		 }
+		}
+	}
+
+	#Focus for German Industry
+	shared_focus = {
+		id = GER_germanindustry
+		icon = GFX_focus_GER_german_industry
+		x = 33
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_keepthecurrentline }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 54 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = industrial_complex
+	    level = 2
+	    instant_build = yes
+          }
+          }
+		  50 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = industrial_complex
+	    level = 2
+	    instant_build = yes
+          }
+          }
+		}
+	}
+
+	#Focus for Forced Industrialization
+	shared_focus = {
+		id = GER_forcedindustrialization
+		icon = GFX_focus_GER_forced_industrialiaztion
+		x = 39
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_democraticsocialisteconomy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+		}
+	}
+
+	#Focus for Rural Infrastructure
+	shared_focus = {
+		id = GER_ruralinfrastructure
+		icon = GFX_focus_GER_rural_infras
+		x = 30
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_nationalbolshevikeconomy 
+			focus = GER_keepthecurrentline 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+	 
+		}
+	}
+
+	#Focus for Increase Resource Output
+	shared_focus = {
+		id = GER_increaseresourceoutput
+		icon = GFX_focus_SOV_heavy_metalurgy
+		x = 27
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_nationalbolshevikeconomy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_nazbol_resources
+		 }
+		}
+	}
+
+	#Focus for What little we have...
+	shared_focus = {
+		id = GER_whatlittlewehave
+		icon = GFX_focus_GER_what_little_we_have
+		x = 27
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_increaseresourceoutput }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for ...Shall be enough.
+	shared_focus = {
+		id = GER_shallbeenough
+		icon = GFX_focus_GER_shall_be_enough
+		x = 27
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_whatlittlewehave }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for National Arms Industry
+	shared_focus = {
+		id = GER_nationalarmsindustry
+		icon = GFX_focus_GER_national_arms_industry
+		x = 25
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_decentralization }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Rural Schools
+	shared_focus = {
+		id = GER_ruralschools
+		icon = GFX_focus_GER_rural_schools
+		x = 30
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_ruralinfrastructure }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  rural_education
+		 }
+		}
+	}
+
+	#Focus for Rebuilding War Damage
+	shared_focus = {
+		id = GER_rebuildingwardamage
+		icon = GFX_focus_GER_rebuild_war_damage
+		x = 30
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_ruralschools }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_nazbol_rebuilding
+		 }
+		}
+	}
+
+	#Focus for Heavy Industry
+	shared_focus = {
+		id = GER_heavyindustry
+		icon = GFX_focus_GER_deutsche_heavy_industry
+		x = 36
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_keepthecurrentline 
+			focus = GER_democraticsocialisteconomy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Deutsche Industriegenossenschaft
+	shared_focus = {
+		id = GER_deutscheindustriegenossenschaft
+		icon = GFX_focus_GER_deutscheindustriegschafft
+		x = 36
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_heavyindustry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_lux_industry
+		 }
+		}
+	}
+
+	#Focus for Deutsche Kriegsindustrie
+	shared_focus = {
+		id = GER_deutschekriegsindustrie
+		icon = GFX_focus_GER_deutschekriegsindustrie
+		x = 36
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_deutscheindustriegenossenschaft }
+		ai_will_do = {
+			factor = 1
+		}
+				completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Industrial Research
+	shared_focus = {
+		id = GER_industrialresearch
+		icon = GFX_focus_GER_industrial_research
+		x = 33
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_germanindustry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+	      name = industry_bonus
+	      bonus = 0.5
+	      uses = 2
+	      category = industry
+           } 
+		}
+	}
+
+	#Focus for Expand the Cities!
+	shared_focus = {
+		id = GER_expandthecities
+		icon = GFX_focus_SOV_bukharins_expand_urban_infr
+		x = 39
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_forcedindustrialization }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_ds_cities
+		 }
+		}
+	}
+
+	#Focus for Worker Cooperatives
+	shared_focus = {
+		id = GER_workercooperatives
+		icon = GFX_focus_GER_worker_cooperatives
+		x = 39
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_expandthecities }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_ds_worker_corparatives
+		 }
+		}
+	}
+
+	#Focus for Rebuild German Railways
+	shared_focus = {
+		id = GER_rebuildgermanrailways
+		icon = GFX_focus_GER_rebuild_railways
+		x = 41
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_democraticsocialisteconomy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+    	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+     	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+	}
+
+	#Focus for Volklufthansa
+	shared_focus = {
+		id = GER_volklufthansa
+		icon = GFX_focus_GER_volkslufhansa
+		x = 41
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_rebuildgermanrailways }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_ds_volkslufhansa
+		 }
+		}
+	}
+
+	#Focus for Rhein-Oder Highway
+	shared_focus = {
+		id = GER_rheinoderhighway
+		icon = GFX_focus_GER_rheinoder_highway
+		x = 41
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_volklufthansa }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+       	790 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+       	55 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+	       	1206 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+	       	1207 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+	       	793 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+	       	794 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for The New Germany
+	shared_focus = {
+		id = GER_thenewgermany
+		icon = GFX_focus_GER_new_germany
+		x = 28
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_autarky 
+		}
+		prerequisite = { 
+			focus = GER_rebuildingwardamage 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_war_support = 0.10
+		 add_ideas = {
+		  war_economy
+		 }
+		}
+	}
+
+	#Focus for Stead She Goes!
+	shared_focus = {
+		id = GER_steadshegoes
+		icon = GFX_focus_GER_steady_she_goes
+		x = 33
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_rebuildingwardamage 
+		}
+		prerequisite = { 
+			focus = GER_deutscheselektronikinstitut 
+		}
+		prerequisite = { 
+			focus = GER_deutschekriegsindustrie 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_stability = 0.2
+		}
+	}
+
+	#Focus for Autarky
+	shared_focus = {
+		id = GER_autarky
+		icon = GFX_focus_GER_nazbol_autarky
+		x = 26
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_nationalarmsindustry 
+		}
+		prerequisite = { 
+			focus = GER_shallbeenough 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_nazbol_autarky
+		 }
+		}
+	}
+
+	#Focus for Deutsches Elektronik Institut
+	shared_focus = {
+		id = GER_deutscheselektronikinstitut
+		icon = GFX_focus_GER_dei
+		x = 33
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_industrialresearch }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+	      name = industry_bonus
+	      bonus = 1.0
+	      uses = 1
+	      category = electronics
+           } 
+		}
+	}
+
+	#Focus for Modern Economy
+	shared_focus = {
+		id = GER_moderneconomy
+		icon = GFX_focus_GER_modern_economy
+		x = 40
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_workercooperatives 
+		}
+		prerequisite = { 
+			focus = GER_rheinoderhighway 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for The Modern Germany
+	shared_focus = {
+		id = GER_themoderngermany
+		icon = GFX_focus_GER_modern_germany
+		x = 38
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_deutschekriegsindustrie 
+		}
+		prerequisite = { 
+			focus = GER_moderneconomy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		 add_stability = 0.15
+		}
+	}
+

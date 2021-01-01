@@ -1,0 +1,258 @@
+﻿capital = 763
+
+set_research_slots = 3
+
+oob = "PRS_1934"
+set_naval_oob = "PRS_1934_navy"
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+	transport = 1
+	gwtank = 1
+	basic_light_tank = 1
+}
+
+
+
+set_politics = {
+	ruling_party = authoritharian
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 5
+	social_liberal = 8
+	conservative = 15
+	authoritharian = 40
+	reactionary = 10
+	pelekist = 22
+}
+
+create_country_leader = {
+	name = "Konrad Adenauer"
+	desc = ""
+	picture = "Portrait_Germany_Konrad_Adenauer"
+	expire = "1960.1.1"
+	ideology = conservative_subtype
+	traits = {
+		
+	}
+}
+
+add_ideas = {
+minority_troubles
+weak_king
+prussian_army
+prussian_high_command
+limited_conscription
+isolation
+the_great_depression
+PRS_hindenburg_hog
+PRS_erich_kochweser_im
+PRS_theodor_duesterberg_fm
+PRS_hjalmar_schacht_em
+PRS_otto_gessler_dm
+}
+
+create_country_leader = {
+	name = "Wilhelm Buck"
+	desc = ""
+	picture = ""
+	expire = "1960.1.1"
+	ideology = marxism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Friedrich Wilhelm III"
+	desc = ""
+	picture = "wilhelm_3.tga"
+	expire = "1951.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Friedrich Wilhelm III"
+	desc = ""
+	picture = "wilhelm_3.tga"
+	expire = "1951.1.1"
+	ideology = reactionary_subtype
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Alfred Rosenberg"
+	desc = ""
+	picture = "Alfred_Rosenberg.tga"
+	expire = "1951.1.1"
+	ideology = pagan_pelekism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Wilhelm Pieck"
+	desc = ""
+	picture = ""
+	expire = "1951.1.1"
+	ideology = german_socialism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Kurt Schumacher"
+	desc = ""
+	picture = ""
+	expire = "1951.1.1"
+	ideology = democratic_socialist_subtype
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Heinrich Brüning"
+	desc = ""
+	picture = "PRS_Heinrich_Brüning.tga"
+	expire = "1951.1.1"
+	ideology = social_democracy_subtype
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Ernst Cassirer"
+	desc = ""
+	picture = "PRS_ernst_cassirer.tga"
+	expire = "1951.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+	}
+}
+
+
+create_field_marshal = {
+	name = "Wilhelm Ritter von Leeb"
+	picture = "Portrait_GER_Hindenburg_general.tga"
+	traits = { trait_reckless infantry_officer offensive_doctrine }
+	skill = 4
+	id = 9999990
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "Walther von Brauchitsch"
+	picture = "Portrait_GER_Hindenburg_general.tga"
+	traits = { infantry_officer }
+	skill = 3
+	id = 9999991
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+
+create_field_marshal = {
+	name = "Wilhelm Keitel"
+	picture = "august-von-mackensen.tga"
+	traits = { politically_connected }
+	skill = 2
+	id = 9999993
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Wilhelm Heye"
+	picture = "Portrait_Germany_Wilhelm_Heye.tga"
+	traits = { career_officer old_guard }
+	skill = 3
+	id = 9999994
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Alfred Jodl"
+	picture = "paul-von-lettow-vorbeck"
+	traits = { war_hero }
+	skill = 4
+	id = 9999995
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Heinz Guderian"
+	picture = "Portrait_PRS_guderian.dds"
+	traits = { war_hero trait_reckless trickster }
+	skill = 4
+	id = 9999996
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Friedrich Paulus"
+	picture = "paul-von-lettow-vorbeck"
+	traits = { infantry_leader winter_specialist }
+	skill = 2
+	id = 9999997
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+
+create_navy_leader = {
+	name = "Karl Dönitz"
+	picture = "Portrait_Germany_Karl_Donitz.dds"
+	traits = { navy_career_officer seawolf }
+	skill = 5
+	id = 9999998
+	attack_skill = 5
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 5
+}
+
+create_navy_leader = {
+	name = "Erich Raeder"
+		picture = "Portrait_Germany_Erich_Raeder.dds"
+	traits = { naval_lineage battleship_adherent }
+	skill = 4
+	id = 9999999
+	attack_skill = 3
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 3
+}

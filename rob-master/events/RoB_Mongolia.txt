@@ -1,0 +1,425 @@
+#################
+###Mongolian Events
+#################
+
+add_namespace = mongolia
+
+
+###Buryatia in Conflict
+
+country_event = {
+id = mongolia.99
+title = mongolia.99.t
+desc = mongolia.99.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = MON
+date > 1934.2.1
+}
+
+option = {
+###We will help the Buryats
+
+name = mongolia.99.a
+ai_chance = { factor = 100}
+add_war_support = 0.1
+add_political_power = 50
+hidden_effect = {
+country_event = {
+id = mongolia.100
+days = 5
+}
+}
+
+
+}
+
+}
+
+###Romanov Treaty
+
+country_event = {
+id = mongolia.100
+title = mongolia.100.t
+desc = mongolia.100.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = MON
+}
+
+option = {
+###Send the Offer
+
+name = mongolia.100.a
+ai_chance = { factor = 100}
+
+TOW = { country_event = {
+id = mongolia.101
+days = 3
+}
+}
+
+
+}
+
+}
+
+###Romanov Treaty
+
+country_event = {
+id = mongolia.101
+title = mongolia.101.t
+desc = mongolia.101.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TOW
+}
+
+option = {
+###We do what we must
+
+name = mongolia.101.a
+ai_chance = { factor = 80}
+
+MON = { country_event = {
+id = mongolia.104
+days = 3
+}
+}
+
+
+}
+
+option = {
+###We will not betray our irkutskan friends
+
+name = mongolia.101.b
+ai_chance = { factor = 20}
+
+MON = { country_event = {
+id = mongolia.102
+days = 3
+}
+}
+
+
+}
+
+}
+
+###Romanov Treaty Rejected
+
+country_event = {
+id = mongolia.102
+title = mongolia.102.t
+desc = mongolia.102.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = MON
+}
+
+option = {
+###Outrageous.
+
+name = mongolia.102.a
+ai_chance = { factor = 100}
+
+add_political_power = -50
+hidden_effect = {
+set_country_flag = romanov_rejected
+}
+
+
+}
+
+}
+
+###Intervene in the Romanov conflict
+
+country_event = {
+id = mongolia.103
+title = mongolia.103.t
+desc = mongolia.103.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = MON
+TOW = { has_war_with = BWR }
+has_country_flag = romanov_rejected
+}
+
+option = {
+###We heed our call
+
+name = mongolia.103.a
+ai_chance = { factor = 95}
+
+declare_war_on = {
+    target = TOW
+    type = annex_everything
+}
+declare_war_on = {
+    target = BWR
+    type = annex_everything
+}
+
+654 = { add_core_of = MON }
+
+
+}
+
+option = {
+###We Are too weak
+
+name = mongolia.103.b
+ai_chance = { factor = 5}
+
+add_political_power = -200
+add_war_support = -0.3
+add_stability = -0.3
+
+
+}
+
+}
+
+###Treaty secured. Demand Buryatia 
+
+country_event = {
+id = mongolia.104
+title = mongolia.104.t
+desc = mongolia.104.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = MON
+}
+
+option = {
+###We follow our promises
+
+name = mongolia.102.a
+ai_chance = { factor = 100}
+
+IRK = { country_event = {
+id = mongolia.105
+days = 3
+}
+}
+
+}
+
+}
+
+###Irkutsk Concedes Buryatia?
+
+country_event = {
+id = mongolia.105
+title = mongolia.105.t
+desc = mongolia.105.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = IRK
+}
+
+option = {
+###We will not surrender an inch of Irkutsk!
+
+name = mongolia.105.a
+ai_chance = { factor = 90}
+
+MON = { country_event = {
+id = mongolia.107
+days = 3
+}
+}
+
+
+}
+
+option = {
+###They can have their wasteland
+
+name = mongolia.105.a
+ai_chance = { factor = 10}
+
+MON = { country_event = {
+id = mongolia.106
+days = 3
+}
+}
+
+
+}
+
+}
+
+###Irkutskan Treaty Accepted
+
+country_event = {
+id = mongolia.106
+title = mongolia.106.t
+desc = mongolia.106.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = MON
+}
+
+option = {
+###That was a surprise
+
+name = mongolia.106.a
+ai_chance = { factor = 100}
+
+transfer_state = 564
+564 = { set_demilitarized_zone = no }
+
+}
+
+}
+
+###Irkutskan Treaty Rejected
+
+country_event = {
+id = mongolia.107
+title = mongolia.107.t
+desc = mongolia.107.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = MON
+}
+
+option = {
+###What a shame...
+
+name = mongolia.107.a
+ai_chance = { factor = 99}
+
+declare_war_on = {
+    target = IRK
+    type = annex_everything
+}
+
+IRK = { leave_faction = yes }
+IRK = { country_event = {
+id = mongolia.108
+}
+}
+}
+
+option = {
+###We can't fight them
+
+name = mongolia.107.a
+ai_chance = { factor = 1}
+
+add_political_power = -200
+add_war_support = -0.3
+add_stability = -0.3
+
+
+}
+
+
+}
+
+###Monarchist Betrayal
+
+country_event = {
+id = mongolia.108
+title = mongolia.108.t
+desc = mongolia.108.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = IRK
+}
+
+option = {
+###Are we doomed?
+
+name = mongolia.108.a
+ai_chance = { factor = 100}
+
+add_ideas = IRK_monarchist_treason
+
+
+}
+
+}
+
+###Tuva Revolts
+
+country_event = {
+id = mongolia.109
+title = mongolia.109.t
+desc = mongolia.109.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = MON
+has_war_with = IRK
+casualties > 10000
+
+}
+
+option = {
+###Tannu What?
+
+name = mongolia.109.a
+ai_chance = { factor = 100}
+
+TAN = { transfer_state = 329 }
+TAN = { load_oob = "TAN_1936" }
+declare_war_on = {
+    target = TAN
+    type = annex_everything
+}
+
+
+}
+
+option = {
+###Tannu Why?
+
+name = mongolia.109.b
+ai_chance = { factor = 0}
+
+TAN = { transfer_state = 329 }
+TAN = { load_oob = "TAN_1936" }
+declare_war_on = {
+    target = TAN
+    type = annex_everything
+}
+
+TAN = { change_tag_from = MON }
+
+}
+
+}

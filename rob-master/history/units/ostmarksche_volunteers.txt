@@ -1,0 +1,29 @@
+division_template = {
+	name = "Ostmärkische Sturmscharen"			
+	division_names_group = AUS_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+}
+
+units = {
+	division = {
+		name = "I Ostmärkische Sturmscharen"
+		location =  11618
+		division_template = "Ostmärkische Sturmscharen"
+	}
+	division = {
+		name = "II Ostmärkische Sturmscharen"
+		location = 3673
+		division_template = "Ostmärkische Sturmscharen"
+	}
+	division = {
+		name = "III Ostmärkische Sturmscharen"
+		location = 9648
+		division_template = "Ostmärkische Sturmscharen"
+	}
+
+}

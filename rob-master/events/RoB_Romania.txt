@@ -1,0 +1,362 @@
+#################
+###Romanian Events
+#################
+
+add_namespace = romania
+
+
+###Carol assassinated
+
+country_event = {
+id = romania.99
+title = romania.99.t
+desc = romania.99.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = ROM
+date > 1935.12.18
+}
+
+option = {
+name = romania.99.a
+ai_chance = { factor = 100}
+kill_country_leader = yes
+create_country_leader = {
+	name = "Michael I"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = conservative_subtype
+	traits = {
+		
+	}
+}
+create_country_leader = {
+	name = "Michael I"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = social_democracy_subtype
+	traits = {
+		
+	}
+}
+create_country_leader = {
+	name = "Michael I"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+		
+	}
+}
+        hidden_effect = { country_event = { id = romania.100 days = 20 } } 
+}
+
+}
+
+###Iron Guard Coup
+
+country_event = {
+id = romania.100
+title = romania.100.t
+desc = romania.100.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = ROM
+}
+
+
+
+option = {
+###The guard is victorious
+
+name = romania.100.a
+ai_chance = { factor = 40}
+
+add_political_power = -100
+add_stability = -0.2
+add_popularity = {
+    ideology = pelekist
+    popularity = 0.25
+}
+set_politics = {
+	ruling_party = pelekist
+}
+hidden_effect = { country_event = { id = romania.102 days = 20 } }
+
+}
+option = {
+###The guard is defeated
+
+name = romania.100.b
+ai_chance = { factor = 60}
+
+add_political_power = -100
+add_stability = -0.1
+hidden_effect = { country_event = { id = romania.101 days = 15 } }
+
+}
+}
+
+###Military Coup
+
+country_event = {
+id = romania.101
+title = romania.101.t
+desc = romania.101.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = ROM
+}
+
+option = {
+###Military Storms Government
+name = romania.101.a
+ai_chance = { factor = 70}
+add_stability = -0.2
+add_popularity = {
+    ideology = reactionary
+    popularity = 0.25
+}
+set_politics = {
+	ruling_party = reactionary
+}
+hidden_effect = { country_event = { id = romania.103 days = 15 } }
+
+}
+option = {
+name = romania.101.b
+###Military Coup Defeated
+ai_chance = { factor = 30}
+add_stability = -0.1
+
+hidden_effect = { country_event = { id = romania.104 days = 15 } }
+
+}
+}
+
+###Romanian Civil War - Iron Guard vs Republic 
+country_event = {
+id = romania.102
+title = romania.102.t
+desc = romania.102.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = ROM
+}
+
+option = {
+name = romania.102.a
+ai_chance = { factor = 100}
+RMR = { transfer_state = 833 }
+RMR = { transfer_state = 832 }
+RMR = { transfer_state = 77 }
+RMR = { transfer_state = 79 }
+RMR = { transfer_state = 78 }
+RMR = { transfer_state = 766 }
+RMR = { transfer_state = 831 }
+RMR = { transfer_state = 830 }
+RMR = { transfer_state = 80 }
+RMR = { transfer_state = 925 }
+		every_state = {
+		limit = { is_core_of = ROM } add_core_of = RMR
+}
+declare_war_on = {
+    target = RMR
+    type = annex_everything
+}
+RMR = { load_oob = "RMR_STRONG" }
+
+}
+}
+
+###Romanian Civil War - Junta vs Republic vs Iron Guard 
+country_event = {
+id = romania.103
+title = romania.103.t
+desc = romania.103.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = ROM
+}
+
+option = {
+name = romania.103.a
+ai_chance = { factor = 100}
+RMR = { transfer_state = 833 }
+RMR = { transfer_state = 832 }
+RMR = { transfer_state = 77 }
+RMR = { transfer_state = 79 }
+RMR = { transfer_state = 78 }
+RMR = { transfer_state = 766 }
+RMR = { transfer_state = 831 }
+RMR = { transfer_state = 830 }
+RMR = { transfer_state = 80 }
+RMR = { transfer_state = 925 }
+		every_state = {
+		limit = { is_core_of = ROM } add_core_of = RMR    
+}
+TIG = { transfer_state = 81 }
+TIG = { transfer_state = 82 }
+TIG = { transfer_state = 83 }
+TIG = { transfer_state = 84 }
+TIG = { transfer_state = 76 }
+TIG = { transfer_state = 154 }
+		every_state = {
+		limit = { is_core_of = ROM } add_core_of = TIG   
+}
+declare_war_on = {
+    target = RMR
+    type = annex_everything
+}
+declare_war_on = {
+    target = TIG
+    type = annex_everything
+}
+RMR = { declare_war_on = {
+    target = TIG
+    type = annex_everything
+}
+}
+RMR = { load_oob = "RMR_WEAK" }
+TIG = { load_oob = "TIG_WEAK" }
+
+}
+}
+
+###Romanian Civil War - Kingdom vs Iron Guard 
+country_event = {
+id = romania.104
+title = romania.104.t
+desc = romania.104.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = ROM
+}
+
+option = {
+name = romania.104.a
+ai_chance = { factor = 100}
+
+TIG = { transfer_state = 81 }
+TIG = { transfer_state = 82 }
+TIG = { transfer_state = 83 }
+TIG = { transfer_state = 84 }
+TIG = { transfer_state = 76 }
+TIG = { transfer_state = 154 }
+TIG = { transfer_state = 46 }
+TIG = { transfer_state = 80 }
+		every_state = {
+		limit = { is_core_of = ROM } add_core_of = TIG   
+}
+declare_war_on = {
+    target = TIG
+    type = annex_everything
+}
+
+TIG = { load_oob = "TIG_STRONG" }
+
+}
+}
+
+###Romanian Civil War - Szekely Revolt 
+country_event = {
+id = romania.105
+title = romania.105.t
+desc = romania.105.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+OR = {
+AND = { tag = ROM
+has_government = pelekist
+has_war = yes
+controls_state = 76
+}
+AND = { tag = TIG
+has_government = pelekist
+has_war = yes
+controls_state = 76
+}
+}
+}
+
+option = {
+name = romania.105.a
+ai_chance = { factor = 100}
+
+SZK = { transfer_state = 154 }
+SZK = { transfer_state = 76 }
+SZK = { add_state_core = 154 }
+SZK = { add_state_core = 76 }
+
+ROM = { declare_war_on = {
+    target = SZK
+    type = annex_everything
+}
+}
+TIG = { declare_war_on = {
+    target = SZK
+    type = annex_everything
+}
+}
+RMR = { declare_war_on = {
+    target = SZK
+    type = annex_everything
+}
+}
+
+SZK = { load_oob = "SZK_1936" }
+hidden_effect = { SZK = { country_event = { id = romania.106 days = 100 } } }
+
+}
+}
+
+###SZK Peace event 
+country_event = {
+id = romania.106
+title = romania.106.t
+desc = romania.106.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = SZK
+}
+
+option = {
+name = romania.106.a
+ai_chance = { factor = 100}
+
+white_peace = ROM
+white_peace = TIG
+white_peace = RMR
+HUN = { annex_country = {
+    target = SZK
+    transfer_troops = yes
+}
+}
+
+}
+}

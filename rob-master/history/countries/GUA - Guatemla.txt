@@ -1,0 +1,44 @@
+﻿capital = 313
+
+oob = "GUA_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+}
+
+set_war_support = 0.1
+set_convoys = 5
+
+
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 0
+	authoritharian = 89
+	reactionary = 11
+	pelekist = 0
+}
+
+set_politics = {
+	ruling_party = authoritharian
+	last_election = "1933.10.16"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Jorge Ubico"
+	desc = "POLITICS_JORGE_UBICO_DESC"
+	picture = "GFX_portrait_guatemala_jorge_ubico"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}

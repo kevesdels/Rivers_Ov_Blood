@@ -1,0 +1,1250 @@
+ideas = {
+  country = {
+  
+  famine_of_1933 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				conscription = -0.02
+			}
+  
+  }
+  
+  bourgeoisie_influence = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_bourgeoisie_influence
+	  modifier = {
+				consumer_goods_factor = 0.15
+				political_power_gain = -0.4
+				industrial_capacity_factory = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				
+			}
+  
+   }
+   
+   bourgeoisie_influence_2 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_bourgeoisie_influence_2
+	  modifier = {
+				consumer_goods_factor = 0.15
+				political_power_gain = -0.6
+				industrial_capacity_factory = -0.25
+				
+				
+			}
+  
+   }
+   
+   southern_defeat = {
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_southern_defeat
+	 
+	 modifier = {
+     army_org_factor = -0.1
+	 offence = -0.15
+	 resistance_target = 0.5
+	 army_morale_factor = -0.05
+	 defence = 0.2
+    }
+   }
+   
+   birthplace_of_revolution = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_birthplace_of_revolution
+   
+   modifier = {
+   stability_factor = 0.15
+   political_power_gain	= 0.1
+   send_volunteer_size = 4
+   justify_war_goal_time = -0.2
+    }
+   }
+   
+   
+    mass_unrest = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_mass_unrest
+   
+   modifier = {
+   stability_factor = -0.25
+   political_power_gain	= -0.7
+  
+    }
+   }
+   
+     bolshevik_strike = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_bolshevik_strike
+   
+   modifier = {
+   production_factory_max_efficiency_factor = -0.35
+   industrial_capacity_factory = -0.35
+  
+    }
+   }
+   
+   ###focus
+   ###famine
+   
+   sov_grain_quta = {
+     allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+				consumer_goods_factor = -0.05
+
+			}
+   
+   
+   }
+      sov_grain_quta_2 = {
+     allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+				consumer_goods_factor = -0.08
+
+			}
+   
+   
+   }
+   
+         sov_grain_quta_3 = {
+     allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+				consumer_goods_factor = -0.08
+                stability_factor = 0.05
+			}
+   
+   
+   }
+     famine_of_1933_control = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				conscription = -0.01
+			}
+  
+  }
+  sov_international_commite = {
+     allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+				
+                stability_factor = 0.05
+			}
+   
+   
+   }
+   
+     sov_international_commite_2 = {
+     allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+				political_power_gain = 0.2
+                stability_factor = 0.05
+				
+			}
+   
+   
+   }
+      
+     sov_american_experts = {
+     allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+
+				industrial_capacity_factory = 0.05
+			}
+   
+   
+   }
+     famine_of_1933_food_imports = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				conscription = -0.018
+			}
+  
+  }
+  ###focus industry
+       labour_battalions_five_year = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+           conscription_factor = -0.05
+			production_speed_buildings_factor = 0.1
+			}
+  
+  }
+  
+         peasants_replaced = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+             industrial_capacity_factory = 0.1
+			production_speed_buildings_factor = 0.05
+			}
+  
+  }
+  
+           criminal_labour = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+             stability_factor = -0.02
+			consumer_goods_factor = -0.07
+			}
+  
+  }
+             criminal_labour_2 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+             stability_factor = -0.03
+			consumer_goods_factor = -0.12
+			}
+  
+  }
+ immigration_to_cities_1 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+            production_factory_max_efficiency_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.08
+			}
+  
+  }
+   immigration_to_cities_2 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+            production_factory_max_efficiency_factor = 0.09
+			production_factory_efficiency_gain_factor = 0.12
+			consumer_goods_factor = 0.04
+			}
+  
+  }
+  
+     red_youth_economics = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+        production_speed_buildings_factor = 0.07
+			}
+  
+  }
+      agriculture_resources_bukarin = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+        consumer_goods_factor = -0.05
+			}
+  
+  }
+        agricultural_research_bukharin_1 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+        research_speed_factor = 0.05
+			}
+  
+  }
+    bourgeoisie_influence_3 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_bourgeoisie_influence
+	  modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				
+			}
+  
+   }
+         agriculture_grants_bukarin = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+        production_factory_max_efficiency_factor = 0.15
+			}
+  
+  }
+           rural_education = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+        research_speed_factor = 0.025
+			}
+  
+  }
+  work_in_schools = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         production_speed_buildings_factor = 0.05
+		 consumer_goods_factor = -0.02
+			}
+  
+  }
+    more_export_bukharin = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         min_export = 0.25
+		 political_power_gain = -0.05
+			}
+  
+  }
+      more_work_bukharin = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         production_speed_buildings_factor = 0.05
+		 stability_factor = 0.05
+			}
+  
+  }
+  ###VLASLOV TREE
+ vlaslovit_economy_1 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         political_power_gain = 0.1
+
+			}
+  
+  }
+   vlaslovit_economy_2 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         political_power_gain = 0.1
+		 production_speed_buildings_factor = 0.15
+
+			}
+  
+  }
+     vlaslovit_economy_3 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         political_power_gain = 0.1
+		 production_speed_buildings_factor = 0.15
+		 industrial_capacity_factory = 0.15
+
+			}
+  
+  }
+  
+       vlaslovit_militias = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         political_power_gain = 0.2
+
+
+			}
+  
+  }
+  
+         vlaslovit_expanded = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         political_power_gain = 0.4
+
+
+			}
+  
+  }
+  
+           slave_labour = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     production_speed_buildings_factor = 0.07
+
+
+			}
+  
+  }
+   vlaslov_russian_identiy = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+  conscription = 0.005
+
+
+			}
+  
+  }
+     vlaslov_russian_identiy_2 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+  conscription = 0.02
+
+
+			}
+  
+  }
+  
+    atheist_state = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         research_speed_factor = 0.025
+			}
+  
+  }
+  
+ peoples_red_guard = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         conscription = 0.015
+		 army_morale_factor = -0.1
+			}
+  
+  }
+ intelectualls_purged = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         research_speed_factor = -0.05
+		 stability_factor = 0.1
+			}
+  
+  }
+ collective_economy = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         production_factory_max_efficiency_factor = -0.08
+		 production_speed_buildings_factor = 0.25
+			}
+  
+  }
+  
+   collective_farming = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         production_factory_max_efficiency_factor = -0.1
+		 consumer_goods_factor = -0.2
+			}
+  
+  }
+  
+     autarky_measures = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         min_export = -0.5
+		 industrial_capacity_factory = -0.05
+			}
+  
+  }
+  
+       united_we_suffer = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         conscription = 0.05
+		 industrial_capacity_factory = -0.15
+		 line_change_production_efficiency_factor = -0.15
+			}
+  
+  }
+  
+####BUKHARIN
+       SOV_bukharin_market_socialism = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         production_speed_buildings_factor = -0.15
+		 industrial_capacity_factory = 0.08
+		 line_change_production_efficiency_factor = 0.05
+			}
+  
+  } 
+
+     market_socialism_2 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         production_speed_buildings_factor = -0.2
+		 industrial_capacity_factory = 0.12
+		 line_change_production_efficiency_factor = 0.09
+			}
+  
+  } 
+
+   weakened_beuracrcy = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         political_power_factor = 0.25
+			}
+  
+  }
+   weakened_beuracrcy_2 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         political_power_factor = 0.25
+		 trade_laws_cost_factor =-0.25
+		 mobilization_laws_cost_factor =-0.25
+		 economy_cost_factor =-0.25
+			}
+  
+  } 
+   welfare_programms = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+        consumer_goods_factor = 0.06
+		industrial_capacity_factory = 0.1
+			}
+  
+  } 
+   for_the_people = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      stability_factor = 0.15
+	  surrender_limit = 0.25
+	  justify_war_goal_time = -0.35
+	  
+			}
+  
+  } 
+ ###IDEAS FOR KAMENEV
+    land_distrubution = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      consumer_goods_factor = -0.07	 
+			}
+  
+  }
+  
+     workers_of_minorities = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      political_power_factor = 0.25
+	  production_factory_max_efficiency_factor = 0.03
+			}
+  
+  }
+      urbanization_kamenev = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      MONTHLY_POPULATION = 0.45
+	  
+			}
+  
+  }
+  
+       workers_unite_kamenev = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      justify_war_goal_time = -0.45
+	  subversive_activites_upkeep =-0.45
+	  war_support_factor = 0.2
+	  
+			}
+  
+  }
+  ###MOLOTOV IDEAS
+ molotov_camps = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      production_speed_buildings_factor = 0.15
+	   stability_factor =-0.08
+			}
+  
+  }
+ molotov_industry = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      production_speed_buildings_factor = 0.1
+	  production_factory_max_efficiency_factor = 0.15
+			}
+  
+  }
+  soviet_worker = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      production_factory_efficiency_gain_factor = 0.25
+	  war_support_factor = 0.06
+			}
+  
+  }
+  
+  mass_conscription = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      conscription = 0.025
+	  stability_factor =-0.15
+			}
+  
+  }
+  mass_army = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      army_morale_factor = 0.15
+			}
+  
+  }
+   mass_army_2 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      army_morale_factor = 0.15
+	  army_attack_factor = 0.1
+			}
+  
+  }
+   mass_army_3 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      army_morale_factor = 0.15
+	  army_attack_factor = 0.1
+	  planning_speed = 0.2
+			}
+  
+  }
+  
+     march_until_death = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+        war_support_factor = 0.15
+		army_attack_factor = 0.1
+		recon_factor = 0.05
+			}
+  
+  }
+###TOMSKY IDEAS
+     rural_communes = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+          consumer_goods_factor = -0.08
+		  stability_factor = 0.05
+			}
+  
+  }
+  
+       worker_self_managment = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+          industrial_capacity_factory = 0.07
+			}
+  
+  }
+  
+         peoples_militia = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+          conscription = 0.015
+		  army_org_factor =-0.07
+			}
+  
+  }
+          united_we_work = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+          stability_factor = 0.15
+		  war_support_factor =0.15
+		  production_speed_buildings_factor = 0.25
+			}
+  
+  }
+  
+  ###ZINOVIEV
+            international_socialist_academy = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+		  research_speed_factor = 0.05
+			}
+  
+  }
+             humanity_unite = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+		  non_core_manpower = 0.1
+		  planning_speed = 0.2
+			}
+  
+  }
+  
+####DIPLO
+ SOV_comrades_abroad = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+		  justify_war_goal_time = -0.15
+			}
+  
+  }
+ }
+
+###ARMY STAFF###
+
+army_chief = {
+
+ RSR_issa_pliyev = {
+ cost = 150
+ picture = RSR_issa_plyev
+ allowed = { original_tag = SOV }
+ traits = { army_chief_offensive_2 }
+ }
+ 
+ RSR_semyon_timoshenko = {
+ cost = 150
+ picture = RSR_semyon_timoshenko
+ allowed = { original_tag = SOV }
+ traits = { army_cavalry_2 }
+ }
+ 
+ RSR_ivan_konev = {
+ cost = 150
+ picture = RSR_ivan_kovenev
+ allowed = { original_tag = SOV }
+ traits = { army_armored_2 }
+ }
+ 
+ RSR_aleksandr_vasilevsky = {
+ cost = 150
+ picture = RSR_aleksander_vasilyveskly
+ allowed = { original_tag = SOV }
+ traits = { army_entrenchment_2 }
+ }
+}
+
+navy_chief = {
+
+ RSR_aleksandr_nemits = {
+ cost = 150
+ picture = RSR_aleksander_nemitz
+ allowed = { original_tag = SOV }
+ traits = { navy_chief_old_guard }
+ }
+
+ RSR_yevgeny_berens = {
+ cost = 150
+ picture = RSR_yevgeny_barens
+ allowed = { original_tag = SOV }
+ traits = { navy_chief_reform_2 }
+ }
+
+}
+
+air_chief = {
+
+ RSR_novkikov = {
+ cost = 150
+ picture = RSR_novikov
+ available = { has_completed_focus = SOV_novikovsplan }
+ allowed = { tag = SOV }
+ traits = { air_close_air_support_3 }
+ }
+ 
+ RSR_alksnis = {
+ cost = 150
+ picture = RSR_alksnis
+ available = { has_completed_focus = SOV_alksnisplan }
+ allowed = { tag = SOV }
+ traits = { air_tactical_bombing_3 }
+ }
+}
+
+
+high_command = { 
+ RSR_aleksandr_vasilevsky_hc = {
+ cost = 150
+ picture = RSR_aleksander_vasilyveskly
+ allowed = { original_tag = SOV }
+ traits = { army_armored_1 }
+ }
+
+ RSR_boris_shaposhnikov_hc = {
+ cost = 150
+ picture = RSR_boris_shapishdks
+ allowed = { original_tag = SOV }
+ traits = { army_artillery_2 }
+ }
+ 
+ RSR_kliment_voroshilov_hc = {
+ cost = 150
+ picture = RSR_kliment_vorshilov
+ allowed = { original_tag = SOV }
+ traits = { army_chief_planning_2 }
+ }
+ 
+ RSR_alexander_yegorov_hc = {
+ cost = 150
+ picture = RSR_aleksander_yegorov
+ allowed = { original_tag = SOV }
+ traits = { army_chief_drill_2 }
+ }
+ 
+ RSR_vasily_blyukher_hc = {
+ cost = 150
+ picture = RSR_vasily_bluckher
+ allowed = { original_tag = SOV }
+ traits = { army_chief_defensive_2 }
+ }
+ 
+ RSR_semyon_budyonny_hc = {
+ cost = 150
+ picture = RSR_semyonov_budynvo
+ allowed = { original_tag = SOV }
+ traits = { army_chief_old_guard }
+ }
+
+}
+
+ 
+}

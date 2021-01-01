@@ -1,0 +1,48 @@
+﻿capital = 828
+
+oob = "VCT_1936"
+
+give_military_access = SWI
+
+set_research_slots = 1
+
+set_technology = {
+}
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 0
+	authoritharian = 3
+	reactionary = 97
+	pelekist = 0
+}
+add_ideas = {
+	disarmed_nation
+}
+
+set_stability = 0.75
+set_war_support = 0.1
+
+create_country_leader = {
+	name = "Pope Pius XI"
+	desc = ""
+	picture = "Portrait_Vatican_Pope.dds"
+	expire = "1939.2.11"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+
+}
+

@@ -1,0 +1,377 @@
+#################
+###Afghan Events
+#################
+
+add_namespace = afghanistan
+
+
+###Afghan Aid to Khiva
+
+country_event = {
+id = afghanistan.100
+title = afghanistan.100.t
+desc = afghanistan.100.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = KHV
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = afghanistan.100.a
+ai_chance = { factor = 100}
+
+load_oob = "khiva_aid"
+
+}
+
+}
+
+###Afghan Takes Quetta
+
+
+country_event = {
+id = afghanistan.101
+title = afghanistan.101.t
+desc = afghanistan.101.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = DEL
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = afghanistan.101.a
+ai_chance = { factor = 100}
+
+}
+
+}
+
+###Afghan Offers Protection
+
+
+country_event = {
+id = afghanistan.102
+title = afghanistan.102.t
+desc = afghanistan.102.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = SNH
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = afghanistan.102.a
+ai_chance = { factor = 50}
+		AFG = { country_event = {
+    id = afghanistan.103
+    days = 2
+}
+}
+}
+
+option = {
+name = afghanistan.102.b
+ai_chance = { factor = 5}
+AFG = { declare_war_on = {
+    target = SNH
+    type = annex_everything
+}
+}
+
+
+}
+
+}
+
+country_event = {
+id = afghanistan.103
+title = afghanistan.103.t
+desc = afghanistan.103.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = AFG
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = afghanistan.103.a
+ai_chance = { factor = 100}
+AFG = { puppet = SNH }
+
+}
+
+}
+
+country_event = {
+id = afghanistan.104
+title = afghanistan.104.t
+desc = afghanistan.104.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = BAL
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = afghanistan.104.a
+ai_chance = { factor = 50}
+		AFG = { country_event = {
+    id = afghanistan.105
+    days = 2
+}
+}
+}
+
+option = {
+name = afghanistan.104.b
+ai_chance = { factor = 5}
+AFG = { declare_war_on = {
+    target = BAL
+    type = annex_everything
+}
+}
+
+
+}
+
+}
+
+country_event = {
+id = afghanistan.105
+title = afghanistan.105.t
+desc = afghanistan.105.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = AFG
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = afghanistan.105.a
+ai_chance = { factor = 100}
+annex_country = {
+    target = BAL
+    transfer_troops = yes
+}
+}
+
+}
+
+
+country_event = {
+id = afghanistan.106
+title = afghanistan.106.t
+desc = afghanistan.106.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = JAK
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = afghanistan.106.a
+ai_chance = { factor = 50}
+		AFG = { country_event = {
+    id = afghanistan.107
+    days = 2
+}
+}
+}
+
+option = {
+name = afghanistan.106.b
+ai_chance = { factor = 5}
+AFG = { declare_war_on = {
+    target = JAK
+    type = annex_everything
+}
+}
+
+
+}
+
+}
+
+country_event = {
+id = afghanistan.107
+title = afghanistan.107.t
+desc = afghanistan.107.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = AFG
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = afghanistan.107.a
+ai_chance = { factor = 100}
+AFG = { puppet = JAK }
+
+}
+
+}
+
+###Afghan Takes Peshawar
+
+
+country_event = {
+id = afghanistan.108
+title = afghanistan.108.t
+desc = afghanistan.108.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = DEL
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = afghanistan.108.a
+ai_chance = { factor = 100}
+
+}
+
+}
+
+###Afghan Takes Merv
+
+
+country_event = {
+id = afghanistan.109
+title = afghanistan.109.t
+desc = afghanistan.109.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = AFG
+TRS = { controls_state = 584 }
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = afghanistan.109.a
+ai_chance = { factor = 66}
+transfer_state = 1179
+add_manpower = -500
+}
+
+option = {
+name = afghanistan.109.b
+ai_chance = { factor = 33}
+add_stability = -0.1
+}
+
+}
+
+###Persia invades Baluchistan?
+
+
+country_event = {
+id = afghanistan.110
+title = afghanistan.110.t
+desc = afghanistan.110.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = PER
+BAL = { controls_state = 444 }
+}
+mean_time_to_happen = { days = 50 }
+
+option = {
+name = afghanistan.110.a
+ai_chance = { factor = 66}
+
+declare_war_on = {
+    target = BAL
+    type = annex_everything
+}
+
+hidden_effect = { 
+		AFG = { country_event = {
+    id = afghanistan.111
+    days = 2
+}
+}
+}
+
+444 = { add_core_of = PER }
+1169 = { add_core_of = PER }
+hidden_effect = { 410 = { add_core_of = BAL } }
+
+}
+
+option = {
+name = afghanistan.110.b
+ai_chance = { factor = 33}
+add_stability = -0.1
+}
+
+}
+
+###The Afghans strike back
+
+
+country_event = {
+id = afghanistan.111
+title = afghanistan.111.t
+desc = afghanistan.111.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = AFG
+}
+
+option = {
+name = afghanistan.111.a
+ai_chance = { factor = 66}
+
+declare_war_on = {
+    target = PER
+    type = annex_everything
+}
+
+puppet = BAL
+
+}
+
+option = {
+name = afghanistan.111.b
+ai_chance = { factor = 33}
+add_stability = -0.05
+}
+
+}

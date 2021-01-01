@@ -1,0 +1,127 @@
+division_template = {
+
+name = "Imperial Infantry Division"
+is_locked = no
+
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+
+}
+
+division_template = {
+
+name = "Imperial Auxiliaries"
+is_locked = no
+
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+
+
+}
+}
+
+units = {
+ division = {
+name = "4th Rifle Division"
+location = 7274
+division_template = "Imperial Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+
+ division = {
+name = "12th Ural Rifle Division"
+location = 7274
+division_template = "Imperial Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+
+ division = {
+name = "1st Imperial Auxiliary Brigade"
+location = 12679
+division_template = "Imperial Auxiliaries"
+start_experience_factor = 0.4
+start_equipment_factor = 0.4
+
+}
+ division = {
+name = "2nd Imperial Auxiliary Brigade"
+location = 4366
+division_template = "Imperial Auxiliaries"
+start_experience_factor = 0.3
+start_equipment_factor = 0.5
+
+}
+ division = {
+name = "9th Imperial Auxiliary Brigade"
+location = 7722
+division_template = "Imperial Auxiliaries"
+start_experience_factor = 0.3
+start_equipment_factor = 0.5
+
+}
+ division = {
+name = "8th Imperial Auxiliary Brigade"
+location = 10529
+division_template = "Imperial Auxiliaries"
+start_experience_factor = 0.1
+start_equipment_factor = 0.8
+
+}
+ division = {
+name = "3rd Imperial Auxiliary Brigade"
+location = 7793
+division_template = "Imperial Auxiliaries"
+start_experience_factor = 0.1
+start_equipment_factor = 0.6
+
+}
+ division = {
+name = "4th Imperial Auxiliary Brigade"
+location = 10580
+division_template = "Imperial Auxiliaries"
+start_experience_factor = 0.4
+start_equipment_factor = 0.4
+
+}
+ division = {
+name = "5th Imperial Auxiliary Brigade"
+location = 10673
+division_template = "Imperial Auxiliaries"
+start_experience_factor = 0.1
+start_equipment_factor = 0.8
+
+}
+ division = {
+name = "6th Imperial Auxiliary Brigade"
+location = 10613
+division_template = "Imperial Auxiliaries"
+start_experience_factor = 0.2
+start_equipment_factor = 0.5
+
+}
+ division = {
+name = "7th Imperial Auxiliary Brigade"
+location = 7849
+division_template = "Imperial Auxiliaries"
+start_experience_factor = 0.1
+start_equipment_factor = 0.6
+
+}
+}

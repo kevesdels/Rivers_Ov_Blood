@@ -1,0 +1,106 @@
+division_template = {
+
+name = "Croatian Infantry Division"
+
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 
+		recon = { x = 0 y = 1 }  
+	}
+
+}
+
+division_template = {
+
+name = "Croatian Revolutionary Guard"
+
+regiments = {
+   light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 
+		recon = { x = 0 y = 1 } 
+        engineer = { x = 0 y = 1 }		
+	}
+
+}
+
+units = {
+
+
+division = {
+name = "2.Croatian Infantry Division"
+location = 6647
+division_template = "Croatian Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "3.Croatian Infantry Division"
+location = 9608
+division_template = "Croatian Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "4.Croatian Infantry Division"
+location = 3596
+division_template = "Croatian Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "Croatian Revolutionary Guard"
+location = 11581
+division_template = "Croatian Revolutionary Guard"
+start_experience_factor = 0.8
+start_equipment_factor = 0.7
+}
+division = {
+name = "5.Croatian Infantry Division"
+location = 3596
+division_template = "Croatian Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+division = {
+name = "6.Croatian Infantry Division"
+location = 3596
+division_template = "Croatian Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+division = {
+name = "7.Croatian Infantry Division"
+location = 3596
+division_template = "Croatian Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+division = {
+name = "8.Croatian Infantry Division"
+location = 3596
+division_template = "Croatian Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+}
+}

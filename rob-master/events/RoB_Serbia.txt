@@ -1,0 +1,298 @@
+#################
+###Serbian Events
+#################
+
+add_namespace = serbia
+
+
+###Bosnian Revolt
+
+country_event = {
+id = serbia.100
+title = serbia.100.t
+desc = serbia.100.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = SER
+date > 1934.6.7
+}
+mean_time_to_happen = { days = 1 }
+
+immediate = { 
+BOS = { transfer_state = 104 }
+}
+
+option = {
+name = serbia.100.a
+add_political_power = -100
+add_stability = -0.1
+set_country_flag = bosnia_has_revolted
+SER = { country_event = { id = serbia.101 days = 10 }}
+HUN = { 
+country_event = { id = rob_hungary.5 days = 7 }}
+}
+option = {
+name = serbia.100.b
+set_country_flag = bosnia_has_revolted
+BOS = { change_tag_from = SER }
+SER = { country_event = { id = serbia.101 days = 10 }}
+HUN = { 
+country_event = { id = rob_hungary.5 days = 7 } 
+	  }
+}
+}
+
+country_event = {
+id = serbia.101
+title = serbia.101.t
+desc = serbia.101.d
+fire_only_once = yes
+is_triggered_only = yes
+
+hidden = yes
+
+immediate = { declare_war_on = { target = BOS  type = annex_everything } }
+
+}
+
+# Croatia and Bosnia win
+
+country_event = {
+id = serbia.102
+title = serbia.102.t
+desc = serbia.102.d
+fire_only_once = yes
+trigger = {
+tag = BOS
+OR = { 
+controls_state = 1140
+CRO = { controls_state = 1140 }
+MNT = { controls_state = 1140 }
+}
+OR = { 
+controls_state = 1117
+CRO = { controls_state = 1117 }
+MNT = { controls_state = 1117 }
+}
+OR = { 
+controls_state = 105
+CRO = { controls_state = 105 }
+MNT = { controls_state = 105 }
+}
+OR = { 
+controls_state = 764
+CRO = { controls_state = 764 }
+MNT = { controls_state = 764 }
+}
+controls_state = 104
+
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = serbia.102.a
+ai_chance = { factor = 95}
+
+white_peace = SER
+CRO = { white_peace = SER }
+MNT = { white_peace = SER }
+
+1118 = { add_core_of = BOS }
+1119 = { add_core_of = BOS }
+BOS = { transfer_state = 1118 }
+BOS = { transfer_state = 1119 }
+1116 = { add_core_of = BOS }
+1117 = { add_core_of = BOS }
+BOS = { transfer_state = 1116 }
+BOS = { transfer_state = 1117 }
+1120 = { add_core_of = BOS }
+BOS = { transfer_state = 1120 }
+45 = { add_core_of = CRO }
+1139 = { add_core_of = CRO }
+764 = { add_core_of = CRO }
+869 = { add_core_of = CRO }
+CRO = { transfer_state = 45 }
+CRO = { transfer_state = 1139 }
+CRO = { transfer_state = 764 }
+CRO = { transfer_state = 869 }
+CRO = { set_country_flag = croatia_victory }
+
+add_stability = 0.1
+
+}
+
+option = {
+ name = serbia.102.b
+ai_chance = { factor = 5}
+
+
+add_political_power = -50
+
+}
+}
+
+# Serbia win croatia
+
+country_event = {
+id = serbia.103
+title = serbia.103.t
+desc = serbia.103.d
+fire_only_once = yes
+trigger = {
+tag = SER
+OR = { 
+controls_state = 109
+ALB = { controls_state = 109 }
+}
+controls_state = 1140
+controls_state = 104
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = serbia.103.a
+ai_chance = { factor = 30}
+
+white_peace = CRO
+ALB = { white_peace = CRO }
+
+
+add_stability = 0.2
+}
+
+option = {
+ name = serbia.103.b
+ai_chance = { factor = 50}
+
+
+white_peace = CRO
+ALB = { white_peace = CRO }
+
+868 = { add_core_of = SER }
+937 = { add_core_of = SER }
+SER = { transfer_state = 868 }
+SER = { transfer_state = 937 }
+add_stability = 0.1
+
+
+}
+
+option = {
+ name = serbia.103.c
+ai_chance = { factor = 15}
+
+white_peace = CRO
+ALB = { white_peace = CRO }
+868 = { add_core_of = SER }
+937 = { add_core_of = SER }
+1077 = { add_core_of = SER }
+SER = { transfer_state = 1077 }
+SER = { transfer_state = 868 }
+SER = { transfer_state = 937 }
+
+}
+
+option = {
+ name = serbia.103.e
+ai_chance = { factor = 5}
+
+
+add_political_power = -50
+
+}
+}
+
+###Montenegro Revolt
+
+country_event = {
+id = serbia.104
+title = serbia.104.t
+desc = serbia.104.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = SER
+has_war_with = CRO
+}
+mean_time_to_happen = { days = 30 }
+
+
+option = {
+name = serbia.104.a
+ai_chance = { factor = 50}
+
+add_political_power = -50
+add_stability = -0.05
+MNT = { transfer_state = 105 }
+MNT = { load_oob = "MNT_1936" }
+
+declare_war_on = { target = MNT  type = annex_everything } 
+hidden_effect = { SER = { country_event = { id = serbia.105 days = 3 } } }
+
+}
+option = {
+name = serbia.104.b
+ai_chance = { factor = 50}
+
+MNT = { transfer_state = 105 }
+MNT = { load_oob = "MNT_1936" }
+puppet = MNT
+add_political_power = -200
+add_stability = -0.25
+add_war_support = -0.25
+
+}
+}
+
+###An offer from Albania
+
+country_event = {
+id = serbia.105
+title = serbia.105.t
+desc = serbia.105.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = SER
+has_war_with = MNT
+}
+
+
+option = {
+name = serbia.105.a
+ai_chance = { factor = 50}
+
+ALB = { transfer_state = 878 }
+878 = { add_core_of = ALB }
+
+ALB = { add_to_war = { 
+    targeted_alliance = SER 
+    enemy = MNT 
+    hostility_reason = asked_to_join
+}
+}
+ALB = { add_to_war = { 
+    targeted_alliance = SER 
+    enemy = BOS 
+    hostility_reason = asked_to_join
+}
+}
+ALB = { add_to_war = { 
+    targeted_alliance = SER 
+    enemy = CRO 
+    hostility_reason = asked_to_join
+}
+}
+
+}
+option = {
+name = serbia.104.b
+ai_chance = { factor = 50}
+
+add_political_power = -10
+
+}
+}

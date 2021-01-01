@@ -1,0 +1,36 @@
+﻿capital = 699
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1926.6.7"
+	election_frequency = 72
+	elections_allowed = yes
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 5
+	conservative = 91
+	authoritharian = 0
+	reactionary = 4
+	pelekist = 0
+}
+
+create_country_leader = {
+	name = "El-Ouali Mustapha Sayed"
+	desc = ""
+	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
+	ideology = conservative_subtype
+	traits = {
+		#
+	}
+}

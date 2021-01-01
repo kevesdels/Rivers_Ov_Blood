@@ -1,0 +1,177 @@
+ideas = {
+ theorist = {
+ 
+ ###Russian Soviet Republic
+ 
+  RSR_zhukov_hc = {
+   allowed = { original_tag = SOV }
+   cost = 200
+   picture = RSR_georgy_zhukov
+   available = { has_tech = mobile_warfare }
+   research_bonus = { cat_mobile_warfare = 0.10 }
+   modifier = {
+    army_armor_attack_factor = 0.05
+	army_armor_defence_factor = 0.05
+	motorized_attack_factor = 0.05
+	motorized_defence_factor = 0.05
+   }
+  }
+  
+  RSR_vorshilov_hc = {
+   allowed = { original_tag = SOV }
+   cost = 200
+   picture = RSR_kliment_vorshilov
+   available = { has_tech = trench_warfare }
+   research_bonus = { cat_grand_battle_plan = 0.10 }
+   modifier = {
+	army_infantry_attack_factor = 0.1
+	army_infantry_defence_factor = 0.1
+   }
+  }
+  
+  RSR_shapiso_hc = {
+   allowed = { original_tag = SOV }
+   cost = 200
+   picture = RSR_boris_shapishdks
+   available = { has_tech = superior_firepower }
+   research_bonus = { cat_superior_firepower = 0.10 }
+   modifier = {
+	army_artillery_attack_factor = 0.1
+	army_artillery_defence_factor = 0.1
+   }
+  }
+  
+  RSR_buddnyov_hc = {
+   allowed = { original_tag = SOV }
+   cost = 200
+   picture = RSR_semyonov_budynvo
+   available = { has_tech = mass_assault }
+   research_bonus = { cat_mass_assault = 0.10 }
+   modifier = {
+     conscription = 0.005
+   }
+  }
+ 
+ ###Lithuania
+ 
+  LIT_povilas_plechavicius_hc = {
+   allowed = { original_tag = LIT }
+   cost = 200
+   picture = LIT_povilas_plechiavius
+   available = { has_tech = trench_warfare }
+   research_bonus = { cat_grand_battle_plan = 0.10 }
+   modifier = {
+	army_infantry_attack_factor = 0.1
+	army_infantry_defence_factor = 0.1
+   }
+  }
+  
+  LIT_kazys_musteikis_hc = {
+   allowed = { original_tag = LIT }
+   available = { has_tech = superior_firepower }
+   cost = 200
+   picture = LIT_kazys_musteikis
+   research_bonus = { cat_superior_firepower = 0.10 }
+   modifier = {
+	army_artillery_attack_factor = 0.1
+	army_artillery_defence_factor = 0.1
+   }
+  }
+  
+  LIT_stasys_rastikis_hc = {
+   allowed = { original_tag = LIT }
+   available = { has_tech = mobile_warfare }
+   cost = 200
+   picture = LIT_stasys_rastikis
+   research_bonus = { cat_mobile_warfare = 0.10 }
+   modifier = {
+    army_armor_attack_factor = 0.05
+	army_armor_defence_factor = 0.05
+	motorized_attack_factor = 0.05
+	motorized_defence_factor = 0.05
+   }
+  }
+ 
+ ###Prussia
+  PRS_heinz_guderian = {
+   allowed = { original_tag = PRS }
+   available = { has_completed_focus = PRS_lightningwar }
+   cost = 200
+   picture = PRS_heinz_guderian
+   research_bonus = { cat_mobile_warfare = 0.10 }
+   modifier = {
+    army_armor_attack_factor = 0.04
+	army_armor_defence_factor = 0.04
+	motorized_attack_factor = 0.06
+	motorized_defence_factor = 0.06
+   }
+  }
+  
+  PRS_walter_model_th = {
+   allowed = { original_tag = PRS }
+   available = { has_completed_focus = PRS_emphasizelargeoperations }
+   cost = 200
+   picture = PRS_walther_model
+   research_bonus = { cat_grand_battle_plan = 0.10 }
+   modifier = {
+	army_infantry_attack_factor = 0.1
+	army_infantry_defence_factor = 0.1
+   }
+  }
+  
+  PRS_ernst_junger = {
+   allowed = { original_tag = PRS }
+   available = { has_completed_focus = PRS_artilleryfocus }
+   cost = 200
+   picture = PRS_ersnt_junger
+   research_bonus = { cat_superior_firepower = 0.10 }
+   modifier = {
+	army_artillery_attack_factor = 0.06
+	army_artillery_defence_factor = 0.06
+   }
+  }
+ 
+ ###Germany (Socialist)
+  GER_rommel = {
+   allowed = { original_tag = GER }
+   available = { has_completed_focus = GER_rommelplan }
+   cost = 200
+   picture = GER_erwin_rommel
+   research_bonus = { cat_mobile_warfare = 0.10 }
+   modifier = {
+    army_armor_attack_factor = 0.04
+	army_armor_defence_factor = 0.04
+	motorized_attack_factor = 0.06
+	motorized_defence_factor = 0.06
+   }
+  }
+  
+  GER_seydlizt = {
+   allowed = { original_tag = GER }
+   available = { has_completed_focus = GER_seydlitzplan }
+   cost = 200
+   picture = GER_kurt_seydlizt
+   research_bonus = { cat_superior_firepower = 0.10 }
+   modifier = {
+    army_artillery_attack_factor = 0.04
+	army_artillery_defence_factor = 0.04
+	army_infantry_attack_factor = 0.06
+	army_infantry_defence_factor = 0.06
+   }
+  }
+  
+  GER_student = {
+   allowed = { original_tag = GER }
+   available = { has_completed_focus = GER_studentplan }
+   cost = 200
+   picture = GER_kurt_student
+   research_bonus = { cat_mass_assault = 0.10 }
+   modifier = {
+    special_forces_attack_factor = 0.1
+	special_forces_defence_factor = 0.1
+	air_paradrop_attack_factor = 0.1
+	air_paradrop_defence_factor = 0.1
+   }
+  }
+  }
+ }

@@ -1,0 +1,36 @@
+capital = 474
+
+set_research_slots = 1
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	}
+
+set_politics = {
+	ruling_party = democratic_socialist
+	last_election = "1933.2.16"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	national_socialist = 3
+	socialist = 12
+	democratic_socialist = 85
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 0
+	authoritharian = 0
+	reactionary = 0
+	pelekist = 0
+}
+
+create_country_leader = {
+	name = "Nestor Makhno"
+	desc = ""
+	picture = "Portrait_FTT_Nestor_Makhno.tga"
+	ideology = anarcho_socialism
+	traits = {
+		#
+	}
+}

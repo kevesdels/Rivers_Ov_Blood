@@ -1,0 +1,249 @@
+AFG_afghan_expansionism = {
+
+ AFG_strike_delhi_govt = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+cost = 100
+  available = {
+  DEL = { exists = yes }
+  DEL = { has_war = yes }
+  date > 1939.1.1
+  has_army_manpower = {
+   size > 100000
+  }
+  has_war = no 
+  NOT = {
+   is_in_faction_with = DEL
+   is_puppet = yes
+  }
+  
+  }
+  complete_effect = {
+declare_war_on = {
+    target = DEL
+    type = annex_everything
+    
+    } 	
+declare_war_on = {	
+    target = PNJ	
+    type = annex_everything
+} 
+
+  }
+ }
+
+ AFG_white_volunteers = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+cost = 50
+  available = {
+   has_war = no 
+   NOT = {
+   has_war_with = RDR
+   is_puppet = yes
+  }
+  date > 1935.1.1
+
+  }
+  complete_effect = {
+load_oob = "afghan_russians"
+  }
+ }
+  AFG_invade_merv = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+cost = 50
+  available = {
+   TMS = { has_war_with = TRS }
+   NOT = {
+   is_in_faction_with = TMS
+   is_puppet = yes
+  }
+  }
+  complete_effect = {
+   1179 = { add_core_of = AFG }
+   AFG = { transfer_state = 1179 }
+ }
+ }
+
+ AFG_align_jammu_kashmir = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+cost = 150
+  available = {
+   has_war = no
+	owns_state = 442
+	JAK = { exists = yes }
+   NOT = {
+   is_in_faction_with = JAK
+   is_puppet = yes
+  }
+  }
+  complete_effect = {
+		JAK = { country_event = {
+    id = afghanistan.106
+    days = 2
+}
+}
+  }
+ }
+
+ AFG_annex_baluchistan = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+cost = 100
+  available = {
+   has_war = no
+	owns_state = 1169
+	owns_state = 445
+	BAL = { exists = yes }
+   NOT = {
+   is_in_faction_with = BAL
+   is_puppet = yes
+  }
+  }
+  complete_effect = {
+		BAL = { country_event = {
+    id = afghanistan.104
+    days = 2
+}
+}
+  }
+ }
+
+ AFG_align_sindh = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+cost = 150
+  available = {
+   has_war = no
+	owns_state = 444
+	owns_state = 445
+	SNH = { exists = yes }
+   NOT = {
+   is_in_faction_with = SNH
+   is_puppet = yes
+  }
+  }
+  complete_effect = {
+		SNH = { country_event = {
+    id = afghanistan.102
+    days = 2
+}
+}
+  }
+ }
+
+  AFG_press_the_border = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+cost = 100
+  available = {
+   DEL = { has_war_with = PNJ }
+   NOT = {
+   is_in_faction_with = DEL
+   is_puppet = yes
+  }
+  }
+  complete_effect = {
+   442 = { add_core_of = AFG }
+   AFG = { transfer_state = 442 }
+   445 = { add_core_of = AFG }
+   AFG = { transfer_state = 445 }
+ }
+ }
+
+  AFG_proclaim_mohemmedian_unification = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+cost = 100
+  available = {
+owns_state = 442
+owns_state = 445
+owns_state = 444
+  date > 1937.1.1
+   NOT = {
+   is_in_faction_with = DEL
+   is_puppet = yes
+  }
+  }
+  complete_effect = {
+		add_state_core = 444
+		add_state_core = 440
+		add_state_core = 439
+		add_state_claim = 430
+ }
+ }
+
+  AFG_send_khiva_volunteers = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+cost = 100
+  available = {
+OR = { owns_state = 1178
+	AND = { UZB = { is_puppet = yes } 
+		UZB = { owns_state = 1178 }
+	}
+}
+KHV = { is_puppet = yes }
+  date > 1935.1.1
+manpower > 10000
+   NOT = {
+   is_in_faction_with = TMS
+   is_puppet = yes
+  }
+  }
+  complete_effect = {
+KHV = { country_event = {
+    id = afghanistan.100
+    days = 2
+}
+	}
+add_manpower = -10000
+ }
+ }
+
+ AFG_central_asian_hegemony = {
+  ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+controls_state = 439
+controls_state = 1188
+controls_state = 440
+owns_state = 444
+owns_state = 445
+owns_state = 442
+UZB = { is_puppet = yes } 
+  date > 1939.1.1
+   NOT = {
+   is_puppet = yes
+  }
+  }
+  complete_effect = {
+		add_stability = 0.25
+		add_war_support = 0.25
+		set_cosmetic_tag = AFG_empire
+ }
+ }
+ 
+}

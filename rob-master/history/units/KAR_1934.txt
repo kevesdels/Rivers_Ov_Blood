@@ -1,0 +1,70 @@
+
+division_template = {
+name = "Czech Volunteers"
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+name = "Socialist Millita"
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+set_division_template_lock = {
+    division_template = "Czech Volunteers"
+    is_locked = yes
+}
+
+units = {
+division = {
+location = 10696
+division_template = "Czech Volunteers"
+start_experience_factor = 0.2
+start_equipment_factor = 0.6
+}
+
+division = {
+location = 12580
+division_template = "Czech Volunteers"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+}
+
+division = {
+location = 7800
+division_template = "Socialist Millita"
+start_experience_factor = 0.2
+start_equipment_factor = 0.2
+}
+
+
+division = {
+location = 12546
+division_template = "Socialist Millita"
+start_experience_factor = 0.2
+start_equipment_factor = 0.4
+
+}
+
+division = {
+location = 10568
+division_template = "Socialist Millita"
+start_experience_factor = 0.2
+start_equipment_factor = 0.3
+}
+
+}

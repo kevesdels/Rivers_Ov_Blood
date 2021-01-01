@@ -1,0 +1,931 @@
+#################
+###Italian Events
+#################
+
+add_namespace = republican_italy
+
+
+country_event = { ###Intro Event
+id = republican_italy.0
+title = republican_italy.0.t
+desc = republican_italy.0.d
+fire_only_once = yes
+
+trigger = {
+tag = ITA
+date > 1934.1.1
+}
+mean_time_to_happen = { days = 1 }
+option = {
+name = republican_italy.0.a
+add_political_power = 10
+}
+}
+
+###Main Line of Political Events
+country_event = { ###Act 56
+id = republican_italy.1
+title = republican_italy.1.t
+desc = republican_italy.1.d
+fire_only_once = yes
+
+mean_time_to_happen = { days = 1 }
+
+trigger = {
+tag = ITA
+date > 1934.3.1
+}
+
+option = {
+name = republican_italy.1.a
+add_stability = 0.05
+}
+}
+
+country_event = { ###Tensions in Northern Italy
+id = republican_italy.2
+title = republican_italy.2.t
+desc = republican_italy.2.d
+fire_only_once = yes
+
+trigger = {
+tag = ITA
+date > 1935.1.1
+}
+
+mean_time_to_happen = { days = 2 }
+
+option = {
+name = republican_italy.2.a
+add_political_power = -100
+}
+}
+
+country_event = { ###Workers beat to death
+id = republican_italy.3
+title = republican_italy.3.t
+desc = republican_italy.3.d
+fire_only_once = yes
+
+trigger = {
+tag = ITA
+date > 1935.3.1
+}
+mean_time_to_happen = { days = 2 }
+
+option = {
+name = republican_italy.3.a
+add_stability = -0.1
+hidden_effect = {
+ITA = { country_event = { id = republican_italy.4 days = 15 } }
+}
+}
+}
+
+country_event = { ###General Strike
+id = republican_italy.4
+title = republican_italy.4.t
+desc = republican_italy.4.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = republican_italy.4.a
+add_stability = -0.15
+add_political_power = -100
+add_popularity = { ideology = social_liberal popularity =-0.1 }
+add_popularity = { ideology = pelekist popularity =0.05 }
+add_popularity = { ideology = socialist popularity =0.05 }
+hidden_effect = {
+ITA = { country_event = { id = republican_italy.5 days = 20 } }
+}
+}
+}
+
+country_event = { ###Government falls
+id = republican_italy.5
+title = republican_italy.5.t
+desc = republican_italy.5.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = republican_italy.5.a
+add_popularity = { ideology = social_liberal popularity =-0.15 }
+add_stability = -0.1
+hidden_effect = {
+ITA = { country_event = { id = republican_italy.6 days = 20 } }
+}
+}
+}
+
+country_event = { ###ELECTIONS
+id = republican_italy.6
+title = republican_italy.6.t
+desc = republican_italy.6.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###UCPR Victory
+name = republican_italy.6.a
+trigger = {
+has_country_flag = ITA_sorelians_in_ucpr
+has_country_flag = ITA_socdems_fail
+}
+add_popularity = { ideology = pelekist popularity =0.25 }
+set_politics = {
+ruling_party = pelekist
+elections_allowed = no
+}
+}
+option = { ###UIS Victory
+name = republican_italy.6.b
+trigger = {
+has_country_flag = ITA_socialists_united
+}
+add_popularity = { ideology = national_socialist popularity =0.08 }
+add_popularity = { ideology = socialist popularity =0.1 }
+add_popularity = { ideology = democratic_socialist popularity =0.07 }
+set_politics = {
+ruling_party = socialist
+elections_allowed = no
+}
+set_cosmetic_tag = ITA_socialist
+}
+option = { ###PDSI Victory
+name = republican_italy.6.d
+trigger = {
+has_country_flag = ITA_socdems_united
+}
+add_popularity = { ideology = social_democracy popularity =0.3 }
+set_politics = {
+ruling_party = social_democracy
+elections_allowed = yes
+}
+}
+option = { ###PPI Victory
+name = republican_italy.6.e
+add_popularity = { ideology = conservative popularity =0.25 }
+set_politics = {
+ruling_party = conservative
+elections_allowed = yes
+}
+}
+}
+
+###SOCIALIST EVENTS
+
+country_event = { ###Bombacci
+id = republican_italy.7
+title = republican_italy.7.t
+desc = republican_italy.7.d
+fire_only_once = yes
+
+trigger = {
+date > 1934.7.1
+tag = ITA
+}
+mean_time_to_happen = { days = 1 }
+
+option = { ###Bombacci is expeled
+name = republican_italy.7.a
+add_popularity = { ideology = national_socialist popularity =-0.1 }
+hidden_effect = {
+ITA = { country_event = { id = republican_italy.8 days = 30 } }
+}
+}
+option = { ###Party stays intact
+name = republican_italy.7.b
+add_popularity = { ideology = national_socialist popularity =0.02 }
+hidden_effect = {
+ITA = { country_event = { id = republican_italy.10 days = 30 } }
+}
+}
+}
+
+country_event = { ###Bombacci supports pelekists
+id = republican_italy.8
+title = republican_italy.8.t
+desc = republican_italy.8.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = republican_italy.8.a
+add_popularity = { ideology = pelekist popularity =0.05 }
+}
+}
+
+country_event = { ###Sorelians flock to UCPR
+id = republican_italy.9
+title = republican_italy.9.t
+desc = republican_italy.9.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = republican_italy.9.a
+add_popularity = { ideology = pelekist popularity =0.08 }
+set_country_flag = ITA_sorelians_in_ucpr
+}
+}
+
+country_event = { ###massive campaing
+id = republican_italy.10
+title = republican_italy.10.t
+desc = republican_italy.10.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = republican_italy.10.a
+add_popularity = { ideology = socialist popularity =0.04 }
+add_popularity = { ideology = national_socialist popularity =0.04 }
+add_popularity = { ideology = democratic_socialist popularity =0.04 }
+set_country_flag = ITA_socialists_united
+}
+
+}
+
+####SOCIAL DEMOCRAT EVENTS
+country_event = {
+id = republican_italy.11
+title = republican_italy.11.t
+desc = republican_italy.11.d
+fire_only_once = yes
+
+mean_time_to_happen = { days = 1 }
+trigger = {
+date > 1934.9.1
+tag = ITA
+}
+
+option = { ###He gets support from SD/Liberals
+name = republican_italy.11.a
+add_popularity = {ideology = social_democracy popularity =0.05}
+hidden_effect = {
+ITA = { country_event = { id = republican_italy.12 days = 30 } }
+}
+}
+
+option = {
+name = republican_italy.11.b
+add_popularity = {ideology = social_democracy popularity =-0.02}
+set_country_flag = ITA_socdems_fail
+}
+}
+
+country_event = { ###he gets support from farmers/workers
+id = republican_italy.12
+title = republican_italy.12.t
+desc = republican_italy.12.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = republican_italy.12.a
+add_popularity = {ideology = social_democracy popularity =0.08}
+hidden_effect = {
+ITA = { country_event = { id = republican_italy.13 days = 25 } }
+}
+}
+}
+
+country_event = { ###meeting with Arturo Labioralaaasdadadasz\xz\x\vdfasasnjh,masdasas
+id = republican_italy.13
+title = republican_italy.13.t
+desc = republican_italy.13.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = republican_italy.13.a
+add_popularity = { ideology = social_democracy popularity =0.05}
+set_country_flag = ITA_socdems_united
+}
+}
+
+###ARMY EVENTS
+
+country_event = { ###Messe tries to meet Graziani
+id = republican_italy.14
+title = republican_italy.14.t
+desc = republican_italy.14.d
+fire_only_once = yes
+
+trigger = {
+  tag = ITA
+  date > 1934.6.1
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = { #Messe flies to Libya
+name = republican_italy.14.a
+hidden_effect = {
+ITA = { country_event = { id = republican_italy.15 days = 5 } }
+}
+option = { #Graziani flies to Anatolia
+name = republican_italy.14.a
+hidden_effect = {
+ITA = { country_event = { id = republican_italy.19 days = 5 } }
+}
+}
+}
+}
+
+country_event = { ###Messe flies to Libya
+id = republican_italy.15
+title = republican_italy.15.t
+desc = republican_italy.15.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = republican_italy.15.a
+  hidden_effect = {
+    ITA = { country_event = { id = republican_italy.16 days = 2 } }
+  }
+}
+}
+
+country_event = { ###Plot by Turkish Nationalists
+id = republican_italy.16
+title = republican_italy.16.t
+desc = republican_italy.16.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###Messe holds
+ name = republican_italy.16.a
+ add_political_power = 25
+ hidden_effect = {
+  ITA = { country_event = { id = republican_italy.17 days = 5 } }
+ }
+
+ option = { ###Messe is killed
+ name = republican_italy.16.b
+ add_political_power = -100
+ add_stability = -0.05
+ add_popularity = { ideology = authoritharian popularity = -0.05 }
+ add_popularity = { ideology = reactionary popularity = -0.05 }
+ }
+}
+}
+
+country_event = { ###Messe cracks down on Turks
+id = republican_italy.17
+title = republican_italy.17.t
+desc = republican_italy.17.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = republican_italy.17.a
+ add_political_power = 50
+  hidden_effect = {
+    ITA = { country_event = { id = republican_italy.18 days = 25 } }
+  }
+}
+}
+
+country_event = { ###Messe forms PdC
+id = republican_italy.18
+title = republican_italy.18.t
+desc = republican_italy.18.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = republican_italy.18.a
+ add_political_power = 25
+ add_popularity = { ideology = authoritharian popularity = 0.05 }
+ set_party_name = { ideology = authoritharian long_name = "Partito dei Combattenti" name = "PdC" }
+ set_party_name = { ideology = reactionary long_name = "Partito dei Combattenti" name = "PdC" }
+ set_country_flag = ITA_messe_forms_pdc
+  create_country_leader = {
+	name = "Giovanni Messe"
+	desc = ""
+	picture = "Giovanni Messe.tga"
+	expire = "1953.3.1"
+	ideology = military_junta
+	traits = {
+		#
+	}
+}
+ create_country_leader = {
+	name = "Giovanni Messe"
+	desc = ""
+	picture = "Giovanni Messe.tga"
+	expire = "1953.3.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+}
+}
+
+
+country_event = { ###Suspicious packagae
+id = republican_italy.19
+title = republican_italy.19.t
+desc = republican_italy.19.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###Bodyguards find it
+ name = republican_italy.19.a
+  hidden_effect = {
+    ITA = { country_event = { id = republican_italy.20.a days = 1 } }
+  }
+}
+
+option = { ###...let it be
+ name = republican_italy.19.b
+  hidden_effect = {
+    ITA = { country_event = { id = republican_italy.21.a days = 1 } }
+  }
+
+}
+}
+
+country_event = { ###flight stopped
+id = republican_italy.20
+title = republican_italy.20.t
+desc = republican_italy.20.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###bomb found, flight stopped
+ name = republican_italy.20.a
+  hidden_effect = {
+    ITA = { country_event = { id = republican_italy.22 days = 5 } }
+  }
+}
+}
+
+country_event = { ###flight explodes
+id = republican_italy.21
+title = republican_italy.21.t
+desc = republican_italy.21.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###bomb explodes
+ name = republican_italy.21.a
+  add_political_power = -100
+  add_stability = -0.05
+  add_popularity = { ideology = authoritharian popularity = -0.05 }
+  add_popularity = { ideology = reactionary popularity = -0.05 }
+}
+}
+
+country_event = { ###Graziani forious
+id = republican_italy.22
+title = republican_italy.22.t
+desc = republican_italy.22.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###claims government is behind it
+ name = republican_italy.22.a
+  hidden_effect = {
+    ITA = { country_event = { id = republican_italy.23 days = 25 } }
+  }
+}
+}
+
+country_event = { ###Graziani forms PdC
+id = republican_italy.23
+title = republican_italy.23.t
+desc = republican_italy.23.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = republican_italy.23.a
+ add_political_power = 25
+ add_popularity = { ideology = reactionary popularity = 0.05 }
+ set_party_name = { ideology = authoritharian long_name = "Partito dei Combattenti" name = "PdC" }
+ set_party_name = { ideology = reactionary long_name = "Partito dei Combattenti" name = "PdC" }
+ set_country_flag = ITA_graziani_forms_pdc
+ create_country_leader = {
+	name = "Rodolfo Graziani"
+	desc = ""
+	picture = "Rodolfo Graziani.tga"
+	expire = "1953.3.1"
+	ideology = military_junta
+	traits = {
+		#
+	}
+}
+ create_country_leader = {
+	name = "Rodolfo Graziani"
+	desc = ""
+	picture = "Rodolfo Graziani.tga"
+	expire = "1953.3.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+}
+}
+
+#####AFTER ELECTION EVENTS
+
+country_event = { ###PdC denies election results
+id = republican_italy.24
+title = republican_italy.24.t
+desc = republican_italy.24.d
+fire_only_once = yes
+
+trigger = {
+ tag = ITA
+  OR = {
+   has_government = socialist
+   has_government = social_democracy
+  }
+  OR = {
+   has_country_flag = ITA_graziani_forms_pdc
+   has_country_flag = ITA_messe_forms_pdc
+  }
+  
+  mean_time_to_happen = { days = 1 }
+
+ option = {
+  name = republican_italy.24.a
+  ITA = { country_event = { id = republican_italy.25 days = 10 } }
+ }
+}
+}
+
+country_event = { ###Discontent in Army
+id = republican_italy.25
+title = republican_italy.25.t
+desc = republican_italy.25.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###Graziani lands
+name = republican_italy.25.a
+trigger = {
+ has_country_flag = ITA_graziani_forms_pdc
+}
+hidden_effect = {
+SIC = { transfer_state = 1105 }
+SIC = { transfer_state = 115 }
+SIC = { transfer_state = 342 }
+SIC = { transfer_state = 951 }
+SIC = { transfer_state = 345 }
+SIC = { transfer_state = 273 }
+SIC = { transfer_state = 663 }
+SIC = { transfer_state = 451 }
+SIC = { transfer_state = 450 }
+SIC = { transfer_state = 662 }
+SIC = { transfer_state = 449 }
+SIC = { transfer_state = 661 }
+SIC = { transfer_state = 448 }
+115 = { add_core_of = SIC }
+1105 = { add_core_of = SIC }
+
+SIC = {
+create_country_leader = {
+	name = "Rodolfo Graziani"
+	desc = ""
+	picture = "Rodolfo Graziani.tga"
+	expire = "1953.3.1"
+	ideology = military_junta
+	traits = {
+		#
+	}
+}
+add_cosmetic_tag = SIC_civil_war
+}
+}
+ITA = { country_event = { id = republican_italy.26 days = 5 } }
+}
+
+option = { ###Messe lands
+name = republican_italy.25.b
+trigger = {
+ has_country_flag = ITA_messe_forms_pdc
+}
+hidden_effect = {
+SIC = { transfer_state = 1105 }
+SIC = { transfer_state = 115 }
+SIC = { transfer_state = 342 }
+SIC = { transfer_state = 951 }
+SIC = { transfer_state = 345 }
+SIC = { transfer_state = 273 }
+SIC = { transfer_state = 663 }
+SIC = { transfer_state = 451 }
+SIC = { transfer_state = 450 }
+SIC = { transfer_state = 662 }
+SIC = { transfer_state = 449 }
+SIC = { transfer_state = 661 }
+SIC = { transfer_state = 448 }
+115 = { add_core_of = SIC }
+1105 = { add_core_of = SIC }
+
+SIC = {
+create_country_leader = {
+	name = "Giovanni Messe"
+	desc = ""
+	picture = "Giovanni Messe.tga"
+	expire = "1953.3.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+add_cosmetic_tag = SIC_civil_war
+add_popularity = { ideology = authoritharian popularity = 0.75 }
+set_politics = {
+ ruling_party = authoritharian
+ elections_allowed = no
+} 
+}
+}
+ITA = { country_event = { id = republican_italy.26 days = 5 } }
+}
+}
+
+
+country_event = { ###Italian civil war - army edition
+id = republican_italy.26
+title = republican_italy.26.t
+desc = republican_italy.26.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###stand by republic
+name = republican_italy.26.a
+add_political_power = 100
+SIC = { declare_war_on = { type = annex_everything target = ITA } }
+set_country_flag = ITA_civil_war_socialists
+}
+
+option = { ###play as military
+name = republican_italy.26.b
+SIC = { declare_war_on = { type = annex_everything target = ITA } }
+set_country_flag = ITA_civil_war_socialists
+hidden_effect = {
+SIC = { change_tag_from = ITA }
+ SIC = {
+  add_manpower = 20000
+ }
+}
+}
+}
+
+####PELEKIST EVENTS
+
+country_event = { ###liberals/socialists deny results
+id = republican_italy.27
+title = republican_italy.27.t
+desc = republican_italy.27.d
+fire_only_once = yes
+
+trigger = {
+ tag = ITA
+ has_government = pelekist
+}
+
+mean_time_to_happen = { days = 5 }
+
+option = {
+name = republican_italy.27.a
+add_stability = -0.1
+ITA = { country_event = { id = republican_italy.28 days = 3 }
+}
+
+}
+}
+
+country_event = { ###CIVIL WAR 
+id = republican_italy.28
+title = republican_italy.28.t
+desc = republican_italy.28.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = republican_italy.28.a
+add_political_power = 120
+hidden_effect = {
+ PIE = { transfer_state = 161 }
+ PIE = { transfer_state = 162 }
+ PIE = { transfer_state = 1106 }
+ PIE = { transfer_state = 1107 }
+ PIE = { transfer_state = 158 }
+ 161 = { add_core_of = PIE }
+ 162 = { add_core_of = PIE }
+ 1106 = { add_core_of = PIE }
+ 1107 = { add_core_of = PIE }
+ 158 = { add_core_of = PIE }
+}
+ITA = { declare_war_on = { type = annex_everything target = PIE } }
+set_country_flag = ITA_civil_war_pelekists
+}
+
+}
+
+country_event = { ###end of the civil war
+id = republican_italy.29
+title = republican_italy.29.t
+desc = republican_italy.29.d
+fire_only_once = yes
+
+trigger = {
+ has_government = pelekist
+ has_country_flag = ITA_civil_war_pelekists
+ NOT = {
+  has_war_with = PIE
+  }
+}
+
+mean_time_to_happen = { days = 2 }
+
+option = { ###Evola allies with Fontaine
+name = republican_italy.29.a
+add_political_power = 50
+hidden_effect = {
+ ITA = { country_event = { id = republican_italy.30 days = 20 } }
+}
+}
+option = { ###Marrienti allies with Bombacci
+add_political_power = 50
+add_popularity = { ideology = national_socialist popularity = 0.05 }
+hidden_effect = {
+ ITA = { country_event = { id = republican_italy.33 days = 20 } }
+}
+}
+}
+
+country_event = { ###Evola-Fontaine
+id = republican_italy.30
+title = republican_italy.30.t
+desc = republican_italy.30.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###Evola secures paramilitary support
+name = republican_italy.30.a
+ITA = { country_event = { id = republican_italy.31 days = 5 } }
+}
+
+option = { ###Fontaine secures paramilitary support
+name = republican_italy.30.a
+ITA = { country_event = { id = republican_italy.32 days = 5 } }
+}
+
+}
+
+country_event = { ###Evola wins
+id = republican_italy.31
+title = republican_italy.31.t
+desc = republican_italy.31.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###Evola wins
+name = republican_italy.31.a
+create_country_leader = {
+	name = "Julius Evola"
+	desc = ""
+	picture = "ITA_Julius_Evola.tga"
+	expire = "1953.3.1"
+	ideology = pagan_pelekism
+	traits = {
+		#
+	}
+}
+add_popularity = { ideology = pelekist popularity = 0.3 }
+}
+
+}
+
+country_event = { ###Fontaine wins
+id = republican_italy.32
+title = republican_italy.32.t
+desc = republican_italy.32.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###Fontaine wins
+name = republican_italy.32.a
+create_country_leader = {
+	name = "Pietro La Fontaine"
+	desc = ""
+	picture = "ITA_Pierro_La_Fontaine.tga"
+	expire = "1953.3.1"
+	ideology = christian_pelekism
+	traits = {
+		#
+	}
+}
+add_popularity = { ideology = pelekist popularity = 0.3 }
+}
+
+}
+
+country_event = { ###Fontaine wins
+id = republican_italy.33
+title = republican_italy.33.t
+desc = republican_italy.33.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###Filipo Tommasi Marrineti wins
+name = republican_italy.33.a
+create_country_leader = {
+	name = "Filipo Tommasi Marrineti"
+	desc = ""
+	picture = "ITA_Fillipo_Tommaso_Marrineti.tga"
+	expire = "1953.3.1"
+	ideology = futuristic_pelekism
+	traits = {
+		#
+	}
+}
+add_popularity = { ideology = pelekist popularity = 0.3 }
+}
+
+}
+
+
+###SOCIALIST EVENTS
+
+country_event = { ###Proclaim ISR
+id = republican_italy.34
+title = republican_italy.34.t
+desc = republican_italy.34.d
+fire_only_once = yes
+
+trigger = {
+tag = ITA
+has_country_flag = ITA_civil_war_socialists
+NOT = {
+ has_war_with = SIC
+}
+}
+
+mean_time_to_happen = { days = 5 }
+
+option = {
+name = republican_italy.34.a
+add_popularity = { ideology = national_socialist popularity = 0.15 }
+add_popularity = { ideology = socialist popularity = 0.2 }
+add_popularity = { ideology = democratic_socialist popularity = 0.15 }
+add_cosmetic_tag = ITA_socialist
+ITA = { country_event = { id = republican_italy.35 days = 10 } }
+}
+}
+
+country_event = { ###Socialist Congress
+id = republican_italy.35
+title = republican_italy.35.t
+desc = republican_italy.35.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###Sorelian Victory
+name = "Sorelian Faction Achieves Victory!"
+set_politics = {
+ruling_party = national_socialist
+elections_allowed = no
+}
+add_stability = 0.05
+add_political_power = 50
+add_popularity = { ideology = national_socialist popularity = 0.35 }
+}
+
+option = { ###Bolshevik Victory
+name = "Bolshevik Faction Achieves Victory!"
+set_politics = {
+ruling_party = socialist
+elections_allowed = no
+}
+add_stability = 0.05
+add_political_power = 50
+add_popularity = { ideology = socialist popularity = 0.35 }
+}
+
+option = { ###Syndicalist Victory
+name = "Syndicalist Faction Achieves Victory!"
+set_politics = {
+ruling_party = democratic_socialist
+elections_allowed = no
+}
+add_stability = 0.05
+add_political_power = 50
+add_popularity = { ideology = democratic_socialist popularity = 0.35 }
+}
+
+}

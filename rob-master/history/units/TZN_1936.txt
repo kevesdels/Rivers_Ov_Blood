@@ -1,0 +1,136 @@
+division_template = {
+	name = "Tanganyikan Guerrillas"			# Infantry Division
+
+	division_names_group = TZN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Tanganyikan Infantry"			# Infantry Division
+
+	division_names_group = TZN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+
+
+units = {
+	##### Tanzanian Army #####
+	division = {
+		name = "Tanzanian Veteran Infantry"
+		location = 2206
+		division_template = "Tanganyikan Infantry"	
+		start_experience_factor = 0.3
+
+	}
+	division = {
+		name = "Tanganyikan Guerrillas"
+		location = 2281
+		division_template = "Tanganyikan Guerrillas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "Tanganyikan Guerrillas"
+		location = 2308
+		division_template = "Tanganyikan Guerrillas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "Tanganyikan Guerrillas"
+		location = 5180
+		division_template = "Tanganyikan Guerrillas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "Tanganyikan Guerrillas"
+		location = 10845
+		division_template = "Tanganyikan Guerrillas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "Tanganyikan Guerrillas"
+		location = 10988
+		division_template = "Tanganyikan Guerrillas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "Tanganyikan Guerrillas"
+		location = 11017
+		division_template = "Tanganyikan Guerrillas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "Tanganyikan Guerrillas"
+		location = 5224
+		division_template = "Tanganyikan Guerrillas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "Tanganyikan Guerrillas"
+		location = 2176
+		division_template = "Tanganyikan Guerrillas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "Tanganyikan Guerrillas"
+		location = 12967
+		division_template = "Tanganyikan Guerrillas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+	division = {
+		name = "Tanganyikan Guerrillas"
+		location = 12944
+		division_template = "Tanganyikan Guerrillas"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.75
+
+	}
+}
+
+
+
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "IRQ"
+		}
+		requested_factories = 1
+		progress = 0.22
+		efficiency = 100
+	}
+}

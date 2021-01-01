@@ -1,0 +1,120 @@
+division_template = {
+	name = "Basmachi Cavalry"
+
+	division_names_group = TMS_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	priority = 1
+}
+
+units = {
+	#TRS Army
+	division = {
+		name = "Basmachi Cavalry"
+		location = 1384
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Basmachi Cavalry"
+		location = 1384
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Basmachi Cavalry"
+		location = 12250
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Basmachi Cavalry"
+		location = 4542
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Basmachi Cavalry"
+		location = 1573
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Basmachi Cavalry"
+		location = 10488
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Basmachi Cavalry"
+		location = 10187
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Basmachi Cavalry"
+		location = 10660
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Basmachi Cavalry"
+		location = 1459
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Basmachi Cavalry"
+		location = 10408
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Basmachi Cavalry"
+		location = 1216
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Basmachi Cavalry"
+		location = 4482
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Basmachi Cavalry"
+		location = 1591
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Basmachi Cavalry"
+		location = 1483
+		division_template = "Basmachi Cavalry"
+		start_experience_factor = 0.3
+	}
+}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "TMS"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

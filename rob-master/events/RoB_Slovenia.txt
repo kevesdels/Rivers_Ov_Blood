@@ -1,0 +1,157 @@
+#################
+###Slovene Events
+#################
+
+add_namespace = rob_slovenia
+
+
+
+###Gunzzzz
+country_event = {
+ id = rob_slovenia.1
+ title = rob_slovenia.1.t
+ desc = rob_slovenia.1.d
+ picture = GFX_report_event_french_resistance_02
+ fire_only_once = yes
+ trigger = {
+    tag = SLV
+    SLV = { has_war_with = AUS }
+    }
+    mean_time_to_happen = { days = 3}
+    option = {
+    name = rob_slovenia.1.a
+    SLV = {
+    add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 1000
+    producer = AUS
+                                }
+                                }
+    } 
+    
+ }
+
+### Take back benedict while croats are busy
+country_event = {
+    id = rob_slovenia.2
+    title = "The Croats aren't watching"
+    desc = rob_slovenia.2.d
+    picture = GFX_report_event_second_vienna_award_pact
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "The national revolution must continue!"
+        ai_chance = {
+            factor = 7
+            
+        }
+        SLV = { transfer_state = 935 }
+        CRO = { country_event = { id = croatia.2 days = 3 } }
+    }
+    option = {
+        name = "Better not risk it"
+        ai_chance = {
+            factor = 3
+            
+        }
+        add_political_power = -25
+    }
+}
+
+## remove cores
+country_event = {
+    id = rob_slovenia.3
+    title = "WE WON"
+    desc = rob_slovenia.3.d
+    picture = GFX_report_event_second_vienna_award_pact
+    fire_only_once = yes
+    trigger = {
+    
+    }
+
+    option = {
+        name = "The national revolution must continue!"
+
+    }
+}
+
+###Croats demand slovenians out of benedikt
+country_event = {
+    id = rob_slovenia.4
+    title = "Croats want us to leave"
+    desc = rob_slovenia.4.d
+    picture = GFX_report_event_second_vienna_award_pact
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "Comply"
+        ai_chance = {
+            factor = 3
+            
+        }
+        CRO = { transfer_state = 935 }
+        add_political_power = -100
+    }
+    option = {
+        name = "No"
+        ai_chance = {
+            factor = 7
+            
+        }
+        CRO = { country_event = { id = croatia.3 days = 3 } }
+    }
+}
+
+###Croats back off, for now
+country_event = {
+    id = rob_slovenia.5
+    title = "Croats back off"
+    desc = rob_slovenia.5.d
+    picture = GFX_report_event_second_vienna_award_pact
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "Based"
+        ai_chance = {
+            factor = 3
+            
+        }
+        add_political_power = 150
+    }
+
+}
+
+###Croats ask again
+country_event = {
+    id = rob_slovenia.6
+    title = "Croats demand our leave again"
+    desc = rob_slovenia.9.d
+    picture = GFX_report_event_second_vienna_award_pact
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "Comply"
+        ai_chance = {
+            factor = 3
+            
+        }
+        CRO = { transfer_state = 935 }
+        add_political_power = -100
+    }
+    option = {
+        name = "No"
+        ai_chance = {
+            factor = 7
+            
+        }
+        CRO = { country_event = { id = croatia.5 days = 3 } }
+    }
+
+}
+}###END
+
+

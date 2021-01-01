@@ -1,0 +1,221 @@
+division_template = {
+	name = "Indian Infantry"
+
+	division_names_group = RAJ_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		infantry = { x = 4 y = 0 }
+		infantry = { x = 4 y = 1 }
+		infantry = { x = 4 y = 2 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Militia Forces"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = RAJ_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	#Royal Afghani Army
+	division = {
+		name = "All-Indian Elites"
+		location = 2086
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st All-Indian Infantry"
+		location = 12137
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd All-Indian Infantry"
+		location = 11929
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd All-Indian Infantry"
+		location = 1492
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4th All-Indian Infantry"
+		location = 8066
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		name = "5th All-Indian Infantry"
+		location = 3456
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		name = "6th All-Indian Infantry"
+		location = 5096
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		name = "7th All-Indian Infantry"
+		location = 12717
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		name = "8th All-Indian Infantry"
+		location = 8087
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Burmese Brigade"
+		location = 1330
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "All-Indian Elites"
+		location = 2086
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Punjabi Brigade"
+		location = 10887
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Muslim Elites"
+		location = 4003
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Army of Hyderabad"
+		location = 8087
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9th All-Indian Infantry"
+		location = 1430
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "10th All-Indian Infantry"
+		location = 12779
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "11th All-Indian Infantry"
+		location = 8011
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "12th All-Indian Infantry"
+		location = 4315
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "13th All-Indian Infantry"
+		location = 12247
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "14th All-Indian Infantry"
+		location = 1381
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "15th All-Indian Infantry"
+		location = 1349
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "16th All-Indian Infantry"
+		location = 4072
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "17th All-Indian Infantry"
+		location = 8076
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "18th All-Indian Infantry"
+		location = 12829
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "19th All-Indian Infantry"
+		location = 1147
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "20th All-Indian Infantry"
+		location = 4516
+		division_template = "Militia Forces"
+		start_equipment_factor = 0.5
+	}
+
+
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "RAJ"
+		}
+		requested_factories = 2
+		progress = 0.28
+		efficiency = 100
+	}
+}

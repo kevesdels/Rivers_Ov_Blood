@@ -1,0 +1,65 @@
+
+division_template = {
+
+name = "Orthodox Militia"
+is_locked = no
+
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+        infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+}
+}
+
+units = {
+ division = {
+name = "1st Orthodox Militia"
+location = 4724
+division_template = "Orthodox Militia"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+
+ division = {
+name = "2nd Orthodox Militia"
+location = 4724
+division_template = "Orthodox Militia"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+
+ division = {
+name = "3rd Orthodox Militia"
+location = 1850
+division_template = "Orthodox Militia"
+start_experience_factor = 0.4
+start_equipment_factor = 0.4
+
+}
+ division = {
+name = "4th Orthodox Militia"
+location = 7744
+division_template = "Orthodox Militia"
+start_experience_factor = 0.3
+start_equipment_factor = 0.5
+
+}
+ division = {
+name = "5th Orthodox Militia"
+location = 12621
+division_template = "Orthodox Militia"
+start_experience_factor = 0.3
+start_equipment_factor = 0.5
+
+}
+
+}

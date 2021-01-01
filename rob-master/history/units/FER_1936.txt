@@ -1,0 +1,69 @@
+division_template = {
+	name = "Far Eastern Infantry Division"
+
+	division_names_group = FER_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+
+		
+        
+	}
+	
+}
+division_template = {
+	name = "Garrison"
+
+	division_names_group = FER_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+
+		
+        
+	}
+	
+}
+
+
+units = {
+	#JSW Army
+	division = {
+		name = "Yakutsk Infantry Division"
+		location = 10641
+		division_template = "Far Eastern Infantry Division"
+		start_experience_factor = 0.3
+	}
+
+	division = {
+		name = "Ust-Kamchatsk Garrison"
+		location = 1863
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+	}
+
+	division = {
+		name = "Kolyma Garrison"
+		location = 12551
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Bodaybo Garrison"
+		location = 1761
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+	}
+
+	division = {
+		name = "Western Garrison"
+		location = 12668
+		division_template = "Garrison"
+		start_experience_factor = 0.3
+	}
+}

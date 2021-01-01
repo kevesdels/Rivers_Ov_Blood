@@ -1,0 +1,51 @@
+﻿capital = 827
+
+oob = "SMR_1936"
+
+set_research_slots = 3
+set_stability = 0.75
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	early_fighter = 1
+	CAS1 = 1
+}
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 0
+	authoritharian = 0
+	reactionary = 57
+	pelekist = 43
+}
+add_ideas = {
+	limited_conscription
+}
+
+create_country_leader = {
+	name = "Grand and General Council"
+	desc = ""
+	picture = "Portrait_San Marino_Grand_council.dds"
+	expire = "1960.1.1"
+	ideology = reactionary_subtype
+	traits = {
+		
+	}
+}

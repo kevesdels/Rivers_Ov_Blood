@@ -1,0 +1,116 @@
+#################
+###Belgium-Congo Events
+#################
+
+add_namespace = belgium
+
+
+###collapse of british support
+
+country_event = {
+id = belgium.100
+title = belgium.100.t
+desc = belgium.100.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = BEL
+ENG = { has_cosmetic_tag = ENG_navy }
+
+}
+mean_time_to_happen = { days = 1 }
+
+
+
+option = {
+name = belgium.100.a
+add_political_power = -100
+remove_ideas = BEL_british_dominance
+}
+
+}
+
+###leopold issues state of emergency
+
+country_event = {
+id = belgium.101
+title = belgium.101.t
+desc = belgium.101.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = BEL
+NOT = { has_idea = BEL_british_dominance }
+}
+mean_time_to_happen = { days = 1 }
+
+
+
+option = {
+name = belgium.101.a
+
+add_stability = 0.5
+set_country_flag = BEL_british_gone
+add_timed_idea = {
+    idea = BEL_immient_collapse
+    days = 720
+}
+}
+
+}
+
+###collapse of the congo
+
+country_event = {
+id = belgium.102
+title = belgium.102.t
+desc = belgium.102.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = BEL
+    has_stability < 0.1
+
+}
+mean_time_to_happen = { days = 50 }
+
+
+
+option = {
+name = belgium.102.a
+
+hidden_effect = { 
+KGO = { transfer_state = 1242 }
+1242 = { add_core_of = KGO }
+KGO = { transfer_state = 538 }
+538 = { add_core_of = KGO }
+KGO = { transfer_state = 1243 }
+1243 = { add_core_of = KGO }
+KGO = { transfer_state = 1246 }
+1246 = { add_core_of = KGO }
+KVU = { transfer_state = 1247 }
+1247 = { add_core_of = KVU }
+STY = { transfer_state = 718 }
+718 = { add_core_of = STY }
+UBG = { transfer_state = 1244 }
+1244 = { add_core_of = UBG }
+KTG = { transfer_state = 1245 }
+1245 = { add_core_of = KTG }
+RWA = { transfer_state = 768 }
+768 = { add_core_of = RWA }
+BRD = { transfer_state = 769 }
+769 = { add_core_of = BRD }
+
+KGO = { declare_war_on = {
+    target = BEL
+    type = annex_everything
+}
+}
+
+}
+}
+
+}

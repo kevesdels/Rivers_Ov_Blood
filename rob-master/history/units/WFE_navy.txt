@@ -1,0 +1,35 @@
+units = {
+	##### NAVAL UNITS #####
+	### HOME COMMAND ###
+	fleet = {
+		name = "Black Sea Fleet"			
+		naval_base = 12559 # Nikolayevsk
+		task_force = {
+			name = "Black Sea Fleet"
+			location = 12559 # Scapa Flow
+			ship = { name = "General Kedrov" definition = battleship equipment = { battleship_1 = { amount = 1 owner = WFE version_name = "General Kedrov Class" } } }
+			ship = { name = "General Alekseyev" definition = battleship equipment = { battleship_1 = { amount = 1 owner = WFE version_name = "General Alekseyev Class" } } }
+			ship = { name = "Georgii Pobedonosets" definition = battleship equipment = { battleship_1 = { amount = 1 owner = WFE version_name = "General Alekseyev Class" } } } 
+			ship = { name = "General Kornilov" definition = heavy_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Almaz" definition = heavy_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Kapitan Saken" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Bespokoiny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Derzky" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE version_name = "Derzky Class" } } }
+			ship = { name = "Gnevny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Pylkiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Pospeshny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Tserigo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Zharkiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Zvonkiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Zorkiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Grozny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Gaidamak" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Ural" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Tyulen" definition = submarine equipment = { submarine_1 = { amount = 1 owner = WFE version_name = "Tyulen Class" } } }
+			ship = { name = "Burevestnik" definition = submarine equipment = { submarine_1 = { amount = 1 owner = WFE version_name = "Tyulen Class" } } }
+			ship = { name = "AG 22" definition = submarine equipment = { submarine_1 = { amount = 1 owner = WFE version_name = "Tyulen Class" } } }
+			ship = { name = "Utka" definition = submarine equipment = { submarine_1 = { amount = 1 owner = WFE version_name = "Tyulen Class" } } }
+			}
+
+		}		
+	}		

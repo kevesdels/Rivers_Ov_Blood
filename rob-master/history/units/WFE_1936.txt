@@ -1,0 +1,96 @@
+division_template = {
+	name = "Far Eastern Cossacks"
+
+	division_names_group = SOV_ARM_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "White Russian Forces"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = SOV_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Pacific Fleet Marines"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = SOV_GAR_01
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 2 y = 0 }
+		marine = { x = 2 y = 1 }
+	}
+	priority = 1
+}
+
+
+units = {
+	#Far Eastern Army
+	division = {
+		name = "Far Eastern Cossacks"
+		location = 12641
+		division_template = "Far Eastern Cossacks"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Chita Garrison"
+		location = 12641
+		division_template = "White Russian Forces"
+		start_experience_factor = 0.3
+
+	}
+	division = {
+		name = "Birobidzhan Garrison"
+		location = 12678
+		division_template = "White Russian Forces"
+		start_experience_factor = 0.3
+
+	}
+	division = {
+		name = "Nikolayevsk Garrison"
+		location = 12559
+		division_template = "White Russian Forces"
+		start_experience_factor = 0.3
+
+	}
+	division = {
+		name = "Pacific Fleet Marines"
+		location = 12559
+		division_template = "Pacific Fleet Marines"
+		start_experience_factor = 0.3
+
+	}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "WFE"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

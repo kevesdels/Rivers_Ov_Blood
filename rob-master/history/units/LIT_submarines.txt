@@ -1,0 +1,12 @@
+units = {	
+	fleet = {
+	name = "Eskadrinis Povandeninis Laivas"			
+	naval_base = 6314  # Palanga
+	task_force = {
+    location = 6314
+	ship = { name = "Kretinga" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LIT } } }
+	ship = { name = "Palanga" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LIT } } }
+	 }
+	}
+	
+}

@@ -1,0 +1,97 @@
+division_template = {
+	name = "Princely Infantry"
+
+	division_names_group = RAJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Princely Cavalry"
+
+	division_names_group = RAJ_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+	priority = 1
+}
+
+units = {
+	#RPF
+	division = {
+		name = "1st Princely Infantry"
+		location = 2105
+		division_template = "Princely Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd Princely Infantry"
+		location = 2105
+		division_template = "Princely Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd Princely Infantry"
+		location = 2105
+		division_template = "Princely Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4th Princely Infantry"
+		location = 5096
+		division_template = "Princely Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "5th Princely Infantry"
+		location = 5096
+		division_template = "Princely Infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+}
+
+	division = {
+		name = "1st Princely Cavalry"
+		location = 2105
+		division_template = "Princely Cavalry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+}
+
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "BAL"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

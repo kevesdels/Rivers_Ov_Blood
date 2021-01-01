@@ -1,0 +1,116 @@
+ideas = {
+ industrial_concern = {
+ 
+ ###Russian Soviet Republic
+  RSR_gosplan  = {
+   allowed = { original_tag = SOV }
+   picture=  RSR_gosplan
+   research_bonus = { industry = 0.1 }
+   cost = 150
+   modifier = {
+    industrial_capacity_factory =0.1
+   }
+  }
+  
+  RSR_elektronika   = {
+   
+   allowed = { original_tag = SOV }
+   picture=  RSR_elektronika
+   research_bonus = { electronics = 0.1 }
+   cost = 150
+   modifier = {
+    production_speed_buildings_factor = 0.1
+   }
+  }
+
+ 
+ ###Lithuania
+  LIT_lietukis = {
+   
+   allowed = { original_tag = LIT }
+   picture=  LIT_lietukis
+   research_bonus = { industry = 0.1 }
+   cost = 150
+   modifier = {
+    industrial_capacity_factory =0.05
+   }
+  }
+ 
+  LIT_drobe = {
+   allowed = { original_tag = LIT }
+   picture=  LIT_drobe
+   research_bonus = { industry = 0.1 }
+   cost = 150
+   modifier = {
+    consumer_goods_factor =-0.04
+   }
+  }
+ ###Prussia
+  PRS_braun = {
+   
+   allowed = { original_tag = PRS }
+   picture=  PRS_braun
+   research_bonus = { industry = 0.1 }
+   cost = 150
+   modifier = {
+    consumer_goods_factor =-0.02
+   }
+  }
+  
+  PRS_krupp = {
+   
+   allowed = { original_tag = PRS }
+   picture=  PRS_krupp
+   research_bonus = { industry = 0.1 }
+   cost = 150
+   modifier = {
+    industrial_capacity_factory = 0.03
+   }
+  }
+  
+  PRS_eco_claas = {
+   
+   allowed = { original_tag = PRS }
+   picture=  PRS_claas
+   research_bonus = { electronics = 0.1 }
+   cost = 150
+   modifier = {
+    production_speed_buildings_factor = 0.04
+   }
+  }
+ 
+ ###Germany (Socialist)
+  GER_dig = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_dig
+   research_bonus = { industry = 0.1 }
+   cost = 150
+   modifier = {
+    industrial_capacity_factory = 0.05
+   }
+  }
+    
+  GER_dei = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_dei
+   research_bonus = { electronics = 0.1 }
+   cost = 150
+   modifier = {
+    research_speed_factor = 0.05
+   }
+  }
+  
+  GER_dai = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_dai
+   research_bonus = { synth_resources = 0.1 }
+   cost = 120
+   modifier = {
+    production_speed_buildings_factor = 0.08
+   }
+  }
+  }
+ } 

@@ -1,0 +1,352 @@
+#########################
+###Pelekist German Events
+#########################
+
+add_namespace = pelekist_germany
+
+
+###Victory in the Civil War
+country_event = {
+id = pelekist_germany.1
+desc = pelekist_germany.1.d
+title = pelekist_germany.1.t
+fire_only_once = yes
+
+trigger = {
+ GER = {
+  exists = no
+}
+tag = BAV
+}
+
+mean_time_to_happen = { days = 1 }
+
+
+option = {
+ name = pelekist_germany.1.a
+ every_state = {
+    limit = { 
+	is_core_of = GER
+	}
+	add_core_of = BAV
+	remove_core_of = GER
+}
+set_cosmetic_tag = BAV_victory
+
+}
+
+}
+
+###Integration of French core
+country_event = {
+id = pelekist_germany.2
+desc = pelekist_germany.2.d
+title = pelekist_germany.2.t
+fire_only_once = yes
+
+trigger = {
+ 789 = { is_owned_by = BAV }
+ 981 = { is_owned_by = BAV }
+ 28 = { is_owned_by = BAV }
+ 814 = { is_owned_by = BAV }
+ 816 = { is_owned_by = BAV }
+ tag = BAV
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+ name = pelekist_germany.2.a
+ 789 = { add_core_of = BAV }
+ 981 = { add_core_of = BAV }
+ 28 = { add_core_of = BAV }
+ 814 = { add_core_of = BAV }
+ 816 = { add_core_of = BAV }
+ set_country_flag = BAV_integration_complete
+}
+
+}
+
+###FATE OF FRANCE
+country_event = {
+id = pelekist_germany.3
+desc = pelekist_germany.3.d
+title = pelekist_germany.3.t
+fire_only_once = yes
+
+trigger = {
+ tag = BAV
+ FRA = {
+  exists = no
+ }
+ 16 = { is_owned_by = BAV }
+ 18 = { is_owned_by = BAV }
+ 817 = { is_owned_by = BAV }
+ 785 = { is_owned_by = BAV }
+ 29 = { is_owned_by = BAV }
+ 818 = { is_owned_by = BAV }
+ 1014 = { is_owned_by = BAV }
+ has_country_flag = BAV_integration_complete
+}
+
+option = { ###Estabilsh a French State
+ name = pelekist_germany.3.a
+ 			every_owned_state = {
+			 limit = { 
+			 is_owned_by = ROOT 
+			 is_core_of = FRA
+			 NOT = {
+			  OR = {
+			   is_core_of = ROOT
+			   
+			 }
+			 }
+			 }
+			 FRA = {
+					transfer_state = PREV
+					add_state_core = PREV
+				}
+			}
+		ROOT = {
+	   puppet = FRA
+	  }
+}
+
+option = { ###Occupy North, Puppet South
+ name = pelekist_germany.3.b
+ trigger = {
+ 29 = { is_owned_by = ROOT }
+ 785 = { is_owned_by = ROOT }
+ 18 = { is_owned_by = ROOT }
+ 815 = { is_owned_by = ROOT }
+ 1014 = { is_owned_by = ROOT }
+ 24 = { is_owned_by = ROOT }
+ 16 = { is_owned_by = ROOT }
+ 818 = { is_owned_by = ROOT }
+ }
+ 
+
+ 
+ BGN = { transfer_state = 29 }
+ BGN = { transfer_state = 785 }
+ BGN = { transfer_state = 18 }
+ BGN = { transfer_state = 815 }
+ BGN = { transfer_state = 1014 }
+ BGN = { transfer_state = 24 }
+ BGN = { transfer_state = 16 }
+ BGN = { transfer_state = 818 }
+ 
+ if = {
+  limit = {
+   30 = { is_owned_by = ROOT }
+  }
+  BGN = { transfer_state = 30 }
+  }
+ if = {
+  limit = {
+   19 = { is_owned_by = ROOT }
+  }
+  BGN = { transfer_state = 19 }
+  }
+ if = {
+  limit = {
+   30 = { is_owned_by = ROOT }
+  }
+  BGN = { transfer_state = 30 }
+  }
+ if = {
+  limit = {
+   1009 = { is_owned_by = ROOT }
+  }
+  BGN = { transfer_state = 1009 }
+  }	
+ if = {
+  limit = {
+   1007 = { is_owned_by = ROOT }
+  }
+  BGN = { transfer_state = 1007 }
+  }
+ if = {
+  limit = {
+   14 = { is_owned_by = ROOT }
+  }
+  BGN = { transfer_state = 14 }
+  }
+ if = {
+  limit = {
+   1008 = { is_owned_by = ROOT }
+  }
+  BGN = { transfer_state = 1008 }
+  }
+ if = {
+  limit = {
+   23 = { is_owned_by = ROOT }
+  }
+  BGN = { transfer_state = 23 }
+  }
+ if = {
+  limit = {
+   817 = { is_owned_by = ROOT }
+  }
+  BGN = { transfer_state = 817 }
+  }
+ if = {
+  limit = {
+   15 = { is_owned_by = ROOT }
+  }
+  BGN = { transfer_state = 15 }
+  }
+  every_owned_state = {
+			 limit = { 
+			 is_owned_by = ROOT 
+			 is_core_of = FRA
+			 NOT = {
+			  OR = {
+			   is_core_of = ROOT
+			 
+			 }
+			 }
+			 }
+			 FRA = {
+					transfer_state = PREV
+					add_state_core = PREV
+				}
+			}
+		ROOT = {
+	   puppet = FRA
+	   puppet = BGN
+	  }
+	  BGN = {
+	   set_cosmetic_tag = BGN_BAV
+	  }
+}
+
+option = { ##continue occupaction
+ name = pelekist_germany.3.c
+ add_stability =-0.2
+ add_political_power = -200
+}
+}
+
+###Integrate Luxembourg
+country_event = {
+id = pelekist_germany.4
+desc = pelekist_germany.4.d
+title = pelekist_germany.4.t
+fire_only_once = yes
+
+trigger = {
+ tag = BAV
+ LUX = {
+  exists = no
+ }
+ 8 = { is_owned_by = ROOT }
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = { ###libearte lux
+ name = pelekist_germany.4.a
+ LUX = { transfer_state = 8 }
+ ROOT = {
+  puppet = LUX
+ }
+}
+option = { ###integrate lux
+ name = pelekist_germany.4.b
+ 8 = { add_core_of = ROOT }
+}
+}
+
+###FATE OF WALLONIA
+country_event = {
+id = pelekist_germany.5
+desc = pelekist_germany.5.d
+title = pelekist_germany.5.t
+fire_only_once = yes
+
+trigger = {
+ tag = BAV
+ WLL = {
+  exists = no
+ }
+ 813 = { is_owned_by = ROOT }
+ 812 = { is_owned_by = ROOT }
+ 34 = { is_owned_by = ROOT }
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = { ###libearte wall
+ name = pelekist_germany.4.a
+ WLL = { transfer_state = 34 }
+ WLL = { transfer_state = 812 }
+ WLL = { transfer_state = 813 }
+ ROOT = {
+  puppet = WLL
+ }
+}
+option = { ###integrate east wall, puppet rest
+ name = pelekist_germany.4.b
+ 813 = { add_core_of = ROOT }
+ 812 = { add_core_of = ROOT }
+ WLL = { transfer_state = 34 }
+ ROOT = {
+  puppet = WLL
+ }
+}
+option = { ###libearte belgium
+ name = pelekist_germany.4.c
+ trigger = {
+   813 = { is_owned_by = ROOT }
+   812 = { is_owned_by = ROOT }
+   34 = { is_owned_by = ROOT }
+   6 = { is_owned_by = ROOT }
+ }
+ BEL = { transfer_state = 34 }
+ BEL = { transfer_state = 812 }
+ BEL = { transfer_state = 813 }
+ BEL = { transfer_state = 6 } 
+  ROOT = {
+  puppet = BEL
+ }
+}
+}
+
+###Integration of RHineland
+country_event = {
+id = pelekist_germany.6
+desc = pelekist_germany.6.d
+title = pelekist_germany.6.t
+fire_only_once = yes
+
+trigger = {
+ tag = BAV
+ RHN = {
+  exists = no
+ }
+ 788 = { is_owned_by = ROOT }
+ 51 = { is_owned_by = ROOT }
+ 1090 = { is_owned_by = ROOT }
+ 1089 = { is_owned_by = ROOT }
+ 1088 = { is_owned_by = ROOT }
+ 1080 = { is_owned_by = ROOT }
+ 792 = { is_owned_by = ROOT }
+ 42 = { is_owned_by = ROOT }
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+ name = pelekist_germany.6.a
+ add_stability = 0.2
+ add_political_power = 150
+ every_state = {
+    limit = { 
+	is_core_of = RHN
+	}
+	add_core_of = BAV
+	remove_core_of = RHN
+}
+}
+}

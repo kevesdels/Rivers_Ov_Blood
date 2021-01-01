@@ -1,0 +1,46 @@
+capital = 267
+
+oob = "AFG_1936"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+	basic_light_tank = 1
+}
+
+puppet = UZB
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 6
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 13
+	authoritharian = 5
+	reactionary = 76
+	pelekist = 0
+}
+
+add_ideas = {
+limited_conscription
+}
+
+create_country_leader = {
+	name = "Mohamed Zahir Shah"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "1965.1.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+

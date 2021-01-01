@@ -1,0 +1,644 @@
+focus_tree = {
+	id = soviet_focus_zinoviev
+	country = {
+		factor = 0
+	}
+
+continuous_focus_position = { x = 50 y = 2000 }
+
+shared_focus = SOV_effectsoffamine
+shared_focus = SOV_sovieteconomy
+shared_focus = SOV_bolsheviklandforces
+shared_focus = SOV_lookoutwards
+shared_focus = SOV_bolshevikairforces
+
+#Focus for Premier Zinoviev
+focus = { 
+id = SOV_premierzinoviev
+icon = GFX_focus_RSR_premier_zinoviev
+x = 5
+y = 1
+cost = 1
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+add_political_power = 50
+ country_event = {
+  id = bolshevik_russia.88
+  days = 2
+ }
+}
+ }
+ 
+ #Focus for Calm down the strikers
+focus = { 
+id = SOV_calmdownthestrikers
+icon = GFX_focus_GER_forced_industrialiaztion
+x = 3
+y = 2
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_premierzinoviev } 
+ai_will_do = { 
+ factor = 100
+ } 
+completion_reward = {
+ country_event = {
+  id = bolshevik_russia.89
+  days = 2
+ }
+}
+ }
+
+#Focus for Arrest Union leaders
+focus = { 
+id = SOV_arrestunionleaders
+icon = GFX_focus_SOV_purge_trade_unions
+x = 3
+y = 3
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_calmdownthestrikers } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ country_event = {
+  id = bolshevik_russia.90
+  days = 2
+ }
+}
+ }
+
+#Focus for End of the strike
+focus = { 
+id = SOV_endofthestrike
+icon = GFX_focus_GER_industrial_research
+x = 3
+y = 4
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_arrestunionleaders } 
+ai_will_do = { 
+ factor = 100
+ } 
+completion_reward = {
+ country_event = {
+  id = bolshevik_russia.91
+  days = 2
+ }
+}
+ }
+
+#Focus for Mobilize Red Army
+focus = { 
+id = SOV_mobilizeredarmy
+icon = GFX_focus_SOV_mass_mobilizations_molotov
+x = 7
+y = 2
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_premierzinoviev } 
+ai_will_do = { 
+ factor = 100
+ } 
+completion_reward = {
+ country_event = {
+  id = bolshevik_russia.92
+  days = 2
+ }
+}
+ }
+
+#Focus for Arm the Communist Youth
+focus = { 
+id = SOV_armthecommunistyouth
+icon = GFX_SOV_use_communist_youth
+x = 7
+y = 3
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_mobilizeredarmy } 
+ai_will_do = { 
+ factor = 100
+ } 
+completion_reward = {
+ country_event = {
+  id = bolshevik_russia.93
+  days = 2
+ }
+}
+ }
+
+#Focus for Death Squads in cities
+focus = { 
+id = SOV_deathsquadsincities
+icon = GFX_focus_SOV_crush_unrest
+x = 7
+y = 4
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_armthecommunistyouth } 
+ai_will_do = { 
+ factor = 100
+ } 
+completion_reward = {
+ country_event = {
+  id = bolshevik_russia.94
+  days = 2
+ }
+}
+ }
+
+#Focus for Revolutionary Russia
+focus = { 
+id = SOV_revolutionaryrussia
+icon = GFX_focus_SOV_zinovievs_russia
+x = 5
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_endofthestrike } 
+prerequisite = { focus = SOV_deathsquadsincities } 
+ai_will_do = { 
+ factor = 1000
+ } 
+completion_reward = {
+ remove_ideas = {
+  mass_unrest
+ }
+  remove_ideas = {
+  bolshevik_strike 
+ }
+ add_political_power = 150
+}
+ }
+
+#Focus for Curb Bourgeosie degeneracy
+focus = { 
+id = SOV_curbbourgeosiedegeneracy
+icon = GFX_focus_SOV_kill_bourgeoisie
+x = 2
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_revolutionaryrussia } 
+ai_will_do = { 
+ factor = 100
+ } 
+completion_reward = {
+ add_war_support = 0.1
+}
+ }
+
+#Focus for Execute the Wealthy
+focus = { 
+id = SOV_executethewealthy
+icon = GFX_focus_SOV_get_rid_of_bourgeosie
+x = 2
+y = 7
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_curbbourgeosiedegeneracy } 
+ai_will_do = { 
+ factor = 100
+ } 
+completion_reward = {
+ remove_ideas = {
+  bourgeoisie_influence_2
+ }
+}
+ }
+
+#Focus for Nationalize Industry
+focus = { 
+id = SOV_nationalizeindustry
+icon = GFX_SOV_leningrad_industry
+x = 2
+y = 8
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_executethewealthy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+					random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+ }
+
+#Focus for Collective Farming
+focus = { 
+id = SOV_collectivefarming
+icon = GFX_focus_GER_rural_infras
+x = 2
+y = 9
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_nationalizeindustry } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  collective_farming
+ }
+}
+ }
+
+#Focus for Massive Infrastructure Projects
+focus = { 
+id = SOV_massiveinfrastructureprojects
+icon = GFX_SOV_moscowsmolnesk_highway
+x = 2
+y = 10
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_collectivefarming } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+  random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			 random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+
+}
+ }
+
+#Focus for Expand VChK
+focus = { 
+id = SOV_expandvchk
+icon = GFX_focus_SOV_vlaslovist_security
+x = 5
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_revolutionaryrussia } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+  add_popularity = {ideology = socialist popularity =0.05}
+  add_political_power = 50
+ }
+ }
+
+#Focus for Hunt Counter-Revolutionaries
+focus = { 
+id = SOV_huntcounterrevolutionaries
+icon = GFX_focus_SOV_SOV_indoctrinate_molotov
+x = 5
+y = 7
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_expandvchk } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+  add_popularity = {ideology = national_socialist popularity =-0.15}
+  add_popularity = {ideology = democratic_socialist popularity =-0.15}
+}
+ }
+
+#Focus for Mass Mobilizations
+focus = { 
+id = SOV_massmobilizations
+icon = GFX_focus_SOV_modernize_red_army
+x = 5
+y = 8
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_huntcounterrevolutionaries } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_manpower = 120000
+}
+ }
+
+#Focus for Focus on Military Industry
+focus = { 
+id = SOV_QdpxCXub
+icon = GFX_focus_SOV_focus_on_military_industry
+x = 5
+y = 9
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_massmobilizations } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+					random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+ }
+
+#Focus for Forced Urbanization
+focus = { 
+id = SOV_forcedurbanization
+icon = GFX_focus_SOV_motorised_gaz
+x = 5
+y = 10
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_QdpxCXub } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  urbanization_kamenev
+ }
+} 
+ }
+
+#Focus for Militarize Schools
+focus = { 
+id = SOV_militarizeschools
+icon = GFX_focus_SOV_vlaslov_militarize_schools
+x = 8
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_revolutionaryrussia } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_war_support = 0.07
+}
+ }
+
+#Focus for Integrate Pioneers into Army
+focus = { 
+id = SOV_integratepioneersintoarmy
+icon = GFX_focus_GER_rural_schools
+x = 8
+y = 7
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_militarizeschools } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_manpower = 24643
+ add_war_support = 0.05
+}
+ }
+
+#Focus for Mandatory Military Education
+focus = { 
+id = SOV_mandatorymilitaryeducation
+icon = GFX_focus_SOV_soviet_education
+x = 8
+y = 8
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_integratepioneersintoarmy } 
+ai_will_do = { 
+ factor = 1
+ } 
+		completion_reward = {
+		  	add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+ }
+
+#Focus for Links with foreign groups
+focus = { 
+id = SOV_linkswithforeigngroups
+icon = GFX_focus_GER_empower_council
+x = 8
+y = 9
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_mandatorymilitaryeducation } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_political_power = 40
+}
+ }
+
+#Focus for International Socialist Academy
+focus = { 
+id = SOV_internationalsocialistacademy
+icon = GFX_focus_GER_worker_cooperatives
+x = 8
+y = 10
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_linkswithforeigngroups } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  international_socialist_academy
+ }
+}
+ }
+
+#Focus for Humanity, Unite!
+focus = { 
+id = SOV_humanityunite
+icon = GFX_focus_GER_what_little_we_have
+x = 5
+y = 11
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_massiveinfrastructureprojects } 
+prerequisite = { focus = SOV_internationalsocialistacademy } 
+prerequisite = { focus = SOV_forcedurbanization } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+ add_ideas = {
+  humanity_unite
+ }
+}
+ } 
+
+
+}

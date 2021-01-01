@@ -1,0 +1,39 @@
+division_template = {
+	name = "Soviet Partisians"
+
+	division_names_group = JSW_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		
+        
+	}
+	
+}
+
+
+units = {
+	#JSW Army
+	division = {
+		name = "Soviet Partisians"
+		location = 12595
+		division_template = "Soviet Partisians"
+		start_experience_factor = 0.3
+	}
+
+	division = {
+		name = "Soviet Partisians"
+		location = 1837
+		division_template = "Soviet Partisians"
+		start_experience_factor = 0.3
+	}
+
+	division = {
+		name = "Soviet Partisians"
+		location = 7750
+		division_template = "Soviet Partisians"
+		start_experience_factor = 0.3
+	}
+}

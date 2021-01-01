@@ -1,0 +1,409 @@
+############################
+###South Russian Army Events
+############################
+
+add_namespace = south_russian
+
+###Yearly Meeting
+country_event = {
+id = south_russian.0
+title = "A New Beggining"
+desc = south_russian.0.d
+fire_only_once = yes
+mean_time_to_happen = { days = 2 }
+
+trigger = {
+ tag = CAU
+ date > 1934.2.2
+}
+
+option = {
+ name = "We Shall Attend"
+ add_political_power = 20
+ hidden_effect = {
+  CAU = { country_event = { id = south_russian.1 days = 15 } }
+  }
+ }
+}
+
+###Talks Fall Apart
+country_event = {
+id = south_russian.1
+title = "Talks Fall Apart!"
+desc = south_russian.1.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = "War it is, then"
+ CAA = {
+ add_ai_strategy = {
+			type = antagonize
+			id = "CRM"
+			value = 50000
+		}
+ add_ai_strategy = {
+			type = antagonize
+			id = "CAU"
+			value = 50000
+		}
+ 
+ }
+ CRM = {
+ add_ai_strategy = {
+			type = antagonize
+			id = "CAA"
+			value = 50000
+		}
+ add_ai_strategy = {
+			type = antagonize
+			id = "CAU"
+			value = 50000
+		}
+ 
+ }
+ CAU = {
+ add_ai_strategy = {
+			type = antagonize
+			id = "CAA"
+			value = 50000
+		}
+ add_ai_strategy = {
+			type = antagonize
+			id = "CRM"
+			value = 50000
+		}
+ 
+ }
+ CAA = { 
+every_state = {
+limit = { is_core_of = CRM }
+add_claim_by = CAA
+}
+every_state = {
+limit = { is_core_of = CAU }
+add_claim_by = CAA
+}
+}
+
+
+CRM = { 
+every_state = {
+limit = { is_core_of = CAA }
+add_claim_by = CRM
+}
+every_state = {
+limit = { is_core_of = CAU }
+add_claim_by = CRM
+}
+}
+
+CAU = { 
+every_state = {
+limit = { is_core_of = CAA }
+add_claim_by = CAU
+}
+every_state = {
+limit = { is_core_of = CRM }
+add_claim_by = CAU
+}
+}
+  CRM = { country_event = { id = south_russian.3 days = 1 } }
+  CAA = { country_event = { id = south_russian.3 days = 1 } }
+  CAU = { dismantle_faction = yes }
+ CAU = { declare_war_on = { target = CAA type = annex_everything }}
+ CAU = { declare_war_on = { target = CRM type = annex_everything }}
+ CAA = { declare_war_on = { target = CRM type = annex_everything }}
+ }
+}
+
+###War Ends
+country_event = {
+id = south_russian.2
+title = "We Stand Victorius!"
+desc = south_russian.2.d
+fire_only_once = yes
+mean_time_to_happen = { days = 1 }
+
+trigger = {
+ OR = {
+  tag = CAA
+  tag = CRM
+  tag = CAU
+ }
+ ROOT = {
+  has_full_control_of_state = 217
+  has_full_control_of_state = 137
+  has_full_control_of_state = 983
+ }
+}
+option = {
+ name = "For Russia, we march forward!"
+ set_cosmetic_tag = RUS_SOU
+ every_state = {
+    limit = { 
+  OR = {
+  is_core_of = CAA 
+  is_core_of = CRM
+    is_core_of = CAU  
+  }
+  }
+  remove_core_of = PREV
+  add_core_of = ROOT
+
+}
+every_state = {
+limit = { 
+OR = {
+is_claimed_by = CRM
+is_claimed_by = CAA
+is_claimed_by = CAU
+}
+}
+remove_claim_by = CAU
+remove_claim_by = CAA
+remove_claim_by = CRM
+}
+
+}
+}
+
+###Talks Fall Apart
+country_event = {
+id = south_russian.3
+title = "Talks Fall Apart!"
+desc = south_russian.3.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = "To War!"
+add_manpower = 12000
+}
+}
+
+
+###Russian Southward Expansion
+country_event = {
+id = south_russian.4
+title = "Russians at Our Doorsteps!"
+desc = south_russian.4.d
+fire_only_once = yes
+
+mean_time_to_happen = { days = 1 }
+
+trigger = {
+ tag = CHE
+ OR = {
+  CAA = { 
+    OR = {
+     has_war_with = MRP
+     has_war_with = CHE
+     has_war_with = DAG
+  }
+  }
+  CRM = { 
+    OR = {
+     has_war_with = MRP
+     has_war_with = CHE
+     has_war_with = DAG
+   }
+  }
+  CAU = { 
+    OR = {
+     has_war_with = MRP
+     has_war_with = CHE
+     has_war_with = DAG
+   }
+  }
+ }
+}
+
+option = {
+ name = "We Shall Band Toghter~"
+ CHE = { create_faction = "Caucasus Defense Pact" }
+ MRP = { country_event = { id = south_russian.5 days = 2 } }
+ DAG = { country_event = { id = south_russian.5 days = 2 } }
+ GEO = { country_event = { id = south_russian.5 days = 4 } }
+ AZR = { country_event = { id = south_russian.5 days = 4 } }
+ ai_chance = {
+  factor = 100  
+ }
+}
+
+option = {
+ name = "Maybe if we just wait..."
+ add_political_power =-50
+  ai_chance = {
+  factor = 1  
+ }
+}
+
+}
+
+###Chechenia offers alliance
+country_event = {
+ id = south_russian.5
+ title = "Chechens Offer Alliance"
+ desc = south_russian.5.d
+ fire_only_once = yes
+ is_triggered_only = yes
+
+option = {
+ name = "We are in the same boat, afterall"
+ CHE = { add_to_faction = ROOT }
+ add_war_support = 0.08
+  ai_chance = {
+  factor = 100  
+ }
+}
+
+option = {
+ name = "Maybe if we just wait..."
+ add_political_power =-50
+  ai_chance = {
+  factor = 50  
+ }
+}
+}
+
+###Expansion Question
+country_event = {
+ id = south_russian.6
+ title = "Question Of Expansion"
+ desc = south_russian.6.d
+ fire_only_once = yes
+ is_triggered_only = yes
+
+option = {
+ name = "The First Bullet ALWAYS Goes To Traitor..."
+ set_country_flag = RUS_SOU_traitor
+ add_war_support = 0.05
+}
+
+option = {
+ name = "We Shall Secure Our Backs First..."
+ set_country_flag = RUS_SOU_caucasus
+ add_war_support = 0.05
+ }
+}
+
+###Socialists busy
+country_event = {
+ id = south_russian.7
+ title = "The Socialists Are Busy"
+ desc = south_russian.7.d
+ fire_only_once = yes
+ mean_time_to_happen = { days = 2 }
+
+ trigger = {
+  tag = RDR
+  RUS = {
+   OR = {
+    has_war_with = CAA
+	has_war_with = CAU
+	has_war_with = CRM
+   }
+  }
+ }
+ 
+ option = {
+  name = "We Will Push!"
+  add_war_support = 0.05
+  RUS = { country_event = { id = south_russian.7 days = 2 } }
+  ai_chance = {
+   factor = 200
+  }
+ }
+ 
+ option = {
+  name = "We Are Not Ready..."
+  ai_chance = {
+   factor = 20
+  }
+ }
+ }
+ 
+ ###NIGGER NIFFEGER NIFGGER NIGEGRE NREIFHERASFDAS
+ country_event = {
+ id = south_russian.8
+ title = "Reactionaries Push In!"
+ desc = south_russian.8.d
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = "We Can't Do Anything..."
+  RDR = {
+   country_event = { id = south_russian.8 days = 2 }
+   transfer_state = 250
+   transfer_state = 255
+   if = {
+    limit = {
+	RUS = { has_full_control_of_state = 239 }
+	}
+   set_state_owner = 239
+   }
+  }
+  250 = { add_core_of = RDR }
+  255 = { add_core_of = RDR }
+  239 = { add_core_of = RDR }
+  ai_chance = {
+   factor = 10
+  }
+ }
+ 
+ option = {
+  name = "We Push Back. Hard."
+ RDR = { country_event = { id = south_russian.9 days = 2 } }
+ add_war_support = 0.1
+ add_manpower = 10000
+  ai_chance = {
+   factor = 100
+  }
+ }
+ }
+
+ ###FUCK FUCK FUCK FUCK FUCK FUCK
+ country_event = {
+  id = south_russian.9
+  title = "Socialists Fall Back!"
+  desc = south_russian.9.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  option = {
+   name = ""Victory!"
+   add_war_support = 0.15
+  }
+  }
+  
+  ###Socialist push back.hard.
+  country_event = {
+   id = south_russian.10
+   title = "Socialists Push Back!"
+   desc = south_russian.10.d
+   fire_only_once = yes
+   is_triggered_only = yes
+   
+   option = {
+    name = "War It Is Then!"
+    RDR = { declare_war_on = { target = RUS type = annex_everything } }
+	add_manpower = 15000
+	add_war_support = 0.05
+	ai_chance = {
+     factor = 200
+     }
+   }
+   
+   option = {
+    name = "We Can't Risk War..."
+    add_stability =-0.15
+	add_war_support =-0.15
+	ai_chance = {
+    factor = 2
+    }
+   }
+   }
+   
+ 

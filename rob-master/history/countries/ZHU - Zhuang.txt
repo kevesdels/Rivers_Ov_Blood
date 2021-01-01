@@ -1,0 +1,51 @@
+capital = 1260
+
+oob = "ZHU_1936"
+
+set_stability = 0.6
+set_war_support = 0.4
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	mass_assault = 1
+}
+
+set_politics = {
+	ruling_party = authoritharian
+	last_election = "1932.5.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 20
+	democratic_socialist = 0
+	social_democracy = 10
+	social_liberal = 0
+	conservative = 0
+	authoritharian = 70
+	reactionary = 0
+	pelekist = 0
+}
+
+create_country_leader = {
+	name = "Chen Jitang"
+	desc = "POLITICS_LI_ZONGREN_DESC"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Chen Jitang"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}

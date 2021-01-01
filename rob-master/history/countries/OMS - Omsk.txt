@@ -1,0 +1,47 @@
+capital = 653
+
+oob = "OMS_1934"
+
+set_research_slots = 2
+
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+}
+
+set_country_flag = RUS_warlord
+
+set_politics = {
+	ruling_party = national_socialist
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 82
+	socialist = 10
+	democratic_socialist = 8
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 0
+	authoritharian = 0
+	reactionary = 0
+	pelekist = 0
+}
+add_ideas = {
+extensive_conscription
+}
+
+create_country_leader = {
+	
+	name = "Konstantin Rokossovsky"
+	picture = "Konstantin_Rokossovsky.dds"
+	expire = "1965.1.1"
+	ideology = national_socialist_subtype
+	traits = {
+		
+	}
+}

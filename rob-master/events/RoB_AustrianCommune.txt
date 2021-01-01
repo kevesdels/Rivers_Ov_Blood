@@ -1,0 +1,167 @@
+add_namespace = rob_austrian_commune
+
+##Event: rob_austrian_commune
+country_event = {
+ id = rob_austrian_commune.1
+ title = rob_austrian_commune.1.t
+ desc = rob_austrian_commune.1.d
+ picture = GFX_report_event_french_resistance_02
+ fire_only_once = yes
+ trigger = {
+    country_exists = ACM
+	tag = ACM
+	}
+	option = {
+		name = rob_austrian_commune.1.a
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+			add_state_core = 807
+			add_state_core = 934
+			add_state_core = 1016
+			add_state_core = 153
+			add_state_core = 1017
+			add_state_core = 4
+			add_state_core = 810
+			add_state_core = 152
+			add_state_core = 806
+			add_state_core = 1015
+			add_state_core = 1023
+			add_state_core = 1022
+			add_state_core = 1021
+			add_state_core = 1020
+			add_state_core = 1018
+			add_state_core = 1019
+			add_state_core = 1127
+			add_state_core = 1128
+			add_state_core = 1219
+		}
+	}
+}
+
+### worker_volunteers
+country_event = {
+ id = rob_austrian_commune.2
+ title = rob_austrian_commune.2.t
+ desc = rob_austrian_commune.2.d
+ picture = GFX_report_event_generic_read_write
+ fire_only_once = yes
+	trigger = {
+		OR = {
+			AND = {
+  				tag = ACM
+ 				 ACM = { surrender_progress > 0.3 } 
+ 				 has_war_with = THR
+ 				} 
+			AND = {
+ 				tag = ACM
+  				ACM = { surrender_progress > 0.3 } 
+  				has_war_with = AUS
+ 				} 
+			}
+		}
+		option = {
+		name = rob_austrian_commune.2.a
+		ai_chance = { factor = 1}
+		hidden_effect = {
+		ACM = { load_oob = worker_volunteers }}
+		}
+}
+
+###Gunzzzz
+country_event = {
+ id = rob_austrian_commune.3
+ title = rob_austrian_commune.3.t
+ desc = rob_austrian_commune.3.d
+ picture = GFX_report_event_french_resistance_02
+ fire_only_once = yes
+ trigger = {
+    tag = ACM
+    ACM = {
+    has_war_with = AUS
+    }
+    }
+    option = {
+    name = rob_austrian_commune.3a
+    ACM = {
+    add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 2000
+    producer = AUS
+                                }
+                                }
+    } 
+    
+ }	
+
+###Shall we fuck Slovenia as well?
+country_event = {
+ id = rob_austrian_commune.4
+ title = rob_austrian_commune.4.t
+ desc = rob_austrian_commune.4.d
+ picture = GFX_report_event_french_resistance_02
+ fire_only_once = yes
+ is_triggered_only = yes
+
+    ###yes
+    option = {
+    name = rob_austrian_commune.4.a
+    ai_chance = { factor = 4}
+    ACM = { declare_war_on = { target = SLV  type = annex_everything } }
+    } 
+    ###later
+    option = {
+    ai_chance = { factor = 6}
+    name = rob_austrian_commune.4.b
+    } 
+    
+ }	
+###Civil War Ends
+country_event = {
+ id = rob_austrian_commune.5
+ title = rob_austrian_commune.5.t
+ desc = rob_austrian_commune.5.d
+ picture = GFX_report_event_french_resistance_02
+ fire_only_once = yes
+ trigger = {
+	tag = ACM
+	has_idea = austrian_civil_war
+	has_full_control_of_state = 4
+	has_full_control_of_state = 152
+	has_full_control_of_state = 153
+	has_full_control_of_state = 806
+	has_full_control_of_state = 807
+	has_full_control_of_state = 1015
+	has_full_control_of_state = 1016
+	has_full_control_of_state = 1017
+	has_full_control_of_state = 1018
+	has_full_control_of_state = 1020
+	has_full_control_of_state = 1021
+	has_full_control_of_state = 1022
+	has_full_control_of_state = 1023
+	}
+	option = {
+		name = rob_austrian_commune.5.a
+		ai_chance = { factor = 1}
+		hidden_effect = {
+		ACM = {
+		annex_country = {
+    	target = AUS
+    	transfer_troops = NO
+		}
+		annex_country = {
+    	target = THR
+    	transfer_troops = NO
+		}
+		remove_ideas = {
+		austrian_civil_war
+		extensive_conscription
+		}
+		 add_ideas = {   
+            limited_conscription
+            }
+	}}
+}
+}
+
+}#end
+

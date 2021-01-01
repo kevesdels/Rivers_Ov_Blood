@@ -1,0 +1,553 @@
+BLR_power_struggle = {
+
+
+
+ BLR_favor_pelekists_1 = {
+  cost = 10
+  fire_only_once = yes
+  available = {
+   NOT = { 
+	has_government = authoritharian
+  } 
+  }
+  ai_will_do = { base = 20 }
+  complete_effect = {
+   add_to_variable = { var = BLR_pelekist_strenght value = 1 }
+   add_popularity = { ideology = pelekist popularity = 0.02 }
+   add_manpower = 1000
+   set_country_flag = BLR_pelekists_move
+ }
+
+}
+ BLR_favor_pelekists_2 = {
+  cost = 20
+  fire_only_once = yes
+  available = {
+ has_country_flag = BLR_pelekists_move
+    NOT = { 
+	has_government = authoritharian
+  }
+  }
+  ai_will_do = { base = 20 }
+  complete_effect = {
+   add_to_variable = { var = BLR_pelekist_strenght value = 1 }
+   add_popularity = { ideology = pelekist popularity = 0.02 }
+   swap_ideas = {
+    remove_idea = BLR_pelekists_1
+	add_idea = BLR_pelekists_2
+   }
+ }
+
+}
+
+ BLR_favor_pelekists_3 = {
+  cost = 30
+  fire_only_once = yes
+    	ai_will_do = {
+			base = 20
+			}
+  available = {
+   check_variable = {
+    var = BLR_pelekist_strenght
+    value = 1
+    compare = greater_than
+}
+   NOT = { 
+	has_government = authoritharian
+  }
+  }
+  complete_effect = {
+   add_to_variable = { var = BLR_pelekist_strenght value = 1 }
+   add_popularity = { ideology = pelekist popularity = 0.02 }
+   swap_ideas = {
+    remove_idea = BLR_pelekists_2
+	add_idea = BLR_pelekists_3
+   }
+ }
+
+}
+ BLR_favor_pelekists_4 = {
+  cost = 40
+  fire_only_once = yes
+  available = {
+   check_variable = {
+    var = BLR_pelekist_strenght
+    value = 2
+    compare = greater_than
+}
+   NOT = { 
+	has_government = authoritharian
+  }
+  }
+  ai_will_do = { base = 20 }
+  complete_effect = {
+   add_to_variable = { var = BLR_pelekist_strenght value = 1 }
+   add_popularity = { ideology = pelekist popularity = 0.02 }
+   swap_ideas = {
+    remove_idea = BLR_pelekists_3
+	add_idea = BLR_pelekists_4
+   }
+ }
+
+}
+ BLR_favor_pelekists_5 = {
+  cost = 50
+  fire_only_once = yes
+    	ai_will_do = {
+			base = 10
+			}
+  available = {
+   check_variable = {
+    var = BLR_pelekist_strenght
+    value = 3
+    compare = greater_than
+}
+   NOT = { 
+	has_government = authoritharian
+  }
+  }
+  complete_effect = {
+   add_to_variable = { var = BLR_pelekist_strenght value = 1 }
+   add_popularity = { ideology = pelekist popularity = 0.02 }
+   swap_ideas = {
+    remove_idea = BLR_pelekists_4
+	add_idea = BLR_pelekists_5
+   }
+ }
+
+}
+ BLR_favor_pelekists_6 = {
+  cost = 60
+  fire_only_once = yes
+    	ai_will_do = {
+			base = 10
+			}
+  available = {
+   check_variable = {
+    var = BLR_pelekist_strenght
+    value = 4
+    compare = greater_than
+}
+   NOT = { 
+	has_government = authoritharian
+  }
+  }
+  complete_effect = {
+   add_to_variable = { var = BLR_pelekist_strenght value = 1 }
+   add_popularity = { ideology = pelekist popularity = 0.02 }
+   swap_ideas = {
+    remove_idea = BLR_pelekists_5
+	add_idea = BLR_pelekists_6
+   }
+ }
+
+}
+
+ BLR_favor_elite_1 = {
+  cost = 10
+  fire_only_once = yes
+    	ai_will_do = {
+			base = 20
+			}
+  complete_effect = {
+   add_to_variable = { var = BLR_authoritharian_strenght value = 1 }
+   add_popularity = { ideology = authoritharian popularity = 0.02 }
+   add_stability = 0.05
+   add_ideas = {
+   BLR_industrialists_1
+   }
+ }
+
+}
+ BLR_favor_elite_2 = {
+  cost = 20
+  fire_only_once = yes
+    	ai_will_do = {
+			base = 20
+			}
+    available = {
+   check_variable = {
+    var = BLR_authoritharian_strenght
+    value = 0
+    compare = greater_than
+}
+   NOT = { 
+	has_government = pelekist
+  }
+  }
+  complete_effect = {
+   add_to_variable = { var = BLR_authoritharian_strenght value = 1 }
+   add_popularity = { ideology = authoritharian popularity = 0.02 }
+   swap_ideas = {
+   remove_idea = BLR_industrialists_1
+   add_idea = BLR_industrialists_2
+   }
+ }
+
+}
+ BLR_favor_elite_3 = {
+  cost = 30
+  fire_only_once = yes
+    	ai_will_do = {
+			base = 5
+			}
+    available = {
+   check_variable = {
+    var = BLR_authoritharian_strenght
+    value = 1
+    compare = greater_than
+}
+  NOT = { 
+	has_government = pelekist
+  }
+  }
+  complete_effect = {
+   add_to_variable = { var = BLR_authoritharian_strenght value = 1 }
+   add_popularity = { ideology = authoritharian popularity = 0.02 }
+   swap_ideas = {
+   remove_idea = BLR_industrialists_2
+   add_idea = BLR_industrialists_3
+   }
+ }
+
+}
+ BLR_favor_elite_4 = {
+  cost = 40
+  fire_only_once = yes
+    	ai_will_do = {
+			base = 5
+			}
+    available = {
+   check_variable = {
+    var = BLR_authoritharian_strenght
+    value = 2
+    compare = greater_than
+}
+  NOT = { 
+	has_government = pelekist
+  }
+  }
+  complete_effect = {
+   add_to_variable = { var = BLR_authoritharian_strenght value = 1 }
+   add_popularity = { ideology = authoritharian popularity = 0.02 }
+   swap_ideas = {
+   remove_idea = BLR_industrialists_3
+   add_idea = BLR_industrialists_4
+   }
+ }
+
+}
+ BLR_favor_elite_5 = {
+  cost = 50
+    	ai_will_do = {
+			base = 5
+			}
+  fire_only_once = yes
+    available = {
+   check_variable = {
+    var = BLR_authoritharian_strenght
+    value = 3
+    compare = greater_than
+}
+  NOT = { 
+	has_government = pelekist
+  }
+  }
+  complete_effect = {
+   add_to_variable = { var = BLR_authoritharian_strenght value = 1 }
+   add_popularity = { ideology = authoritharian popularity = 0.02 }
+   swap_ideas = {
+   remove_idea = BLR_industrialists_4
+   add_idea = BLR_industrialists_5
+   }
+ }
+
+}
+ BLR_favor_elite_6 = {
+  cost = 60
+    	ai_will_do = {
+			base = 5
+			}
+  fire_only_once = yes
+    available = {
+   check_variable = {
+    var = BLR_authoritharian_strenght
+    value = 4
+    compare = greater_than
+}
+  NOT = { 
+	has_government = pelekist
+  }
+  }
+  complete_effect = {
+   add_to_variable = { var = BLR_authoritharian_strenght value = 1 }
+   add_popularity = { ideology = authoritharian popularity = 0.02 }
+   swap_ideas = {
+   remove_idea = BLR_industrialists_5
+   add_idea = BLR_industrialists_6
+   }
+ }
+
+}
+}
+
+BLR_raids = {
+
+  BLR_buy_lithuanian_arms = {
+ cost = 25
+ fire_only_once = yes
+
+ complete_effect = {
+  country_event = { id = belarusia.4 days = 5 } 
+ }
+ ai_will_do = {
+  base = 200
+ }
+ }
+     BLR_request_lithuanian_support = {
+ cost = 50
+  ai_will_do = {
+  base = 200
+ }
+ fire_only_once = yes
+ available = {
+   OR = {
+    has_country_flag = BLR_dbr_refuses
+	date > 1935.9.1
+  }
+  }
+ complete_effect = {
+  LIT = { country_event = { id = lithuania.1 days = 5 } }
+ }
+
+ }
+ 
+
+ 
+ 
+ 
+ BLR_raid_baranowize = {
+ days_remove = 5
+  cost = 50
+    ai_will_do = {
+  base = 200
+ }
+ fire_only_once = yes
+  complete_effect = {
+  96 = {
+   clr_state_flag = border_incident_active
+  }
+  95 = {
+   clr_state_flag = border_incident_active
+  }
+  }
+  
+  available = {
+   NOT = {
+    has_country_flag = BLR_border_victory
+   }
+   NOT = {
+   is_in_faction_with = DBR
+   }
+   has_army_manpower = {
+    size > 70000
+	}
+   date > 1935.1.1
+   NOT = {
+    has_war = yes
+   }
+  }
+  
+  remove_effect = {
+  start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 96
+        num_provinces = 2
+		on_lose = belarusia.9
+		on_cancel = belarusia.9
+		on_win = belarusia.15
+
+    }
+                
+    defender = {
+        state = 95
+        num_provinces = 2
+        on_lose = belarusia.9
+		on_cancel = belarusia.9
+		on_win = belarusia.15
+    }
+}
+ 
+ }
+ }
+ 
+  BLR_raid_baranowize_fully = {
+  fire_only_once = yes
+    	ai_will_do = {
+			base = 200
+			}
+    cost = 50
+  available = {
+   has_country_flag = BLR_border_victory
+   has_army_manpower = {
+    size  > 90000
+	}
+   date > 1935.6.1
+     NOT = {
+    has_war = yes
+   }
+   }
+  
+ days_remove = 5
+  complete_effect = {
+  96 = {
+   clr_state_flag = border_incident_active
+  }
+  95 = {
+   clr_state_flag = border_incident_active
+  }
+  }
+  
+  remove_effect = {
+  start_border_war = {
+    change_state_after_war = yes
+    attacker = {
+        state = 96
+        num_provinces = 2
+		on_lose = belarusia.9
+		on_cancel = belarusia.9
+		on_win = belarusia.16
+
+    }
+                
+    defender = {
+        state = 95
+        num_provinces = 2
+        on_lose = belarusia.9
+		on_cancel = belarusia.9
+		on_win = belarusia.16
+    }
+}
+ 
+ }
+ }
+ 
+ BLR_invade_dbr = {
+   cost = 50
+ fire_only_once = yes
+   	ai_will_do = {
+			base = 200
+			}
+  allowed = {
+   tag = BLR
+   date > 1936.1.1
+  }
+  available = {
+   has_country_flag = BLR_border_victory_2
+   has_army_manpower = {
+   size > 150000
+  }
+    NOT = {
+    has_war = yes
+   }
+  }
+
+ complete_effect = {
+ declare_war_on = {
+					target = DBR
+					type = annex_everything
+				}
+ POL = { country_event = { id = poland.1 days = 5 } }
+ }
+ }
+ 
+ BLR_anti_commie_raids = {
+   cost = 50
+     	ai_will_do = {
+			base = 200
+			}
+ available = {
+  OR = {
+  has_country_flag = BLR_lithuanian_help
+  has_country_flag = BLR_on_our_own
+  has_country_flag = BLR_dbr_alliance
+ }
+ has_army_manpower = {
+  size > 80000
+  }
+    NOT = {
+    has_war = yes
+   }
+  date > 1935.1.1
+ }
+ days_remove = 5
+ fire_only_once = yes
+  complete_effect = {
+  204 = {
+   clr_state_flag = border_incident_active
+  }
+  1082 = {
+   clr_state_flag = border_incident_active
+  }
+  CBR = {
+   country_event = { id = belarusia.19 days = 3 }
+  }
+  }
+  
+  remove_effect = {
+  start_border_war = {
+    change_state_after_war = yes
+    attacker = {
+        state = 204
+        num_provinces = 2
+		on_lose = belarusia.17
+		on_cancel = belarusia.17
+		on_win = belarusia.18
+
+    }
+                
+    defender = {
+        state = 1082
+        num_provinces = 2
+        on_lose = belarusia.17
+		on_cancel = belarusia.17
+		on_win = belarusia.18
+    }
+}
+ 
+ }
+ }
+ 
+  BLR_invade_cbr = {
+    cost = 50
+	  	ai_will_do = {
+			base = 200
+			}
+ fire_only_once = yes
+  allowed = {
+   tag = BLR
+   
+  }
+  available = {
+   OR = {
+   has_country_flag = BLR_invade_commies
+   }
+     NOT = {
+    has_war = yes
+   }
+  }
+
+ complete_effect = {
+ declare_war_on = {
+					target = CBR
+					type = annex_everything
+				}
+ }
+ }
+
+
+}
+
+
+ 

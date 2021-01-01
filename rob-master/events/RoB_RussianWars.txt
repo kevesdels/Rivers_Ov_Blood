@@ -1,0 +1,304 @@
+###########################
+###Russian Civil War Events
+###########################
+
+add_namespace = russian_war
+
+#######WEST RUSSIAN WAR
+#####First possibility - border clashes
+country_event = {
+ id = russian_war.0
+ title = "Border Clashes on the Eastern Line"
+ desc = russian_war.0.d
+ fire_only_once = yes
+ mean_time_to_happen = { days = 2 }
+
+ trigger = {
+  tag = SOV
+  date > 1935.8.8
+  SOV = {
+   NOT = {
+    has_country_flag = SOV_west_russian_conflict
+   }
+  }
+  RDR = {
+   exists = yes
+   has_full_control_of_state = 256
+  }
+ }
+
+option = { ###The Time has come!
+ name = "Push Them Back!"
+ RDR = { country_event = { id = russian_war.1 days = 5 }}
+ add_manpower =-7543
+ ai_chance = {
+  factor = 50
+  }
+ }
+ 
+ option = { ###We should not poke them...
+  name = "Withdraw Our Units"
+  RDR = { country_event = { id = russian_war.5 days = 5 }}
+  ai_chance = {
+   factor = 150
+   }
+  }
+ }
+ 
+ ###Socialists push back
+ country_event = {
+  id = russian_war.1
+  title = "Border Clashes in the Western Front"
+  desc = russian_war.1.d
+  fire_only_once = yes
+  is_triggered_only = yes
+ 
+ option = { ###Withdraw
+  name = "Slowly Withdraw..."
+  add_war_support =-0.05
+  add_popularity = { ideology = reactionary popularity = 0.06 }
+  SOV = { country_event = { id = russian_war.2 days = 2 } }
+  ai_chance = {
+   factor = 100
+   }  
+  }
+  
+ option = { ###Reinforce Frontline!
+  name = "Reinforce the Front"
+  add_war_support = 0.1
+  SOV = { country_event = { id = russian_war.3 days = 3 } }
+  ai_chance = {
+   factor = 300
+   }
+  }
+ }
+ 
+ ###Liberals retreat
+  country_event = {
+  id = russian_war.2
+  title = "Reactionaries Defeated!"
+  desc = russian_war.2.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  option = {
+   name = bolshevik_russia.1.a
+   add_manpower = 5452
+   add_war_support = 0.05
+  }
+  }
+  
+  ###Liberasls push back
+   country_event = {
+   id = russian_war.3
+   title = "Reactionaries Bring Reinforcements!"
+   desc = russian_war.3.d
+   fire_only_once = yes
+   is_triggered_only = yes
+   
+   option = {
+   name = "To War!"
+   add_war_support = 0.1
+   SOV = { declare_war_on ={ target = RDR type = annex_everything } }
+   set_country_flag = SOV_west_russian_conflict
+   }
+   }
+   
+   ###Soviets fall back
+  country_event = {
+   id = russian_war.5
+   title = "Socialists Defeated!"
+   desc = russian_war.5.d
+   fire_only_once = yes
+   is_triggered_only = yes
+  
+  option = {
+   name = "We will dine in Moscow next year..."
+   add_manpower = 3561
+   add_war_support = 0.05
+  }
+  } 
+
+#####Second possibility - Attack them because of purge
+
+###Purges in RDR
+country_event = {
+ id = russian_war.6
+ title = "Report from the West"
+ desc = russian_war.6.d
+ fire_only_once = yes
+
+trigger = {
+tag = SOV
+date > 1935.1.1
+SOV = {
+ NOT = {
+  has_idea = mass_unrest
+  has_idea = bolshevik_strike
+  has_country_flag = SOV_west_russian_conflict
+  }
+ }
+}
+
+mean_time_to_happen = { days = 2 }
+
+option = {
+ name = "Their Crimes Won't Go Unpunished!"
+ SOV = { declare_war_on ={ target = RDR type = annex_everything } }
+ set_country_flag = SOV_west_russian_conflict
+ add_war_support = 0.1
+  ai_chance = {
+  factor = 5
+  }
+ }
+
+option = {
+ name = "We Can't Afford War Now..."
+ add_political_power = 5
+ ai_chance = {
+  factor = 95
+  }
+ }
+}
+
+#####Third possibility - Attack them because of bombs in Archangelsk
+
+###Bombs go off in Archangelsk
+country_event = {
+ id = russian_war.7
+ title = "Explosions in Archangelsk"
+ desc = russian_war.7.d
+ fire_only_once = yes
+ mean_time_to_happen = { days = 1 }
+ 
+ trigger = {
+  tag = SOV
+  date > 1936.1.1
+  SOV = {
+   NOT = {
+    has_country_flag = SOV_west_russian_conflict
+   }
+  }
+ }
+ 
+ option = {
+  name = "Rally the troops, we will crush reactionary vermin!"
+  SOV = { declare_war_on ={ target = RDR type = annex_everything } }
+  set_country_flag = SOV_west_russian_conflict
+  add_war_support = 0.1
+  ai_chance = {
+   factor = 125
+  }
+ }
+ 
+ option = {
+  name = "Let's not rush this..."
+  add_stability =-0.08
+  add_war_support =-0.08
+  ai_chance = {
+   factor = 25
+  }
+ }
+ 
+}
+
+#####Fourth possibility - Attack them because why not
+
+###The Last Push
+country_event = {
+ id = russian_war.8
+ title = "Our Final Battle"
+ desc = russian_war.8.d
+ fire_only_once = yes
+ mean_time_to_happen = { days = 1 }
+
+ trigger = {
+  tag = SOV
+  date > 1937.1.1
+  SOV = {
+   NOT = {
+    has_country_flag = SOV_west_russian_conflict
+   }
+  }
+ }
+ 
+ option = {
+  name = "It Begins"
+  SOV = { declare_war_on ={ target = RDR type = annex_everything } }
+  set_country_flag = SOV_west_russian_conflict
+  add_war_support = 0.15
+ }
+}
+
+#######WEST RUSSIAN WAR EXPANDS
+
+###RSR attacks Southern niggas
+country_event = {
+ id = russian_war.9
+ title = "Southern Situation"
+ desc = russian_war.9.d
+ fire_only_once = yes
+ mean_time_to_happen = { days = 1 }
+ 
+ trigger = {
+  tag = SOV
+  RUS = {
+   has_war = yes
+    NOT = {
+    has_war_with = SOV
+   }
+  }
+ }
+ option = {
+  name = "We will avenge 1927!"
+  SOV = { declare_war_on ={ target = RUS type = annex_everything } }
+  add_war_support = 0.05
+  set_country_flag = SOV_west_russian_conflict
+  ai_chance = {
+   factor = 200
+  }
+ }
+ 
+ option = {
+  name = "We're not ready. Yet."
+  add_stability = 0.05
+  ai_chance = {
+   factor = 0
+  }
+ }
+}
+
+###RDR attacks RSR niggas
+country_event = {
+ id = russian_war.10
+ title = "Western Situation"
+ desc = russian_war.10.d
+ fire_only_once = yes
+ mean_time_to_happen = { days = 1 }
+ 
+ trigger = {
+  tag = RDR
+  SOV = {
+   has_war = yes
+   NOT = {
+    has_war_with = RDR
+   }
+  }
+ }
+ option = {
+  name = "Our Push Begins!"
+  RDR = { declare_war_on ={ target = SOV type = annex_everything } }
+  add_war_support = 0.05
+  ai_chance = {
+   factor = 200
+  }
+ }
+ 
+ option = {
+  name = "We're not ready. Yet."
+  add_stability = 0.05
+  ai_chance = {
+   factor = 0
+  }
+ }
+}

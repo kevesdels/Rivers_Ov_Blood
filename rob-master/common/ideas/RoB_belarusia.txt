@@ -1,0 +1,293 @@
+ideas = {
+ country = {
+ 
+ BLR_on_our_own = {
+  picture = minority_troubles
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				conscription = 0.025 
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				}
+ 
+ }
+ 
+ BLR_pelekists_1 = {
+  picture = BLR_pelekists_low
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				war_support_factor = 0.03
+				army_org_factor = 0.03
+
+				}
+ 
+ }
+  BLR_pelekists_2 = {
+  picture = BLR_pelekists_low
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				war_support_factor = 0.06
+				army_org_factor = 0.06
+				}
+ 
+ }
+  BLR_pelekists_3 = {
+  picture = BLR_pelekists_medium
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				war_support_factor = 0.08
+				army_org_factor = 0.08
+				recon_factor = 0.01
+
+				}
+ 
+ }
+  BLR_pelekists_4 = {
+  picture = BLR_pelekists_medium
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				war_support_factor = 0.1
+				army_org_factor = 0.1
+				recon_factor = 0.02
+				}
+ 
+ }
+  BLR_pelekists_5 = {
+  picture = BLR_pelekists_high
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				war_support_factor = 0.1
+				army_org_factor = 0.1
+				recon_factor = 0.02
+				training_time_army_factor = -0.05
+				}
+ 
+ }
+ 
+   BLR_pelekists_6 = {
+  picture = BLR_pelekists_high
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				war_support_factor = 0.12
+				army_org_factor = 0.12
+				recon_factor = 0.03
+				training_time_army_factor = -0.1
+				}
+ 
+ }
+ 
+    BLR_industrialists_1 = {
+  picture = BLR_industrialists_low
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.03
+				production_factory_max_efficiency_factor = 0.03
+
+				}
+ 
+ }
+     BLR_industrialists_2 = {
+  picture = BLR_industrialists_low
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.06
+				production_factory_max_efficiency_factor = 0.06
+
+				}
+ 
+ }
+     BLR_industrialists_3 = {
+  picture = BLR_industrialists_medium
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.08
+				production_factory_max_efficiency_factor = 0.08
+				consumer_goods_factor = -0.05
+
+				}
+ 
+ }
+     BLR_industrialists_4 = {
+  picture = BLR_industrialists_medium
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.1
+
+				}
+ 
+ }
+     BLR_industrialists_5 = {
+  picture = BLR_industrialists_high
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+                consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.08
+				}
+ 
+ }
+     BLR_industrialists_6 = {
+  picture = BLR_industrialists_high
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.12
+				production_factory_max_efficiency_factor = 0.12
+                consumer_goods_factor = -0.12
+				industrial_capacity_factory = 0.12
+
+				}
+ 
+ }
+ 
+  belarusian_civil_war = {
+  picture = GFX_idea_minority_troubles
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+                ai_call_ally_desire_factor = -1000
+				ai_join_ally_desire_factor = -1000
+				conscription = 0.025 
+
+				}
+ 
+ }
+ 
+   BLR_lithuanian_influence = {
+  picture = GFX_idea_BLR_lithuanian_influence
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+            industrial_capacity_factory = 0.1
+            political_power_factor = -0.1
+				}
+ 
+ }
+ 
+    DBR_polish_dominance = {
+  picture = GFX_idea_DBR_polish_dominance
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+            production_factory_max_efficiency_factor = 0.1
+			stability_factor = 0.07
+            political_power_factor = -0.5
+				}
+ 
+ }
+ 
+     CBR_russian_influence = {
+  picture = GFX_idea_CBR_russian_influence
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+            production_factory_efficiency_gain_factor = 0.15
+            political_power_factor = -0.1
+				}
+ 
+ }
+ 
+ }
+ }

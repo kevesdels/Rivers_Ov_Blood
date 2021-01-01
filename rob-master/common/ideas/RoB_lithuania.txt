@@ -1,0 +1,1120 @@
+ideas = {
+ country = {
+ 
+  samogitian_identity = {
+  picture = GFX_idea_minority_troubles
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = -0.05
+				}
+ 
+ }
+  semi_loyal_military = {
+  picture = GFX_idea_minority_troubles
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	            war_support_factor = 0.1
+				stability_factor = -0.05
+				political_power_gain = -0.25
+				}
+ 
+ }
+
+   pelekists_rising = {
+   picture = GFX_idea_minority_troubles
+   allowed = {
+       always = no
+	   }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = -0.04
+				}
+ }
+ 
+   pearl_of_stability = {
+   picture = GFX_idea_minority_troubles
+   allowed = {
+       always = no
+	   }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.16
+				}
+ }
+ new_baltic_culture = {
+  picture = GFX_idea_minority_troubles
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				conscription = 0.015
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				war_support_factor = 0.1
+				}
+				}
+  lithuanian_crusaders = {
+  picture = GFX_idea_minority_troubles
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				conscription = 0.05
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				war_support_factor = 0.1
+				}
+				}
+				  loyal_military = {
+  picture = GFX_idea_minority_troubles
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	            war_support_factor = 0.1
+				}
+ }
+ corruptionless_society = {
+   picture = GFX_idea_minority_troubles
+   allowed = {
+       always = no
+	   }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				political_power_gain = 0.15
+				}
+ }
+ agriculturalism = {
+   picture = GFX_idea_minority_troubles
+   allowed = {
+       always = no
+	   }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+		  stability_factor = 0.05
+				consumer_goods_factor = -0.08
+				}
+ }
+ 
+ kolhoze_system = {
+   picture = GFX_idea_minority_troubles
+   allowed = {
+       always = no
+	   }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				consumer_goods_factor = -0.08
+				}
+ }
+  socialism_of_duty = {
+  picture = GFX_idea_minority_troubles
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				conscription = 0.015
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				war_support_factor = 0.1
+				political_power_gain = 0.16
+				}
+	}
+				
+	military_state = {
+  	picture = GFX_idea_minority_troubles
+ 	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	            war_support_factor = 0.1
+				stability_factor = 0.05
+				political_power_gain = 0.25
+				}
+	}
+				
+				
+	fanatical_army = {
+  picture = GFX_idea_minority_troubles
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				conscription = 0.015
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				war_support_factor = 0.1
+				}
+				}
+	every_man_a_gun = {
+  	picture = GFX_idea_minority_troubles
+  	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+	            war_support_factor = 0.1
+				}
+	}
+				
+	corporativist_economics = {
+  	picture = GFX_idea_famine_of_1933
+  	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+         production_factory_max_efficiency_factor = 0.08
+		 production_speed_buildings_factor = 0.25
+				}
+	}
+ corporativist_economics_2 = {
+   picture = GFX_idea_famine_of_1933
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+         production_factory_max_efficiency_factor = 0.08
+		 production_speed_buildings_factor = 0.25
+		 industrial_capacity_factory = 0.1
+				}
+ }
+ 
+ contract_companies = {
+   picture = GFX_idea_minority_troubles
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+		 production_speed_buildings_factor = 0.25
+		 production_speed_bunker_factor = 0.25
+				}
+ }
+ 
+lithuanian_stormtroopers = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+        war_support_factor = 0.15
+		army_attack_factor = 0.1
+		recon_factor = 0.05
+			}
+			}
+			
+     lightning_attacks = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      army_morale_factor = 0.15
+	  army_attack_factor = 0.1
+	  planning_speed = 0.2
+			}
+  }
+      partizanai = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     resistance_target = -0.5
+			}
+  }
+  pride_of_lithuania = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      army_morale_factor = 0.20
+	  }
+	  }
+	  
+  paramilitarism = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      army_morale_factor = 0.10
+	  }
+	  }
+	  
+	    militarism = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+      army_morale_factor = 0.10
+	  war_support_factor = 0.10
+	  }
+	  }
+	  
+	    aircraft_deals = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+         consumer_goods_factor =-0.15
+		 }
+	  }
+	  	    lithuanian_marines = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     special_forces_cap = 0.03
+	 amphibious_invasion = 0.25
+	 }
+	  }
+	  
+	  	  	    submarine_attack = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     navy_submarine_attack_factor = 0.03
+     navy_submarine_defence_factor = 0.03
+	 }
+	  }
+	  vadoprincipas = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     political_power_gain = 0.15
+	 production_speed_buildings_factor = 0.1
+	 }
+	 }
+	 
+	 anti_individualism = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.03
+	 industrial_capacity_factory = 0.01
+	 }
+	 }
+	 
+	 hiearchical_society = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.03
+	 political_power_gain = 0.15
+	 army_attack_factor = 0.1
+	 }
+	 }
+	 
+	 	 anti_equality = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.03
+	 industrial_capacity_factory = 0.01
+	 }
+	 }
+
+	 martial_society = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     army_org = 5
+	 industrial_capacity_factory = 0.01
+	 army_morale_factor = 0.1
+	 }
+	 }
+	 
+	 struggle = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.04
+	 }
+	 }
+	 
+	 anti_collectivism = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.02
+	 production_speed_industrial_complex_factor = 0.1
+	 }
+	 }
+	 
+	 needless_society = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.03
+	 }
+	 }
+	 
+	 no_usury = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.03
+	 political_power_gain = 0.5
+	 }
+	 }
+	 
+	 
+	 army_like_people = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     weekly_manpower = 250
+	 political_power_gain = 0.15
+	 }
+	 }
+	 
+	 banned_trade_unions = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.04
+	 }
+	 }
+	 
+	 no_foreign_influences = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     drift_defence_factor = 0.25
+	 
+	 }
+	 }
+	 
+	 economic_chambers = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.03
+	 industrial_capacity_factory = 0.01
+	 }
+	 }
+	 
+	 no_welfare = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.03
+	 }
+	 }
+	 
+	 laissez_faire_economics = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+	 production_speed_industrial_complex_factor = 0.1
+	 industrial_capacity_factory = 0.01
+	 }
+	 }
+	 
+	 little_to_no_regulations = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+	 production_speed_industrial_complex_factor = 0.1
+	 industrial_capacity_factory = 0.01
+	 production_factory_efficiency_gain_factor = 0.05
+	  }
+	  }
+	  
+	  ultra_wealthy_upper_class = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+	 production_speed_industrial_complex_factor = 0.1
+	 political_power_gain = 0.5
+	 production_factory_efficiency_gain_factor = 0.05
+	  }
+	  }
+	  
+	  materialistic_mentality = {
+	    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+	 production_factory_efficiency_gain_factor = 0.05 
+	 production_factory_start_efficiency_factor = 0.05 
+	 production_factory_max_efficiency_factor = 0.1 
+	 }
+	 }
+	 
+	  culture_of_work = {
+	  	    allowed = {
+       always = no
+	   }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+	 political_power_gain = 0.5
+	 production_factory_efficiency_gain_factor = 0.05 
+	 }
+	 }
+	 
+	 entrepreneurs_cult = {
+	  	    allowed = {
+       always = no
+	   }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     research_speed_factor = 0.05 	 
+	 }
+	 }
+	 
+	 lietukis = {
+	   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.04
+	 MONTHLY_POPULATION = 0.5 
+	 }
+	 }
+	 
+	agrarian_state = {
+	   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.02
+	 MONTHLY_POPULATION = 1
+	 }
+	 }
+	 
+	 resource_chambers = {
+	   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     local_resources_factor = 0.20 
+	 }
+	 }
+	 
+	 	 lithuanian_cement = {
+	   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     local_resources_factor = 0.10
+	 }
+	 }
+	 
+	 autarky = {
+	   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     local_resources_factor = 0.10
+	 consumer_goods_factor = -0.04
+	 }
+	 }
+	 	 
+		 	 chamber_of_service = {
+	   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+	 consumer_goods_factor = -0.04
+	 }
+	 }
+	 
+	 national_retail_union = {
+	   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+	 consumer_goods_factor = -0.04
+	 }
+	 }
+	 
+	 no_banks = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.03
+	 political_power_gain = 0.5
+	 }
+	 }
+	 
+	 no_bribes = {
+	 picture = GFX_idea_famine_of_1933
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.03
+	 political_power_gain = 0.1
+	 }
+	 }
+	 
+	 	 home_for_all = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.03
+	 production_factory_efficiency_gain_factor = 0.05 
+	 }
+	 }
+	 	 	 work_for_all = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.03
+	 political_power_gain = 0.5
+	 production_factory_efficiency_gain_factor = 0.05 
+	 }
+	 }
+		 	 collectivist_state = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+     consumer_goods_factor = -0.03
+	 industrial_capacity_factory = 0.01
+	 }
+	 }
+	 
+###ARMY IDEAS ADDED BY NEIRONS
+ LIT_lion_of_offence = {
+  allowed = { always = no }
+  allowed_civil_war = { always = yes }
+  removal_cost = -1
+  picture = GFX_idea_famine_of_1933
+  modifier = {
+     army_attack_factor = 0.15
+	   }
+	  }
+ LIT_lion_of_defence = {
+  allowed = { always = no }
+  allowed_civil_war = { always = yes }
+  removal_cost = -1
+  picture = GFX_idea_famine_of_1933
+  modifier = {
+     army_defence_factor = 0.15
+	   }
+	  }
+ LIT_all_arms_in_lith = {
+  allowed = { always = no }
+  allowed_civil_war = { always = yes }
+  removal_cost = -1
+  picture = GFX_idea_famine_of_1933
+  modifier = {
+     conscription = 0.02
+	   }
+	  }
+ LIT_radical_intervention = {
+  allowed = { always = no }
+  allowed_civil_war = { always = yes }
+  removal_cost = -1
+  picture = GFX_idea_famine_of_1933
+  modifier = {
+     justify_war_goal_time = -0.3
+	 generate_wargoal_tension -0.5
+	   }
+	  }
+ LIT_lith_supported_partisans = {
+  allowed = { always = no }
+  allowed_civil_war = { always = yes }
+  available = { NOT = { is_puppet_of = LIT } }
+  removal_cost = -1
+  picture = GFX_idea_famine_of_1933
+  targeted_modifier = {
+   tag = LIT
+   attack_bonus_against = -0.2
+   defense_bonus_against = -0.2
+
+}
+  modifier = {
+     stability_factor = -0.1
+	 decryption_factor =-0.3
+	 encryption_factor =-0.3
+	   }
+	  }
+ LIT_influence_2 = {
+  allowed = { always = no }
+  allowed_civil_war = { always = yes }
+  available = { NOT = { is_puppet_of = LIT } }
+  removal_cost = -1
+  picture = GFX_idea_famine_of_1933
+  targeted_modifier = {
+   tag = LIT
+   attack_bonus_against = -0.1
+   defense_bonus_against = -0.1
+
+}
+  modifier = {
+     stability_factor = -0.05
+	 decryption_factor =-0.1
+	 encryption_factor =-0.1
+	   }
+	  }
+	  
+ LIT_raids = {
+  allowed = { always = no }
+  allowed_civil_war = { always = yes }
+  available = { NOT = { is_puppet_of = LIT } }
+  removal_cost = -1
+  picture = GFX_idea_famine_of_1933
+  targeted_modifier = {
+   tag = SOV
+   attack_bonus_against = 0.1
+   defense_bonus_against = 0.1
+
+}
+  modifier = {
+	   }
+	  }
+ LIT_build_submarine = {
+  allowed = { always = no }
+  allowed_civil_war = { always = yes }
+  removal_cost = -1
+  picture = GFX_idea_famine_of_1933
+  modifier = {
+     industrial_capacity_dockyard = 0.3
+	   }
+	  }
+ LIT_prussian_naval_experts = {
+  allowed = { always = no }
+  allowed_civil_war = { always = yes }
+  removal_cost = -1
+  picture = GFX_idea_famine_of_1933
+  modifier = {
+     naval_hit_chance = 0.05
+	 naval_coordination = 0.05
+	   }
+	  }
+ LIT_destroyers = {
+  allowed = { always = no }
+  allowed_civil_war = { always = yes }
+  removal_cost = -1
+  picture = GFX_idea_famine_of_1933
+  modifier = {
+     navy_screen_attack_factor = 0.1
+	 navy_screen_defence_factor = 0.1
+	   }
+	  }
+ LIT_anbo_monopoly = {
+  allowed = { always = no }
+  allowed_civil_war = { always = yes }
+  removal_cost = -1
+  picture = GFX_idea_famine_of_1933
+  equipment_bonus = {
+	fighter_equipment = {
+			 build_cost_ic = -0.2 instant = yes
+           }
+		  }
+  modifier = {
+
+	   }
+	  }
+ LIT_anbo_monopoly_broken = {
+  allowed = { always = no }
+  allowed_civil_war = { always = yes }
+  removal_cost = -1
+  picture = GFX_idea_famine_of_1933
+  modifier = {
+    air_air_superiority_attack_factor = 0.07
+	air_air_superiority_defence_factor = 0.07
+	air_air_superiority_agility_factor = 0.07
+	   }
+	  }
+
+	 }
+
+###ARMY STAFF###
+
+ army_chief = {
+ LIT_juozas_barzda_bradauskas = {
+ cost = 150
+ picture = LIT_jouzas_bradauskas
+ allowed = { original_tag = LIT }
+ available = { has_completed_focus = LIT_defensivedoctrine }
+ traits = { army_entrenchment_2 }
+ }
+ 
+ LIT_edvardas_adamkavicius = {
+ cost = 150
+ picture = LIT_edvardas_adamkavicius
+ allowed = { original_tag = LIT }
+ available = { has_completed_focus = LIT_offensivedoctrine }
+ traits = { army_chief_offensive_2 }
+ }
+ 
+ LIT_julius_caplikas = {
+ cost = 150
+ picture = LIT_juliuss_caplikas
+ allowed = { original_tag = LIT }
+ traits = { army_chief_planning_2 }
+ }
+	 }
+	 
+navy_chief = {
+ LIT_adomas_daugirdas = {
+ cost = 150
+ picture = LIT_adomas_daugdiras
+ allowed = { original_tag = LIT }
+ traits = { navy_chief_commerce_raiding_1 }
+ }
+ 
+ LIT_juozas_andzejauskas = {
+ cost = 150
+ picture = LIT_jouzas_andzejauskas
+ allowed = { original_tag = LIT }
+ traits = { navy_chief_reform_1 }
+ }
+ 
+}
+
+air_chief = {
+ LIT_ignas_adamkavicius = {
+ cost = 150
+ picture = LIT_ignas_adamkavicius
+ allowed = { tag = LIT }
+ traits = { air_chief_safety_3 }
+ }
+ LIT_jurgis_bobkevicius = {
+ cost = 150
+ picture = LIT_jurgis_dobkevicius
+ allowed = { tag = LIT }
+ traits = { air_chief_ground_support_2 }
+ }
+
+}
+high_command = { 
+ LIT_jonas_cernius = {
+ cost = 150
+ picture = LIT_jonas_cernius
+ allowed = { original_tag = LIT }
+ available = { has_completed_focus = LIT_defensivedoctrine }
+ traits = { army_chief_morale_2 }
+ }
+
+ LIT_kazys_ladiga = {
+ cost = 150
+ picture = LIT_kazys_ladiga
+ allowed = { original_tag = LIT }
+ available = { has_completed_focus = LIT_defensivedoctrine }
+ traits = { army_infantry_1 }
+ }
+ 
+ LIT_kazys_skirpa = {
+ cost = 150
+ picture = LIT_kazys_skirpa
+ allowed = { original_tag = LIT }
+ traits = { army_regrouping_2 }
+ }
+ 
+ LIT_vincas_vitkauskas = {
+ cost = 150
+ picture = LIT_vincas_vitauskas
+ allowed = { original_tag = LIT }
+ available = { has_completed_focus = LIT_offensivedoctrine }
+ traits = { army_chief_maneuver_3 }
+ }
+ 
+ LIT_mikas_reklaitis = {
+ cost = 150
+ picture = LIT_mikas_reklaitis
+ allowed = { original_tag = LIT }
+ available = { has_completed_focus = LIT_offensivedoctrine }
+ traits = { army_infantry_2 }
+ }
+ 
+ LIT_stasys_rastikis = {
+ cost = 150
+ picture = LIT_stasys_rastikis
+ allowed = { original_tag = LIT }
+ available = { has_completed_focus = LIT_offensivedoctrine }
+ traits = { army_commando_2 }
+ }
+
+}
+
+}

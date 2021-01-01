@@ -1,0 +1,157 @@
+division_template = {
+	name = "Infantry Division"
+
+	division_names_group = VIN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = VIN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	#TRS Army
+	division = {
+		name = "1st Vietnamese Infantry"
+		location = 1185
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2nd Vietnamese Infantry"
+		location = 10129
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "3rd Vietnamese Infantry"
+		location = 12075
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4th Vietnamese Infantry"
+		location = 4119
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "5th Vietnamese Infantry"
+		location = 4255
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Hanoi Militia"
+		location = 4075
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Vinh Militia"
+		location = 4397
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Hue Militia"
+		location = 4379
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Northern Militia"
+		location = 7015
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Saigon Militia"
+		location = 7238
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Southern Militia"
+		location = 4223
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Highland Militia"
+		location = 12109
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Highland Militia"
+		location = 12176
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Northern Militia"
+		location = 9529
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "Central Militia"
+		location = 7280
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "VIN"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

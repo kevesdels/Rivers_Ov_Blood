@@ -1,0 +1,36 @@
+division_template = {
+	name = "Socialist Partisans"		
+
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 } 	
+		engineer = { x = 0 y = 1 }
+		
+	}
+}
+
+units = {
+division = {
+name = "Socialist Partisans"
+location = 685
+division_template = "Socialist Partisans"
+start_experience_factor = 0.3
+start_equipment_factor = 1.0
+
+}
+division = {
+name = "Socialist Partisans"
+location = 9632
+division_template = "Socialist Partisans"
+start_experience_factor = 0.3
+start_equipment_factor = 1.0
+
+}
+}

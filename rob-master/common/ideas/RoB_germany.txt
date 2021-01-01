@@ -1,0 +1,1142 @@
+ideas = {
+ country = {
+ 
+ deutsche_volksarmee = {
+ picture = GFX_idea_deutsche_volksarmee
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				army_org_factor = -0.15
+				army_attack_factor = -0.1
+				army_morale_factor = 0.15
+				army_defence_factor = 0.1
+				}
+ 
+ }
+ 
+ deutsche_volksarmee_lux = {
+ picture = deutsche_volksarmee
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = 0.1
+				army_morale_factor = 0.05
+				army_defence_factor = -0.05
+				}
+ 
+ }
+ 
+ deutsche_volksarmee_nb = {
+ picture = deutsche_volksarmee
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				army_org_factor = -0.05
+				army_attack_factor = -0.05
+				army_morale_factor = 0.2
+				conscription_factor = 0.2
+				}
+ 
+ }
+ 
+deutsche_volksarmee_ds = {
+ picture = deutsche_volksarmee
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				army_org_factor = -0.05
+				army_attack_factor = -0.05
+				army_morale_factor = 0.15
+				army_defence_factor = 0.05
+				}
+ 
+ }
+ 
+ german_partisans = {
+ picture = GFX_idea_german_partisans
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+ modifier = {
+				conscription = -0.01
+				political_power_factor = -0.45
+				stability_factor = -0.15
+				war_support_factor = -0.15
+			}
+ }
+ 
+ german_partisans_luxnb = {
+ picture = german_partisans
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+ modifier = {
+				conscription = -0.005
+				political_power_factor = -0.02
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+ }
+ 
+ spartakus_triumphant = {
+ picture = GFX_idea_spartakus_triumphant
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+ modifier = {
+				political_power_gain = 0.2
+				surrender_limit = 0.25
+}
+ 
+ }
+ 
+ rampant_corruption = {
+ picture = rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+				political_power_gain = -0.1
+				decryption_factor = -0.2
+				encryption_factor = -0.2
+				stability_factor = 0.05 
+}	
+ 
+ }
+ 
+ rampant_corruption_lux = {
+ picture = rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+				political_power_gain = -0.05
+				decryption_factor = -0.1
+				encryption_factor = -0.1
+}	
+ 
+ }
+
+ ####FOCUS TREE
+ GER_more_airplanes = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+			transport_plane_equipment = {
+			 build_cost_ic = -0.1 instant = yes
+           }
+		  }
+			removal_cost = -1
+		modifier = {
+}	
+ 
+ }
+    GER_paratroopers = {
+   picture = GFX_idea_prussian_high_command
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+			equipment_bonus = {
+		  } 
+	 modifier = {
+    air_paradrop_attack_factor = 0.25
+	air_paradrop_defence_factor = 0.25
+	special_forces_cap = 0.05
+	}
+ 
+ }
+ GER_more_guns = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+			infantry_equipment = {
+			 build_cost_ic = -0.07 instant = yes
+           }
+		  }
+			removal_cost = -1
+		modifier = {
+}	
+ 
+ }
+ GER_more_tanks = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+			armor = {
+			 build_cost_ic = -0.05 instant = yes
+           }
+		  }
+			removal_cost = -1
+		modifier = {
+}	
+ 
+ }
+ GER_tanks_elite = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		army_armor_speed_factor = 0.05
+		army_armor_attack_factor = 0.08
+}	
+ 
+ }
+ GER_navy_elite = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		navy_screen_attack_factor = 0.05
+		navy_capital_ship_attack_factor = 0.05
+		navy_submarine_attack_factor = 0.1
+		
+}	
+ 
+ }
+ GER_rebuild_navy = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		industrial_capacity_dockyard = 0.15
+		
+}	
+ 
+ }
+ GER_red_marines = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		amphibious_invasion = 0.15
+		invasion_preparation = -0.1
+		
+}	
+ 
+ }
+ GER_elite_pilots = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		air_ace_generation_chance_factor = 0.1
+		air_accidents_factor = -0.1
+		
+}	
+ 
+ }
+ GER_more_planes = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+			fighter = {
+			 build_cost_ic = -0.05 instant = yes
+           }
+		  }
+		  equipment_bonus = {
+			tac_bomber = {
+			 build_cost_ic = -0.05 instant = yes
+           }
+		  }
+			removal_cost = -1
+		modifier = {
+}	
+ 
+ }
+ GER_elite_airforce = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		naval_strike_attack_factor = 0.05
+		air_air_superiority_attack_factor = 0.05
+		air_close_air_support_attack_factor = 0.05
+		
+}	
+ 
+ }
+ GER_nazbol_agriculture = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		consumer_goods_factor = -0.06
+		
+}	
+ 
+ }
+ GER_nazbol_decentralization = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		local_building_slots_factor = 0.15
+		local_resources_factor = 0.15
+}	
+ 
+ }
+ GER_nazbol_resources = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		local_resources_factor = 0.15
+		production_oil_factor = 0.05
+}	
+ 
+ }
+ GER_nazbol_autarky = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		min_export = -0.3
+		production_factory_max_efficiency_factor = 0.08
+		industrial_capacity_factory = 0.08
+}	
+ 
+ }
+ GER_nazbol_rebuilding = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		industry_repair_factor = 0.1
+		production_speed_buildings_factor = 0.15
+}	
+ 
+ }
+ GER_lux_industry = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		industrial_capacity_factory = 0.1
+		production_factory_max_efficiency_factor = 0.1
+}	
+ 
+ }
+ GER_ds_cities = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		MONTHLY_POPULATION = 0.45
+		production_speed_buildings_factor = 0.1
+}	
+ 
+ }
+ GER_ds_worker_corparatives = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		production_factory_start_efficiency_factor = 0.05
+		line_change_production_efficiency_factor = 0.05
+}	
+ 
+ }
+ GER_ds_volkslufhansa = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		consumer_goods_factor = 0.02
+		industrial_capacity_factory = 0.05
+		production_factory_start_efficiency_factor = 0.03
+}	
+ 
+ }
+
+ GER_dem_soc = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		consumer_goods_factor = 0.05
+		line_change_production_efficiency_factor = 0.15
+		surrender_limit = 0.05
+}	
+ 
+ } 
+ 
+  GER_guns_for_party = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+		surrender_limit = 0.05
+}	
+ 
+ } 
+ 
+  GER_communist_youth = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+        training_time_army_factor =-0.15
+		conscription_factor = 0.1
+}	
+ 
+ } 
+ 
+  GER_worker_eco = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		consumer_goods_factor = 0.08
+		industrial_capacity_factory = 0.1
+		
+}	
+ 
+ }
+
+GER_isolation = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		justify_war_goal_time = 0.35
+		production_speed_buildings_factor = 0.15
+		
+}	
+ 
+ }
+
+GER_socialist_science = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		research_speed_factor = 0.05
+		stability_factor =-0.05
+		
+}	
+ 
+ }
+
+ GER_proletarian_culture = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		industrial_capacity_factory = 0.1
+		production_factory_max_efficiency_factor =0.07
+		
+}	
+ 
+ }
+ 
+  GER_modernist_art = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		stability_factor = -0.05
+		political_power_factor =0.25
+		
+}	
+ 
+ }
+ 
+   GER_weak_chairman = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		stability_factor = 0.05
+		political_power_factor =-0.15
+		political_advisor_cost_factor = -0.15
+		
+		
+}	
+ 
+ }
+ 
+   GER_new_socialist_man = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		 industrial_capacity_factory = 0.05
+		 army_attack_factor = 0.05
+		
+}	
+ 
+ }
+ 
+ GER_modern_education = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		research_speed_factor = 0.03
+		stability_factor =-0.02
+		
+}	
+ 
+ }
+ 
+ 
+ GER_modern_education_lux = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		research_speed_factor = 0.05
+		
+		
+}	
+ 
+ }
+ 
+GER_reeducation = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		production_speed_buildings_factor = 0.1
+		stability_factor =-0.08
+		
+}	
+ 
+ }
+
+GER_local_defense = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		army_core_attack_factor = 0.15
+		army_core_defence_factor = 0.15
+		conscription = 0.005
+		
+}	
+ 
+ }
+ GER_exporting_revolution = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		 justify_war_goal_time = -0.15
+		 war_support_factor = 0.05
+		
+}	
+ 
+ }
+ GER_anti_partisan_units = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		 resistance_target = -0.3
+		 stability_factor = 0.05
+		
+}	
+ 
+ }
+ 
+ GER_political_commisars = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		 army_core_attack_factor = 0.1
+		 army_core_defence_factor = 0.1
+		 army_org_factor = 0.05
+		
+}	
+ 
+ } 
+ 
+ GER_peoples_units = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		 resistance_target = 0.45
+		 conscription = 0.01
+		
+}	
+ 
+ }
+
+ GER_proletarian_state = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		 stability_factor = 0.1
+		 production_factory_max_efficiency_factor = 0.1
+		 industrial_capacity_factory = 0.08
+		
+}	
+ 
+ }
+
+ GER_all_seeing_state = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		 stability_factor = 0.05
+		 war_support_factor = 0.05
+		 political_power_factor = 0.25
+		
+}	
+ 
+ }
+
+ GER_mass_mob = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+		 war_support_factor = 0.05
+		 conscription = 0.02
+		 army_org_factor = -0.07
+}	
+ 
+ }
+ 
+ 
+  GER_agrarian_soc = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+       production_factory_max_efficiency_factor = 0.1
+	   consumer_goods_factor =-0.15
+}	
+ 
+ }
+ 
+ GER_diversify_production = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+       local_resources_factor = 0.2
+	   consumer_goods_factor =-0.05
+}	
+ 
+ }
+ 
+  GER_reformed_general_staff = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+       army_attack_factor =-0.1
+	   army_morale_factor =-0.05
+	   army_org_factor =-0.05
+}	
+ 
+ }
+
+  GER_fight_consumer_goods = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+       consumer_goods_factor = 0.1
+	   production_factory_max_efficiency_factor = 0.1
+	   industrial_capacity_factory = 0.05
+}	
+ 
+ }
+ 
+  GER_german_agriculture = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+       consumer_goods_factor = -0.05
+	   stability_factor = 0.07 
+	    
+}	
+ 
+ }
+ 
+   GER_new_volksmilitia = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+       conscription = 0.005
+	   army_core_attack_factor = 0.1
+	   army_core_defence_factor = 0.1
+	    
+}	
+ 
+ }
+
+  GER_eco_indep = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+       min_export = -0.25
+	   production_factory_max_efficiency_factor = 0.05
+       industrial_capacity_factory = 0.1	   
+	    
+}	
+ 
+ }  
+ 
+   GER_fresh_officeries = {
+ picture = GFX_idea_rampant_corruption
+ research_bonus = { land_doctrine = 0.1 }
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+
+
+}	
+ 
+ }
+ 
+   GER_foreign_revolutionaries = {
+ picture = GFX_idea_rampant_corruption
+ research_bonus = { land_doctrine = 0.07 }
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+		modifier = {
+
+
+}	
+ 
+ } 
+ 
+ GER_cheap_guns = {
+ picture = GFX_idea_rampant_corruption
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+			infantry_equipment = {
+			 build_cost_ic = -0.1 instant = yes
+           }
+		  }
+			removal_cost = -1
+		modifier = {
+}	
+ 
+ } 
+ }
+ 
+ 
+###ARMY STAFF###
+
+army_chief = {
+ 
+ GER_fritz_erich = {
+ cost = 150
+ picture = GER_erich_fellgiebel
+ allowed = { original_tag = GER }
+ traits = { army_chief_defensive_2 }
+ }
+ 
+ GER_erich_muchsam = {
+ cost = 150
+ picture = GER_erich_muhsam
+ allowed = { original_tag = GER }
+ traits = { army_chief_offensive_2 }
+ }
+ 
+ GER_franz_erich = {
+ cost = 150
+ picture = GER_franz_erdmann_mehrin
+ allowed = { original_tag = GER }
+ traits = { army_chief_drill_2 }
+ }
+
+}
+
+navy_chief = {
+ 
+ GER_alwin_broder_albrecht = {
+ cost = 150
+ picture = GER_alwin_albrecht
+ allowed = { original_tag = GER }
+ traits = { navy_fleet_logistics_1 }
+ }
+
+ GER_hermann_boehm = {
+ cost = 150
+ picture = GER_hermann_bohem
+ allowed = { original_tag = GER }
+ traits = { navy_chief_decisive_battle_2 }
+ }
+
+ GER_alfred_saalwachter = {
+ cost = 150
+ picture = GER_alfred_sallwachter
+ allowed = { original_tag = GER }
+ traits = { navy_chief_commerce_raiding_3 }
+ }
+}
+
+air_chief = {
+
+ GER_walther_wever = {
+ cost = 150
+ picture = GER_walther_wever
+ allowed = { original_tag = GER }
+ traits = { air_tactical_bombing_3 }
+ }
+ 
+ GER_albert_kesselring = {
+ cost = 150
+ picture = GER_albert_kesselring
+ allowed = { original_tag = GER }
+ traits = { air_pilot_training_2 }
+ }
+ 
+ GER_hans_jurgen_stumpff = {
+ cost = 150
+ picture = GER_hans_jurgen_stumpff
+ allowed = { original_tag = GER }
+ traits = { air_bomber_interception_2 }
+ }
+
+}
+
+high_command = {
+
+ GER_rommel_hc = {
+ cost = 150
+ picture = GER_erwin_rommel
+ allowed = { original_tag = GER }
+ traits = { army_chief_maneuver_2 }
+ }
+
+ GER_ernst_thalmann = {
+ cost = 150
+ picture = GER_ernst_thalmann
+ allowed = { original_tag = GER }
+ traits = { army_infantry_1 }
+ }
+ 
+ GER_karl_lieknacht = {
+ cost = 150
+ picture = GER_karl_lieknacht
+ allowed = { original_tag = GER }
+ traits = { army_regrouping_2 }
+ }
+ 
+ GER_erich_von_manstein = {
+ cost = 150
+ picture = GER_eric_von_manstein
+ allowed = { original_tag = GER }
+ traits = { army_logistics_3 }
+ }
+ 
+ GER_kurt_eisner = {
+ cost = 150
+ picture = GER_kurt_eisner
+ allowed = { original_tag = GER }
+ traits = { army_entrenchment_2 }
+ }
+}
+
+
+}

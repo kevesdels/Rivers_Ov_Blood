@@ -1,0 +1,46 @@
+capital = 1244
+
+oob = "UBG_1936"
+# Gabonese Leadership
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+}
+
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	national_socialist = 0
+	socialist = 22
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 63
+	authoritharian = 0
+	reactionary = 15
+	pelekist = 0
+}
+
+add_ideas = {
+limited_conscription
+}
+
+create_country_leader = {
+	name = "Leon M'ba" 
+	desc = ""
+	picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+	expire = "1965.1.1"
+	ideology = conservative_subtype
+	traits = {
+		#
+	}
+}

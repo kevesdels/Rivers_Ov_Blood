@@ -1,0 +1,2027 @@
+focus_tree = {
+	id = german_focus_no_coallition
+		country = {
+		factor = 0
+	}
+
+	continuous_focus_position = { x = 50 y = 3000 }
+	
+	
+	shared_focus = GER_rotevolksarmee
+	shared_focus = GER_rotevolksflotte
+	shared_focus = GER_roteluftwaffe
+	shared_focus = GER_germaneconomy
+	
+
+#Focus for Military Industry
+	focus = {
+		id = GER_militaryindustry
+		icon = GFX_SOV_gorky_plants
+		x = 35
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_autobahn }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Exporting the Revolution
+	focus = {
+		id = GER_exportingtherevolution
+		icon = GFX_focus_SOV_liberational_army
+		x = 33
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_weakengermanidentity }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_exporting_revolution
+		 }
+		}
+	}
+
+	#Focus for Expel Opposition
+	focus = {
+		id = GER_expelopposition
+		icon = GFX_focus_SOV_get_rid_of_bourgeosie
+		x = 30
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_empowercouncil }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_popularity = {ideology = national_socialist popularity =-0.08}
+		 add_popularity = {ideology = democratic_socialist popularity =-0.08}
+		}
+	}
+
+	#Focus for Democratic Socialist Majority
+	focus = {
+		id = GER_democraticsocialistmajority
+		icon = GFX_focus_GER_demsoc_majority
+		x = 63
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_country_flag = GER_dem_victory
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_political_power = 60
+		}
+	}
+
+
+
+	#Focus for Empower the Chairman
+	focus = {
+		id = GER_empowerthechairman
+		icon = GFX_focus_SOV_vlaslov_strong_premier
+		x = 2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_nationalbolshevikmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_political_power = 80
+		}
+	}
+
+	#Focus for Strengthen Volksarmee
+	focus = {
+		id = GER_strengthenvolksarmee
+		icon = GFX_focus_GER_strenghten_volksarmee
+		x = 12
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_nationalbolshevikmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+				add_tech_bonus = {
+					name = doctrine_bonus
+					bonus = 1.0
+					uses = 1
+					category = land_doctrine
+				}		 
+		}
+	}
+
+	#Focus for Agrarian Socialism
+	focus = {
+		id = GER_agrariansocialism
+		icon = GFX_focus_SOV_grain_quatas
+		x = 7
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_nationalbolshevikmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		add_ideas = {
+		 GER_agrarian_soc
+		}
+		}
+	}
+
+	#Focus for German Revanchism
+	focus = {
+		id = GER_germanrevanchism
+		icon = GFX_focus_GER_german_revanchism
+		x = 5
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_nationalbolshevikmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_popularity = { ideology = national_socialist popularity = 0.1 }
+		}
+	}
+
+	#Focus for Cruel Anti-Partisan Measures
+	focus = {
+		id = GER_cruelantipartisanmeasures
+		icon = GFX_focus_GER_cruel_anti_paertisan
+		x = 9
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_nationalbolshevikmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+          add_manpower = -21635
+		}
+	}
+
+	#Focus for Diversify Our Production
+	focus = {
+		id = GER_diversifyourproduction
+		icon = GFX_focus_SOV_bukharins_agriculture
+		x = 7
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_agrariansocialism }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_diversify_production
+		 }
+		}
+	}
+
+	#Focus for Expand SSD
+	focus = {
+		id = GER_expandssd
+		icon = GFX_focus_SOV_vlaslovist_security
+		x = 2
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_empowerthechairman }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_stability = 0.08
+		}
+	}
+
+	#Focus for Promote Noteworthy Officers
+	focus = {
+		id = GER_promotenoteworthyofficers
+		icon = GFX_focus_SOV_crush_unrest
+		x = 12
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_strengthenvolksarmee }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_popularity = { ideology = national_socialist popularity = 0.05 }
+		}
+	}
+
+	#Focus for Crush Opposition
+	focus = {
+		id = GER_crushopposition
+		icon = GFX_focus_SOV_local_vlaslovist_militias
+		x = 2
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_expandssd }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_popularity = { ideology = socialist popularity = -0.1 }
+		 add_popularity = { ideology = democratic_socialist popularity = -0.1 }
+		}
+	}
+
+	#Focus for Punitive Expeditions
+	focus = {
+		id = GER_punitiveexpeditions
+		icon = GFX_focus_SOV_use_red_guard
+		x = 9
+		y = 3
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_cruelantipartisanmeasures }
+		ai_will_do = {
+			factor = 100
+		}
+	  completion_reward = {
+		 add_popularity = { ideology = reactionary popularity = -0.1 }
+		 add_popularity = { ideology = pelekist popularity = -0.1 }
+		 add_popularity = { ideology = social_liberal popularity = -0.1 }
+		}
+	}
+
+	#Focus for National Autarky
+	focus = {
+		id = GER_nationalautarky
+		icon = GFX_focus_SOV_foreced_collectiviation_vlaslov
+		x = 6
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_unitewithourbrothers 
+		}
+		prerequisite = { 
+			focus = GER_collectivefarms 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_popularity = { ideology = national_socialist popularity = 0.08 }
+		}
+	}
+
+	#Focus for Mass Armament Production
+	focus = {
+		id = GER_massarmamentproduction
+		icon = GFX_focus_SOV_urban_nationalization
+		x = 35
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_liberatorsofeurope 
+		}
+		prerequisite = { 
+			focus = GER_peoplesmilitias 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+         random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}		
+		
+		
+		}
+	}
+
+	#Focus for Cement our Rule
+	focus = {
+		id = GER_cementourrule
+		icon = GFX_focus_SOV_stronegr_central_planning
+		x = 38
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+         has_country_flag = GER_south_secured
+         has_country_flag = GER_north_secured 		 
+		}
+		prerequisite = { 
+			focus = GER_peoplesmilitias 
+		}
+		prerequisite = { 
+			focus = GER_swordandshieldofparty 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 remove_ideas = { german_partisans }
+		}
+	}
+
+	#Focus for Socialist Education
+	focus = {
+		id = GER_socialisteducation
+		icon = GFX_focus_SOV_bukharins_institute_of_agriculture
+		x = 34
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_proletariatstate 
+		}
+		prerequisite = { 
+			focus = GER_massarmamentproduction 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_modern_education_lux
+		 }
+		}
+	}
+
+	#Focus for Proletariat State
+	focus = {
+		id = GER_proletariatstate
+		icon = GFX_focus_SOV_work_for_all
+		x = 32
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_reshapegermanculture 
+		}
+		prerequisite = { 
+			focus = GER_liberatorsofeurope 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_proletarian_state
+		 }
+		}
+	}
+
+	
+
+
+
+
+
+	#Focus for Cheap Weapons
+	focus = {
+		id = GER_cheapweapons
+		icon = GFX_focus_SOV_mass_mobilizations_molotov
+		x = 6
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_allseeingstate 
+		}
+		prerequisite = { 
+			focus = GER_germanmilitaryindustry 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_cheap_guns
+		 }
+		}
+	}
+
+	#Focus for Mass Mobilizations
+	focus = {
+		id = GER_massmobilizations
+		icon = GFX_focus_SOV_march_til_our_death
+		x = 8
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_germanmilitaryindustry 
+		}
+		prerequisite = { 
+			focus = GER_thenewgermanarmy 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_mass_mob
+		 }
+		}
+	}
+
+	#Focus for All-Seeing State
+	focus = {
+		id = GER_allseeingstate
+		icon = GFX_focus_GER_all_seeing_state
+		x = 4
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_nationalautarky 
+		}
+		prerequisite = { 
+			focus = GER_curbstompcorruption 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_all_seeing_state
+		 }
+		}
+	}
+
+	#Focus for German Military Industry
+	focus = {
+		id = GER_germanmilitaryindustry
+		icon = GFX_focus_SOV_focus_on_military_industry
+		x = 7
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_clearthecountryside 
+		}
+		prerequisite = { 
+			focus = GER_nationalautarky 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+        random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}		
+		        random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Curbstomp Corruption
+	focus = {
+		id = GER_curbstompcorruption
+		icon = GFX_focus_SOV_paramilitaries_in_cities
+		x = 3
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_unitewithourbrothers 
+		}
+		prerequisite = { 
+			focus = GER_crushopposition 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_stability =-0.1
+		 remove_ideas = { rampant_corruption }
+		}
+	}
+
+	#Focus for Fall Rotschwarz
+	focus = {
+		id = GER_fallrotschwarz
+		icon = GFX_focus_SOV_kill_all_traitors
+		x = 11
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		available = {
+		 has_completed_focus = GER_clearthecountryside		
+         has_country_flag = GER_south_secured
+         has_country_flag = GER_north_secured 		 
+		}
+		prerequisite = { 
+			focus = GER_reforminggeneralstaff 
+		}
+		prerequisite = { 
+			focus = GER_punitiveexpeditions 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 remove_ideas = { german_partisans }
+		}
+	}
+
+	#Focus for Clear the Countryside
+	focus = {
+		id = GER_clearthecountryside
+		icon = GFX_focus_SOV_vlaslov_purges
+		x = 8
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_collectivefarms 
+		}
+		prerequisite = { 
+			focus = GER_punitiveexpeditions 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_manpower =-35423
+		 add_stability = 0.05
+		}
+	}
+
+	#Focus for Luxembourgist Majority
+	focus = {
+		id = GER_luxembourgistmajority
+		icon = GFX_focus_GER_luxembourgist_majority
+		x = 35
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_country_flag = GER_lux_victory
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_political_power = 60
+		}
+	}
+
+	#Focus for Recruitment Campaign
+	focus = {
+		id = GER_recruitmentcampaign
+		icon = GFX_focus_GER_recruitment_campaing
+		x = 40
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_modernizeequipment }
+		bypass = {
+		 has_idea = extensive_conscription
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = {
+		  extensive_conscription
+		 }
+		}
+	}
+
+	#Focus for Anti-Corruption Measures
+	focus = {
+		id = GER_anticorruptionmeasures
+		icon = GFX_focus_GER_anti_corrpoution_lux
+		x = 30
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_expelopposition }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 remove_ideas = { rampant_corruption }
+		 add_timed_idea = {
+		  idea = rampant_corruption_lux
+		  days = 720
+		 }
+		}
+	}
+
+
+
+	#Focus for National Bolshevik Majority
+	focus = {
+		id = GER_nationalbolshevikmajority
+		icon = GFX_focus_GER_nazbol_majority
+		x = 7
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_country_flag = GER_nb_vitory
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_political_power = 60  
+		}
+	}
+
+	#Focus for Unite with Our Brothers
+	focus = {
+		id = GER_unitewithourbrothers
+		icon = GFX_focus_GER_unite_with_brothers
+		x = 5
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_germanrevanchism }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 custom_effect_tooltip = GER_tt_2
+		 set_country_flag = GER_expansion
+		 add_war_support = 0.05
+		}
+	}
+
+	#Focus for Collective Farms
+	focus = {
+		id = GER_collectivefarms
+		icon = GFX_focus_SOV_bukharins_cop_foreign_designs
+		x = 7
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_diversifyourproduction }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+       random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}		
+		}
+	}
+
+	#Focus for Reforming General Staff
+	focus = {
+		id = GER_reforminggeneralstaff
+		icon = GFX_focus_GER_reform_general_satff
+		x = 12
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_promotenoteworthyofficers }
+		ai_will_do = {
+			factor = 100
+		}
+		
+		completion_reward = {
+		 add_timed_idea = {
+		  idea = GER_reformed_general_staff
+		  days = 240
+		 }
+		 add_ideas = {
+		  GER_fresh_officeries
+		 }
+		}
+		
+	}
+
+	#Focus for The New German Army
+	focus = {
+		id = GER_thenewgermanarmy
+		icon = GFX_focus_GER_new_german_army
+		x = 10
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_clearthecountryside 
+		}
+		prerequisite = { 
+			focus = GER_fallrotschwarz 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 swap_ideas = {
+		  remove_idea = deutsche_volksarmee
+		  add_idea = deutsche_volksarmee_nb
+		 }
+		} 
+	}
+
+	#Focus for The National Socialist State
+	focus = {
+		id = GER_thenationalsocialiststate
+		icon = GFX_focus_GER_national_socialist_state
+		x = 7
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_cheapweapons 
+		}
+		prerequisite = { 
+			focus = GER_massmobilizations 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_war_support = 0.2
+		}
+	}
+
+	#Focus for Modernize Equipment
+	focus = {
+		id = GER_modernizeequipment
+		icon = GFX_focus_GER_modernize_rotkorps
+		x = 40
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_focusonrotkorps }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		  add_tech_bonus = {
+	       name = infantry_bonus
+	       bonus = 1.0
+    
+	       uses = 1
+	       category = infantry_weapons
+		   category = artillery
+}
+		}
+	}
+
+	#Focus for Focus on Heavy Industry
+	focus = {
+		id = GER_focusonheavyindustry
+		icon = GFX_SOV_novgorod_plants
+		x = 35
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_luxembourgistmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Weaken German identity
+	focus = {
+		id = GER_weakengermanidentity
+		icon = GFX_focus_GER_weaken_german_idenity
+		x = 33
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_luxembourgistmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_stability = 0.07
+		}
+	}
+
+	#Focus for Keep the Current Measures
+	focus = {
+		id = GER_keepthecurrentmeasures
+		icon = GFX_focus_SOV_SOV_indoctrinate_molotov
+		x = 37
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_luxembourgistmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_stability = 0.05
+		 add_manpower =-7462
+		}
+	}
+
+	#Focus for Autobahn
+	focus = {
+		id = GER_autobahn
+		icon = GFX_SOV_moscowsmolnesk_highway
+		x = 35
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_focusonheavyindustry }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 	794 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+	     1093 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			793 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		58 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Liberators of Europe
+	focus = {
+		id = GER_liberatorsofeurope
+		icon = GFX_focus_GER_liberate_europe
+		x = 34
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_exportingtherevolution 
+		}
+		prerequisite = { 
+			focus = GER_militaryindustry 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 custom_effect_tooltip = GER_tt_1
+		 set_country_flag = GER_expansion_LUX_DS
+		 add_war_support = 0.1
+		}
+	}
+
+	#Focus for Sword and Shield of Party
+	focus = {
+		id = GER_swordandshieldofparty
+		icon = GFX_focus_GER_sword_and_shield
+		x = 39
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_antipartisanunits 
+		}
+		prerequisite = { 
+			focus = GER_recruitmentcampaign 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_popularity = { ideology = socialist popularity = 0.15 }
+		}
+		
+	}
+
+	#Focus for People's Militias
+	focus = {
+		id = GER_peoplesmilitias
+		icon = GFX_focus_SOV_commiser_officers
+		x = 36
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_militaryindustry 
+		}
+		prerequisite = { 
+			focus = GER_antipartisanunits 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		add_ideas = {
+		 GER_peoples_units
+		}
+		}
+	}
+
+	#Focus for Reshape German Culture
+	focus = {
+		id = GER_reshapegermanculture
+		icon = GFX_focus_GER_reshape_german_culture
+		x = 31
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_anticorruptionmeasures 
+		}
+		prerequisite = { 
+			focus = GER_exportingtherevolution 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_popularity = { ideology = socialist popularity = 0.05 }
+		}
+	}
+
+	#Focus for Empower Council
+	focus = {
+		id = GER_empowercouncil
+		icon = GFX_focus_GER_empower_council
+		x = 30
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_luxembourgistmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_political_power = 80
+		}
+	}
+
+	#Focus for Anti-Partisan Units
+	focus = {
+		id = GER_antipartisanunits
+		icon = GFX_focus_SOV_nkvd_units
+		x = 37
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_keepthecurrentmeasures }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = GER_anti_partisan_units
+		}
+	}
+
+	
+
+	
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	#Focus for Focus on Rotkorps
+	focus = {
+		id = GER_focusonrotkorps
+		icon = GFX_focus_GER_focus_on_rotkorps
+		x = 40
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_luxembourgistmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 swap_ideas = {
+		  remove_idea = deutsche_volksarmee
+		  add_idea = deutsche_volksarmee_lux
+		 }
+		}
+	}
+
+
+
+
+
+
+	#Focus for Socialist Youth
+	focus = {
+		id = GER_socialistyouth
+		icon = GFX_SOV_use_communist_youth
+		x = 36
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_massarmamentproduction 
+		}
+		prerequisite = { 
+			focus = GER_cementourrule 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_political_power = 50
+		 add_popularity = { ideology = socialist popularity = 0.05 }
+		}
+	}
+
+	#Focus for The Socialist State
+	focus = {
+		id = GER_thesocialiststate
+		icon = GFX_focus_GER_socialist_state
+		x = 35
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_socialisteducation 
+		}
+		prerequisite = { 
+			focus = GER_socialistyouth 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		add_stability = 0.1
+		add_war_support = 0.1
+		}
+	}
+
+	#Focus for Reorganize Trade Unions
+	focus = {
+		id = GER_reorganizetradeunions
+		icon = GFX_focus_SOV_promise_reforms
+		x = 58
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_democraticsocialistmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	#Focus for Worker-Centered Economy
+	focus = {
+		id = GER_workercenteredeconomy
+		icon = GFX_focus_GER_worker_eco
+		x = 63
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_democraticsocialistmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas =  { GER_worker_eco }
+		}
+	}
+
+	#Focus for Isolationism
+	focus = {
+		id = GER_isolationism
+		icon = GFX_focus_SOV_western_socialists
+		x = 61
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_democraticsocialistmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = { GER_isolation }	
+		 custom_effect_tooltip = GER_tt_1
+		 set_country_flag = GER_expansion_LUX_DS
+		 add_war_support = 0.1
+		}
+	}
+
+	#Focus for Reeducation Camps
+	focus = {
+		id = GER_re_educationcamps
+		icon = GFX_focus_SOV_form_camps
+		x = 65
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_democraticsocialistmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = GER_reeducation
+		}
+	}
+
+	#Focus for Support Civilian Industry
+	focus = {
+		id = GER_supportcivilianindustry
+		icon = GFX_SOV_heavy_industry
+		x = 63
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_workercenteredeconomy }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+         random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+         random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Empower the Workers
+	focus = {
+		id = GER_empowertheworkers
+		icon = GFX_focus_SOV_purge_trade_unions
+		x = 58
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_reorganizetradeunions }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_stability = 0.07
+		}
+	}
+
+	#Focus for Democratic Socialism
+	focus = {
+		id = GER_democraticsocialism
+		icon = GFX_focus_SOV_remind_the_workers
+		x = 58
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_empowertheworkers }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = {
+		  GER_dem_soc
+		 }
+		}
+	}
+
+	#Focus for Socialist Science Institute
+	focus = {
+		id = GER_socialistscienceinstitute
+		icon = GFX_focus_SOV_bukharins_madatory_education
+		x = 61
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_isolationism }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = { GER_socialist_science }
+		}
+	}
+
+	#Focus for Liberalize Gun Laws
+	focus = {
+		id = GER_liberalizegunlaws
+		icon = GFX_focus_GER_liberalize_gun_laws
+		x = 68
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_localdefenseforces }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_war_support = 0.1
+		}
+	}
+
+	#Focus for Volkswagen
+	focus = {
+		id = GER_volkswagen
+		icon = GFX_focus_GER_volkswagen
+		x = 63
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_supportcivilianindustry }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+         random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}		
+		
+		}
+	}
+
+	#Focus for Volksarmee Officers
+	focus = {
+		id = GER_volksarmeeofficers
+		icon = GFX_focus_GER_volksarmee_officers_ds
+		x = 68
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_liberalizegunlaws }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 swap_ideas = {
+		  add_idea = deutsche_volksarmee_ds
+		  remove_idea = deutsche_volksarmee
+		 }
+		}
+	}
+
+	#Focus for Proletarian Culture
+	focus = {
+		id = GER_proletarianculture
+		icon = GFX_focus_SOV_international_volunteers
+		x = 59
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_democraticsocialism 
+		}
+		prerequisite = { 
+			focus = GER_socialistscienceinstitute 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas =  { GER_proletarian_culture }
+		}
+	}
+
+	#Focus for Modernize Education
+	focus = {
+		id = GER_modernizeeducation
+		icon = GFX_focus_SOV_red_youth
+		x = 62
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_socialistscienceinstitute 
+		}
+		prerequisite = { 
+			focus = GER_volkswagen 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = { GER_modern_education }
+		}
+	}
+
+	#Focus for Propoganda Campaing
+	focus = {
+		id = GER_propogandacampaing
+		icon = GFX_focus_GER_propoganda_campaing_ds
+		x = 64
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_volkswagen 
+		}
+		prerequisite = { 
+			focus = GER_immunityforsomepartisans 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_stability = 0.09
+		 add_war_support = 0.09
+		}
+	}
+
+	#Focus for Crushing Resistance
+	focus = {
+		id = GER_crushingresistance
+		icon = GFX_SOV_forced_replacment
+		x = 67
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+         has_country_flag = GER_south_secured
+         has_country_flag = GER_north_secured 		 
+		}
+		prerequisite = { 
+			focus = GER_immunityforsomepartisans 
+		}
+		prerequisite = { 
+			focus = GER_volksarmeeofficers 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 remove_ideas = { german_partisans }
+		}
+	}
+
+	#Focus for Modernist Art
+	focus = {
+		id = GER_modernistart
+		icon = GFX_focus_GER_modernist_art
+		x = 60
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_proletarianculture 
+		}
+		prerequisite = { 
+			focus = GER_modernizeeducation 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		add_ideas = { GER_modernist_art }
+		}
+	}
+
+	#Focus for The Modern Man
+	focus = {
+		id = GER_themodernman
+		icon = GFX_focus_SOV_bukharins_modern_farming_tech
+		x = 63
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_modernizeeducation 
+		}
+		prerequisite = { 
+			focus = GER_propogandacampaing 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = { GER_new_socialist_man }
+		}
+	}
+
+	#Focus for Crushing Corruption
+	focus = {
+		id = GER_crushingcorruption
+		icon = GFX_focus_GER_crushing_corrpution_ds
+		x = 66
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_propogandacampaing 
+		}
+		prerequisite = { 
+			focus = GER_crushingresistance 
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+		 remove_idea = rampant_corruption
+		}
+	}
+
+	#Focus for Armament Industry
+	focus = {
+		id = GER_armamentindustry
+		icon = GFX_SOV_leningrad_industry
+		x = 62
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_modernistart 
+		}
+		prerequisite = { 
+			focus = GER_themodernman 
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Weaking Chairman
+	focus = {
+		id = GER_weakingchairman
+		icon = GFX_focus_GER_weaken_chairman
+		x = 64
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_themodernman 
+		}
+		prerequisite = { 
+			focus = GER_crushingcorruption 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_popularity = { ideology = democratic_socialist popularity = 0.1 }
+		}
+	}
+
+	#Focus for The Socialist Republic
+	focus = {
+		id = GER_thesocialistrepublic
+		icon = GFX_focus_GER_demsoc_state
+		x = 63
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_armamentindustry 
+		}
+		prerequisite = { 
+			focus = GER_weakingchairman 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_stability = 0.2
+		}
+	}
+
+	#Focus for Local Defense Forces
+	focus = {
+		id = GER_localdefenseforces
+		icon = GFX_focus_GER_local_defense
+		x = 68
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_democraticsocialistmajority }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_ideas = { GER_local_defense }
+		}
+	}
+
+	#Focus for Immunity For Some Partisans
+	focus = {
+		id = GER_immunityforsomepartisans
+		icon = GFX_focus_SOV_freedom_for_blood
+		x = 65
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_reeducationcamps }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_stability = 0.08
+		 add_war_support = 0.08
+		}
+	}
+	
+	}
+
+
+
+

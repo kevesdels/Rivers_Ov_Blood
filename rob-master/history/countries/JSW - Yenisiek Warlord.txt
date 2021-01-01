@@ -1,0 +1,48 @@
+capital = 576
+set_research_slots = 1
+OOB = "JSW_1934"
+
+
+set_politics = {
+	ruling_party = democratic_socialist
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 10
+	socialist = 25
+	democratic_socialist = 65
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 0
+	authoritharian = 0
+	reactionary = 0
+	pelekist = 0
+}
+add_ideas = {
+	extensive_conscription
+	JSW_siberian_guerillas
+	JSW_decentralized_communes
+}
+
+create_country_leader = {
+	name = "Vsevolod Eikhenbaum"
+	desc = "JSW_Vsevolod_Eikhenbaum.tga"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = democratic_socialist_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Victor Serge"
+	desc = "POLITICS_RICARDO_JIMENEZ_OREAMUNO_DESC"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = socialist_subtype
+	traits = {
+		#
+	}
+}

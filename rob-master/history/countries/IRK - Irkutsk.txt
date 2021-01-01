@@ -1,0 +1,44 @@
+capital = 566
+
+oob = "IRK_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+	basic_light_tank = 1
+}
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 15
+	democratic_socialist = 0
+	social_democracy = 10
+	social_liberal = 0
+	conservative = 0
+	authoritharian = 0
+	reactionary = 75
+	pelekist = 0
+}
+
+add_ideas = {
+	extensive_conscription
+	IRK_irkutskan_militarization
+}
+
+
+create_country_leader = {
+	name = "Viktorin Molchanov"
+	desc = "POLITICS_ANANDYN_AMAR_DESC"
+	picture = "Viktorin_Molchanov.tga"
+	expire = "1965.1.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}

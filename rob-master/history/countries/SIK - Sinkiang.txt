@@ -1,0 +1,48 @@
+﻿capital = 617
+
+oob = "SIK_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	
+}
+
+set_politics = {
+	ruling_party = authoritharian
+	last_election = "1932.5.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 2
+	social_democracy = 2
+	social_liberal = 2
+	conservative = 26
+	authoritharian = 68
+	reactionary = 0
+	pelekist = 0
+}
+
+create_country_leader = {
+	name = "Khoja Niyaz"
+	desc = "POLITICS_SHENG_SHICAI_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Chiang Yu-fen"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}

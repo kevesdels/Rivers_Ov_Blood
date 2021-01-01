@@ -1,0 +1,1154 @@
+###################
+###Ukrainian Events
+###################
+
+add_namespace = ukraine
+
+
+####SOCIALIST EVENTS
+###Starting event
+country_event = { 
+id = ukraine.0
+title = ukraine.0.t
+desc = ukraine.0.d
+fire_only_once = yes
+
+trigger = {
+ tag = DSU
+ date > 1934.1.1
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = ukraine.0.a
+add_stability = -0.01
+
+ country_event = { id = ukraine.1 days = 2 }
+}
+}
+###Purge part 1 - Aussem
+
+country_event = { 
+id = ukraine.1
+title = ukraine.1.t
+desc = ukraine.1.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###kill that traitor!
+name = ukraine.1.a
+remove_unit_leader = 1001
+add_stability = -0.05
+add_political_power = -50
+country_event = { id = ukraine.2 days = 5 }
+set_variable = {
+ var = DSU_purge
+ value = 1
+}
+}
+}
+
+###Purge part 2 - inner party
+country_event = { 
+id = ukraine.2
+title = ukraine.2.t
+desc = ukraine.2.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###kill those traitors!
+name = ukraine.2.a
+add_stability = -0.08
+add_political_power = -70
+add_manpower = -124
+add_to_variable = {
+ var = DSU_purge
+ value = 1
+}
+country_event = { id = ukraine.3 days = 5 }
+}
+
+option = { ###inner party is innocent
+name = ukraine.2.a
+country_event = { id = ukraine.3 days = 5 }
+}
+}
+
+###Purge part 3 - upper army circles
+country_event = { 
+id = ukraine.3
+title = ukraine.3.t
+desc = ukraine.3.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###kill those traitors!
+name = ukraine.3.a
+add_stability = -0.1
+add_political_power = -1
+add_manpower = -43
+remove_unit_leader = 1002
+remove_unit_leader = 1003
+add_to_variable = {
+ var = DSU_purge
+ value = 2
+}
+set_country_flag = DSU_generals_purged
+country_event = { id = ukraine.4 days = 5 }
+}
+
+option = { ### innocent
+name = ukraine.3.a
+country_event = { id = ukraine.4 days = 5 }
+}
+}
+###Purge part 4 - religious circles
+country_event = { 
+id = ukraine.4
+title = ukraine.4.t
+desc = ukraine.4.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###kill those traitors!
+name = ukraine.4.a
+add_stability = -0.12
+add_political_power = -120
+add_manpower = -763
+
+add_to_variable = {
+ var = DSU_purge
+ value = 3
+}
+country_event = { id = ukraine.5 days = 5 }
+}
+
+option = { ### innocent
+name = ukraine.3.a
+country_event = { id = ukraine.5 days = 5 }
+}
+}
+
+###purge of security services
+country_event = { 
+id = ukraine.5
+title = ukraine.5.t
+desc = ukraine.5.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###kill those traitors!
+name = ukraine.5.a
+add_stability = -0.03
+add_political_power = -30
+add_manpower = -343
+
+add_to_variable = {
+ var = DSU_purge
+ value = 2
+}
+set_country_flag = DSU_purge_ends
+}
+
+option = { ### innocent
+name = ukraine.3.a
+set_country_flag = DSU_purge_ends
+}
+}
+
+###Attack on Kaganovich
+country_event = {
+id = ukraine.6
+title = ukraine.6.t
+desc = ukraine.6.d
+fire_only_once = yes
+
+trigger = {
+ tag = DSU
+ has_country_flag = DSU_purge_ends
+ check_variable = {
+    var = DSU_purge
+    value = 5
+    compare = less_than
+}
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = { ###search his belongings
+name = ukraine.6.a
+kill_country_leader = yes
+create_country_leader = {
+	name = "Council of Ukrainian Soviets"
+	desc = ""
+	picture = ".tga"
+	expire = "1953.3.1"
+	ideology = national_socialist_subtype
+	traits = {
+		#
+	}
+}
+hidden_effect = {
+ country_event = { id = ukraine.7 days = 2 }
+}
+}
+
+option = { ###state security seizes control
+name = ukraine.7.a
+kill_country_leader = yes
+create_country_leader = {
+	name = "Ukrainian Commissariat for Internal Affairs"
+	desc = ""
+	picture = ".tga"
+	expire = "1953.3.1"
+	ideology = national_socialist_subtype
+	traits = {
+		#
+	}
+}
+hidden_effect = {
+ IF = {
+  limit = {
+   has_country_flag = DSU_generals_purged
+  }
+  country_event = { id = ukraine.8 days = 4 }
+ ELSE = {
+  country_event = { id = ukraine.9 days = 4 }
+ }
+}
+}
+}
+}
+
+###Succseor is named
+country_event = {
+id = ukraine.7
+title = ukraine.7.t
+desc = ukraine.7.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###Nikita takes over
+add_stability = 0.1
+add_political_power = 100
+create_country_leader = {
+	name = "Nikita Khrushchev"
+	desc = ""
+	picture = "Portrait_UKR_Nikita_Kruschev.dds"
+	expire = "1953.3.1"
+	ideology = national_socialist_subtype
+	traits = {
+		#
+	}
+}
+set_country_flag = DSU_stable
+}
+}
+
+###Army loyal, put moderates in charge
+country_event = {
+id = ukraine.8
+title = ukraine.8.t
+desc = ukraine.8.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###Anton Makarenko in charge
+name = ukraine.8.a
+set_politics = {
+ ruling_party = socialist
+ elections_allowed = no
+}
+add_political_power = 100
+add_popularity = {ideology = socialist popularity =0.35}
+set_country_flag = DSU_stable
+create_country_leader = {
+	name = "Anton Makarenko"
+	desc = ""
+	picture = "anton_makarenko.tga"
+	expire = "1953.3.1"
+	ideology = socialist_subtype
+	traits = {
+		#
+	}
+}
+}
+option = { ###Yaroslav Halan in charge
+name = ukraine.8.a
+set_politics = {
+ ruling_party = democratic_socialist
+ elections_allowed = no
+}
+add_political_power = 100
+create_country_leader = {
+	name = "Yaroslav Halan"
+	desc = ""
+	picture = "yaroslav_halan.tga"
+	expire = "1953.3.1"
+	ideology = democratic_socialist_subtype
+	traits = {
+		#
+	}
+}
+add_popularity = {ideology = democratic_socialist popularity =0.35}
+set_country_flag = DSU_stable
+}
+}
+
+###ARMY COUP!
+country_event = {
+id = ukraine.9
+title = ukraine.9.t
+desc = ukraine.9.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = ukraine.9.a
+set_politics = {
+ ruling_party = authoritharian
+ elections_allowed = no
+}
+add_popularity = {ideology = authoritharian popularity =0.6}
+create_country_leader = {
+	name = "Nikolai Vatutin"
+	desc = ""
+	picture = ".tga"
+	expire = "1953.3.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+set_country_flag = DSU_stable
+set_cosmetic_tag = DSU_reactionary
+}
+}
+
+###REUNION events
+
+###diplo envoy to UKR
+country_event = {
+id = ukraine.10
+title = ukraine.10.t
+desc = ukraine.10.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###refuse
+name = ukraine.10.a
+add_political_power = -100
+DSU = {
+country_event = { id = ukraine.11 days = 5 }
+}
+}
+option = { ###accept
+name = ukraine.10.a
+add_political_power = 100
+DSU = {
+country_event = { id = ukraine.12 days = 5 }
+}
+}
+}
+
+###Reunion refused
+country_event = {
+id = ukraine.11
+title = ukraine.11.t
+desc = ukraine.11.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = ukraine.11
+
+}
+}
+
+###Reunion accepted
+country_event = {
+id = ukraine.12
+title = ukraine.12.t
+desc = ukraine.12.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###begin integration
+name = ukraine.12.a
+UKR = { give_guarantee = DSU }
+DSU = { give_guarantee = UKR }
+  UKR = { give_military_access = DSU }
+  DSU = { give_military_access = UKR }
+  create_faction = "United Ukrainian Government"
+  add_to_faction = UKR
+  UKR = {
+ add_ai_strategy = {
+    type = alliance
+    id = "DSU"
+    value = 2000
+}
+hidden_effect = {
+ country_event = { ukraine.13 days = 80 }
+}
+}
+
+}
+}
+
+###Integration succesful
+country_event = {
+id = ukraine.13
+title = ukraine.13.t
+desc = ukraine.13.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###
+name = ukraine.13.a
+DSU = { annex_country = { target = UKR transfer_troops = yes }
+set_capital = 202
+ }
+ set_politics = {
+ ruling_party = social_democracy
+ elections_allowed = no
+}
+add_popularity = {ideology = social_democracy popularity =0.6}
+set_country_flag = DSU_ukraine_united
+}
+
+}
+
+###Reunio le epic gamer style
+###diplo envoy to UKR
+country_event = {
+id = ukraine.14
+title = ukraine.14.t
+desc = ukraine.14.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###refuse
+name = ukraine.14.a
+add_political_power = -100
+ai_chance = {
+ modifier = 0
+}
+DSU = {
+country_event = { id = ukraine.11 days = 5 }
+}
+}
+option = { ###accept
+name = ukraine.14.a
+add_political_power = 100
+ai_chance = {
+ modifier = 1000
+}
+DSU = {
+country_event = { id = ukraine.15 days = 5 }
+}
+}
+}
+
+###reunion accepted gamer style
+country_event = {
+id = ukraine.15
+title = ukraine.15.t
+desc = ukraine.15.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###begin integration
+name = ukraine.15.a
+UKR = { give_guarantee = DSU }
+DSU = { give_guarantee = UKR }
+  UKR = { give_military_access = DSU }
+  DSU = { give_military_access = UKR }
+  create_faction = "National Ukrainian Government"
+  add_to_faction = UKR
+    UKR = {
+ add_ai_strategy = {
+    type = alliance
+    id = "DSU"
+    value = 2000
+}
+hidden_effect = {
+ country_event = { ukraine.16 days = 80 }
+}
+}
+}
+}
+
+###Integration succesful
+country_event = {
+id = ukraine.16
+title = ukraine.16.t
+desc = ukraine.16.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###ok
+name = ukraine.16.a
+DSU = { 
+ annex_country = { target = UKR transfer_troops = yes }
+ set_capital = 202
+ }
+ set_politics = {
+ ruling_party = reactionary
+ elections_allowed = no
+}
+add_popularity = {ideology = reactionary popularity =0.6 }
+set_country_flag = DSU_ukraine_united
+set_cosmetic_tag = UKR_united
+create_country_leader = {
+	name = "Reactionary Junta"
+	desc = ""
+	picture = ".tga"
+	expire = "1953.3.1"
+	ideology = military_junta
+	traits = {
+		#
+	}
+}
+}
+
+}
+
+###DIPLO SHIT
+###Ukraine proposes alliance
+country_event = {
+id = ukraine.17
+title = ukraine.17.t
+desc = ukraine.17.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###for belarus
+name = ukraine.17.a
+trigger = { 
+ DSU = {
+ is_in_faction = no
+ }
+ ROOT = {
+ is_in_faction = no
+ }
+tag = CBR
+ }
+DSU = {
+create_faction = "Belarusian-Ukrainian Socialist Pact"
+add_to_faction = CBR
+}
+CBR = {
+ add_ai_strategy = {
+    type = alliance
+    id = "DSU"
+    value = 2000
+}
+}
+}
+
+option = { ###for RUS
+name = ukraine.17.a
+trigger = { 
+ DSU = {
+ is_in_faction = no
+ }
+ RUS = {
+ is_in_faction = no
+ }
+ tag = RUS
+}
+DSU = {
+create_faction = "Tambov-Kharkov Socialist Pact"
+add_to_faction = RUS
+}
+RUS = {
+ add_ai_strategy = {
+    type = alliance
+    id = "DSU"
+    value = 2000
+}
+}
+}
+
+option = { ###for SOV
+name = ukraine.17.a
+trigger = { 
+TAG = SOV 
+ DSU = {
+ is_in_faction = no
+ }
+ SOV = {
+ is_in_faction = yes
+ }
+}
+SOV = {
+add_to_faction = DSU
+}
+DSU = {
+ add_ai_strategy = {
+    type = alliance
+    id = "SOV"
+    value = 2000
+}
+}
+}
+
+option = { ###for SOV
+name = ukraine.17.a
+trigger = {
+ TAG = SOV 
+ DSU = {
+ is_in_faction = no
+ }
+ SOV = {
+ is_in_faction = no
+ }
+}
+SOV = {
+create_faction = "Moscow Pact"
+add_to_faction = DSU
+}
+DSU = {
+ add_ai_strategy = {
+    type = alliance
+    id = "SOV"
+    value = 2000
+}
+}
+}
+
+option = { ###for general
+name = ukraine.17.a
+trigger = { 
+ DSU = {
+ is_in_faction = yes
+ }
+ ROOT = {
+ is_in_faction = no
+ }
+}
+DSU = {
+add_to_faction = ROOT
+}
+ROOT = {
+ add_ai_strategy = {
+    type = alliance
+    id = "DSU"
+    value = 2000
+}
+
+}
+}
+option = { ###refuse
+name = ukraine.17.b
+DSU = {
+ country_event = { id = ukraine.18 days = 3 }
+}
+}
+}
+
+
+######NATIONALIST EVENTS
+###Nat starting event
+country_event = {
+id = ukraine.18
+title = ukraine.18.t
+desc = ukraine.18.d
+fire_only_once = yes
+
+trigger = {
+tag = UKR
+date > 1934.1.1
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = ukraine.18.a
+add_political_power = 10
+hidden_effect = {
+ UKR = { country_event = { id = ukraine.19 days = 10 } }
+}
+}
+}
+
+###Raid across border
+country_event = {
+id = ukraine.19
+title = ukraine.19.t
+desc = ukraine.19.d
+fire_only_once = yes
+is_triggered_only = yes 
+
+
+option = {
+name = ukraine.19.a
+add_manpower = -742
+add_political_power = 30
+hidden_effect = {
+ UKR = { country_event = { id = ukraine.20 days = 30 }
+}
+}
+}
+}
+
+###commie attacks the leader
+country_event = {
+id = ukraine.20
+title = ukraine.20.t
+desc = ukraine.20.d
+fire_only_once = yes
+is_triggered_only = yes 
+
+
+option = { ###Petliura lives
+name = ukraine.20.a
+add_stability = 0.05
+add_political_power = 50
+hidden_effect = {
+ UKR = { country_event = { id = ukraine.23 days = 120 }
+}
+set_country_flag = UKR_stable
+}
+}
+
+option = { ###Petliura dies!
+name = ukraine.20.b
+add_stability = -0.15
+kill_country_leader = yes
+add_political_power = -150
+create_country_leader = {
+	name = "Ukrainian Parliament"
+	desc = ""
+	picture = ".tga"
+	expire = "1953.3.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+hidden_effect = {
+ UKR = { country_event = { id = ukraine.21 days = 30 }
+}
+}
+}
+}
+
+country_event = {
+id = ukraine.21
+title = ukraine.21.t
+desc = ukraine.21.d
+fire_only_once = yes
+is_triggered_only = yes 
+
+
+option = { ###Bandera elected as a heir
+name = ukraine.21.a
+add_stability = 0.1
+create_country_leader = {
+	name = "Stepan Bandera"
+	desc = ""
+	picture = "Portrait_Ukraine_Stepan.dds"
+	expire = "1953.3.1"
+	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}
+set_politics = {
+ruling_party = pelekist
+elections_allowed = no
+}
+set_country_flag = UKR_stable
+add_popularity = { ideology = pelekist popularity = 0.3 }
+
+}
+
+option = { ###Military steps in
+name = ukraine.21.b
+add_stability = -0.15
+create_country_leader = {
+	name = "Mykhailo Omelianovych-Pavlenko"
+	desc = ""
+	picture = "Portrait_Ukraine_Mykhailo_Omelianovych_Pavlenko.tga"
+	expire = "1953.3.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+hidden_effect = {
+ UKR = { country_event = { id = ukraine.22 days = 30 }
+}
+}
+}
+}
+
+###Cossaks rise up
+country_event = {
+id = ukraine.22
+title = ukraine.22.t
+desc = ukraine.22.d
+fire_only_once = yes
+is_triggered_only = yes 
+
+option = { ###they get put down
+name = ukraine.22.a
+add_popularity = { ideology = authoritharian popularity = -0.15 }
+add_stability = 0.1
+set_country_flag = UKR_stable
+}
+
+option = { ###they take over
+name = ukraine.22.b
+add_popularity = { ideology = authoritharian popularity = 0.45 }
+add_stability = 0.1
+
+set_politics = {
+ruling_party = authoritharian
+elections_allowed = no
+}
+set_country_flag = UKR_stable
+create_country_leader = {
+	name = "Pavlo Petrovych Skoropadskyi"
+	desc = ""
+	picture = ".tga"
+	expire = "1953.3.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+}
+}
+
+
+###Petiliura steps down
+country_event = {
+id = ukraine.23
+title = ukraine.23.t
+desc = ukraine.23.d
+fire_only_once = yes
+is_triggered_only = yes 
+
+option = { ###Andriy Livytskyi assumes leadership
+name = ukraine.23.a
+retire_country_leader = yes
+create_country_leader = {
+	name = "Andriy Livytskyi"
+	desc = ""
+	picture = ".tga"
+	expire = "1953.3.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+
+}
+
+option = { ###Stepan Vytvytskyi assumes leadership
+name = ukraine.23.b
+retire_country_leader = yes
+create_country_leader = {
+	name = "Stepan Vytvytskyi"
+	desc = ""
+	picture = ".tga"
+	expire = "1953.3.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+hidden_effect = { 
+ country_event = { id = ukraine.24 days = 25 }
+}
+}
+}
+
+###Elctions restored
+country_event = {
+id = ukraine.24
+title = ukraine.24.t
+desc = ukraine.24.d
+fire_only_once = yes
+is_triggered_only = yes 
+
+option = { #SDP elected
+name = ukraine.24.a
+set_politics = {
+ruling_party = social_democracy
+elections_allowed = no
+}
+add_popularity = { ideology = social_democracy popularity = 0.35 }
+}
+
+option = { #Nationalists elected
+name = ukraine.24.b
+set_politics = {
+ruling_party = conservative
+elections_allowed = no
+}
+add_popularity = { ideology = conservative popularity = 0.35 }
+}
+
+option = { #Liberals elected
+name = ukraine.24.c
+set_politics = {
+ruling_party = social_liberal
+elections_allowed = no
+}
+add_popularity = { ideology = social_liberal popularity = 0.35 }
+}
+
+}
+
+###REUNION events
+
+###diplo envoy to DSU
+country_event = {
+id = ukraine.25
+title = ukraine.25.t
+desc = ukraine.25.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###refuse
+name = ukraine.25.a
+add_political_power = -100
+DSU = {
+country_event = { id = ukraine.26 days = 5 }
+}
+}
+option = { ###accept
+name = ukraine.25.a
+add_political_power = 100
+DSU = {
+country_event = { id = ukraine.27 days = 5 }
+}
+}
+}
+
+###Reunion refused
+country_event = {
+id = ukraine.26
+title = ukraine.26.t
+desc = ukraine.26.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = ukraine.26
+
+}
+}
+
+###Reunion accepted
+country_event = {
+id = ukraine.27
+title = ukraine.27.t
+desc = ukraine.27.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###begin integration
+name = ukraine.27.a
+UKR = { give_guarantee = DSU }
+DSU = { give_guarantee = UKR }
+  UKR = { give_military_access = DSU }
+  DSU = { give_military_access = UKR }
+  create_faction = "United Ukrainian Government"
+  add_to_faction = DSU
+      DSU = {
+ add_ai_strategy = {
+    type = alliance
+    id = "UKR"
+    value = 2000
+}
+}
+hidden_effect = {
+ country_event = { ukraine.28 days = 80 }
+}
+}
+
+}
+
+###Integration succesful
+country_event = {
+id = ukraine.28
+title = ukraine.28.t
+desc = ukraine.28.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###
+name = ukraine.28.a
+UKR = { annex_country = { target = DSU transfer_troops = yes }
+
+ }
+ set_politics = {
+ ruling_party = social_democracy
+ elections_allowed = no
+}
+add_popularity = {ideology = social_democracy popularity =0.6}
+set_country_flag = UKR_ukraine_united
+}
+
+}
+
+###Reunio le epic gamer style
+###diplo envoy to UKR
+country_event = {
+id = ukraine.29
+title = ukraine.29.t
+desc = ukraine.29.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###refuse
+name = ukraine.29.a
+add_political_power = -100
+ai_chance = {
+ modifier = 0
+}
+UKR = {
+country_event = { id = ukraine.26 days = 5 }
+}
+}
+option = { ###accept
+name = ukraine.29.a
+add_political_power = 100
+ai_chance = {
+ modifier = 1000
+}
+UKR = {
+country_event = { id = ukraine.30 days = 5 }
+}
+}
+}
+
+###reunion accepted gamer style
+country_event = {
+id = ukraine.30
+title = ukraine.30.t
+desc = ukraine.30.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###begin integration
+name = ukraine.30.a
+UKR = { give_guarantee = DSU }
+DSU = { give_guarantee = UKR }
+  UKR = { give_military_access = DSU }
+  DSU = { give_military_access = UKR }
+  create_faction = "National Ukrainian Government"
+  add_to_faction = DSU
+    DSU = {
+ add_ai_strategy = {
+    type = alliance
+    id = "UKR"
+    value = 2000
+}
+}
+hidden_effect = {
+ country_event = { ukraine.31 days = 80 }
+}
+}
+}
+
+###Integration succesful
+country_event = {
+id = ukraine.31
+title = ukraine.31.t
+desc = ukraine.31.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###ok
+name = ukraine.31.a
+UKR = { 
+ annex_country = { target = DSU transfer_troops = yes }
+ 
+ }
+ set_politics = {
+ ruling_party = authoritharian
+ elections_allowed = no
+}
+add_popularity = {ideology = authoritharian popularity =0.6 }
+set_country_flag = UKR_ukraine_united
+create_country_leader = {
+	name = "Reactionary Junta"
+	desc = ""
+	picture = ".tga"
+	expire = "1953.3.1"
+	ideology = military_junta
+	traits = {
+		#
+	}
+}
+}
+
+}
+
+###Defeat of Free Territory
+country_event = {
+id = ukraine.32
+title = ukraine.32.t
+desc = ukraine.32.d
+fire_only_once = yes
+
+trigger = {
+tag = DSU
+DSU = {
+NOT = {
+ has_war_with = FTT
+}
+owns_state = 200
+}
+FTT = {
+ exists = no
+}
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = ukraine.32.a
+200 = { add_core_of = DSU }
+196 = { add_core_of = DSU }
+add_ideas = {
+extensive_conscription
+}
+add_war_support = 0.15
+}
+
+}
+
+###Kaganovich holds!
+country_event = {
+id = ukraine.33
+title = ukraine.33.t
+desc = ukraine.33.d
+fire_only_once = yes
+
+mean_time_to_happen = { days = 1 }
+trigger = {
+ tag = DSU
+  has_country_flag = DSU_purge_ends
+ check_variable = {
+    var = DSU_purge
+    value = 5
+    compare = greater_than
+}
+}
+
+option = {
+name = ukraine.33
+add_stability = 0.1
+add_political_power = 100
+set_country_flag = DSU_stable
+}
+
+}

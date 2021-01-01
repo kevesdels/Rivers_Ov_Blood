@@ -1,0 +1,117 @@
+###########################
+# Hungarian Events
+###########################
+
+add_namespace = rob_hungary
+
+### No more occupation
+country_event = {
+id = rob_hungary.5
+title = hungary.5.t
+desc = hungary.5.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+is_triggered_only = yes
+option = {
+ name = hungary.5.a
+ drop_cosmetic_tag = yes
+ ROM = { end_puppet = HUN }
+ remove_ideas = {
+ occupied_country
+ }
+
+}
+}
+
+
+#event for CONTROLER of state
+country_event = {
+	id = rob_hungary.1
+	title = "Hungarian demands??"
+	desc = rob_hungary.2.d
+	picture = GFX_report_event_finnish_letter
+	fire_only_once = yes	
+	is_triggered_only = yes	
+
+	#yes
+	option = {
+		name = "y-y-yes master..."
+		ai_chance = { factor = 3 }
+		HUN = { transfer_state = 810 }
+		}
+	#no 
+	option = {
+		name = "Come and take it"
+		ai_chance = { factor = 7 }
+		HUN = { country_event = { id = rob_hungary.2 days = 3 }
+		}
+}
+
+
+#### Hungary declares war on Austria civl war nigz
+	country_event = {
+	id = rob_hungary.2
+	title = rob_hungary.2.t
+	desc = rob_hungary.2.d
+	picture = GFX_report_event_second_vienna_award_pact
+	fire_only_once = yes
+	is_triggered_only = yes		
+
+	#invades Austria
+	option = {
+		name = rob_hungary.2.a
+		ai_chance = { factor = 7}
+			hidden_effect = { 	
+				HUN = { declare_war_on = { target = AUS  type = annex_everything } }
+				HUN = { declare_war_on = { target = ACM  type = annex_everything } }
+				HUN = { declare_war_on = { target = THR  type = annex_everything } }
+	}
+}
+###backs off
+option = {
+		name = rob_hungary.2.b
+		ai_chance = { factor = 3}
+		add_political_power = -50
+		add_popularity = {
+    		ideology = reactionary
+    		popularity = -0.10
+			}
+	}
+}
+
+
+#we lost
+country_event = {
+	id = rob_hungary.5
+	title = rob_hungary.5.t
+	desc = rob_hungary.5.d
+	picture = GFX_report_event_second_vienna_award_pact
+	fire_only_once = yes
+	trigger = {
+	original_tag = HUN
+	has_war_with = AUS
+	has_offensive_war = yes
+	surrender_progress > 0.30
+	}
+	#bail out
+	option = {
+		name = rob_hungary.5.a
+		ai_chance = { factor = 10}
+		hidden_effect = { 	
+		every_country = {
+				limit = {
+					has_war_with = HUN
+				}
+				white_peace = HUN
+			}
+			add_political_power = -250
+		add_popularity = {
+    ideology = reactionary
+    popularity = -0.20
+	}
+}
+}
+}
+
+
+on_declare_war = { effect = { if = { limit = { ROOT = { tag = SOV } FROM = { has_idea = anti_soviet_pact } } } } }

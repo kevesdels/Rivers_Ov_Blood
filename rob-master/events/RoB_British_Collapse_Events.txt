@@ -1,0 +1,898 @@
+###########################
+# British Collapse Events
+###########################
+
+add_namespace = bces
+
+# Portugal wants Pink Map and Hong Kong?
+
+country_event = {
+id = bces.100
+title = bces.100.t
+desc = bces.100.d
+fire_only_once = yes
+trigger = {
+OR = { 
+tag = POR
+tag = SPR
+}
+ENG = { has_cosmetic_tag = ENG_navy }
+owns_state = 540
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.100.a
+ai_chance = { factor = 99}
+
+transfer_state = 770
+transfer_state = 771
+transfer_state = 326
+
+add_opinion_modifier = {
+    target = ENG
+    modifier = major_colony_seized
+}
+
+
+}
+
+option = {
+ name = bces.100.b
+ai_chance = { factor = 1}
+add_political_power = -10
+
+
+
+}
+}
+
+# Safrica wants Rhodesia?
+
+country_event = {
+id = bces.101
+title = bces.101.t
+desc = bces.101.d
+fire_only_once = yes
+trigger = {
+tag = SAF
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.101.a
+ai_chance = { factor = 99}
+ENG = { end_puppet = SAF }
+
+transfer_state = 542
+transfer_state = 545
+542 = { add_core_of = SAF }
+545 = { add_core_of = SAF }
+add_opinion_modifier = {
+    target = ENG
+    modifier = major_colony_seized
+}
+
+
+}
+
+option = {
+ name = bces.101.b
+ai_chance = { factor = 1}
+add_political_power = -10
+
+
+
+}
+}
+
+# Greece Wants Cyprus?
+
+country_event = {
+id = bces.102
+title = bces.102.t
+desc = bces.102.d
+fire_only_once = yes
+trigger = {
+tag = GRE
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.102.a
+ai_chance = { factor = 99}
+
+transfer_state = 183
+transfer_state = 952
+183 = { add_core_of = GRE }
+952 = { add_core_of = GRE }
+add_opinion_modifier = {
+    target = ENG
+    modifier = minor_colony_seized
+}
+989 = { set_demilitarized_zone = yes }
+990 = { set_demilitarized_zone = yes }
+
+
+}
+
+option = {
+ name = bces.102.b
+ai_chance = { factor = 1}
+add_political_power = -10
+
+
+
+}
+}
+
+# Italy Wants Malta?
+
+country_event = {
+id = bces.103
+title = bces.103.t
+desc = bces.103.d
+fire_only_once = yes
+trigger = {
+tag = ITA
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.103.a
+ai_chance = { factor = 99}
+
+transfer_state = 116
+116 = { add_core_of = ITA }
+add_opinion_modifier = {
+    target = ENG
+    modifier = minor_colony_seized
+}
+
+
+}
+
+option = {
+ name = bces.103.b
+ai_chance = { factor = 1}
+add_political_power = -10
+
+
+
+}
+}
+
+# Turkey wants Ports
+
+country_event = {
+id = bces.104
+title = bces.104.t
+desc = bces.104.d
+fire_only_once = yes
+trigger = {
+tag = TUR
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.104.a
+ai_chance = { factor = 99}
+
+transfer_state = 1079
+transfer_state = 1003
+
+add_opinion_modifier = {
+    target = ENG
+    modifier = minor_colony_seized
+}
+940 = { set_demilitarized_zone = yes }
+950 = { set_demilitarized_zone = yes }
+341 = { set_demilitarized_zone = yes }
+}
+
+option = {
+ name = bces.104.b
+ai_chance = { factor = 1}
+add_political_power = -10
+
+
+
+}
+}
+
+# Dervish State wants Somaliland - Changed to Warsangali independence
+
+country_event = {
+id = bces.105
+title = bces.105.t
+desc = bces.105.d
+fire_only_once = yes
+trigger = {
+tag = ENG
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.105.a
+ai_chance = { factor = 99}
+
+SOM = { transfer_state = 269 }
+269 = { add_core_of = SOM }
+SOM = { add_opinion_modifier = {
+    target = ENG
+    modifier = minor_colony_seized
+}
+}
+SOM = { load_oob = "SOM_1936" }
+hidden_effect = {
+DRV = { 
+puppet = SOM
+}
+}
+
+
+}
+
+option = {
+ name = bces.105.b
+ai_chance = { factor = 1}
+add_political_power = -10
+
+
+
+}
+}
+
+# France wants Gambia, Ghana and Togoland
+
+country_event = {
+id = bces.106
+title = bces.106.t
+desc = bces.106.d
+fire_only_once = yes
+trigger = {
+tag = FRA
+NOT = { FRL = { exists = yes } }
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.106.a
+ai_chance = { factor = 99}
+
+FWA = { transfer_state = 701 }
+FWA = { transfer_state = 700 }
+FWA = { transfer_state = 274 }
+FWA = { transfer_state = 777 }
+add_opinion_modifier = {
+    target = ENG
+    modifier = major_colony_seized
+}
+
+
+}
+
+option = {
+ name = bces.106.b
+ai_chance = { factor = 1}
+add_political_power = -10
+
+
+
+}
+}
+
+
+
+# Aussies want Islands?
+
+country_event = {
+id = bces.107
+title = bces.107.t
+desc = bces.107.d
+fire_only_once = yes
+trigger = {
+tag = AST
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.107.a
+ai_chance = { factor = 99}
+ENG = { end_puppet = AST }
+transfer_state = 711
+transfer_state = 712
+711 = { add_core_of = AST }
+712 = { add_core_of = AST }
+add_opinion_modifier = {
+    target = ENG
+    modifier = major_colony_seized
+}
+
+
+}
+
+option = {
+ name = bces.107.b
+ai_chance = { factor = 1}
+add_political_power = -10
+
+
+
+}
+}
+
+# Japanese want Islands?
+
+country_event = {
+id = bces.108
+title = bces.108.t
+desc = bces.108.d
+fire_only_once = yes
+trigger = {
+tag = JAP
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.108.a
+ai_chance = { factor = 99}
+transfer_state = 725
+transfer_state = 639
+transfer_state = 636
+transfer_state = 643
+add_opinion_modifier = {
+    target = ENG
+    modifier = minor_colony_seized
+}
+
+
+}
+
+option = {
+ name = bces.108.b
+ai_chance = { factor = 1}
+add_political_power = -10
+
+
+
+}
+}
+
+# Malays want Independence?
+
+country_event = {
+id = bces.109
+title = bces.109.t
+desc = bces.109.d
+fire_only_once = yes
+trigger = {
+tag = MAL
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.109.a
+ai_chance = { factor = 99}
+ENG = { end_puppet = MAL }
+add_opinion_modifier = {
+    target = ENG
+    modifier = major_colony_seized
+}
+
+
+}
+
+option = {
+ name = bces.109.b
+ai_chance = { factor = 1}
+add_political_power = -10
+
+
+
+}
+}
+
+# Nigeria Revolts
+
+country_event = {
+id = bces.110
+title = bces. 110.t
+desc = bces. 110.d
+fire_only_once = yes
+trigger = {
+tag = ENG
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces. 110.a
+ai_chance = { factor = 99}
+
+NGA = { transfer_state = 558 }
+558 = { add_core_of = NGA }
+NGA = { add_opinion_modifier = {
+    target = ENG
+    modifier = major_colony_seized
+}
+}
+
+
+}
+
+}
+
+# Kirenia Revolts
+
+country_event = {
+id = bces.111
+title = bces.111.t
+desc = bces.111.d
+fire_only_once = yes
+trigger = {
+tag = ENG
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.111.a
+ai_chance = { factor = 99}
+
+KEN = { transfer_state = 547 }
+547 = { add_core_of = KEN }
+KEN = { transfer_state = 1237 }
+1237 = { add_core_of = KEN }
+KEN = { transfer_state = 1250 }
+1250 = { add_core_of = KEN }
+KEN = { add_opinion_modifier = {
+    target = ENG
+    modifier = major_colony_seized
+}
+}
+
+
+}
+
+}
+
+# Buganda Revolts
+
+country_event = {
+id = bces.112
+title = bces.112.t
+desc = bces.112.d
+fire_only_once = yes
+trigger = {
+tag = ENG
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.112.a
+ai_chance = { factor = 99}
+
+UGA = { transfer_state = 548 }
+548 = { add_core_of = UGA }
+UGA = { add_opinion_modifier = {
+    target = ENG
+    modifier = major_colony_seized
+}
+}
+
+
+}
+
+}
+
+# Paul von Lettow disappears
+
+# CHAIN DISABLED FOR BUGS
+
+#country_event = {
+#id = bces.113
+#title = bces.113.t
+#desc = bces.113.d
+#fire_only_once = yes
+#trigger = {
+#tag = PRS
+#ENG = { has_cosmetic_tag = ENG_navy }
+#}
+#picture = GFX_picture_bosnian_revolt
+#
+#option = {
+# We'll see what comes of this
+# name = bces.113.a
+#ai_chance = { factor = 75}
+#hidden_effect = { ENG = { country_event = {
+#    id = bces.114
+#    days = 12
+#}
+#}
+#}
+#hidden_effect = { PRS = { country_event = {
+#    id = bces.115
+#    days = 13
+#}
+#}
+#}
+#
+#
+#}
+#
+#option = {
+# Arrest Him at once!
+# name = bces.113.b
+#ai_chance = { factor = 25}
+#
+#
+#
+#}
+
+option = {
+# Heia Safari
+ name = bces.113.c
+ai_chance = { factor = 0}
+hidden_effect = { ENG = { country_event = {
+    id = bces.114
+    days = 12
+}
+}
+}
+hidden_effect = { PRS = { country_event = {
+    id = bces.115
+    days = 13
+}
+}
+}
+hidden_effect = { PRS = { country_event = {
+    id = bces.122
+    days = 13
+}
+}
+}
+
+
+
+}
+
+}
+
+# Paul von Lettow disappears and takes over tanzania
+
+country_event = {
+id = bces.114
+title = bces.114.t
+desc = bces.114.d
+fire_only_once = yes
+is_triggered_only = yes
+trigger = {
+tag = ENG
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+
+option = {
+# A german?
+ name = bces.114.a
+ai_chance = { factor = 99}
+ASK = { transfer_state = 1248 }
+546 = { add_core_of = ASK }
+1248 = { add_core_of = ASK }
+1249 = { add_core_of = ASK }
+ASK = { add_opinion_modifier = {
+    target = ENG
+    modifier = major_colony_seized
+}
+}
+
+ASK = { load_oob = "ASK_1936" }
+
+ASK = { declare_war_on = {
+    target = TZN
+    type = annex_everything
+}
+}
+
+country_event = {
+    id = bces.120
+    days = 12
+}
+
+add_manpower = -50000
+
+}
+
+}
+
+# Paul von Lettow disappears and takes over tanzania
+
+country_event = {
+id = bces.115
+title = bces.115.t
+desc = bces.115.d
+fire_only_once = yes
+is_triggered_only = yes
+trigger = {
+tag = PRS
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+
+option = {
+# What???
+ name = bces.115.a
+ai_chance = { factor = 75}
+
+
+}
+
+option = {
+# An oppertunity
+name = bces.115.b
+trigger = { has_navy_size = {
+    size > 10
+}
+NOT = { has_government = pelekist }
+}
+ai_chance = { factor = 25}
+declare_war_on = {
+    target = TZN
+    type = annex_everything
+}
+declare_war_on = {
+    target = ASK
+    type = annex_everything
+}
+
+
+}
+
+}
+
+# Vennies want Guiana?
+
+country_event = {
+id = bces.116
+title = bces.116.t
+desc = bces.116.d
+fire_only_once = yes
+trigger = {
+tag = VEN
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.116.a
+ai_chance = { factor = 99}
+VEN = { transfer_state = 687 }
+687 = { add_core_of = VEN }
+add_opinion_modifier = {
+    target = ENG
+    modifier = minor_colony_seized
+}
+
+
+}
+
+option = {
+ name = bces.116.b
+ai_chance = { factor = 1}
+add_political_power = -10
+
+
+
+}
+}
+
+# Americans protect caribbean?
+
+country_event = {
+id = bces.117
+title = bces.117.t
+desc = bces.117.d
+fire_only_once = yes
+trigger = {
+tag = USA
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.117.a
+ai_chance = { factor = 99}
+JAM = { transfer_state = 689 }
+689 = { add_core_of = JAM }
+JAM = { transfer_state = 693 }
+693 = { add_core_of = JAM }
+JAM = { transfer_state = 690 }
+690 = { add_core_of = JAM }
+JAM = { transfer_state = 691 }
+691 = { add_core_of = JAM }
+JAM = { transfer_state = 692 }
+692 = { add_core_of = JAM }
+JAM = { transfer_state = 308 }
+308 = { add_core_of = JAM }
+puppet = JAM
+add_opinion_modifier = {
+    target = ENG
+    modifier = minor_colony_seized
+}
+
+
+}
+
+option = {
+ name = bces.117.b
+ai_chance = { factor = 1}
+add_political_power = -10
+
+
+
+}
+}
+
+# Canada gets Newfoundland
+
+country_event = {
+id = bces.118
+title = bces.118.t
+desc = bces.118.d
+fire_only_once = yes
+trigger = {
+tag = CAN
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.118.a
+ai_chance = { factor = 99}
+CAN = { transfer_state = 331 }
+331 = { add_core_of = CAN }
+CAN = { transfer_state = 332 }
+332 = { add_core_of = CAN }
+
+
+}
+
+option = {
+ name = bces.118.b
+ai_chance = { factor = 1}
+add_political_power = -10
+
+
+
+}
+}
+
+# Tanganyika Revolts
+
+country_event = {
+id = bces.119
+title = bces.119.t
+desc = bces.119.d
+fire_only_once = yes
+trigger = {
+tag = ENG
+ENG = { has_cosmetic_tag = ENG_navy }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.112.a
+ai_chance = { factor = 99}
+
+TZN = { transfer_state = 546 }
+TZN = { transfer_state = 1248 }
+TZN = { transfer_state = 1249 }
+
+546 = { add_core_of = TZN }
+1248 = { add_core_of = TZN }
+1249 = { add_core_of = TZN }
+TZN = { add_opinion_modifier = {
+    target = ENG
+    modifier = major_colony_seized
+}
+}
+
+TZN = { load_oob = "TZN_1936" }
+
+}
+
+}
+
+# Prussian OOB in Tanganyika
+
+country_event = {
+id = bces.120
+title = bces.120.t
+desc = bces.120.d
+fire_only_once = yes
+trigger = {
+tag = PRS
+ENG = { has_cosmetic_tag = ENG_navy }
+has_war_with = TZN
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.120.a
+ai_chance = { factor = 99}
+
+transfer_state = 1249
+
+546 = { add_claim_by = PRS }
+1248 = { add_claim_by = PRS }
+1249 = { add_claim_by = PRS }
+TZN = { add_opinion_modifier = {
+    target = PRS
+    modifier = large_decrease
+}
+}
+ASK = { add_opinion_modifier = {
+    target = PRS
+    modifier = large_decrease
+}
+}
+
+load_oob = "PRS_TZN"
+
+hidden_effect = { set_country_flag = PRS_TZN }
+
+}
+
+}
+
+# Prussian Peace in Tanganyika
+
+country_event = {
+id = bces.121
+title = bces.121.t
+desc = bces.121.d
+fire_only_once = yes
+trigger = {
+tag = PRS
+
+has_country_flag = PRS_TZN
+
+OR = { has_war_with = TZN
+has_war_with = ASK
+}
+NOT = { controls_state = 1249 }
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.120.a
+ai_chance = { factor = 99}
+
+every_country = { 
+limit = { owns_state = 546 }
+transfer_state = 1249
+}
+
+every_country = {
+limit = { has_war_with = PRS }
+white_peace = PRS
+}
+
+}
+
+}
+
+# Heia Safari
+
+country_event = {
+id = bces.122
+title = bces.122.t
+desc = bces.122.d
+fire_only_once = yes
+is_triggered_only = yes
+trigger = {
+tag = PRS
+}
+picture = GFX_picture_bosnian_revolt
+option = {
+ name = bces.122.a
+ai_chance = { factor = 99}
+
+ASK = { change_tag_from = ROOT }
+
+
+}
+
+}

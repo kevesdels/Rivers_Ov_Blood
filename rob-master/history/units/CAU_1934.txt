@@ -1,0 +1,139 @@
+division_template = {
+	name = "Belya Gvardiya"			# Rifle Division
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		#recon = { x = 0 y = 0 } 		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		#engineer = { x = 0 y = 1 } 	# (semi-mot) Engineer bn
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+
+name = "Strelkovaya Diviziya"
+
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+		recon = { x = 0 y = 1 }  
+	}
+
+}
+
+
+units = {
+
+division = {
+name = "1.Strelkovaya Diviziya"
+location = 3529
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "2.Strelkovaya Diviziya"
+location = 3529
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "3.Strelkovaya Diviziya"
+location = 11476
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "4.Strelkovaya Diviziya"
+location = 9594
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "5.Strelkovaya Diviziya"
+location = 11690
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "6.Strelkovaya Diviziya"
+location = 6527
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "7.Strelkovaya Diviziya"
+location = 3529
+division_template = "Strelkovaya Diviziya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "Belya Gvardiya"
+location = 9417
+division_template = "Belya Gvardiya"
+start_experience_factor = 0.2
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "Belya Gvardiya"
+location = 775
+division_template = "Belya Gvardiya"
+start_experience_factor = 0.3
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Belya Gvardiya"
+location = 11724
+division_template = "Belya Gvardiya"
+start_experience_factor = 0.2
+start_equipment_factor = 0.4
+
+}
+division = {
+name = "Belya Gvardiya"
+location = 11696
+division_template = "Belya Gvardiya"
+start_experience_factor = 0.8
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Belya Gvardiya"
+location = 3720
+division_template = "Belya Gvardiya"
+start_experience_factor = 0.8
+start_equipment_factor = 0.8
+
+}
+
+}

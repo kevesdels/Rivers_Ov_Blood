@@ -1,0 +1,509 @@
+PRS_foreign_policy = {
+
+ PRS_proclaim_empire = {
+ cost = 25
+ fire_only_once = yes
+ available = {
+ has_full_control_of_state = 64
+ has_full_control_of_state = 763
+ has_full_control_of_state = 85
+ has_full_control_of_state = 1089
+ has_full_control_of_state = 790
+ has_full_control_of_state = 50
+ has_full_control_of_state = 52
+ has_full_control_of_state = 58
+ has_full_control_of_state = 28
+ }
+ ai_will_do = {
+  base = 200
+ }
+ complete_effect = {
+  add_stability = 0.2
+  set_cosmetic_tag = PRS_EMP
+ }
+ }
+ PRS_reclaim_homeland = {
+ cost = 25
+ fire_only_once = yes
+ available = {
+  date > 1939.1.1
+  has_army_manpower = {
+   size > 500000
+   }
+  NOT = {
+   has_country_leader = {
+    name = "Vydūnas"
+    ruling_only = yes
+   } 
+  }
+ }
+ complete_effect = {
+  set_cosmetic_tag = PRS_KIN
+  PRS = { declare_war_on = { target = GER type = annex_everything } }
+  every_state = {
+    limit = { is_core_of = GER }
+	add_core_of = PRS
+}
+ }
+ }
+  PRS_polish_campaing = {
+ cost = 25
+ fire_only_once = yes
+ available = {
+  date > 1937.1.1
+  has_army_manpower = {
+   size > 400000
+   }
+  NOT = {
+   has_country_leader = {
+    name = "Vydūnas"
+    ruling_only = yes
+   } 
+  }
+ }
+  ai_will_do = {
+  base = 200
+ }
+ complete_effect = {
+  PRS = { declare_war_on = { target = POL type = annex_everything } }
+ 865 = { add_core_of = PRS }
+ 86 = { add_core_of = PRS }
+ 801 = { add_core_of = PRS }
+ 66 = { add_core_of = PRS }
+ 803 = { add_core_of = PRS }
+ 67 = { add_core_of = PRS }
+ 762 = { add_core_of = PRS }
+ }
+ }
+ 
+ 
+PRS_invade_lithuania = {
+ cost = 25
+ fire_only_once = yes
+ available = {
+ date > 1936.1.1
+   NOT = { 
+	has_country_leader = {
+    name = "Vydūnas"
+    ruling_only = yes
+   }
+   }
+ LIT = { exists = yes }
+}
+ ai_will_do = {
+  base = 200
+ }
+complete_effect = {
+ PRS = { declare_war_on = { target = LIT type = annex_everything } }
+}
+}
+
+PRS_create_german_defense_pact = {
+ cost = 25
+ fire_only_once = yes
+ available = {
+ date > 1935.1.1
+   NOT = {
+    OR = {   
+	has_country_leader = {
+    name = "Vydūnas"
+    ruling_only = yes
+   }
+   	has_country_leader = {
+    name = "Rudolf Hess"
+    ruling_only = yes
+   }
+   }
+   }
+}
+
+complete_effect = {
+ create_faction = "Eastern German Pact"
+}
+}
+PRS_invite_ubd = {
+ cost = 25
+ fire_only_once = yes
+  ai_will_do = {
+  base = 200
+ }
+ available = {
+ date > 1935.3.1
+   NOT = { 
+	has_country_leader = {
+    name = "Vydūnas"
+    ruling_only = yes
+   }
+   }
+ PRS = { is_faction_leader = yes }
+}
+
+complete_effect = {
+ PRS = { add_to_faction = EST }
+}
+}
+
+}
+
+PRS_german_expansion = {
+
+ PRS_destroy_the_french = {
+  cost = 25
+ fire_only_once = yes
+  ai_will_do = {
+  base = 200
+ }
+ available = {
+  has_war = no
+  NOT = {
+  28 = { is_owned_by = PRS }
+  }
+  GER = { exists = no }
+  has_full_control_of_state = 790
+  has_full_control_of_state = 50
+ }
+ complete_effect = {
+  every_country = {
+	limit = { controls_state = 28 }
+	PRS = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+ }
+ }
+
+  PRS_invade_rhineland = {
+  cost = 25
+ fire_only_once = yes
+  ai_will_do = {
+  base = 200
+ }
+ available = {
+  has_war = no
+  796 = { is_owned_by = PRS }
+  804 = { is_owned_by = PRS }
+  NOT = {
+  1089 = { is_owned_by = PRS }
+  }
+  GER = { exists = no }
+  has_full_control_of_state = 790
+  has_full_control_of_state = 50
+ }
+ complete_effect = {
+  every_country = {
+	limit = { controls_state = 1089 }
+	PRS = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+ }
+ }
+  PRS_destroy_danes = {
+  cost = 25
+ fire_only_once = yes
+  ai_will_do = {
+  base = 200
+ }
+ available = {
+  has_war = no
+  NOT = {
+  796 = { is_owned_by = PRS }
+  804 = { is_owned_by = PRS }
+  }
+  GER = { exists = no }
+  has_full_control_of_state = 58
+ }
+ complete_effect = {
+ 796 = { add_core_of = PRS }
+ 804 = { add_core_of = PRS }
+  every_country = {
+	limit = { controls_state = 796 }
+	PRS = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+ }
+ }
+ PRS_retake_luxembourg = {
+  cost = 25
+ fire_only_once = yes
+  ai_will_do = {
+  base = 200
+ }
+ available = {
+  has_war = no
+  NOT = {
+  8 = { is_owned_by = PRS }
+  }
+  GER = { exists = no }
+  has_full_control_of_state = 792
+  has_full_control_of_state = 42
+ }
+ complete_effect = {
+  every_country = {
+	limit = { controls_state = 8 }
+	PRS = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+ }
+ }
+ PRS_attack_wallonia = {
+  cost = 25
+ fire_only_once = yes
+  ai_will_do = {
+  base = 200
+ }
+ available = {
+  has_war = no
+  8 = { is_owned_by = PRS }
+  NOT = {
+  813 = { is_owned_by = PRS }
+  812 = { is_owned_by = PRS }
+  }
+  GER = { exists = no }
+  has_full_control_of_state = 1089
+ }
+ complete_effect = {
+ 813 = { add_core_of = PRS }
+ 812 = { add_core_of = PRS }
+  every_country = {
+	limit = { controls_state = 812 }
+	PRS = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+ }
+ }
+}
+
+PRS_baltic_ambition = {
+
+ PRS_free_lithuania = {
+ cost = 25
+  ai_will_do = {
+  base = 200
+ }
+ fire_only_once = yes
+ available = {
+  date > 1936.1.1
+   has_country_leader = {
+    name = "Vydūnas"
+    ruling_only = yes
+   }
+LIT = {
+   NOT = { 
+	has_country_leader = {
+    name = "Gintautas I"
+    ruling_only = yes
+   }
+ }
+}   
+ }
+  complete_effect = {
+  PRS = { declare_war_on = { target = LIT type = annex_everything } }
+    every_state = {
+    limit = { is_core_of = LIT }
+	add_core_of = PRS
+}
+ }
+ }
+ 
+  PRS_free_latvia = {
+ cost = 25
+  ai_will_do = {
+  base = 200
+ }
+ fire_only_once = yes
+ available = {
+  date > 1936.1.1
+   has_country_leader = {
+    name = "Vydūnas"
+    ruling_only = yes
+   }
+LAT = {
+   NOT = { 
+	exists = yes
+   }
+ }
+}   
+  complete_effect = {
+  PRS = { declare_war_on = { target = EST type = annex_everything } }
+    every_state = {
+    limit = { is_core_of = LAT }
+	add_core_of = PRS
+}
+ }
+ }
+ 
+PRS_proclaim_baltic_unity = {
+ cost = 25
+  ai_will_do = {
+  base = 200
+ }
+ fire_only_once = yes
+ available = {
+    has_country_leader = {
+    name = "Vydūnas"
+    ruling_only = yes
+   }
+ OR = {
+  AND = {
+   is_in_faction_with = LIT
+   is_in_faction_with = LAT
+  }
+  AND = {
+   has_full_control_of_state = 12
+   has_full_control_of_state = 11
+   has_full_control_of_state = 784
+   has_full_control_of_state = 763
+  }
+ }
+}
+complete_effect = {
+  set_cosmetic_tag = PRS_BAL
+  12 = { add_core_of = PRS }
+  190 = {add_core_of = PRS }
+  881 = { add_core_of = PRS }
+  1010 = { add_core_of = PRS }
+  880 = { add_core_of = PRS }
+    every_state = {
+    limit = {  
+	OR = {
+	is_core_of = LIT
+    is_core_of = LAT
+    }	
+}
+	add_core_of = PRS
+}
+ }
+}
+PRS_join_lith_faction = {
+ cost = 25
+  ai_will_do = {
+  base = 200
+ }
+ fire_only_once = yes
+ available = {
+ date > 1935.1.1
+    has_country_leader = {
+    name = "Vydūnas"
+    ruling_only = yes
+   }
+ PRS = { is_in_faction = no }
+ LIT = {
+  is_faction_leader = yes
+   has_country_leader = {
+    name = "Gintautas I"
+    ruling_only = yes
+   }
+ }
+}
+
+complete_effect = {
+ LIT = { add_to_faction = PRS }
+}
+}
+
+PRS_retake_belarus = {
+ cost = 25
+  ai_will_do = {
+  base = 200
+ }
+ fire_only_once = yes
+ available = {
+ has_cosmetic_tag = PRS_BAL
+ NOT = {
+  96 = { is_owned_by = PRS } 
+  has_war = yes  
+ }
+ }
+ 
+ complete_effect = {
+ 96 = { add_core_of = PRS } 
+  every_country = {
+	limit = { controls_state = 96 }
+	PRS = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+ }
+
+}
+
+PRS_retake_western_belarus = {
+ cost = 25
+  ai_will_do = {
+  base = 200
+ }
+ fire_only_once = yes
+ available = {
+ has_cosmetic_tag = PRS_BAL
+ NOT = {
+  95 = { is_owned_by = PRS } 
+  933 = { is_owned_by = PRS }
+  has_war = yes  
+ }
+ }
+  complete_effect = {
+ 95 = { add_core_of = PRS }
+ 933 = { add_core_of = PRS }  
+  every_country = {
+	limit = {  OR = { controls_state = 95 controls_state = 933 } }
+	PRS = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+ }
+
+}
+
+PRS_retake_polish_lands = {
+ cost = 25
+  ai_will_do = {
+  base = 200
+ }
+ fire_only_once = yes
+ available = {
+ has_cosmetic_tag = PRS_BAL
+ NOT = {
+  97 = { is_owned_by = PRS } 
+  has_war = yes  
+ }
+ }
+  complete_effect = {
+ 97 = { add_core_of = PRS }
+  every_country = {
+	limit = {  OR = { controls_state = 97 } }
+	PRS = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+ }
+
+}
+}

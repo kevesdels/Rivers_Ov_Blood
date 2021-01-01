@@ -1,0 +1,70 @@
+capital = 553
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+}
+
+set_cosmetic_tag = FRA_SYR
+set_convoys = 5
+
+
+
+set_politics = {
+	ruling_party = social_liberal
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 30
+	conservative = 45
+	authoritharian = 3
+	reactionary = 0
+	pelekist = 22
+}
+
+create_country_leader = {
+	name = "Damien de Martel"
+	desc = ""
+	picture = "gfx/leaders/SYR/Portrait_Arabia_Generic_navy_1.dds"
+	ideology = social_liberal_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Antun Saadeh"
+	desc = ""
+	picture = "gfx/leaders/SYR/Portrait_Arabia_Generic_land_3.dds"
+	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ghazi bin Faisal"
+	desc = ""
+	picture = "gfx/leaders/SYR/Portrait_Arabia_Generic_2.dds"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Khalid Bakdash"
+	desc = ""
+	picture = "gfx/leaders/SYR/Portrait_Arabia_Generic_1.dds"
+	ideology = socialist_subtype
+	traits = {
+		#
+	}
+}

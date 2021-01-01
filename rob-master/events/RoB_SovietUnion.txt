@@ -1,0 +1,1942 @@
+﻿###Main Political Events
+
+add_namespace = bolshevik_russia
+
+###RSR in 1934
+country_event = {
+id = bolshevik_russia.1
+title = bolshevik_russia.1.t
+desc = bolshevik_russia.1.d
+picture = GFX_picture_russian_civil_war
+
+trigger =  { tag = SOV }
+mean_time_to_happen = { days = 10 }
+fire_only_once = yes
+
+option = {
+ name = bolshevik_russia.1.a
+ 
+
+}
+}
+
+###Kulaks fuck shit up part 1: A new hope
+country_event = {
+id = bolshevik_russia.2
+title = bolshevik_russia.2.t
+desc = bolshevik_russia.2.d
+picture = GFX_picture_russian_peasants
+
+trigger = {
+tag = SOV
+date > 1934.2.10
+}
+mean_time_to_happen = { days = 2 }
+fire_only_once = yes
+
+option = {
+ name = bolshevik_russia.2.a
+ add_stability = -0.05
+ add_political_power = -50
+}
+}
+
+###Kulaks fuck shit up part 2: Empire Strikes back
+country_event = {
+id = bolshevik_russia.3
+title = bolshevik_russia.3.t
+desc = bolshevik_russia.3.d
+picture = GFX_picture_russian_factory_owners
+
+trigger = {
+tag = SOV
+date > 1934.3.10
+}
+mean_time_to_happen = { days = 1 }
+fire_only_once = yes
+
+option = {
+ name = bolshevik_russia.3.a
+ add_stability = -0.075
+ add_political_power = -75
+ set_country_flag = bourgeoisie_organize
+}
+}
+
+###Kulaks fuck shit up part 3:Return of the Bolshevik
+country_event = {
+id = bolshevik_russia.4
+title = bolshevik_russia.4.t
+desc = bolshevik_russia.4.d
+picture = GFX_picture_russian_bourgeosie_unite
+
+trigger = {
+tag = SOV
+date > 1934.5.1
+}
+mean_time_to_happen = { days = 1 }
+fire_only_once = yes
+
+option = {
+ name = bolshevik_russia.4.a
+ swap_ideas = { 
+  remove_idea = bourgeoisie_influence 
+  add_idea = bourgeoisie_influence_2 
+}
+}
+}
+
+
+###Old Bolsheviks tell them to fuck off
+country_event = {
+id = bolshevik_russia.5
+title = bolshevik_russia.5.t
+desc = bolshevik_russia.5.d
+fire_only_once = yes
+picture = GFX_picture_russian_new_revolution
+
+trigger = {
+tag = SOV
+has_idea = bourgeoisie_influence_2
+}
+mean_time_to_happen = { months = 1 }
+
+option = {
+name = bolshevik_russia.5.a
+add_political_power = -100
+add_stability = -0.05
+set_country_flag = bolshevik_disorder
+}
+}
+
+
+###Disorder starts
+country_event = {
+id = bolshevik_russia.6
+title = bolshevik_russia.6.t
+desc = bolshevik_russia.6.d
+fire_only_once = yes
+picture = GFX_picture_russian_disorder
+
+
+trigger = {
+tag = SOV
+has_idea = bourgeoisie_influence_2
+has_country_flag = bolshevik_disorder
+date > 1934.6.1
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = bolshevik_russia.6.a
+add_ideas = mass_unrest
+set_country_flag = mass_unrest_b
+}
+}
+
+
+###Mass Strike
+country_event = {
+id = bolshevik_russia.7
+title = bolshevik_russia.7.t
+desc = bolshevik_russia.7.d
+fire_only_once = yes
+picture = GFX_picture_russian_general_strike
+
+trigger = {
+tag = SOV
+has_country_flag = mass_unrest_b
+date > 1934.6.15
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = bolshevik_russia.7.a
+add_ideas = bolshevik_strike
+set_country_flag = bolshevik_strike_b
+}
+}
+
+###Leningrad Bombings
+country_event = {
+id = bolshevik_russia.8
+title = bolshevik_russia.8.t
+desc = bolshevik_russia.8.d
+fire_only_once = yes
+picture = GFX_picture_russian_leningrad_bombings
+
+trigger = {
+tag = SOV
+has_country_flag = mass_unrest_b
+has_country_flag = bolshevik_strike_b
+date > 1934.7.10
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = bolshevik_russia.8.a
+195 = {
+remove_building = { type = arms_factory   level = 1 } 
+}
+set_country_flag = leningrad_bombed
+add_manpower = -253
+}
+}
+
+###Rykov resigns
+country_event = {
+id = bolshevik_russia.9
+title = bolshevik_russia.9.t
+desc = bolshevik_russia.9.d
+fire_only_once = yes
+picture = GFX_picture_rykov_resigns
+
+
+trigger = {
+tag = SOV
+has_country_flag = leningrad_bombed
+date > 1934.7.22
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = bolshevik_russia.9.a
+retire_country_leader = yes
+remove_ideas = {
+RSR_alexei_rykov_hog
+}
+create_country_leader = {
+	name = "Council of People's Commissars"
+	desc = ""
+	picture = "CouncilofPeoplesCommissars.tga"
+	expire = "1953.3.1"
+	ideology = market_socialism
+	traits = {
+		#
+	}
+}
+set_country_flag = rykov_resigned
+}
+}
+
+
+###political situation 
+country_event = {
+id = bolshevik_russia.10
+title = bolshevik_russia.10.t
+desc = bolshevik_russia.10.d
+fire_only_once = yes
+picture = GFX_picture_russian_political_crisis
+
+
+trigger = {
+has_idea = mass_unrest
+has_idea = bolshevik_strike
+has_country_flag = rykov_resigned
+
+date > 1934.8.1
+}
+mean_time_to_happen = { days = 1 }
+
+option = {   ###Triumvirate
+name = bolshevik_russia.10.a
+add_popularity = {ideology = socialist popularity =0.08}
+set_country_flag = triumvirate_happens
+}
+
+option = {   ###Two Diumvirates
+name = bolshevik_russia.10.b
+add_popularity = {ideology = socialist popularity =-0.02}
+add_popularity = {ideology = democratic_socialist popularity =-0.02}
+set_country_flag = diumvirates_setup
+}
+
+option = {
+  name = bolshevik_russia.10.c
+  trigger = { has_country_flag = molotov_gains_vlaslovist_support }
+  
+  set_country_flag = molotv_prepares_coup
+  add_popularity = {ideology = national_socialist popularity =0.04}
+  add_popularity = {ideology = socialist popularity =0.07}
+  
+  }
+}
+
+
+
+
+
+###############################
+#Vlaslov's Event Chain
+###############################
+
+country_event = {
+id = bolshevik_russia.11
+title = bolshevik_russia.11.t
+desc = bolshevik_russia.11.d
+fire_only_once = yes
+picture = GFX_picture_general_vlaslov
+
+trigger = {
+has_country_flag = bourgeoisie_organize
+date > 1934.4.22
+}
+mean_time_to_happen = {days = 1}
+
+option = { ###Vlaslov dies
+name = bolshevik_russia.11.a
+create_country_leader = {
+	name = "Vasily Blokhin"
+	desc = ""
+	picture = "VasilyBlokhin.dds"
+	expire = "1953.3.1"
+	ideology = vlaslovism
+	traits = {
+		#
+	}
+}
+set_country_flag = vlaslov_is_dead
+add_popularity = {ideology = national_socialist popularity =0.05}
+}
+
+option = { ###Vlaslov survives
+name = bolshevik_russia.11.b
+add_political_power = 75
+set_country_flag = vlaslov_survives
+add_popularity = {ideology = national_socialist popularity =0.03}
+}
+
+}
+
+
+###investigation (vlaslov dead)
+country_event = {
+id = bolshevik_russia.12
+title = bolshevik_russia.12.t
+desc = bolshevik_russia.12.d
+fire_only_once = yes
+picture = GFX_report_event_generic_conference
+
+trigger = {
+tag = SOV
+has_country_flag = vlaslov_is_dead
+}
+mean_time_to_happen = { days = 2 }
+
+option = { ###investigation starts
+name = bolshevik_russia.12.a
+set_country_flag = vlaslov_dead_investigation_started
+}
+
+option = { ###investigation doesnt start
+name = bolshevik_russia.12.b
+set_country_flag = vlaslov_dead_investigation_stopped
+}
+
+}
+
+###investigation (vlaslov not dead)
+country_event = {
+id = bolshevik_russia.13
+title = bolshevik_russia.13.t
+desc = bolshevik_russia.13.d
+fire_only_once = yes
+picture = GFX_report_event_generic_conference
+
+trigger = {
+tag = SOV
+has_country_flag = vlaslov_survives
+}
+
+option = { ###investigation starts
+name = bolshevik_russia.13.a
+set_country_flag = vlaslov_survives_investigation_started
+}
+option = { ###investigation doesnt start
+name = bolshevik_russia.13.b
+set_country_flag = vlaslov_survives_investigation_stopped
+}
+}
+
+
+###investigation part 1
+country_event = {
+id = bolshevik_russia.14
+title = bolshevik_russia.14.t
+desc = bolshevik_russia.14.d
+fire_only_once = yes
+picture = GFX_picture_russian_soviet_soldiers
+
+trigger = {
+OR = {
+has_country_flag = vlaslov_survives_investigation_started
+has_country_flag = vlaslov_dead_investigation_started
+
+}
+
+}
+
+
+option = {
+name = bolshevik_russia.14.a
+add_political_power = 10
+set_country_flag = vlaslov_investigation_part_one
+}
+}
+
+
+###investigation part 2
+country_event = {
+id = bolshevik_russia.15
+title = bolshevik_russia.15.t
+desc = bolshevik_russia.15.d
+fire_only_once = yes
+picture = GFX_picture_russian_partisans
+
+trigger = {
+
+has_country_flag = vlaslov_investigation_part_one 
+
+}
+mean_time_to_happen = { months = 1 }
+
+option = {
+name = bolshevik_russia.15.a
+add_political_power = 10
+set_country_flag = vlaslov_investigation_part_two
+}
+}
+
+###investigation part 3 - Molotov supports Vlaslovists
+country_event = {
+id = bolshevik_russia.16
+title = bolshevik_russia.16.t
+desc = bolshevik_russia.16.d
+fire_only_once = yes
+picture = GFX_picture_vyacheslav_molotov
+
+trigger = {
+has_country_flag = vlaslov_investigation_part_two
+}
+mean_time_to_happen = { days = 3 }
+
+
+
+
+option = {
+name = bolshevik_russia.16.a
+add_political_power = 10
+set_country_flag = molotov_gains_vlaslovist_support
+add_stability = 0.01
+}
+}
+
+
+###Investigation is not started - Blokhin outraged
+country_event = {
+id = bolshevik_russia.17
+title = bolshevik_russia.17.t
+desc = bolshevik_russia.17.d
+fire_only_once = yes
+picture = GFX_picture_vasiliy_blokhin
+
+trigger = {
+
+has_country_flag = vlaslov_dead_investigation_stopped
+
+}
+
+option = {
+name = bolshevik_russia.17.a
+set_country_flag = blokhin_outraged
+}
+}
+
+###Investigation is not started - Vlaslov outraged
+country_event = {
+id = bolshevik_russia.18
+title = bolshevik_russia.18.t
+desc = bolshevik_russia.18.d
+fire_only_once = yes
+picture = GFX_picture_general_vlaslov_angry_grrrr
+
+trigger = {
+
+has_country_flag = vlaslov_survives_investigation_stopped
+
+}
+
+option = {
+name = bolshevik_russia.18.a
+set_country_flag = vlaslov_is_angry
+}
+}
+
+#######################
+#Political Struggle
+#######################
+
+#####MOLOTOV PATH
+
+###march on moscow
+country_event = {
+id = bolshevik_russia.19
+title = bolshevik_russia.19.t
+desc = bolshevik_russia.19.d
+picture = GFX_picture_march_on_moscow
+
+trigger = {
+has_country_flag = molotv_prepares_coup
+}
+mean_time_to_happen = { days = 3 }
+fire_only_once = yes
+
+option = {
+name = bolshevik_russia.19.a
+hidden_effect = { load_focus_tree = soviet_focus_molotov }
+create_country_leader = {
+	name = "Vyacheslav Molotov"
+	desc = ""
+	picture = "VyacheslavMolotov.tga"
+	expire = "1953.3.1"
+	ideology = marxism_leninism
+	traits = {
+		#
+	}
+}
+add_popularity = {ideology = socialist popularity =0.2}
+add_political_power = 120
+set_politics = {
+ruling_party = socialist
+elections_allowed = no
+add_ideas = {
+RSR_vyacheslav_molotov_hog
+RSR_sergei_kirov_im
+RSR_kliment_voroshilov_dm
+RSR_alexei_kosygin_em
+RSR_anastas_mikoyan_fm
+}
+}
+}
+}
+
+###Duumviri PATH
+
+
+country_event = { ###political turmoil
+id = bolshevik_russia.20
+title = bolshevik_russia.20.t
+desc = bolshevik_russia.20.d
+fire_only_once = yes
+picture = GFX_picture_political_turmoil
+
+trigger = {
+has_country_flag = diumvirates_setup
+}
+
+mean_time_to_happen = { days = 2 }
+
+option = {
+name = bolshevik_russia.20.a
+hidden_effect = { load_focus_tree = soviet_focus_blokhin }
+trigger = { has_country_flag = blokhin_outraged }
+set_politics = {
+ ruling_party = national_socialist 
+ elections_allowed = no
+}
+add_popularity = { ideology = national_socialist popularity = 0.35}
+set_party_name = { ideology = national_socialist long_name = SOV_blokhins_clique_long name = SOV_blokhins_clique}
+add_ideas = {
+RSR_vasily_blokhin_hog
+RSR_genrikh_yagoda_im
+RSR_mikhail_frinovsky_fm
+RSR_lavrentiy_beria_em
+RSR_yakov_agranov_dm
+}
+}
+
+option = {
+name = bolshevik_russia.20.b
+add_popularity = { ideology = national_socialist popularity =-0.5}
+add_popularity = { ideology = socialist popularity =-0.15}
+set_country_flag = bolsheviks_discredited
+
+
+}
+}
+
+country_event = {  ###Agreement between Tomsky and Bukharin
+id = bolshevik_russia.21
+title = bolshevik_russia.21.t
+desc = bolshevik_russia.21.d
+fire_only_once = yes
+picture = GFX_report_event_military_planning
+
+trigger = {
+has_country_flag = bolsheviks_discredited
+}
+
+mean_time_to_happen =  { days = 10 }
+
+option = {
+name = bolshevik_russia.21.a
+add_popularity = { ideology = democratic_socialist popularity =0.15}
+set_country_flag = agreement_set
+}
+}
+
+
+country_event = {  ###Buhkarin seizes power
+id = bolshevik_russia.22
+title = bolshevik_russia.22.t
+desc = bolshevik_russia.22.d
+fire_only_once = yes
+picture = GFX_picture_bukharin_seizes_power
+
+trigger = {
+has_country_flag = agreement_set
+}
+
+mean_time_to_happen =  { days = 3 }
+
+option = {
+name = bolshevik_russia.22.a
+hidden_effect = { load_focus_tree = soviet_focus_bukharin }
+add_popularity = { ideology = democratic_socialist = 0.10 }
+create_country_leader = {
+	name = "Nikolai Ivanovich Bukharin"
+	desc = ""
+	picture = "NikolaiIvanovichBukharin.tga"
+	expire = "1953.3.1"
+	ideology = market_socialism
+	traits = {
+		#
+	}
+}
+add_ideas = {
+RSR_nikolai_bukharin_hog
+RSR_mikhail_kalinin_im
+RSR_boris_pasternak_fm
+RSR_georgy_pyatakov_em
+RSR_viktor_nogin_dm
+}
+set_country_flag = bukharin_seizes_power
+add_popularity = { ideology = democratic_socialist popularity = 0.1}
+}
+}
+
+
+country_event = {  ###Tomsky is shot
+id = bolshevik_russia.23
+title = bolshevik_russia.23.t
+desc = bolshevik_russia.23.d
+fire_only_once = yes
+picture = GFX_picture_firing_squad
+
+
+trigger = {
+has_country_flag = bukharin_seizes_power
+}
+
+option = {
+name = bolshevik_russia.23.a
+add_political_power = 70
+}
+}
+
+
+#####TRIUMVIRATE PATH
+
+country_event = { ##discredit bolsheviks?
+id = bolshevik_russia.24
+title = bolshevik_russia.24.t
+desc = bolshevik_russia.24.d
+fire_only_once = yes
+picture = GFX_picture_zinoviev_and_kamenev
+
+trigger = {
+has_country_flag = triumvirate_happens
+}
+
+mean_time_to_happen = { days = 4 }
+
+option = {
+name = bolshevik_russia.24.a
+set_country_flag = bolsheviks_discredited_triumvirate
+add_political_power = -10
+}
+
+option = {
+name = bolshevik_russia.24.b
+set_country_flag = bolsheviks_live
+add_political_power = 10
+}
+}
+
+country_event = {  ###bolsheviks lose support
+id = bolshevik_russia.25
+title = bolshevik_russia.25.t
+desc = bolshevik_russia.25.d
+fire_only_once = yes
+picture = GFX_picture_bolshevik_discredited
+
+trigger = {
+has_country_flag = bolsheviks_discredited_triumvirate
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = bolshevik_russia.25.a
+add_political_power = 30
+set_country_flag = bolsheviks_lose_power
+}
+}
+
+country_event = {  ###tomsky rides high
+id = bolshevik_russia.26
+title = bolshevik_russia.26.t
+desc = bolshevik_russia.26.d
+fire_only_once = yes
+picture = GFX_picture_tomsky_rides_high
+
+trigger = {
+has_country_flag = bolsheviks_lose_power
+}
+
+option = {
+name = bolshevik_russia.26.a
+add_popularity = { ideology = democratic_socialist popularity = 0.1}
+set_country_flag = tomsky_rises
+}
+}
+
+country_event = {  ###Zinoviev and Kamenev attacked
+id = bolshevik_russia.27
+title = bolshevik_russia.27.t
+desc = bolshevik_russia.27.d
+fire_only_once = yes
+picture = GFX_picture_red_guards
+
+trigger = {
+has_country_flag = tomsky_rises
+}
+
+mean_time_to_happen = { days = 5}
+
+option = {
+name = bolshevik_russia.27.a
+hidden_effect = { load_focus_tree = soviet_focus_tomsky }
+set_country_flag = tomsky_seizes_power
+add_popularity = { ideology = democratic_socialist popularity = 0.3 }
+add_political_power = 120
+create_country_leader = {
+	name = "Mikhail Pavlovich Tomsky"
+	desc = ""
+	picture = "Tomsky.tga"
+	expire = "1953.3.1"
+	ideology = syndicalism
+	traits = {
+		#
+	}
+}
+add_ideas = {
+RSR_mikhail_tomsky_hog
+RSR_alexandra_kollontai_im
+RSR_konstantin_yurenev_fm
+RSR_alexander_shliapnikov_em
+RSR_valerian_osinsky_dm
+}
+set_politics = {
+ruling_party = democratic_socialist
+elections_allowed = no
+}
+
+set_party_name = { ideology = democratic_socialist long_name = SOV_democratic_socialist_party_syndicalism_long name = SOV_democratic_socialist_party_syndicalism}
+}
+
+option = {
+name = bolshevik_russia.27.b
+hidden_effect = { load_focus_tree = soviet_focus_vlaslov }
+trigger = { has_country_flag = vlaslov_is_angry }
+set_politics = {
+ruling_party = national_socialist 
+elections_allowed = no
+}
+add_ideas = {
+RSR_andrey_vlasov_hog
+RSR_vasily_blokhin_im
+RSR_mikhail_meandrov_fm
+RSR_nikolai_voznesensky_em
+RSR_bronislav_kaminski_dm
+}
+add_popularity = { ideology = national_socialist popularity = 0.45}
+}
+}
+
+country_event = {  ###Buhkarin gets expeled
+id = bolshevik_russia.28
+title = bolshevik_russia.28.t
+desc = bolshevik_russia.28.d
+fire_only_once = yes
+picture = GFX_picture_bukharin_expelled
+
+trigger = {
+has_country_flag = bolsheviks_live
+}
+mean_time_to_happen = { days = 5}
+
+option = {
+name = bolshevik_russia.28.a
+add_popularity = { ideology = democratic_socialist popularity = -0.1}
+add_political_power = 40
+set_country_flag = bukharin_expeled
+}
+}
+
+country_event = { ###fabricating evidence of tomsky
+id = bolshevik_russia.29
+title = bolshevik_russia.29.t
+desc = bolshevik_russia.29.d
+fire_only_once = yes
+picture = GFX_report_event_hitler_handshake
+
+mean_time_to_happen = { days = 4 }
+
+trigger = {
+has_country_flag = bukharin_expeled
+}
+
+
+option = {
+name = bolshevik_russia.29.a
+add_political_power = 10
+set_country_flag = downfall_of_tomsky_begins
+}
+}
+
+country_event = { ###tomsky loses support
+id = bolshevik_russia.30
+title = bolshevik_russia.30.t
+desc = bolshevik_russia.30.d
+fire_only_once = yes
+picture = GFX_news_event_journalists_speech
+
+trigger = {
+has_country_flag = downfall_of_tomsky_begins
+}
+mean_time_to_happen = { days = 10 }
+
+option = {
+name = bolshevik_russia.30.a
+add_political_power = 10
+set_country_flag = death_of_tomsky
+}
+}
+
+
+country_event = { ###Zinoviev tries to meet NKVD
+id = bolshevik_russia.31
+title = bolshevik_russia.31.t
+desc = bolshevik_russia.31.d
+fire_only_once = yes
+picture = GFX_picture_zinoviev_meeting
+
+trigger = {
+has_country_flag = death_of_tomsky
+}
+mean_time_to_happen = { days = 2 }
+
+option = { ###he succedss
+name = bolshevik_russia.31.a
+add_political_power = 10
+set_country_flag = zinoviev_meets_nkvd
+}
+
+option = { ###he fails
+name = bolshevik_russia.31.b
+add_political_power = 10
+set_country_flag = zinoviev_stopped
+}
+}
+
+country_event = { ###Kamenev seizes power
+id = bolshevik_russia.32
+title = bolshevik_russia.32.t
+desc = bolshevik_russia.32.d
+fire_only_once = yes
+picture = GFX_picture_kamenev_seizes_power
+
+ trigger = {
+ has_country_flag = zinoviev_stopped
+ }
+
+ mean_time_to_happen = { days = 3 }
+option = {
+name = bolshevik_russia.32.a
+hidden_effect = { load_focus_tree = soviet_focus_kamenev }
+set_politics = {
+ruling_party = socialist
+elections_allowed = no
+}
+add_ideas = {
+RSR_lev_kamenev_hog
+RSR_vladimir_smirnov_im
+RSR_christian_rakovsky_fm
+RSR_yevgeni_preobrazhensky_em
+RSR_andrei_bubnov_fm
+}
+add_political_power = 120
+add_popularity = {ideology = socialist popularity = 0.3 }
+}
+}
+
+
+country_event = { ###Kamenev gets into accident, Zinoviev seizes power
+id = bolshevik_russia.33
+title = bolshevik_russia.33.t
+desc = bolshevik_russia.33.d
+fire_only_once = yes
+picture = GFX_picture_zinoviev_seizes_power
+
+trigger = {
+has_country_flag = zinoviev_meets_nkvd
+}
+mean_time_to_happen = { days = 2 }
+
+option = {
+name = bolshevik_russia.33.a
+hidden_effect = { load_focus_tree = soviet_focus_zinoviev }
+create_country_leader = {
+	name = "Grigory Yevseyevich Zinoviev"
+	desc = ""
+	picture = "GrigoryYevseyevichZinoviev.tga"
+	expire = "1953.3.1"
+	ideology = left_communism
+	traits = {
+		#
+	}
+}
+add_ideas = {
+RSR_grigory_zinoviev_hog
+RSR_alexander_beloborodov_im
+RSR_christian_rakovsky_fm
+RSR_yevgeni_preobrazhensky_em
+RSR_mikhail_lashevich_dm
+}
+
+set_politics = {
+ruling_party = socialist
+elections_allowed = no
+}
+add_political_power = 120
+add_popularity = {ideology = socialist popularity = 0.3 }
+}
+}
+
+
+###Focus Tree Flavor
+country_event = { ###BBK construction starts
+id = bolshevik_russia.34
+title = bolshevik_russia.34.t
+desc = bolshevik_russia.34.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = bolshevik_russia.34.a
+add_stability = 0.02
+hidden_effect = {
+ SOV = {
+  country_event = {
+   id = bolshevik_russia.35
+   days = 720
+  }
+ }
+}
+}
+}
+
+country_event = { ###BBK finished
+id = bolshevik_russia.35
+title = bolshevik_russia.35.t
+desc = bolshevik_russia.35.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = bolshevik_russia.35.a
+add_stability = 0.05
+214 = {
+
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 5
+            instant_build = yes
+        }
+    }
+}
+216 = {
+
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 5
+            instant_build = yes
+        }
+    }
+}
+}
+}
+
+country_event = { ###5 year plan announced
+id = bolshevik_russia.36
+title = bolshevik_russia.36.t
+desc = bolshevik_russia.36.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = bolshevik_russia.36.a
+add_stability = 0.05
+add_political_power = 100
+
+}
+}
+
+country_event = { ###electrification attempts
+id = bolshevik_russia.37
+title = bolshevik_russia.37.t
+desc = bolshevik_russia.37.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = bolshevik_russia.37.a
+add_stability = 0.05
+
+
+}
+}
+
+country_event = { ###expanding cities
+id = bolshevik_russia.38
+title = bolshevik_russia.38.t
+desc = bolshevik_russia.38.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = bolshevik_russia.38.a
+add_stability = 0.05
+
+
+}
+}
+
+country_event = { ###military
+id = bolshevik_russia.39
+title = "The Question of Land Forces"
+desc = bolshevik_russia.39.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###Shap plan
+name = "A Professional Force!"
+trigger = { NOT = { OR = { has_tech = trench_warfare has_tech = mass_assault } } }
+add_stability = -0.05
+set_country_flag = SOV_shaposhnikovs_plan
+
+}
+option = { ###reform red guard
+name = "Red Guard is Our Backbone!"
+trigger = { NOT = { OR = { has_tech = mobile_warfare has_tech = superior_firepower } } }
+add_stability = 0.05
+set_country_flag = SOV_reform_red_guard
+
+}
+}
+
+country_event = { ###air
+id = bolshevik_russia.40
+title = "Bolshevik Air Forces"
+desc = bolshevik_russia.40.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###alksnis plan
+name = "Alksnis Shall Lead It!"
+add_war_support = 0.05
+set_country_flag = SOV_alksnis_plan
+
+}
+option = { ###novikovs plan
+name = "Novikov is Right!"
+add_stability = 0.05
+set_country_flag = SOV_novikovs_plan
+
+}
+}
+
+###Vlaslovist events
+country_event = { ###vlaslovs coup
+id = bolshevik_russia.41
+title = "The New Dawn"
+desc = bolshevik_russia.41.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = bolshevik_russia.41.a
+add_stability = 0.02
+}
+}
+
+country_event = { ###vlaslov meets with trade unions
+id = bolshevik_russia.42
+title = "Vlaslov Meets With Trade Unions"
+desc = bolshevik_russia.42.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = bolshevik_russia.1.a
+add_stability = 0.02
+}
+}
+
+country_event = { ###vlaslov promises economic reforms
+id = bolshevik_russia.43
+title = "Vlaslovist Economic Reforms"
+desc = bolshevik_russia.43.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = bolshevik_russia.43.a
+add_stability = 0.02
+}
+}
+
+country_event = { ###vlaslov rounds up bourgeoisie
+id = bolshevik_russia.44
+title = "Our Fiercest Enemy"
+desc = bolshevik_russia.44.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = bolshevik_russia.44.a
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###paramilitaries in cities
+id = bolshevik_russia.45
+title = "Vlaslovist Paramilitaries Mobilize"
+desc = bolshevik_russia.45.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = bolshevik_russia.45.a
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###red guard in cities
+id = bolshevik_russia.46
+title = "Red Guard"
+desc = bolshevik_russia.46.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = bolshevik_russia.46.a
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###crushing the unrest
+id = bolshevik_russia.47
+title = "The Red Boot"
+desc = bolshevik_russia.47.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = bolshevik_russia.47.a
+add_stability = 0.02
+
+
+}
+}
+
+###TREE - BLOKHIN
+country_event = { ###Blokhins coup
+id = bolshevik_russia.48
+title = "The Bloody Morning"
+desc = bolshevik_russia.48.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "All Hail Blokhin!"
+add_stability = 0.02
+
+
+}
+}
+country_event = { ###yeeting on unions
+id = bolshevik_russia.49
+title = "Fast..."
+desc = bolshevik_russia.49.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "They shouldn’t have even existed."
+add_stability = 0.02
+
+
+}
+}
+country_event = { ###yeeting on unions 2
+id = bolshevik_russia.50
+title = "Direct..."
+desc = bolshevik_russia.50.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Good."
+add_stability = 0.02
+
+
+}
+}
+country_event = { ###yeeting on unions 3
+id = bolshevik_russia.51
+title = "Uncompromising!"
+desc = bolshevik_russia.51.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "What they deserve!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###paramilitaries
+id = bolshevik_russia.52
+title = "Mobilizing SORV"
+desc = bolshevik_russia.52.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "They Will do their Duty Faithfully."
+add_stability = 0.02
+
+
+}
+}
+country_event = { ###paramilitaries 2
+id = bolshevik_russia.53
+title = "The Red Schock Troops"
+desc = bolshevik_russia.53.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "The more men the merrier."
+add_stability = 0.02
+
+
+}
+}
+country_event = { ###paramilitaries 3
+id = bolshevik_russia.54
+title = "The Streets Run Red"
+desc = bolshevik_russia.54.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "They deserve every bit of it"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###cultural revolution
+id = bolshevik_russia.55
+title = "The Russian Cultural Revolution"
+desc = bolshevik_russia.55.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "All for the greater good!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###destroying foreign influence
+id = bolshevik_russia.56
+title = "The Foreigner Question"
+desc = bolshevik_russia.56.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "That’s what they deserve"
+add_stability = 0.02
+
+
+}
+}
+
+###BUKHARIN EVENTS
+
+country_event = { ###premier bukharin
+id = bolshevik_russia.57
+title = "The Opportunist"
+desc = bolshevik_russia.57.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "All hail the new chairman!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###meeting with trade unions
+id = bolshevik_russia.58
+title = "The Meeting"
+desc = bolshevik_russia.58.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "A Glorious Meeting!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###promise reforms
+id = bolshevik_russia.59
+title = "The Promise"
+desc = bolshevik_russia.59.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "And that’s exactly what we need."
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###strike ends
+id = bolshevik_russia.60
+title = "The Strike"
+desc = bolshevik_russia.60.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "The Peaceful Leader!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###mobilize police
+id = bolshevik_russia.61
+title = "The Mobilization"
+desc = bolshevik_russia.61.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "If it is needed…"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###arm citizens
+id = bolshevik_russia.62
+title = "The Citizens"
+desc = bolshevik_russia.62.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "The freest in the world!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###unres tends
+id = bolshevik_russia.63
+title = "The Unrest"
+desc = bolshevik_russia.63.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Time to Rejoice!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###unres tends
+id = bolshevik_russia.64
+title = "Towards a New Society"
+desc = bolshevik_russia.64.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "We can finally rest…"
+add_stability = 0.02
+
+
+}
+}
+country_event = { ###bukharin becomes gay
+id = bolshevik_russia.65
+title = "Social Liberation"
+desc = bolshevik_russia.65.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = bolshevik_russia.1.a
+add_stability = 0.02
+
+
+}
+}
+
+###KAMENEV POLITICAL EVENTS
+
+country_event = { ###kamenev assumes controll
+id = bolshevik_russia.66
+title = "Stand up, Damned of the Earth"
+desc = bolshevik_russia.66.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Forwards!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###kamenev yeets trade unions
+id = bolshevik_russia.67
+title = "Stand up, Prisoners of Starvation"
+desc = bolshevik_russia.67.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "They Got What They Asked For"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###kamenev apoints lotyal leaders
+id = bolshevik_russia.68
+title = "There are no Supreme Saviours"
+desc = bolshevik_russia.68.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "...Neither God, nor Caesar, nor tribune"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###kamenev ends the strike
+id = bolshevik_russia.69
+title = "No Rights Without Duties"
+desc = bolshevik_russia.69.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Finally..."
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###kamenev uses VckH
+id = bolshevik_russia.70
+title = "This is the Final Struggle"
+desc = bolshevik_russia.70.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "We will curb down on Traitors!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###kamenev uses Red Guard
+id = bolshevik_russia.71
+title = "Let us group Together, and Tomorrow"
+desc = bolshevik_russia.71.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Just a little bit..."
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###kamenev ends unrest
+id = bolshevik_russia.72
+title = "Of the Past Let Us make a Clean Slate"
+desc = bolshevik_russia.72.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "It's Done."
+add_stability = 0.02
+
+
+}
+}
+
+###MOLOTOV TREE EVENTS
+country_event = { ###Molotov Coup
+id = bolshevik_russia.73
+title = "The Red Man of Steel"
+desc = bolshevik_russia.73.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = bolshevik_russia.1.a
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###Molotov dabs on unions
+id = bolshevik_russia.74
+title = "Outlawing The Unions"
+desc = bolshevik_russia.74.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "It's the only way..."
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###Molotov forms camps
+id = bolshevik_russia.75
+title = "Concentration Camps"
+desc = bolshevik_russia.75.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "They are going to be better of this way."
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###Molotov does something idk
+id = bolshevik_russia.76
+title = "The Soviet System"
+desc = bolshevik_russia.76.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "The Revolution Will Prevail!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###Molotov uses nkvd
+id = bolshevik_russia.77
+title = "Mobilize NKVD Operatives"
+desc = bolshevik_russia.77.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Soon..."
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###Molotov does shit to army
+id = bolshevik_russia.78
+title = "NKVD in the Army"
+desc = bolshevik_russia.78.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "It's coming to the end."
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###Molotov kills traitors
+id = bolshevik_russia.79
+title = "Nationwide Purge"
+desc = bolshevik_russia.79.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Finally."
+add_stability = 0.02
+
+
+}
+}
+
+
+###TOMSKY TREE EVENTS
+
+
+country_event = { ###Tomsky Takes Over
+id = bolshevik_russia.80
+title = "A New Direction"
+desc = bolshevik_russia.80.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Syndicalism is the way!"
+add_stability = 0.02
+
+
+}
+}
+country_event = { ###Tomsky calls upon worker niggas
+id = bolshevik_russia.81
+title = "The Russian Worker"
+desc = bolshevik_russia.81.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Almost there..."
+add_stability = 0.02
+
+
+}
+}
+country_event = { ###Tomsky calls upon union niggas
+id = bolshevik_russia.82
+title = "Union Representatives"
+desc = bolshevik_russia.82.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "This WILL get better..."
+add_stability = 0.02
+
+
+}
+}
+country_event = { ###Tomsky announces end of strike
+id = bolshevik_russia.83
+title = "End of the Strike"
+desc = bolshevik_russia.83.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "For Socialism!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###Tomsky calls for Red Guard
+id = bolshevik_russia.84
+title = "Red Guard"
+desc = bolshevik_russia.84.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Forwards!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###Tomsky calls for local militias
+id = bolshevik_russia.85
+title = "Local Militias"
+desc = bolshevik_russia.85.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Forwards!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###Tomsky calls for police
+id = bolshevik_russia.86
+title = "Red Police"
+desc = bolshevik_russia.86.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Forwards!"
+add_stability = 0.02
+
+
+}
+}
+
+country_event = { ###Syndiaclist System
+id = bolshevik_russia.87
+title = "Syndicalist System"
+desc = bolshevik_russia.87.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Forwards!"
+add_stability = 0.05
+add_popularity = { ideology = democratic_socialist popularity = 0.05 }
+
+}
+}
+
+###ZINOVIEC EVENTS
+country_event = { ###zinoviec takes onver
+id = bolshevik_russia.88
+title = "Path to Revolution"
+desc = bolshevik_russia.88.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Forwards!"
+add_stability = 0.05
+
+}
+}
+
+country_event = { ###zinoviecv calms down the workers
+id = bolshevik_russia.89
+title = "Speak Softly..."
+desc = bolshevik_russia.89.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Forwards!"
+add_stability = 0.02
+
+}
+}
+
+country_event = { ###zinoviecv calms down the workers
+id = bolshevik_russia.90
+title = "...but carry a big stick"
+desc = bolshevik_russia.90.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Forwards!"
+add_stability = 0.02
+
+}
+}
+
+country_event = { ###zinoviecv calms down the workers
+id = bolshevik_russia.91
+title = "The Bolshevik Worker"
+desc = bolshevik_russia.91.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Forwards!"
+add_stability = 0.02
+
+}
+}
+
+country_event = { ###zinoviecv calms down the workers
+id = bolshevik_russia.92
+title = "Country-wide Mobilization"
+desc = bolshevik_russia.92.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Forwards!"
+add_stability = 0.02
+
+}
+}
+
+country_event = { ###zinoviecv calms down the workers
+id = bolshevik_russia.93
+title = "The Future - Our Children"
+desc = bolshevik_russia.93.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Forwards!"
+add_stability = 0.02
+
+}
+}
+
+country_event = { ###zinoviecv calms down the workers
+id = bolshevik_russia.94
+title = "Iron Boot"
+desc = bolshevik_russia.94.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "We WILL win!"
+add_stability = 0.02
+
+}
+}

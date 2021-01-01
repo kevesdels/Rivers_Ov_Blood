@@ -1,0 +1,43 @@
+﻿capital = 547
+
+oob = "KEN_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+}
+
+set_convoys = 5
+
+
+set_politics = {
+	ruling_party = authoritharian
+	last_election = "1931.12.19"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 10
+	conservative = 11
+	authoritharian = 45
+	reactionary = 24
+	pelekist = 10
+}
+
+create_country_leader = {
+	
+	
+	name = "Dedan Ngwale"
+	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+

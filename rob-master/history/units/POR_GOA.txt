@@ -1,0 +1,96 @@
+division_template = {
+	name = "Goa Infantry"
+
+	division_names_group = POR_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Armor Battalion"
+
+	division_names_group = POR_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Indian Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = RAJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	#Royal Khivan Army
+	division = {
+		name = "1st Goa Infantry Brigade"
+		location = 1273
+		division_template = "Goa Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Goa Infantry Brigade"
+		location = 1273
+		division_template = "Goa Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Goa Armor Battalion"
+		location = 1273
+		division_template = "Armor Battalion"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Indian Militia"
+		location = 1273
+		division_template = "Indian Militia"
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "2nd Indian Militia"
+		location = 1273
+		division_template = "Indian Militia"
+		start_equipment_factor = 0.3
+	}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "POR"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

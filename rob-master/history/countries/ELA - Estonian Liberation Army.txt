@@ -1,0 +1,47 @@
+﻿capital = 190
+
+
+set_research_slots = 3
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 5
+	authoritharian = 10
+	reactionary = 77
+	pelekist = 8
+}
+
+
+create_country_leader = {
+	name = "Andres Larka"
+	desc = "POLITICS_ANDERS_LARKA_DESC"
+	picture = "ELA_Anders_Larka.tga"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Kārlis Ulmanis"
+	desc = ""
+	picture = "GFX_portrait_lat_fricis_menders"
+	expire = "1965.1.1"
+	ideology = conservative_subtype
+	traits = {
+		#
+	}
+}
+

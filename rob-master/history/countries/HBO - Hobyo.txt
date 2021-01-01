@@ -1,0 +1,48 @@
+capital = 1239
+
+oob = "HBO_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+}
+
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	national_socialist = 0
+	socialist = 10
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 12
+	authoritharian = 0
+	reactionary = 78
+	pelekist = 0
+}
+
+give_guarantee = MJE
+give_guarantee = DRV
+
+add_ideas = {
+limited_conscription
+}
+
+
+create_country_leader = {
+	name = "Ali Yusuf Kenadid"
+	desc = ""
+	picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+	expire = "1965.1.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}

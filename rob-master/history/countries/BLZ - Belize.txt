@@ -1,0 +1,39 @@
+﻿capital = 311
+
+#oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 21
+	socialist = 4
+	democratic_socialist = 1
+	social_democracy = 8
+	social_liberal = 5
+	conservative = 0
+	authoritharian = 0
+	reactionary = 61
+	pelekist = 0
+}
+
+create_country_leader = {
+	
+	name = "Jonas Lote"
+	picture = "gfx//leaders//Africa//Portrait_Africa_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = conservative_subtype
+	traits = {
+		#
+	}
+}

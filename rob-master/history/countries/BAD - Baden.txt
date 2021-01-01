@@ -1,0 +1,54 @@
+capital = 122
+
+#oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	fuel_silos = 1
+}
+
+set_convoys = 20
+
+
+set_politics = {
+	ruling_party = pelekist
+	last_election = "1934.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 0
+	authoritharian = 9
+	reactionary = 17
+	pelekist = 74
+}
+
+create_country_leader = {
+	name = "Wilhelm Murr.tga"
+	desc = "ANTE_PAVELIC_DESC"
+	picture = "Wilhelm_Murr.tga"
+	expire = "1965.1.1"
+	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}
+
+create_corps_commander  = {
+	name = "Karl-Adolf Hollidt"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 1
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+}

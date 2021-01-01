@@ -1,0 +1,54 @@
+division_template = {
+	name = "Hobyan Infantry"
+
+	division_names_group = DRV_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 1
+}
+
+
+units = {
+	#Dervish State
+	division = {
+		name = "Hobyan Royal Division"
+		location = 12840
+		division_template = "Hobyan Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Hobyan Infantry"
+		location = 4909
+		division_template = "Hobyan Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Somali Volunteers"
+		location = 10818
+		division_template = "Hobyan Infantry"
+		start_experience_factor = 0.3
+	}
+
+}
+
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "BAL"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

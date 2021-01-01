@@ -1,0 +1,21 @@
+focus_tree = {
+	id = soviet_focus_base
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+
+	continuous_focus_position = { x = 50 y = 2000 }
+
+   shared_focus = SOV_effectsoffamine
+   shared_focus = SOV_sovieteconomy
+   shared_focus = SOV_bolsheviklandforces
+   shared_focus = SOV_lookoutwards
+   shared_focus = SOV_bolshevikairforces
+  
+    
+}

@@ -1,0 +1,88 @@
+﻿capital = 1089
+
+oob = "DAN_1936"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons1 = 1
+}
+
+set_convoys = 10
+give_military_access = FRA
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 7
+	socialist = 8
+	democratic_socialist = 7
+	social_democracy = 11
+	social_liberal = 8
+	conservative = 10
+	authoritharian = 4
+	reactionary = 31
+	pelekist = 14
+}
+add_ideas = {
+	rhur_economic_wonderland
+	rhur_under_french_protection
+	rhur_mass_degeneracy
+	rhur_underequiped_military
+	extensive_conscription
+}
+
+create_country_leader = {
+	name = "Konrad Adenauer"
+	desc = ""
+	picture = "Portrait_Germany_Konrad_Adenauer"
+	expire = "1960.1.1"
+	ideology = conservative_subtype
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Georg Donatus"
+	desc = ""
+	picture = "Georg_Donatus.tga"
+	expire = "1951.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Hans Adam Dorten"
+	desc = ""
+	picture = "Hans_Adam_Dorten.tga"
+	expire = "1951.1.1"
+	ideology = reactionary_subtype
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Robert Ley"
+	desc = ""
+	picture = "Robert_Ley.tga"
+	expire = "1951.1.1"
+	ideology = pelekist_subtype
+	traits = {
+	}
+}
+
+create_corps_commander  = {
+	name = "Curt Haase"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 1
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 1
+}
+

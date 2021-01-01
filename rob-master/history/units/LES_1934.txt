@@ -1,0 +1,94 @@
+division_template = {
+name = "Czech Volunteers"
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+name = "Russian Partisans"
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+units = {
+division = {
+name = "Ist Czech Volunteer Regiment"
+location = 9292
+division_template = "Czech Volunteers"
+start_experience_factor = 0.8
+start_equipment_factor = 0.8
+}
+
+
+division = {
+name = "IInd Czech Volunteer Regiment"
+location = 12157
+division_template = "Czech Volunteers"
+start_experience_factor = 0.8
+start_equipment_factor = 0.6
+}
+
+
+division = {
+name = "IIIrd Czech Volunteer Regiment"
+location = 1775
+division_template = "Czech Volunteers"
+start_experience_factor = 0.8
+start_equipment_factor = 0.6
+}
+
+
+division = {
+name = "IVth Czech Volunteer Regiment"
+location = 12106
+division_template = "Czech Volunteers"
+start_experience_factor = 0.8
+start_equipment_factor = 0.7
+}
+
+
+division = {
+name = "Ist Russian Regiment"
+location = 12287
+division_template = "Russian Partisans"
+start_experience_factor = 0.2
+start_equipment_factor = 0.6
+}
+
+
+division = {
+name = "IInd Russian Regiment"
+location = 10170
+division_template = "Russian Partisans"
+start_experience_factor = 0.2
+start_equipment_factor = 0.5
+}
+
+division = {
+name = "IIIrd Russian Regiment"
+location = 307
+division_template = "Russian Partisans"
+start_experience_factor = 0.2
+start_equipment_factor = 0.5
+}
+
+division = {
+name = "IVth Russian Regiment"
+location = 307
+division_template = "Russian Partisans"
+start_experience_factor = 0.2
+start_equipment_factor = 0.4
+}
+}

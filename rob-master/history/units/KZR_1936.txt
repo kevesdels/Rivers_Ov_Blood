@@ -1,0 +1,146 @@
+division_template = {
+	name = "Kazakh Cavalry"
+
+	division_names_group = KAZ_INF_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Kazakh Infantry"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = KAZ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Cavalry with Tanks"
+
+	division_names_group = KAZ_INF_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+	}
+	priority = 2
+}
+
+
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = AFG_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	#Kazakh Army
+	division = {
+		name = "Republican Guard"
+		location = 10284
+		division_template = "Kazakh Infantry"
+		start_experience_factor = 0.5
+	}
+
+
+	division = {
+		name = "1st Kazakh Republican Cavalry"
+		location = 12257
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "2nd Kazakh Republican Cavalry"
+		location = 1331
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "3rd Kazakh Republican Cavalry"
+		location = 12139
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "4th Kazakh Republican Cavalry"
+		location = 7354
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "5th Kazakh Republican Cavalry"
+		location = 4337
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "6th Kazakh Republican Cavalry"
+		location = 4311
+		division_template = "Kazakh Cavalry"
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "1st Kazakh Republican Infantry"
+		location = 1272
+		division_template = "Kazakh Infantry"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.5
+
+	}
+	division = {
+		name = "2nd Kazakh Republican Infantry"
+		location = 3618
+		division_template = "Kazakh Infantry"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.5
+
+	}
+	division = {
+		name = "3rd Kazakh Republican Infantry"
+		location = 10284
+		division_template = "Kazakh Infantry"
+		start_equipment_factor = 0.5
+		start_experience_factor = 0.5
+
+	}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "KZR"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

@@ -1,0 +1,47 @@
+HUN_intervention_in_aus_cw = {
+
+
+###demand land from austrians	
+HUN_da_burgerland = {
+  fire_only_once = yes
+  available = {
+  	NOT = { has_idea = occupied_country}
+    ACM = { has_war_with = AUS}
+    THR = { has_war_with = AUS}
+    THR = { has_war_with = ACM}
+    date > 1935.6.1
+	}
+	ai_will_do = {
+		base = 10
+	}
+	complete_effect = {
+	if = { limit = { ACM = {controls_state = 810} } ACM = { country_event = { id = rob_hungary.1 days = 3 } } }
+	if = { limit = { THR = {controls_state = 810} } THR = { country_event = { id = rob_hungary.1 days = 3 } } }
+	if = { limit = { AUS = {controls_state = 810} } AUS = { country_event = { id = rob_hungary.1 days = 3 } } }
+	}
+}
+
+HUN_aus_peace = {
+  fire_only_once = yes
+  available = {
+	OR = {
+	has_war_with = AUS
+	has_war_with = THR
+	has_war_with = ACM
+	}
+	has_offensive_war = yes
+	controls_state = 810
+	}
+	ai_will_do = {
+		base = 10
+	}
+	complete_effect = {
+	AUS = {  white_peace = SLV}
+	ACM = {  white_peace = SLV}
+    THR = {  white_peace = SLV}
+    HUN = { transfer_state = 810 }
+	}
+}
+}
+###end of intervention_in_aus_cw 
+}

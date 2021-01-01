@@ -1,0 +1,843 @@
+####################
+###Lithuanian Events
+####################
+
+
+add_namespace = lithuania
+
+###Starting Event
+country_event = { 
+id = lithuania.0
+title = lithuania.0.t
+desc = lithuania.0.d
+fire_only_once = yes
+
+trigger = {
+ tag = LIT
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+ name = lithuania.0.a
+ add_stability = 0.05
+}
+}
+
+###Belarussians ask for help
+country_event = { 
+id = lithuania.1
+title = "Belarusian Nationalists Request Support"
+desc = lithuania.1.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###accept
+ name = "Communists and Poles are bigger enemies"
+ BLR = { country_event = { id = belarusia.14 days = 5 } }
+   	ai_chance = {
+			factor = 200
+			}
+ }
+option = { ###deny
+ name = "We Can't Arm Our Future Enemies"
+ BLR = { country_event = { id = belarusia.13 days = 5 } }
+   	ai_chance = {
+			factor = 20
+			}
+ }
+}
+
+###pelekist parade
+country_event = { 
+id = lithuania.2
+title = lithuania.2.t
+desc = lithuania.2.d
+fire_only_once = yes
+
+trigger = {
+ tag = LIT
+ date > 1934.3.1
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+ name = lithuania.2.a
+ add_stability = 0.05
+ add_popularity = {ideology = pelekist popularity =0.06}
+ hidden_effect = {
+  country_event = { id = lithuania.3 days = 90 }
+ }
+}
+}
+
+###rise of Pērkons man
+country_event = { 
+id = lithuania.3
+title = lithuania.3.t
+desc = lithuania.3.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+ name = lithuania.3.a
+ add_stability = 0.05
+ add_popularity = {ideology = pelekist popularity =0.08}
+
+}
+}
+
+###Elections
+country_event = { 
+id = lithuania.4
+title = lithuania.4.t
+desc = lithuania.4.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###Conservative Victory
+ name = lithuania.4.a
+ add_stability = 0.1
+ add_popularity = {ideology = conservative popularity =0.25}
+ set_country_flag = LIT_democracyholds
+}
+option = { ###Liberal Block Victory
+ name = lithuania.4.b
+ add_stability = 0.1
+ add_popularity = {ideology = social_democracy popularity =0.3}
+ add_popularity = {ideology = social_liberal popularity =0.15}
+ add_popularity = {ideology = socialist popularity =0.05}
+ set_politics = {
+  ruling_party = social_democracy
+  elections_allowed = no
+ }
+ add_ideas = {
+ LIT_kazys_grinius_hog
+ LIT_kazys_boruta_im
+ LIT_jonas_sliupas_fm
+ LIT_juozas_paknys_em
+ LIT_albinas_cepas_dm
+ }
+ hidden_effect = {
+  country_event = { id = lithuania.5 days = 20 }
+  country_event = { id = lithuania.28 days = 5 }
+ }
+}
+}
+
+###Military talks of coup
+country_event = { 
+id = lithuania.5
+title = "Do We Do It?"
+desc = lithuania.5.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###The talks go nowhere
+ name = "We took an oath…"
+ add_stability = 0.1
+ hidden_effect = {
+  country_event = { id = lithuania.9 days = 25 }
+ }
+ set_country_flag = LIT_democracyholds
+}
+option = { ###Military Coups!
+ name = "We must do it, for our Fatherland!"
+ add_stability = -0.25
+ add_popularity = {ideology = authoritharian popularity =0.2}
+ add_popularity = {ideology = reactionary popularity =0.1}
+ add_popularity = {ideology = pelekist popularity =0.1}
+ set_politics = {
+  ruling_party = authoritharian
+  elections_allowed = no
+ }
+ add_ideas = {
+ LIT_kazys_skirpa_hog
+ LIT_petras_kubiliunas_im
+ LIT_povilas_plechavicius_fm
+ LIT_vytautas_zemaitis_em
+ LIT_kazys_musteikis_dm
+ }
+ remove_ideas = {
+		 pelekists_rising
+		 pearl_of_stability
+		}
+ hidden_effect = {
+  country_event = { id = lithuania.6 days = 10 }
+ }
+}
+}
+
+###Military leaders meet
+country_event = { 
+id = lithuania.6
+title = lithuania.6.t
+desc = lithuania.6.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###Jonas Beržanskis
+ name = lithuania.6.a
+ add_stability = 0.1
+ add_popularity = {ideology = pelekist popularity =0.15}
+  set_politics = {
+  ruling_party = pelekist
+  elections_allowed = no
+ }
+ add_ideas = {
+ LIT_visuomis_hog
+ LIT_antanas_smulkstys_im
+ LIT_jonas_pyragius_fm
+ LIT_leonas_prapuolenis_em
+ LIT_petras_kubiliunas_dm
+ }
+ create_country_leader = {
+	name = "Jonas Beržanskis"
+	desc = ""
+	picture = "Portrait_Lithuania_Augustinas_Voldemaras.tga"
+	expire = "1953.3.1"
+	ideology = pagan_pelekism
+	traits = {
+		#
+	}
+}
+set_party_name = { ideology = pelekist long_name = LIT_pelekism_visoumis_long name = LIT_pelekism_visoumis}
+hidden_effect = {
+ country_event = { id = lithuania.7 days = 3 } 
+}
+}
+option = { ###Augustinas Voldemaras
+ name = lithuania.6.b
+ add_stability = 0.1
+ add_popularity = {ideology = pelekist popularity =0.15}
+  set_politics = {
+  ruling_party = pelekist
+  elections_allowed = no
+ }
+  add_ideas = {
+ LIT_mironas_hog
+ LIT_zenonas_blynas_im
+ LIT_bronys_raila_fm
+ LIT_klemensas_brunius_em
+ LIT_ignas_vylius_dm
+ }
+ create_country_leader = {
+	name = "Augustinas Voldemaras"
+	desc = ""
+	picture = "Portrait_Lithuania_Augustinas_Voldemaras.tga"
+	expire = "1953.3.1"
+	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}
+hidden_effect = {
+ country_event = { id = lithuania.8 days = 3 }
+}
+}
+option = { ###Military Dictaotshiop
+ name = lithuania.6.c
+ add_stability = 0.1
+ add_popularity = {ideology = authoritharian popularity =0.40}
+  set_politics = {
+  ruling_party = authoritharian
+  elections_allowed = no
+ }
+ add_ideas = {
+ LIT_kazys_skirpa_hog
+ LIT_petras_kubiliunas_im
+ LIT_povilas_plechavicius_fm
+ LIT_vytautas_zemaitis_em
+ LIT_kazys_musteikis_dm
+ }
+ create_country_leader = {
+	name = "Kazys Škirpa"
+	desc = ""
+	picture = "Portrait_Lithuania_Kazys_Skirpa_leader.tga"
+	expire = "1953.3.1"
+	ideology = authoritharian
+	traits = {
+		#
+	}
+}
+set_country_flag = LIT_skirpa_rules
+}
+
+option = { ###Smentona Dictaotshiop
+ name = lithuania.6.e
+ add_stability = 0.1
+ add_popularity = {ideology = reactionary popularity =0.40}
+  set_politics = {
+  ruling_party = reactionary
+  elections_allowed = no
+ }
+ add_ideas = {
+ LIT_antanas_smetona_hog
+ LIT_augustinas_voldemaras_im
+ LIT_leonas_bistras_fm
+ LIT_pranas_barkauskas_em
+ LIT_povilas_plechavicius_dm
+ }
+ set_country_flag = LIT_smetona_president
+ create_country_leader = {
+	name = "Antanas Smetona"
+	desc = ""
+	picture = "portrait_LIT_antanas_smetona.tga"
+	expire = "1953.3.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+}
+}
+
+###death of Beržanskis
+country_event = {
+id = lithuania.7
+title = lithuania.7.t
+desc = lithuania.7.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = lithuania.7.a
+retire_country_leader = yes
+add_stability = -0.1
+add_political_power = -100
+ create_country_leader = {
+	name = "National Council"
+	desc = ""
+	picture = "Portrait_Lithuania_National_Council.tga"
+	expire = "1953.3.1"
+	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}
+country_event = { id = lithuania.12 days = 5 }
+}
+}
+
+###death of Voldemaras
+country_event = {
+id = lithuania.8
+title = lithuania.8.t
+desc = lithuania.8.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = "May he rest in peace."
+set_country_flag = LIT_voldemaras_dead
+kill_country_leader = yes
+set_country_flag = LIT_mironas_rules
+ create_country_leader = {
+	name = "Vladas Mironas"
+	desc = "POLITICS_VLADAS_MIRONAS_DESC"
+	picture = "LIT_Mironas.tga"
+	expire = "1953.3.1"
+	ideology = christian_pelekism
+	traits = {
+		#
+	}
+}
+
+}
+}
+
+###socialist gain governmental power
+country_event = {
+id = lithuania.9
+title = lithuania.9.t
+desc = lithuania.9.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = "Give one to me too!"
+add_popularity = {ideology = democratic_socialist popularity =0.05}
+hidden_effect = {
+ country_event = { id = lithuania.10 days = 30 }
+}
+}
+}
+
+###Assinations
+country_event = {
+id = lithuania.10
+title = lithuania.10.t
+desc = lithuania.10.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###Grinius dies
+name = lithuania.10.a
+kill_country_leader = yes
+set_country_flag = LIT_kazys_dead
+ create_country_leader = {
+	name = "Lietuvos Respublikos Seimas"
+	desc = ""
+	picture = ".tga"
+	expire = "1953.3.1"
+	ideology = social_democracy_subtype
+	traits = {
+		#
+	}
+}
+hidden_effect = {
+ country_event = { id = lithuania.11 days = 30 }
+}
+}
+
+option = { ###grinuis hold
+name = lithuania.10.b
+add_stability = 0.1
+}
+}
+
+###Socialists execute coup
+country_event = {
+id = lithuania.11
+title = lithuania.11.t
+desc = lithuania.11.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = lithuania.11.a
+add_popularity = {ideology = democratic_socialist popularity =0.2}
+set_politics = {
+ ruling_party = democratic_socialist
+ elections_allowed = no
+}
+add_ideas = {
+LIT_antanas_snieckus_hog
+LIT_icikas_meskupas_adomas_im
+LIT_justas_paleckis_fm
+LIT_aaron_soltz_em
+LIT_vincas_vitauskas_dm
+}
+}
+}
+
+###children refuse throne
+country_event = {
+id = lithuania.12
+title = lithuania.12.t
+desc = lithuania.12.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = lithuania.12.a
+add_political_power = -50
+country_event = { id= lithuania.13 days = 5 }
+}
+}
+
+###Visoumis takes over
+country_event = {
+id = lithuania.13
+title = lithuania.13.t
+desc = lithuania.13.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = lithuania.13.a
+add_political_power = 150
+add_stability = 0.05
+set_country_flag = LIT_visoumis_rule
+ create_country_leader = {
+	name = "Gintautas I"
+	desc = "POLITICS_VISOUMIS_DESC"
+	picture = "LIT_Visuomis.tga"
+	expire = "1953.3.1"
+	ideology = pagan_pelekism
+	traits = {
+		#
+	}
+}
+}
+}
+###Beržanskis - National hero
+country_event = {
+id = lithuania.14
+title = lithuania.14.t
+desc = lithuania.14.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = lithuania.14.a
+add_political_power = 150
+add_stability = 0.05
+}
+}
+
+###To join Aistija or nah
+country_event = { 
+id = lithuania.15
+title = "Lithuania invites us to the Aistija"
+desc = lithuania.15.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = "Balts need to stay togheter"
+ LIT = { add_to_faction = ROOT }
+}
+option = {
+name = "We must protect our independance"
+}
+}
+
+###To join Aistija or nah
+country_event = { 
+id = lithuania.16
+title = "Lithuania invites us to the Aistija"
+desc = lithuania.16.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = "Balts need to stay togheter"
+ LIT = { add_to_faction = ROOT }
+}
+option = {
+name = "We must protect our independance"
+}
+}
+###usury big gay - visuomis
+country_event = { 
+id = lithuania.17
+title = "Lithuania Bans Usury"
+desc = lithuania.17.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = "What's a "usury"?"
+ add_stability = 0.05
+}
+}
+###jesus big gay - visuomis
+country_event = { 
+id = lithuania.18
+title = "Major Churches Closed in Lithuania!"
+desc = lithuania.18.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = "So we returning to Perkūnas?"
+ }
+}
+###Belarusians? You mean Dnepr Balts?
+country_event = { 
+id = lithuania.19
+title = "Visuomis Declares the Rebirth of the Dnepr Balts!"
+desc = lithuania.19.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = "Does he think he can create ethnicities from nothing?"
+ }
+}
+###Seimas Disbanded
+country_event = { 
+id = lithuania.20
+title = "General Škirpa Disbands the Seimas"
+desc = lithuania.20.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = "Next he'll conscript Stulginskis..."
+ }
+}
+##Škirpa Wants to be Further involved...
+country_event = { 
+id = lithuania.21
+title = "General Škirpa asks permission to intervene into our affairs"
+desc = lithuania.21.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = "If it means victory"
+ 		create_faction = "Škirpa's Block"
+
+ }
+ option = {
+name = "We must protect our independance"
+}
+}
+###The New Constitution
+country_event = { 
+id = lithuania.22
+title = "General Škirpa Creates a New Constitution"
+desc = lithuania.22.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = "Why does it state he can shoot anyone..."
+ }
+}
+###Revisionalism
+country_event = { 
+id = lithuania.23
+title = "New History Textbooks"
+desc = lithuania.23.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = "So huh, never knew the Poles were serfs to Lithuanians."
+ }
+}
+
+###Prussian Deal
+country_event = { 
+id = lithuania.24
+title = "The Prussian Deal"
+desc = lithuania.24.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = "We Should Buy Minesweepers and Destroyers"
+ set_country_flag = LIT_prussian_deal_dd
+ }
+option = {
+ name = "We Should Focus on Submarines Instead"
+ set_country_flag = LIT_prussian_deal_ss
+ }
+}
+
+###Broliu Karas
+country_event = { 
+id = lithuania.25
+title = "Brolių Karas"
+desc = lithuania.25.d
+fire_only_once = yes
+
+trigger = {
+ tag = LIT
+ date > 1935.6.1
+}
+
+mean_time_to_happen = { days = 3 }
+
+option = {
+ name = "But it is so realistic…"
+ }
+}
+
+
+###Independece Accident
+country_event = { 
+id = lithuania.26
+title = "Incident On Independence Day"
+desc = lithuania.26.d
+fire_only_once = yes
+
+trigger = {
+ tag = LIT
+ date > 1935.2.16
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+ name = "But it is so realistic…"
+ }
+}
+
+###Latvians
+country_event = { 
+id = lithuania.27
+title = "The Latvian Diaspora"
+desc = lithuania.27.d
+fire_only_once = yes
+
+trigger = {
+ tag = LIT
+ date > 1934.6.1
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+ name = "Why should I care about a random minority?"
+ }
+}
+
+###Samagotians
+country_event = { 
+id = lithuania.28
+title = "Protests of Native Samogitians"
+desc = lithuania.28.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+ name = "We need to contain them…"
+ }
+}
+
+###Samagotians
+country_event = { 
+id = lithuania.29
+title = "Kretinga Massacre"
+desc = lithuania.29.d
+fire_only_once = yes
+
+trigger = {
+ tag = LIT
+ OR = {
+ has_government = socialist
+ has_government = democratic_socialist
+ }
+}
+
+mean_time_to_happen = { days = 3 }
+
+option = {
+ name = "Attempt damage control"
+ add_stability =-0.15
+ }
+}
+
+
+######RAID EVENTS
+###Raid Succesful
+country_event = { 
+id = lithuania.30
+title = "Successful Ammunition Depot Raid"
+desc = lithuania.30.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+ name = "For Lithuania!"
+ add_war_support = 0.01
+ clr_country_flag = LIT_active_raid
+ add_equipment_to_stockpile = {
+  type = infantry_equipment_0
+	amount = 100
+    }
+ }
+}
+
+###Raid not Succesful
+country_event = { 
+id = lithuania.31
+title = "Lithuanian Forces Pushed Back"
+desc = lithuania.31.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+ name = "We'll Get Them Next Time"
+ add_war_support = -0.01
+ clr_country_flag = LIT_active_raid
+ }
+}
+
+
+###Raid - enemy side
+country_event = { 
+id = lithuania.32
+title = "Lithuanian Raid!"
+desc = lithuania.32.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+ name = "We'll Get Them Next Time"
+ add_war_support = -0.01
+ }
+}
+
+###Raid successful
+country_event = { 
+id = lithuania.33
+title = "Raid on Rural Centre Successful"
+desc = lithuania.33.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+ name = "For Lithuania!"
+ add_war_support = 0.01
+ clr_country_flag = LIT_active_raid
+ add_equipment_to_stockpile = {
+  type = support_equipment_1
+	amount = 100
+    }
+ }
+}
+
+###Raid not Succesful
+country_event = { 
+id = lithuania.34
+title = "Lithuanian Forces Pushed Back"
+desc = lithuania.34.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+ name = "We'll Get Them Next Time"
+ add_war_support = -0.01
+ clr_country_flag = LIT_active_raid
+ }
+}
+
+
+###Raid successful
+country_event = { 
+id = lithuania.35
+title = "Raid on Local Banks Successful"
+desc = lithuania.35.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+ name = "For Lithuania!"
+ add_war_support = 0.01
+ clr_country_flag = LIT_active_raid
+ add_political_power = 35
+ }
+}
+
+###Raid not Succesful
+country_event = { 
+id = lithuania.36
+title = "Lithuanian Forces Pushed Back"
+desc = lithuania.36.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+ name = "We'll Get Them Next Time"
+ add_war_support = -0.01
+ clr_country_flag = LIT_active_raid
+ }
+}

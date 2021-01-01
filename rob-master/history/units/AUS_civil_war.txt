@@ -1,0 +1,254 @@
+﻿division_template = {
+	name = "Infanterie Division"
+	division_names_group = AUS_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   # Pioneer Bn
+	}
+}
+
+division_template = {
+	name = "Alpenjäger Division"
+	division_names_group = AUS_MNT_01
+	
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   # Pioneer Bn
+	}
+}
+
+division_template = {
+	name = "Schnelle Division"  		# Schnelle-Division (cavalry)
+	division_names_group = AUS_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Light tank (tankette) bn
+	}
+}
+
+division_template = {
+	name = "Gendarmerie"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+  		}
+	}
+
+division_template = {
+	name = "Polizei"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+  		}
+	}
+
+division_template = {
+	name = "Students"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+  		}
+	}
+
+
+units = {
+	##### Österreichisches Bundesheer #####
+
+	division= {	
+		name = "Schnelle Division"
+		location = 13351 #between st polten and wiener neustadt
+		division_template = "Schnelle Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "1. Division"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 13351
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+
+	}
+	division= {	# "3. Division"			
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 13369 #near eisenerz and liezen
+		division_template = "Infanterie Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+
+	}
+
+	division= {	# "5. Division"			
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 673 # near innsbruck
+		division_template = "Alpenjäger Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+
+	}
+	division= {	# "6. Division"			
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 671 # Lienz
+		division_template = "Alpenjäger Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+
+	}
+	division= {	# "7. Division"			
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 6691 # near tamsweg
+		division_template = "Alpenjäger Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+
+	}
+
+
+	division= {	
+		name = "1. Brigade"				
+		location = 9679  # Eisenerz
+		division_template = "Alpenjäger Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+
+	}
+
+	#######Polizei######
+
+	division= {	
+		name = "Gendarmerie Karten"				
+		location = 3673 #klagenfurt
+		division_template = "Gendarmerie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "Gendarmerie Burgenland"				
+		location = 3700 #Eisensdat
+		division_template = "Gendarmerie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+	}
+	division= {	
+		name = "Gendarmerie Carniola"				
+		location = 9596 # Celje
+		division_template = "Gendarmerie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+
+	}
+
+	division= {	
+		name = "Gendarmerie Niederosterreich"				
+		location = 9661 # between wien neusradt and eisensdat
+		division_template = "Gendarmerie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+
+	division= {	
+		name = "Student brigade"				
+		location = 9648 #Graz
+		division_template = "Students"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+
+	}
+
+	division= {	
+		name = "Polizei Graz"				
+		location = 9648 #Graz
+		division_template = "Polizei"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+
+	}
+
+}
+
+
+air_wings = {
+	### Luftstreitkräfte -- Vienna (full air force, consolidated), CR.32 aircraft
+	4 = {
+		fighter_equipment_0 =  {
+			owner = "AUS" 
+			creator = "ITA"
+			amount = 42
+		}
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "AUS"
+		}
+		requested_factories = 1
+		progress = 0.54
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "AUS"
+		}
+		requested_factories = 1
+		progress = 0.74
+		efficiency = 100
+	}
+}

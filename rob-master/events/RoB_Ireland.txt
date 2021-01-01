@@ -1,0 +1,45 @@
+################
+###Irish Events
+################
+
+add_namespace = ireland
+
+country_event = { #starting event
+id = ireland.0
+title = ireland.0.t
+desc = ireland.0.d
+fire_only_once = yes
+
+trigger = {
+tag = IRE
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = ireland.0.a
+add_political_power = 10
+}
+}
+
+country_event = { ###British Civil WAR, seize North Ireland?
+id = ireland.1
+title = ireland.1.t
+desc = ireland.1.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###seize it!
+name = ireland.1.a
+ENG = {
+ country_event = {
+ id = united_kingdom.17
+ days = 4
+ }
+}
+}
+option = { ###dont bother
+name = ireland.1.b
+add_political_power = -100
+}
+}

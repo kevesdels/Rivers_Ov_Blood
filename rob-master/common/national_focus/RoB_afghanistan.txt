@@ -1,0 +1,811 @@
+focus_tree = {
+	id = RoB_afghanistan
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ZZZ
+		}
+	}
+	#Focus for Support Khiva
+	focus = {
+		id = AFG_supportkhiva
+		icon = GFX_goal_unknown
+		x = 4
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_claimmary }
+		ai_will_do = {
+			factor = 1
+		}
+available = { 
+KHV = { is_puppet = yes }
+
+ } 
+completion_reward = {
+KHV = { country_event = {
+    id = afghanistan.100
+    days = 2
+}
+	}
+}
+}
+
+	#Focus for Eliminate the Reds
+	focus = {
+		id = AFG_eliminatethereds
+		icon = GFX_goal_unknown
+		x = 2
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_victoryinthecentralasianwar }
+		ai_will_do = {
+			factor = 3
+		}
+available = { 
+is_neighbor_of = TRS
+NOT = { has_war = yes }
+
+ } 
+		completion_reward = {
+		declare_war_on = {
+    target = TRS
+    type = puppet_wargoal_focus
+}
+		}
+	}
+
+	#Focus for Central Asian Hegemony
+	focus = {
+		id = AFG_centralasianhegemony
+		icon = GFX_goal_unknown
+		x = 3
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = AFG_interveneinkirghizia 
+		}
+		prerequisite = { 
+			focus = AFG_eliminatethereds 
+		}
+		ai_will_do = {
+			factor = 3
+		}
+available = { 
+NOT = {
+country_exists = TRS
+}
+KYR = { is_puppet_of = AFG }
+ } 
+		completion_reward = {
+		1179 = { remove_core_of = TMS }
+		release_puppet = TMS
+		release_puppet = KHV
+		UZB = { transfer_state = 1180 }
+		give_guarantee = KHV
+		add_stability = 0.25
+		set_cosmetic_tag = AFG_empire
+		}
+	}
+
+	#Focus for Industrialize Bukhara
+	focus = {
+		id = AFG_industrializebukhara
+		icon = GFX_goal_unknown
+		x = 2
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = AFG_fortifyherat 
+		}
+		ai_will_do = {
+			factor = 2
+		}
+available = { 
+UZB = { is_puppet_of = AFG }
+
+ } 
+		completion_reward = {
+1177 = { add_building_construction = {
+    type = industrial_complex
+    level = 2
+    instant_build = yes
+	}
+}
+		}
+	}
+
+	#Focus for Claim Mary
+	focus = {
+		id = AFG_claimmary
+		icon = GFX_goal_unknown
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = AFG_fortifyherat 
+		}
+		prerequisite = { 
+			focus = AFG_gainwhiterussiansupport 
+		}
+		ai_will_do = {
+			factor = 3
+		}
+available = { 
+	
+owns_state = 1171
+ } 
+		completion_reward = {
+		1179 = { add_core_of = AFG }
+		}
+	}
+
+	#Focus for Southern Expansionism
+	focus = {
+		id = AFG_southernexpansionism
+		icon = GFX_goal_unknown
+		x = 9
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_expandthekingdom }
+		ai_will_do = {
+			factor = 10
+		}
+available = { 
+	
+country_exists = DEL
+ } 
+		completion_reward = {
+add_opinion_modifier = {
+    target = DEL
+    modifier = medium_decrease
+}
+add_opinion_modifier = {
+    target = BAL
+    modifier = medium_decrease
+}
+add_opinion_modifier = {
+    target = RPF
+    modifier = medium_decrease
+}
+add_opinion_modifier = {
+    target = SNH
+    modifier = medium_decrease
+}
+add_opinion_modifier = {
+    target = GUJ
+    modifier = medium_decrease
+}
+		}
+	}
+
+	#Focus for Seize Quetta
+	focus = {
+		id = AFG_seizequetta
+		icon = GFX_goal_unknown
+		x = 8
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_southernexpansionism }
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		owns_state = 1170
+		}
+		completion_reward = {
+		transfer_state = 445
+DEL = { country_event = {
+    id = afghanistan.101
+    days = 2
+}
+	}
+		}
+	}
+
+	#Focus for Fortify Herat
+	focus = {
+		id = AFG_fortifyherat
+		icon = GFX_goal_generic_construct_military
+		x = 2
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_northernexpansionism }
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		owns_state = 1171
+		owns_state = 1172
+		}
+		completion_reward = {
+1171 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 4893
+}
+}
+1171 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 10476
+}
+}
+1172 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 7448
+}
+}
+1172 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 7584
+}
+}
+		}
+	}
+
+	#Focus for Industrialize the New Regions
+	focus = {
+		id = AFG_industrializethenewregions
+		icon = GFX_goal_unknown
+		x = 9
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = AFG_seizequetta 
+		}
+		prerequisite = { 
+			focus = AFG_seizepeshawar 
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		owns_state = 442
+		owns_state = 445
+		}
+		completion_reward = {
+442 = { add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+445 = { add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+	}
+}
+		}
+	}
+
+	#Focus for Mohammedian Unification Doctine
+	focus = {
+		id = AFG_mohammedianunificationdoctine
+		icon = GFX_goal_unknown
+		x = 10
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_alignjammukashmir }
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		owns_state = 442
+		}
+		
+		completion_reward = {
+		add_state_core = 444
+		add_state_core = 440
+		add_state_core = 439
+		add_state_claim = 430
+
+		}
+	}
+
+	#Focus for Strike the Delhi Government
+	focus = {
+		id = AFG_strikethedelhigovernment
+		icon = GFX_goal_unknown
+		x = 9
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = AFG_mohammedianunificationdoctine 
+		}
+		prerequisite = { 
+			focus = AFG_scrambleforsindh 
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		owns_state = 442
+		owns_state = 445
+		NOT = { has_war = yes }
+		}	
+		completion_reward = {
+		declare_war_on = {
+    target = DEL
+    type = puppet_wargoal_focus
+}
+		}
+	}
+
+	#Focus for Scramble for Sindh
+	focus = {
+		id = AFG_scrambleforsindh
+		icon = GFX_goal_unknown
+		x = 8
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_annexbaluchistan }
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		owns_state = 444
+		owns_state = 445
+		}
+		completion_reward = {
+		SNH = { country_event = {
+    id = afghanistan.102
+    days = 2
+}
+}
+		}
+	}
+
+	#Focus for Integrate Quetta
+	focus = {
+		id = AFG_integratequetta
+		icon = GFX_goal_unknown
+		x = 7
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_seizequetta }
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		owns_state = 445
+		}
+		completion_reward = {
+add_state_core = 445
+
+		}
+	}
+
+
+
+	#Focus for Integrate Peshawar
+	focus = {
+		id = AFG_integratepeshawar
+		icon = GFX_goal_unknown
+		x = 11
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_seizepeshawar }
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		owns_state = 442
+		}
+		completion_reward = {
+add_state_core = 442
+		}
+	}
+
+	#Focus for Annex Baluchistan
+	focus = {
+		id = AFG_annexbaluchistan
+		icon = GFX_goal_unknown
+		x = 7
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = AFG_integratequetta 
+		}
+		prerequisite = { 
+			focus = AFG_integratepeshawar 
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		owns_state = 445
+		owns_state = 1169
+		}
+		completion_reward = {
+		BAL = { country_event = {
+    id = afghanistan.104
+    days = 2
+}
+}
+		}
+	}
+
+	#Focus for Fortify Mountain Passes
+	focus = {
+		id = AFG_fortifymountainpasses
+		icon = GFX_goal_generic_fortify_city
+		x = 9
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = AFG_integratequetta 
+		}
+		prerequisite = { 
+			focus = AFG_integratepeshawar 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		owns_state = 445
+		owns_state = 442
+		}
+		completion_reward = {
+442 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = {
+        all_provinces = yes
+    }
+}
+}
+445 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 5105
+}
+}
+445 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 8044
+}
+}
+445 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 7975
+}
+}
+		}
+	}
+
+	#Focus for Seize Peshawar
+	focus = {
+		id = AFG_seizepeshawar
+		icon = GFX_goal_unknown
+		x = 10
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_southernexpansionism }
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		owns_state = 267
+		}
+		completion_reward = {
+		transfer_state = 442
+DEL = { country_event = {
+    id = afghanistan.106
+    days = 2
+}
+	}
+		}
+
+	}
+
+	#Focus for Develop Bukharan Infrastructure
+	focus = {
+		id = AFG_developbukharaninfrastructure
+		icon = GFX_goal_unknown
+		x = 2
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_industrializebukhara }
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		OR = {
+   		AND = {
+		owns_state = 1177
+		owns_state = 1178
+		}
+UZB = { is_puppet_of = AFG }
+}
+		}
+		completion_reward = {
+		1177 = { add_building_construction = {
+    type = infrastructure
+    level = 2
+    instant_build = yes
+}
+}
+		1178 = { add_building_construction = {
+    type = infrastructure
+    level = 2
+    instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Expand the Kingdom
+	focus = {
+		id = AFG_expandthekingdom
+		icon = GFX_goal_unknown
+		x = 6
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+		add_political_power = 150
+		}
+	}
+
+	#Focus for Northern Expansionism
+	focus = {
+		id = AFG_northernexpansionism
+		icon = GFX_goal_unknown
+		x = 3
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_expandthekingdom }
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+add_opinion_modifier = {
+    target = KYR
+    modifier = medium_decrease
+}
+add_opinion_modifier = {
+    target = TMS
+    modifier = medium_decrease
+}
+add_opinion_modifier = {
+    target = TRS
+    modifier = medium_decrease
+}
+add_opinion_modifier = {
+    target = KAZ
+    modifier = medium_decrease
+}
+add_opinion_modifier = {
+    target = SIK
+    modifier = medium_decrease
+}
+		}
+	}
+
+	#Focus for Gain White Russian Support
+	focus = {
+		id = AFG_gainwhiterussiansupport
+		icon = GFX_goal_unknown
+		x = 4
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_northernexpansionism }
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+		load_oob = "afghan_russians"
+		}
+	}
+
+	#Focus for Align Jammu-Kashmir
+	focus = {
+		id = AFG_alignjammukashmir
+		icon = GFX_goal_unknown
+		x = 11
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = AFG_integratequetta 
+		}
+		prerequisite = { 
+			focus = AFG_integratepeshawar 
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		available = {
+		owns_state = 442
+		}
+		completion_reward = {
+		country_event = {
+    id = afghanistan.107
+    days = 2
+}
+		}
+	}
+
+	#Focus for Develop Baluchi Infrastructure
+	focus = {
+		id = AFG_developbaluchiinfrastructure
+		icon = GFX_goal_unknown
+		x = 6
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_annexbaluchistan }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		owns_state = 444
+		}
+		completion_reward = {
+444 = { add_building_construction = {
+    type = infrastructure
+    level = 3
+    instant_build = yes
+}
+}
+444 = { add_extra_state_shared_building_slots = 2 }
+
+		}
+	}
+
+	#Focus for Industrialize Jammu-Kashmir
+	focus = {
+		id = AFG_industrializejammukashmir
+		icon = GFX_goal_unknown
+		x = 12
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_alignjammukashmir }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+		OR = {
+		JAK = { is_puppet_of = AFG }
+		AND = { 
+		owns_state = 441
+		owns_state = 787
+		}
+		}
+		}
+		completion_reward = {
+441 = { add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+	}
+}
+787 = { add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+	}
+}
+		}
+	}
+
+	#Focus for Sword of Islam
+	focus = {
+		id = AFG_swordofislam
+		icon = GFX_goal_unknown
+		x = 9
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_strikethedelhigovernment }
+		ai_will_do = {
+			factor = 25
+		}
+		available = {
+		OR = {
+		DEL = { is_puppet_of = AFG }
+		owns_state = 439
+		}
+		}
+		completion_reward = {
+		add_ideas = sword_of_islam
+		}
+	}
+
+	#Focus for Victory in the Central Asian War
+	focus = {
+		id = AFG_victoryinthecentralasianwar
+		icon = GFX_goal_unknown
+		x = 3
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = AFG_supportkhiva 
+		}
+		prerequisite = { 
+			focus = AFG_developbukharaninfrastructure 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		NOT = { 
+		country_exists = TMS
+		}
+		NOT = { has_war = yes }
+		owns_state = 1179
+		}
+		completion_reward = {
+		add_manpower = 25000
+		add_war_support = 0.25
+		add_stability = 0.25	
+		add_political_power = 100
+		}
+	}
+
+	#Focus for Intervene in Kirghizia
+	focus = {
+		id = AFG_interveneinkirghizia
+		icon = GFX_goal_unknown
+		x = 4
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = AFG_victoryinthecentralasianwar }
+		ai_will_do = {
+			factor = 3
+		}
+available = { 
+is_neighbor_of = KYR
+NOT = { has_war = yes }
+
+ } 
+		completion_reward = {
+		create_wargoal = {
+    type = puppet_wargoal_focus
+    target = KYR
+}
+		}
+	}
+
+#End of focuses 
+ }

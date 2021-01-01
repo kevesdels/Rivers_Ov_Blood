@@ -1,0 +1,45 @@
+capital = 580
+set_research_slots = 1
+
+OOB = "UGC_1934"
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	gw_artillery = 1
+}
+
+add_ideas = {
+	beakon_of_hope
+	limited_conscription
+}
+
+set_politics = {
+	ruling_party = social_liberal
+	last_election = "1933.10.12"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 10
+	social_democracy = 23
+	social_liberal = 45
+	conservative = 22
+	authoritharian = 0
+	reactionary = 0
+	pelekist = 0
+}
+
+
+create_country_leader = {
+	name = "Federal Council"
+	desc = "POLITICS_RICARDO_JIMENEZ_OREAMUNO_DESC"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+		#
+	}
+}

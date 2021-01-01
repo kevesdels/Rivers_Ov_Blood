@@ -1,0 +1,355 @@
+UKR_ukrainian_ambition = {
+
+ UKR_deal_with_manko = {
+  cost = 80
+  fire_only_once = yes
+  days_remove = 40
+    available = {
+   has_country_flag = UKR_stable
+   has_army_manpower = {
+   size > 250000
+   
+  }
+  has_war = no
+  date > 1934.10.31
+  }
+  remove_effect = {
+  declare_war_on = {
+					target = FTT
+					type = annex_everything
+				}
+}
+		ai_will_do = {
+			base = 200
+			}
+}
+
+ UKR_crush_socialists = {
+  cost = 80
+  fire_only_once = yes
+   	ai_will_do = {
+			base = 200
+			}
+  days_remove = 40
+    available = {
+NOT = {
+	OR = {
+	 has_government = national_socialist
+	 has_government = socialist
+	 has_government = democratic_socialist
+	}
+	}
+   has_country_flag = UKR_stable
+   has_army_manpower = {
+   size > 450000
+   
+  }
+  date > 1936.6.1
+  }
+  remove_effect = {
+  declare_war_on = {
+					target = DSU
+					type = annex_everything
+				}
+}
+}
+
+UKR_propose_peaceful_reunion = {
+ cost = 150
+  fire_only_once = yes
+  days_remove = 15
+ 	ai_will_do = {
+			base = 200
+			}
+  available = {
+	 has_government = social_democracy
+	 NOT = {
+	  has_country_flag = UKR_ukraine_united
+	 }
+   UKR = {
+     has_government = democratic_socialist
+   }
+	}
+
+	remove_effect = {
+	DSU ={
+	country_event = { id = ukraine.25 days = 15 }
+	}
+	}
+
+}
+
+UKR_conntact_militarists = {
+ cost = 150
+  fire_only_once = yes
+  days_remove = 15
+ 	ai_will_do = {
+			base = 200
+			}
+  available = {
+  OR = {
+	 has_government = authoritharian
+	 has_government = reactionary
+	 has_government = conservative
+	 }
+	 NOT = {
+	  has_country_flag = UKR_ukraine_united
+	 }
+   DSU = {
+	 has_government = authoritharian
+	}
+   }
+   	remove_effect = {
+	UKR ={
+	country_event = { id = ukraine.29  days = 15 }
+	}
+	}
+	}
+UKR_proclaim_UNR = {
+ cost = 80
+  	ai_will_do = {
+			base = 200
+			}
+  fire_only_once = yes
+  days_remove = 5
+    available = {
+   DSU = { 
+   exists = no
+   }
+   any_owned_state = {
+	is_core_of = DSU
+	}
+   }
+
+   remove_effect = { 
+   set_country_flag = UKR_ukraine_united
+   every_state = {
+    limit = { is_core_of = DSU }
+	add_core_of = UKR
+	remove_core_of = DSU
+}
+}
+
+}
+
+
+
+UKR_retake_ukrainian_lands_1 = {
+cost = 50
+  fire_only_once = yes
+   	ai_will_do = {
+			base = 200
+			}
+  days_remove = 40
+target_trigger = { FROM = {owns_state = 228 } }
+  available = {
+	  has_country_flag = UKR_ukraine_united
+	  ROOT = {
+	   NOT = {
+	    is_in_faction_with = FROM
+	   }
+	  }
+      228 = {
+	   NOT = {
+	    is_owned_by = ROOT
+	   }
+	  }
+}
+
+remove_effect = {
+every_country = {
+	limit = { controls_state = 228 }
+	ROOT = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+
+}
+
+}
+UKR_retake_ukrainian_lands_2 = {
+cost = 50
+  fire_only_once = yes
+   	ai_will_do = {
+			base = 200
+			}
+  days_remove = 40
+target_trigger = { FROM = {owns_state = 218 owns_state = 245 } }
+  available = {
+	  has_country_flag = UKR_ukraine_united
+      218 = {
+	   NOT = {
+	    is_owned_by = ROOT
+	   }
+	  }
+	  ROOT = {
+	   NOT = {
+	    is_in_faction_with = FROM
+	   }
+	  }
+}
+
+remove_effect = {
+218 = { add_core_of = ROOT }
+245 = { add_core_of = ROOT }
+every_country = {
+	limit = { controls_state = 218 }
+	ROOT = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+
+}
+
+}
+UKR_retake_ukrainian_lands_3 = {
+cost = 50
+  fire_only_once = yes
+   	ai_will_do = {
+			base = 200
+			}
+  days_remove = 40
+target_trigger = { FROM = {owns_state = 137 owns_state = 234 } }
+  available = {
+	  has_country_flag = UKR_ukraine_united
+      137 = {
+	   NOT = {
+	    is_owned_by = ROOT
+	   }
+	  }
+	  ROOT = {
+	   NOT = {
+	    is_in_faction_with = FROM
+	   }
+	  }
+}
+
+remove_effect = {
+137 = { add_core_of = ROOT }
+234 = { add_core_of = ROOT }
+
+every_country = {
+	limit = { controls_state = 137 }
+	ROOT = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+
+}
+
+}
+UKR_retake_ukrainian_lands_4 = {
+cost = 50
+  fire_only_once = yes
+   	ai_will_do = {
+			base = 200
+			}
+  days_remove = 40
+target_trigger = { FROM = {owns_state = 89 owns_state = 91 } }
+  available = {
+	  has_country_flag = UKR_ukraine_united
+      91 = {
+	   NOT = {
+	    is_owned_by = ROOT
+	   }
+	  }
+	  89 = {
+	   NOT = {
+	    is_owned_by = ROOT
+	   }
+	  }
+	  ROOT = {
+	   NOT = {
+	    is_in_faction_with = FROM
+	   }
+	  }
+}
+
+remove_effect = {
+91 = { add_core_of = ROOT }
+89 = { add_core_of = ROOT }
+73 = { add_core_of = ROOT }
+every_country = {
+	limit = { controls_state = 89 }
+	limit = { controls_state = 91 }
+	ROOT = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+
+}
+
+}
+
+UKR_retake_ukrainian_lands_5 = {
+cost = 50
+  fire_only_once = yes
+   	ai_will_do = {
+			base = 200
+			}
+  days_remove = 40
+target_trigger = { FROM = {owns_state = 80 owns_state = 78 } }
+  available = {
+	  has_country_flag = UKR_ukraine_united
+      80 = {
+	   NOT = {
+	    is_owned_by = ROOT
+	   }
+	  }
+	  925 = {
+	   NOT = {
+	    is_owned_by = ROOT
+	   }
+	  }
+	   78 = {
+	   NOT = {
+	    is_owned_by = ROOT
+	   }
+	  }
+	   766 = {
+	   NOT = {
+	    is_owned_by = ROOT
+	   }
+	  }
+	  ROOT = {
+	   NOT = {
+	    is_in_faction_with = FROM
+	   }
+	  }
+}
+
+remove_effect = {
+80 = { add_core_of = ROOT }
+925 = { add_core_of = ROOT }
+78 = { add_core_of = ROOT }
+766 = { add_core_of = ROOT }
+
+every_country = {
+	limit = { controls_state = 80 }
+	limit = { controls_state = 925 }
+	limit = { controls_state = 78 }
+	limit = { controls_state = 766 }
+	ROOT = { 
+		create_wargoal = {
+			type = annex_everything		
+			target = PREV
+		}			
+	}
+}
+
+}
+
+}
+}

@@ -1,0 +1,75 @@
+division_template = {
+name = "Armor Brigade"
+regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+	}
+}
+division_template = {
+name = "Russian Forces"
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+units = {
+division = {
+name = "Armor Brigade"
+location = 4797
+division_template = "Armor Brigade"
+start_experience_factor = 0.8
+}
+
+
+division = {
+name = "1st Russian Infantry"
+location = 1810
+division_template = "Russian Forces"
+start_experience_factor = 0.3
+}
+
+
+division = {
+name = "2nd Russian Infantry"
+location = 10543
+division_template = "Russian Forces"
+start_experience_factor = 0.3
+}
+
+
+division = {
+name = "3rd Russian Infantry"
+location = 1762
+division_template = "Russian Forces"
+start_experience_factor = 0.3
+}
+
+division = {
+name = "Romanov Volunteers"
+location = 10543
+division_template = "Russian Forces"
+start_experience_factor = 0.3
+}
+
+
+division = {
+name = "1st Irkutskan Conscripts"
+location = 4797
+division_template = "Russian Forces"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+}
+
+division = {
+name = "2nd Irkutskan Conscripts"
+location = 4797
+division_template = "Russian Forces"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+}

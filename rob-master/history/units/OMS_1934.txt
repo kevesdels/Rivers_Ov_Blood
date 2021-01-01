@@ -1,0 +1,108 @@
+division_template = {
+name = "Red Rifleman Regiment"
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+name = "Socialist Millita"
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+units = {
+division = {
+
+location = 1808
+division_template = "Red Rifleman Regiment"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+}
+
+division = {
+location = 4813
+division_template = "Red Rifleman Regiment"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+}
+
+division = {
+location = 7774
+division_template = "Red Rifleman Regiment"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+}
+
+division = {
+location = 1821
+division_template = "Red Rifleman Regiment"
+start_experience_factor = 0.3
+start_equipment_factor = 0.4
+}
+division = {
+location = 7774
+division_template = "Red Rifleman Regiment"
+start_experience_factor = 0.3
+start_equipment_factor = 0.4
+}
+division = {
+location = 1808
+division_template = "Socialist Millita"
+start_experience_factor = 0.2
+start_equipment_factor = 0.4
+}
+
+
+division = {
+location = 1821
+division_template = "Socialist Millita"
+start_experience_factor = 0.2
+start_equipment_factor = 0.2
+
+}
+
+division = {
+location = 6787
+division_template = "Socialist Millita"
+start_experience_factor = 0.2
+start_equipment_factor = 0.2
+}
+
+division = {
+location = 4824
+division_template = "Socialist Millita"
+start_experience_factor = 0.2
+start_equipment_factor = 0.4
+}
+division = {
+location = 1659
+division_template = "Socialist Millita"
+start_experience_factor = 0.2
+start_equipment_factor = 0.2
+}
+division = {
+location = 1841
+division_template = "Socialist Millita"
+start_experience_factor = 0.2
+start_equipment_factor = 0.2
+}
+division = {
+location = 10659
+division_template = "Socialist Millita"
+start_experience_factor = 0.2
+start_equipment_factor = 0.2
+}
+}

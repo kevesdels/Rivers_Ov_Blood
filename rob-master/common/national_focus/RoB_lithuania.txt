@@ -1,0 +1,5005 @@
+focus_tree = {
+	id = rob_lithuania
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LIT
+		}
+	}
+	#Focus for Return of the Balts!
+	focus = {
+		id = LIT_returnofthebalts
+		icon = GFX_focus_LIT_returnofthebalts
+		x = 39
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_baltificationofthelands 
+		}
+		prerequisite = { 
+			focus = LIT_samogitianautonomy 
+		}
+		prerequisite = { 
+			focus = LIT_politicizethejaunalietuviai
+		}
+		completion_reward = {
+		add_ideas = {
+		new_baltic_culture
+		}
+		}
+	}
+
+	#Focus for Truly Gediminas Reborn!
+	focus = {
+		id = LIT_trulygediminasreborn
+		icon = GFX_focus_LIT_reborn
+		x = 38
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_thenewnationalistgeneration 
+		}
+		prerequisite = { 
+			focus = LIT_returnofthebalts 
+		}
+		completion_reward = { 
+        		add_stability = 0.1
+		add_popularity = {ideology = pelekist popularity =0.10}
+		add_political_power = 120
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 188
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 188 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 763
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 763 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 1010
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 1010 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 933
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 933 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 95
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 95 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 96
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 96 }
+		}
+ }
+		
+	}
+
+	#Focus for Invite Latvia to Join
+	focus = {
+		id = LIT_invitelatviatojoin
+		icon = GFX_focus_LIT_invitelatvia
+		x = 38
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		bypass = { 
+		 OR = {
+		 LAT = { exists = no }
+		 LAT = { is_puppet_of = LIT }
+		}
+		}
+		prerequisite = { focus = LIT_createaistija }
+		completion_reward = {
+		LAT = { country_event = { id = lithuania.16 days = 2 } }
+	}
+	}
+
+	#Focus for Get Prussia to Join
+	focus = {
+		id = LIT_getprussiatojoin
+		icon = GFX_focus_LIT_inviteprussia
+		x = 38
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_invitelatviatojoin }
+		bypass = {
+        PRS = {
+        OR = {
+        has_country_flag = kaiser_controls_everything
+		has_country_flag = jungersjunta
+		has_country_flag = hess_victory
+		has_country_flag = rosenberg_victory
+		}
+		}
+		}
+		completion_reward = {
+		PRS = { country_event = { id = lithuania.15 days = 2 } }
+	}
+	}
+
+	#Focus for Declare Beržanskis a National Hero
+	focus = {
+		id = LIT_declareberanskisanationalhero
+		icon = GFX_focus_LIT_beržianiskshero
+		x = 36
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_kunigaiktisvisuomis }
+		completion_reward = {
+ country_event = { 
+  id = lithuania.14
+  days = 2
+ }
+}	
+	}
+
+	#Focus for Kunigaikštis Visuomis
+	focus = {
+		id = LIT_kunigaiktisvisuomis
+		icon = GFX_focus_LIT_visoumis
+		x = 38
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_country_flag = LIT_visoumis_rule
+		 }
+		completion_reward = {
+		add_political_power = 150
+		remove_ideas = {
+		 semi_loyal_military
+		}
+		}
+	}
+
+	#Focus for God and Mironas
+	focus = {
+		id = LIT_godandmironas
+		icon = GFX_focus_LIT_godandmironas
+		x = 31
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_moveintobelarus 
+		}
+		prerequisite = { 
+			focus = LIT_battalionpriests 
+		}
+		completion_reward = {
+		add_political_power = 150
+	}
+	}
+
+	#Focus for Legacy of the Crusades
+	focus = {
+		id = LIT_legacyofthecrusades
+		icon = GFX_focus_LIT_legacyofcrusades
+		x = 33
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_godiswithus }
+		completion_reward = {
+		add_ideas = {
+		lithuanian_crusaders
+		}
+		}
+	}
+
+	#Focus for Cult of Personality
+	focus = {
+		id = LIT_cultofpersonality
+		icon = GFX_focus_LIT_peronslaitycult
+		x = 29
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_godiswithus }
+		completion_reward = {
+		add_popularity = {ideology = pelekist popularity =0.05}
+		}
+	}
+
+	#Focus for A New Baltic Crusade
+	focus = {
+		id = LIT_anewbalticcrusade
+		icon = GFX_focus_LIT_newcrusade
+		x = 33
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_legacyofthecrusades }
+		completion_reward = {
+        11 = {
+        add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				}
+				 army_experience = 25
+}
+	}
+
+	#Focus for Priests in the Saugumas
+	focus = {
+		id = LIT_priestsinthesaugumas
+		icon = GFX_focus_LIT_priestsindp
+		x = 29
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_cultofpersonality }
+		completion_reward = {
+		add_popularity = {ideology = pelekist popularity =0.03}
+        add_stability = 0.06
+		}
+	}
+
+	#Focus for Move into Belarus
+	focus = {
+		id = LIT_moveintobelarus
+		icon = GFX_focus_LIT_attackbelarus
+		x = 32
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_anewbalticcrusade }
+				completion_reward = {
+		create_wargoal = {
+type = annex_everything
+target = BLR
+	}
+	}
+	}
+
+	#Focus for Battalion-Priests
+	focus = {
+		id = LIT_battalionpriests
+		icon = GFX_focus_LIT_battlepriests
+		x = 30
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_priestsinthesaugumas }
+		completion_reward = {
+		army_experience = 25
+		}
+	}
+
+	#Focus for Retake Belarus
+	focus = {
+		id = LIT_retakebelarus
+		icon = GFX_focus_LIT_attackbelarus
+		x = 41
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_legacyofthedneperbalts }
+		bypass = { 
+		 OR = {
+		 BLR = { exists = no }
+		 BLR = { is_puppet_of = LIT }
+		}
+		}
+		completion_reward = {
+		create_wargoal = {
+         type = annex_everything
+         target = BLR
+	     }
+	   }
+	}
+
+	#Focus for Form a Dnepr Balt Identity
+	focus = {
+		id = LIT_formadneprbaltidentity
+		icon = GFX_focus_LIT_dneprbaltidentity
+		x = 41
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_retakebelarus }
+		completion_reward = {
+		933 = { add_core_of = LIT}
+		95 = { add_core_of = LIT}
+        96 = { add_core_of = LIT}
+    }
+	}
+
+	#Focus for Grand Federation of Lithuania
+	focus = {
+		id = LIT_grandfederationoflithuania
+		icon = GFX_focus_LIT_grandlithfed
+		x = 40
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_formadneprbaltidentity }
+		completion_reward = { set_cosmetic_tag = LDK }
+	}
+
+	#Focus for Aid Latvian Pelekists!
+	focus = {
+		id = LIT_aidlatvianpelekists
+		icon = GFX_focus_LIT_supportlatvians
+		x = 40
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_expandthemilitary }
+	}
+
+	#Focus for Clerical-Pelekism
+	focus = {
+		id = LIT_clericalpelekism
+		icon = GFX_focus_LIT_clericalpelekism
+		x = 33
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_christianlithuaniannationalism }
+		completion_reward = {
+		add_political_power = 50
+		add_popularity = {ideology = pelekist popularity =0.05}
+		}
+	}
+
+	#Focus for The State Stable!
+	focus = {
+		id = LIT_thestatestable
+		icon = GFX_focus_LIT_stablestate
+		x = 38
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_aidlatvianpelekists 
+		}
+		prerequisite = { 
+			focus = LIT_formtheministryofpropaganda 
+		}
+			completion_reward = {
+			add_stability = 0.06
+
+		}
+	}
+
+	#Focus for Award the Riflemen
+	focus = {
+		id = LIT_awardtheriflemen
+		icon = GFX_focus_LIT_rewardriflemen
+		x = 21
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_awardthearmy }
+        completion_reward = {
+		add_ideas = {
+        paramilitarism
+ }
+ }
+ }
+
+	#Focus for Economic Growth
+	focus = {
+		id = LIT_economicgrowth
+		icon = GFX_goal_generic_production
+		x = 24
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_specializetheministryofeconomics }
+		completion_reward = {
+		 879 = {
+ add_extra_state_shared_building_slots = 1
+  add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+}
+}
+ 189 = {
+ add_extra_state_shared_building_slots = 1
+  add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+}
+}
+ 11 = {
+ add_extra_state_shared_building_slots = 1
+  add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+}
+ }
+}
+	}
+
+	#Focus for Start to Hunt the Minorities
+	focus = {
+		id = LIT_starttohunttheminorities
+		icon = GFX_focus_LIT_huntminorities
+		x = 29
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_purgeeveryone }
+		completion_reward = {
+		remove_ideas = { samogitian_identity }
+		}
+		}
+
+	#Focus for Pull out of Belarus
+	focus = {
+		id = LIT_pulloutofbelarus
+		icon = GFX_focus_LIT_pulloutofbelrus
+		x = 31
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_pulloutfromlatvia }
+		completion_reward = {
+		BLR = { remove_ideas = { BLR_lithuanian_influence } }
+	}
+	}
+
+	#Focus for Arm Lithuanians in Smolensk, Minsk and Latvia
+	focus = {
+		id = LIT_armlithuaniansinsmolenskminskandlatvia
+		icon = GFX_focus_LIT_armforeignliths
+		x = 22
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_vytautasthegreatreborn }
+		completion_reward = {
+		custom_effect_tooltip = lit_tt_1
+		}
+	}
+
+	#Focus for Relithunize the Poles
+	focus = {
+		id = LIT_relithunizethepoles
+		icon = GFX_focus_LIT_lithuanizepoles
+		x = 26
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_ruralideals }
+		completion_reward = {
+		add_stability = 0.1
+		}
+	}
+
+	#Focus for Use GDL Nostalgia
+	focus = {
+		id = LIT_usegdlnostalgia
+		icon = GFX_focus_LIT_gdlnostalgia
+		x = 26
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_relithunizethepoles }
+		completion_reward = {
+		 add_political_power = 120
+add_popularity = {ideology = reactionary popularity =0.10}
+
+		}
+	}
+
+	#Focus for Legion of Foreign Lithuanians
+	focus = {
+		id = LIT_legionofforeignlithuanians
+		icon = GFX_focus_LIT_mobilization
+		x = 22
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_armlithuaniansinsmolenskminskandlatvia }
+		completion_reward = {
+        add_manpower = 10000
+		army_experience = 5
+    }
+	}
+
+	#Focus for God is with us!
+	focus = {
+		id = LIT_godiswithus
+		icon = GFX_focus_LIT_godwithus
+		x = 31
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_anationonlyforchristianlithuanians 
+		}
+		prerequisite = { 
+			focus = LIT_pulloutofbelarus 
+		}
+		prerequisite = { 
+			focus = LIT_clericalpelekism 
+		}
+        completion_reward = {
+		add_stability = 0.15
+		}
+	}
+
+	#Focus for To the Death!
+	focus = {
+		id = LIT_tothedeath
+		icon = GFX_focus_LIT_todeath
+		x = 22
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_legionofforeignlithuanians }
+		completion_reward = {
+    add_ideas = {
+	fanatical_army
+	}
+		}
+	}
+
+	#Focus for Specialize the Ministry of Economics
+	focus = {
+		id = LIT_specializetheministryofeconomics
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 24
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_corporativisteconomics }
+		completion_reward = {
+		 swap_ideas = {
+          remove_idea = corporativist_economics
+          add_idea = corporativist_economics_2
+          }
+		}
+	 }
+
+	#Focus for Lithuania Great Again!
+	focus = {
+		id = LIT_lithuaniagreatagain
+		icon = GFX_focus_LIT_greatagain
+		x = 24
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_usegdlnostalgia 
+		}
+		prerequisite = { 
+			focus = LIT_tothedeath 
+		}
+		prerequisite = { 
+			focus = LIT_economicgrowth 
+		}
+        completion_reward = {
+		add_popularity = {ideology = reactionary popularity =0.10}
+        188 = { add_core_of = LIT}
+		763 = { add_core_of = LIT}
+        1010 = { add_core_of = LIT}		
+		933 = { add_core_of = LIT}
+		95 = { add_core_of = LIT}
+        96 = { add_core_of = LIT}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 188
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 188 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 763
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 763 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 1010
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 1010 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 933
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 933 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 95
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 95 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 96
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 96 }
+		}
+		}
+		}
+	
+
+	#Focus for Tautos Vadas - Mironas
+	focus = {
+		id = LIT_tautosvadasmironas
+		icon = GFX_focus_LIT_tautosvadasmironas
+		x = 31
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+	 available = {
+		 has_country_flag = LIT_mironas_rules
+		}
+		completion_reward = {
+		add_political_power = 150
+		remove_ideas = {
+		 semi_loyal_military
+		}
+		}
+	}
+
+	#Focus for Purge Everyone!
+	focus = {
+		id = LIT_purgeeveryone
+		icon = GFX_focus_PRS_junger_deal_with_pelekists
+		x = 29
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_tautosvadasmironas }
+		completion_reward = {
+		 add_popularity = {ideology = social_democracy popularity =-0.05}
+		 add_popularity = {ideology = democratic_socialist popularity =-0.05}
+		 add_popularity = {ideology = pelekist popularity =-0.05}
+		 add_popularity = {ideology = conservative popularity =-0.07}
+		}
+	}
+
+	#Focus for Christianize History
+	focus = {
+		id = LIT_christianizehistory
+		icon = GFX_focus_LIT_christinizehistory
+		x = 31
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_tautosvadasmironas }
+		completion_reward = {
+		###becoming hell###
+		add_popularity = {ideology = pelekist popularity =0.15}
+		add_political_power = 120
+	}
+	}
+
+	#Focus for Strengthen the Church
+	focus = {
+		id = LIT_strengthenthechurch
+		icon = GFX_focus_LIT_strghtenchurch
+		x = 33
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_tautosvadasmironas }
+		completion_reward = {
+		add_popularity = {ideology = pelekist popularity =0.18}
+        add_stability = 0.06
+	}
+	}
+
+	#Focus for Christian-Lithuanian Nationalism
+	focus = {
+		id = LIT_christianlithuaniannationalism
+		icon = GFX_focus_LIT_christlithnationalism
+		x = 33
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_strengthenthechurch }
+		completion_reward = {
+		add_popularity = {ideology = pelekist popularity =0.05}
+		add_war_support = 0.05
+		add_manpower = 1000
+		}
+	}
+
+	#Focus for Pull out from Latvia
+	focus = {
+		id = LIT_pulloutfromlatvia
+		icon = GFX_focus_LIT_pulloutoflatvia
+		x = 31
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_christianizehistory }
+	}
+
+	#Focus for A Nation Only for Christian Lithuanians!
+	focus = {
+		id = LIT_anationonlyforchristianlithuanians
+		icon = GFX_focus_LIT_nationforchristliths
+		x = 29
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_starttohunttheminorities }
+		completion_reward = {
+        add_stability = 0.1
+		}
+	}
+
+	#Focus for President Antanas Smetona
+	focus = {
+		id = LIT_presidentantanassmetona
+		icon = GFX_focus_LIT_smentona_rules
+		x = 24
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_country_flag = LIT_smetona_president
+		}
+		completion_reward = {
+		add_political_power = 150
+		}
+	}
+
+	#Focus for Purge the Left
+	focus = {
+		id = LIT_purgetheleft
+		icon = GFX_focus_PRS_deal_with_hess_faction
+		x = 24
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_presidentantanassmetona }
+        completion_reward = {
+		add_popularity = {ideology = democratic_socialist popularity =-0.08}
+	}
+	}
+
+	#Focus for "Edit" the Education System
+	focus = {
+		id = LIT_edittheeducationsystem
+		icon = GFX_focus_LIT_reworkeducation
+		x = 27
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_presidentantanassmetona }
+		completion_reward = {
+		add_popularity = {ideology = reactionary popularity =0.1}
+    }
+	}
+
+	#Focus for Ease Gun Laws
+	focus = {
+		id = LIT_easegunlaws
+		icon = GFX_focus_LIT_easegunlaws
+		x = 21
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_awardtheriflemen }
+		completion_reward = {
+		add_ideas = { every_man_a_gun }
+		}
+	}
+
+	#Focus for Lithuanian Nationalism
+	focus = {
+		id = LIT_lithuaniannationalism
+		icon = GFX_focus_LIT_lithuaniannationalism
+		x = 27
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_edittheeducationsystem }
+		completion_reward = {
+		add_popularity = {ideology = reactionary popularity =0.05}
+        add_popularity = {ideology = pelekist popularity =0.05}
+	    add_popularity = {ideology = authoritharian popularity =0.05}
+    }
+	}
+
+	#Focus for Historical Revisionalism
+	focus = {
+		id = LIT_historicalrevisionalism
+		icon = GFX_focus_LIT_rewritehistory
+		x = 27
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lithuaniannationalism }
+		completion_reward = {
+		 country_event = { 
+  id = lithuania.23
+  days = 2
+ }
+		}
+		}
+
+	#Focus for Guranteed Loyalty
+	focus = {
+		id = LIT_guranteedloyalty
+		icon = GFX_focus_LIT_absoluteloyaslity
+		x = 24
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_destroyvoldemaras }
+		completion_reward = {
+				add_ideas = {
+		loyal_military
+		}
+	}
+	}
+
+	#Focus for Vytautas the Great Reborn!
+	focus = {
+		id = LIT_vytautasthegreatreborn
+		icon = GFX_focus_LIT_vytautasreborn
+		x = 24
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_guranteedloyalty 
+		}
+		prerequisite = { 
+			focus = LIT_historicalrevisionalism 
+		}
+		prerequisite = { 
+			focus = LIT_easegunlaws 
+		}
+		completion_reward = {
+		add_stability = 0.06
+		add_popularity = {ideology = reactionary popularity =0.10}
+    }
+	}
+
+	#Focus for Corporativist Economics
+	focus = {
+		id = LIT_corporativisteconomics
+		icon = GFX_focus_LIT_corporateeconomics
+		x = 24
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_vytautasthegreatreborn }
+		completion_reward = {
+	     add_ideas = {
+		  corporativist_economics
+        }
+		}
+	}
+
+	#Focus for Rural ideals
+	focus = {
+		id = LIT_ruralideals
+		icon = GFX_focus_LIT_ruralideals
+		x = 26
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_vytautasthegreatreborn }
+		completion_reward = {
+	    add_ideas = {
+		agriculturalism
+        }
+		}
+	}
+
+	#Focus for Award the Army
+	focus = {
+		id = LIT_awardthearmy
+		icon = GFX_focus_LIT_rewardarmy
+		x = 21
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_presidentantanassmetona }
+		completion_reward = {
+		remove_ideas = {
+		semi_loyal_military
+		}
+		}
+	}
+
+	#Focus for Destroy Voldemaras
+	focus = {
+		id = LIT_destroyvoldemaras
+		icon = GFX_focus_LIT_killvoldemaras
+		x = 24
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_purgetheleft }
+		completion_reward = {
+				add_popularity = {ideology = pelekist popularity =-0.1}
+    }
+	}
+
+	#Focus for Duty for All!
+	focus = {
+		id = LIT_dutyforall
+		icon = GFX_focus_LIT_dutyforall
+		x = 35
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_encouragesocialismofduty }
+		completion_reward = {
+		11 = {
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+	type = arms_factory
+	level = 1
+	instant_build = yes
+}
+}
+add_political_power = 120
+		}
+	}
+
+	#Focus for Baltification of the Lands
+	focus = {
+		id = LIT_baltificationofthelands
+		icon = GFX_focus_LIT_balticificationoflands
+		x = 38
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_getprussiatojoin }
+		completion_reward = {
+		188 = { add_core_of = LIT}
+		763 = { add_core_of = LIT}
+        1010 = { add_core_of = LIT}		
+	}
+	}
+
+	#Focus for Economic Rise
+	focus = {
+		id = LIT_economicrise
+		icon = GFX_goal_generic_consumer_goods
+		x = 35
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_dutyforall }
+				completion_reward = {
+		11 = {
+ add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+	}
+	}
+	}
+
+	#Focus for Encourage Socialism of Duty
+	focus = {
+		id = LIT_encouragesocialismofduty
+		icon = GFX_focus_LIT_socialismofduty
+		x = 35
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thestatestable }
+		completion_reward = {
+		        add_ideas = {
+        socialism_of_duty
+ }
+	}
+	}
+
+	#Focus for Politicize the Jaunalietuviai
+	focus = {
+		id = LIT_politicizethejaunalietuviai
+		icon = GFX_focus_LIT_lithuanianyouth
+		x = 36
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_paganbias }
+				completion_reward = {
+		add_stability = 0.06
+		add_popularity = {ideology = pelekist popularity =0.10}
+    }
+	}
+
+	#Focus for The New Nationalist Generation!
+	focus = {
+		id = LIT_thenewnationalistgeneration
+		icon = GFX_focus_LIT_newgeneration
+		x = 37
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_politicizethejaunalietuviai 
+		}
+		prerequisite = { 
+			focus = LIT_baltificationofthelands 
+		}
+        		completion_reward = {
+     add_political_power = 120
+	 add_popularity = {ideology = pelekist popularity =0.10}
+    }
+	}
+
+	#Focus for Legacy of the Dneper Balts
+	focus = {
+		id = LIT_legacyofthedneperbalts
+		icon = GFX_focus_LIT_legacyofdneprbalts
+		x = 41
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thestatestable }
+		completion_reward = {
+		 country_event = { 
+  id = lithuania.19
+  days = 2
+ }
+	}
+	}
+
+	#Focus for Curbing Unemployment
+	focus = {
+		id = LIT_curbingunemployment
+		icon = GFX_focus_LIT_crushingunemployment
+		x = 63
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_towardswareconomy 
+		}
+		prerequisite = { 
+			focus = LIT_ourowncementandceramics 
+		}
+        completion_reward = {
+		add_ideas = {
+		work_for_all
+		}
+		}
+	}
+
+	#Focus for Chamber of Agriculture
+	focus = {
+		id = LIT_chamberofagriculture
+		icon = GFX_focus_LIT_agriculturechamber
+		x = 58
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_nationalchamberofresources }
+		completion_reward = {
+		add_ideas = {
+		agrarian_state
+		}
+		}
+	}
+
+	#Focus for National Retail Union
+	focus = {
+		id = LIT_nationalretailunion
+		icon = GFX_focus_LIT_nationalretailunion
+		x = 64
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_nationalizebanks }
+		completion_reward = {
+		add_ideas = { 
+		national_retail_union
+		}
+		}
+	}
+
+	#Focus for National Syndicates
+	focus = {
+		id = LIT_nationalsyndicates
+		icon = GFX_goal_support_fascism
+		x = 61
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_nationalchamberofindustry }
+		completion_reward = {
+		add_stability = 0.06
+		}
+	}
+
+	#Focus for National Chamber of Industry
+	focus = {
+		id = LIT_nationalchamberofindustry
+		icon = GFX_focus_LIT_chamberofindustry
+		x = 61
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_formtheeconomicchambers }		
+ completion_reward = {
+  189 = {
+  add_extra_state_shared_building_slots = 2
+  add_building_construction = {
+  
+	type = industrial_complex
+	level = 2
+	instant_build = yes
+}
+ }
+ }
+	}
+
+	#Focus for Nationalize Key Industries
+	focus = {
+		id = LIT_nationalizekeyindustries
+		icon = GFX_focus_LIT_nationalizekeyindustries
+		x = 58
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thecomingcorporatestate }
+ completion_reward = {
+  11 = {
+  add_extra_state_shared_building_slots = 2
+  add_building_construction = {
+  
+	type = industrial_complex
+	level = 2
+	instant_build = yes
+}
+
+ }
+ }
+	}
+
+	#Focus for National Chamber of Resources
+	focus = {
+		id = LIT_nationalchamberofresources
+		icon = GFX_focus_LIT_chamberofresources
+		x = 58
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_formtheeconomicchambers }
+		completion_reward = {
+		add_ideas = { 
+		resource_chambers
+		}
+		}
+	}
+
+	#Focus for Work for All!
+	focus = {
+		id = LIT_workforall
+		icon = GFX_SOV_use_communist_youth
+		x = 74
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_movepeopleintocities }
+		completion_reward = {
+		add_ideas = { 
+		work_for_all
+		}
+		}
+	}
+
+	#Focus for Our Own Cement and Ceramics!
+	focus = {
+		id = LIT_ourowncementandceramics
+		icon = GFX_goal_generic_construction
+		x = 58
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_chamberofagriculture }
+		completion_reward = {
+		add_ideas = {
+		lithuanian_cement
+		}
+		}
+	}
+
+	#Focus for The Rich State
+	focus = {
+		id = LIT_therichstate
+		icon = GFX_focus_LIT_richstate
+		x = 53
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		prerequisite = { 
+			focus = LIT_antanasnoribtiore 
+		}
+		prerequisite = { 
+			focus = LIT_drob 
+		}
+		prerequisite = { 
+			focus = LIT_lietkis 
+		}
+		completion_reward = {
+		add_research_slot = 1
+		}
+	}
+
+	#Focus for The Coming Corporate State
+	focus = {
+		id = LIT_thecomingcorporatestate
+		icon = GFX_focus_LIT_corp_state
+		x = 61
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 OR = {
+		  has_country_flag = LIT_smetona_president
+		  has_country_flag = LIT_skirpa_rules
+		  has_country_flag = LIT_mironas_rules
+		 }
+		}
+		prerequisite = { focus = LIT_thelithuanianeconomy }
+		completion_reward = {
+		add_political_power = 120
+		}
+	}
+
+	#Focus for The Bourgeoisie Class
+	focus = {
+		id = LIT_thebourgeoisieclass
+		icon = GFX_focus_LIT_bourgie_class
+		x = 56
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_decreasesafetyregulations }
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		completion_reward = {
+		add_ideas = { 
+		ultra_wealthy_upper_class
+		}
+		}
+	}
+
+	#Focus for Materialistic Mentality
+	focus = {
+		id = LIT_materialisticmentality
+		icon = GFX_goal_generic_consumer_goods
+		x = 56
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		prerequisite = { focus = LIT_thebourgeoisieclass }
+		completion_reward = {
+		add_ideas = { 
+		materialistic_mentality
+		}
+		}
+	}
+
+	#Focus for Martial Society
+	focus = {
+		id = LIT_martialsociety
+		icon = GFX_focus_LIT_martial
+		x = 71
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_hiearchicalsociety 
+		}
+		prerequisite = { 
+			focus = LIT_masspublicspending 
+		}
+		completion_reward = {
+		add_ideas = { martial_society }
+		189 = {
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+	type = arms_factory
+	level = 1
+	instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Encourage Spiritualism over Materialism
+	focus = {
+		id = LIT_encouragespiritualismovermaterialism
+		icon = GFX_focus_LIT_spirituality
+		x = 67
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_stiprybidiaugsmo 
+		}
+		prerequisite = { 
+			focus = LIT_hiearchicalsociety 
+		}
+		completion_reward = c{
+		add_ideas = { 
+		needless_society
+		}
+		}
+	}
+
+	#Focus for Collectivist State
+	focus = {
+		id = LIT_collectiviststate
+		icon = GFX_SOV_heavy_industry
+		x = 77
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thesocialiststate }
+		completion_reward = {
+		add_ideas = { collectivist_state }
+		}
+	}
+
+	#Focus for The Lithuanian Economy
+	focus = {
+		id = LIT_thelithuanianeconomy
+		icon = GFX_goal_generic_production2
+		x = 64
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		completion_reward = {
+			add_political_power = 120
+			}
+			}
+
+	#Focus for The Capitalist State
+	focus = {
+		id = LIT_thecapitaliststate
+		icon = GFX_focus_LIT_cap_state
+		x = 53
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		 has_country_flag = LIT_democracyholds
+		}
+		prerequisite = { focus = LIT_thelithuanianeconomy }
+		completion_reward = {
+		add_political_power = 120
+		}
+	}
+
+	#Focus for Encourage the Formation of Lithuanian Companies
+	focus = {
+		id = LIT_encouragetheformationoflithuaniancompanies
+		icon = GFX_focus_PRS_encourage_private_industry
+		x = 50
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		prerequisite = { focus = LIT_thecapitaliststate } 
+		completion_reward = {
+		 11 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = industrial_complex
+	    level = 2
+	    instant_build = yes
+          }
+          }
+		}
+	}
+
+	#Focus for Kolhoze System
+	focus = {
+		id = LIT_kolhozesystem
+		icon = GFX_focus_SOV_redistrubete_food
+		x = 77
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thesocialistgem }
+		completion_reward = {
+		add_ideas = {
+		kolhoze_system
+		}
+		}
+	}
+
+	#Focus for A Home for All!
+	focus = {
+		id = LIT_ahomeforall
+		icon = GFX_focus_SOV_bukharins_bukharinovyka
+		x = 75
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_nationalizetheland 
+		}
+		prerequisite = { 
+			focus = LIT_workforall 
+		}
+				completion_reward = {
+		add_ideas = { work_for_all }
+		}
+	}
+
+	#Focus for Peasant's Society
+	focus = {
+		id = LIT_peasantssociety
+		icon = GFX_focus_SOV_grain_quatas
+		x = 79
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_nationalizetheland 
+		}
+		prerequisite = { 
+			focus = LIT_freeeducation 
+		}
+		completion_reward = {
+		add_ideas = { agriculturalism }
+		}
+	}
+
+	#Focus for Army-like People!
+	focus = {
+		id = LIT_armylikepeople
+		icon = GFX_focus_LIT_dutyforall
+		x = 71
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_aryansocialism }
+		completion_reward = {
+		add_ideas = {army_like_people}
+		}
+	}
+
+	#Focus for Hiearchical Society
+	focus = {
+		id = LIT_hiearchicalsociety
+		icon = GFX_focus_LIT_hierarchy
+		x = 69
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_antiindividualistic }
+		completion_reward = {
+		add_ideas = { hiearchical_society }
+		}
+	}
+
+	#Focus for Mass Public Spending
+	focus = {
+		id = LIT_masspublicspending
+		icon = GFX_focus_PRS_rosenberg_nationalization
+		x = 72
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_antiequality }
+		completion_reward = {
+		11 = { 
+add_extra_state_shared_building_slots = 3
+ add_building_construction = {
+ 
+	type = industrial_complex
+	level = 3
+	instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Stiprybė iš Džiaugsmo
+	focus = {
+		id = LIT_stiprybidiaugsmo
+		icon = GFX_focus_PRS_prussian_socialism
+		x = 66
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_anticollectivism }		
+ completion_reward = {
+  11 = {
+  add_extra_state_shared_building_slots = 2
+  add_building_construction = {
+  
+	type = industrial_complex
+	level = 2
+	instant_build = yes
+ }
+ }
+		}
+	}
+
+	#Focus for The Red Military Complex
+	focus = {
+		id = LIT_theredmilitarycomplex
+		icon = GFX_focus_SOV_on_our_won
+		x = 75
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thesocialistgem }
+		completion_reward = {
+		
+		 11 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = arms_factory
+	    level = 2
+	    instant_build = yes
+          }
+          }
+		}
+	}
+		
+
+	#Focus for Planned Economy
+	focus = {
+		id = LIT_plannedeconomy
+		icon = GFX_SOV_moscowsmolnesk_highway
+		x = 79
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thesocialistgem }
+		completion_reward = {
+				 763 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = industrial_complex
+	    level = 2
+	    instant_build = yes
+          }
+          }
+	}
+	}
+
+	#Focus for Pure Society!
+	focus = {
+		id = LIT_puresociety
+		icon = GFX_focus_LIT_pure_state
+		x = 67
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_aryansocialism }
+		completion_reward = {
+		add_ideas = {
+		 autarky
+		} 
+		}
+	}
+
+	#Focus for United as a Shieldwall!
+	focus = {
+		id = LIT_unitedasashieldwall
+		icon = GFX_focus_LIT_unitedasshield
+		x = 69
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_banusury 
+		}
+		prerequisite = { 
+			focus = LIT_armylikepeople 
+		}
+		prerequisite = { 
+			focus = LIT_puresociety 
+		}
+				completion_reward = {
+		add_research_slot = 1
+		}
+	}
+
+	#Focus for Towards War Economy
+	focus = {
+		id = LIT_towardswareconomy
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 61
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_nationalsyndicates }
+		completion_reward = {
+				 784 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = arms_factory
+	    level = 2
+	    instant_build = yes
+          }
+          }
+		   add_ideas = {
+		  war_economy
+		 }
+		}
+	}
+
+	#Focus for Nationalize Banks
+	focus = {
+		id = LIT_nationalizebanks
+		icon = GFX_focus_LIT_nationalizebanks
+		x = 64
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_nationalchamberofservices }
+		completion_reward = {
+		add_ideas = { 
+		no_banks
+		}
+		}
+	}
+
+	#Focus for Lithuanian Chamber of Infrastructure
+	focus = {
+		id = LIT_lithuanianchamberofinfrastructure
+		icon = GFX_goal_generic_construction2
+		x = 59
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_nationalretailunion 
+		}
+		prerequisite = { 
+			focus = LIT_ourowncementandceramics 
+		}
+		completion_reward = {
+			    11 = {
+        if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+        }
+    }
+}
+	    189 = {
+        if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 1
+            instant_build = yes
+        }
+    }
+}
+		}
+	}
+
+	#Focus for National Chamber of Services
+	focus = {
+		id = LIT_nationalchamberofservices
+		icon = GFX_focus_LIT_chamberofservices
+		x = 64
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_formtheeconomicchambers }
+		completion_reward = {
+		add_ideas = { 
+		chamber_of_service
+		}
+		}
+	}
+
+	#Focus for The Beauty of Struggle
+	focus = {
+		id = LIT_thebeautyofstruggle
+		icon = GFX_focus_LIT_beautyofstruggle
+		x = 66
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lietuvikassocializmas }
+		completion_reward = {
+		add_ideas = { 
+		struggle
+		}
+		}
+	}
+
+	#Focus for Lietūkis
+	focus = {
+		id = LIT_lietkis
+		icon = GFX_focus_LIT_lietukis
+		x = 53
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		prerequisite = { focus = LIT_capitalisticinspirations }
+		completion_reward = {
+		add_ideas = {lietukis}
+		}
+	}
+
+	#Focus for Vadoprincipas
+	focus = {
+		id = LIT_vadoprincipas
+		icon = GFX_focus_LIT_vadoprincipas
+		x = 69
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lietuvikassocializmas }
+		completion_reward = {
+		add_ideas = {
+		vadoprincipas
+		}
+		}
+	}
+
+	#Focus for Anti-Collectivism
+	focus = {
+		id = LIT_anticollectivism
+		icon = GFX_focus_PRS_class_collab
+		x = 66
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thebeautyofstruggle }
+		completion_reward = {
+		add_ideas = { anti_collectivism }
+	}
+	}
+
+	#Focus for Anti-Individualistic
+	focus = {
+		id = LIT_antiindividualistic
+		icon = GFX_focus_LIT_antiindividualism
+		x = 69
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_vadoprincipas }
+		completion_reward = {
+		add_ideas = {
+		anti_individualism
+		}
+		}
+	}
+
+	#Focus for Anti-Equality
+	focus = {
+		id = LIT_antiequality
+		icon = GFX_focus_LIT_antiequality
+		x = 72
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_spiritofduty }
+		completion_reward = {
+		add_ideas = { 
+		anti_equality 
+		}
+		}
+	}
+
+	#Focus for Move People into Cities!
+	focus = {
+		id = LIT_movepeopleintocities
+		icon = GFX_SOV_replace_peasants
+		x = 74
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_massindustrilization }
+		completion_reward = {
+		879 = {
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Aryan Socialism!
+	focus = {
+		id = LIT_aryansocialism
+		icon = GFX_focus_LIT_createaistija
+		x = 69
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_encouragespiritualismovermaterialism 
+		}
+		prerequisite = { 
+			focus = LIT_martialsociety 
+		}
+		completion_reward = {
+		add_political_power = 200
+		}
+	}
+
+	#Focus for Capitalistic Inspirations
+	focus = {
+		id = LIT_capitalisticinspirations
+		icon = GFX_focus_PRS_open_borders
+		x = 53
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		prerequisite = { 
+			focus = LIT_cultureofwork 
+		}
+		prerequisite = { 
+			focus = LIT_entrepreneursledeconomy 
+		}
+		completion_reward = {
+		add_political_power = 120
+		}
+	}
+
+	#Focus for Antanas Nori Būti Ore
+	focus = {
+		id = LIT_antanasnoribtiore
+		icon = GFX_focus_LIT_anbo
+		x = 51
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_capitalisticinspirations }
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		completion_reward = {
+				 784 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = arms_factory
+	    level = 2
+	    instant_build = yes
+          }
+          }
+		}
+	}
+
+	#Focus for Drobė
+	focus = {
+		id = LIT_drob
+		icon = GFX_focus_LIT_drobe
+		x = 55
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_capitalisticinspirations }
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		completion_reward = {
+				 763 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = industrial_complex
+	    level = 2
+	    instant_build = yes
+          }
+          }
+		}
+	}
+
+	#Focus for To Autarky and Beyond!
+	focus = {
+		id = LIT_toautarkyandbeyond
+		icon = GFX_focus_LIT_autarkyandbeyond
+		x = 61
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_lithuanianchamberofinfrastructure 
+		}
+		prerequisite = { 
+			focus = LIT_curbingunemployment 
+		}
+		completion_reward = {
+		add_research_slot = 1
+		}
+	}
+
+	#Focus for Form the Economic Chambers
+	focus = {
+		id = LIT_formtheeconomicchambers
+		icon = GFX_focus_LIT_corporateeconomics
+		x = 61
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_bantradeunions 
+		}
+		prerequisite = { 
+			focus = LIT_destroyforeigninfluence 
+		}
+		prerequisite = { 
+			focus = LIT_nationalizekeyindustries 
+		}
+		completion_reward = {
+		add_ideas = { 
+		economic_chambers
+		}
+		}
+	}
+
+	#Focus for Destroy Foreign Influence
+	focus = {
+		id = LIT_destroyforeigninfluence
+		icon = GFX_focus_LIT_destroyforeigninfluence
+		x = 64
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thecomingcorporatestate }
+		completion_reward = {
+        add_political_power = 100
+		add_ideas = { 
+		no_foreign_influences
+		}
+		}
+	}
+
+	#Focus for Ban Trade Unions
+	focus = {
+		id = LIT_bantradeunions
+		icon = GFX_focus_LIT_bantradeunions
+		x = 61
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thecomingcorporatestate }
+		completion_reward = {
+		add_ideas = { 
+		banned_trade_unions
+		}
+		}
+	}
+
+	#Focus for Lietuviškas Socializmas
+	focus = {
+		id = LIT_lietuvikassocializmas
+		icon = GFX_focus_LIT_litsoc_state
+		x = 69
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_country_flag = LIT_visoumis_rule
+		}
+		prerequisite = { focus = LIT_thelithuanianeconomy }
+		completion_reward = {
+		add_political_power = 120
+		}
+	}
+
+	#Focus for The Socialist State
+	focus = {
+		id = LIT_thesocialiststate
+		icon = GFX_focus_LIT_soc_state
+		x = 77
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 OR = {
+		 has_government = socialist
+		 has_government = national_socialist
+		 has_government = democratic_socialist
+		 }
+		}
+		prerequisite = { focus = LIT_thelithuanianeconomy }
+		completion_reward = {
+		add_political_power = 120
+		}
+	}
+
+	#Focus for Encourage Family Buisnesses
+	focus = {
+		id = LIT_encouragefamilybuisnesses
+		icon = GFX_focus_LIT_fam_stuff
+		x = 50
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_driveforproduction }
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		completion_reward = {
+		 764 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = industrial_complex
+	    level = 2
+	    instant_build = yes
+          }
+          }
+		}
+	}
+
+	#Focus for Entrepreneurs-Led Economy
+	focus = {
+		id = LIT_entrepreneursledeconomy
+		icon = GFX_focus_PRS_prussian_consumer_goods
+		x = 51
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		prerequisite = { 
+			focus = LIT_encouragefamilybuisnesses 
+		}
+		prerequisite = { 
+			focus = LIT_powertothecompanies 
+		}
+		completion_reward = { 
+		add_ideas = { 
+		entrepreneurs_cult
+		}
+	}
+	}
+
+	#Focus for Culture of Work
+	focus = {
+		id = LIT_cultureofwork
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 55
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		prerequisite = { 
+			focus = LIT_materialisticmentality 
+		}
+		prerequisite = { 
+			focus = LIT_powertothecompanies 
+		}
+		completion_reward = {
+		add_ideas = { 
+		culture_of_work
+		}
+		}
+	}
+
+	#Focus for Weaken Welfare
+	focus = {
+		id = LIT_weakenwelfare
+		icon = GFX_focus_LIT_lower_welfare
+		x = 53
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		prerequisite = { focus = LIT_thecapitaliststate }
+		completion_reward = {
+		add_ideas = {
+		no_welfare
+		}
+		}
+	}
+
+	#Focus for Laissez-faire Economics
+	focus = {
+		id = LIT_laissezfaireeconomics
+		icon = GFX_focus_PRS_free_trade
+		x = 53
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		prerequisite = { focus = LIT_weakenwelfare }
+		completion_reward = {
+		add_ideas = {
+		laissez_faire_economics
+		}
+		}
+	}
+
+	#Focus for Spirit of Duty
+	focus = {
+		id = LIT_spiritofduty
+		icon = GFX_focus_LIT_spiritofduty
+		x = 72
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lietuvikassocializmas }
+		completion_reward = {
+		add_political_power = 90
+		}
+	}
+
+	#Focus for Power to the Companies!
+	focus = {
+		id = LIT_powertothecompanies
+		icon = GFX_goal_generic_trade
+		x = 53
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_laissezfaireeconomics }
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		completion_reward = {
+				 879 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = arms_factory
+	    level = 2
+	    instant_build = yes
+          }
+          }
+		}
+	}
+
+	#Focus for Decrease Safety Regulations
+	focus = {
+		id = LIT_decreasesafetyregulations
+		icon = GFX_focus_LIT_lower_regulations
+		x = 56
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thecapitaliststate }
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		completion_reward = {
+		add_ideas = {
+		little_to_no_regulations
+		} 
+		add_manpower = -1000
+		}
+	}
+
+	#Focus for Drive for Production
+	focus = {
+		id = LIT_driveforproduction
+		icon = GFX_goal_generic_production
+		x = 50
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_encouragetheformationoflithuaniancompanies }
+		available = {
+		 OR = {
+		 has_government = conservative
+		 has_government = social_democracy
+		 has_government = social_liberal
+		 }
+		}
+		completion_reward = {
+				 189 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = arms_factory
+	    level = 2
+	    instant_build = yes
+          }
+          }
+		}
+	}
+
+	#Focus for Corruptionless Society
+	focus = {
+		id = LIT_corruptionlesssociety
+		icon = GFX_focus_SOV_bukharins_madatory_work_in_schools
+		x = 80
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_equalityforall }
+		completion_reward = {
+		add_ideas = { 
+		no_bribes
+		}
+		}
+	}
+
+	#Focus for Equality for All!
+	focus = {
+		id = LIT_equalityforall
+		icon = GFX_focus_generic_soviet_politics
+		x = 80
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thesocialiststate }
+		completion_reward = {
+		add_stability = 0.1
+		}
+	}
+
+	#Focus for Mass Industrilization
+	focus = {
+		id = LIT_massindustrilization
+		icon = GFX_focus_SOV_heavy_metalurgy
+		x = 74
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thesocialiststate }
+		completion_reward = {
+		11 = {
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+	type = arms_factory
+	level = 1
+	instant_build = yes
+}
+}
+189 = {
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+	type = industrial_complex
+	level = 1
+	instant_build = yes
+}
+}
+784 = {
+add_extra_state_shared_building_slots = 1
+add_building_construction = {
+	type = arms_factory
+	level = 1
+	instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for The Socialist Gem
+	focus = {
+		id = LIT_thesocialistgem
+		icon = GFX_focus_LIT_socialistgem
+		x = 77
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_ahomeforall 
+		}
+		prerequisite = { 
+			focus = LIT_peasantssociety 
+		}
+		completion_reward = {
+		add_political_power = 150
+		}
+	}
+
+	#Focus for Lower Military Funding
+	focus = {
+		id = LIT_lowermilitaryfunding
+		icon = GFX_focus_SOV_bukharins_economic_affairs
+		x = 77
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_collectiviststate }
+		completion_reward = {
+		add_political_power = 120
+			   11 = { 
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+ 
+	   type = industrial_complex
+	   level = 1
+	   instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Nationalize the Land
+	focus = {
+		id = LIT_nationalizetheland
+		icon = GFX_SOV_leningrad_industry
+		x = 77
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lowermilitaryfunding }
+		completion_reward = {
+		 879 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = industrial_complex
+	    level = 2
+	    instant_build = yes
+          }
+          }
+		 784 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = arms_factory
+	    level = 2
+	    instant_build = yes
+          }
+		}
+		}
+	}
+
+	#Focus for Ban Usury!
+	focus = {
+		id = LIT_banusury
+		icon = GFX_focus_LIT_ban_usury
+		x = 69
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_aryansocialism }
+		completion_reward = {
+		add_ideas = { no_usury }
+		add_political_power = -40
+	}
+	}
+
+	#Focus for Spread the Revoliution Outwards!
+	focus = {
+		id = LIT_spreadtherevoliutionoutwards
+		icon = GFX_focus_LIT_spread_revolution
+		x = 77
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_theredmilitarycomplex 
+		}
+		prerequisite = { 
+			focus = LIT_kolhozesystem 
+		}
+		prerequisite = { 
+			focus = LIT_plannedeconomy 
+		}
+		completion_reward = {
+		
+		}
+	}
+
+	#Focus for The Baltic Legion
+	focus = {
+		id = LIT_thebalticlegion
+		icon = GFX_focus_LIT_balticlegion
+		x = 38
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thestatestable }
+		completion_reward = {
+		army_experience = 10
+		add_manpower = 15000
+	}
+	}
+
+	#Focus for Pagan Bias
+	focus = {
+		id = LIT_paganbias
+		icon = GFX_focus_PRS_vydunas_pereniallism
+		x = 36
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_economicrise }
+		completion_reward = {
+		 country_event = { 
+  id = lithuania.18
+  days = 2
+ }
+	}
+	}
+
+	#Focus for Expand the Military
+	focus = {
+		id = LIT_expandthemilitary
+		icon = GFX_focus_LIT_fanaticalarmy
+		x = 40
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_purgeanyonenotpartoftheperknininkai }
+		completion_reward = {
+		army_experience = 20
+		add_manpower = 10000
+    }
+	}
+
+	#Focus for Form the Ministry of Propaganda
+	focus = {
+		id = LIT_formtheministryofpropaganda
+		icon = GFX_focus_LIT_indoctrinateyouth
+		x = 36
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_banusuryvisoumis }
+				completion_reward = {
+		add_stability = 0.06
+		add_popularity = {ideology = pelekist popularity =0.10}
+    }
+	}
+
+	#Focus for Ban Usury
+	focus = {
+		id = LIT_banusuryvisoumis
+		icon = GFX_focus_LIT_banusury
+		x = 36
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_declareberanskisanationalhero }
+		completion_reward = {
+		 country_event = { 
+  id = lithuania.17
+  days = 2
+ }
+	}
+	}
+
+	#Focus for Purge anyone not part of the Perkūnininkai
+	focus = {
+		id = LIT_purgeanyonenotpartoftheperknininkai
+		icon = GFX_focus_LIT_pelekistpurges
+		x = 40
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_kunigaiktisvisuomis }
+		completion_reward = {
+		add_stability = 0.06
+		add_popularity = {ideology = pelekist popularity =0.10}
+    }
+	}
+
+	#Focus for Create Aistija
+	focus = {
+		id = LIT_createaistija
+		icon = GFX_focus_LIT_createaistija
+		x = 38
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thebalticlegion }
+		completion_reward = {
+		create_faction = "Aistija"
+		}
+	}
+
+	#Focus for Samogitian Autonomy
+	focus = {
+		id = LIT_samogitianautonomy
+		icon = GFX_focus_LIT_samagotianaut
+		x = 40
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_grandfederationoflithuania }
+		completion_reward = {
+		remove_ideas = { samogitian_identity }
+		}
+	}
+
+	#Focus for Free the Prussian Lithuanians!
+	focus = {
+		id = LIT_freetheprussianlithuanians
+		icon = GFX_focus_LIT_invadeprs
+		x = 19
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_prepareforancampaign }
+		completion_reward = {
+				create_wargoal = {
+type = annex_everything
+target = PRS
+}
+}
+	}
+
+	#Focus for Take the Northern Lands
+	focus = {
+		id = LIT_takethenorthernlands
+		icon = GFX_focus_LIT_invadelat
+		x = 15
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_prepareforancampaign }
+		completion_reward = {
+				create_wargoal = {
+type = annex_everything
+target = EST
+}
+if = {
+ limit = { LAT = { exists = yes } }
+ 
+		create_wargoal = {
+type = annex_everything
+target = LAT
+}
+		}
+		}
+		}
+
+	#Focus for Invade Belarus
+	focus = {
+		id = LIT_invadebelarus
+		icon = GFX_focus_LIT_invadebelrus
+		x = 11
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_prepareforancampaign }
+		completion_reward = {
+				create_wargoal = {
+type = annex_everything
+target = BLR
+		}
+	}
+	}
+
+	#Focus for Economic Boom
+	focus = {
+		id = LIT_economicboom
+		icon = GFX_goal_continuous_non_factory_construct
+		x = 15
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_industrialisation 
+			focus = LIT_ruralvalues 
+		}
+		completion_reward = {
+		11 = {
+ add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+
+}
+		}
+	}
+
+	#Focus for Industrialisation
+	focus = {
+		id = LIT_industrialisation
+		icon = GFX_SOV_heavy_industry
+		x = 16
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_secularstate }
+		mutually_exclusive = { focus = LIT_ruralvalues }
+		completion_reward = {
+		  11 = {
+  add_extra_state_shared_building_slots = 3
+  add_building_construction = {
+  
+	type = industrial_complex
+	level = 3
+	instant_build = yes
+}
+
+ }
+		}
+	}
+
+	#Focus for Rural Values
+	focus = {
+		id = LIT_ruralvalues
+		icon = GFX_focus_SOV_rural_volunteers
+		x = 14
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_secularstate }
+		mutually_exclusive = { focus = LIT_industrialisation }
+		completion_reward = {
+		add_ideas = {
+		agriculturalism
+		}
+	}
+	}
+
+	#Focus for Fanatical Army
+	focus = {
+		id = LIT_fanaticalarmy
+		icon = GFX_focus_LIT_fanaticalarmy
+		x = 19
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_formthelithuanianforeignlegion }
+		completion_reward = {
+		add_ideas = {
+		fanatical_army
+		}
+		}
+	}
+
+	#Focus for Indoctrinate the Youth
+	focus = {
+		id = LIT_indoctrinatetheyouth
+		icon = GFX_focus_LIT_indoctrinateyouth
+		x = 11
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_kirposjaunimas }
+		completion_reward = {
+        add_popularity = {ideology = authoritharian popularity =0.10}
+        add_stability = 0.05
+		}
+	}
+
+	#Focus for Secular State
+	focus = {
+		id = LIT_secularstate
+		icon = GFX_focus_LIT_secualrstate
+		x = 15
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_thearmywithastate
+		}
+		completion_reward = {
+		add_stability = 0.05
+		}
+	}
+
+	#Focus for The Army with a State
+	focus = {
+		id = LIT_thearmywithastate
+		icon = GFX_focus_PRS_junger_reactionary_values
+		x = 15
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_theredscare 
+		}
+		prerequisite = { 
+			focus = LIT_thenewconstitution 
+		}
+		prerequisite = { 
+			focus = LIT_declaremobilization 
+		}
+		completion_reward = { 
+		add_ideas = {
+		military_state }
+		}
+
+	}
+
+	#Focus for Škirpos Jaunimas
+	focus = {
+		id = LIT_kirposjaunimas
+		icon = GFX_focus_LIT_skirpayouth
+		x = 11
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thearmywithastate }
+		completion_reward = {
+				add_popularity = {ideology = authoritharian popularity =0.10}
+    }
+	}
+
+	#Focus for Support for Minority Rights
+	focus = {
+		id = LIT_supportforminorityrights
+		icon = GFX_focus_PRS_foreigns_in_army
+		x = 17
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_generalkirpa }
+		mutually_exclusive = { focus = LIT_interveneinbelarus }
+completion_reward = {
+ add_stability = 0.05
+}
+	}
+
+	#Focus for The Old Guard
+	focus = {
+		id = LIT_theoldguard
+		icon = GFX_focus_LIT_old_guear
+		x = 17
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_supportforminorityrights 
+			focus = LIT_interveneinbelarus
+}			
+			
+					completion_reward = {
+			army_experience = 15
+			}
+		
+	}
+
+
+	#Focus for Farmer President
+	focus = {
+		id = LIT_farmerpresident
+		icon = GFX_focus_LIT_peasant_president
+		x = 2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thedemocraticstate }
+		available = {
+		 has_government = conservative
+		}
+		mutually_exclusive = { focus = LIT_thepresidentwholivesasapeasant }
+		completion_reward = {
+		add_political_power = 120
+	    }
+	}
+
+	#Focus for Declare Mobilization
+	focus = {
+		id = LIT_declaremobilization
+		icon = GFX_focus_LIT_mobilization
+		x = 15
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_allowparamilitariesforallies }
+		completion_reward = {
+		add_ideas = {
+		war_economy
+		extensive_conscription
+		}
+		}
+	}
+
+	#Focus for Intervene in Belarus
+	focus = {
+		id = LIT_interveneinbelarus
+		icon = GFX_focus_LIT_intervieneinbelarus
+		x = 13
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_generalkirpa }
+		mutually_exclusive = { focus = LIT_supportforminorityrights }
+		completion_reward = {
+		BLR = { country_event = { id = lithuania.15 days = 2 } }
+	}
+	}
+
+	#Focus for Disband the Seimas
+	focus = {
+		id = LIT_disbandtheseimas
+		icon = GFX_focus_LIT_disband_seaimas
+		x = 11
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_purgetheleftskirpa }
+		completion_reward = {
+		 country_event = { 
+  id = lithuania.20
+  days = 2
+ }
+	}
+	}
+
+	#Focus for The New Constitution
+	focus = {
+		id = LIT_thenewconstitution
+		icon = GFX_focus_LIT_new_constitiuon
+		x = 11
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_disbandtheseimas }
+						completion_reward = {
+		 country_event = { 
+  id = lithuania.22
+  days = 2
+ }
+	}
+	}
+
+
+	#Focus for Encourage Lithuanian Nationalism
+	focus = {
+		id = LIT_encouragelithuaniannationalism
+		icon = GFX_focus_PRS_liths_in_governemnt
+		x = 19
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_encouragemilitarism }
+		completion_reward = {
+		add_popularity = {ideology = authoritharian popularity =0.10}
+    }
+	}
+
+
+	#Focus for The Red Scare
+	focus = {
+		id = LIT_theredscare
+		icon = GFX_focus_LIT_redscare
+		x = 19
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_encouragelithuaniannationalism }
+				completion_reward = {
+ add_popularity = {ideology = democratic_socialist popularity =-0.05}
+ add_popularity = {ideology = social_democracy popularity =-0.1}
+}
+	}
+
+	#Focus for General Škirpa
+	focus = {
+		id = LIT_generalkirpa
+		icon = GFX_focus_LIT_skirpa_rules
+		x = 15
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_country_flag = LIT_skirpa_rules
+		}
+		completion_reward = {
+		add_political_power = 150
+		remove_ideas = { semi_loyal_military }
+		}
+	}
+
+	#Focus for Purge the Left
+	focus = {
+		id = LIT_purgetheleftskirpa
+		icon = GFX_focus_PRS_junger_red_scare
+		x = 11
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_generalkirpa }
+		completion_reward = {
+		 add_popularity = {ideology = democratic_socialist popularity =-0.07}
+ add_popularity = {ideology = socialist popularity =-0.05}
+ }
+	}
+
+	#Focus for Pelekist and Reactionary Allies
+	focus = {
+		id = LIT_pelekistandreactionaryallies
+		icon = GFX_focus_LIT_reactionaryallies
+		x = 15
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_generalkirpa }
+		completion_reward = {
+				add_popularity = {ideology = reactionary popularity =0.10}
+		add_popularity = {ideology = pelekist popularity =0.10}
+}
+	}
+
+	#Focus for Encourage Militarism
+	focus = {
+		id = LIT_encouragemilitarism
+		icon = GFX_focus_LIT_militarism
+		x = 19
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_generalkirpa }
+		completion_reward = {
+		add_ideas = {
+		militarism
+		}
+	}
+	}
+
+	#Focus for Allow Paramilitaries for Allies
+	focus = {
+		id = LIT_allowparamilitariesforallies
+		icon = GFX_focus_LIT_paramilitaries
+		x = 15
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_pelekistandreactionaryallies }
+		completion_reward = {
+		add_manpower = 3000
+		army_experience = 25
+	}
+	}
+
+	#Focus for Grant Power to the Younger Officers
+	focus = {
+		id = LIT_grantpowertotheyoungerofficers
+		icon = GFX_focus_PRS_junger_elite_training
+		x = 13
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_interveneinbelarus 
+			focus = LIT_supportforminorityrights 
+		}
+				completion_reward = {
+		add_tech_bonus = {
+    name = doctrine_bonus
+    bonus = 0.50
+    uses = 1
+	category = land_doctrine
+	}
+	}
+	}
+
+	#Focus for Form the Lithuanian Foreign Legion
+	focus = {
+		id = LIT_formthelithuanianforeignlegion
+		icon = GFX_focus_LIT_foreignlegion
+		x = 19
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thearmywithastate }
+		completion_reward = {
+		add_manpower = 10000
+		army_experience = 50
+		}
+	}
+
+	#Focus for Prepare for an Campaign
+	focus = {
+		id = LIT_prepareforancampaign
+		icon = GFX_focus_LIT_prepareforcaompaing
+		x = 15
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_fanaticalarmy 
+		}
+		prerequisite = { 
+			focus = LIT_economicboom 
+		}
+		prerequisite = { 
+			focus = LIT_indoctrinatetheyouth 
+		}
+    completion_reward = {
+	add_political_power = 120
+	}
+	}
+
+	#Focus for Glory Restored!
+	focus = {
+		id = LIT_gloryrestored
+		icon = GFX_focus_LIT_gloryrestored
+		x = 15
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_freetheprussianlithuanians 
+		}
+		prerequisite = { 
+			focus = LIT_invadebelarus 
+		}
+		prerequisite = { 
+			focus = LIT_takethenorthernlands 
+		} 
+		completion_reward = {
+		188 = { add_core_of = LIT}
+		763 = { add_core_of = LIT}
+        1010 = { add_core_of = LIT}		
+		933 = { add_core_of = LIT}
+		95 = { add_core_of = LIT}
+        96 = { add_core_of = LIT}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 188
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 188 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 763
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 763 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 1010
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 1010 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 933
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 933 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 95
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 95 }
+		}
+		if = {
+		 limit = { 
+		  any_neighbor_country = { 
+		    AND = { 
+			 has_full_control_of_state = 96
+             is_puppet_of = LIT
+			 }
+         }			
+		}
+		LIT = { transfer_state = 96 }
+		}
+	}
+	}
+
+	#Focus for The President Who Lives as a Peasant
+	focus = {
+		id = LIT_thepresidentwholivesasapeasant
+		icon = GFX_focus_LIT_grinius
+		x = 8
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thedemocraticstate }
+		available = {
+		 has_government = social_democracy
+		}
+		mutually_exclusive = { focus = LIT_farmerpresident }
+		completion_reward = {
+		add_political_power = 120
+			}
+	}
+
+	#Focus for Industrilization
+	focus = {
+		id = LIT_industrilization
+		icon = GFX_focus_SOV_bukharins_industriliaze_novgorod
+		x = 6
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_government = social_democracy
+		}
+		prerequisite = { focus = LIT_thepresidentwholivesasapeasant }
+		 completion_reward = {
+784 = {
+                add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+}
+ }
+	}
+
+	#Focus for Free Speach for All...
+	focus = {
+		id = LIT_freespeachforall
+		icon = GFX_focus_LIT_freespeech
+		x = 9
+		y = 2
+		cost = 5
+	    available = {
+		 has_government = social_democracy
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thepresidentwholivesasapeasant }
+		completion_reward = {
+ add_popularity = {ideology = democratic_socialist popularity =0.02}
+ add_popularity = {ideology = socialist popularity =0.02}
+}
+	}
+
+	#Focus for Fight Corruption!
+	focus = {
+		id = LIT_fightcorruption
+		icon = GFX_focus_LIT_fight_corruption
+		x = 9
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_government = social_democracy
+		}
+		prerequisite = { focus = LIT_buttheright }
+		completion_reward = {
+		 add_popularity = {ideology = socialist popularity =0.02}
+       add_ideas = { 
+	   loyal_military
+	   }
+		 remove_ideas = {
+		 semi_loyal_military
+		 }
+	}
+	}
+
+	#Focus for Reverse the Interventionalism
+	focus = {
+		id = LIT_reversetheinterventionalism
+		icon = GFX_focus_LIT_stop_interviening
+		x = 6
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_government = social_democracy
+		}
+		prerequisite = { focus = LIT_industrilization }
+				completion_reward = {
+		BLR = { remove_ideas = { BLR_lithuanian_influence } }
+	}
+	}
+
+	#Focus for State-Aided Modernization
+	focus = {
+		id = LIT_stateaidedmodernization
+		icon = GFX_SOV_leningrad_industry
+		x = 6
+		y = 4
+		cost = 5
+		available = {
+		 has_government = social_democracy
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_reversetheinterventionalism }
+		completion_reward = {
+		 add_tech_bonus = {
+	name = oil
+	bonus = 0.5
+    uses = 2
+	category = industry
+}
+11 = {
+add_extra_state_shared_building_slots = 2
+ add_building_construction = {
+	type = industrial_complex
+	level = 2
+	instant_build = yes
+}
+}
+	}
+	}
+
+	#Focus for The Land Without Corruption
+	focus = {
+		id = LIT_thelandwithoutcorruption
+		icon = GFX_focus_LIT_land_without_corruption
+		x = 7
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_government = social_democracy
+		}
+		prerequisite = { 
+			focus = LIT_fightcorruption 
+		}
+		prerequisite = { 
+			focus = LIT_stateaidedmodernization 
+		}
+		completion_reward = {
+ add_ideas = {
+   corruptionless_society
+  }
+  }
+  }
+
+	#Focus for A Example of Democracy!
+	focus = {
+		id = LIT_aexampleofdemocracy
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 5
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		OR = {
+		 has_government = social_democracy
+		 has_government = conservative
+		 }
+		}
+		prerequisite = { 
+			focus = LIT_apatrioticconservativestate 
+			focus = LIT_thelandwithoutcorruption 
+		}
+		completion_reward = {
+		add_political_power = 120
+		}
+	}
+
+	#Focus for Encourage Agriculturalism
+	focus = {
+		id = LIT_encourageagriculturalism
+		icon = GFX_focus_SOV_bukharins_privatize_state_land
+		x = 1
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_government = conservative
+		}
+		prerequisite = { focus = LIT_farmerpresident }
+		completion_reward = {
+		 add_ideas = { agriculturalism }
+189 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+		}
+	}
+
+	#Focus for Encourage Christian Values
+	focus = {
+		id = LIT_encouragechristianvalues
+		icon = GFX_focus_LIT_christian_values
+		x = 1
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_government = conservative
+		}
+		prerequisite = { focus = LIT_encourageagriculturalism }
+		completion_reward = {
+		 add_popularity = {ideology = conservative popularity =0.1}
+		 add_political_power = 100
+		}
+	}
+
+	#Focus for Aid Ulmanis for Gurantees
+	focus = {
+		id = LIT_aidulmanisforgurantees
+		icon = GFX_focus_LIT_aid_ulmanis
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_government = conservative
+		}
+		prerequisite = { focus = LIT_defensiveinterventionalism }
+	}
+
+	#Focus for Attempt to Influence Further Into Russia...
+	focus = {
+		id = LIT_attempttoinfluencefurtherintorussia
+		icon = GFX_focus_LIT_influence_russia
+		x = 4
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_government = conservative
+		}
+		prerequisite = { focus = LIT_aidulmanisforgurantees }
+		completion_reward = {
+		UKR = { add_ideas = { BLR_lithuanian_influence } }
+		}
+	}
+
+	#Focus for The Democratic State
+	focus = {
+		id = LIT_thedemocraticstate
+		icon = GFX_focus_PRS_liberal_republic
+		x = 5
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_country_flag = LIT_democracyholds
+		}
+	    }
+
+	#Focus for Defensive Interventionalism
+	focus = {
+		id = LIT_defensiveinterventionalism
+		icon = GFX_focus_LIT_defensive_intervention
+		x = 4
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_government = conservative
+		}
+		prerequisite = { focus = LIT_farmerpresident }
+		completion_reward = {
+		784 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+        }
+    }
+}
+		879 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+        }
+    }
+}
+		189 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+        add_building_construction = {
+            type = bunker
+            level = 3
+            instant_build = yes
+        }
+    }
+}
+}
+	}
+
+	#Focus for Ban the Perkūnininkai
+	focus = {
+		id = LIT_bantheperknininkai
+		icon = GFX_focus_LIT_ban_perkunikais
+		x = 1
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_government = conservative
+		}
+		prerequisite = { focus = LIT_encouragechristianvalues }
+		completion_reward = {
+		 add_popularity = {ideology = pelekist popularity =-0.05}
+}
+	}
+
+	#Focus for A Patriotic Conservative State
+	focus = {
+		id = LIT_apatrioticconservativestate
+		icon = GFX_focus_LIT_christian_conservative_state
+		x = 3
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_government = conservative
+		}
+		prerequisite = { 
+			focus = LIT_attempttoinfluencefurtherintorussia 
+		}
+		prerequisite = { 
+			focus = LIT_bantheperknininkai 
+		}
+		completion_reward = {
+		add_political_power = 120
+		}
+	}
+
+	#Focus for ...But the Right
+	focus = {
+		id = LIT_buttheright
+		icon = GFX_focus_LIT_exceptthrright
+		x = 9
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 has_government = social_democracy
+		}
+		prerequisite = { focus = LIT_freespeachforall }
+completion_reward = {
+ add_popularity = {ideology = pelekist popularity =-0.02}
+ add_popularity = {ideology = conservative popularity =-0.02}
+}
+	}
+
+	#Focus for Free Education!
+	focus = {
+		id = LIT_freeeducation
+		icon = GFX_focus_SOV_bukharins_rural_education
+		x = 80
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_corruptionlesssociety }
+		completion_reward = {
+		 add_research_slot = 1
+
+		}
+	}
+
+	#Focus for Offensive Doctrine
+	focus = {
+		id = LIT_offensivedoctrine
+		icon = GFX_focus_LIT_offensive_focus
+		x = 19
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lietuvoskariuomen }
+		mutually_exclusive = { focus = LIT_defensivedoctrine }
+completion_reward = {
+ custom_effect_tooltip = lit_tt_2
+		}
+	}
+
+	#Focus for Mass Artillery Fire
+	focus = {
+		id = LIT_massartilleryfire
+		icon = GFX_focus_LIT_aritlery_fire
+		x = 12
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_offensivedoctrine 
+			focus = LIT_defensivedoctrine 
+		}
+		mutually_exclusive = { 
+			focus = LIT_mobiledoctrineii
+		}
+		mutually_exclusive = { 
+			focus = LIT_trenchwarfare 
+		}
+	completion_reward = {
+		 add_tech_bonus = {
+	name = mass_artillery
+	bonus = 1.0
+	uses = 2
+	category = cat_superior_firepower
+		}
+		}
+	}
+
+	#Focus for End the ANBO Monpoly
+	focus = {
+		id = LIT_endtheanbomonpoly
+		icon = GFX_focus_LIT_break_anbo
+		x = 37
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lietuvosoropajgos }
+		mutually_exclusive = { focus = LIT_grantanbomoreprivledges }
+		completion_reward = {
+		 add_ideas = { LIT_anbo_monopoly_broken }
+		}
+	}
+
+	#Focus for Grant ANBO More Privledges
+	focus = {
+		id = LIT_grantanbomoreprivledges
+		icon = GFX_focus_LIT_continue_anbo
+		x = 41
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lietuvosoropajgos }
+		mutually_exclusive = { focus = LIT_endtheanbomonpoly }
+		completion_reward = {
+		 add_ideas = { LIT_anbo_monopoly }
+		}
+	}
+
+	#Focus for Import Foreign Models
+	focus = {
+		id = LIT_importforeignmodels
+		icon = GFX_focus_LIT_import_foreign_designs
+		x = 35
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 NOT = { OR = { has_war_with = ENG has_war_with = BRU has_war_with = BLF has_war_with = BRC has_war_with = BRL has_war_with = PRS has_war_with = GER } }
+		}
+		prerequisite = { focus = LIT_endtheanbomonpoly }
+		mutually_exclusive = { focus = LIT_encouragelithuanianmadeplanes }
+		completion_reward = {
+		 add_equipment_to_stockpile = {
+  type = fighter_equipment_0
+					amount = 60
+					producer = ENG
+ }
+
+}
+		}
+
+	#Focus for Encourage Lithuanian Made Planes
+	focus = {
+		id = LIT_encouragelithuanianmadeplanes
+		icon = GFX_focus_LIT_lith_made_planes
+		x = 37
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_endtheanbomonpoly }
+		mutually_exclusive = { focus = LIT_importforeignmodels }
+		completion_reward = {
+ add_tech_bonus = {
+	name = fighter_bonus
+	bonus = 2.0
+	uses = 1
+	category = light_fighter
+}
+		}
+	}
+
+	#Focus for Focus on CAS
+	focus = {
+		id = LIT_focusoncas
+		icon = GFX_focus_LIT_focus_on_cas
+		x = 39
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_selllithuanianaircraftstoforeigners 
+			focus = LIT_ 
+		}
+		mutually_exclusive = { 
+			focus = LIT_endtheanbomonpoly 
+		}
+		mutually_exclusive = { 
+			focus = LIT_endtheanbomonpoly 
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+	name = cas_bonus
+	bonus = 1.0
+	uses = 1
+	technology = CAS2
+}
+		}
+	}
+
+	#Focus for Focus on Fighters
+	focus = {
+		id = LIT_focusonfighters
+		icon = GFX_focus_LIT_focus_on_fighters
+		x = 37
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_selllithuanianaircraftstoforeigners 
+			focus = LIT_importforeignmodels 
+		}
+		mutually_exclusive = { focus = LIT_focusoncas }
+		completion_reward = {
+ add_tech_bonus = {
+	name = fighter_bonus
+	bonus = 1.0
+	uses = 1
+	category = light_fighter
+}
+		}
+	}
+
+	#Focus for Lithuanians in the air!
+	focus = {
+		id = LIT_lithuaniansintheair
+		icon = GFX_focus_LIT_liths_in_air
+		x = 39
+		y = 18
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_focusonfighters 
+			focus = LIT_focusoncas 
+			focus = LIT_focusonbombers 
+		}		
+ completion_reward = {
+  air_experience = 50
+}
+ }
+
+	#Focus for Start Mass-Producement and Export
+	focus = {
+		id = LIT_startmassproducementandexport
+		icon = GFX_focus_LIT_start_export
+		x = 41
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lithuanianquality }
+				completion_reward = {
+		BLR = {   
+		add_equipment_to_stockpile = {
+         type = fighter_equipment_0
+					amount = 20
+					producer = LIT
+          }
+		}
+		add_timed_idea = {idea = aircraft_deals days = 90}
+		add_equipment_to_stockpile = {
+  type = fighter_equipment_0
+					amount = 30
+					producer = LIT
+		}
+	}
+	}
+
+	#Focus for Focus on Bombers
+	focus = {
+		id = LIT_focusonbombers
+		icon = GFX_focus_LIT_focus_on_bombers
+		x = 41
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		bypass = {
+		 has_tech = early_bomber
+		}
+		prerequisite = { focus = LIT_startmassproducementandexport }
+		mutually_exclusive = { 
+			focus = LIT_focusoncas 
+		}
+		
+ completion_reward = {
+  set_technology = {
+    early_bomber = 1 
+}
+ }
+ } 
+
+	#Focus for Air Doctrine Focus I
+	focus = {
+		id = LIT_airdoctrinefocusi
+		icon = GFX_focus_LIT_air_doctrine
+		x = 39
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lietuvosoropajgos }
+		completion_reward = {
+ add_tech_bonus = {
+	name = doctrine_bonus
+	bonus = 1.0
+	uses = 2
+	category = air_doctrine
+}
+}
+		}
+	
+
+	#Focus for Air Doctrine Focus II
+	focus = {
+		id = LIT_airdoctrinefocusii
+		icon = GFX_focus_LIT_air_doctrine_2
+		x = 39
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_airdoctrinefocusi }
+		completion_reward = {
+ add_tech_bonus = {
+	name = doctrine_bonus
+	bonus = 1.0
+	uses = 2
+	category = air_doctrine
+}
+}
+	}
+
+	#Focus for Defend the Sea!
+	focus = {
+		id = LIT_defendthesea
+		icon = GFX_focus_LIT_defend_seas
+		x = 31
+		y = 19
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_thesmallfleet }
+		completion_reward = {
+  add_tech_bonus = {
+	name = defend_the_sea
+	bonus = 1
+    ahead_reduction = 1
+	uses = 1
+	category = dd_tech
+}
+naval_experience = 50
+		}
+	}
+
+	#Focus for Modernize the Ship "Prezidentas Antanas Smetona"
+	focus = {
+		id = LIT_modernizetheshipprezidentasantanassmetona
+		icon = GFX_focus_LIT_modernize_smentona
+		x = 32
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_leaveitasitis }
+		completion_reward = {
+		 custom_effect_tooltip = lit_tt_5
+		 hidden_effect = { load_oob = "LIT_antanas_smentona" }
+		}
+	}
+
+	#Focus for The Small Fleet
+	focus = {
+		id = LIT_thesmallfleet
+		icon = GFX_focus_LIT_small_fleet
+		x = 31
+		y = 18
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_buymoredestroyers }
+		completion_reward = {
+		navy_experience = 25
+		completion_reward = {
+  add_tech_bonus = {
+	name = small_fleet
+	bonus = 0.5
+    ahead_reduction = 1
+	uses = 1
+	category = dd_tech
+}
+ }
+		}
+		}
+
+	#Focus for Buy Foreign Submarines
+	focus = {
+		id = LIT_buyforeignsubmarines
+		icon = GFX_focus_LIT_buy_foreign_submarines
+		x = 27
+		y = 18
+		cost = 5
+		available_if_capitulated = yes
+        available = {
+		 NOT = { OR = { has_war_with = PRS has_war_with = GER } }
+		}
+		prerequisite = { focus = LIT_lithuaniansubmarinefleet }
+		mutually_exclusive = { focus = LIT_makelithuaniansubmarines }
+		completion_reward = {
+		 custom_effect_tooltip = lit_tt_6
+		 add_political_power =-200
+		 hidden_effect = { load_oob = "LIT_submarines" }
+		}
+	}
+
+	#Focus for Make Lithuanian Submarines!
+	focus = {
+		id = LIT_makelithuaniansubmarines
+		icon = GFX_focus_LIT_make_submarines
+		x = 29
+		y = 18
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lithuaniansubmarinefleet }
+		mutually_exclusive = { focus = LIT_buyforeignsubmarines }
+		completion_reward = {
+		 add_ideas = { LIT_build_submarine }
+		}
+	}
+
+	#Focus for Underwater Attack!
+	focus = {
+		id = LIT_underwaterattack
+		icon = GFX_focus_LIT_underwater_attack
+		x = 27
+		y = 19
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_buyforeignsubmarines 
+			focus = LIT_makelithuaniansubmarines 
+		}
+		completion_reward = {
+		add_ideas = { submarine_attack }
+		}
+	}
+
+	#Focus for Leave it as it is
+	focus = {
+		id = LIT_leaveitasitis
+		icon = GFX_focus_LIT_leave_it
+		x = 32
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_theprussiandeal }
+		mutually_exclusive = { focus = LIT_reformthenavy }
+		available = { has_country_flag = LIT_prussian_deal_dd }
+		completion_reward = {
+		 add_ideas = { LIT_destroyers }
+		}
+	}
+
+	#Focus for Experts from Prussia
+	focus = {
+		id = LIT_expertsfromprussia
+		icon = GFX_focus_LIT_prussian_experts
+		x = 28
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+        available = {
+		 NOT = { has_war_with = PRS }
+		}
+		prerequisite = { 
+		focus = LIT_reformthenavy
+		focus = LIT_leaveitasitis
+		}
+		completion_reward = { 
+		 add_ideas = { LIT_prussian_naval_experts }
+		}
+	}
+
+	#Focus for Create an Military port
+	focus = {
+		id = LIT_createanmilitaryport
+		icon = GFX_focus_LIT_build_port
+		x = 26
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_reformthenavy }		
+completion_reward = {
+hidden_effect = {
+country_event = { id = bolshevik_russia.38 days = 1 }
+}
+189 = { 
+add_extra_state_shared_building_slots = 2
+ add_building_construction = {
+ 
+	type = dockyard
+	level = 2
+	instant_build = yes
+}
+}
+}
+	}
+
+	#Focus for Raid German Strongholds!
+	focus = {
+		id = LIT_raidgermanstrongholds
+		icon = GFX_focus_LIT_raid_german_strongholds
+		x = 18
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_aidlithuaniansinbelarus }
+		completion_reward = {
+        custom_effect_tooltip = lit_tt_7
+	    set_country_flag = LIT_prussian_raids
+		}
+	}
+
+	#Focus for Radical Interventionalism
+	focus = {
+		id = LIT_radicalinterventionalism
+		icon = GFX_focus_LIT_radical_intervention
+		x = 18
+		y = 18
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_raidgermanstrongholds }
+		completion_reward = {
+		 add_ideas = { LIT_radical_intervention }
+		}
+	}
+
+	#Focus for Lion of Offense!
+	focus = {
+		id = LIT_lionofoffense
+		icon = GFX_focus_LIT_lion_of_offence
+		x = 20
+		y = 19
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_radicalinterventionalism 
+		}
+		prerequisite = { 
+			focus = LIT_lightningattacks 
+		}
+		completion_reward = {
+         add_ideas = { LIT_lion_of_offence }
+		}
+	}
+
+	#Focus for Lithuanian Tanks!
+	focus = {
+		id = LIT_lithuaniantanks
+		icon = GFX_focus_LIT_lith_tanks
+		x = 20
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lithuanianstormtroopers }
+		mutually_exclusive = { focus = LIT_importgermantanks }
+		completion_reward = {
+		 add_tech_bonus = {
+	name = lithuanian_tanks
+	bonus = 1.00
+	uses = 2
+	category = armor
+}
+		}
+	}
+
+	#Focus for Import German Tanks
+	focus = {
+		id = LIT_importgermantanks
+		icon = GFX_focus_LIT_buy_other_tanks
+		x = 24
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lithuanianstormtroopers }
+		mutually_exclusive = { focus = LIT_lithuaniantanks }
+		completion_reward = {
+ add_equipment_to_stockpile = { 
+  type = light_tank_equipment_1
+					amount = 40
+					producer = GER
+ }
+ }
+		}
+
+	#Focus for Lightning Attacks!
+	focus = {
+		id = LIT_lightningattacks
+		icon = GFX_focus_LIT_lighting_attack
+		x = 22
+		y = 18
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_lithuaniantanks 
+			focus = LIT_importgermantanks 
+		}
+		completion_reward = {
+ add_ideas = {
+  lightning_attacks
+ }
+}
+}
+
+
+
+	#Focus for Aid Lithuanians in Belarus!
+	focus = {
+		id = LIT_aidlithuaniansinbelarus
+		icon = GFX_focus_LIT_support_partisans_in_belarus
+		x = 18
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_aidthebalticpartisans }
+		bypass = { 
+		 OR = {
+		 BLR = { is_puppet_of = LIT }
+		 CBR = { is_puppet_of = LIT }
+		 DBR = { is_puppet_of = LIT }
+		}
+		}
+		completion_reward = {
+		 BLR = { add_ideas = { LIT_influence_2 } }
+		 DBR = { add_ideas = { LIT_influence_2 } }
+		}
+	}
+
+	#Focus for Mobile Doctrine II
+	focus = {
+		id = LIT_mobiledoctrineii
+		icon = GFX_focus_LIT_mobile_warfare_2
+		x = 16
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_mobiledoctrine }
+		mutually_exclusive = { 
+			focus = LIT_trenchwarfare 
+		}
+		mutually_exclusive = { 
+			focus = LIT_massartilleryfire 
+		}
+		        completion_reward = {
+ add_tech_bonus = {
+	name = mobile_doctrine
+	bonus = 1.0
+	uses = 2
+	category = cat_mobile_warfare
+}
+}
+	}
+
+	#Focus for Grant Power to the Lithuanian Riflemen
+	focus = {
+		id = LIT_grantpowertothelithuanianriflemen
+		icon = GFX_focus_LIT_epowr_lith_riflemen
+		x = 6
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_contractcompaniestoaidthearmy }
+		completion_reward = {
+		add_manpower = 20000
+		}
+	}
+	
+
+	#Focus for Modern Lithuanian Equipment
+	focus = {
+		id = LIT_modernlithuanianequipment
+		icon = GFX_focus_LIT_lith_guns
+		x = 5
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_grantpowertothelithuanianriflemen }
+		mutually_exclusive = { focus = LIT_importforeignequipment }
+  completion_reward = {
+  add_tech_bonus = {
+	name = infantry_bonus
+	bonus = 2.0
+    
+	uses = 1
+	category = infantry_weapons
+}
+ }
+	}
+
+	#Focus for Prepare for Partisan Warfare
+	focus = {
+		id = LIT_prepareforpartisanwarfare
+		icon = GFX_focus_LIT_partisan_warfare
+		x = 6
+		y = 18
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_importforeignequipment 
+			focus = LIT_modernlithuanianequipment 
+		}
+		completion_reward = {
+		add_ideas = { partizanai }
+		}
+	}
+
+	#Focus for Lion of Defence!
+	focus = {
+		id = LIT_lionofdefence
+		icon = GFX_focus_LIT_lion_of_defence
+		x = 7
+		y = 19
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_fortsontheprussianborder 
+		}
+		prerequisite = { 
+			focus = LIT_prepareforpartisanwarfare 
+		}
+				completion_reward = {
+                 add_ideas = { LIT_lion_of_defence }
+		}
+	}
+
+	#Focus for The Pride of Lithuania!
+	focus = {
+		id = LIT_theprideoflithuania
+		icon = GFX_focus_LIT_pearl_of_lith_army
+		x = 13
+		y = 20
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_lionofdefence 
+			focus = LIT_lionofoffense 
+		}
+		completion_reward = {
+		add_ideas = { pride_of_lithuania}
+		}
+	}
+
+	#Focus for Lithuanian Stormtroopers!
+	focus = {
+		id = LIT_lithuanianstormtroopers
+		icon = GFX_focus_LIT_stormtroopers
+		x = 22
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_preparetomotorizethearmy }
+		completion_reward = {
+		 add_ideas = {
+  lithuanian_stormtroopers
+ }
+		}
+	}
+
+	#Focus for Aid the Baltic Partisans!
+	focus = {
+		id = LIT_aidthebalticpartisans
+		icon = GFX_focus_LIT_support_balt_partisans
+		x = 18
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_offensivedoctrine }
+		bypass = { OR = { EST = { OR = { is_puppet_of = LIT  } } LAT = {exists = yes } } }
+		completion_reward = {
+		 EST = { add_ideas = { LIT_lith_supported_partisans } }
+		}
+	}
+
+	#Focus for All Arms in Lithuania!
+	focus = {
+		id = LIT_allarmsinlithuania
+		icon = GFX_focus_LIT_all_arms_tp_lithuania
+		x = 10
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_offensivedoctrine 
+			focus = LIT_defensivedoctrine 
+		}
+		completion_reward = {
+		add_ideas = { LIT_all_arms_in_lith }
+	}
+	}
+
+	#Focus for Trench Warfare II
+	focus = {
+		id = LIT_trenchwarfareii
+		icon = GFX_focus_LIT_trench_warfare_2
+		x = 8
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_trenchwarfare }
+		completion_reward = {
+		 add_tech_bonus = {
+	name = trench_doctrine
+	bonus = 1.0
+	uses = 2
+	category = cat_grand_battle_plan
+}
+	}
+	}
+	
+	#Focus for Mass Artillery II
+	focus = {
+		id = LIT_massartilleryii
+		icon = GFX_focus_LIT_aritlery_fire_2
+		x = 12
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_massartilleryfire } 
+				completion_reward = {
+		 add_tech_bonus = {
+	name = mass_artillery
+	bonus = 1.0
+	uses = 2
+	category = cat_superior_firepower
+		}
+		}
+	}
+
+	#Focus for Prolong the Russian Civil War
+	focus = {
+		id = LIT_prolongtherussiancivilwar
+		icon = GFX_focus_LIT_prolong_russian_war
+		x = 14
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_offensivedoctrine 
+			focus = LIT_defensivedoctrine 
+		}
+		completion_reward = {
+         SOV = { 
+		  add_equipment_to_stockpile = {  
+	      type = infantry_equipment_0
+					amount = 2000
+					producer = LIT
+           }
+		 }
+         RUS = { 
+		  add_equipment_to_stockpile = {  
+	      type = infantry_equipment_0
+					amount = 2000
+					producer = LIT
+           }
+		 }
+         CAU = { 
+		  add_equipment_to_stockpile = {  
+	      type = infantry_equipment_0
+					amount = 2000
+					producer = LIT
+           }
+		 }
+		}
+	}
+
+	#Focus for Forts along the Belarusian Border
+	focus = {
+		id = LIT_fortsalongthebelarusianborder
+		icon = GFX_goal_continuous_non_factory_construct
+		x = 3
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_defensivedoctrine }
+				completion_reward = {
+		784 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3393
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3366
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 6413
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 6340
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 11391
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3393
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 11342
+							instant_build = yes
+						}
+    }
+}
+		}
+	}
+
+	#Focus for Forts along the Latvian Border
+	focus = {
+		id = LIT_fortsalongthelatvianborder
+		icon = GFX_goal_generic_fortify_city
+		x = 3
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_fortsalongthebelarusianborder }
+				completion_reward = {
+		189 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6314
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 3354
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 9483
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 6376
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = 530
+							instant_build = yes
+						}
+    }
+}
+		}
+	}
+
+	#Focus for Forts on the Prussian Border
+	focus = {
+		id = LIT_fortsontheprussianborder
+		icon = GFX_focus_generic_coastal_fort
+		x = 3
+		y = 18
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_fortsalongthelatvianborder }
+				completion_reward = {
+		189 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 9499
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 3337
+							instant_build = yes
+						}
+						}
+						}
+							
+		879 = {
+		 if = { limit = { is_controlled_by = ROOT } 
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6407
+							instant_build = yes
+						}
+							add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11312
+							instant_build = yes
+						}
+						}
+						}
+    }
+}
+
+
+	#Focus for Forts along the Polish Border
+	focus = {
+		id = LIT_fortsalongthepolishborder
+		icon = GFX_goal_fortify_the_westwall
+		x = 3
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_defensivedoctrine }
+		completion_reward = {
+		879 = {
+    if = {
+        limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 11312
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6281
+							instant_build = yes
+						}
+    }
+}
+		}
+	}
+
+	#Focus for Contract Companies to Aid the Army
+	focus = {
+		id = LIT_contractcompaniestoaidthearmy
+		icon = GFX_focus_LIT_request_company_support
+		x = 6
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_defensivedoctrine }
+		completion_reward = {
+		add_ideas = { contract_companies }
+		}
+	}
+
+	#Focus for Lietuvos Laivynas
+	focus = {
+		id = LIT_lietuvoslaivynas
+		icon = GFX_focus_LIT_lith_navy
+		x = 29
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		completion_reward = {
+		 189 = { 
+         add_extra_state_shared_building_slots = 1
+         add_building_construction = {
+ 
+	      type = dockyard
+	      level = 1
+	      instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Lietuvos Oro Pajėgos
+	focus = {
+		id = LIT_lietuvosoropajgos
+		icon = GFX_focus_LIT_lith_airforce
+		x = 39
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		completion_reward = {
+		  air_experience = 25
+		}
+	}
+
+	#Focus for Defensive Doctrine
+	focus = {
+		id = LIT_defensivedoctrine
+		icon = GFX_focus_LIT_defensive_doctrine
+		x = 7
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lietuvoskariuomen }
+		mutually_exclusive = { focus = LIT_offensivedoctrine }
+		completion_reward = {
+		 custom_effect_tooltip = lit_tt_3
+		}
+	}
+
+	#Focus for Trench Warfare
+	focus = {
+		id = LIT_trenchwarfare
+		icon = GFX_focus_LIT_trench_warfare
+		x = 8
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_defensivedoctrine }
+		mutually_exclusive = { 
+			focus = LIT_mobiledoctrineii 
+		}
+		mutually_exclusive = { 
+			focus = LIT_massartilleryfire 
+		}
+		completion_reward = {
+		 add_tech_bonus = {
+	name = trench_doctrine
+	bonus = 1.0
+	uses = 2
+	category = cat_grand_battle_plan
+}
+		}
+	}
+
+	#Focus for Mobile Doctrine
+	focus = {
+		id = LIT_mobiledoctrine
+		icon = GFX_focus_LIT_mobile_warfare
+		x = 16
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_offensivedoctrine }
+		mutually_exclusive = { focus = LIT_massartilleryfire }
+		mutually_exclusive = { focus = LIT_trenchwarfare }
+        completion_reward = {
+ add_tech_bonus = {
+	name = mobile_doctrine
+	bonus = 1.0
+	uses = 2
+	category = cat_mobile_warfare
+}
+		}
+	}
+
+	#Focus for Lietuvos Kariuomenė
+	focus = {
+		id = LIT_lietuvoskariuomen
+		icon = GFX_focus_LIT_lietovus_karioumene
+		x = 13
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = { 
+        factor = 1
+ } 
+       completion_reward = {
+       army_experience = 5
+}
+ } 
+	
+
+	#Focus for Import Foreign Equipment
+	focus = {
+		id = LIT_importforeignequipment
+		icon = GFX_focus_LIT_import_guins
+		x = 7
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+		 NOT = { OR = { has_war_with = USA has_war_with = PRS has_war_with = GER } }
+		}
+		prerequisite = { focus = LIT_grantpowertothelithuanianriflemen }
+		mutually_exclusive = { focus = LIT_modernlithuanianequipment }
+		completion_reward = {
+    add_equipment_to_stockpile = {  
+	  type = infantry_equipment_0
+					amount = 5000
+					producer = USA
+ }
+		}
+		}
+	
+
+	#Focus for Raids into Russia
+	focus = {
+		id = LIT_raidsintorussia
+		icon = GFX_focus_LIT_raids_into_russia
+		x = 12
+		y = 18
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_allarmsinlithuania 
+			focus = LIT_prolongtherussiancivilwar 
+		}
+		completion_reward = {
+         add_ideas = { LIT_raids }
+		}
+	}
+
+	#Focus for Prepare to Motorize the Army
+	focus = {
+		id = LIT_preparetomotorizethearmy
+		icon = GFX_focus_LIT_motorize_army
+		x = 22
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_offensivedoctrine }
+		completion_reward = {
+add_tech_bonus = {
+	name = zhukov_mot
+	bonus = 1.0
+	uses = 1
+	technology = motorised_infantry	
+	technology = mechanised_infantry
+}
+	}
+	}
+
+	#Focus for The Prussian Deal
+	focus = {
+		id = LIT_theprussiandeal
+		icon = GFX_focus_LIT_prussian_deal
+		x = 29
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_lietuvoslaivynas }
+		completion_reward = {
+		country_event = { id = lithuania.24  days = 3 }
+		}
+	}
+
+	#Focus for Reform the Navy
+	focus = {
+		id = LIT_reformthenavy
+		icon = GFX_focus_LIT_reform_navy
+		x = 26
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_theprussiandeal }
+		mutually_exclusive = { focus = LIT_leaveitasitis }
+		available = { has_country_flag = LIT_prussian_deal_ss }
+		completion_reward = {
+		navy_experience = 75
+		}
+		}
+
+	#Focus for Form the Lithuanian Marines
+	focus = {
+		id = LIT_formthelithuanianmarines
+		icon = GFX_focus_LIT_marines
+		x = 30
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_reformthenavy 
+			focus = LIT_leaveitasitis 
+		}
+		completion_reward = {
+		add_ideas = {lithuanian_marines }
+ add_tech_bonus = {
+	name = marine_bonus
+	bonus = 1.0
+	uses = 1
+	category = tp_tech
+}
+		}
+	}
+
+	#Focus for Lithuanian Submarine Fleet
+	focus = {
+		id = LIT_lithuaniansubmarinefleet
+		icon = GFX_focus_LIT_lithuanian_submarinefleet
+		x = 28
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_expertsfromprussia 
+		}
+		prerequisite = { 
+			focus = LIT_createanmilitaryport 
+		}
+		completion_reward = {
+		  add_tech_bonus = {
+	name = submarine_fleet
+	bonus = 1
+    ahead_reduction = 1
+	uses = 1
+	category = ss_tech
+}
+		}
+	}
+
+	#Focus for Buy More Destroyers
+	focus = {
+		id = LIT_buymoredestroyers
+		icon = GFX_focus_LIT_buy_destroyers
+		x = 30
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+        available = {
+		 NOT = { OR = { has_war_with = PRS has_war_with = GER } }
+		}
+		prerequisite = { 
+			focus = LIT_formthelithuanianmarines 
+		}
+		prerequisite = { 
+			focus = LIT_modernizetheshipprezidentasantanassmetona 
+		}
+		completion_reward = {
+		add_political_power =-200
+        custom_effect_tooltip = lit_tt_4
+		hidden_effect = { load_oob = "LIT_destroyers" }
+		}
+	}
+
+	#Focus for The Pearl of Lithuania!
+	focus = {
+		id = LIT_thepearloflithuania
+		icon = GFX_focus_LIT_lith_pearl
+		x = 29
+		y = 20
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LIT_defendthesea 
+			focus = LIT_underwaterattack 
+		}
+		completion_reward = {
+				navy_experience = 50
+		}
+	}
+
+	#Focus for Sell Lithuanian Aircrafts to Foreigners
+	focus = {
+		id = LIT_selllithuanianaircraftstoforeigners
+		icon = GFX_focus_LIT_sell_aircraft
+		x = 37
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_encouragelithuanianmadeplanes }
+		completion_reward = {
+		PRS = {   add_equipment_to_stockpile = {
+  type = fighter_equipment_1
+					amount = 45
+					producer = LIT
+ }
+		}
+		add_timed_idea = {idea = aircraft_deals days = 200}
+		}
+		}
+
+	#Focus for Lithuanian Quality
+	focus = {
+		id = LIT_lithuanianquality
+		icon = GFX_focus_LIT_lithuanian_quality
+		x = 41
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = LIT_grantanbomoreprivledges }
+		completion_reward = {
+		 add_tech_bonus = {
+	name = doctrine_bonus
+	bonus = 0.75
+	uses = 1
+	category = tactical_bomber
+}
+		}
+	}
+
+#End of focuses 
+ }

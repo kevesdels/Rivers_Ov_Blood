@@ -1,0 +1,200 @@
+ideas = {
+  country = {
+  
+   UZB_afghan_domination = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+	 political_power_factor = -0.25
+	 autonomy_gain = -0.25	
+	 master_ideology_drift = 0.01	
+	}
+   }
+   
+     UZB_young_bukharans = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+	socialist_drift = 0.02
+	political_power_factor = -0.15
+	stability_factor = -0.10
+	war_support_factor = -0.10		
+	}
+   }
+       KZR_freedom_fighting = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+	 stability_factor = 0.15
+	 war_support_factor = 0.15
+	political_power_gain = 0.25	
+	}
+   }
+   
+   KZR_kazakh_war = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+	army_attack_factor = 0.25
+	army_defence_factor = 0.25
+	army_speed_factor = 0.25
+	surrender_limit = 0.25	
+
+	}
+   }
+   KAZ_triumverate = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+    	political_power_factor = -0.5 
+	stability_factor = -0.10	
+	}
+   }
+   KAZ_overextended_state = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+  	army_defence_factor = -0.1
+	supply_consumption_factor = -0.1
+	stability_factor = -0.1
+	}
+   }
+   KYR_mountain_peoples = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+  	army_defence_factor = 0.25
+	winter_attrition_factor = -0.5
+	attrition = -0.1
+	supply_consumption_factor = -0.20
+
+	}
+   }
+
+   KHV_longing_for_independence = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+	army_core_attack_factor = 0.15
+  	army_core_defence_factor = 0.15
+	conscription = 0.02	
+	}
+   }
+
+   KHV_young_khivans = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+	socialist_drift = 0.03
+	national_socialist_drift = 0.01
+	political_power_factor = -0.2
+	stability_factor = -0.2
+	
+	}
+   }
+
+   TMS_basmachi_remnant = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+	cavalry_attack_factor = 0.15
+	cavalry_defence_factor = 0.15
+	army_attack_factor = 0.1
+	army_org_factor = -0.4
+	conscription = 0.01
+	mobilization_speed = 0.1
+
+	}
+   }
+
+   TMS_junaid_dictatorship = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+	political_power_gain = -0.15
+	socialist_drift = 0.02
+	stability_factor = 0.1
+		
+
+	}
+   }
+  
+  }
+ }

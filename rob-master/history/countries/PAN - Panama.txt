@@ -1,0 +1,40 @@
+﻿capital = 304
+
+oob = "PAN_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+set_war_support = 0.1
+set_convoys = 10
+
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 78
+	conservative = 22
+	authoritharian = 0
+	reactionary = 0
+	pelekist = 0
+}
+
+set_politics = {
+	ruling_party = social_liberal
+	last_election = "1932.2.14"
+	election_frequency = 48
+	elections_allowed = no
+}
+create_country_leader = {
+	name = "Florencio Harmodio Arosemena"
+	desc = "POLITICS_HARMODIO_ARIAS_MADRID_DESC"
+	picture = "Florencio_Harmodio_Arosemena.dds"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+		#
+	}
+}
+

@@ -1,0 +1,178 @@
+ideas = {
+ materiel_manufacturer = {
+ 
+ ###RSR
+  RSR_grabin_design_bureau = {
+  
+   picture = RSR_grabin
+   allowed = { original_tag = SOV }
+   cost = 150  
+   research_bonus = { artillery = 0.1 }	
+   modifier = {
+    army_artillery_attack_factor = 0.1
+	army_artillery_defence_factor = 0.1
+   }
+  }
+  
+  RSR_tula_arms_plant = {
+  
+   picture = RSR_tula
+   allowed = { original_tag = SOV }
+   cost = 150  
+   research_bonus = { infantry_weapons = 0.1 }	
+   modifier = {
+    army_infantry_attack_factor = 0.07
+	army_infantry_defence_factor = 0.07
+   }
+  } 
+ 
+ ###Lithuania
+ 
+  LIT_ginklu_fondas = {
+  
+   picture = LIT_ginklu_fondas
+   allowed = { original_tag = LIT }
+   cost = 150  
+   research_bonus = { infantry_weapons = 0.1 }	
+   modifier = {
+    army_infantry_attack_factor = 0.03
+	army_infantry_defence_factor = 0.03
+   }
+  }
+
+  LIT_linkaiciu_artilerijos_dirbtuves = {
+  
+   picture = LIT_linkaiciu_artilerijos_dirbtuves
+   allowed = { original_tag = LIT }
+   cost = 150  
+   research_bonus = { artillery = 0.1 }	
+   modifier = {
+    army_artillery_attack_factor = 0.1
+	army_artillery_defence_factor = 0.1
+   }
+  }  
+ 
+  LIT_kauno_ginklai = {
+  
+   picture = LIT_kauno_ginklai
+   allowed = { original_tag = LIT }
+   cost = 150 
+   equipment_bonus = {
+   infantry_equipment = {
+	build_cost_ic = -0.15 instant = yes
+     }
+	}    
+   research_bonus = { infantry_equipment = 0.1 }	
+  } 
+ ###Prussia
+  PRS_mauser = {
+  
+   picture = PRS_mauser
+   allowed = { original_tag = PRS }
+   cost = 150  
+   research_bonus = { infantry_weapons = 0.1 }	
+   modifier = {
+    army_infantry_attack_factor = 0.08
+	army_infantry_defence_factor = 0.08
+   }
+  }
+  
+  PRS_carl_walther = {
+  
+  picture = PRS_walther
+  allowed = { original_tag = PRS }
+  cost = 150
+  equipment_bonus = {
+   infantry_equipment = {
+	build_cost_ic = -0.12 instant = yes
+     }
+	}  
+  research_bonus = { infantry_weapons = 0.1 }
+  modifier = {
+    army_infantry_attack_factor = -0.04
+	army_infantry_defence_factor = -0.04
+   }
+  }
+  
+   PRS_rheinmetal = {
+   
+   allowed = { original_tag = PRS }
+   picture = PRS_rheinmetal
+   cost = 150  
+   research_bonus = { artillery = 0.1 }
+   modifier = {
+    army_artillery_attack_factor = 0.1
+	army_artillery_defence_factor = 0.1
+   }
+   }
+ 
+ ###Germany (Socialist)
+  GER_socializtche_gewehre = {
+   
+   picture = GER_rote_quadrat
+   allowed = { original_tag = GER }
+   cost = 150  
+   equipment_bonus = {
+   infantry_equipment = {
+			build_cost_ic = -0.1 instant = yes
+     }
+	}
+   research_bonus = { infantry_weapons = 0.1 }	
+   modifier = {
+    army_infantry_attack_factor = -0.05
+	army_infantry_defence_factor = -0.05
+   }
+   }
+   
+   GER_berlin_arsenal = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_berlin_arsenal
+   cost = 150  
+   equipment_bonus = {
+   infantry_equipment = {
+			build_cost_ic = 0.1 instant = yes
+     }
+	 }
+   research_bonus = { infantry_weapons = 0.1 }
+   modifier = {
+    army_infantry_attack_factor = 0.05
+	army_infantry_defence_factor = 0.05
+   }
+   }
+   
+   GER_rhur_arsenal = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_rur_arsenal
+   cost = 150  
+   equipment_bonus = {
+   artillery_equipment = {
+			build_cost_ic = -0.07 instant = yes
+     }
+	 }
+   research_bonus = { artillery = 0.1 }
+   modifier = {
+    army_artillery_attack_factor = -0.05
+	army_artillery_defence_factor = -0.05
+   }
+   }
+ 
+   GER_rostock_arsenal = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_rostock_arsenal
+   cost = 150  
+   equipment_bonus = {
+   artillery_equipment = {
+			build_cost_ic = 0.07 instant = yes
+     }
+	 }
+   research_bonus = { artillery = 0.1 }
+   modifier = {
+    army_artillery_attack_factor = 0.05
+	army_artillery_defence_factor = 0.05
+   }
+   }
+  }
+ }

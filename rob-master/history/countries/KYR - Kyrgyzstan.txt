@@ -1,0 +1,46 @@
+capital = 1217
+
+oob = "KYR_1936"
+
+give_military_access = KAZ
+
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+	basic_light_tank = 1
+}
+
+set_politics = {
+	ruling_party = authoritharian
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 20
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 4
+	authoritharian = 76
+	reactionary = 0
+	pelekist = 0
+}
+add_ideas = {
+limited_conscription
+KYR_mountain_peoples
+TMS_basmachi_remnant
+}
+
+create_country_leader = {
+	name = "Abdukadyr Urazbekov"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "abdukadyr_urazbekov.tga"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+

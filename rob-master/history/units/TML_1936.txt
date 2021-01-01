@@ -1,0 +1,81 @@
+division_template = {
+	name = "Tamil Guard"
+
+	division_names_group = RAJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = RAJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	#Royal Travancore Army
+	division = {
+		name = "Travancore Royal Guard"
+		location = 1238
+		division_template = "Tamil Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Royal Travancore Militia"
+		location = 1321
+		division_template = "Militia"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "1st Tamil Miliitia"
+		location = 1409
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "2nd Tamil Militia"
+		location = 7265
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "TML"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

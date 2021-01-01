@@ -1,0 +1,42 @@
+capital = 640
+
+oob = "SNN_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+	basic_light_tank = 1
+}
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 20
+	conservative = 0
+	authoritharian = 0
+	reactionary = 80
+	pelekist = 0
+}
+add_ideas = {
+limited_conscription
+}
+
+create_country_leader = {
+	name = "Shan Princely Council"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+

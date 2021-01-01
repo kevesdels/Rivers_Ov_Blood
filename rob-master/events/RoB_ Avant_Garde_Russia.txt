@@ -1,0 +1,94 @@
+####################
+###Avant Garde Russia Events
+####################
+
+add_namespace = agrussia
+
+###lets get anexedddd
+country_event = { 
+id =  agrussia.1
+title =  agrussia.1.t
+desc =  agrussia.1.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name =  agrussia.1.a
+ hidden_effect = {
+ LES = { country_event = { id = legion.20 days = 7 } }
+ }
+}
+}
+
+### bro we gonna get annexedddddd (after karel dead)
+country_event = { 
+id =  agrussia.2
+title =  agrussia.2.t
+desc =  agrussia.2.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name =  agrussia.2.a
+ LES = { annex_country = { target = AGR transfer_troops = yes }
+ hidden_effect = {
+ LES = { country_event = { id = legion.22 days = 1 } }
+ }}
+
+}
+
+}
+
+
+###fuck christians bottom text
+country_event = { 
+id =  agrussia.3
+title =  agrussia.3.t
+desc =  agrussia.3.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name =  agrussia.3.a
+  hidden_effect = {
+ LES = { country_event = { id = legion.24 days = 1 }}
+ LES  = { end_puppet = AGR }
+ LES = { set_country_flag = LES_early_game_war }
+ }
+ AGR = { declare_war_on = { target = LES type = annex_everything }}
+}
+}
+
+###Karen is dead
+country_event = { 
+id = agrussia.4
+title =  "Karel is dead"
+desc = agrussia.4.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name =  agrussia.4.a
+ desc = "Might as well give up"
+ add_war_support = -0.3
+ add_stability = -0.3
+
+ set_politics = {
+ ruling_party = democratic_socialist
+ elections_allowed = no
+}
+ create_country_leader = {
+	name = "Mikhail Simenh"
+	desc = ""
+	picture = ""
+	expire = "1960.1.1"
+	ideology = anarcho_socialism
+	traits = {}
+}
+ hidden_effect = {
+ LES = { country_event = { id = legion.27 days = 2 } }
+	}
+}
+}
+
+}

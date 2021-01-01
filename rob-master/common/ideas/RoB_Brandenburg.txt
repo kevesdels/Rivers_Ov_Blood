@@ -1,0 +1,76 @@
+ideas = {
+
+	country = {
+		Economic_transition = {
+			picture = GFX_idea_minority_troubles
+			allowed = {
+				tag = BDB
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.3
+			}
+		}
+		Rampant_prostitution = {
+			picture = GFX_idea_minority_troubles
+			allowed = {
+				tag = BDB
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+
+			modifier = {
+				stability_factor = -0.15
+				MONTHLY_POPULATION = 0.5
+				
+			}
+		}
+		Cleansed_intellectuals = {
+			picture = GFX_idea_minority_troubles
+			allowed = {
+				tag = BDB
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+
+			modifier = {
+				research_speed_factor = -0.15
+
+			}
+		}
+		anarchy_in_streets = {
+			picture = GFX_idea_minority_troubles
+			allowed = {
+				tag = BDB
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+
+			modifier = {
+				stability_factor = -0.30
+				war_support_factor = -0.25
+
+			}
+		}
+}

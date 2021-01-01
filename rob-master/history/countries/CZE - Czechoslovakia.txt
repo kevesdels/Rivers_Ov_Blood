@@ -1,0 +1,122 @@
+capital = 9
+
+oob = "CZE_1934"
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+}
+
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1929.10.27"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	national_socialist = 3
+	socialist = 10
+	democratic_socialist = 11
+	social_democracy = 20
+	social_liberal = 11
+	conservative = 34
+	authoritharian = 0
+	reactionary = 6
+	pelekist = 5
+}
+
+create_country_leader = {
+	name = "Tomáš Garrigue Masaryk"
+	desc = "POLITICS_EDVARD_BENES_DESC"
+	picture = "Tomas_Garrigue_Masaryk.dds"
+	expire = "1965.1.1"
+	ideology = conservative_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Václav Klofáč"
+	desc = "POLITICS_JAROSLAV_KREJCI_DESC"
+	picture = "Portrait_Czech_Jaroslav_Krejci.dds"
+	expire = "1965.1.1"
+	ideology = democratic_socialist_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Klement Gottwald"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_Czech_Klement_Gottwald.dds"
+	expire = "1965.1.1"
+	ideology = socialist_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Antonín Hampl"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_Czech_Klement_Gottwald.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Andrej Hlinka"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_Czech_Klement_Gottwald.dds"
+	expire = "1965.1.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Hans Knirsch"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_Czech_Klement_Gottwald.dds"
+	expire = "1965.1.1"
+	ideology = national_socialist_subtype
+	traits = {
+		#
+	}
+}
+
+
+create_field_marshal = {
+	name = "Josef Šnejdárek"
+	gfx = "GFX_Portrait_czechoslovakia_josef_snejdarek"
+	traits = { thorough_planner defensive_doctrine }
+	skill = 3
+    attack_skill = 3
+    defense_skill = 4
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Richard Tesařík"
+	gfx = "GFX_Portrait_czechoslovakia_richard_tesarik"
+	traits = { armor_officer }
+	skill = 2
+    attack_skill = 4
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+

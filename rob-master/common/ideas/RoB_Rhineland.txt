@@ -1,0 +1,80 @@
+ideas = {
+   country = {
+   
+   rhur_economic_wonderland = {
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_rhur_economic_wonderland
+	 
+	 modifier = {
+			consumer_goods_factor = -0.04
+			production_factory_max_efficiency_factor = 0.07
+			line_change_production_efficiency_factor = 0.05
+			production_speed_buildings_factor = 0.025
+			}
+   
+   }
+   rhur_under_french_protection = {
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_rhur_under_french_protection
+	 
+	 modifier = {
+			army_morale_factor = -0.06
+			stability_factor = -0.10
+			defensive_war_stability_factor = 0.60 
+			production_speed_bunker_factor = 0.1 
+			}
+   
+   }
+   rhur_mass_degeneracy = {
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_rhur_mass_degeneracy
+	 
+	 modifier = {
+			stability_factor = -0.10 
+			war_support_factor = -0.30
+			authoritharian_drift = 0.005
+			reactionary_drift = 0.005
+			pelekist_drift = 0.005
+			conservative_drift = 0.005
+			}
+   
+   }
+   rhur_underequiped_military = {
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_rhur_underequiped_military
+	 
+	 modifier = {
+				army_morale_factor = -0.2
+				army_core_attack_factor	= -0.1
+				army_core_defence_factor = -0.1
+				surrender_limit = -0.2
+				supply_consumption_factor = 0.30
+			}
+   
+   }
+}
+}

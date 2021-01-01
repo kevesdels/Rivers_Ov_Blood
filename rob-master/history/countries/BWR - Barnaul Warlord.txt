@@ -1,0 +1,51 @@
+capital = 40
+set_research_slots = 1
+oob = "BWR_1934"
+
+
+set_politics = {
+	ruling_party = authoritharian
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 2
+	democratic_socialist = 2
+	social_democracy = 2
+	social_liberal = 2
+	conservative = 2
+	authoritharian = 75
+	reactionary = 6
+	pelekist = 9
+}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+}
+
+set_country_flag = RUS_warlord
+add_ai_strategy = {
+    type = alliance
+    id = "TOW"
+    value = 2000
+}
+add_ideas = {
+ extensive_conscription
+ civil_war_attrition_2
+}
+create_country_leader = {
+	name = "Grand Duke Dmitri Pavlovich"
+	desc = ""
+	picture = "dmitri_pavlovich.tga"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype 
+	traits = {
+		#
+	}
+}

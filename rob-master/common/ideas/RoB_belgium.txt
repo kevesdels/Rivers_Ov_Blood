@@ -1,0 +1,76 @@
+ideas = {
+   country = {
+   
+   BEL_kingdom_in_exile = {
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 
+	 modifier = {
+			political_power_factor = -0.1
+			trade_opinion_factor = -0.5
+			stability_factor = -0.25	
+			}
+   
+   }
+
+   BEL_british_dominance = {
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 
+	 modifier = {
+			political_power_factor = -0.25
+			stability_factor = 0.1
+			industrial_capacity_factory = 0.25
+			consumer_goods_factor = -0.1
+
+			}
+   
+   }
+   BEL_immient_collapse = {
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 
+	 modifier = {
+			stability_weekly = -0.03	
+
+			}
+   
+   }
+   BEL_native_ignorance = {
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 
+	 modifier = {
+			stability_factor = -0.1
+			conscription_factor = -0.95
+
+			}
+   
+   }
+
+}
+}

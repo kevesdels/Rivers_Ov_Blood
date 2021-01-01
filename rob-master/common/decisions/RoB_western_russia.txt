@@ -1,0 +1,143 @@
+RUS_expansion_question = {
+ 
+ RUS_expansion_question = {
+ fire_only_once = yes
+  complete_effect = {
+   ROOT = { country_event = { id = south_russian.6 days = 1 } }
+  }
+  	ai_will_do = {
+			base = 200
+			}
+ }
+
+ RUS_expand_southwards = {
+  available = {
+   OR = {
+   AND = {
+   has_country_flag = RUS_SOU_caucasus
+   date > 1935.6.6
+   }
+   RUS = { exists = no }
+  }
+  }
+  fire_only_once = yes
+  days_remove = 25
+  remove_effect = {
+   create_wargoal = { type = annex_everything target = GEO }
+   create_wargoal = { type = annex_everything target = AZR }
+   create_wargoal = { type = annex_everything target = CHE }
+   create_wargoal = { type = annex_everything target = DAG }
+   create_wargoal = { type = annex_everything target = MRP }
+   every_state = {
+    limit = { 
+	 OR = {
+	  is_core_of = MRP
+	  is_core_of = GEO
+	  is_core_of = AZR
+	  is_core_of = CHE
+	  is_core_of = DAG
+	  }
+	 add_core_of = ROOT
+   }
+  }
+ }
+ 	ai_will_do = {
+			base = 200
+			}
+ }
+ 
+ RUS_expand_northwards = {
+ fire_only_once = yes
+ available = {
+   date > 1935.6.6
+  }
+ days_remove = 25
+  available = {
+   OR = {
+   has_country_flag = RUS_SOU_traitor
+   AND = {
+    DAG = { exists = no }
+    CHE = { exists = no }
+    GEO = { exists = no }
+    AZR = { exists = no }
+    MRP = { exists = no }
+   }
+  }
+ remove_effect = {
+   create_wargoal = { type = annex_everything target = RUS }
+   every_state = {
+    limit = { is_core_of = RUS }
+	add_core_of = ROOT
+   }
+  }
+	ai_will_do = {
+			base = 200
+			}
+ }
+}
+}
+
+RUS_southern_initiative = {
+
+RUS_integrate_southern_lands = {
+ fire_only_once = yes
+ days_remove = 50
+ available = {
+	ROOT = {
+	 has_full_control_of_state = 217
+	 has_full_control_of_state = 257
+	 }
+	}
+ remove_effect = {
+    set_cosmetic_tag = RUS_SOU
+    every_state = {
+    limit = { 
+	 OR = {
+	  is_core_of = CAA
+	  is_core_of = CRM
+	  is_core_of = CAU
+	  }
+	  remove_core_of = PREV
+	  add_core_of = ROOT
+   }
+  }
+}
+
+}
+
+RUS_mobilize_militias = {
+available = {
+has_defensive_war = yes
+NOT = {
+has_country_flag = RUS_mobilization
+}
+}
+ai_will_do = {
+			base = 200
+		}
+complete_effect = {
+set_country_flag = RUS_mobilization
+RUS = { load_oob = "RUS_militias" }
+}
+}
+
+RUS_demobilize_militias = {
+available = {
+has_defensive_war = yes
+}
+activation = {
+has_template = "Narodnya Militsiya"
+has_defensive_war = no
+}
+is_good = yes
+days_mission_timeout = 30
+timeout_effect = {
+delete_unit_template_and_units = { division_template = "Narodnya Militsiya" }
+clr_country_flag = RUS_mobilization
+}
+complete_effect = {
+}
+}
+
+###end of southern initiative
+}

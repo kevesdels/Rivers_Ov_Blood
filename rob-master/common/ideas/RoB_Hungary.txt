@@ -1,0 +1,25 @@
+ideas = {
+country{
+  
+  occupied_country = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = no
+			}
+     removal_cost = -1
+	 picture = GFX_saf_history_of_segregation
+	 modifier = {
+				political_power_gain = -0.50
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				conscription_factor = -0.25
+				consumer_goods_factor = 0.20
+				production_factory_max_efficiency_factor = -0.15
+				production_speed_buildings_factor = -0.15
+			}
+  
+  }
+}
+

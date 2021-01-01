@@ -1,0 +1,1331 @@
+focus_tree = {
+	id = GER_reactionary_coup
+	country = {
+		factor = 0
+    		modifier = {
+			add = 100
+			tag = SWE
+		}
+}
+continuous_focus_position = { x = 50 y = 4000 }
+
+shared_focus = GER_formthewehrmacht
+shared_focus = GER_formthekriegsmarine
+shared_focus = GER_formtheluftwaffe
+
+
+	#Focus for A German Army!
+	focus = {
+		id = GER_agermanarmy
+		icon = GFX_goal_unknown
+		x = 23
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_germanvalues 
+		}
+		prerequisite = { 
+			focus = GER_fanaticalarmy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Focus on family Buisnesses
+	focus = {
+		id = GER_focusonfamilybuisnesses
+		icon = GFX_goal_unknown
+		x = 14
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_formtheksd }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Get the Economy Moving
+	focus = {
+		id = GER_gettheeconomymoving
+		icon = GFX_goal_unknown
+		x = 14
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_focusonfamilybuisnesses }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Merge State and Church
+	focus = {
+		id = GER_mergestateandchurch
+		icon = GFX_goal_unknown
+		x = 18
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_anewkaiser }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Form the KSD
+	focus = {
+		id = GER_formtheksd
+		icon = GFX_goal_unknown
+		x = 14
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_anewkaiser }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for King Sent By God
+	focus = {
+		id = GER_kingsentbygod
+		icon = GFX_goal_unknown
+		x = 16
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_anewkaiser }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Purge any Opposition
+	focus = {
+		id = GER_purgeanyopposition
+		icon = GFX_goal_unknown
+		x = 16
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_kingsentbygod }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Absolutism
+	focus = {
+		id = GER_absolutism
+		icon = GFX_goal_unknown
+		x = 16
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_banpelekistgroups 
+		}
+		prerequisite = { 
+			focus = GER_bandemocraticgroups 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Ban Pelekist Groups
+	focus = {
+		id = GER_banpelekistgroups
+		icon = GFX_goal_unknown
+		x = 15
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_purgeanyopposition }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Kingdom Only For Germans
+	focus = {
+		id = GER_akingdomonlyforgermans
+		icon = GFX_goal_unknown
+		x = 17
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_absolutism 
+		}
+		prerequisite = { 
+			focus = GER_enforcegermanization 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Ban Democratic Groups
+	focus = {
+		id = GER_bandemocraticgroups
+		icon = GFX_goal_unknown
+		x = 17
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_purgeanyopposition }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Vigilante Justice
+	focus = {
+		id = GER_vigilantejustice
+		icon = GFX_goal_unknown
+		x = 10
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_anticommunistbookburnings }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Anti Communist Book Burnings
+	focus = {
+		id = GER_anticommunistbookburnings
+		icon = GFX_goal_unknown
+		x = 10
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_publicexecutions }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A New Kaiser!
+	focus = {
+		id = GER_anewkaiser
+		icon = GFX_goal_unknown
+		x = 16
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for New Elections!
+	focus = {
+		id = GER_newelections
+		icon = GFX_goal_unknown
+		x = 30
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Deal with the Communists
+	focus = {
+		id = GER_dealwiththecommunists
+		icon = GFX_goal_unknown
+		x = 5
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Destroy them
+	focus = {
+		id = GER_destroythem
+		icon = GFX_goal_unknown
+		x = 8
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_dealwiththecommunists }
+		mutually_exclusive = { focus = GER_rehabilitation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Rehabilitation
+	focus = {
+		id = GER_rehabilitation
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_dealwiththecommunists }
+		mutually_exclusive = { focus = GER_destroythem }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Reverse Damage
+	focus = {
+		id = GER_reversedamage
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_rehabilitation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Re-education Camps
+	focus = {
+		id = GER_reeducationcamps
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_rehabilitation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Execute the most fanatical...
+	focus = {
+		id = GER_executethemostfanatical
+		icon = GFX_goal_unknown
+		x = 4
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_rehabilitation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for ...Forgive the rest
+	focus = {
+		id = GER_forgivetherest
+		icon = GFX_goal_unknown
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_executethemostfanatical }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Grant Positions to Ex-Communists
+	focus = {
+		id = GER_grantpositionstoexcommunists
+		icon = GFX_goal_unknown
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_forgivetherest }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Military Education
+	focus = {
+		id = GER_militaryeducation
+		icon = GFX_goal_unknown
+		x = 22
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_focusonthemilitary }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Fanatical Army
+	focus = {
+		id = GER_fanaticalarmy
+		icon = GFX_goal_unknown
+		x = 24
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Elite Training
+	focus = {
+		id = GER_elitetraining
+		icon = GFX_goal_unknown
+		x = 24
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_everyonemustserve }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Everyone MUST Serve
+	focus = {
+		id = GER_everyonemustserve
+		icon = GFX_goal_unknown
+		x = 24
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_focusonthemilitary }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for German Values
+	focus = {
+		id = GER_germanvalues
+		icon = GFX_goal_unknown
+		x = 22
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_createthedsa }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Change the History Books!
+	focus = {
+		id = GER_changethehistorybooks
+		icon = GFX_goal_unknown
+		x = 26
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_glorifytheteutonicknights }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Create the DSA
+	focus = {
+		id = GER_createthedsa
+		icon = GFX_goal_unknown
+		x = 22
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_militaryeducation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Deal with the Democrats
+	focus = {
+		id = GER_dealwiththedemocrats
+		icon = GFX_goal_unknown
+		x = 20
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_ludendorffsjunta }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Kaiserstaat
+	focus = {
+		id = GER_kaiserstaat
+		icon = GFX_goal_unknown
+		x = 15
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_gettheeconomymoving 
+		}
+		prerequisite = { 
+			focus = GER_absolutism 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Radical Traditionalism
+	focus = {
+		id = GER_radicaltraditionalism
+		icon = GFX_goal_unknown
+		x = 18
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_mergestateandchurch }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Penal Battalions
+	focus = {
+		id = GER_penalbattalions
+		icon = GFX_goal_unknown
+		x = 8
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_concetrationcamps }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Execute Marxist Proffesors
+	focus = {
+		id = GER_executemarxistproffesors
+		icon = GFX_goal_unknown
+		x = 8
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_penalbattalions }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Concetration Camps
+	focus = {
+		id = GER_concetrationcamps
+		icon = GFX_goal_unknown
+		x = 8
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_destroythem }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Public Executions
+	focus = {
+		id = GER_publicexecutions
+		icon = GFX_goal_unknown
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_destroythem }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Unity from Revenge!
+	focus = {
+		id = GER_unityfromrevenge
+		icon = GFX_goal_unknown
+		x = 8
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_workpunishments 
+		}
+		prerequisite = { 
+			focus = GER_executemarxistproffesors 
+		}
+		prerequisite = { 
+			focus = GER_vigilantejustice 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Return land
+	focus = {
+		id = GER_returnland
+		icon = GFX_goal_unknown
+		x = 6
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_banunions }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Work Punishments
+	focus = {
+		id = GER_workpunishments
+		icon = GFX_goal_unknown
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_returnland }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Ban Unions
+	focus = {
+		id = GER_banunions
+		icon = GFX_goal_unknown
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_destroythem }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Unity without Bloodshed!
+	focus = {
+		id = GER_unitywithoutbloodshed
+		icon = GFX_goal_unknown
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_liftthebanonleftwingorginizations 
+		}
+		prerequisite = { 
+			focus = GER_allowexcommunistsbackintosociety 
+		}
+		prerequisite = { 
+			focus = GER_grantpositionstoexcommunists 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Allow Ex-Communists Back Into Society
+	focus = {
+		id = GER_allowexcommunistsbackintosociety
+		icon = GFX_goal_unknown
+		x = 2
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_removemarxistsproffesors }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Lift the ban on left wing orginizations
+	focus = {
+		id = GER_liftthebanonleftwingorginizations
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_privatizationcampaign }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Remove Marxists Proffesors
+	focus = {
+		id = GER_removemarxistsproffesors
+		icon = GFX_goal_unknown
+		x = 2
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_reeducationcamps }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Privatization Campaign
+	focus = {
+		id = GER_privatizationcampaign
+		icon = GFX_goal_unknown
+		x = 0
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_reversedamage }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Ludendorff's Junta
+	focus = {
+		id = GER_ludendorffsjunta
+		icon = GFX_goal_unknown
+		x = 23
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Free from Communism!
+	focus = {
+		id = GER_freefromcommunism
+		icon = GFX_goal_unknown
+		x = 5
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_unityfromrevenge 
+		}
+		prerequisite = { 
+			focus = GER_unitywithoutbloodshed 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Revitalize German Economy
+	focus = {
+		id = GER_revitalizegermaneconomy
+		icon = GFX_goal_unknown
+		x = 39
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Enforce Germanization
+	focus = {
+		id = GER_enforcegermanization
+		icon = GFX_goal_unknown
+		x = 18
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_radicaltraditionalism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Holy Emperor
+	focus = {
+		id = GER_theholyemperor
+		icon = GFX_goal_unknown
+		x = 16
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_kaiserstaat 
+		}
+		prerequisite = { 
+			focus = GER_akingdomonlyforgermans 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Meine Ehre heißt Treue
+	focus = {
+		id = GER_meineehreheittreue
+		icon = GFX_goal_unknown
+		x = 23
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_loyaltytothedeath 
+		}
+		prerequisite = { 
+			focus = GER_anarmyonlyloyaltotheleader 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Deal with the Pelekists
+	focus = {
+		id = GER_dealwiththepelekists
+		icon = GFX_goal_unknown
+		x = 20
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_ludendorffsjunta }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Focus on the Military
+	focus = {
+		id = GER_focusonthemilitary
+		icon = GFX_goal_unknown
+		x = 23
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_ludendorffsjunta }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Endorse "German" Religions
+	focus = {
+		id = GER_endorsegermanreligions
+		icon = GFX_goal_unknown
+		x = 20
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_dealwiththedemocrats }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Radio to Every Man!
+	focus = {
+		id = GER_aradiotoeveryman
+		icon = GFX_goal_unknown
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_ludendorffsjunta }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Glorify the Teutonic Knights
+	focus = {
+		id = GER_glorifytheteutonicknights
+		icon = GFX_goal_unknown
+		x = 26
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_aradiotoeveryman }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Fanatical populace
+	focus = {
+		id = GER_fanaticalpopulace
+		icon = GFX_goal_unknown
+		x = 26
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_changethehistorybooks }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for An Army Only Loyal to the Leader!
+	focus = {
+		id = GER_anarmyonlyloyaltotheleader
+		icon = GFX_goal_unknown
+		x = 22
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_agermanyfreefromthechurch 
+		}
+		prerequisite = { 
+			focus = GER_agermanarmy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Fanatical Nation!
+	focus = {
+		id = GER_afanaticalnation
+		icon = GFX_goal_unknown
+		x = 25
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_fanaticalarmy 
+		}
+		prerequisite = { 
+			focus = GER_fanaticalpopulace 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Germany Free from the Church!
+	focus = {
+		id = GER_agermanyfreefromthechurch
+		icon = GFX_goal_unknown
+		x = 21
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_endorsegermanreligions 
+		}
+		prerequisite = { 
+			focus = GER_germanvalues 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Loyalty to the death!
+	focus = {
+		id = GER_loyaltytothedeath
+		icon = GFX_goal_unknown
+		x = 24
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_afanaticalnation 
+		}
+		prerequisite = { 
+			focus = GER_agermanarmy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Social Democrats Win
+	focus = {
+		id = GER_socialdemocratswin
+		icon = GFX_goal_unknown
+		x = 28
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_newelections }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Liberals win
+	focus = {
+		id = GER_liberalswin
+		icon = GFX_goal_unknown
+		x = 30
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_newelections }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Conservatives win
+	focus = {
+		id = GER_conservativeswin
+		icon = GFX_goal_unknown
+		x = 32
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_newelections }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Capitalism with Socialist Aspects
+	focus = {
+		id = GER_capitalismwithsocialistaspects
+		icon = GFX_goal_unknown
+		x = 28
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_socialdemocratswin }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Welfare State
+	focus = {
+		id = GER_welfarestate
+		icon = GFX_goal_unknown
+		x = 28
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_capitalismwithsocialistaspects }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Secular State
+	focus = {
+		id = GER_asecularstate
+		icon = GFX_goal_unknown
+		x = 28
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_welfarestate }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Land Privatization
+	focus = {
+		id = GER_landprivatization
+		icon = GFX_goal_unknown
+		x = 30
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_liberalswin }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Laisez Faire Economics
+	focus = {
+		id = GER_laisezfaireeconomics
+		icon = GFX_goal_unknown
+		x = 30
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_landprivatization }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Encourage German Nationalism
+	focus = {
+		id = GER_encouragegermannationalism
+		icon = GFX_goal_unknown
+		x = 32
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_conservativeswin }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Enforce Traditional Norms
+	focus = {
+		id = GER_enforcetraditionalnorms
+		icon = GFX_goal_unknown
+		x = 32
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_encouragegermannationalism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Open Borders for Germany
+	focus = {
+		id = GER_openbordersforgermany
+		icon = GFX_goal_unknown
+		x = 30
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_laisezfaireeconomics }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Increase Conscription
+	focus = {
+		id = GER_increaseconscription
+		icon = GFX_goal_unknown
+		x = 32
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_enforcetraditionalnorms }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A German Germany!
+	focus = {
+		id = GER_agermangermany
+		icon = GFX_goal_unknown
+		x = 31
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_openbordersforgermany 
+			focus = GER_increaseconscription 
+		}
+		mutually_exclusive = { 
+			focus = GER_afreegermany 
+		}
+		mutually_exclusive = { 
+			focus = GER_ 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Free Germany!
+	focus = {
+		id = GER_afreegermany
+		icon = GFX_goal_unknown
+		x = 29
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_asecularstate 
+			focus = GER_openbordersforgermany 
+		}
+		mutually_exclusive = { focus = GER_agermangermany }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Privatize Land
+	focus = {
+		id = GER_privatizeland
+		icon = GFX_goal_unknown
+		x = 36
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_revitalizegermaneconomy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Privatize Industry
+	focus = {
+		id = GER_privatizeindustry
+		icon = GFX_goal_unknown
+		x = 42
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_revitalizegermaneconomy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Invite Exiled Capitalists
+	focus = {
+		id = GER_inviteexiledcapitalists
+		icon = GFX_goal_unknown
+		x = 39
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_revitalizegermaneconomy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Decree No.5
+	focus = {
+		id = GER_decreeno5
+		icon = GFX_goal_unknown
+		x = 36
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_privatizeland }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Invest in Private Sector
+	focus = {
+		id = GER_investinprivatesector
+		icon = GFX_goal_unknown
+		x = 42
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_privatizeindustry }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Munich-Berlin Highway
+	focus = {
+		id = GER_munichberlinhighway
+		icon = GFX_goal_unknown
+		x = 42
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_investinprivatesector }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Return of Nobility
+	focus = {
+		id = GER_returnofnobility
+		icon = GFX_goal_unknown
+		x = 36
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_decreeno5 }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Invite Austrian School Theorists
+	focus = {
+		id = GER_inviteaustrianschooltheorists
+		icon = GFX_goal_unknown
+		x = 39
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_inviteexiledcapitalists }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Import Cheap Consumer Goods
+	focus = {
+		id = GER_importcheapconsumergoods
+		icon = GFX_goal_unknown
+		x = 40
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_inviteaustrianschooltheorists 
+		}
+		prerequisite = { 
+			focus = GER_munichberlinhighway 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Laissez-Faire Economics
+	focus = {
+		id = GER_laissezfaireeconomics
+		icon = GFX_goal_unknown
+		x = 38
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_returnofnobility 
+		}
+		prerequisite = { 
+			focus = GER_inviteaustrianschooltheorists 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Free from Socialism!
+	focus = {
+		id = GER_freefromsocialism
+		icon = GFX_goal_unknown
+		x = 39
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_laissezfaireeconomics 
+		}
+		prerequisite = { 
+			focus = GER_importcheapconsumergoods 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#End of focuses 
+ }

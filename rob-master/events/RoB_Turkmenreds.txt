@@ -1,0 +1,3141 @@
+#################
+###Turkmen Red Events
+#################
+
+add_namespace = turkmenreds
+
+
+###Battle of Ashqabad
+
+
+country_event = {
+id = turkmenreds.100
+title = turkmenreds.100.t
+desc = turkmenreds.100.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###The Time Has Come
+name = turkmenreds.100.a
+ai_chance = { factor = 100}
+add_manpower = -1000
+TMS = { country_event = { id = turkmenreds.101 days = 3 } }
+}
+
+option = {
+###Lets not
+name = turkmenreds.100.b
+ai_chance = { factor = 0}
+add_political_power = -100
+add_stability = -0.25
+
+
+}
+}
+
+###TMS' reaction to TRS incursion
+country_event = {
+id = turkmenreds.101
+title = turkmenreds.101.t
+desc = turkmenreds.101.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TMS
+}
+
+option = {
+###They can do that?
+name = turkmenreds.101.a
+ai_chance = { factor = 100}
+add_manpower = -2500
+TRS = { country_event = { id = turkmenreds.102 days = 3} }
+add_ideas = TRS_shell_shocked
+}
+
+}
+
+###Raid successful
+country_event = {
+id = turkmenreds.102
+title = turkmenreds.102.t
+desc = turkmenreds.102.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###gimme the loot
+name = turkmenreds.102.a
+ai_chance = { factor = 100}
+add_manpower = 937
+add_tech_bonus = {
+    bonus = 0.75
+    uses = 1
+    category = infantry_weapons
+}
+}
+
+}
+
+###Stalin Chain
+
+###Events 103 - 110 have completed loc, but you can redo them if you wish
+###Ioseb Jughashvili (stalin) Found
+country_event = {
+id = turkmenreds.103
+title = turkmenreds.103.t
+desc = turkmenreds.103.d
+
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###destroy him
+name = turkmenreds.103.a
+ai_chance = { factor = 50}
+add_manpower = -1000
+hidden_effect = { random_list = {
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.104 days = 3 } } }
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.105 days = 3 } } }
+    }
+}
+}
+
+option = {
+###he poses no threat
+name = turkmenreds.103.b
+ai_chance = { factor = 25}
+add_political_power = -50
+hidden_effect = { random_list = {
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.106 days = 20 } } }
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.111 days = 3 } } }
+    }
+}
+}
+}
+
+###Victory over Jughashvili
+country_event = {
+id = turkmenreds.104
+title = turkmenreds.104.t
+desc = turkmenreds.104.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Burn in hell, traitor
+name = turkmenreds.104.a
+ai_chance = { factor = 100}
+add_manpower = 974
+add_ideas = TRS_stalin_gone
+hidden_effect = { country_event = { id = turkmenreds.107 days = 5 } }
+}
+
+}
+
+###A crushing defeat
+country_event = {
+id = turkmenreds.105
+title = turkmenreds.105.t
+desc = turkmenreds.105.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###W-what!?
+name = turkmenreds.105.a
+ai_chance = { factor = 100}
+add_manpower = 573
+hidden_effect = { country_event = { id = turkmenreds.106 days = 5 } }
+}
+
+}
+
+###Jughashvili Attacks us
+country_event = {
+id = turkmenreds.106
+title = turkmenreds.106.t
+desc = turkmenreds.106.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Guard is routed
+name = turkmenreds.106.a
+ai_chance = { factor = 100}
+add_manpower = -257
+hidden_effect = { country_event = { id = turkmenreds.108 days = 1 } }
+}
+option = {
+###Jughashvili slips away 
+name = turkmenreds.106.b
+ai_chance = { factor = 50}
+add_manpower = -383
+hidden_effect = { country_event = { id = turkmenreds.107 days = 10 } }
+}
+
+}
+
+###Jughashvili returns offering his surrender
+country_event = {
+id = turkmenreds.107
+title = turkmenreds.107.t
+desc = turkmenreds.107.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Let him be a general
+name = turkmenreds.107.a
+ai_chance = { factor = 100}
+add_manpower = 263
+create_field_marshal = {
+	name = "Ioseb Jughashvili"
+	picture = "Portrait_SOV_Papa_Stalin.tga"
+	traits = { offensive_doctrine old_guard trait_reckless }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
+	id = 3333
+}
+hidden_effect = { country_event = { id = turkmenreds.109 days = 5 } }
+}
+option = {
+###he cannot be trusted
+name = turkmenreds.107.b
+ai_chance = { factor = 50}
+hidden_effect = { country_event = { id = turkmenreds.110 days = 5 } }
+}
+
+}
+
+###Jughashvili proclaims himself leader
+country_event = {
+id = turkmenreds.108
+title = turkmenreds.108.t
+desc = turkmenreds.108.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###We will be victorious
+name = turkmenreds.108.a
+ai_chance = { factor = 100}
+create_field_marshal = {
+	name = "Ioseb Jughashvili"
+	picture = "Portrait_SOV_Papa_Stalin.tga"
+	traits = { offensive_doctrine old_guard trait_reckless }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
+	id = 3333
+}
+set_politics = {
+	ruling_party = national_socialist
+}
+every_unit_leader = {
+    limit = { has_id = 3334 }
+    retire = yes
+}
+}
+
+}
+
+###Jughashvili coup
+country_event = {
+id = turkmenreds.109
+title = turkmenreds.109.t
+desc = turkmenreds.109.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Didnt see that coming...
+name = turkmenreds.109.a
+ai_chance = { factor = 25}
+set_politics = {
+	ruling_party = national_socialist
+}
+every_unit_leader = {
+    limit = { has_id = 3334 }
+    retire = yes
+}
+}
+option = {
+###We will defeat him again!
+name = turkmenreds.109.b
+ai_chance = { factor = 25}
+add_stability = -0.2
+add_manpower = -539
+every_unit_leader = {
+    limit = { has_id = 3333 }
+    retire = yes
+}
+}
+}
+
+###Jughashvili reported North
+country_event = {
+id = turkmenreds.110
+title = turkmenreds.110.t
+desc = turkmenreds.110.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###And don't come back
+name = turkmenreds.110.a
+ai_chance = { factor = 100}
+add_stability = 0.2
+
+}
+}
+
+
+###Reports Jughashvil fled
+country_event = {
+id = turkmenreds.111
+title = turkmenreds.111.t
+desc = turkmenreds.111.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Okay
+name = turkmenreds.111.a
+ai_chance = { factor = 100}
+ hidden_effect = { country_event = { id = turkmenreds.110 days = 1 } }
+ hidden_effect = { TMS = { country_event = { id = turkmenreds.112 days = 10 } } }
+
+}
+}
+
+country_event = {
+###A raid in Ashkabad
+id = turkmenreds.112
+title = turkmenreds.112.t
+desc = turkmenreds.112.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TMS
+}
+
+option = {
+###This can't be happening...
+name = turkmenreds.112.a
+ai_chance = { factor = 15}
+create_field_marshal = {
+	name = "Ioseb Jughashvili"
+	picture = "Portrait_TMS_Papa_Stalin.tga"
+	traits = { offensive_doctrine old_guard trait_reckless }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
+	id = 3333
+}
+set_politics = {
+	ruling_party = national_socialist
+}
+add_popularity = {
+    ideology = national_socialist
+    popularity = 0.2
+}
+create_country_leader = {
+	name = "Ioseb Jughashvili"
+	desc = ""
+	picture = "Portrait_TMS_Papa_Stalin.tga"
+	expire = "1965.1.1"
+	ideology = national_socialist_subtype
+	traits = {
+		
+	}
+}
+hidden_effect = { country_event = { id = turkmenreds.113 days = 10 } }
+}
+option = {
+###He has been defeated
+name = turkmenreds.112.b
+ai_chance = { factor = 85}
+add_stability = -0.2
+add_manpower = -539
+hidden_effect = { JSW = { country_event = { id = turkmenreds.114 days = 100 } } }
+
+}
+
+}
+
+###First order of business
+country_event = {
+id = turkmenreds.113
+title = turkmenreds.113.t
+desc = turkmenreds.113.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TMS
+}
+
+option = {
+###Destroy Khiva
+name = turkmenreds.113.a
+ai_chance = { factor = 100}
+end_puppet = KHV
+declare_war_on = {
+    target = KHV
+    type = puppet_wargoal_focus
+}
+}
+}
+
+###An exile from transcapia
+
+country_event = {
+id = turkmenreds.114
+title = turkmenreds.114.t
+desc = turkmenreds.114.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = JSW
+}
+
+option = {
+###Let him join our ranks
+name = turkmenreds.114.a
+ai_chance = { factor = 100}
+create_field_marshal = {
+	name = "Ioseb Jughashvili"
+	picture = ""
+	traits = { offensive_doctrine old_guard trait_reckless }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
+	id = 3333
+}
+add_manpower = 543
+add_popularity = {
+    ideology = national_socialist
+    popularity = 0.1
+}
+}
+option = {
+###No way.
+name = turkmenreds.114.b
+ai_chance = { factor = 0}
+add_manpower = -25
+
+}
+
+}
+
+###Transcapia offers alliance
+
+country_event = {
+id = turkmenreds.115
+title = turkmenreds.115.t
+desc = turkmenreds.115.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = OMS
+}
+
+option = {
+###Accept
+
+name = turkmenreds.115.a
+ai_chance = { factor = 100}
+diplomatic_relation = {
+    country = TRS
+    relation = non_aggression_pact
+    active = no
+}
+add_opinion_modifier = {
+    target = TRS
+    modifier = large_increase
+}
+}
+option = {
+###decline
+
+name = turkmenreds.115.b
+ai_chance = { factor = 0}
+add_opinion_modifier = {
+    target = TRS
+    modifier = large_decrease
+}
+
+}
+
+
+}
+
+###Battle of Krasnovodsk
+
+country_event = {
+id = turkmenreds.116
+title = turkmenreds.116.t
+desc = turkmenreds.116.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Seize the region
+
+name = turkmenreds.116.a
+ai_chance = { factor = 50}
+start_border_war = {
+    change_state_after_war = yes
+    attacker = {
+        state = 1184
+        num_provinces = 2
+        on_win = alash.102
+        on_lose = alash.103
+        on_cancel = alash.104
+    }
+				
+    defender = {
+        state = 1181
+        num_provinces = 2
+        on_win = alash.103
+        on_lose = alash.102
+        on_cancel = alash.104
+    }
+}
+}
+option = {
+###Take it using spies
+
+name = turkmenreds.116.b
+ai_chance = { factor = 50}
+hidden_effect = { random_list = {
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.117 days = 3 } } }
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.118 days = 3 } } }
+    }
+}
+
+}
+
+}
+
+###Spies seize Krasnovodsk
+
+country_event = {
+id = turkmenreds.117
+title = turkmenreds.117.t
+desc = turkmenreds.117.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Great
+
+name = turkmenreds.117.a
+ai_chance = { factor = 25}
+transfer_state = 1181
+
+}
+
+}
+
+###plot discovered
+
+country_event = {
+id = turkmenreds.118
+title = turkmenreds.118.t
+desc = turkmenreds.118.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Oh no
+
+name = turkmenreds.118.a
+ai_chance = { factor = 25}
+add_stability = -0.1
+add_manpower = -50
+ hidden_effect = { TMS = { { country_event = { id = turkmenreds.119 days = 3 } } }
+
+}
+
+}
+
+}
+
+###Transcapia reds tried to take krasnovodsk
+
+country_event = {
+id = turkmenreds.119
+title = turkmenreds.119.t
+desc = turkmenreds.119.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TMS
+}
+
+option = {
+###destroy this this instant
+
+name = turkmenreds.119.a
+ai_chance = { factor = 100}
+declare_war_on = {
+    target = TRS
+    type = annex_everything
+}
+
+}
+option = {
+###lmao no
+
+name = turkmenreds.119.b
+ai_chance = { factor = 0}
+add_war_support = -0.15
+}
+
+}
+
+###Declaring independence
+
+country_event = {
+id = turkmenreds.120
+title = turkmenreds.120.t
+desc = turkmenreds.120.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = KHV
+has_war = yes
+}
+
+option = {
+###khiva is free
+
+name = turkmenreds.120.a
+ai_chance = { factor = 100}
+TMS = { end_puppet = KHV }
+white_peace = TRS
+
+}
+option = {
+###status quo
+
+name = turkmenreds.120.b
+ai_chance = { factor = 0}
+add_political_power = -50
+}
+
+}
+
+###Second Basmachi Revolt
+
+country_event = {
+id = turkmenreds.121
+title = turkmenreds.121.t
+desc = turkmenreds.121.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+NOT = { KAZ = { exists = yes } } 
+NOT = { KYR = { exists = yes } } 
+NOT = { UZB = { exists = yes } } 
+NOT = { KHV = { exists = yes } } 
+NOT = { KZR = { exists = yes } } 
+NOT = { TMS = { exists = yes } } 
+NOT = { has_completed_focus = TRS_alliancewithbasmachi }
+NOT = { has_completed_focus = TRS_destroypanturkists }
+}
+
+option = {
+###Destroy these turkists
+
+name = turkmenreds.121.a
+ai_chance = { factor = 75}
+TAJ = { transfer_state = 742 } 
+TAJ = { set_province_controller = 1573 }
+TAJ = { set_province_controller = 10488 }
+TAJ = { set_province_controller = 10187 }
+TAJ = { set_province_controller = 10660 }
+TAJ = { set_province_controller = 1459 }
+TAJ = { set_province_controller = 10408 }
+TAJ = { set_province_controller = 1216 }
+TAJ = { set_province_controller = 4482 }
+TAJ = { set_province_controller = 1591 }
+TAJ = { set_province_controller = 1483 }
+TAJ = { add_state_core = 742 }
+TAJ = { add_state_core = 1217 }
+TAJ = { add_state_core = 732 }
+TAJ = { add_state_core = 1218 }
+TAJ = { add_state_core = 1177 }
+TAJ = { add_state_core = 1178 }
+TAJ = { add_state_core = 1179 }
+TAJ = { add_state_core = 1180 }
+TAJ = { add_state_core = 1185 }
+TAJ = { add_state_core = 1181 }
+TAJ = { add_state_core = 1175 }
+TAJ = { add_state_core = 1184 }
+TAJ = { add_state_core = 1183 }
+TAJ = { add_state_core = 1182 }
+TAJ = { add_state_core = 1176 }
+TAJ = { add_state_core = 984 }
+TAJ = { add_state_core = 405 }
+TAJ = { add_state_core = 586 }
+TAJ = { add_state_core = 1174 }
+TAJ = { add_state_core = 587 }
+TAJ = { add_state_core = 585 }
+TAJ = { load_oob = "TAJ_1936" }
+TAJ = { add_manpower = 50000 } 
+TAJ = { declare_war_on = {
+    target = TRS
+    type = annex_everything
+}
+}
+}
+
+
+option = {
+###Turkestan will be free (play as basmachi)
+
+name = turkmenreds.121.b
+ai_chance = { factor = 0}
+TAJ = { transfer_state = 742 } 
+TAJ = { set_province_controller = 1573 }
+TAJ = { set_province_controller = 10488 }
+TAJ = { set_province_controller = 10187 }
+TAJ = { set_province_controller = 10660 }
+TAJ = { set_province_controller = 1459 }
+TAJ = { set_province_controller = 10408 }
+TAJ = { set_province_controller = 1216 }
+TAJ = { set_province_controller = 4482 }
+TAJ = { set_province_controller = 1591 }
+TAJ = { set_province_controller = 1483 }
+TAJ = { add_state_core = 742 }
+TAJ = { add_state_core = 1217 }
+TAJ = { add_state_core = 732 }
+TAJ = { add_state_core = 1218 }
+TAJ = { add_state_core = 1177 }
+TAJ = { add_state_core = 1178 }
+TAJ = { add_state_core = 1179 }
+TAJ = { add_state_core = 1180 }
+TAJ = { add_state_core = 1185 }
+TAJ = { add_state_core = 1181 }
+TAJ = { add_state_core = 1175 }
+TAJ = { add_state_core = 1184 }
+TAJ = { add_state_core = 1183 }
+TAJ = { add_state_core = 1182 }
+TAJ = { add_state_core = 1176 }
+TAJ = { add_state_core = 984 }
+TAJ = { add_state_core = 405 }
+TAJ = { add_state_core = 586 }
+TAJ = { add_state_core = 1174 }
+TAJ = { add_state_core = 587 }
+TAJ = { add_state_core = 585 }
+TAJ = { load_oob = "TAJ_1936" }
+TAJ = { add_manpower = 50000 } 
+TAJ = { declare_war_on = {
+    target = TRS
+    type = annex_everything
+}
+}
+TAJ = { change_tag_from = TRS }
+
+}
+
+}
+
+###Second order of business
+
+country_event = {
+id = turkmenreds.122
+title = turkmenreds.122.t
+desc = turkmenreds.122.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TMS
+has_government = national_socialist
+NOT = { country_exists = KHV }
+
+
+}
+
+option = {
+###Look who's back
+
+name = turkmenreds.122.a
+ai_chance = { factor = 95}
+declare_war_on = {
+    target = TRS
+    type = annex_everything
+}
+}
+
+option = {
+###nah
+
+name = turkmenreds.122.b
+ai_chance = { factor = 5}
+add_stability = -0.2
+}
+}
+
+###Move capital to Moscow?
+
+country_event = {
+id = turkmenreds.123
+title = turkmenreds.123.t
+desc = turkmenreds.123.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###MOSS COW MOSS COW
+		trigger = {
+			owns_state = 123
+		}
+name = turkmenreds.123.a
+ai_chance = { factor = 60}
+set_capital = 123
+add_political_power = -100
+add_manpower = -20000
+123 = { add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+}
+
+option = {
+###Tsaritsyn
+		trigger = {
+			owns_state = 217
+		}
+
+name = turkmenreds.123.b
+ai_chance = { factor = 15}
+set_capital = 217
+add_political_power = -100
+add_manpower = -20000
+217 = { add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+}
+
+option = {
+###Leningrad
+		trigger = {
+			owns_state = 195
+		}
+name = turkmenreds.123.c
+ai_chance = { factor = 20}
+set_capital = 195
+add_political_power = -100
+add_manpower = -20000
+195 = { add_building_construction = {
+    type = industrial_complex
+    level = 1
+    instant_build = yes
+}
+}
+}
+
+option = {
+###Improve the existing capital
+
+name = turkmenreds.123.d
+ai_chance = { factor = 5}
+584 = { add_building_construction = {
+    type = industrial_complex
+    level = 2
+    instant_build = yes
+}
+}
+584 = { add_building_construction = {
+    type = arms_factory
+    level = 1
+    instant_build = yes
+}
+}
+}
+}
+
+#Soviet offers alliance
+country_event = {
+id = turkmenreds.124
+title = turkmenreds.124.t
+desc = turkmenreds.124.d
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+option = {
+###yes
+
+name = turkmenreds.124.a
+ai_chance = { factor = 100}
+TRS = { add_to_faction = ROOT }
+}
+
+option = {
+###nah (should never happen)
+
+name = turkmenreds.124.b
+ai_chance = { factor = 0}
+add_stability = -0.1
+}
+}
+
+#Reds take caspian coast
+country_event = {
+id = turkmenreds.125
+title = turkmenreds.125.t
+desc = turkmenreds.125.d
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+option = {
+###yes
+
+name = turkmenreds.125.a
+ai_chance = { factor = 100}
+add_political_power = -50
+add_stability = -0.05
+}
+
+}
+
+#Reds take West balkans
+country_event = {
+id = turkmenreds.126
+title = turkmenreds.126.t
+desc = turkmenreds.126.d
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+option = {
+###yes
+
+name = turkmenreds.126.a
+ai_chance = { factor = 100}
+add_political_power = -50
+add_stability = -0.05
+}
+
+}
+
+#Reds take East balkans
+country_event = {
+id = turkmenreds.127
+title = turkmenreds.127.t
+desc = turkmenreds.127.d
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+option = {
+###yes
+
+name = turkmenreds.127.a
+ai_chance = { factor = 100}
+add_political_power = -50
+add_stability = -0.05
+}
+
+}
+
+###Move capital to Ashgabad
+
+country_event = {
+id = turkmenreds.128
+title = turkmenreds.128.t
+desc = turkmenreds.128.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###yes
+name = turkmenreds.128.a
+ai_chance = { factor = 60}
+set_capital = 584
+add_political_power = -100
+add_manpower = -5000
+add_stability = 0.5
+584 = { add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 12333
+}
+}
+}
+}
+
+###Red coup
+
+country_event = {
+id = turkmenreds.129
+title = turkmenreds.129.t
+desc = turkmenreds.129.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = KHV
+}
+
+option = {
+###yes
+name = turkmenreds.129.a
+ai_chance = { factor = 60}
+add_popularity = {
+    ideology = socialist
+    popularity = 0.2
+}
+add_popularity = {
+    ideology = national_socialist
+    popularity = 0.2
+}
+
+TRS = { puppet = KHV }
+
+}
+option = {
+###no
+name = turkmenreds.129.b
+ai_chance = { factor = 40}
+add_popularity = {
+    ideology = socialist
+    popularity = 0.2
+}
+add_popularity = {
+    ideology = national_socialist
+    popularity = 0.2
+}
+TRS = { country_event = {
+    id = turkmenreds.130
+
+} }
+
+}
+
+}
+
+###INVADE KIVA
+
+country_event = {
+id = turkmenreds.130
+title = turkmenreds.130.t
+desc = turkmenreds.130.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###yes
+name = turkmenreds.130.a
+ai_chance = { factor = 60}
+declare_war_on = {
+    target = KHV
+    type = annex_everything
+}
+
+}
+}
+
+###RCAA wants to join us
+
+country_event = {
+id = turkmenreds.131
+title = turkmenreds.131.t
+desc = turkmenreds.131.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = SOV
+}
+
+option = {
+###yes
+name = turkmenreds.131.a
+ai_chance = { factor = 85}
+puppet = TRS
+		TRS = { country_event = {
+    id = turkmenreds.133
+}
+}
+
+}
+option = {
+###no
+name = turkmenreds.131.b
+ai_chance = { factor = 15}
+		TRS = { country_event = {
+    id = turkmenreds.132
+}
+}
+
+}
+
+}
+
+###they don't want us
+
+country_event = {
+id = turkmenreds.132
+title = turkmenreds.132.t
+desc = turkmenreds.132.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###yes
+name = turkmenreds.132.a
+complete_national_focus = TRS_ourownsovietunion
+
+
+}
+}
+
+###they want us
+
+country_event = {
+id = turkmenreds.133
+title = turkmenreds.133.t
+desc = turkmenreds.133.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###yes
+name = turkmenreds.133.a
+set_cosmetic_tag = TRS_TRK
+if = {
+    limit = {
+       has_government = national_socialist
+    }
+    create_country_leader = {
+	name = "Ioseb Jughashvili"
+	desc = "POLITICS_JOSEPH_STALIN_DESC"
+	picture = "Portrait_SOV_Papa_Stalin.tga"
+	expire = "1965.1.1"
+	ideology = market_socialism
+	traits = {
+		
+	}
+}
+    else = {
+        create_country_leader = {
+	name = "Mikhail Frunze"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Mikhail_Frunze.tga"
+	expire = "1965.1.1"
+	ideology = market_socialism
+	traits = {
+		cornered_fox
+	}
+}
+    }
+}
+}
+}
+
+###Vladivostok Coup
+
+country_event = {
+id = turkmenreds.134
+title = turkmenreds.134.t
+desc = turkmenreds.134.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = JVD
+}
+
+option = {
+###yes
+name = turkmenreds.134.a
+ai_chance = { factor = 85} 
+
+		TRS = { country_event = {
+    id = turkmenreds.135
+}
+}
+		JAP = { country_event = {
+    id = turkmenreds.136
+}
+}
+}
+option = {
+###no
+name = turkmenreds.134.b
+ai_chance = { factor = 15}
+		TRS = { country_event = {
+    id = turkmenreds.137
+}
+}
+
+		JAP = { country_event = {
+    id = turkmenreds.138
+}
+}
+
+}
+
+}
+
+###Vladivostok joins us
+
+country_event = {
+id = turkmenreds.135
+title = turkmenreds.135.t
+desc = turkmenreds.135.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###yes
+name = turkmenreds.135.a
+annex_country = {
+    target = JVD
+    transfer_troops = yes
+}
+
+}
+}
+
+###Vladivostok joins the trs
+
+country_event = {
+id = turkmenreds.136
+title = turkmenreds.136.t
+desc = turkmenreds.136.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = JAP
+}
+
+option = {
+###yes
+name = turkmenreds.136.a
+ai_chance = { factor = 90} 
+add_stability = -0.1
+
+}
+option = {
+###yes
+name = turkmenreds.136.a
+ai_chance = { factor = 10} 
+declare_war_on = {
+    target = TRS
+    type = annex_everything
+}
+
+}
+}
+
+###Vladivostok coup fails
+
+country_event = {
+id = turkmenreds.137
+title = turkmenreds.137.t
+desc = turkmenreds.137.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###WAR
+name = turkmenreds.137.a
+ai_chance = { factor = 40} 
+declare_war_on = {
+    target = TRS
+    type = annex_everything
+}
+transfer_state = 409
+add_manpower = 1000
+
+}
+option = {
+###NO
+name = turkmenreds.137.a
+ai_chance = { factor = 60} 
+add_stability = -0.1
+add_manpower = 1000
+
+}
+}
+
+###Panic in Transamur
+
+country_event = {
+id = turkmenreds.138
+title = turkmenreds.138.t
+desc = turkmenreds.138.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = JAP
+}
+
+option = {
+###invade them
+name = turkmenreds.138.a
+ai_chance = { factor = 90} 
+add_manpower = -3000
+annex_country = {
+    target = JVD
+    transfer_troops = yes
+}
+
+}
+option = {
+###no
+name = turkmenreds.138.a
+ai_chance = { factor = 10} 
+add_stability = -0.05
+
+}
+}
+
+###Mr Manchu, do you want to revolt?
+
+country_event = {
+id = turkmenreds.139
+title = turkmenreds.139.t
+desc = turkmenreds.139.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = MAN
+}
+
+option = {
+###yes
+name = turkmenreds.139.a
+ai_chance = { factor = 85} 
+
+		TRS = { country_event = {
+    id = turkmenreds.140
+}
+}
+		JAP = { country_event = {
+    id = turkmenreds.141
+}
+}
+		CHI = { country_event = {
+    id = turkmenreds.144
+}
+}
+}
+option = {
+###no
+name = turkmenreds.139.b
+ai_chance = { factor = 15}
+		TRS = { country_event = {
+    id = turkmenreds.142
+}
+}
+
+		JAP = { country_event = {
+    id = turkmenreds.143
+}
+}
+
+}
+
+}
+
+###Manchu joins us
+
+country_event = {
+id = turkmenreds.140
+title = turkmenreds.140.t
+desc = turkmenreds.140.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###yes
+name = turkmenreds.140.a
+every_country = {
+limit = { has_war_with = MAN }
+white_peace = MAN
+
+}
+JAP = { end_puppet = MAN }
+MAN = { declare_war_on = {
+    target = JAP
+    type = annex_everything
+}
+}
+MAN = { country_event = {
+    id = turkmenreds.146
+
+}
+}
+add_opinion_modifier = {
+    target = MAN
+    modifier = huge_increase
+}
+MAN = {
+add_opinion_modifier = {
+    target = TRS
+    modifier = huge_increase
+}
+}
+
+}
+}
+
+###Manchu joins the trs
+
+country_event = {
+id = turkmenreds.141
+title = turkmenreds.141.t
+desc = turkmenreds.141.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = JAP
+}
+
+option = {
+###CYKA BLYAT in japanese
+name = turkmenreds.141.a
+ai_chance = { factor = 90} 
+add_stability = -0.1
+
+
+}
+
+}
+
+###Manchu coup fails
+
+country_event = {
+id = turkmenreds.142
+title = turkmenreds.142.t
+desc = turkmenreds.142.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###WAR
+name = turkmenreds.142.a
+add_political_power = -50
+}
+}
+
+###Panic in Manchukuo
+
+country_event = {
+id = turkmenreds.143
+title = turkmenreds.143.t
+desc = turkmenreds.143.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = JAP
+}
+
+option = {
+###invade them
+name = turkmenreds.143.a
+ai_chance = { factor = 90} 
+add_manpower = -30000
+annex_country = {
+    target = MAN
+    transfer_troops = yes
+}
+
+}
+option = {
+###no
+name = turkmenreds.143.a
+ai_chance = { factor = 10} 
+add_stability = -0.05
+
+}
+}
+
+###China annex Mengjiang
+
+country_event = {
+id = turkmenreds.144
+title = turkmenreds.144.t
+desc = turkmenreds.144.d
+is_triggered_only = yes
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = CHI
+}
+
+option = {
+###invade them
+name = turkmenreds.144.a
+ai_chance = { factor = 99} 
+add_manpower = -5000
+annex_country = {
+    target = MEN
+}
+
+}
+option = {
+###no
+name = turkmenreds.144.a
+ai_chance = { factor = 1} 
+add_stability = -0.05
+
+}
+}
+
+###Victory over TMS
+
+country_event = {
+id = turkmenreds.145
+title = turkmenreds.145.t
+desc = turkmenreds.145.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+owns_state = 584
+}
+
+option = {
+name = turkmenreds.145.a
+
+complete_national_focus = TRS_victoryintranscapia
+
+}
+
+}
+
+###TRS invites us
+
+country_event = {
+id = turkmenreds.146
+title = turkmenreds.146.t
+desc = turkmenreds.146.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = MAN
+}
+
+option = {
+name = turkmenreds.146.a
+
+TRS = { add_to_faction = MAN }
+
+}
+
+}
+
+###Fayzulla Khodzhayev Disappears
+
+country_event = {
+id = turkmenreds.147
+title = turkmenreds.147.t
+desc = turkmenreds.147.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+date > 1934.05.01
+}
+
+option = {
+name = turkmenreds.147.a
+add_stability = -0.03
+add_manpower = -14
+country_event = { id = turkmenreds.148 days = 3 }
+every_unit_leader = {
+    limit = { has_id = 3335 }
+    retire = yes
+}
+}
+
+}
+
+###He hasn't returned yet
+
+country_event = {
+id = turkmenreds.148
+title = turkmenreds.148.t
+desc = turkmenreds.148.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+###Mount an expedition
+
+option = {
+name = turkmenreds.148.a
+add_manpower = -30
+hidden_effect = { random_list = {
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.149 days = 5 } } }
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.150 days = 5 } } }
+    }
+}
+
+}
+
+###Lets not waste our time
+
+option = {
+name = turkmenreds.148.b
+add_stability = -0.03
+hidden_effect = { random_list = {
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.151 days = 5 } } }
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.152 days = 5 } } }
+    }
+}
+}
+
+}
+
+
+
+###He has been Intercepted
+
+country_event = {
+id = turkmenreds.149
+title = turkmenreds.149.t
+desc = turkmenreds.149.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+###Hang him for treason
+
+option = {
+name = turkmenreds.149.a
+add_manpower = -1
+add_manpower = 30
+add_stability = 0.05
+hidden_effect = { country_event = { id = turkmenreds.153 days = 5 } } 
+
+}
+
+###Allow him back into our ranks
+option = {
+name = turkmenreds.149.b
+add_stability = 0.03
+add_manpower = 44
+create_corps_commander = {
+	name = "Fayzulla Khodzhayev"
+	picture = ""
+	traits = { defensive_doctrine infantry_officer organizer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+	id = 3335
+}
+ hidden_effect = { country_event = { id = turkmenreds.154 days = 15 } } 
+}
+
+}
+
+###Killed by Turkmen Raiders
+
+country_event = {
+id = turkmenreds.150
+title = turkmenreds.150.t
+desc = turkmenreds.150.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+###A reminder of our inhospitable  land
+
+option = {
+name = turkmenreds.150.a
+add_manpower = 30
+add_stability = 0.05
+hidden_effect = { country_event = { id = turkmenreds.153 days = 5 } } 
+
+}
+
+}
+
+###Returns after an ambush
+
+country_event = {
+id = turkmenreds.151
+title = turkmenreds.151.t
+desc = turkmenreds.151.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+###Something isn't right... Kill him.
+
+option = {
+name = turkmenreds.151.a
+add_manpower = -1
+add_stability = 0.05
+hidden_effect = { country_event = { id = turkmenreds.153 days = 5 } } 
+
+}
+
+###Let him return to our ranks
+
+option = {
+name = turkmenreds.151.b
+add_stability = 0.03
+add_manpower = 14
+create_corps_commander = {
+	name = "Fayzulla Khodzhayev"
+	picture = ""
+	traits = { defensive_doctrine infantry_officer organizer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+	id = 3335
+}
+ hidden_effect = { country_event = { id = turkmenreds.154 days = 15 } } 
+
+
+
+}
+
+}
+
+###Fled to turkmenistan
+
+country_event = {
+id = turkmenreds.152
+title = turkmenreds.152.t
+desc = turkmenreds.152.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+###Verdammt
+
+option = {
+name = turkmenreds.152.a
+add_stability = -0.05
+hidden_effect = { TMS = { country_event = { id = turkmenreds.155 days = 5 } } }
+
+}
+
+}
+
+###The note
+
+country_event = {
+id = turkmenreds.153
+title = turkmenreds.153.t
+desc = turkmenreds.153.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+###Anyone could be a traitor
+
+option = {
+name = turkmenreds.153.a
+add_stability = -0.05
+ hidden_effect = { country_event = { id = turkmenreds.156 days = 5 } } 
+}
+
+}
+
+###Fayzulla Burns tent and Commits suicide
+
+country_event = {
+id = turkmenreds.154
+title = turkmenreds.154.t
+desc = turkmenreds.154.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+###Salvage what we can
+
+option = {
+name = turkmenreds.154.a
+add_manpower = -1
+add_stability = -0.03
+hidden_effect = { country_event = { id = turkmenreds.153 days = 15 } } 
+every_unit_leader = {
+    limit = { has_id = 3335 }
+    retire = yes
+}
+}
+
+###Let the fire rage...
+
+option = {
+name = turkmenreds.154.b
+add_manpower = -1
+add_stability = -0.03
+every_unit_leader = {
+    limit = { has_id = 3335 }
+    retire = yes
+}
+
+
+
+}
+
+}
+
+###Welcome to turkmenistan!
+
+country_event = {
+id = turkmenreds.155
+title = turkmenreds.155.t
+desc = turkmenreds.155.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TMS
+}
+
+###Perfect.
+
+option = {
+name = turkmenreds.155.a
+add_manpower = 14
+
+create_corps_commander = {
+	name = "Fayzulla Khodzhayev"
+	picture = ""
+	traits = { defensive_doctrine infantry_officer organizer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+	id = 3335
+}
+}
+
+}
+
+###Konstantin Avksentevsky mysteriously dies
+
+country_event = {
+id = turkmenreds.156
+title = turkmenreds.156.t
+desc = turkmenreds.156.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+###This army is barely holding together...
+
+option = {
+name = turkmenreds.156.a
+add_manpower = -1
+add_stability = -0.10
+every_unit_leader = {
+    limit = { has_id = 3336 }
+    retire = yes
+}
+hidden_effect = { country_event = { id = turkmenreds.157 days = 15 } }
+hidden_effect = { country_event = { id = turkmenreds.159 days = 5 } } 
+hidden_effect = { country_event = { id = turkmenreds.160 days = 5 } } 
+ 
+
+}
+
+###A mass conspiracy!
+
+option = {
+name = turkmenreds.156.b
+add_manpower = -485
+add_stability = -0.25
+every_unit_leader = {
+    limit = { has_id = 3336 }
+    retire = yes
+}
+
+hidden_effect = { country_event = { id = turkmenreds.158 days = 15 } } 
+
+}
+
+}
+
+###Purges end
+
+country_event = {
+id = turkmenreds.157
+title = turkmenreds.157.t
+desc = turkmenreds.157.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+###Thank god...
+
+option = {
+name = turkmenreds.157.a
+add_manpower = -154
+add_stability = -0.10
+
+}
+
+}
+
+###Exiles alert TMS of our weakness
+
+country_event = {
+id = turkmenreds.158
+title = turkmenreds.158.t
+desc = turkmenreds.158.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+###oh god oh no
+
+option = {
+name = turkmenreds.158.a
+hidden_effect = { TMS = { country_event = { id = turkmenreds.173 days = 5 } } }
+
+}
+
+}
+
+###An attempt on the life of Frunze
+
+country_event = {
+id = turkmenreds.159
+title = turkmenreds.159.t
+desc = turkmenreds.159.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+has_government = socialist
+
+}
+
+###The Guards kill the assassin
+
+option = {
+name = turkmenreds.159.a
+add_manpower = -18
+add_stability = -0.05
+every_unit_leader = {
+    limit = { has_id = 3334 }
+    add_timed_unit_leader_trait = {
+    trait = wounded
+    days = 90
+}
+}
+
+}
+
+}
+
+###An attempt on the life of Jughashvili
+
+country_event = {
+id = turkmenreds.160
+title = turkmenreds.160.t
+desc = turkmenreds.160.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+has_government = national_socialist
+
+}
+
+###Jughashvili personally kills him
+
+option = {
+name = turkmenreds.160.a
+add_manpower = -18
+add_stability = -0.03
+add_war_support = 0.03
+every_unit_leader = {
+    limit = { has_id = 3333 }
+    add_timed_unit_leader_trait = {
+    trait = wounded
+    days = 30
+}
+}
+army_experience = 5
+
+
+}
+
+}
+
+###A Mystery Man From the North
+
+country_event = {
+id = turkmenreds.161
+title = turkmenreds.161.t
+desc = turkmenreds.161.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+date > 1935.01.01
+}
+
+option = {
+###Let him join our ranks
+
+name = turkmenreds.161.a
+
+hidden_effect = { random_list = {
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.162 days = 5 } } }
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.164 days = 5 } } }
+    }
+}
+
+}
+
+option = {
+###Kill him
+
+name = turkmenreds.161.b
+
+hidden_effect = { random_list = {
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.163 days = 5 } } }
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.165 days = 5 } } }
+    }
+}
+}
+
+}
+
+###Mystery Man engineers planes and airstrip
+
+country_event = {
+id = turkmenreds.162
+title = turkmenreds.162.t
+desc = turkmenreds.162.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Great!
+
+name = turkmenreds.162.a
+1175 = { add_building_construction = {
+    type = air_base
+    level = 1
+    instant_build = yes
+}
+}
+set_technology = {
+    early_fighter = 1
+}
+
+add_equipment_to_stockpile = {
+    type = fighter_equipment_0
+    amount = 3
+    producer = TRS
+}
+
+}
+
+
+}
+
+###Mystery Man has blueprints for guns and planes
+
+country_event = {
+id = turkmenreds.163
+title = turkmenreds.163.t
+desc = turkmenreds.163.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Great!
+
+name = turkmenreds.163.a
+
+set_technology = {
+    	early_fighter = 1
+}
+set_technology = { 
+	infantry_weapons1 = 1
+}
+
+
+}
+
+
+}
+
+###Mystery Man on a rampage
+
+country_event = {
+id = turkmenreds.164
+title = turkmenreds.164.t
+desc = turkmenreds.164.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Kill him!
+
+name = turkmenreds.164.a
+
+add_manpower = -100
+add_stability = -0.2
+hidden_effect = { random_list = {
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.166 days = 2 } } }
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.167 days = 2 } } }
+    }
+}
+
+}
+
+
+}
+
+
+###A spy from the north
+
+country_event = {
+id = turkmenreds.165
+title = turkmenreds.165.t
+desc = turkmenreds.165.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Serves him right!
+
+name = turkmenreds.165.a
+
+add_political_power = 50
+add_stability = 0.05
+
+
+}
+
+
+}
+
+###Mystery Man - A spy from the north
+
+country_event = {
+id = turkmenreds.166
+title = turkmenreds.166.t
+desc = turkmenreds.166.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Serves him right!
+
+name = turkmenreds.166.a
+
+add_political_power = 50
+add_stability = 0.05
+set_technology = { 
+	infantry_weapons1 = 1
+}
+
+}
+
+
+}
+
+###Somethings not right...
+
+country_event = {
+id = turkmenreds.167
+title = turkmenreds.167.t
+desc = turkmenreds.167.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###The killer must have been hired
+
+name = turkmenreds.167.a
+
+add_stability = -0.05
+hidden_effect = { random_list = {
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.168 days = 5 } } }
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.169 days = 5 } } }
+    }
+}
+
+}
+option = {
+###The killer must be one of us
+
+name = turkmenreds.167.b
+
+add_stability = -0.05
+hidden_effect = { random_list = {
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.170 days = 5 } } }
+    50 = {
+        hidden_effect = { country_event = { id = turkmenreds.171 days = 5 } } }
+    }
+}
+
+}
+
+}
+
+###Mystery Man - A Turkmen Raiding Party
+
+country_event = {
+id = turkmenreds.168
+title = turkmenreds.168.t
+desc = turkmenreds.168.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Revenge has been served.
+
+name = turkmenreds.168.a
+
+add_political_power = 50
+army_experience = 10
+add_stability = 0.05
+
+add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 100
+    producer = TMS
+}
+ hidden_effect = { TMS = { country_event = { id = turkmenreds.172 days = 5 } } }
+
+}
+
+
+}
+
+###Mystery Man - Scout party disappears 
+
+country_event = {
+id = turkmenreds.169
+title = turkmenreds.169.t
+desc = turkmenreds.169.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Scary.
+
+name = turkmenreds.168.a
+
+add_political_power = -50
+add_stability = -0.10
+add_manpower = -100
+
+}
+
+
+}
+
+###Mystery Man - A soldier gone mad 
+
+country_event = {
+id = turkmenreds.170
+title = turkmenreds.170.t
+desc = turkmenreds.170.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Scary.
+
+name = turkmenreds.170.a
+
+add_political_power = -50
+add_war_support = -0.05
+add_stability = 0.05
+add_manpower = -1
+
+}
+
+
+}
+
+###Mystery Man - Nothing 
+
+country_event = {
+id = turkmenreds.171
+title = turkmenreds.171.t
+desc = turkmenreds.171.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Scary.
+
+name = turkmenreds.171.a
+
+add_political_power = -50
+add_war_support = -0.05
+add_stability = -0.05
+add_manpower = -100
+
+}
+
+
+}
+
+###Mystery Man - TMS Gets Revenge? 
+
+country_event = {
+id = turkmenreds.172
+title = turkmenreds.172.t
+desc = turkmenreds.172.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TMS
+}
+
+option = {
+###To war
+
+name = turkmenreds.172.a
+declare_war_on = {
+    target = TRS
+    type = annex_everything
+}
+
+
+}
+
+option = {
+###We are not ready
+
+name = turkmenreds.172.b
+add_political_power = -50
+
+}
+
+}
+
+###Dead general - End it for all?
+
+country_event = {
+id = turkmenreds.173
+title = turkmenreds.173.t
+desc = turkmenreds.173.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TMS
+}
+
+option = {
+###To war
+
+name = turkmenreds.173.a
+declare_war_on = {
+    target = TRS
+    type = annex_everything
+}
+
+
+}
+
+option = {
+###We are not ready
+
+name = turkmenreds.173.b
+add_political_power = -50
+
+}
+
+}
+
+###TRS in 1934
+
+country_event = {
+id = turkmenreds.174
+title = turkmenreds.174.t
+desc = turkmenreds.174.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+date > 1934.1.1
+}
+
+mean_time_to_happen = { days = 2 }
+
+option = {
+###okie dokie
+
+name = turkmenreds.174.a
+add_political_power = 5
+
+
+
+}
+
+
+}
+
+###The Tsar Tank
+
+country_event = {
+id = turkmenreds.175
+title = turkmenreds.175.t
+desc = turkmenreds.175.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+date > 1934.12.1
+}
+
+
+option = {
+###mine it
+
+name = turkmenreds.175.a
+add_manpower = -500
+add_ideas = TRS_tsar_tank
+set_technology = {
+    gwtank = 1
+}
+
+
+}
+
+option = {
+###don't
+
+name = turkmenreds.175.a
+
+
+
+
+}
+
+
+}
+
+###TMS destroy trs
+
+country_event = {
+id = turkmenreds.176
+title = turkmenreds.176.t
+desc = turkmenreds.176.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TMS
+date > 1938.5.1
+}
+
+mean_time_to_happen = { days = 150 }
+
+option = {
+###KILL THEM
+
+name = turkmenreds.176.a
+
+declare_war_on = {
+    target = TRS
+    type = annex_everything
+}
+
+
+}
+
+
+}
+
+###Rename stalingrad
+
+country_event = {
+id = turkmenreds.177
+title = turkmenreds.177.t
+desc = turkmenreds.177.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+owns_state = 217
+has_government = national_socialist
+
+}
+
+
+option = {
+###rename it
+
+name = turkmenreds.177.a
+ai_chance = { factor = 90}
+
+set_province_name = {
+    id = 3529
+    name = "Stalingrad"
+}
+
+
+}
+
+option = {
+###Dont
+
+name = turkmenreds.177.a
+ai_chance = { factor = 10}
+
+set_province_name = {
+    id = 3529
+    name = "Volgograd"
+}
+
+
+}
+
+}
+
+###Rename bishkek
+
+country_event = {
+id = turkmenreds.178
+title = turkmenreds.178.t
+desc = turkmenreds.178.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+owns_state = 732
+has_government = socialist
+
+}
+
+
+option = {
+###rename it
+
+name = turkmenreds.178.a
+ai_chance = { factor = 90}
+
+set_province_name = {
+    id = 12583
+    name = "Frunze"
+}
+
+
+}
+
+option = {
+###Dont
+
+name = turkmenreds.178.a
+ai_chance = { factor = 10}
+
+set_province_name = {
+    id = 12583
+    name = "Bishkek"
+}
+
+
+}
+
+}
+
+###Capture of moscow
+
+country_event = {
+id = turkmenreds.179
+title = turkmenreds.179.t
+desc = turkmenreds.179.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+controls_state = 219
+
+
+}
+
+
+option = {
+###we did it... we won
+
+name = turkmenreds.179.a
+ai_chance = { factor = 90}
+
+add_war_support = 0.1
+add_stability = 0.1
+
+
+}
+}
+
+###Delhi or Assam 
+
+country_event = {
+id = turkmenreds.180
+title = turkmenreds.180.t
+desc = turkmenreds.180.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+}
+
+option = {
+###Delhi
+name = turkmenreds.180.a
+DEL = { country_event = { id = turkmenreds.181 } }
+
+
+}
+
+option = {
+###Assam
+
+name = turkmenreds.180.b
+ASM = { country_event = { id = turkmenreds.181 } }
+
+}
+
+}
+
+###TRS invite 
+
+country_event = {
+id = turkmenreds.181
+title = turkmenreds.181.t
+desc = turkmenreds.181.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+OR = { 
+tag = ASM
+tag = DEL
+}
+}
+
+option = {
+###YES
+name = turkmenreds.181.a
+ai_chance = { factor = 100}
+TRS = { add_to_faction = ROOT }
+
+
+}
+
+option = {
+###NO (should never happen )
+
+name = turkmenreds.181.b
+ai_chance = { factor = 0}
+
+}
+
+}
+
+###Capture of stalingrad
+
+country_event = {
+id = turkmenreds.182
+title = turkmenreds.182.t
+desc = turkmenreds.182.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+controls_state = 217
+has_government = national_socialist
+
+}
+
+
+option = {
+###i have finally returned to the site of my greatest failure
+
+name = turkmenreds.182.a
+ai_chance = { factor = 90}
+
+add_war_support = 0.1
+add_stability = 0.1
+
+
+}
+}
+
+###Free raid
+
+country_event = {
+id = turkmenreds.183
+title = turkmenreds.183.t
+desc = turkmenreds.183.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TRS
+NOT = { has_completed_focus = TRS_infiltratethecoalition }
+date > 1936.10.10
+}
+
+
+option = {
+###Oh well, better join the attack
+
+name = turkmenreds.183.a
+ai_chance = { factor = 90}
+
+add_war_support = 0.05
+add_stability = 0.05
+complete_national_focus = TRS_infiltratethecoalition
+
+
+}
+}
+
+###Turkmen-Persian Alliance
+
+country_event = {
+id = turkmenreds.184
+title = turkmenreds.184.t
+desc = turkmenreds.184.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TMS
+has_offensive_war_with = TRS 
+date > 1937.10.10
+}
+
+
+option = {
+###Propose an Alliance
+
+name = turkmenreds.184.a
+ai_chance = { factor = 95}
+
+PER = { 
+country_event = {
+    id = turkmenreds.185
+}
+}
+
+
+}
+option = {
+###Dont
+
+name = turkmenreds.184.b
+ai_chance = { factor = 5}
+
+
+
+
+}
+}
+
+###TMS Proposes an Alliance
+
+country_event = {
+id = turkmenreds.185
+title = turkmenreds.185.t
+desc = turkmenreds.185.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = PER
+
+}
+
+
+option = {
+###Agree
+
+name = turkmenreds.185.a
+ai_chance = { factor = 95}
+
+create_faction = Turkmen_Persian
+PER = { add_to_faction = TMS }
+
+}
+option = {
+###Decline
+
+name = turkmenreds.185.b
+ai_chance = { factor = 5}
+
+TMS = { 
+country_event = {
+    id = turkmenreds.186
+}
+}
+
+
+}
+}
+
+###TMS Proposes an Alliance rejected
+
+country_event = {
+id = turkmenreds.186
+title = turkmenreds.186.t
+desc = turkmenreds.186.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = TMS
+
+}
+
+
+option = {
+###aw mann
+
+name = turkmenreds.185.a
+ai_chance = { factor = 95}
+
+
+
+}
+
+}
+
+#######################
+#####SOVIETS
+#######################
+
+###Proclaim new socialist state
+
+country_event = {
+id = turkmenreds.187
+title = "Proclamation of Soviet Republic"
+desc = turkmenreds.187.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+
+option = {
+set_cosmetic_tag = TRS_USSR
+name = turkmenreds.185.a
+ai_chance = { factor = 95}
+set_country_flag = TRS_SOV_proclaimed
+add_ideas = {
+ TRS_SOV_economic_ruins
+ TRS_SOV_political_insatbility
+}
+add_popularity = { ideology = pelekist popularity = 0.05 }
+add_popularity = { ideology = reactionary popularity = 0.05 }
+add_popularity = { ideology = authoritharian popularity = 0.05 }
+add_popularity = { ideology = democratic_socialist popularity = 0.1 }
+add_popularity = { ideology = social_democracy popularity = 0.1 }
+add_popularity = { ideology = social_liberal popularity = 0.1 }
+add_popularity = { ideology = conservative popularity = 0.1 }
+}
+
+}

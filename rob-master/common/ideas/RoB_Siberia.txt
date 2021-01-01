@@ -1,0 +1,316 @@
+ideas = {
+  country = {
+  WFE_naval_influence = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+				experience_gain_navy = 0.02
+				naval_speed_factor = 0.1
+				navy_capital_ship_attack_factor = 0.2
+				naval_coordination = 0.05
+
+			}
+	}
+
+  WFE_thicc_fleet = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			consumer_goods_factor = 0.15
+			industrial_capacity_dockyard = -0.15
+			industrial_capacity_factory = -0.15
+			production_speed_buildings_factor = -0.15
+			repair_speed_factor = -0.33	
+
+			}
+	}
+
+   WFE_japanese_blockade = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			trade_opinion_factor = -0.5	
+			stability_factor = -0.10	
+
+
+			}
+	}
+
+   JVD_unpopular_regime = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			political_power_factor = -0.25	
+			stability_factor = -0.10	
+
+
+			}
+	}
+
+   JVD_japanese_dominance = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			political_power_factor = -0.25	
+			master_ideology_drift = 0.03	
+			industrial_capacity_dockyard = 0.1
+	
+
+
+			}
+	}
+
+   FER_far_eastern_democracatic_beacon = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			political_power_factor = 0.15	
+			stability_factor = 0.10	
+			war_support_factor = 0.10	
+			surrender_limit = 0.25	
+
+
+			}
+	}
+
+   FER_tacit_american_support = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			stability_factor = 0.10		
+			conservative_acceptance = 85	
+			consumer_goods_factor = -0.05
+
+
+			}
+	}
+
+   FER_loose_control = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			planning_speed = -0.2
+			army_org_factor = -0.2
+			training_time_factor = 0.1
+
+
+
+			}
+	}
+
+   SFS_german_origin = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			conscription = 0.05
+			planning_speed = 0.33
+			army_org_factor = 0.33
+			army_morale_factor = 0.33
+			army_attack_factor = 0.25
+			army_defence_factor = 0.25
+			experience_loss_factor = -0.8
+			surrender_limit = 0.25	
+
+			}
+	}
+
+   SFS_language_issue = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			army_org_factor = -0.2
+			planning_speed = -0.2
+			stability_factor = -0.1	
+			political_power_factor = -0.15	
+
+			}
+	}
+
+   SFS_siberian_cold = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			winter_attrition_factor = 0.25
+			acclimatization_cold_climate_gain_factor = -0.25
+			out_of_supply_factor = 0.5
+			no_supply_grace = -24
+
+
+			}
+	}
+
+   IRK_irkutskan_militarization = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			conscription = 0.03
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+
+
+			}
+	}
+
+   IRK_monarchist_treason = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			improve_relations_maintain_cost_factor = 1	
+			authoritharian_acceptance = -50	
+			reactionary_acceptance = -50
+			pelekist_drift = 0.05	
+			}
+	}
+
+   MON_nomadic_tradition = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			cavalry_attack_factor = 0.25
+			cavalry_defence_factor = 0.25
+			conscription = 0.05
+			army_org_factor = -0.25
+
+			}
+	}
+
+   MON_local_opposition = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			political_power_factor = -0.2
+			conscription_factor = -0.25
+			stability_factor = -0.2	
+			}
+	}
+
+   JSW_siberian_guerillas = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			winter_attrition_factor = -0.8
+			out_of_supply_factor = -0.8
+			army_core_defence_factor = 0.25
+
+
+
+			}
+	}
+
+   JSW_decentralized_communes = {
+	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+	 removal_cost = -1
+	 picture = GFX_idea_minority_troubles
+	 modifier = {
+			political_power_factor = -0.25
+			production_speed_buildings_factor = -0.5
+			industrial_capacity_factory = -0.25
+
+
+
+
+			}
+	}
+}
+}

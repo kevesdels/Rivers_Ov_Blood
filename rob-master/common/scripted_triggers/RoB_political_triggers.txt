@@ -1,0 +1,39 @@
+
+
+DEMOCRATIC_ALIGNED_GOVERNMENT = {
+  OR = {
+   has_government = social_liberal
+   has_government = conservative
+   has_government = social_democracy
+   AND = {
+    tag = PRS
+	has_government = authoritharian
+   }
+   }
+ }
+
+
+RADICAL_ALIGNED_GOVERNMENT = {
+OR = { 
+ has_government = socialist
+ has_government = national_socialist
+ has_government = democratic_socialist
+ has_government = pelekist
+}
+}
+
+SOCIALIST_ALIGNED_GOVERNMENT = {
+OR = { 
+ has_government = socialist
+ has_government = national_socialist
+ has_government = democratic_socialist
+ }
+}
+
+ANTI_LIBERAL_ALIGNED_GOVERNMENT = {
+ OR = { 
+ has_government = authoritharian
+ has_government = reactionary
+ has_government = pelekist
+ }
+}

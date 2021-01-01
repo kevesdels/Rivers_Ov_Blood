@@ -1,0 +1,388 @@
+#################
+###yemen Events
+#################
+
+add_namespace = yemen
+
+
+###Collapse of British Middle East
+
+country_event = {
+id = yemen.99
+title = yemen.99.t
+desc = yemen.99.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = ENG
+has_cosmetic_tag = ENG_navy
+}
+
+option = {
+name = yemen.99.a
+ai_chance = { factor = 100}
+UAE = { transfer_state = 658 }
+658 = { add_core_of = UAE }
+UAE = { transfer_state = 765 }
+765 = { add_core_of = UAE }
+UAE = { transfer_state = 875 }
+875 = { add_core_of = UAE }
+UAE = { transfer_state = 659 }
+659 = { add_core_of = UAE }
+UAE = { transfer_state = 656 }
+656 = { add_core_of = UAE }
+UAE = { transfer_state = 944 }
+944 = { add_core_of = UAE }
+UAE = { load_oob = "UAE_1936" } 
+YEM = { country_event = { id = yemen.101 days = 3 } }
+SAU = { country_event = { id = yemen.100 days = 3 } }
+IRQ = { country_event = { id = yemen.102 days = 3 } }
+}
+
+}
+
+###Everyone Invades
+
+country_event = {
+id = yemen.100
+title = yemen.100.t
+desc = yemen.100.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = SAU
+country_exists = UAE
+}
+
+option = {
+name = yemen.100.a
+ai_chance = { factor = 100}
+start_border_war = {
+    change_state_after_war = yes
+    attacker = {
+        state = 292
+        num_provinces = 4
+        on_win = yemen.
+        on_lose = yemen.
+        on_cancel = yemen.
+    }
+				
+    defender = {
+        state = 944
+        num_provinces = 4	
+        on_win = yemen.
+        on_lose = yemen.
+        on_cancel = yemen.
+    }
+}
+
+
+}
+option = {
+name = yemen.100.b
+ai_chance = { factor = 0}
+add_political_power = -50
+}
+}
+
+country_event = {
+id = yemen.101
+title = yemen.101.t
+desc = yemen.101.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = YEM
+country_exists = UAE
+}
+
+option = {
+name = yemen.101.a
+ai_chance = { factor = 100}
+start_border_war = {
+    change_state_after_war = yes
+    attacker = {
+        state = 949
+        num_provinces = 2
+        on_win = yemen.
+        on_lose = yemen.
+        on_cancel = yemen.
+    }
+				
+    defender = {
+        state = 659
+        num_provinces = 3
+        on_win = yemen.
+        on_lose = yemen.
+        on_cancel = yemen.
+    }
+}
+SAU = { country_event = { id = yemen.100 days = 3 } }
+
+
+}
+option = {
+name = yemen.101.b
+ai_chance = { factor = 0}
+add_political_power = -50
+}
+}
+
+country_event = {
+id = yemen.102
+title = yemen.102.t
+desc = yemen.102.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = IRQ
+country_exists = UAE
+}
+
+option = {
+name = yemen.102.a
+ai_chance = { factor = 100}
+transfer_state = 656
+656 = { add_core_of = IRQ }
+
+
+}
+option = {
+name = yemen.102.b
+ai_chance = { factor = 0}
+add_political_power = -50
+}
+}
+
+country_event = {
+id = yemen.103
+title = yemen.103.t
+desc = yemen.103.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = SAU
+country_exists = UAE
+UAE = { owns_state = 765 }
+NOT = { UAE = { owns_state = 656 } } 
+NOT = { UAE = { owns_state = 659 } } 
+NOT = { UAE = { owns_state = 944 } } 
+
+}
+
+option = {
+name = yemen.102.a
+ai_chance = { factor = 100}
+puppet = UAE
+
+
+}
+option = {
+name = yemen.102.b
+ai_chance = { factor = 0}
+add_political_power = -50
+}
+}
+
+###Israel Chain
+country_event = {
+id = yemen.104
+title = yemen.104.t
+desc = yemen.104.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = ENG
+has_cosmetic_tag = ENG_navy
+}
+
+option = {
+name = yemen.104.a
+ai_chance = { factor = 100}
+ISR = { transfer_state = 454 }
+454 = { add_core_of = ISR }
+ISR = { transfer_state = 1216 }
+1216 = { add_core_of = ISR }
+JOR = { transfer_state = 455 }
+455 = { add_core_of = JOR }
+JOR = { transfer_state = 947 }
+947 = { add_core_of = JOR }
+ISR = { load_oob = "ISR_1936" } 
+JOR = { load_oob = "JOR_1936" } 
+EGY = { country_event = { id = yemen.105 days = 3 } }
+
+}
+
+}
+
+country_event = {
+id = yemen.105
+title = yemen.105.t
+desc = yemen.105.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = EGY
+is_puppet = no
+NOT = { ISR = { controlls_state = 453 } }
+NOT = { PAL = { exists = yes } }
+}
+
+option = {
+name = yemen.105.a
+ai_chance = { factor = 100}
+set_country_flag = six_day_war
+declare_war_on = {
+    target = ISR
+    type = annex_everything
+}
+
+}
+
+option = {
+name = yemen.105.b
+ai_chance = { factor = 0}
+
+
+}
+
+}
+
+country_event = {
+id = yemen.106
+title = yemen.106.t
+desc = yemen.106.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = EGY
+controls_state = 454
+
+
+}
+
+option = {
+name = yemen.106.a
+ai_chance = { factor = 80}
+set_country_flag = six_day_war
+454 = { add_core_of = PAL }
+1216 = { add_core_of = PAL }
+PAL = { transfer_state = 454 }
+puppet = PAL
+white_peace = ISR
+
+
+}
+
+option = {
+name = yemen.106.b
+ai_chance = { factor = 20}
+add_political_power = -50
+
+}
+
+}
+
+
+
+country_event = {
+id = yemen.107
+title = yemen.107.t
+desc = yemen.107.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = SAU
+country_exists = UAE
+}
+
+option = {
+name = yemen.107.a
+ai_chance = { factor = 100}
+start_border_war = {
+    change_state_after_war = yes
+    attacker = {
+        state = 292
+        num_provinces = 4
+        on_win = yemen.
+        on_lose = yemen.
+        on_cancel = yemen.
+    }
+				
+    defender = {
+        state = 944
+        num_provinces = 4	
+        on_win = yemen.
+        on_lose = yemen.
+        on_cancel = yemen.
+    }
+}
+
+
+}
+option = {
+name = yemen.107.b
+ai_chance = { factor = 0}
+add_political_power = -50
+}
+}
+
+country_event = {
+id = yemen.108
+title = yemen.108.t
+desc = yemen.108.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = UAE
+owns_state = 292
+}
+
+option = {
+name = yemen.108.a
+ai_chance = { factor = 100}
+SAU = { transfer_state = 292 } 
+
+}
+option = {
+name = yemen.108.b
+ai_chance = { factor = 0}
+add_political_power = -50
+}
+}
+
+country_event = {
+id = yemen.109
+title = yemen.109.t
+desc = yemen.109.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+tag = EGY
+ISR = { controls_state = 453 }
+has_war = yes
+}
+
+option = {
+name = yemen.109.a
+ai_chance = { factor = 100}
+ISR = { transfer_state = 453 } 
+white_peace = ISR
+}
+option = {
+name = yemen.109.b
+ai_chance = { factor = 0}
+add_political_power = -50
+}
+}

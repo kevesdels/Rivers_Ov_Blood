@@ -1,0 +1,2610 @@
+focus_tree = {
+	id = sretensk
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SFS
+		}
+	}
+	#Focus for Examining the Divide
+	focus = {
+		id = SFS_examiningthedivide
+		icon = GFX_goal_unknown
+		x = 11
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_abeaconofhope }
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	#Focus for Lining With the Wind
+	focus = {
+		id = SFS_liningwiththewind
+		icon = GFX_goal_unknown
+		x = 48
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_realizingthetruth }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Autonomous Regions
+	focus = {
+		id = SFS_autonomousregions
+		icon = GFX_goal_unknown
+		x = 40
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_ethnicdistrictsystem }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Examining the Army
+	focus = {
+		id = SFS_examiningthearmy
+		icon = GFX_goal_unknown
+		x = 17
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_abeaconofhope }
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	#Focus for Build the Settlements
+	focus = {
+		id = SFS_buildthesettlements
+		icon = GFX_goal_unknown
+		x = 38
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_apermanentposition }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Ethnic District System
+	focus = {
+		id = SFS_ethnicdistrictsystem
+		icon = GFX_goal_unknown
+		x = 40
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_apermanentposition }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Encourage Immigration
+	focus = {
+		id = SFS_encourageimmigration
+		icon = GFX_goal_unknown
+		x = 42
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_apermanentposition }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Approach Japan
+	focus = {
+		id = SFS_approachjapan
+		icon = GFX_goal_unknown
+		x = 46
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_liningwiththewind }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Exiles Alike
+	focus = {
+		id = SFS_exilesalike
+		icon = GFX_goal_unknown
+		x = 50
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_liningwiththewind }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Trade with the Japanese
+	focus = {
+		id = SFS_tradewiththejapanese
+		icon = GFX_goal_unknown
+		x = 45
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_approachjapan }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Examining the Economy
+	focus = {
+		id = SFS_examiningtheeconomy
+		icon = GFX_goal_unknown
+		x = 5
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_abeaconofhope }
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	#Focus for Realizing the Truth
+	focus = {
+		id = SFS_realizingthetruth
+		icon = GFX_goal_unknown
+		x = 48
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for A Permanent Position
+	focus = {
+		id = SFS_apermanentposition
+		icon = GFX_goal_unknown
+		x = 40
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_realizingthetruth }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Encourage Patriotism
+	focus = {
+		id = SFS_encouragepatriotism
+		icon = GFX_goal_unknown
+		x = 13
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_promotingnationalism }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Take in More Exiles
+	focus = {
+		id = SFS_takeinmoreexiles
+		icon = GFX_goal_unknown
+		x = 17
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_themanpowerissue }
+		mutually_exclusive = { focus = SFS_qualityoverquantity }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Sretenskan National Guard
+	focus = {
+		id = SFS_sretenskannationalguard
+		icon = GFX_goal_unknown
+		x = 14
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_qualityoverquantity }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Unite the Brigades
+	focus = {
+		id = SFS_unitethebrigades
+		icon = GFX_goal_unknown
+		x = 9
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_promotingequality }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for The Manpower Issue
+	focus = {
+		id = SFS_themanpowerissue
+		icon = GFX_goal_unknown
+		x = 16
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_examiningthearmy }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Quality over Quantity
+	focus = {
+		id = SFS_qualityoverquantity
+		icon = GFX_goal_unknown
+		x = 15
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_themanpowerissue }
+		mutually_exclusive = { focus = SFS_takeinmoreexiles }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Promoting Equality
+	focus = {
+		id = SFS_promotingequality
+		icon = GFX_goal_unknown
+		x = 10
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_examiningthedivide }
+		mutually_exclusive = { focus = SFS_promotingnationalism }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Promoting Nationalism
+	focus = {
+		id = SFS_promotingnationalism
+		icon = GFX_goal_unknown
+		x = 12
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_examiningthedivide }
+		mutually_exclusive = { focus = SFS_promotingequality }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Far Eastern Defence Pact
+	focus = {
+		id = SFS_fareasterndefencepact
+		icon = GFX_goal_unknown
+		x = 50
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_thefareasternrepublic }
+		mutually_exclusive = { focus = SFS_alliancewithjapan }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for International Recognition
+	focus = {
+		id = SFS_internationalrecognition
+		icon = GFX_goal_unknown
+		x = 48
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_liningwiththewind }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Drop the Claims
+	focus = {
+		id = SFS_droptheclaims
+		icon = GFX_goal_unknown
+		x = 47
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_internationalrecognition }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Diplomatic Missions
+	focus = {
+		id = SFS_diplomaticmissions
+		icon = GFX_goal_unknown
+		x = 49
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_internationalrecognition }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Reconcilie with the False Regimes
+	focus = {
+		id = SFS_reconciliewiththefalseregimes
+		icon = GFX_goal_unknown
+		x = 48
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_droptheclaims 
+		}
+		prerequisite = { 
+			focus = SFS_diplomaticmissions 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Joint Japanese-Sretenskan Research
+	focus = {
+		id = SFS_jointjapanesesretenskanresearch
+		icon = GFX_goal_unknown
+		x = 45
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_alliancewithjapan }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for A Pacific Port
+	focus = {
+		id = SFS_apacificport
+		icon = GFX_goal_unknown
+		x = 51
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_fareasterndefencepact }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Create A Siberian District
+	focus = {
+		id = SFS_createasiberiandistrict
+		icon = GFX_goal_unknown
+		x = 56
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_grantsiberiansautonomy 
+		}
+		prerequisite = { 
+			focus = SFS_promotenativevalues 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Grant Siberians Autonomy
+	focus = {
+		id = SFS_grantsiberiansautonomy
+		icon = GFX_goal_unknown
+		x = 57
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_siberianequality }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for A Refuge For Russians
+	focus = {
+		id = SFS_arefugeforrussians
+		icon = GFX_goal_unknown
+		x = 54
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_createarussiandistrict }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Siberian Equality
+	focus = {
+		id = SFS_siberianequality
+		icon = GFX_goal_unknown
+		x = 56
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_appeasingthelocals }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Promote Native Values
+	focus = {
+		id = SFS_promotenativevalues
+		icon = GFX_goal_unknown
+		x = 55
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_russianequality 
+		}
+		prerequisite = { 
+			focus = SFS_siberianequality 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Teach Russian in Schools
+	focus = {
+		id = SFS_teachrussianinschools
+		icon = GFX_goal_unknown
+		x = 53
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_russianequality }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Create a Russian District
+	focus = {
+		id = SFS_createarussiandistrict
+		icon = GFX_goal_unknown
+		x = 54
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_teachrussianinschools 
+		}
+		prerequisite = { 
+			focus = SFS_promotenativevalues 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for A True Free State
+	focus = {
+		id = SFS_atruefreestate
+		icon = GFX_goal_unknown
+		x = 40
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_germanmodeledengineering 
+		}
+		prerequisite = { 
+			focus = SFS_institutelawandorder 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Worldwide Recognition
+	focus = {
+		id = SFS_worldwiderecognition
+		icon = GFX_goal_unknown
+		x = 48
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_reconciliewiththefalseregimes }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Urbanization
+	focus = {
+		id = SFS_urbanization
+		icon = GFX_goal_unknown
+		x = 38
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_buildthesettlements }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for German Modeled Engineering
+	focus = {
+		id = SFS_germanmodeledengineering
+		icon = GFX_goal_unknown
+		x = 39
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_acapitalofequality 
+		}
+		prerequisite = { 
+			focus = SFS_resettlethesoldiers 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Resettle the Soldiers
+	focus = {
+		id = SFS_resettlethesoldiers
+		icon = GFX_goal_unknown
+		x = 40
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_autonomousregions }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for A Capital of Equality
+	focus = {
+		id = SFS_acapitalofequality
+		icon = GFX_goal_unknown
+		x = 38
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_urbanization }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for A Beacon of Hope
+	focus = {
+		id = SFS_abeaconofhope
+		icon = GFX_goal_unknown
+		x = 11
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for filler
+	focus = {
+		id = SFS_filler
+		icon = GFX_goal_unknown
+		x = 64
+		y = 16
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Panic in the Homeland!
+	focus = {
+		id = SFS_panicinthehomeland
+		icon = GFX_goal_unknown
+		x = 38
+		y = 9
+		cost = 1
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = SFS_theendisnearforourenemies }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for The End is Near... For our enemies
+	focus = {
+		id = SFS_theendisnearforourenemies
+		icon = GFX_goal_unknown
+		x = 42
+		y = 9
+		cost = 1
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = SFS_panicinthehomeland }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for A Slice of the Pie
+	focus = {
+		id = SFS_asliceofthepie
+		icon = GFX_goal_unknown
+		x = 40
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_theendisnearforourenemies 
+			focus = SFS_panicinthehomeland 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Preparing a Path
+	focus = {
+		id = SFS_preparingapath
+		icon = GFX_goal_unknown
+		x = 37
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_asliceofthepie }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Intelligence from Within
+	focus = {
+		id = SFS_intelligencefromwithin
+		icon = GFX_goal_unknown
+		x = 39
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_asliceofthepie }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Raise the Troops
+	focus = {
+		id = SFS_raisethetroops
+		icon = GFX_goal_unknown
+		x = 41
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_asliceofthepie }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Spread the News
+	focus = {
+		id = SFS_spreadthenews
+		icon = GFX_goal_unknown
+		x = 43
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_asliceofthepie }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Finding a Supporter
+	focus = {
+		id = SFS_findingasupporter
+		icon = GFX_goal_unknown
+		x = 40
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_preparingapath 
+		}
+		prerequisite = { 
+			focus = SFS_intelligencefromwithin 
+		}
+		prerequisite = { 
+			focus = SFS_raisethetroops 
+		}
+		prerequisite = { 
+			focus = SFS_spreadthenews 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Turn to the Rising Sun
+	focus = {
+		id = SFS_turntotherisingsun
+		icon = GFX_goal_unknown
+		x = 38
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_findingasupporter }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for The Bastion of the Pacific
+	focus = {
+		id = SFS_thebastionofthepacific
+		icon = GFX_goal_unknown
+		x = 42
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_findingasupporter }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Strike the Traitors!
+	focus = {
+		id = SFS_strikethetraitors
+		icon = GFX_goal_unknown
+		x = 40
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_turntotherisingsun 
+			focus = SFS_thebastionofthepacific 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for The Landing
+	focus = {
+		id = SFS_thelanding
+		icon = GFX_goal_unknown
+		x = 31
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Citizens Rise Up!
+	focus = {
+		id = SFS_citizensriseup
+		icon = GFX_goal_unknown
+		x = 28
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_thelanding }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Aid From Prussia
+	focus = {
+		id = SFS_aidfromprussia
+		icon = GFX_goal_unknown
+		x = 30
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_thelanding }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Revolt in Frankfurt
+	focus = {
+		id = SFS_revoltinfrankfurt
+		icon = GFX_goal_unknown
+		x = 32
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_thelanding }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Life or Death
+	focus = {
+		id = SFS_lifeordeath
+		icon = GFX_goal_unknown
+		x = 34
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_thelanding }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Mass Recruitment Drive
+	focus = {
+		id = SFS_massrecruitmentdrive
+		icon = GFX_goal_unknown
+		x = 28
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_citizensriseup }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Rebuild the Industry
+	focus = {
+		id = SFS_rebuildtheindustry
+		icon = GFX_goal_unknown
+		x = 30
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_aidfromprussia }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Revive German Militarism
+	focus = {
+		id = SFS_revivegermanmilitarism
+		icon = GFX_goal_unknown
+		x = 34
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_lifeordeath }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for The Heart of the Devil
+	focus = {
+		id = SFS_theheartofthedevil
+		icon = GFX_goal_unknown
+		x = 32
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_revoltinfrankfurt }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Organize Mutinies
+	focus = {
+		id = SFS_organizemutinies
+		icon = GFX_goal_unknown
+		x = 32
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_theheartofthedevil }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Desperate Times call for Desperate Measures
+	focus = {
+		id = SFS_desperatetimescallfordesperatemeasures
+		icon = GFX_goal_unknown
+		x = 28
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_massrecruitmentdrive }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rapid Industrial Mobilization
+	focus = {
+		id = SFS_rapidindustrialmobilization
+		icon = GFX_goal_unknown
+		x = 30
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_rebuildtheindustry }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Return of the Exiles
+	focus = {
+		id = SFS_returnoftheexiles
+		icon = GFX_goal_unknown
+		x = 31
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_thelanding }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Liberate Hungary
+	focus = {
+		id = SFS_liberatehungary
+		icon = GFX_goal_unknown
+		x = 28
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_liberateaustria 
+			focus = SFS_liberatebohemia 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Liberate Bohemia
+	focus = {
+		id = SFS_liberatebohemia
+		icon = GFX_goal_unknown
+		x = 29
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_themissionisnotcomplete }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for The Soldiers State
+	focus = {
+		id = SFS_thesoldiersstate
+		icon = GFX_goal_unknown
+		x = 31
+		y = 6
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_returnoftheexiles }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Prussian Policy
+	focus = {
+		id = SFS_prussianpolicy
+		icon = GFX_goal_unknown
+		x = 34
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_returnoftheexiles }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Co-Existence
+	focus = {
+		id = SFS_coexistence
+		icon = GFX_goal_unknown
+		x = 32
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_prussianpolicy }
+		mutually_exclusive = { 
+			focus = SFS_reunification 
+		}
+		mutually_exclusive = { 
+			focus = SFS_destruction 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for ...Like a Phoenix from the Ashes
+	focus = {
+		id = SFS_likeaphoenixfromtheashes
+		icon = GFX_goal_unknown
+		x = 34
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_revivegermanmilitarism }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Mission is Not Complete...
+	focus = {
+		id = SFS_themissionisnotcomplete
+		icon = GFX_goal_unknown
+		x = 28
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_returnoftheexiles }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Liberate Austria
+	focus = {
+		id = SFS_liberateaustria
+		icon = GFX_goal_unknown
+		x = 27
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_themissionisnotcomplete }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Reunification
+	focus = {
+		id = SFS_reunification
+		icon = GFX_goal_unknown
+		x = 34
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_prussianpolicy }
+		mutually_exclusive = { focus = SFS_coexistence }
+		ai_will_do = {
+			factor = 300
+		}
+	}
+
+	#Focus for Destruction.
+	focus = {
+		id = SFS_destruction
+		icon = GFX_goal_unknown
+		x = 36
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_prussianpolicy }
+		mutually_exclusive = { 
+			focus = SFS_coexistence 
+		}
+		mutually_exclusive = { 
+			focus = SFS_reunification 
+		}
+		mutually_exclusive = { 
+			focus = SFS_ 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for The Far Eastern Republic
+	focus = {
+		id = SFS_thefareasternrepublic
+		icon = GFX_goal_unknown
+		x = 51
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_exilesalike }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Alliance with Japan
+	focus = {
+		id = SFS_alliancewithjapan
+		icon = GFX_goal_unknown
+		x = 46
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_tradewiththejapanese }
+		mutually_exclusive = { focus = SFS_fareasterndefencepact }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for A Council of the People
+	focus = {
+		id = SFS_acouncilofthepeople
+		icon = GFX_goal_unknown
+		x = 42
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_encourageimmigration }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Draft a Constitution
+	focus = {
+		id = SFS_draftaconstitution
+		icon = GFX_goal_unknown
+		x = 42
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_acouncilofthepeople }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Institute Law and Order
+	focus = {
+		id = SFS_institutelawandorder
+		icon = GFX_goal_unknown
+		x = 41
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_resettlethesoldiers 
+		}
+		prerequisite = { 
+			focus = SFS_draftaconstitution 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Appeasing The Locals
+	focus = {
+		id = SFS_appeasingthelocals
+		icon = GFX_goal_unknown
+		x = 55
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_realizingthetruth }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Russian Equality
+	focus = {
+		id = SFS_russianequality
+		icon = GFX_goal_unknown
+		x = 54
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_appeasingthelocals }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Expand Lebensraum... for Grazing Purposes
+	focus = {
+		id = SFS_expandlebensraumforgrazingpurposes
+		icon = GFX_goal_unknown
+		x = 56
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_createasiberiandistrict }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Joint High Command
+	focus = {
+		id = SFS_jointhighcommand
+		icon = GFX_goal_unknown
+		x = 21
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_allowalltoserve }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Allow All to Serve
+	focus = {
+		id = SFS_allowalltoserve
+		icon = GFX_goal_unknown
+		x = 20
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_germantraining }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for A Cause with a State
+	focus = {
+		id = SFS_acausewithastate
+		icon = GFX_goal_unknown
+		x = 12
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_festivalsofnationalism }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Loyalty to Sretensk
+	focus = {
+		id = SFS_loyaltytosretensk
+		icon = GFX_goal_unknown
+		x = 8
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_unitethebrigades }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Festivals of Equality
+	focus = {
+		id = SFS_festivalsofequality
+		icon = GFX_goal_unknown
+		x = 9
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_loyaltytosretensk }
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	#Focus for Unite the Civilians
+	focus = {
+		id = SFS_unitethecivilians
+		icon = GFX_goal_unknown
+		x = 10
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_unitethebrigades }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for A State with a Cause
+	focus = {
+		id = SFS_astatewithacause
+		icon = GFX_goal_unknown
+		x = 10
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_unitethecivilians }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Festivals of Nationalism
+	focus = {
+		id = SFS_festivalsofnationalism
+		icon = GFX_goal_unknown
+		x = 11
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_practicesfromthehomeland }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Practices From the Homeland
+	focus = {
+		id = SFS_practicesfromthehomeland
+		icon = GFX_goal_unknown
+		x = 12
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_encouragepatriotism }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Prussian Discipline
+	focus = {
+		id = SFS_prussiandiscipline
+		icon = GFX_goal_unknown
+		x = 13
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_practicesfromthehomeland 
+		}
+		prerequisite = { 
+			focus = SFS_sretenskannationalguard 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for New Model Brigades
+	focus = {
+		id = SFS_newmodelbrigades
+		icon = GFX_goal_unknown
+		x = 16
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_qualityoverquantity 
+			focus = SFS_takeinmoreexiles 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Not Just Soldiers...
+	focus = {
+		id = SFS_notjustsoldiers
+		icon = GFX_goal_unknown
+		x = 18
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_takeinmoreexiles }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Encourage Scientists
+	focus = {
+		id = SFS_encouragescientists
+		icon = GFX_goal_unknown
+		x = 19
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_notjustsoldiers }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Encourage Companies
+	focus = {
+		id = SFS_encouragecompanies
+		icon = GFX_goal_unknown
+		x = 17
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_notjustsoldiers }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Take in Buryat Clique Exiles
+	focus = {
+		id = SFS_takeinburyatcliqueexiles
+		icon = GFX_goal_unknown
+		x = 18
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_notjustsoldiers }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Siberian Training
+	focus = {
+		id = SFS_siberiantraining
+		icon = GFX_goal_unknown
+		x = 16
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_innovativeweapons }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Taking to the Skies
+	focus = {
+		id = SFS_takingtotheskies
+		icon = GFX_goal_unknown
+		x = 14
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_innovativeweapons }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Leadership
+	focus = {
+		id = SFS_theleadership
+		icon = GFX_goal_unknown
+		x = 18
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_examiningthearmy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for German Training
+	focus = {
+		id = SFS_germantraining
+		icon = GFX_goal_unknown
+		x = 19
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_theleadership }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Organize War SImulations
+	focus = {
+		id = SFS_organizewarsimulations
+		icon = GFX_goal_unknown
+		x = 20
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_jointhighcommand }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rally the Armies
+	focus = {
+		id = SFS_rallythearmies
+		icon = GFX_goal_unknown
+		x = 22
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_jointhighcommand }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Connect the Towns
+	focus = {
+		id = SFS_connectthetowns
+		icon = GFX_goal_unknown
+		x = 6
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_examiningtheeconomy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Bringing Modernity
+	focus = {
+		id = SFS_bringingmodernity
+		icon = GFX_goal_unknown
+		x = 7
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_connectthetowns }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for A Shared Stockpile
+	focus = {
+		id = SFS_asharedstockpile
+		icon = GFX_goal_unknown
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_examiningtheeconomy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Work for the Civilians
+	focus = {
+		id = SFS_workforthecivilians
+		icon = GFX_goal_unknown
+		x = 5
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_connectthetowns 
+		}
+		prerequisite = { 
+			focus = SFS_asharedstockpile 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Fighting the Cold
+	focus = {
+		id = SFS_fightingthecold
+		icon = GFX_goal_unknown
+		x = 6
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_bringingmodernity 
+		}
+		prerequisite = { 
+			focus = SFS_workforthecivilians 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Invite Locals to Help Us
+	focus = {
+		id = SFS_invitelocalstohelpus
+		icon = GFX_goal_unknown
+		x = 7
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_fightingthecold }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Industrialize Sretensk Proper
+	focus = {
+		id = SFS_industrializesretenskproper
+		icon = GFX_goal_unknown
+		x = 3
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_asharedstockpile }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Refuge Bunker System
+	focus = {
+		id = SFS_refugebunkersystem
+		icon = GFX_goal_unknown
+		x = 6
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_fightingthecold }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Sretenskan Farms
+	focus = {
+		id = SFS_sretenskanfarms
+		icon = GFX_goal_unknown
+		x = 4
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_workforthecivilians }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Siberians in the Army
+	focus = {
+		id = SFS_siberiansinthearmy
+		icon = GFX_goal_unknown
+		x = 8
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_invitelocalstohelpus 
+		}
+		prerequisite = { 
+			focus = SFS_festivalsofequality 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Smuggling in China
+	focus = {
+		id = SFS_smugglinginchina
+		icon = GFX_goal_unknown
+		x = 5
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_sretenskanfarms }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Align Local Mongolians
+	focus = {
+		id = SFS_alignlocalmongolians
+		icon = GFX_goal_unknown
+		x = 4
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_smugglinginchina }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Nation of Barley
+	focus = {
+		id = SFS_nationofbarley
+		icon = GFX_goal_unknown
+		x = 3
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_sretenskanfarms }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Build up Other Cities
+	focus = {
+		id = SFS_buildupothercities
+		icon = GFX_goal_unknown
+		x = 2
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_industrializesretenskproper }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Return
+	focus = {
+		id = SFS_thereturn
+		icon = GFX_goal_unknown
+		x = 11
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Temporary Rule from Hannover
+	focus = {
+		id = SFS_temporaryrulefromhannover
+		icon = GFX_goal_unknown
+		x = 7
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_thereturn }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuilding Germany
+	focus = {
+		id = SFS_rebuildinggermany
+		icon = GFX_goal_unknown
+		x = 11
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_thereturn }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Terrorize Terrorists
+	focus = {
+		id = SFS_terrorizeterrorists
+		icon = GFX_goal_unknown
+		x = 12
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_rebuildinggermany }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Temporarily Suspend Military Production
+	focus = {
+		id = SFS_temporarilysuspendmilitaryproduction
+		icon = GFX_goal_unknown
+		x = 9
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_reversesocialistpropaganda }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Grant Exiles Land
+	focus = {
+		id = SFS_grantexilesland
+		icon = GFX_goal_unknown
+		x = 15
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_thereturn }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Loyalty to Germany
+	focus = {
+		id = SFS_loyaltytogermany
+		icon = GFX_goal_unknown
+		x = 11
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_reversesocialistpropaganda 
+		}
+		prerequisite = { 
+			focus = SFS_terrorizeterrorists 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Purge Radicals
+	focus = {
+		id = SFS_purgeradicals
+		icon = GFX_goal_unknown
+		x = 13
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_terrorizeterrorists }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Concessions to the People
+	focus = {
+		id = SFS_concessionstothepeople
+		icon = GFX_goal_unknown
+		x = 8
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_temporarilysuspendmilitaryproduction }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Build up Hannover
+	focus = {
+		id = SFS_builduphannover
+		icon = GFX_goal_unknown
+		x = 6
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_temporaryrulefromhannover }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Reward Hanoverians from Support
+	focus = {
+		id = SFS_rewardhanoveriansfromsupport
+		icon = GFX_goal_unknown
+		x = 8
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_temporaryrulefromhannover }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Autonomous Regions for Exiles
+	focus = {
+		id = SFS_autonomousregionsforexiles
+		icon = GFX_goal_unknown
+		x = 14
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_grantexilesland }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Encourage Permanent Settlement
+	focus = {
+		id = SFS_encouragepermanentsettlement
+		icon = GFX_goal_unknown
+		x = 16
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_grantexilesland }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Working for a Better Vaterland
+	focus = {
+		id = SFS_workingforabettervaterland
+		icon = GFX_goal_unknown
+		x = 10
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_loyaltytogermany }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Sretensk Model
+	focus = {
+		id = SFS_thesretenskmodel
+		icon = GFX_goal_unknown
+		x = 12
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_loyaltytogermany }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Reporting System
+	focus = {
+		id = SFS_reportingsystem
+		icon = GFX_goal_unknown
+		x = 14
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_purgeradicals }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Rebuilding Can Begin
+	focus = {
+		id = SFS_therebuildingcanbegin
+		icon = GFX_goal_unknown
+		x = 11
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_concessionstothepeople 
+		}
+		prerequisite = { 
+			focus = SFS_workingforabettervaterland 
+		}
+		prerequisite = { 
+			focus = SFS_thesretenskmodel 
+		}
+		prerequisite = { 
+			focus = SFS_reportingsystem 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Rebuild Baden-Wurttemberg
+	focus = {
+		id = SFS_rebuildbadenwurttemberg
+		icon = GFX_goal_unknown
+		x = 7
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_therebuildingcanbegin }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuild Bavaria
+	focus = {
+		id = SFS_rebuildbavaria
+		icon = GFX_goal_unknown
+		x = 9
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_therebuildingcanbegin }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuild Hesse
+	focus = {
+		id = SFS_rebuildhesse
+		icon = GFX_goal_unknown
+		x = 11
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_therebuildingcanbegin }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuild Oldenburg
+	focus = {
+		id = SFS_rebuildoldenburg
+		icon = GFX_goal_unknown
+		x = 3
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_therebuildingcanbegin }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuild Hannover
+	focus = {
+		id = SFS_rebuildhannover
+		icon = GFX_goal_unknown
+		x = 13
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_therebuildingcanbegin }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuild Pommerania
+	focus = {
+		id = SFS_rebuildpommerania
+		icon = GFX_goal_unknown
+		x = 15
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_therebuildingcanbegin }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuild Saxony and Thuringia
+	focus = {
+		id = SFS_rebuildsaxonyandthuringia
+		icon = GFX_goal_unknown
+		x = 17
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_therebuildingcanbegin }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuild Mecklenburg
+	focus = {
+		id = SFS_rebuildmecklenburg
+		icon = GFX_goal_unknown
+		x = 19
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_therebuildingcanbegin }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuild Schleswig-Holstein
+	focus = {
+		id = SFS_rebuildschleswigholstein
+		icon = GFX_goal_unknown
+		x = 1
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_therebuildingcanbegin }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuild Silesia
+	focus = {
+		id = SFS_rebuildsilesia
+		icon = GFX_goal_unknown
+		x = 21
+		y = 15
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_therebuildingcanbegin }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for To a Brighter Future
+	focus = {
+		id = SFS_toabrighterfuture
+		icon = GFX_goal_unknown
+		x = 11
+		y = 16
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_rebuildbadenwurttemberg 
+		}
+		prerequisite = { 
+			focus = SFS_rebuildbavaria 
+		}
+		prerequisite = { 
+			focus = SFS_rebuildhesse 
+		}
+		prerequisite = { 
+			focus = SFS_rebuildoldenburg 
+		}
+		prerequisite = { 
+			focus = SFS_rebuildhannover 
+		}
+		prerequisite = { 
+			focus = SFS_rebuildpommerania 
+		}
+		prerequisite = { 
+			focus = SFS_rebuildsaxonyandthuringia 
+		}
+		prerequisite = { 
+			focus = SFS_rebuildmecklenburg 
+		}
+		prerequisite = { 
+			focus = SFS_rebuildschleswigholstein 
+		}
+		prerequisite = { 
+			focus = SFS_rebuildsilesia 
+		}
+		prerequisite = { 
+			focus = SFS_rebuildbrandenburg 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for End the Provisional Government
+	focus = {
+		id = SFS_endtheprovisionalgovernment
+		icon = GFX_goal_unknown
+		x = 25
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Reconquer the Borderlands
+	focus = {
+		id = SFS_reconquertheborderlands
+		icon = GFX_goal_unknown
+		x = 25
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_endtheprovisionalgovernment }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for SPD Victory
+	focus = {
+		id = SFS_spdvictory
+		icon = GFX_goal_unknown
+		x = 19
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_reintroduceelections }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Council of Generals
+	focus = {
+		id = SFS_councilofgenerals
+		icon = GFX_goal_unknown
+		x = 29
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_theendofvonkosch }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Maintain Army Primacy
+	focus = {
+		id = SFS_maintainarmyprimacy
+		icon = GFX_goal_unknown
+		x = 29
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_councilofgenerals }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Legacy of Sretensk
+	focus = {
+		id = SFS_legacyofsretensk
+		icon = GFX_goal_unknown
+		x = 29
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_maintainarmyprimacy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for End the Purges
+	focus = {
+		id = SFS_endthepurges
+		icon = GFX_goal_unknown
+		x = 19
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_spdvictory }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Economic Powerhouse
+	focus = {
+		id = SFS_economicpowerhouse
+		icon = GFX_goal_unknown
+		x = 19
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_assisttheworkers }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Center Victory
+	focus = {
+		id = SFS_centervictory
+		icon = GFX_goal_unknown
+		x = 21
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_reintroduceelections }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Promote Small Buisinesses
+	focus = {
+		id = SFS_promotesmallbuisinesses
+		icon = GFX_goal_unknown
+		x = 21
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_centervictory }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Curb Inflation
+	focus = {
+		id = SFS_curbinflation
+		icon = GFX_goal_unknown
+		x = 21
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_promotesmallbuisinesses }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Enabling Act
+	focus = {
+		id = SFS_enablingact
+		icon = GFX_goal_unknown
+		x = 21
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_curbinflation }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Democratic Victory
+	focus = {
+		id = SFS_democraticvictory
+		icon = GFX_goal_unknown
+		x = 23
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_reintroduceelections }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Increase Welfare
+	focus = {
+		id = SFS_increasewelfare
+		icon = GFX_goal_unknown
+		x = 23
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_democraticvictory }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Urbanization Projects
+	focus = {
+		id = SFS_urbanizationprojects
+		icon = GFX_goal_unknown
+		x = 23
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_increasewelfare }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Party of Proffessors
+	focus = {
+		id = SFS_partyofproffessors
+		icon = GFX_goal_unknown
+		x = 23
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_urbanizationprojects }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Constitutional Monarchy
+	focus = {
+		id = SFS_constitutionalmonarchy
+		icon = GFX_goal_unknown
+		x = 25
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_centervictory 
+			focus = SFS_democraticvictory 
+			focus = SFS_theendofvonkosch 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Prussian Values
+	focus = {
+		id = SFS_prussianvalues
+		icon = GFX_goal_unknown
+		x = 25
+		y = 14
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_figureheadofstability }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Establish a National Newspaper
+	focus = {
+		id = SFS_establishanationalnewspaper
+		icon = GFX_goal_unknown
+		x = 11
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = SFS_promotingequality 
+			focus = SFS_promotingnationalism 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Innovative Weapons
+	focus = {
+		id = SFS_innovativeweapons
+		icon = GFX_goal_unknown
+		x = 15
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_newmodelbrigades }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Reverse Socialist Propaganda
+	focus = {
+		id = SFS_reversesocialistpropaganda
+		icon = GFX_goal_unknown
+		x = 10
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_rebuildinggermany }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Rebuild Brandenburg
+	focus = {
+		id = SFS_rebuildbrandenburg
+		icon = GFX_goal_unknown
+		x = 5
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_therebuildingcanbegin }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Reintroduce Elections
+	focus = {
+		id = SFS_reintroduceelections
+		icon = GFX_goal_unknown
+		x = 21
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_endtheprovisionalgovernment }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Continue Military Rule
+	focus = {
+		id = SFS_continuemilitaryrule
+		icon = GFX_goal_unknown
+		x = 29
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_endtheprovisionalgovernment }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The End of von Kosch
+	focus = {
+		id = SFS_theendofvonkosch
+		icon = GFX_goal_unknown
+		x = 29
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_continuemilitaryrule }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Assist the Workers
+	focus = {
+		id = SFS_assisttheworkers
+		icon = GFX_goal_unknown
+		x = 19
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_endthepurges }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Figurehead of Stability
+	focus = {
+		id = SFS_figureheadofstability
+		icon = GFX_goal_unknown
+		x = 25
+		y = 13
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = SFS_constitutionalmonarchy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+#End of focuses 
+ }

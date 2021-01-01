@@ -1,0 +1,57 @@
+capital = 1197
+
+oob = "SFS_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+}
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 0
+	authoritharian = 0
+	reactionary = 100
+	pelekist = 0
+}
+
+add_ideas = {
+	extensive_conscription
+	SFS_german_origin
+	SFS_language_issue
+	SFS_siberian_cold
+}
+
+
+create_country_leader = {
+	name = "Robert von Kosch"
+	desc = "POLITICS_ROBERT_KOSCH_DESC"
+	picture = "Robert_Kosch.tga"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Robert von Kosch"
+	picture = "Robert_Kosch.dds"
+	traits = { infantry_officer trait_reckless politically_connected}
+	skill = 3
+	id = 15
+	attack_skill = 2
+	defense_skill = 5
+	planning_skill = 1
+	logistics_skill = 3
+}

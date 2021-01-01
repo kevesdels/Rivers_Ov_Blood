@@ -1,0 +1,42 @@
+﻿capital = 307
+
+oob = "VEN_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+set_country_flag = monroe_doctrine
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1926.6.7"
+	election_frequency = 72
+	elections_allowed = yes
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 0
+	authoritharian = 0
+	reactionary = 91
+	pelekist = 9
+}
+
+create_country_leader = {
+	name = "Juan Vicente Gómez"
+	desc = "POLITICS_HARMODIO_ARIAS_MADRID_DESC"
+	picture = "Juan_Vicente_Gomez.dds"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+		#
+	}
+}

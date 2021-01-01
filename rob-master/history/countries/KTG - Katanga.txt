@@ -1,0 +1,46 @@
+capital = 1245
+
+oob = "KTG_1936"
+# A christian theocracy
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+}
+
+
+set_politics = {
+	ruling_party = pelekist
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	national_socialist = 0
+	socialist = 17
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 26
+	authoritharian = 0
+	reactionary = 0
+	pelekist = 57
+}
+
+add_ideas = {
+limited_conscription
+}
+
+create_country_leader = {
+	name = "Remacle Ngalula" # Joseph Malula's dad
+	desc = ""
+	picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+	expire = "1965.1.1"
+	ideology = christian_pelekism
+	traits = {
+		#
+	}
+}

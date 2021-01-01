@@ -1,0 +1,366 @@
+ideas = {
+  country = {
+  
+   TRS_digin = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+	 army_morale_factor = 0.1
+	 army_defence_factor = 0.25
+	}
+   }
+   
+     TRS_industrialization_attepmts = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+	 production_speed_buildings_factor = 0.35
+	}
+   }
+       TRS_welfare = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+	 stability_factor = 0.1
+	 war_support_factor = 0.1
+	 consumer_goods_factor = 0.07
+	}
+   }
+   
+   TRS_industry = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+     production_factory_max_efficiency_factor = 0.15
+	 industrial_capacity_factory = 0.1
+	 consumer_goods_factor = -0.15
+	}
+   }
+   TRS_mobilize_industry= {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+    industrial_capacity_factory =-1.0
+	}
+   }
+   TRS_backs_to_the_wall= {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+  	army_defence_factor = 0.25
+	supply_consumption_factor = -0.25
+	}
+   }
+   TRS_legacy_of_the_red_army= {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+   	conscription = 0.1
+	non_core_manpower = 0.08
+	}
+   }
+   TRS_research_not_priority= {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+    research_speed_factor = -0.5
+
+	}
+   }
+
+   TRS_shell_shocked= {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+	army_speed_factor = -0.15
+	army_defence_factor = -0.15
+
+
+	}
+   }
+  
+
+   TRS_research_kinda= {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+    research_speed_factor = -0.2
+
+	}
+   }
+   
+      TRS_tsar_tank = {	
+    allowed = {	
+       always = no	
+     }	
+	 allowed_civil_war = {	
+				always = yes	
+			}	
+     removal_cost = -1	
+	 picture = GFX_idea_famine_of_1933	
+
+    modifier = {	
+ 	army_armor_speed_factor = -0.35	
+	army_armor_attack_factor = 0.1	
+	army_armor_defence_factor = 0.1	
+	army_org_factor = -0.1	
+
+
+	}	
+   }
+   
+  ###Soviet Armed Forces and Industry
+   TRS_soviet_armed_forces = {	
+    allowed = {	
+       always = no	
+     }	
+	 allowed_civil_war = {	
+				always = yes	
+			}	
+     removal_cost = -1	
+	 picture = famine_of_1933	
+
+    modifier = {	
+     army_leader_start_level = 2
+	}	
+   }
+   
+   TRS_new_soviet_tactics = {	
+    allowed = {	
+       always = no	
+     }	
+	 allowed_civil_war = {	
+				always = yes	
+			}	
+     removal_cost = -1	
+	 picture = famine_of_1933	
+
+    modifier = {		
+	 army_org_factor = 0.1	
+	}	
+   }
+   
+   TRS_military_proffesionalism = {	
+    allowed = {	
+       always = no	
+     }	
+	 allowed_civil_war = {	
+				always = yes	
+			}	
+     removal_cost = -1	
+	 picture = famine_of_1933	
+
+    modifier = {		
+	 army_attack_factor = 0.10
+	 army_defence_factor = 0.10
+	}	
+   }
+   
+   TRS_more_conscription = {	
+    allowed = {	
+       always = no	
+     }	
+	 allowed_civil_war = {	
+				always = yes	
+			}	
+     removal_cost = -1	
+	 picture = famine_of_1933	
+
+    modifier = {		
+	 conscription = 0.02
+	}	
+   }
+   
+   TRS_build_dockyards = {	
+    allowed = {	
+       always = no	
+     }	
+	 allowed_civil_war = {	
+				always = yes	
+			}	
+     removal_cost = -1	
+	 picture = famine_of_1933	
+
+    modifier = {		
+	 production_speed_dockyard_factor = 0.25
+	}	
+   }
+   
+    TRS_two_year_naval_plan = {	
+    allowed = {	
+       always = no	
+     }	
+	 allowed_civil_war = {	
+				always = yes	
+			}	
+     removal_cost = -1	
+	 picture = famine_of_1933	
+
+    modifier = {		
+	 industrial_capacity_dockyard = 0.35
+	}	
+   }
+   
+    TRS_air_infras = {	
+    allowed = {	
+       always = no	
+     }	
+	 allowed_civil_war = {	
+				always = yes	
+			}	
+     removal_cost = -1	
+	 picture = famine_of_1933	
+
+    modifier = {		
+	 production_speed_radar_station_factor = 0.2
+	 production_speed_rocket_site_factor = 0.2
+	 production_speed_air_base_factor = 0.2
+	}	
+   }
+   
+    TRS_mass_aircraft = {	
+    allowed = {	
+       always = no	
+     }	
+	 allowed_civil_war = {	
+				always = yes	
+			}
+    equipment_bonus = {
+	 fighter_equipment = {
+			 build_cost_ic = -0.2 instant = yes
+           }
+		  }			
+     removal_cost = -1	
+	 picture = famine_of_1933	
+
+    modifier = {		
+	  
+	}	
+   }
+   
+    TRS_extend_rearmament = {	
+    allowed = {	
+       always = no	
+     }	
+	 allowed_civil_war = {	
+				always = yes	
+			}
+     removal_cost = -1	
+	 picture = famine_of_1933	
+
+    modifier = {		
+	  consumer_goods_factor =-0.08
+	  industrial_capacity_factory = 0.1
+	  production_speed_arms_factory_factor = 0.15
+	  production_factory_max_efficiency_factor =-0.05
+	  stability_factor =-0.1
+	}	
+   }
+   
+    TRS_SOV_economic_ruins = {	
+    allowed = {	
+       always = no	
+     }	
+	 allowed_civil_war = {	
+				always = yes	
+			}
+     removal_cost = -1	
+	 picture = famine_of_1933	
+
+    modifier = {		
+	  consumer_goods_factor =0.25
+	  industrial_capacity_factory = -0.35
+	  production_speed_arms_factory_factor = -0.25
+	  production_speed_industrial_complex_factor =-0.25
+	  stability_factor =-0.25
+	}	
+   }
+ 
+    TRS_SOV_political_insatbility = {	
+    allowed = {	
+       always = no	
+     }	
+	 allowed_civil_war = {	
+				always = yes	
+			}
+     removal_cost = -1	
+	 picture = famine_of_1933	
+
+    modifier = {		
+	  political_power_factor =-0.55
+      surrender_limit =-0.25
+	}	
+   }
+  
+  }
+ }

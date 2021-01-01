@@ -1,0 +1,1349 @@
+focus_tree = {
+	id = italy_socialist
+	country = {
+		factor = 0
+
+	}
+	continuous_focus_position = { x = 50 y = 3000 }
+	#Focus for UIS Victory
+	focus = {
+		id = ITAs_uisvictory
+		icon = GFX_goal_unknown
+		x = 20
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Nenni - Chairman of Italy
+	focus = {
+		id = ITAs_nennichairmanofitaly
+		icon = GFX_goal_unknown
+		x = 7
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_uisvictory }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Form Italian Syndicates
+	focus = {
+		id = ITAs_formitaliansyndicates
+		icon = GFX_goal_unknown
+		x = 7
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_nennichairmanofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Form the Red Militia
+	focus = {
+		id = ITAs_formtheredmilitia
+		icon = GFX_goal_unknown
+		x = 9
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_nennichairmanofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Nationalization  of Land
+	focus = {
+		id = ITAs_nationalizationofland
+		icon = GFX_goal_unknown
+		x = 5
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_nennichairmanofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Merge with Bombacci
+	focus = {
+		id = ITAs_mergewithbombacci
+		icon = GFX_goal_unknown
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_formtheredmilitia }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Purge the Communists
+	focus = {
+		id = ITAs_purgethecommunists
+		icon = GFX_goal_unknown
+		x = 9
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_mergewithbombacci }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Godless State
+	focus = {
+		id = ITAs_agodlessstate
+		icon = GFX_goal_unknown
+		x = 7
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_formitaliansyndicates }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Mass Industrilization
+	focus = {
+		id = ITAs_massindustrilization
+		icon = GFX_goal_unknown
+		x = 5
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_nationalizationofland }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Anti-Nationalist Syndicalism
+	focus = {
+		id = ITAs_antinationalistsyndicalism
+		icon = GFX_goal_unknown
+		x = 7
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_agodlessstate }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Give out land to Farmers
+	focus = {
+		id = ITAs_giveoutlandtofarmers
+		icon = GFX_goal_unknown
+		x = 5
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_massindustrilization }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Syndicates Grow
+	focus = {
+		id = ITAs_thesyndicatesgrow
+		icon = GFX_goal_unknown
+		x = 7
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAs_giveoutlandtofarmers 
+		}
+		prerequisite = { 
+			focus = ITAs_antinationalistsyndicalism 
+		}
+		prerequisite = { 
+			focus = ITAs_purgethecommunists 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Form the Italian People's Army
+	focus = {
+		id = ITAs_formtheitalianpeoplesarmy
+		icon = GFX_goal_unknown
+		x = 15
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_bordigabecomeschairman }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Attacks Against the Church
+	focus = {
+		id = ITAs_attacksagainstthechurch
+		icon = GFX_goal_unknown
+		x = 15
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_formtheitalianpeoplesarmy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for An Atheist State
+	focus = {
+		id = ITAs_anatheiststate
+		icon = GFX_goal_unknown
+		x = 15
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_attacksagainstthechurch }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Bordiga becomes chairman
+	focus = {
+		id = ITAs_bordigabecomeschairman
+		icon = GFX_goal_unknown
+		x = 13
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_uisvictory }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Attempt to Unite the Socialists
+	focus = {
+		id = ITAs_attempttounitethesocialists
+		icon = GFX_goal_unknown
+		x = 11
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_bordigabecomeschairman }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Italian Internationale
+	focus = {
+		id = ITAs_theitalianinternationale
+		icon = GFX_goal_unknown
+		x = 11
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_attempttounitethesocialists }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Look Outwards!
+	focus = {
+		id = ITAs_lookoutwards
+		icon = GFX_goal_unknown
+		x = 11
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_theitalianinternationale }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Eastern Example
+	focus = {
+		id = ITAs_easternexample
+		icon = GFX_goal_unknown
+		x = 13
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_bordigabecomeschairman }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Privatise the Industry
+	focus = {
+		id = ITAs_privatisetheindustry
+		icon = GFX_goal_unknown
+		x = 13
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_bordigabecomeschairman }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Form Italian Kolhozes
+	focus = {
+		id = ITAs_formitaliankolhozes
+		icon = GFX_goal_unknown
+		x = 13
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_privatisetheindustry }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Strike at The Hive of Christianity
+	focus = {
+		id = ITAs_strikeatthehiveofchristianity
+		icon = GFX_goal_unknown
+		x = 13
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAs_formitaliankolhozes 
+		}
+		prerequisite = { 
+			focus = ITAs_lookoutwards 
+		}
+		prerequisite = { 
+			focus = ITAs_anatheiststate 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Declare Pelekists as Enemies of Italy
+	focus = {
+		id = ITAs_declarepelekistsasenemiesofitaly
+		icon = GFX_goal_unknown
+		x = 15
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_strikeatthehiveofchristianity }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Make All Schools led by Marxists
+	focus = {
+		id = ITAs_makeallschoolsledbymarxists
+		icon = GFX_goal_unknown
+		x = 13
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_strikeatthehiveofchristianity }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for "Remind" Loyalty to Wavering Regions
+	focus = {
+		id = ITAs_remindloyaltytowaveringregions
+		icon = GFX_goal_unknown
+		x = 11
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_strikeatthehiveofchristianity }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Force Famines in Anti-Communist Regions
+	focus = {
+		id = ITAs_forcefaminesinanticommunistregions
+		icon = GFX_goal_unknown
+		x = 11
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_remindloyaltytowaveringregions }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for All Loyal to The Chairman
+	focus = {
+		id = ITAs_allloyaltothechairman
+		icon = GFX_goal_unknown
+		x = 11
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_forcefaminesinanticommunistregions }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Mass Industrilization
+	focus = {
+		id = ITAs_massindustrilization
+		icon = GFX_goal_unknown
+		x = 13
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_makeallschoolsledbymarxists }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Jewish Commisars
+	focus = {
+		id = ITAs_jewishcommisars
+		icon = GFX_goal_unknown
+		x = 15
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_declarepelekistsasenemiesofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Satan of Italy
+	focus = {
+		id = ITAs_thesatanofitaly
+		icon = GFX_goal_unknown
+		x = 15
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_jewishcommisars }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Kill the Bourgeoisie
+	focus = {
+		id = ITAs_killthebourgeoisie
+		icon = GFX_goal_unknown
+		x = 13
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_massindustrilization }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Red Italy
+	focus = {
+		id = ITAs_areditaly
+		icon = GFX_goal_unknown
+		x = 13
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAs_thesatanofitaly 
+		}
+		prerequisite = { 
+			focus = ITAs_killthebourgeoisie 
+		}
+		prerequisite = { 
+			focus = ITAs_allloyaltothechairman 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Focus on Agrarianism
+	focus = {
+		id = ITAs_focusonagrarianism
+		icon = GFX_goal_unknown
+		x = 19
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_privatizetheindustry }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Bombacci Becomes Chairman
+	focus = {
+		id = ITAs_bombaccibecomeschairman
+		icon = GFX_goal_unknown
+		x = 19
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_uisvictory }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Promote Italian Nationalism
+	focus = {
+		id = ITAs_promoteitaliannationalism
+		icon = GFX_goal_unknown
+		x = 17
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_bombaccibecomeschairman }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Socialism in Italy
+	focus = {
+		id = ITAs_socialisminitaly
+		icon = GFX_goal_unknown
+		x = 17
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_promoteitaliannationalism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Christian Socialism
+	focus = {
+		id = ITAs_christiansocialism
+		icon = GFX_goal_unknown
+		x = 17
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_socialisminitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Privatize the Industry
+	focus = {
+		id = ITAs_privatizetheindustry
+		icon = GFX_goal_unknown
+		x = 19
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_bombaccibecomeschairman }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for "Borrow" Blood and Soil
+	focus = {
+		id = ITAs_borrowbloodandsoil
+		icon = GFX_goal_unknown
+		x = 19
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_focusonagrarianism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Red Army
+	focus = {
+		id = ITAs_theredarmy
+		icon = GFX_goal_unknown
+		x = 21
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_bombaccibecomeschairman }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Purge Pelekists
+	focus = {
+		id = ITAs_purgepelekists
+		icon = GFX_goal_unknown
+		x = 21
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_theredarmy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Purge All The Opponents of Bombacci
+	focus = {
+		id = ITAs_purgealltheopponentsofbombacci
+		icon = GFX_goal_unknown
+		x = 21
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_purgepelekists }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Undisputed Leader
+	focus = {
+		id = ITAs_undisputedleader
+		icon = GFX_goal_unknown
+		x = 19
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAs_christiansocialism 
+		}
+		prerequisite = { 
+			focus = ITAs_borrowbloodandsoil 
+		}
+		prerequisite = { 
+			focus = ITAs_purgealltheopponentsofbombacci 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A National Socialist Education
+	focus = {
+		id = ITAs_anationalsocialisteducation
+		icon = GFX_goal_unknown
+		x = 17
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_undisputedleader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Idoctrinate the Italians
+	focus = {
+		id = ITAs_idoctrinatetheitalians
+		icon = GFX_goal_unknown
+		x = 17
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_anationalsocialisteducation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Fanatical Populace
+	focus = {
+		id = ITAs_fanaticalpopulace
+		icon = GFX_goal_unknown
+		x = 17
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_idoctrinatetheitalians }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Deal with Regionalism
+	focus = {
+		id = ITAs_dealwithregionalism
+		icon = GFX_goal_unknown
+		x = 19
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_undisputedleader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Punish Minorities
+	focus = {
+		id = ITAs_punishminorities
+		icon = GFX_goal_unknown
+		x = 19
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_dealwithregionalism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Labour Camps
+	focus = {
+		id = ITAs_labourcamps
+		icon = GFX_goal_unknown
+		x = 19
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_punishminorities }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Political Re-Education Camps
+	focus = {
+		id = ITAs_politicalreeducationcamps
+		icon = GFX_goal_unknown
+		x = 21
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_undisputedleader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Slave Labour
+	focus = {
+		id = ITAs_slavelabour
+		icon = GFX_goal_unknown
+		x = 21
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_politicalreeducationcamps }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Penal Battalions
+	focus = {
+		id = ITAs_penalbattalions
+		icon = GFX_goal_unknown
+		x = 21
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_slavelabour }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The True Revoliution
+	focus = {
+		id = ITAs_thetruerevoliution
+		icon = GFX_goal_unknown
+		x = 19
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAs_fanaticalpopulace 
+		}
+		prerequisite = { 
+			focus = ITAs_labourcamps 
+		}
+		prerequisite = { 
+			focus = ITAs_penalbattalions 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Question of Armed Forces
+	focus = {
+		id = ITAs_thequestionofarmedforces
+		icon = GFX_goal_unknown
+		x = 30
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_uisvictory }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Meet With Local Socialists
+	focus = {
+		id = ITAs_meetwithlocalsocialists
+		icon = GFX_goal_unknown
+		x = 25
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_thequestionofarmedforces }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Destroying Reactionary Culture
+	focus = {
+		id = ITAs_destroyingreactionaryculture
+		icon = GFX_goal_unknown
+		x = 9
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_culturalcosmopolitanism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Total War Concept
+	focus = {
+		id = ITAs_totalwarconcept
+		icon = GFX_goal_unknown
+		x = 31
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_localpartisancells }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Our Guns Are Bigger!
+	focus = {
+		id = ITAs_ourgunsarebigger
+		icon = GFX_goal_unknown
+		x = 37
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_astandingarmy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Kickstart Artillery Production
+	focus = {
+		id = ITAs_kickstartartilleryproduction
+		icon = GFX_goal_unknown
+		x = 37
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_ourgunsarebigger }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Expand Support Corps
+	focus = {
+		id = ITAs_expandsupportcorps
+		icon = GFX_goal_unknown
+		x = 37
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_kickstartartilleryproduction }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Modernize Infantry Equipment
+	focus = {
+		id = ITAs_modernizeinfantryequipment
+		icon = GFX_goal_unknown
+		x = 34
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_theitalianredarmy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Repair Old Industrial Plants
+	focus = {
+		id = ITAs_repairoldindustrialplants
+		icon = GFX_goal_unknown
+		x = 34
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_modernizeinfantryequipment }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Prepare for the next War
+	focus = {
+		id = ITAs_prepareforthenextwar
+		icon = GFX_goal_unknown
+		x = 29
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAs_italianimperialismisnomore 
+		}
+		prerequisite = { 
+			focus = ITAs_theredarmyisthestrongest 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Decriminalize Homosexuality
+	focus = {
+		id = ITAs_decriminalizehomosexuality
+		icon = GFX_goal_unknown
+		x = 5
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_liberalizethesocialpolicies }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Mass Democracy
+	focus = {
+		id = ITAs_massdemocracy
+		icon = GFX_goal_unknown
+		x = 5
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_thesyndicatesgrow }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Liberalize the Social Policies
+	focus = {
+		id = ITAs_liberalizethesocialpolicies
+		icon = GFX_goal_unknown
+		x = 5
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_massdemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Social Help Policies
+	focus = {
+		id = ITAs_socialhelppolicies
+		icon = GFX_goal_unknown
+		x = 7
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_thesyndicatesgrow }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Dealing with Unemployment
+	focus = {
+		id = ITAs_dealingwithunemployment
+		icon = GFX_goal_unknown
+		x = 7
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_socialhelppolicies }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Communal Works
+	focus = {
+		id = ITAs_communalworks
+		icon = GFX_goal_unknown
+		x = 7
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_dealingwithunemployment }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Cultural Cosmopolitanism
+	focus = {
+		id = ITAs_culturalcosmopolitanism
+		icon = GFX_goal_unknown
+		x = 9
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_thesyndicatesgrow }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Federation of Equals
+	focus = {
+		id = ITAs_federationofequals
+		icon = GFX_goal_unknown
+		x = 23
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_meetwithlocalsocialists }
+		mutually_exclusive = { focus = ITAs_socialismunderourwatch }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for We are all Italian
+	focus = {
+		id = ITAs_weareallitalian
+		icon = GFX_goal_unknown
+		x = 9
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_destroyingreactionaryculture }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Syndical State!
+	focus = {
+		id = ITAs_thesyndicalstate
+		icon = GFX_goal_unknown
+		x = 7
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAs_decriminalizehomosexuality 
+		}
+		prerequisite = { 
+			focus = ITAs_weareallitalian 
+		}
+		prerequisite = { 
+			focus = ITAs_communalworks 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Take them out of Feudalism!
+	focus = {
+		id = ITAs_takethemoutoffeudalism
+		icon = GFX_goal_unknown
+		x = 25
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAs_federationofequals 
+			focus = ITAs_socialismunderourwatch 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Socialism under Our Watch
+	focus = {
+		id = ITAs_socialismunderourwatch
+		icon = GFX_goal_unknown
+		x = 27
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_meetwithlocalsocialists }
+		mutually_exclusive = { focus = ITAs_federationofequals }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Industrialize Libya
+	focus = {
+		id = ITAs_industrializelibya
+		icon = GFX_goal_unknown
+		x = 25
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_takethemoutoffeudalism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Indutrialize East Africa
+	focus = {
+		id = ITAs_indutrializeeastafrica
+		icon = GFX_goal_unknown
+		x = 25
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_industrializelibya }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Social Federation
+	focus = {
+		id = ITAs_thesocialfederation
+		icon = GFX_goal_unknown
+		x = 23
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_federationofequals }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Italian Socialist Sphere
+	focus = {
+		id = ITAs_italiansocialistsphere
+		icon = GFX_goal_unknown
+		x = 27
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_socialismunderourwatch }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Socialist Culture
+	focus = {
+		id = ITAs_socialistculture
+		icon = GFX_goal_unknown
+		x = 23
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_thesocialfederation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Keep the Worker's Militias
+	focus = {
+		id = ITAs_keeptheworkersmilitias
+		icon = GFX_goal_unknown
+		x = 31
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_theitalianredarmy }
+		mutually_exclusive = { focus = ITAs_astandingarmy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Modernize Local Education
+	focus = {
+		id = ITAs_modernizelocaleducation
+		icon = GFX_goal_unknown
+		x = 23
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_socialistculture }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Common Exercises
+	focus = {
+		id = ITAs_commonexercises
+		icon = GFX_goal_unknown
+		x = 27
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_exportingarms }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Exporting Arms
+	focus = {
+		id = ITAs_exportingarms
+		icon = GFX_goal_unknown
+		x = 27
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_italiansocialistsphere }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Italian Imperialism is no more!
+	focus = {
+		id = ITAs_italianimperialismisnomore
+		icon = GFX_goal_unknown
+		x = 25
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAs_modernizelocaleducation 
+			focus = ITAs_commonexercises 
+			focus = ITAs_indutrializeeastafrica 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Italian Red Army
+	focus = {
+		id = ITAs_theitalianredarmy
+		icon = GFX_goal_unknown
+		x = 34
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_thequestionofarmedforces }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Standing Army
+	focus = {
+		id = ITAs_astandingarmy
+		icon = GFX_goal_unknown
+		x = 37
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_theitalianredarmy }
+		mutually_exclusive = { focus = ITAs_keeptheworkersmilitias }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Decentralized Structure
+	focus = {
+		id = ITAs_decentralizedstructure
+		icon = GFX_goal_unknown
+		x = 31
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_keeptheworkersmilitias }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Local Partisan Cells
+	focus = {
+		id = ITAs_localpartisancells
+		icon = GFX_goal_unknown
+		x = 31
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITAs_decentralizedstructure }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Red Army Is The Strongest!
+	focus = {
+		id = ITAs_theredarmyisthestrongest
+		icon = GFX_goal_unknown
+		x = 34
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITAs_totalwarconcept 
+			focus = ITAs_expandsupportcorps 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+#End of focuses 
+ }

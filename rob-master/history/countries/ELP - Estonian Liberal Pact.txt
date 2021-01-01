@@ -1,0 +1,47 @@
+﻿capital = 190
+
+
+set_research_slots = 3
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = social_liberal
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 21
+	social_liberal = 24
+	conservative = 45
+	authoritharian = 10
+	reactionary = 0
+	pelekist = 0
+}
+
+
+create_country_leader = {
+	name = "Jaan Tõnisson"
+	desc = "POLITICS_JAAN_TONNISON_DESC"
+	picture = "ELP_Jaan_Tonisson.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Kārlis Ulmanis"
+	desc = ""
+	picture = "GFX_portrait_lat_fricis_menders"
+	expire = "1965.1.1"
+	ideology = conservative_subtype
+	traits = {
+		#
+	}
+}
+

@@ -1,0 +1,44 @@
+capital = 257
+oob = "RUS_1934"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	early_fighter = 1
+	transport = 1
+}
+
+set_country_flag = RUS_warlord
+
+set_politics = {
+	ruling_party = democratic_socialist
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 26
+	democratic_socialist = 54
+	social_democracy = 15
+	social_liberal = 5
+	conservative = 0
+	authoritharian = 0
+	reactionary = 0
+	pelekist = 0
+}
+
+create_country_leader = {
+	name = "Andrei Aleksandrovich Argunov"
+	desc = ""
+	picture = "AndreiAleksandrovichArgunov.dds"
+	expire = "1947.1.1"
+	ideology = anarcho_socialism
+	traits = {
+		#
+	}
+}

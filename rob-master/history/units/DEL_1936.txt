@@ -1,0 +1,144 @@
+division_template = {
+	name = "National Guard"
+
+	division_names_group = RAJ_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		light_armor = { x = 4 y = 0 }
+		light_armor = { x = 4 y = 1 }
+		light_armor = { x = 4 y = 2 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Infantry Brigade"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = RAJ_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = RAJ_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	#Royal Khivan Army
+	division = {
+		name = "Indian National Guard"
+		location = 2086
+		division_template = "National Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Indian Infantry"
+		location = 12137
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "2nd Indian Infantry"
+		location = 10887
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "3rd Indian Infantry"
+		location = 5105
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "4th Indian Infantry"
+		location = 2086
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "5th Indian Infantry"
+		location = 10751
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Delhi Militia"
+		location = 2086
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Lucknow Militia"
+		location = 12137
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Himalayan Militia"
+		location = 1129
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Gorakhpur Militia"
+		location = 7334
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Lahore Militia"
+		location = 4979
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Pashawar Militia"
+		location = 12763
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+	}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "DEL"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

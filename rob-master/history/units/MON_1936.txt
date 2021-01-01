@@ -1,0 +1,117 @@
+division_template = {
+	name = "Mongolian Cavalry"
+
+	division_names_group = MON_ARM_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = MON_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	#Mongol Army
+	division = {
+		name = "1st Mongolian Cavalry"
+		location = 7676
+		division_template = "Mongolian Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Mongolian Cavalry"
+		location = 4882
+		division_template = "Mongolian Cavalry"
+		start_experience_factor = 0.3
+
+	}
+	division = {
+		name = "3rd Mongolian Cavalry"
+		location = 1791
+		division_template = "Mongolian Cavalry"
+		start_experience_factor = 0.3
+
+	}
+	division = {
+		name = "1st Sternberg Division"
+		location = 4801
+		division_template = "Mongolian Cavalry"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "2nd Sternberg Division"
+		location = 7676
+		division_template = "Mongolian Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Russian Cossacks"
+		location = 4882
+		division_template = "Mongolian Cavalry"
+		start_experience_factor = 0.3
+
+	}
+	#Herat Army
+	division = {
+		name = "2nd Russian Cossacks"
+		location = 7717
+		division_template = "Mongolian Cavalry"
+		start_experience_factor = 0.3
+
+	}
+	division = {
+		name = "1st Mongolian Infantry"
+		location = 1855
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "2nd Mongolian Infantry"
+		location = 10575
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+}
+	division = {
+		name = "3rd Mongolian Infantry"
+		location = 7703
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+}
+}
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "MON"
+		}
+		requested_factories = 2
+		progress = 0.28
+		efficiency = 100
+	}
+}

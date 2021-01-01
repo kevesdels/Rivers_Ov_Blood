@@ -1,0 +1,147 @@
+ideas = {
+
+ tank_manufacturer = {
+ 
+ ###Russian Soviet Republic
+  RSR_kmdb = {
+  
+   allowed = { original_tag = SOV }
+   picture = RSR_kmdb
+   cost = 150
+	research_bonus = { armor = 0.1 }
+    modifier = {
+      army_armor_speed_factor = 0.1
+   }
+  
+  }
+  
+  RSR_okmo = {
+  
+   allowed = { original_tag = SOV }
+   picture = RSR_okmo
+   cost = 150
+   equipment_bonus = {
+	armor = {
+	 build_cost_ic = -0.15 instant = yes
+     }
+    }
+	research_bonus = { armor = 0.1 }
+  
+  }
+ 
+ ###Lithuania
+  LIT_metalas = {
+  
+   allowed = { original_tag = LIT }
+   picture = LIT_metalas
+   cost = 250
+   equipment_bonus = {
+	armor = {
+	 build_cost_ic = -0.1 instant = yes
+     }
+    }
+	research_bonus = { armor = 0.1 }
+    modifier = {
+     army_armor_attack_factor = 0.05
+	 army_armor_defence_factor = 0.05
+   }
+  
+  }
+ 
+ ###Prussia
+  PRS_konigsberg_arsenal = {
+  
+   allowed = { original_tag = PRS }
+   picture = PRS_kongisberg_arsenal
+   cost = 150
+   equipment_bonus = {
+	armor = {
+	 build_cost_ic = 0.07 instant = yes
+     }
+    }
+	research_bonus = { armor = 0.1 }
+    modifier = {
+     army_armor_attack_factor = 0.05
+	 army_armor_defence_factor = 0.05
+   }
+  
+  }
+  
+  PRS_porsche = {
+  
+   allowed = { original_tag = PRS }
+   picture = PRS_porsche
+   cost = 150
+   equipment_bonus = {
+	armor = {
+	 build_cost_ic = 0.05 instant = yes
+     }
+    }
+	research_bonus = { armor = 0.1 }
+    modifier = {
+     army_armor_attack_factor = 0.03
+	 army_armor_defence_factor = 0.03
+   }
+  
+  }
+  
+  
+   PRS_daimler_benz = {
+   
+   allowed = { original_tag = PRS }
+   picture = PRS_daimler
+   cost = 150
+	research_bonus = { armor = 0.1 }
+    modifier = {
+     army_armor_speed_factor = 0.1
+   }
+  
+  }
+
+ ###Germany (Socialist) 
+  GER_nord_deutsche_industrie_gesellschaft = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_nord_deutsche
+   cost = 150
+   equipment_bonus = {
+	armor = {
+	 build_cost_ic = -0.05 instant = yes
+     }
+    }
+	research_bonus = { armor = 0.1 }
+    modifier = {
+     army_armor_attack_factor = -0.03
+	 army_armor_defence_factor = -0.03
+   }
+  }
+
+  GER_rote_stahl = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_rote_stahl
+   cost = 150
+   equipment_bonus = {
+	armor = {
+	 build_cost_ic = 0.05 instant = yes
+     }
+    }
+   research_bonus = { armor = 0.1 }
+   modifier = {
+    army_armor_attack_factor = 0.03
+	army_armor_defence_factor = 0.03
+   }
+  }
+  
+  GER_rote_arbeiter = {
+   
+   allowed = { original_tag = GER }
+   picture = GER_rote_arbeiter
+   cost = 150
+   research_bonus = { armor = 0.1 }
+   modifier = {
+	army_armor_speed_factor = 0.07
+   }
+  }  
+ }
+ }

@@ -1,0 +1,40 @@
+units = {
+#CEYLON
+	division = {
+		name = "1st Ceylon Garrison"
+		location = 10201
+		division_template = "British Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd Ceylon Garrison"
+		location = 10201
+		division_template = "British Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Ceylon Regiment"
+		location = 10201
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Loyalist Regiment"
+		location = 10201
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+
+}
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "BRJ"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

@@ -1,0 +1,402 @@
+#############################
+###United Baltic Duchy Events
+#############################
+
+
+add_namespace = ubd
+
+country_event = { 
+ id = ubd.0
+ title = "United Baltic Duchy in 1934"
+ desc = ubd.0.d
+ 
+ fire_only_once = yes
+ trigger = {
+  tag = EST
+ }
+ mean_time_to_happen = { days = 1 }
+ 
+ option = {
+  name = "Everyone is mad, and everything is going to hell."
+  add_stability =-0.1
+  hidden_effect = {
+   country_event = { id = ubd.1 days = 10 }
+  }
+ }
+}
+
+
+country_event = { 
+ id = ubd.1
+ title = "Death of Zemgals"
+ desc = ubd.1.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "A hard-headed peasant until end"
+  add_stability =-0.01
+  hidden_effect = {
+   country_event = { id = ubd.2 days = 5 }
+  }
+ }
+}
+
+
+country_event = { 
+ id = ubd.2
+ title = "Burial Ceremony"
+ desc = ubd.2.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "We didn't ask for this"
+  add_stability =-0.05
+  hidden_effect = {
+   country_event = { id = ubd.3 days = 20 }
+  }
+ }
+}
+
+country_event = { 
+ id = ubd.3
+ title = "Legion Clashes With Landeswehr"
+ desc = ubd.3.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "This was our last straw"
+  add_stability =-0.15
+  add_war_support =-0.15
+  add_popularity = { ideology = pelekist popularity = 0.05 }
+  set_country_flag = UBD_legion_banned
+  hidden_effect = {
+   country_event = { id = ubd.4 days = 15 }
+  }
+ }
+ 
+ option = {
+  name = "The world has no meaning anyways..."
+  add_stability =-0.05
+  add_war_support =-0.05
+  add_popularity = { ideology = pelekist popularity = 0.02 }
+  set_country_flag = UBD_legion_allowed
+  hidden_effect = {
+   country_event = { id = ubd.4 days = 15 }
+  }
+ }
+}
+
+
+country_event = { 
+ id = ubd.4
+ title = "Nationalist Militias Increase Their Attacks"
+ desc = ubd.4.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "...and so it goes in this God-forgiven place..."
+  add_stability =-0.05
+  add_popularity = { ideology = pelekist popularity = 0.02 }
+  hidden_effect = {
+   country_event = { id = ubd.5 days = 10 }
+   country_event = { id = ubd.6 days = 25 }
+  }
+ }
+
+}
+
+country_event = { 
+ id = ubd.5
+ title = "Andrievs Niedra Killed"
+ desc = ubd.5.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "...the natives, I tell you, are truly savages..."
+  add_stability =-0.1
+  add_popularity = { ideology = socialist popularity = 0.02 }
+  add_popularity = { ideology = social_democracy popularity = 0.02 }
+  add_popularity = { ideology = pelekist popularity = 0.02 }
+ }
+
+}
+
+
+country_event = { 
+ id = ubd.6
+ title = "Socialists Strike Nobility"
+ desc = ubd.6.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "...total barbarians..."
+  add_stability =-0.03
+  add_popularity = { ideology = socialist popularity = 0.03 }
+  hidden_effect = {
+   country_event = { id = ubd.7 days = 12 }
+  }
+ }
+
+}
+
+
+country_event = { 
+ id = ubd.7
+ title = "Socialists Kill Landowners"
+ desc = ubd.7.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "...are there no safe places left for a simple German?..."
+  add_stability =-0.05
+  add_popularity = { ideology = socialist popularity = 0.05 }
+  hidden_effect = {
+   country_event = { id = ubd.8 days = 17 }
+  }
+ }
+
+}
+
+
+country_event = { 
+ id = ubd.8
+ title = "Unrest in Lettgallen"
+ desc = ubd.8.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "...socialism is a disease..."
+  add_stability =-0.1
+  add_war_support =-0.05
+  add_popularity = { ideology = socialist popularity = 0.05 }
+  hidden_effect = {
+   country_event = { id = ubd.9 days = 14 }
+  }
+ }
+
+}
+
+
+country_event = { 
+ id = ubd.10
+ title = "Andres Larka Announces Total War"
+ desc = ubd.10.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "...now Estonians too..."
+  add_stability =-0.07
+  add_war_support =-0.05
+  add_popularity = { ideology = pelekist popularity = 0.05 }
+  hidden_effect = {
+   country_event = { id = ubd.11 days = 16 }
+  }
+ }
+
+}
+
+
+country_event = { 
+ id = ubd.11
+ title = "Jaan Anvelt Calls For Revolution"
+ desc = ubd.11.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "...it's getting to hot in here..."
+  add_stability =-0.07
+  add_war_support =-0.05
+  add_popularity = { ideology = socialist popularity = 0.05 }
+  hidden_effect = {
+   country_event = { id = ubd.12 days = 13 }
+  }
+ }
+
+}
+
+
+country_event = { 
+ id = ubd.12
+ title = "Disorder In Estonian Cantons"
+ desc = ubd.12.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "...everything is falling apart..."
+  add_stability =-0.1
+  add_war_support =-0.1
+  add_popularity = { ideology = socialist popularity = 0.05 }
+  add_popularity = { ideology = pelekist popularity = 0.05 }
+  hidden_effect = {
+   country_event = { id = ubd.13 days = 13 }
+  }
+ }
+
+}
+
+
+country_event = { 
+ id = ubd.13
+ title = "Native Democracts Leave Landtag"
+ desc = ubd.13.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "...traitors..."
+  add_stability =-0.02
+  add_war_support =-0.02
+  add_popularity = { ideology = social_liberal popularity = 0.05 }
+  add_popularity = { ideology = social_democracy popularity = 0.05 }
+  hidden_effect = {
+   country_event = { id = ubd.14 days = 15 }
+  }
+ }
+
+}
+
+country_event = { 
+ id = ubd.14
+ title = "Nationalist Paramilitaries in Western Cantons"
+ desc = ubd.14.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "...they can go to hell..."
+  add_stability =-0.08
+  add_war_support =-0.08
+  add_popularity = { ideology = pelekist popularity = 0.08 }
+  hidden_effect = {
+   country_event = { id = ubd.15 days = 16 }
+  }
+ }
+
+}
+
+
+country_event = { 
+ id = ubd.15
+ title = "Von der Goltz Takes Direct Action"
+ desc = ubd.15.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "...what no, you can't do that..."
+  add_stability =-0.05
+  add_war_support =-0.05
+  add_popularity = { ideology = reactionary popularity = -0.05 }
+  hidden_effect = {
+   country_event = { id = ubd.16 days = 16 }
+  }
+ }
+
+}
+
+country_event = { 
+ id = ubd.16
+ title = "White Terror"
+ desc = ubd.16.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "...this isn't helping..."
+  add_stability =-0.15
+  add_war_support =-0.15
+  add_popularity = { ideology = reactionary popularity = -0.05 }
+  hidden_effect = {
+   country_event = { id = ubd.17 days = 17 }
+  }
+ }
+
+}
+
+
+country_event = { 
+ id = ubd.17
+ title = "Foreign Support For Partisans"
+ desc = ubd.17.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "...Oh God..."
+  hidden_effect = {
+   country_event = { id = ubd.18 days = 17 }
+  }
+ }
+
+}
+
+###CIVIL WAR
+country_event = { 
+ id = ubd.18
+ title = "General Strike"
+ desc = ubd.18.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "..."
+  hidden_effect = {
+   country_event = { id = ubd.19 days = 2 }
+  }
+ }
+
+}
+
+
+country_event = { 
+ id = ubd.19
+ title = "A Very Baltic Civil War"
+ desc = ubd.19.d
+ 
+ is_triggered_only = yes
+ 
+ option = {
+  name = "There isn't a place for me anymore..."
+  create_country_leader = {
+	name = "Baltic Assembly"
+	desc = "POLITICS_UBD_COUNCIL_DESC"
+	picture = "EST_Ubd_Council.tga"
+	expire = "1965.1.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+  LNC = { transfer_state = 190 }
+  LNC = { transfer_state = 881 }
+  LNC = { transfer_state = 1010 }
+  LDF = { transfer_state = 12 }
+  LPR = { transfer_state = 880 }
+  LPR = { transfer_state = 891 }
+  ELA = { transfer_state = 191 }
+  ELA = { transfer_state = 882 }
+  ELA = { transfer_state = 890 }
+  ELP = { transfer_state = 13 }
+  ECA = { transfer_state = 1268 }
+  ECA = { transfer_state = 883 }
+  190 = { add_core_of = LNC }
+  
+  881 = { add_core_of = LNC }
+  
+  1010 = { add_core_of = LNC }
+  
+  
+ }
+
+}

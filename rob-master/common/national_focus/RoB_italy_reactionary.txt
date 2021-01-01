@@ -1,0 +1,1543 @@
+focus_tree = {
+	id = italy_army_tree
+	country = {
+		factor = 0
+	}
+	#Focus for Italia, Irredenta
+	focus = {
+		id = ITA_italiairredenta
+		icon = GFX_goal_unknown
+		x = 11
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Graziani - Dictator of Italy
+	focus = {
+		id = ITA_grazianidictatorofitaly
+		icon = GFX_goal_unknown
+		x = 10
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Grant Pelekists Government Positions
+	focus = {
+		id = ITA_grantpelekistsgovernmentpositions
+		icon = GFX_goal_unknown
+		x = 6
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_grazianidictatorofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Imperator Graziani
+	focus = {
+		id = ITA_imperatorgraziani
+		icon = GFX_goal_unknown
+		x = 10
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_agunforeveryfamily 
+		}
+		prerequisite = { 
+			focus = ITA_importanceofthechurch 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Gun for every Family
+	focus = {
+		id = ITA_agunforeveryfamily
+		icon = GFX_goal_unknown
+		x = 12
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_industrilizeitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Make the Trains Run on Time
+	focus = {
+		id = ITA_makethetrainsrunontime
+		icon = GFX_goal_unknown
+		x = 12
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_saviourofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Increase the Birthrates
+	focus = {
+		id = ITA_increasethebirthrates
+		icon = GFX_goal_unknown
+		x = 8
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_supporttraditionalvalues }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Industrilize Italy
+	focus = {
+		id = ITA_industrilizeitaly
+		icon = GFX_goal_unknown
+		x = 12
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_makethetrainsrunontime }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Execute the Traitors
+	focus = {
+		id = ITA_executethetraitors
+		icon = GFX_goal_unknown
+		x = 10
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_antiliberalideals }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Finish the Purge of the Left
+	focus = {
+		id = ITA_finishthepurgeoftheleft
+		icon = GFX_goal_unknown
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_executethetraitors }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Saviour of Italy
+	focus = {
+		id = ITA_saviourofitaly
+		icon = GFX_goal_unknown
+		x = 10
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_thearmywithastate 
+		}
+		prerequisite = { 
+			focus = ITA_protectthechurch 
+		}
+		prerequisite = { 
+			focus = ITA_finishthepurgeoftheleft 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Protect the Church
+	focus = {
+		id = ITA_protectthechurch
+		icon = GFX_goal_unknown
+		x = 7
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_banmonarchists }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Ban Monarchists
+	focus = {
+		id = ITA_banmonarchists
+		icon = GFX_goal_unknown
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_grantpelekistsgovernmentpositions }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Army With a State
+	focus = {
+		id = ITA_thearmywithastate
+		icon = GFX_goal_unknown
+		x = 13
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_theromanexample }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Anti Liberal Ideals
+	focus = {
+		id = ITA_antiliberalideals
+		icon = GFX_goal_unknown
+		x = 10
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_grazianidictatorofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Restore Italian pride
+	focus = {
+		id = ITA_restoreitalianpride
+		icon = GFX_goal_unknown
+		x = 14
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_grazianidictatorofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Roman Example
+	focus = {
+		id = ITA_theromanexample
+		icon = GFX_goal_unknown
+		x = 14
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_grazianidictatorofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Support Traditional Values
+	focus = {
+		id = ITA_supporttraditionalvalues
+		icon = GFX_goal_unknown
+		x = 8
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_saviourofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Importance of the Church
+	focus = {
+		id = ITA_importanceofthechurch
+		icon = GFX_goal_unknown
+		x = 8
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_increasethebirthrates }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for A Gentle Leader
+	focus = {
+		id = ITA_agentleleader
+		icon = GFX_goal_unknown
+		x = 23
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_dealwithconservativeestabilishment 
+		}
+		prerequisite = { 
+			focus = ITA_conservativevalues 
+		}
+		prerequisite = { 
+			focus = ITA_moreautonomytoregions 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Question of Monarchy
+	focus = {
+		id = ITA_thequestionofmonarchy
+		icon = GFX_goal_unknown
+		x = 23
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_agentleleader }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Welcome Foreign Assets
+	focus = {
+		id = ITA_welcomeforeignassets
+		icon = GFX_goal_unknown
+		x = 47
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_allythewealthy 
+		}
+		prerequisite = { 
+			focus = ITA_milanromehighway 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Organic Kingdom
+	focus = {
+		id = ITA_organickingdom
+		icon = GFX_goal_unknown
+		x = 19
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_thekingdomofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Kingdom of Italy!
+	focus = {
+		id = ITA_thekingdomofitaly
+		icon = GFX_goal_unknown
+		x = 21
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_thequestionofmonarchy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Iberian Campaing
+	focus = {
+		id = ITA_iberiancampaing
+		icon = GFX_goal_unknown
+		x = 14
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_dealwiththefrench }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for British Holdings
+	focus = {
+		id = ITA_britishholdings
+		icon = GFX_goal_unknown
+		x = 14
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_iberiancampaing }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Italian East Africa
+	focus = {
+		id = ITA_italianeastafrica
+		icon = GFX_goal_unknown
+		x = 11
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_italiairredenta }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Northern Direction
+	focus = {
+		id = ITA_northerndirection
+		icon = GFX_goal_unknown
+		x = 11
+		y = 16
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_subjugatemiddleeast 
+			focus = ITA_britishholdings 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Western Direction
+	focus = {
+		id = ITA_westerndirection
+		icon = GFX_goal_unknown
+		x = 14
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_italiairredenta }
+		mutually_exclusive = { focus = ITA_easterndirection }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Deal With The French
+	focus = {
+		id = ITA_dealwiththefrench
+		icon = GFX_goal_unknown
+		x = 14
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_westerndirection }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Total War
+	focus = {
+		id = ITA_totalwar
+		icon = GFX_goal_unknown
+		x = 30
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_educatecitizens }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Italy Is Strong Again!
+	focus = {
+		id = ITA_italyisstrongagain
+		icon = GFX_goal_unknown
+		x = 27
+		y = 17
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_focusonmediumtanks 
+			focus = ITA_bringbackarditi 
+			focus = ITA_finanseitalianairforce 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Eastern Direction
+	focus = {
+		id = ITA_easterndirection
+		icon = GFX_goal_unknown
+		x = 8
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_italiairredenta }
+		mutually_exclusive = { focus = ITA_westerndirection }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Serbian-Croatian Campaing
+	focus = {
+		id = ITA_serbiancroatiancampaing
+		icon = GFX_goal_unknown
+		x = 8
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_easterndirection }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Dominate Balkans
+	focus = {
+		id = ITA_dominatebalkans
+		icon = GFX_goal_unknown
+		x = 8
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_serbiancroatiancampaing }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Subjugate Middle East
+	focus = {
+		id = ITA_subjugatemiddleeast
+		icon = GFX_goal_unknown
+		x = 8
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_dominatebalkans }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Get Rid Of Old Guard
+	focus = {
+		id = ITA_getridofoldguard
+		icon = GFX_goal_unknown
+		x = 32
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_planofbadoglio }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Combined Warfare
+	focus = {
+		id = ITA_combinedwarfare
+		icon = GFX_goal_unknown
+		x = 32
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_getridofoldguard }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for New Officer Education
+	focus = {
+		id = ITA_newofficereducation
+		icon = GFX_goal_unknown
+		x = 32
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_combinedwarfare }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Educate Citizens
+	focus = {
+		id = ITA_educatecitizens
+		icon = GFX_goal_unknown
+		x = 30
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_planofgraziani 
+			focus = ITA_planofbadoglio 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Finanse Italian Airforce
+	focus = {
+		id = ITA_finanseitalianairforce
+		icon = GFX_goal_unknown
+		x = 32
+		y = 16
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_newofficereducation }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Focus on Medium Tanks
+	focus = {
+		id = ITA_focusonmediumtanks
+		icon = GFX_goal_unknown
+		x = 22
+		y = 16
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_studyrussiancivilwar }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Study Foreign Experience
+	focus = {
+		id = ITA_studyforeignexperience
+		icon = GFX_goal_unknown
+		x = 27
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_planofgraziani }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Bring Back Arditi
+	focus = {
+		id = ITA_bringbackarditi
+		icon = GFX_goal_unknown
+		x = 27
+		y = 16
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_newinfantryequipment }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for New Infantry Equipment
+	focus = {
+		id = ITA_newinfantryequipment
+		icon = GFX_goal_unknown
+		x = 27
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_foreignspecialists }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Build Military Industry
+	focus = {
+		id = ITA_buildmilitaryindustry
+		icon = GFX_goal_unknown
+		x = 24
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_planofgraziani 
+			focus = ITA_planofmesse 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Convert Civilian Factories
+	focus = {
+		id = ITA_convertcivilianfactories
+		icon = GFX_goal_unknown
+		x = 24
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_buildmilitaryindustry }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Form Italian Armor Corps
+	focus = {
+		id = ITA_formitalianarmorcorps
+		icon = GFX_goal_unknown
+		x = 21
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_planofmesse }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Finanse Italian Tank Projects
+	focus = {
+		id = ITA_finanseitaliantankprojects
+		icon = GFX_goal_unknown
+		x = 22
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_formitalianarmorcorps }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Italian Army
+	focus = {
+		id = ITA_italianarmy
+		icon = GFX_goal_unknown
+		x = 27
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Plan of Graziani
+	focus = {
+		id = ITA_planofgraziani
+		icon = GFX_goal_unknown
+		x = 27
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_italianarmy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Plan of Badoglio
+	focus = {
+		id = ITA_planofbadoglio
+		icon = GFX_goal_unknown
+		x = 34
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_italianarmy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Messe - Dictator of Italy
+	focus = {
+		id = ITA_messedictatorofitaly
+		icon = GFX_goal_unknown
+		x = 23
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Opera Nazionale Dopolavoro
+	focus = {
+		id = ITA_operanazionaledopolavoro
+		icon = GFX_goal_unknown
+		x = 35
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_masspublicworks 
+		}
+		prerequisite = { 
+			focus = ITA_xGMLfATV 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for No More Strikes
+	focus = {
+		id = ITA_nomorestrikes
+		icon = GFX_goal_unknown
+		x = 45
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_southernindustry 
+		}
+		prerequisite = { 
+			focus = ITA_allythewealthy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Economic Recovery
+	focus = {
+		id = ITA_economicrecovery
+		icon = GFX_goal_unknown
+		x = 41
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_thecomingcorporatestate 
+			focus = ITA_thekeynesianstate 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Keynesian State
+	focus = {
+		id = ITA_thekeynesianstate
+		icon = GFX_goal_unknown
+		x = 46
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_thebattleforbirths 
+		}
+		prerequisite = { 
+			focus = ITA_nomorestrikes 
+		}
+		prerequisite = { 
+			focus = ITA_welcomeforeignassets 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Milan-Rome Highway
+	focus = {
+		id = ITA_milanromehighway
+		icon = GFX_goal_unknown
+		x = 49
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_massinfrastructureprojects }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Northern Industry
+	focus = {
+		id = ITA_northernindustry
+		icon = GFX_goal_unknown
+		x = 43
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_bantradeunions }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Southern Industry
+	focus = {
+		id = ITA_southernindustry
+		icon = GFX_goal_unknown
+		x = 43
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_northernindustry }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Mass Infrastructure Projects
+	focus = {
+		id = ITA_massinfrastructureprojects
+		icon = GFX_goal_unknown
+		x = 49
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_institutelabourconscription }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Ban Trade Unions
+	focus = {
+		id = ITA_bantradeunions
+		icon = GFX_goal_unknown
+		x = 43
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_organizationfornationalrecovery }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Institute Labour Conscription
+	focus = {
+		id = ITA_institutelabourconscription
+		icon = GFX_goal_unknown
+		x = 49
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_organizationfornationalrecovery }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Battle for Births
+	focus = {
+		id = ITA_thebattleforbirths
+		icon = GFX_goal_unknown
+		x = 41
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_thebattleforbread }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Organization For National Recovery
+	focus = {
+		id = ITA_organizationfornationalrecovery
+		icon = GFX_goal_unknown
+		x = 46
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_keynesianeconomics }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Battle for Bread
+	focus = {
+		id = ITA_thebattleforbread
+		icon = GFX_goal_unknown
+		x = 41
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_thebattleforland }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Labour Laws
+	focus = {
+		id = ITA_labourlaws
+		icon = GFX_goal_unknown
+		x = 37
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_xGMLfATV 
+		}
+		prerequisite = { 
+			focus = ITA_outlawfinancialparasitism 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Coming Corporate State
+	focus = {
+		id = ITA_thecomingcorporatestate
+		icon = GFX_goal_unknown
+		x = 36
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_operanazionaledopolavoro 
+		}
+		prerequisite = { 
+			focus = ITA_labourlaws 
+		}
+		prerequisite = { 
+			focus = ITA_thebattleforbirths 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Battle for Lira
+	focus = {
+		id = ITA_thebattleforlira
+		icon = GFX_goal_unknown
+		x = 41
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_thegreatdepression }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Battle for Land
+	focus = {
+		id = ITA_thebattleforland
+		icon = GFX_goal_unknown
+		x = 41
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_thebattleforlira }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Outlaw Financial Parasitism
+	focus = {
+		id = ITA_outlawfinancialparasitism
+		icon = GFX_goal_unknown
+		x = 39
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_chamberofagriculture }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Control the Capitalists
+	focus = {
+		id = ITA_controlthecapitalists
+		icon = GFX_goal_unknown
+		x = 36
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_italianchambersofeconomics }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Mass Public Works
+	focus = {
+		id = ITA_masspublicworks
+		icon = GFX_goal_unknown
+		x = 33
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_nationalisttradeunions }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Nationalist Trade Unions
+	focus = {
+		id = ITA_nationalisttradeunions
+		icon = GFX_goal_unknown
+		x = 33
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_bringinthetradeunions }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Militarize Schools
+	focus = {
+		id = ITA_militarizeschools
+		icon = GFX_goal_unknown
+		x = 23
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_messedictatorofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Chamber of Agriculture
+	focus = {
+		id = ITA_chamberofagriculture
+		icon = GFX_goal_unknown
+		x = 39
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_chamberofindustry }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Bring in The Trade Unions
+	focus = {
+		id = ITA_bringinthetradeunions
+		icon = GFX_goal_unknown
+		x = 33
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_italianchambersofeconomics }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Keynesian Economics
+	focus = {
+		id = ITA_keynesianeconomics
+		icon = GFX_goal_unknown
+		x = 46
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_thegreatdepression }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Italian Chambers of Economics
+	focus = {
+		id = ITA_italianchambersofeconomics
+		icon = GFX_goal_unknown
+		x = 36
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_corporatisteconomics }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for The Great Depression
+	focus = {
+		id = ITA_thegreatdepression
+		icon = GFX_goal_unknown
+		x = 41
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Corporatist Economics
+	focus = {
+		id = ITA_corporatisteconomics
+		icon = GFX_goal_unknown
+		x = 36
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_thegreatdepression }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Mass Propoganda
+	focus = {
+		id = ITA_masspropoganda
+		icon = GFX_goal_unknown
+		x = 25
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_continuemilitarization }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Roman Democracy
+	focus = {
+		id = ITA_romandemocracy
+		icon = GFX_goal_unknown
+		x = 26
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_masspropoganda 
+		}
+		prerequisite = { 
+			focus = ITA_allowsomenewspapers 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Continue Militarization
+	focus = {
+		id = ITA_continuemilitarization
+		icon = GFX_goal_unknown
+		x = 25
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_messestaysasdictator }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Voting Rights for Soldiers
+	focus = {
+		id = ITA_votingrightsforsoldiers
+		icon = GFX_goal_unknown
+		x = 27
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_messestaysasdictator }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for In Peace with Ourselves
+	focus = {
+		id = ITA_inpeacewithourselves
+		icon = GFX_goal_unknown
+		x = 20
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ITA_churchunderourking 
+		}
+		prerequisite = { 
+			focus = ITA_expandautonomy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Expand Autonomy
+	focus = {
+		id = ITA_expandautonomy
+		icon = GFX_goal_unknown
+		x = 21
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_bringbacknobleprivileges }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Church Under Our King!
+	focus = {
+		id = ITA_churchunderourking
+		icon = GFX_goal_unknown
+		x = 19
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_organickingdom }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Messe Youth
+	focus = {
+		id = ITA_messeyouth
+		icon = GFX_goal_unknown
+		x = 23
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_militarizeschools }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Italian Patriotism
+	focus = {
+		id = ITA_italianpatriotism
+		icon = GFX_goal_unknown
+		x = 28
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_messedictatorofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for One Italian Identity
+	focus = {
+		id = ITA_oneitalianidentity
+		icon = GFX_goal_unknown
+		x = 27
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_italianpatriotism }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for More Autonomy to Regions
+	focus = {
+		id = ITA_moreautonomytoregions
+		icon = GFX_goal_unknown
+		x = 26
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_oneitalianidentity }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Deal With Conservative Estabilishment
+	focus = {
+		id = ITA_dealwithconservativeestabilishment
+		icon = GFX_goal_unknown
+		x = 20
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_huntdownradicals }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Hunt down Radicals
+	focus = {
+		id = ITA_huntdownradicals
+		icon = GFX_goal_unknown
+		x = 19
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_supportfromveterans }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Support From Veterans
+	focus = {
+		id = ITA_supportfromveterans
+		icon = GFX_goal_unknown
+		x = 18
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_messedictatorofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Allow Some Newspapers
+	focus = {
+		id = ITA_allowsomenewspapers
+		icon = GFX_goal_unknown
+		x = 27
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_votingrightsforsoldiers }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Conservative Values
+	focus = {
+		id = ITA_conservativevalues
+		icon = GFX_goal_unknown
+		x = 23
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_messeyouth }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Messe Stays as Dictator!
+	focus = {
+		id = ITA_messestaysasdictator
+		icon = GFX_goal_unknown
+		x = 25
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_thequestionofmonarchy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Bring back Noble Privileges
+	focus = {
+		id = ITA_bringbacknobleprivileges
+		icon = GFX_goal_unknown
+		x = 21
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_thekingdomofitaly }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Chamber of Industry
+	focus = {
+		id = ITA_chamberofindustry
+		icon = GFX_goal_unknown
+		x = 39
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_italianchambersofeconomics }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Ally the Wealthy
+	focus = {
+		id = ITA_allythewealthy
+		icon = GFX_goal_unknown
+		x = 46
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_organizationfornationalrecovery }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Plan of Messe
+	focus = {
+		id = ITA_planofmesse
+		icon = GFX_goal_unknown
+		x = 20
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_italianarmy }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Study Russian Civil War
+	focus = {
+		id = ITA_studyrussiancivilwar
+		icon = GFX_goal_unknown
+		x = 22
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_finanseitaliantankprojects }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Foreign Specialists
+	focus = {
+		id = ITA_foreignspecialists
+		icon = GFX_goal_unknown
+		x = 27
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = ITA_studyforeignexperience }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+ }

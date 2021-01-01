@@ -1,0 +1,29 @@
+division_template = {
+	name = "worker_volunteers"			
+	division_names_group = THR_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+}
+
+units = {
+	division = {
+		name = "I Worker Volunteer"
+		location =  6690
+		division_template = "worker_volunteers"
+	}
+	division = {
+		name = "II Worker Volunteer"
+		location = 13356
+		division_template = "worker_volunteers"
+	}
+	division = {
+		name = "III Worker Volunteer"
+		location = 13348
+		division_template = "worker_volunteers"
+	}
+
+}

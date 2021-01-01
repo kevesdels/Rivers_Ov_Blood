@@ -1,0 +1,19 @@
+focus_tree = {
+	id = german_focus_base
+		country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+
+	continuous_focus_position = { x = 50 y = 3000 }
+	
+	
+	shared_focus = GER_rotevolksarmee
+	shared_focus = GER_rotevolksflotte
+	shared_focus = GER_roteluftwaffe
+	shared_focus = GER_germaneconomy
+	
+	}

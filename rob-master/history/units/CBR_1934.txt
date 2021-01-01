@@ -1,0 +1,109 @@
+division_template = {
+
+name = "Belarusian Red Infantry"
+is_locked = no
+
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+
+	}
+
+}
+
+division_template = {
+
+name = "Belarusian Red Partisans"
+is_locked = no
+
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+
+
+	}
+
+}
+
+units = {
+ division = {
+name = "1.Belarusian Red Infantry"
+location = 11271
+division_template = "Belarusian Red Infantry"
+start_experience_factor = 0.3
+start_equipment_factor = 0.5
+
+}
+ division = {
+name = "2.Belarusian Red Infantry"
+location = 6454
+division_template = "Belarusian Red Infantry"
+start_experience_factor = 0.3
+start_equipment_factor = 0.5
+
+}
+ division = {
+name = "3.Belarusian Red Infantry"
+location = 6344
+division_template = "Belarusian Red Infantry"
+start_experience_factor = 0.3
+start_equipment_factor = 0.5
+
+}
+ division = {
+name = "4.Belarusian Red Infantry"
+location = 6233
+division_template = "Belarusian Red Infantry"
+start_experience_factor = 0.3
+start_equipment_factor = 0.5
+
+}
+ division = {
+name = "5.Belarusian Red Infantry"
+location = 3378
+division_template = "Belarusian Red Infantry"
+start_experience_factor = 0.3
+start_equipment_factor = 0.5
+
+}
+ division = {
+name = "6.Belarusian Red Infantry"
+location = 6373
+division_template = "Belarusian Red Infantry"
+start_experience_factor = 0.3
+start_equipment_factor = 0.5
+
+}
+ division = {
+name = "1.Belarusian Red Partisans"
+location = 3293
+division_template = "Belarusian Red Partisans"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+ division = {
+name = "1.Belarusian Red Partisans"
+location = 3203
+division_template = "Belarusian Red Partisans"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+ division = {
+name = "Belarusian Red Guard"
+location = 9288
+division_template = "Belarusian Red Infantry"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+
+}

@@ -1,0 +1,93 @@
+division_template = {
+	name = "Revolutionary Guard"
+
+	division_names_group = RAJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	priority = 2
+}
+
+
+
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = RAJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	#Orissa Army
+	division = {
+		name = "Odishan Revolutionary Guard"
+		location = 10116
+		division_template = "Revolutionary Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "All-Indian Infantry Legion"
+		location = 10116
+		division_template = "Revolutionary Guard"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st Odishan Socialist Militia"
+		location = 1059
+		division_template = "Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "2nd Odishan Socialist Militia"
+		location = 4104
+		division_template = "Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "3rd Odishan Socialist Militia"
+		location = 12490
+		division_template = "Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Andhra Socialist Militia"
+		location = 4237
+		division_template = "Militia"
+		start_experience_factor = 0.1
+	}
+
+
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "ORS"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

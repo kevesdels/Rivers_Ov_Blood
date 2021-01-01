@@ -1,0 +1,527 @@
+﻿##################
+###Main Political Events (Russian Democratic Republic)
+##################
+
+add_namespace = russian_republic
+
+###RDR in 1934
+country_event = {
+id = russian_republic.1
+title = russian_republic.1.t
+desc = russian_republic.1.d
+fire_only_once = yes
+picture = GFX_picture_russia_white_soldiers
+
+trigger =  { tag = RDR }
+mean_time_to_happen = { days = 10 }
+
+option = {
+name = russian_republic.1.a
+add_political_power = 10
+}
+}
+
+###Maklakov Resigns
+country_event = {
+id = russian_republic.2
+title = russian_republic.2.t
+desc = russian_republic.2.d
+fire_only_once = yes
+picture = GFX_picture_russia_maklakov
+
+trigger = {
+tag = RDR
+date > 1934.3.3
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = russian_republic.2.a
+retire_country_leader = yes
+create_country_leader = {
+	name = "State Duma of the Russian Republic"
+	desc = ""
+	picture = "RussianStateDuma.tga"
+	expire = "1953.3.1"
+	ideology = conservative_subtype
+	traits = {
+		#
+	}
+}
+add_popularity = { ideology = conservative popularity = -0.10 }
+
+}
+}
+
+###Economy falls
+country_event = {
+id = russian_republic.3
+title = russian_republic.3.t
+desc = russian_republic.3.d
+fire_only_once = yes
+picture = GFX_report_event_worker_protests
+
+trigger = {
+tag = RDR
+date > 1934.10.10
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = russian_republic.3.a
+swap_ideas = { 
+  remove_idea = failing_economy
+  add_idea = failing_economy_2 
+}
+add_popularity = { ideology = conservative popularity = -0.05 }
+add_political_power =-80
+}
+}
+
+###1935 Elections
+country_event = {
+id = russian_republic.4
+title = russian_republic.4.t
+desc = russian_republic.4.d
+fire_only_once = yes
+picture = GFX_picture_russia_kazan
+
+trigger = {
+tag = RDR
+date > 1935.2.1
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = russian_republic.4.a
+add_political_power = 100
+set_politics = {
+ruling_party = social_liberal
+elections_allowed = no
+}
+add_popularity = { ideology = social_liberal popularity = 0.15 }
+set_country_flag = elections_of_1935
+create_country_leader = {
+	name = "Nikolai Alexandrovich Berdyaev"
+	desc = ""
+	picture = "NikolaiAlexandrovichBerdyaev.tga"
+	expire = "1953.3.1"
+	ideology = conservative_subtype
+	traits = {
+		#
+	}
+}
+set_party_name = { ideology = conservative long_name = RDR_conservative_party_two_long name = RDR_conservative_party_two}
+
+}
+
+option = {
+name = russian_republic.4.b
+add_political_power = 100
+set_politics = {
+ruling_party = social_democracy
+elections_allowed = no
+}
+add_popularity = { ideology = social_democracy popularity = 0.15 }
+create_country_leader = {
+	name = "Nikolai Alexandrovich Berdyaev"
+	desc = ""
+	picture = "NikolaiAlexandrovichBerdyaev.tga"
+	expire = "1953.3.1"
+	ideology = conservative_subtype
+	traits = {
+		#
+	}
+}
+set_party_name = { ideology = conservative long_name = RDR_conservative_party_two_long name = RDR_conservative_party_two}
+set_country_flag = elections_of_1935
+}
+}
+
+###Pelekist Issue
+country_event = {
+id = russian_republic.5
+title = russian_republic.5.t
+desc = russian_republic.5.d
+fire_only_once = yes
+picture = GFX_picture_russia_pelekists
+
+trigger = {
+has_country_flag = elections_of_1935
+}
+mean_time_to_happen = { days = 3 }
+
+option = {
+name = russian_republic.5.a
+add_popularity = { ideology = pelekist popularity =-0.07}
+set_country_flag = pelekist_dealt_with
+add_political_power =-120
+add_stability =-0.1
+}
+
+option = {
+name = russian_republic.5.b
+add_popularity = { ideology = pelekist popularity =0.04}
+set_country_flag = pelekists_survive
+}
+}
+
+###Reactionary Issue
+country_event = {
+id = russian_republic.6
+title = russian_republic.6.t
+desc = russian_republic.6.d
+fire_only_once = yes
+picture = GFX_picture_russia_reactionaries
+
+trigger = {
+OR = {
+has_country_flag = pelekist_dealt_with
+has_country_flag = pelekists_survive
+}
+}
+mean_time_to_happen = { days = 5 }
+
+option = {
+name = russian_republic.6.a
+add_popularity = { ideology = reactionary popularity =-0.1}
+add_stability =-0.1
+add_political_power = -120
+set_country_flag = reactionaries_dealth_with
+}
+
+option = {
+name = russian_republic.6.b
+add_popularity = { ideology = reactionary popularity =0.08}
+set_country_flag = reactionaries_survive
+}
+}
+
+###Destroying power of nobility
+country_event = {
+id = russian_republic.7
+title = russian_republic.7.t
+desc = russian_republic.7.d
+fire_only_once = yes
+picture = GFX_picture_russia_nobility
+
+trigger = {
+OR = {
+has_country_flag = reactionaries_dealth_with
+has_country_flag = reactionaries_survive
+}
+}
+mean_time_to_happen = { days = 10 }
+
+option = {
+name = russian_republic.7.a
+if = {
+limit = {
+has_country_flag = reactionaries_dealth_with
+}
+add_political_power = 80
+add_stability = 0.05
+set_country_flag = nobility_done
+}
+else = {
+add_political_power =-80 
+add_stability =-0.03
+set_country_flag = nobility_angered
+}
+}
+}
+
+###Welfare Programms
+country_event = {
+id = russian_republic.8
+title = russian_republic.8.t
+desc = russian_republic.8.d
+fire_only_once = yes
+picture = GFX_report_event_generic_parliament
+
+trigger = {
+OR = {
+has_country_flag = nobility_angered
+has_country_flag = nobility_done
+}
+}
+mean_time_to_happen = { days = 10 }
+
+option = {
+name = russian_republic.8.a 
+if = {
+limit = {
+has_country_flag = nobility_angered
+}
+add_political_power = -20
+set_country_flag = nobility_angered_2
+}
+else = {
+add_political_power = 20
+set_country_flag = nobility_done_2
+}
+}
+}
+
+###Ethnic Tolerance
+country_event = {
+id = russian_republic.9
+title = russian_republic.9.t
+desc = russian_republic.9.d
+fire_only_once = yes
+picture = GFX_report_event_generic_parliament
+
+trigger = {
+OR = {
+has_country_flag = nobility_angered_2
+has_country_flag = nobility_done_2
+}
+}
+
+mean_time_to_happen = { days = 5 }
+
+option = {
+name = russian_republic.9.a
+if = {
+limit = {
+has_country_flag = nobility_angered_2
+}
+set_country_flag = nobility_angered_3
+add_political_power =-20
+}
+else = {
+add_political_power = 20
+set_country_flag = nobility_done_3
+}
+}
+}
+
+
+#############
+###Coups
+#############
+
+
+###RU Coup
+country_event = {
+id = russian_republic.10
+title = russian_republic.10.t
+desc = russian_republic.10.d
+fire_only_once = yes
+picture = GFX_picture_russia_vonsiatsky
+
+trigger = {
+has_country_flag = pelekists_survive
+has_country_flag = reactionaries_dealth_with
+has_country_flag = nobility_done_3
+}
+mean_time_to_happen = { days = 5 }
+
+option = {
+name = russian_republic.10.a
+set_politics = {
+ruling_party = pelekist
+elections_allowed = no
+}
+add_popularity = { ideology = pelekist popularity = 0.35}
+add_political_power = 100
+set_country_flag = pelekist_coup
+remove_ideas = {
+weak_democracy
+}
+}
+
+}
+
+###AfR Coup
+country_event = {
+id = russian_republic.11
+title = russian_republic.11.t
+desc = russian_republic.11.d
+fire_only_once = yes
+picture = GFX_picture_general_bermont
+
+trigger = {
+has_country_flag = pelekist_dealt_with
+has_country_flag = reactionaries_survive
+has_country_flag = nobility_angered_3
+}
+mean_time_to_happen = { days = 5 }
+
+option = {
+name = russian_republic.11.a
+set_politics = {
+ruling_party = reactionary
+elections_allowed = no
+}
+add_popularity = { ideology = reactionary popularity = 0.35}
+add_political_power = 100
+set_country_flag = reactionary_coup
+remove_ideas = {
+weak_democracy
+}
+}
+}
+
+###Stable Democracy
+country_event = {
+id = russian_republic.12
+title = russian_republic.12.t
+desc = russian_republic.12.d
+fire_only_once = yes
+picture = GFX_report_event_generic_conference
+
+trigger = {
+has_country_flag = pelekist_dealt_with
+has_country_flag = reactionaries_dealth_with
+has_country_flag = nobility_done_3
+}
+mean_time_to_happen = { days = 5 }
+
+option = {
+name = russian_republic.12.a
+add_stability = 0.15
+add_political_power = 150
+remove_ideas = {
+weak_democracy
+}
+}
+
+}
+
+
+#########################
+###Everything Falls Apart
+#########################
+
+###Disorder in the streets
+country_event = {
+id = russian_republic.13
+title = russian_republic.13.t
+desc = russian_republic.13.d
+fire_only_once = yes
+picture = GFX_picture_russian_disorder
+
+trigger = {
+has_country_flag = pelekists_survive
+has_country_flag = reactionaries_survive
+OR = {
+has_country_flag = nobility_angered_3
+has_country_flag = nobility_done_3
+}
+}
+mean_time_to_happen = { days = 5 }
+
+option = {
+name = russian_republic.13.a
+add_stability = -0.1
+add_political_power = -100
+set_country_flag = revolt_in_the_streets
+}
+}
+
+###Democratic government falls
+country_event = {
+id = russian_republic.14
+title = russian_republic.14.t
+desc = russian_republic.14.d
+fire_only_once = yes
+picture = GFX_picture_russia_riots
+
+trigger = {
+has_country_flag = revolt_in_the_streets
+}
+mean_time_to_happen = { days = 10 }
+
+option = {
+name = russian_republic.14.a
+add_popularity = { ideology = social_democracy popularity =-0.3 }
+add_popularity = { ideology = social_liberal popularity =-0.3 }
+add_political_power =-100
+add_stability =-0.05
+set_country_flag = government_fell
+}
+}
+
+###Future of Russian Republic
+country_event = {
+id = russian_republic.15
+title = russian_republic.15.t
+desc = russian_republic.15.d
+fire_only_once = yes
+picture = GFX_picture_russia_kazan
+
+trigger = {
+has_country_flag = government_fell
+}
+mean_time_to_happen = { days = 4 }
+
+option = { ###Conservative coalition
+name = russian_republic.15.a
+set_politics = {
+ruling_party = conservative
+elections_allowed = no
+}
+add_popularity = { ideology = conservative popularity = 0.25}
+add_popularity = { ideology = reactionary popularity = 0.07}
+set_country_flag = conservatives_form_coalition
+}
+
+option = { ###RU declares RDR dead
+name = russian_republic.15.b
+add_popularity = { ideology = pelekist popularity = 0.15}
+set_country_flag = pelekists_prepare_for_war
+}
+}
+
+###Reactionaries Split
+country_event = {
+id = russian_republic.16
+title = russian_republic.16.t
+desc = russian_republic.16.d
+fire_only_once = yes
+picture = GFX_picture_russia_reactionaries_split
+
+trigger = {
+has_country_flag = pelekists_prepare_for_war
+}
+mean_time_to_happen = { days = 3 }
+
+option = {
+name = russian_republic.16.a
+add_popularity = { ideology = pelekist popularity = 0.08}
+add_popularity = { ideology = conservative popularity = 0.08}
+add_popularity = { ideology = reactionary popularity = -0.2}
+set_country_flag = civil_war_almost_here
+}
+}
+
+###Civil war
+country_event = {
+id = russian_republic.17
+title = russian_republic.17.t
+desc = russian_republic.17.d
+fire_only_once = yes
+picture = GFX_picture_russia_civil_war_part_two
+
+trigger = {
+has_country_flag = civil_war_almost_here
+}
+mean_time_to_happen = { days = 6 }
+
+option = {
+name = russian_republic.17.a
+set_politics = {
+ ruling_party = pelekist
+ elections_allowed = no
+}
+add_popularity = { ideology = pelekist popularity = 0.15}
+remove_ideas = weak_democracy
+start_civil_war = {
+	ideology = conservative
+	size = 0.4
+}
+}
+}
+
+

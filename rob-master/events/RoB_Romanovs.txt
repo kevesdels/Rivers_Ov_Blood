@@ -1,0 +1,273 @@
+#################
+###Romanov Events
+#################
+
+add_namespace = romanov
+
+
+####STARTING Events
+###Barnaul
+country_event = {
+id = romanov.0
+title = romanov.0.t
+desc = romanov.0.d
+fire_only_once = yes
+
+trigger = {
+ tag = BWR
+ date > 1934.1.1
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = romanov.0.a
+add_political_power = 3
+}
+
+}
+
+###Novosibrisk
+country_event = {
+id = romanov.1
+title = romanov.1.t
+desc = romanov.1.d
+fire_only_once = yes
+
+trigger = {
+ tag = TOW
+ date > 1934.1.1
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = romanov.0.a
+add_political_power = 3
+}
+}
+
+####MAIN POLITICAL Events
+###Cold relationship
+country_event = {
+id = romanov.2
+title = romanov.2.t
+desc = romanov.2.d
+fire_only_once = yes
+
+trigger = {
+ OR = { 
+ tag = BWR
+ tag = TOW
+ }
+ date > 1934.4.1
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = romanov.2.a
+add_stability = -0.08
+hidden_effect = {
+ country_event = { id = romanov.3 days = 20 }
+}
+}
+
+}
+
+###Dimitri cuts connections
+country_event = {
+id = romanov.3
+title = romanov.3.t
+desc = romanov.3.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = romanov.3.a
+add_stability =-0.1
+TOW = {
+ dismantle_faction = yes
+}
+hidden_effect = {
+ TOW = { country_event = { id = romanov.4 days = 15 } }
+}
+}
+}
+
+###Raid across border
+country_event = {
+id = romanov.4
+title = romanov.4.t
+desc = romanov.4.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = romanov.4.a
+hidden_effect = {
+TOW = {
+ set_country_flag = TOW_search_for_allies
+ create_faction = "Kirill Loyalists"
+ set_variable = {
+    var = TOW_clergy_support
+    value = 1
+}
+ set_variable = {
+    var = TOW_military_support
+    value = 1
+}
+}
+
+BWR = {
+ set_country_flag = BWR_search_for_allies
+ create_faction = "Dmitri Loyalists"
+ set_variable = {
+    var = BWR_clergy_support
+    value = 1
+}
+ set_variable = {
+    var = BWR_military_support
+    value = 1
+}
+}
+}
+custom_effect_tooltip = rom_tt_1
+}
+}
+
+###Novosibirsk proposes alliance
+country_event = {
+id = romanov.5
+title = romanov.5.t
+desc = romanov.5.d
+is_triggered_only = yes
+
+option = { #refuse
+name = romanov.5.a
+add_stability =-0.03
+ai_chance = {
+factor = 0  
+
+}
+}
+
+option = { ###accept
+name = romanov.5.b
+TOW = {
+ add_to_faction = ROOT
+}
+add_ai_strategy = {
+    type = alliance
+    id = "TOW"
+    value = 2000
+}
+ai_chance = {
+factor = 100  
+
+}
+}
+}
+
+###Barnaul proposes alliance
+country_event = {
+id = romanov.6
+title = romanov.6.t
+desc = romanov.6.d
+is_triggered_only = yes
+
+option = { #refuse
+name = romanov.6.a
+add_stability =-0.03
+ai_chance = {
+factor = 0  
+
+}
+}
+
+
+option = { ###accept
+name = romanov.6.b
+BWR = {
+ add_to_faction = ROOT
+}
+add_ai_strategy = {
+    type = alliance
+    id = "BWR"
+    value = 2000
+}
+ai_chance = {
+factor = 100  
+
+}
+}
+}
+
+
+###victory in the scramble for Siberia
+country_event = {
+id = romanov.7
+title = romanov.7.t
+desc = romanov.7.d
+fire_only_once = yes
+
+trigger = {
+OR = {
+ tag = TOW
+ tag = BWR
+}
+OR = {
+ TOW = {
+	has_full_control_of_state = 578
+	has_full_control_of_state = 570
+	has_full_control_of_state = 40
+	has_full_control_of_state = 569 
+	has_full_control_of_state = 654
+	has_war = no
+	}
+BWR = {
+	has_full_control_of_state = 578
+	has_full_control_of_state = 570
+	has_full_control_of_state = 40
+	has_full_control_of_state = 569 
+	has_full_control_of_state = 654
+	has_war = no
+	}
+}
+}
+
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = "Russia Rises Again!"
+set_country_flag = ROM_victory_in_war
+add_stability = 0.15
+add_war_support = 0.15
+
+if = {
+ limit = {
+  any_other_country = { 
+    is_in_faction_with = ROOT
+} 
+}
+every_other_country = {
+ limit = { is_in_faction_with = ROOT }
+ ROOT = { annex_country = { target = PREV transfer_troops = yes }}
+}
+every_state = {
+    limit = { 
+	OR = {
+	is_core_of = BWR 
+	is_core_of = TOW
+    is_core_of = BRW
+    is_core_of = KRW  	
+	}
+	}
+	remove_core_of = PREV
+	add_core_of = ROOT
+
+}
+}
+}
+}
+

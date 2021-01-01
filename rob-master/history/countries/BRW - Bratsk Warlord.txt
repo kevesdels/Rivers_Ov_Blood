@@ -1,0 +1,48 @@
+capital = 567
+set_research_slots = 1
+oob = "BRW_1934"
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 10
+	authoritharian = 13
+	reactionary = 77
+	pelekist = 0
+}
+add_ideas = {
+ extensive_conscription
+}
+set_country_flag = RUS_warlord
+add_ai_strategy = {
+    type = alliance
+    id = "TOW"
+    value = 2000
+}
+create_country_leader = {
+	name = "Mikhail Diterikhs"
+	desc = "POLITICS_BENITO_MUSSOLINI_DESC"
+	picture = "BRW_Mikhail_Diterikhs.tga"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+		
+	}
+}
+

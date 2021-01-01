@@ -1,0 +1,528 @@
+#Focus for Tank production
+	shared_focus = {
+		id = GER_tankproduction
+		icon = GFX_goal_unknown
+		x = 2
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_tankresearch }
+	}
+
+	#Focus for Panzer force
+	shared_focus = {
+		id = GER_panzerforce
+		icon = GFX_goal_unknown
+		x = 1
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_promoteacesascommanders 
+		}
+		prerequisite = { 
+			focus = GER_tankproduction 
+		}
+		prerequisite = { 
+			focus = GER_ 
+		}
+	}
+
+	#Focus for Form the Wehrmacht
+	shared_focus = {
+		id = GER_formthewehrmacht
+		icon = GFX_goal_unknown
+		x = 4
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		offset = {
+		x = 0
+		y = 3
+		trigger = {
+             tag = GER
+		}
+
+}
+	}
+
+	#Focus for Form the Kriegsmarine
+	shared_focus = {
+		id = GER_formthekriegsmarine
+		icon = GFX_goal_unknown
+		x = 13
+		y = 6
+		cost = 10
+		offset = {
+		x = 0
+		y = 3
+		trigger = {
+             tag = GER
+		}
+
+}
+		available_if_capitulated = yes
+	}
+
+	#Focus for Form the Luftwaffe
+	shared_focus = {
+		id = GER_formtheluftwaffe
+		icon = GFX_goal_unknown
+		x = 25
+		y = 6
+		cost = 10
+		offset = {
+		x = 0
+		y = 3
+		trigger = {
+             tag = GER
+		}
+
+}
+		available_if_capitulated = yes
+	}
+
+	#Focus for Tank research
+	shared_focus = {
+		id = GER_tankresearch
+		icon = GFX_goal_unknown
+		x = 2
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_rommelspanzerkorp }
+	}
+
+	#Focus for Promote aces as commanders
+	shared_focus = {
+		id = GER_promoteacesascommanders
+		icon = GFX_goal_unknown
+		x = 0
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_warofmovement }
+	}
+
+	#Focus for Forgive some communist commanders
+	shared_focus = {
+		id = GER_forgivesomecommunistcommanders
+		icon = GFX_goal_unknown
+		x = 6
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_LRDvnIzN }
+	}
+
+	#Focus for Rommel's Panzerkorp
+	shared_focus = {
+		id = GER_rommelspanzerkorp
+		icon = GFX_goal_unknown
+		x = 2
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_forgiverommelandmanstein }
+	}
+
+	#Focus for War of movement
+	shared_focus = {
+		id = GER_warofmovement
+		icon = GFX_goal_unknown
+		x = 0
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_rommelspanzerkorp }
+	}
+
+	#Focus for Panzer Focus
+	shared_focus = {
+		id = GER_panzerfocus
+		icon = GFX_goal_unknown
+		x = 2
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_formthewehrmacht }
+		mutually_exclusive = { focus = GER_LRDvnIzN }
+	}
+
+	#Focus for Infantry focus
+	shared_focus = {
+		id = GER_infantryfocus
+		icon = GFX_goal_unknown
+		x = 6
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_formthewehrmacht }
+		mutually_exclusive = { focus = GER_panzerfocus }
+	}
+
+	#Focus for Doctrinal focus
+	shared_focus = {
+		id = GER_doctrinalfocus
+		icon = GFX_goal_unknown
+		x = 4
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_formthewehrmacht }
+	}
+
+	#Focus for Forgive Rommel and Manstein
+	shared_focus = {
+		id = GER_forgiverommelandmanstein
+		icon = GFX_goal_unknown
+		x = 2
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_panzerfocus }
+	}
+
+	#Focus for Otto Baum's Panzergrenadier
+	shared_focus = {
+		id = GER_ottobaumspanzergrenadier
+		icon = GFX_goal_unknown
+		x = 6
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_forgivesomecommunistcommanders }
+	}
+
+	#Focus for Artillery War
+	shared_focus = {
+		id = GER_artillerywar
+		icon = GFX_goal_unknown
+		x = 6
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_ottobaumspanzergrenadier }
+	}
+
+	#Focus for Focus on Mechanization research
+	shared_focus = {
+		id = GER_focusonmechanizationresearch
+		icon = GFX_goal_unknown
+		x = 8
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_ottobaumspanzergrenadier }
+	}
+
+	#Focus for Stormtrooper Tactics
+	shared_focus = {
+		id = GER_rea_stormtroopertactics
+		icon = GFX_goal_unknown
+		x = 8
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_focusonmechanizationresearch }
+	}
+
+	#Focus for Focus on Artillery production
+	shared_focus = {
+		id = GER_focusonartilleryproduction
+		icon = GFX_goal_unknown
+		x = 6
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_artillerywar }
+	}
+
+	#Focus for Not One Step Back!
+	shared_focus = {
+		id = GER_notonestepback
+		icon = GFX_goal_unknown
+		x = 7
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_rea_stormtroopertactics 
+		}
+		prerequisite = { 
+			focus = GER_focusonartilleryproduction 
+		}
+		prerequisite = { 
+			focus = GER_ 
+		}
+	}
+
+	#Focus for Plan-Z
+	shared_focus = {
+		id = GER_planz
+		icon = GFX_goal_unknown
+		x = 10
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_formthekriegsmarine }
+		mutually_exclusive = { focus = GER_nluMQgXh }
+	}
+
+	#Focus for Submarine focus
+	shared_focus = {
+		id = GER_submarinefocus
+		icon = GFX_goal_unknown
+		x = 16
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_formthekriegsmarine }
+		mutually_exclusive = { focus = GER_planz }
+	}
+
+	#Focus for Naval doctrine focus
+	shared_focus = {
+		id = GER_navaldoctrinefocus
+		icon = GFX_goal_unknown
+		x = 13
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_formthekriegsmarine }
+	}
+
+	#Focus for Battleship focus
+	shared_focus = {
+		id = GER_battleshipfocus
+		icon = GFX_goal_unknown
+		x = 11
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_planz }
+	}
+
+	#Focus for Destroyer focus
+	shared_focus = {
+		id = GER_destroyerfocus
+		icon = GFX_goal_unknown
+		x = 9
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_planz }
+	}
+
+	#Focus for Large Fleet Tactics
+	shared_focus = {
+		id = GER_largefleettactics
+		icon = GFX_goal_unknown
+		x = 10
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_battleshipfocus 
+		}
+		prerequisite = { 
+			focus = GER_destroyerfocus 
+		}
+	}
+
+	#Focus for Transport focus
+	shared_focus = {
+		id = GER_transportfocus
+		icon = GFX_goal_unknown
+		x = 13
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_navaldoctrinefocus }
+	}
+
+	#Focus for German Marines
+	shared_focus = {
+		id = GER_germanmarines
+		icon = GFX_goal_unknown
+		x = 13
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_transportfocus }
+	}
+
+	#Focus for Submarine Research
+	shared_focus = {
+		id = GER_submarineresearch
+		icon = GFX_goal_unknown
+		x = 15
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_submarinefocus }
+	}
+
+	#Focus for Submarine production
+	shared_focus = {
+		id = GER_submarineproduction
+		icon = GFX_goal_unknown
+		x = 17
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_submarinefocus }
+	}
+
+	#Focus for Raiding tactics
+	shared_focus = {
+		id = GER_raidingtactics
+		icon = GFX_goal_unknown
+		x = 16
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_submarineproduction 
+		}
+		prerequisite = { 
+			focus = GER_submarineresearch 
+		}
+	}
+
+	#Focus for Der Deutsche Kriegsmarine!
+	shared_focus = {
+		id = GER_derdeutschekriegsmarine
+		icon = GFX_goal_unknown
+		x = 13
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_germanmarines 
+		}
+	}
+
+	#Focus for Quality First
+	shared_focus = {
+		id = GER_qualityfirst
+		icon = GFX_goal_unknown
+		x = 22
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_formtheluftwaffe }
+	}
+
+	#Focus for Quantity First
+	shared_focus = {
+		id = GER_quantityfirst
+		icon = GFX_goal_unknown
+		x = 28
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_formtheluftwaffe }
+		mutually_exclusive = { focus = GER_qualityfirst }
+	}
+
+	#Focus for Aerial Doctrine focus
+	shared_focus = {
+		id = GER_rea_aerialdoctrinefocus
+		icon = GFX_goal_unknown
+		x = 25
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_formtheluftwaffe }
+	}
+
+	#Focus for Ramp up fighter production
+	shared_focus = {
+		id = GER_rampupfighterproduction
+		icon = GFX_goal_unknown
+		x = 30
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_quantityfirst }
+		mutually_exclusive = { focus = GER_sLRybfMJ }
+	}
+
+	#Focus for Ramp up Bomber Production
+	shared_focus = {
+		id = GER_rampupbomberproduction
+		icon = GFX_goal_unknown
+		x = 26
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_quantityfirst }
+		mutually_exclusive = { focus = GER_rampupfighterproduction }
+	}
+
+	#Focus for Improve fighters
+	shared_focus = {
+		id = GER_improvefighters
+		icon = GFX_goal_unknown
+		x = 20
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_qualityfirst }
+		mutually_exclusive = { focus = GER_YvrlCqMm }
+	}
+
+	#Focus for Improve Bombers
+	shared_focus = {
+		id = GER_improvebombers
+		icon = GFX_goal_unknown
+		x = 24
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_qualityfirst }
+		mutually_exclusive = { focus = GER_improvefighters }
+	}
+
+	#Focus for Give Everything the Pilots Need!
+	shared_focus = {
+		id = GER_giveeverythingthepilotsneed
+		icon = GFX_goal_unknown
+		x = 22
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_improvefighters 
+			focus = GER_improvebombers 
+		}
+	}
+
+	#Focus for Lower Plane Costs
+	shared_focus = {
+		id = GER_lowerplanecosts
+		icon = GFX_goal_unknown
+		x = 28
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_rampupbomberproduction 
+			focus = GER_rampupfighterproduction 
+		}
+	}
+
+	#Focus for Fliegen Nach Sieg!
+	shared_focus = {
+		id = GER_fliegennachsieg
+		icon = GFX_goal_unknown
+		x = 25
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GER_rea_aerialdoctrinefocus 
+ 
+		}
+	}

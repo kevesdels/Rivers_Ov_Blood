@@ -1,0 +1,47 @@
+capital = 1236
+
+oob = "DRV_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+}
+
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1934.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 10
+	authoritharian = 0
+	reactionary = 90
+	pelekist = 0
+}
+
+give_guarantee = MJE
+give_guarantee = HBO
+
+add_ideas = {
+extensive_conscription
+}
+
+create_country_leader = {
+	name = "Mohammed Abdullah Hassan"
+	desc = ""
+	picture = "Portrait_Ethiopia_Haile_Selassie.dds"
+	expire = "1965.1.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}

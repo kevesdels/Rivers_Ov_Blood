@@ -1,0 +1,37 @@
+scripted_gui = {
+    economy_button = {
+        window_name = containerWindowType
+        context_type = player_context
+        parent_window_token = politics_tab
+         
+        visible = {
+            always = yes
+        }
+        
+        effects = {
+            economybuton_click = {
+                <effects>
+            }
+            economybuton_right_click = {
+                <effects>
+            }
+        }
+        
+        triggers = {
+            economybuton_click_enabled = {
+                always = yes
+            }
+            economybuton_visible = {
+                always = yes
+            }
+        }
+        
+        properties = {
+            my_icon = {
+                image = "GFX_economy_button"
+                x = 0
+                y = 50
+            }
+        }    
+    }
+}

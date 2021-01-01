@@ -1,0 +1,44 @@
+
+state={
+	id=131
+	name="STATE_131"
+	resources={
+		steel=38.000
+		aluminium=5.000
+	}
+
+	history={
+		owner = ENG
+		victory_points = {
+			351 10 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			dockyard = 4
+			air_base = 6
+			351 = {
+				naval_base = 6
+
+			}
+
+		}
+		add_core_of = ENG
+		1939.1.1 = {
+			buildings = {
+				dockyard = 5
+				industrial_complex = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		351 
+	}
+	manpower=128860
+	buildings_max_level_factor=1.000
+	state_category=city
+}

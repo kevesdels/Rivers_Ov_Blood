@@ -1,0 +1,58 @@
+capital = 94
+
+oob = "DBR_1934"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+	early_submarine = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	basic_heavy_cruiser = 1
+	early_battleship = 1
+	transport = 1
+}
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 3
+	democratic_socialist = 3
+	social_democracy = 24
+	social_liberal = 26
+	conservative = 35
+	authoritharian = 3
+	reactionary = 3
+	pelekist = 3
+}
+
+add_ideas = {
+belarusian_civil_war
+DBR_polish_dominance
+}
+create_country_leader = {
+    name = "Raman Skirmunt Aliaksandravich"
+    desc = ""
+    picture = "gfx/leaders/BLR/Raman_Skirmunt.dds"
+    expire = "1965.1.1"
+    ideology = conservative_subtype
+    traits = {
+        #
+    }
+}

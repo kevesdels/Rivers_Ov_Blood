@@ -1,0 +1,552 @@
+add_namespace = third_reich
+
+##Event: THIRD_REICH_OOB
+country_event = {
+ id = third_reich.1
+ title = third_reich.1.t
+ desc = third_reich.1.d
+ picture = GFX_report_event_french_resistance_02
+ fire_only_once = yes
+ trigger = {
+    country_exists = THR
+	tag = THR
+	}
+	option = {
+		name = third_reich.1.a
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+			add_state_core = 807
+			add_state_core = 934
+			add_state_core = 1016
+			add_state_core = 153
+			add_state_core = 1017
+			add_state_core = 4
+			add_state_core = 810
+			add_state_core = 152
+			add_state_core = 806
+			add_state_core = 1015
+			add_state_core = 1023
+			add_state_core = 1022
+			add_state_core = 1021
+			add_state_core = 1020
+			add_state_core = 1018
+			add_state_core = 1019
+			add_state_core = 1127
+			add_state_core = 1128
+			add_state_core = 1219
+		}
+	}
+}
+
+
+### youth_volunteers
+country_event = {
+ id = third_reich.13
+ title = third_reich.13.t
+ desc = third_reich.13.d
+ picture = GFX_report_event_generic_read_write
+ fire_only_once = yes
+ trigger = {
+		OR = {
+			AND = {
+  				tag = THR
+  				THR = { surrender_progress > 0.3 } 
+  				has_war_with = ACM
+ 				} 
+			AND = {
+  				tag = THR
+ 				THR = { surrender_progress > 0.3 } 
+  				has_war_with = AUS
+ 				} 
+			}
+		}
+		option = {
+		name = third_reich.13.a
+		ai_chance = { factor = 1}
+		hidden_effect = {
+		THR = { load_oob = youth_volunteers }}
+		}
+}	
+
+###Gunzzzz
+country_event = {
+ id = third_reich.16
+ title = third_reich.16.t
+ desc = third_reich.16.d
+ picture = GFX_report_event_french_resistance_02
+ fire_only_once = yes
+ trigger = {
+    tag = THR
+    THR = {
+    has_war_with = AUS
+    }
+    }
+    option = {
+    name = third_reich.16.a
+    THR = {
+    add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 2000
+    producer = AUS
+                                }
+                                }
+    } 
+    
+ }
+
+###Shall we fuck Slovenia as well?
+country_event = {
+ id = third_reich.17
+ title = third_reich.17.t
+ desc = third_reich.17.d
+ picture = GFX_report_event_french_resistance_02
+ is_triggered_only = yes
+    option = {
+    name = third_reich.17.a
+    ai_chance = { factor = 4}
+    THR = { declare_war_on = { target = SLV  type = annex_everything } }
+    } 
+    option = {
+    name = third_reich.17.b
+    ai_chance = { factor = 6}
+    }
+ }
+
+
+
+###Civil War Ends
+country_event = {
+ id = third_reich.2
+ title = third_reich.2.t
+ desc = third_reich.2.d
+ picture = GFX_report_event_french_resistance_02
+ fire_only_once = yes
+ trigger = {
+	tag = THR
+	has_idea = austrian_civil_war
+	has_full_control_of_state = 4
+	has_full_control_of_state = 152
+	has_full_control_of_state = 153
+	has_full_control_of_state = 806
+	has_full_control_of_state = 807
+	has_full_control_of_state = 1015
+	has_full_control_of_state = 1016
+	has_full_control_of_state = 1017
+	has_full_control_of_state = 1018
+	has_full_control_of_state = 1020
+	has_full_control_of_state = 1021
+	has_full_control_of_state = 1022
+	has_full_control_of_state = 1023
+	}
+	option = {
+			name = third_reich.2.a
+			ai_chance = { factor = 1}
+			hidden_effect = {
+				THR = {
+				annex_country = {
+    			target = AUS
+    			transfer_troops = NO
+				}
+				annex_country = {
+    			target = ACM
+    			transfer_troops = NO
+				}
+				remove_ideas = {
+				austrian_civil_war
+				extensive_conscription
+				}
+				add_ideas = {   
+            	limited_conscription
+            	}
+        		set_country_flag = AUS_civil_war_ended
+					}}
+		country_event = {
+		    id = third_reich.3
+		    days = 1
+		    random = 1
+			}
+			
+		}
+}
+
+###what to do with austro fascists
+country_event = {
+	 id = third_reich.3
+	 title = third_reich.3.t
+	 desc = third_reich.3.d
+	 picture = GFX_report_event_french_resistance_02
+	 is_triggered_only = yes
+	 fire_only_once = yes
+		option = {
+		name = third_reich.3.a
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = third_reich.4
+		    days = 2
+		    random = 2
+			}
+		}
+		add_manpower = -10000
+		army_experience = -20
+		}
+		option = {
+		name = third_reich.3.b
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = third_reich.4
+		    days = 2
+		    random = 2
+			}
+		}
+		add_manpower = 25000 
+		army_experience = 20
+		add_popularity = {
+		    ideology = reactionary
+		    popularity = 0.07
+			}
+		add_popularity = {
+		    ideology = authoritharian
+		    popularity = 0.04
+			}
+		add_stability = -0.05
+		add_political_power = -50
+	}			
+}
+
+###what to do with communists
+country_event = {
+	 id = third_reich.4
+	 title = third_reich.4.t
+	 desc = third_reich.4.d
+	 picture = GFX_report_event_french_resistance_02
+	 is_triggered_only = yes
+	 fire_only_once = yes
+		option = {
+		name = third_reich.4.a
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = third_reich.5
+		    days = 2
+		    random = 2
+			}
+		}
+		add_manpower = -15000
+		add_popularity = {
+		    ideology = socialist
+		    popularity = -0.10
+			}
+		add_popularity = {
+		    ideology = democratic_socialist
+		    popularity = -0.4
+			}
+		}
+		option = {
+		name = third_reich.4.b
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = third_reich.6
+		    days = 2
+		    random = 2
+			}
+		} 
+		add_popularity = {
+		    ideology = socialist
+		    popularity = 0.10
+			}
+		add_popularity = {
+		    ideology = national_socialist
+		    popularity = 0.05
+			}
+		add_popularity = {
+		    ideology = democratic_socialist
+		    popularity = 0.03
+			}
+		add_stability = -0.15
+		add_political_power = -50 
+	}			
+}
+
+
+
+
+}#end
+###Do we give up?
+country_event = {
+ id = third_reich.14
+ title = third_reich.14.t
+ desc = third_reich.14.d
+ picture = GFX_report_event_generic_read_write
+ fire_only_once = yes
+	trigger = {
+	THR = {
+	controls_state = 1017
+	num_of_controlled_states = 1
+	}
+}
+
+###We wont give in
+option = {
+		name = third_reich.14.a
+		ai_chance = { factor = 1}
+		hidden_effect = {
+		add_ideas{
+		 festung_bregenz 
+		}
+	 }
+ }
+ ###Further conflict is futile
+option = {
+		name = third_reich.14.b
+		hidden_effect = {
+
+	if = {
+    	limit = {ACM = {controls_state = 153}}
+    	ACM = {
+    	annex_country = {
+    target = THR
+    transfer_troops = no
+    				}
+	}
+}
+    if = {
+    	limit = {AUS = {controls_state = 153}}
+    	AUS = {
+    	annex_country = {
+    target = THR
+    transfer_troops = no
+   						 }
+			}
+    	}
+	}
+}
+}	
+
+
+###We have survived
+country_event = {
+ id = third_reich.15
+ title = third_reich.15.t
+ desc = third_reich.15.d
+ picture = GFX_report_event_generic_read_write
+ fire_only_once = yes
+	trigger = {
+	THR = {
+	has_idea = festung_bregenz
+	num_of_controlled_states = 3
+	}
+}
+	option = {
+			name = third_reich.15.a
+			ai_chance = { factor = 1}
+			hidden_effect = {
+			remove_ideas{
+		 	festung_bregenz }}
+		 	}
+}	
+
+###etler not going to die, choose herman or strasser as econ advisor
+country_event = {
+	 id = third_reich.5
+	 title = third_reich.5.t
+	 desc = third_reich.5.d
+	 picture = GFX_report_event_french_resistance_02
+	 is_triggered_only = yes
+	 fire_only_once = yes
+		option = {
+		name = third_reich.5.a
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = 
+		    days = 2
+		    random = 2
+			}
+		}
+		add_manpower = -15000
+		}
+		option = {
+		name = third_reich.5.b
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = 
+		    days = 2
+		    random = 2
+			}
+		}
+
+	}			
+}
+###Communists martyred
+country_event = {
+	 id = third_reich.6
+	 title = third_reich.6.t
+	 desc = third_reich.6.d
+	 picture = GFX_report_event_french_resistance_02
+	 is_triggered_only = yes
+	 fire_only_once = yes
+		option = {
+		name = third_reich.6.a
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = third_reich.7
+		    days = 2
+		    random = 2
+			}
+		}
+	}			
+}
+###Workers demand the impossible
+country_event = {
+	 id = third_reich.7
+	 title = third_reich.7.t
+	 desc = third_reich.7.d
+	 picture = GFX_report_event_french_resistance_02
+	 is_triggered_only = yes
+	 fire_only_once = yes
+		option = {
+		name = third_reich.7.a
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = third_reich.8
+		    days = 2
+		    random = 2
+			}
+		}
+	}			
+}
+###Speaks of a plot against Hitler
+country_event = {
+	 id = third_reich.8
+	 title = third_reich.8.t
+	 desc = third_reich.8.d
+	 picture = GFX_report_event_french_resistance_02
+	 is_triggered_only = yes
+	 fire_only_once = yes
+		option = {
+		name = third_reich.8.a
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = third_reich.9
+		    days = 2
+		    random = 2 
+			}
+		}
+	}			
+}
+###visit Braunau am inn or not
+country_event = {
+	 id = third_reich.9
+	 title = third_reich.9.t
+	 desc = third_reich.9.d
+	 picture = GFX_report_event_french_resistance_02
+	 is_triggered_only = yes
+	 fire_only_once = yes
+		option = {
+		name = third_reich.9.a
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = third_reich.10
+		    days = 1
+		    random = 1
+			}
+		}
+	}	
+	###Pirade in vienna
+	option = {
+		name = third_reich.9.b
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = third_reich.11
+		    days = 1
+		    random = 1
+			}
+		}
+	}		
+}
+###killed at mothers grave
+country_event = {
+	 id = third_reich.10
+	 title = third_reich.10.t
+	 desc = third_reich.10.d
+	 picture = GFX_report_event_french_resistance_02
+	 is_triggered_only = yes
+	 fire_only_once = yes
+		option = {
+		name = third_reich.10.a
+		ai_chance = { factor = 1}
+		kill_country_leader = yes
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = third_reich.12
+		    days = 2
+		    random = 2
+			}
+		}
+	}	
+
+`
+###Hitler killed in vienna
+country_event = {
+	 id = third_reich.11
+	 title = third_reich.11.t
+	 desc = third_reich.11.d
+	 picture = GFX_report_event_french_resistance_02
+	 is_triggered_only = yes
+	 fire_only_once = yes
+		option = {
+		name = third_reich.11.a
+		ai_chance = { factor = 1}
+		kill_country_leader = yes
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = third_reich.12
+		    days = 2
+		    random = 2
+			}
+		}
+	}			
+}
+###picking a new Fuhrer
+country_event = {
+	 id = third_reich.12
+	 title = third_reich.12.t
+	 desc = third_reich.12.d
+	 picture = GFX_report_event_french_resistance_02
+	 is_triggered_only = yes
+	 fire_only_once = yes
+		option = {
+		name = third_reich.12.a
+		ai_chance = { factor = 1}
+		hidden_effect = { 
+		tag = THR
+		country_event = {
+		    id = 
+		    days = 2
+		    random = 2
+			}
+		}
+	}			
+}

@@ -1,0 +1,380 @@
+#################
+###SPANISH EVENTS
+#################
+
+
+add_namespace = rob_spain
+
+###January Coup
+ country_event = {
+  id = rob_spain.0
+  title = "January Coup!"
+  desc = rob_spain.0.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  
+option = {
+ name = "Viva Espania!"
+ set_politics = {
+  ruling_party = pelekist
+  elections_allowed = no
+ }
+ add_popularity = {ideology = pelekist popularity = 0.3 }
+ country_event = {
+  id = rob_spain.1
+  days = 5
+  }
+  hidden_effect = {
+   news_event = { id = news_event.5 days = 1 }
+  }
+ }
+}
+
+###Securing the state
+ 
+ country_event = {
+  id = rob_spain.1
+  title = "Consolidation of Power"
+  desc = rob_spain.1.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  
+option = {
+ name = "Spread our Efforts!"
+
+ hidden_effect = {
+  country_event = {
+   id = rob_spain.2
+   days = 5
+   }
+  }
+ }
+option = {
+ name = "Secure Cities First!"
+
+ hidden_effect = {
+  country_event = {
+   id = rob_spain.5
+   days = 5
+   }
+  }
+ }
+}
+
+###Countryside 
+country_event = {
+  id = rob_spain.2
+  title = "Securing the Countryside"
+  desc = rob_spain.2.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  
+  option = { ###Kill reactionaries
+   name = "Destroy Bourgeoisie Traitors"
+   add_popularity = {ideology = reactionary popularity = -0.15 }
+   add_popularity = {ideology = conservative popularity = -0.15 }
+   add_popularity = {ideology = social_liberal popularity = -0.15 }
+   hidden_effect = {
+    country_event = { id = rob_spain.3 days = 5 }
+    }
+   }
+   
+  option = { ###Kill reactionaries
+   name = "Socialists Get The Rope First!"
+   add_popularity = {ideology = socialist popularity = -0.1 }
+   add_popularity = {ideology = democratic_socialist popularity = -0.1 }
+   add_popularity = {ideology = national_socialist popularity = -0.1 }
+   }
+  }
+  
+ ###Falange march to cities
+ country_event = {
+  id = rob_spain.3
+  title = "National Syndicalists Mobilize"
+  desc = rob_spain.3.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = { ###use militias
+   name = "Mobilize Militias!"
+   add_manpower =-10000
+   hidden_effect = {
+    country_event = { id = rob_spain.4 days = 2 }
+   }
+  }
+  
+  option = { ###use veterans
+   name = "Mobilize Veterans!"
+   add_popularity = {ideology = reactionary popularity = 0.05 }
+   hidden_effect = {
+    country_event = { id = rob_spain.6 days = 2 }
+   }
+  }
+ }
+ 
+ ###NatSyn Takeover
+  
+ country_event = {
+  id = rob_spain.4
+  title = "Falange de las JONS Countercoup"
+  desc = rob_spain.4.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  
+  option = {
+   name = "Viva, Viva Falange de las JONS!"
+   set_politics = {
+    ruling_party = national_socialist
+    elections_allowed = no
+   }
+   hidden_effect = {
+    news_event = { id = news_event.6 days = 1 }
+   }
+   set_country_flag = SPR_falange_regime   
+   add_popularity = {ideology = national_socialist popularity = 0.3 }
+  }
+  }
+  
+ ###Securing the Cities
+ 
+ country_event = {
+  id = rob_spain.5
+  title = "The Urban Question"
+  desc = rob_spain.5.d
+  is_triggered_only = yes
+  fire_only_once = yes
+ 
+ option = {
+  name = "Now, to the countryside..."
+  add_popularity = {ideology = national_socialist popularity = -0.1 }
+  add_popularity = {ideology = socialist popularity = -0.1 }
+  add_popularity = {ideology = social_liberal popularity = -0.1 }
+  country_event = { id = rob_spain.6 days = 5 }
+ }
+ 
+ }
+ 
+ ###Pelekist Regime Holds
+ 
+ country_event = {
+  id = rob_spain.6
+  title = "The New Spain"
+  desc = rob_spain.6.d
+  is_triggered_only = yes
+  fire_only_once = yes
+  
+ option = {
+  name = "Una Grande!"
+  add_stability = 0.2
+  set_country_flag = SPR_pelekist_regime
+  add_popularity = {ideology = reactionary popularity = -0.1 }
+ }
+  
+  }
+  
+  
+  ###WAR WITH PORTUGAL
+  
+  country_event = {
+  id = rob_spain.7
+  title = "Portugese Propose Peace"
+  desc = rob_spain.7.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  option = { 
+   name = "We Only Take What is Ours..."
+   SPR = { white_peace = POR }
+   SPR = { transfer_state = 171 }
+   SPR = { transfer_state = 1162 }
+IF = { limit = { POR = { owns_state = 297 } } transfer_state = 297 }
+   ai_chance = {
+			factor = 40
+		}
+  }
+  option = { 
+   name = "And Their Colonies..."
+   SPR = { white_peace = POR }
+   add_stability =-0.05
+
+   SPR = { transfer_state = 171 }
+   SPR = { transfer_state = 1162 }
+IF = { limit = { POR = { owns_state = 702 } } transfer_state = 702 }
+IF = { limit = { POR = { owns_state = 296 } } transfer_state = 296 }
+IF = { limit = { POR = { owns_state = 297 } } transfer_state = 297 }
+IF = { limit = { POR = { owns_state = 540 } } transfer_state = 540 }
+IF = { limit = { POR = { owns_state = 544 } } transfer_state = 544 }
+IF = { limit = { POR = { owns_state = 1251 } } transfer_state = 1251 }
+IF = { limit = { POR = { owns_state = 770 } } transfer_state = 770 }
+IF = { limit = { POR = { owns_state = 771 } } transfer_state = 771 }
+IF = { limit = { POR = { owns_state = 1245 } } transfer_state = 1245 }
+IF = { limit = { POR = { owns_state = 321 } } transfer_state = 321 }
+IF = { limit = { POR = { owns_state = 425 } } transfer_state = 425 }
+IF = { limit = { POR = { owns_state = 326 } } transfer_state = 326 }
+IF = { limit = { POR = { owns_state = 729 } } transfer_state = 729 }
+IF = { limit = { POR = { owns_state = 721 } } transfer_state = 721 }
+IF = { limit = { POR = { owns_state = 705 } } transfer_state = 705 }
+
+   ai_chance = {
+			factor = 60
+		}
+  }
+  option = {
+  name = "Humiliate Portugese!"
+   POR = { surrender_progress > 0.5 }
+   SPR = { white_peace = POR }
+   add_stability =-0.1
+   SPR = { transfer_state = 171 }
+   SPR = { transfer_state = 1162 }
+   SPR = { transfer_state = 180 }
+
+IF = { limit = { POR = { owns_state = 702 } } transfer_state = 702 }
+IF = { limit = { POR = { owns_state = 296 } } transfer_state = 296 }
+IF = { limit = { POR = { owns_state = 297 } } transfer_state = 297 }
+IF = { limit = { POR = { owns_state = 540 } } transfer_state = 540 }
+IF = { limit = { POR = { owns_state = 544 } } transfer_state = 544 }
+IF = { limit = { POR = { owns_state = 1251 } } transfer_state = 1251 }
+IF = { limit = { POR = { owns_state = 770 } } transfer_state = 770 }
+IF = { limit = { POR = { owns_state = 771 } } transfer_state = 771 }
+IF = { limit = { POR = { owns_state = 1245 } } transfer_state = 1245 }
+IF = { limit = { POR = { owns_state = 321 } } transfer_state = 321 }
+IF = { limit = { POR = { owns_state = 425 } } transfer_state = 425 }
+IF = { limit = { POR = { owns_state = 326 } } transfer_state = 326 }
+IF = { limit = { POR = { owns_state = 729 } } transfer_state = 729 }
+IF = { limit = { POR = { owns_state = 721 } } transfer_state = 721 }
+IF = { limit = { POR = { owns_state = 705 } } transfer_state = 705 }
+
+
+   ai_chance = {
+			factor = 80
+		}
+ }
+  option = {
+  name = "Demand Total Subjugation!"
+   POR = { surrender_progress > 0.7 }
+   SPR = { puppet = POR }
+   add_stability =-0.2
+   SPR = { white_peace = POR }
+   SPR = { transfer_state = 171 }
+   SPR = { transfer_state = 1162 }
+   SPR = { transfer_state = 180 }
+
+IF = { limit = { POR = { owns_state = 702 } } transfer_state = 702 }
+IF = { limit = { POR = { owns_state = 296 } } transfer_state = 296 }
+IF = { limit = { POR = { owns_state = 297 } } transfer_state = 297 }
+IF = { limit = { POR = { owns_state = 540 } } transfer_state = 540 }
+IF = { limit = { POR = { owns_state = 544 } } transfer_state = 544 }
+IF = { limit = { POR = { owns_state = 1251 } } transfer_state = 1251 }
+IF = { limit = { POR = { owns_state = 770 } } transfer_state = 770 }
+IF = { limit = { POR = { owns_state = 771 } } transfer_state = 771 }
+IF = { limit = { POR = { owns_state = 1245 } } transfer_state = 1245 }
+IF = { limit = { POR = { owns_state = 321 } } transfer_state = 321 }
+IF = { limit = { POR = { owns_state = 425 } } transfer_state = 425 }
+IF = { limit = { POR = { owns_state = 326 } } transfer_state = 326 }
+IF = { limit = { POR = { owns_state = 729 } } transfer_state = 729 }
+IF = { limit = { POR = { owns_state = 721 } } transfer_state = 721 }
+IF = { limit = { POR = { owns_state = 705 } } transfer_state = 705 }
+
+   ai_chance = {
+			factor = 100
+		}
+ } 
+  }
+  
+  
+  
+  country_event = {
+  id = rob_spain.8
+  title = "News From The Front..."
+  desc = rob_spain.8.d
+  fire_only_once = yes
+  
+  trigger = {
+  SPR = { has_war_with = POR }
+  POR = { surrender_progress > 0.3 }
+  tag = POR
+  }
+  
+  mean_time_to_happen = {
+   days = 1
+  }
+  
+  option = {
+   name = "Send A Peace Offer..."
+   add_war_support =-0.1
+   add_stability =-0.1
+   SPR = { country_event = { id = rob_spain.7 days = 2 } }
+      ai_chance = {
+			factor = 10000
+		}
+  }
+  option = {
+   name = "We Will Never Surrender!"
+   add_war_support = 0.2
+   add_stability = 0.2
+      ai_chance = {
+			factor = 0
+		}
+  }
+  }
+  
+  country_event = {
+  id = rob_spain.9
+  title = "Defeats Against Portugese"
+  desc = rob_spain.9.d
+  fire_only_once = yes
+  
+  trigger = {
+  SPR = { has_war_with = POR }
+  SPR = { surrender_progress > 0.3 }
+  tag = SPR
+  }
+  
+  option = {
+   name = "We Have No Options..."
+   POR = { country_event = { id = rob_spain.10 days = 2 } }
+   add_stability =-0.3
+   add_war_support =-0.3
+         ai_chance = {
+			factor = 100
+		}
+  }
+  
+  option = {
+   name = "Continue The Struggle!"
+   add_war_support =-0.05
+         ai_chance = {
+			factor = 100
+		}
+  }
+  }
+  
+  country_event = {
+  id = rob_spain.10
+  title = "Victory In Spain"
+  desc = rob_spain.10.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  option = {
+   name = "Peace It Is"
+   SPR = { white_peace = POR }
+            ai_chance = {
+			factor = 0
+		}
+	CAT = { transfer_state = 1161 }
+	CAT = { transfer_state = 166 }
+	CAT = { transfer_state = 1159 }
+	if = {
+	 limit = { 118 = { is_owned_by = SPR }}
+	 POR = {transfer_state = 118 }
+  }
+  }
+  option = {
+   name = "We Won't Stop Until All OF Spain Burns!"
+   add_war_support =0.1
+            ai_chance = {
+			factor = 0
+		}
+  }
+  }

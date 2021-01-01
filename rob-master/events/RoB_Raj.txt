@@ -1,0 +1,976 @@
+ #################
+###Raj Events
+#################
+
+add_namespace = raj
+
+
+###India wants Unification
+
+country_event = {
+id = raj.100
+title = raj.100.t
+desc = raj.100.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = { 
+tag = RAJ
+}
+is_triggered_only = yes
+
+
+
+option = {
+name = raj.100.a
+ai_chance = { factor = 100}
+declare_war_on = {
+    target = BRJ
+    type = annex_everything
+}
+hidden_effect = { 
+BRJ = { add_ideas = brindian_war }
+}
+}
+
+option = {
+name = raj.100.b
+ai_chance = { factor = 0}
+add_political_power = -200
+add_stability = -0.2
+add_war_support = -0.2
+}
+
+
+}
+
+
+###India goes boom
+
+country_event = {
+id = raj.101
+title = raj.101.t
+desc = raj.101.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = RAJ
+owns_state = 428
+owns_state = 424
+}
+
+option = {
+name = raj.101.a
+ai_chance = { factor = 100}
+hidden_effect = { 
+DEL = { add_state_core = 438 }
+DEL = { transfer_state = 438 }
+DEL = { add_state_core = 439 }
+DEL = { transfer_state = 439 }
+PNJ = { add_state_core = 440 }
+PNJ = { transfer_state = 440 }
+PNJ = { add_state_core = 1188 }
+DEL = { add_state_core = 440 }
+DEL = { add_state_core = 445 }
+DEL = { transfer_state = 445 }
+DEL = { add_state_core = 442 }
+DEL = { transfer_state = 442 }
+DEL = { add_state_core = 1189 }
+DEL = { transfer_state = 1189 }
+DEL = { add_state_core = 1191 }
+DEL = { transfer_state = 1191 }
+DEL = { add_state_core = 1188 }
+DEL = { transfer_state = 1188 }
+DEL = { inherit_technology = ROOT }
+DEL = { load_oob = "DEL_1936" }	
+PNJ = { load_oob = "PNJ_1936" }	
+DEL = { declare_war_on = {
+    target = PNJ
+    type = annex_everything
+}
+}
+BAL = { add_state_core = 444 }
+BAL = { transfer_state = 444 }
+JAK = { add_state_core = 787 }
+JAK = { transfer_state = 787 }
+JAK = { add_state_core = 441 }
+JAK = { transfer_state = 441 }
+BIH = { add_state_core = 435 }
+BIH = { transfer_state = 435 }
+SNH = { add_state_core = 443 }
+SNH = { transfer_state = 443 }
+GUJ = { add_state_core = 428 }
+GUJ = { transfer_state = 428 }
+RPF = { add_state_core = 433 }
+RPF = { transfer_state = 433 }
+PRF = { add_state_core = 437 }
+PRF = { transfer_state = 437 }
+BNL = { add_state_core = 430 }
+BNL = { transfer_state = 430 }
+BNL = { add_state_core = 431 }
+BNL = { transfer_state = 431 }
+DEL = { change_tag_from = ROOT }
+CIR = { add_state_core = 436 }
+CIR = { transfer_state = 436 }
+BBY = { add_state_core = 429 }
+BBY = { transfer_state = 429 }
+MYS = { add_state_core = 425 }
+MYS = { transfer_state = 425 }
+MYS = { load_oob = "MYS_1936" }
+TML = { add_state_core = 423 }
+TML = { transfer_state = 423 }
+MRS = { add_state_core = 424 }
+MRS = { transfer_state = 424 }
+HYD = { add_state_core = 427 }
+HYD = { transfer_state = 427 }
+ORS = { add_state_core = 426 }
+ORS = { transfer_state = 426 }
+ASM = { add_state_core = 432 }
+ASM = { transfer_state = 432 }
+ASM = { add_state_core = 434 }
+ASM = { transfer_state = 434 }
+BRM = { transfer_state = 288 }
+SNN = { add_state_core = 640 }
+SNN = { transfer_state = 640 }
+PRF = { add_state_core = 1190 }
+PRF = { transfer_state = 1190 }
+MRS = { add_state_core = 1192 }
+MRS = { transfer_state = 1192 }
+BNL = { load_oob = "BNL_1936" }
+BRM = { add_state_core = 1194 }
+BRM = { transfer_state = 1194 }
+BRM = { add_state_core = 1195 }
+BRM = { transfer_state = 1195 }
+BRM = { add_state_core = 1196 }
+BRM = { transfer_state = 1196 }
+TML = { load_oob = "TML_1936" }
+ASM = { load_oob = "ASM_1936" }
+JAK = { load_oob = "JAK_1936" }
+ORS = { load_oob = "ORS_1936" }
+BAL = { load_oob = "BAL_1936" }
+BIH = { load_oob = "BIH_1936" }
+CIR = { load_oob = "CIR_1936" }
+RPF = { load_oob = "RPF_1936" }
+PRF = { load_oob = "PRF_1936" }
+GUJ = { load_oob = "GUJ_1936" }
+BBY = { load_oob = "BBY_1936" }
+MRS = { load_oob = "MRS_1936" }
+SNH = { load_oob = "SNH_1936" }
+HYD = { load_oob = "HYD_1936" }
+
+
+}
+}
+
+option = {
+name = raj.101.b
+ai_chance = { factor = 100}
+hidden_effect = { 
+DEL = { add_state_core = 438 }
+DEL = { transfer_state = 438 }
+DEL = { add_state_core = 439 }
+DEL = { transfer_state = 439 }
+PNJ = { add_state_core = 440 }
+PNJ = { transfer_state = 440 }
+PNJ = { add_state_core = 1188 }
+DEL = { add_state_core = 440 }
+DEL = { add_state_core = 445 }
+DEL = { transfer_state = 445 }
+DEL = { add_state_core = 442 }
+DEL = { transfer_state = 442 }
+DEL = { add_state_core = 1189 }
+DEL = { transfer_state = 1189 }
+DEL = { add_state_core = 1191 }
+DEL = { transfer_state = 1191 }
+DEL = { add_state_core = 1188 }
+DEL = { transfer_state = 1188 }
+DEL = { inherit_technology = ROOT }
+DEL = { load_oob = "DEL_1936" }	
+PNJ = { load_oob = "PNJ_1936" }	
+DEL = { declare_war_on = {
+    target = PNJ
+    type = annex_everything
+}
+}
+BAL = { add_state_core = 444 }
+BAL = { transfer_state = 444 }
+JAK = { add_state_core = 787 }
+JAK = { transfer_state = 787 }
+JAK = { add_state_core = 441 }
+JAK = { transfer_state = 441 }
+BIH = { add_state_core = 435 }
+BIH = { transfer_state = 435 }
+SNH = { add_state_core = 443 }
+SNH = { transfer_state = 443 }
+GUJ = { add_state_core = 428 }
+GUJ = { transfer_state = 428 }
+RPF = { add_state_core = 433 }
+RPF = { transfer_state = 433 }
+PRF = { add_state_core = 437 }
+PRF = { transfer_state = 437 }
+BNL = { add_state_core = 430 }
+BNL = { transfer_state = 430 }
+BNL = { add_state_core = 431 }
+BNL = { transfer_state = 431 }
+MYS = { change_tag_from = ROOT }
+CIR = { add_state_core = 436 }
+CIR = { transfer_state = 436 }
+BBY = { add_state_core = 429 }
+BBY = { transfer_state = 429 }
+MYS = { add_state_core = 425 }
+MYS = { transfer_state = 425 }
+MYS = { load_oob = "MYS_1936" }
+TML = { add_state_core = 423 }
+TML = { transfer_state = 423 }
+MRS = { add_state_core = 424 }
+MRS = { transfer_state = 424 }
+HYD = { add_state_core = 427 }
+HYD = { transfer_state = 427 }
+ORS = { add_state_core = 426 }
+ORS = { transfer_state = 426 }
+ASM = { add_state_core = 432 }
+ASM = { transfer_state = 432 }
+ASM = { add_state_core = 434 }
+ASM = { transfer_state = 434 }
+BRM = { transfer_state = 288 }
+SNN = { add_state_core = 640 }
+SNN = { transfer_state = 640 }
+PRF = { add_state_core = 1190 }
+PRF = { transfer_state = 1190 }
+MRS = { add_state_core = 1192 }
+MRS = { transfer_state = 1192 }
+BNL = { load_oob = "BNL_1936" }
+BRM = { add_state_core = 1194 }
+BRM = { transfer_state = 1194 }
+BRM = { add_state_core = 1195 }
+BRM = { transfer_state = 1195 }
+BRM = { add_state_core = 1196 }
+BRM = { transfer_state = 1196 }
+TML = { load_oob = "TML_1936" }
+ASM = { load_oob = "ASM_1936" }
+JAK = { load_oob = "JAK_1936" }
+ORS = { load_oob = "ORS_1936" }
+BAL = { load_oob = "BAL_1936" }
+BIH = { load_oob = "BIH_1936" }
+CIR = { load_oob = "CIR_1936" }
+RPF = { load_oob = "RPF_1936" }
+PRF = { load_oob = "PRF_1936" }
+GUJ = { load_oob = "GUJ_1936" }
+BBY = { load_oob = "BBY_1936" }
+MRS = { load_oob = "MRS_1936" }
+SNH = { load_oob = "SNH_1936" }
+HYD = { load_oob = "HYD_1936" }
+
+}
+
+
+}
+option = {
+name = raj.101.c
+ai_chance = { factor = 100}
+hidden_effect = { 
+DEL = { add_state_core = 438 }
+DEL = { transfer_state = 438 }
+DEL = { add_state_core = 439 }
+DEL = { transfer_state = 439 }
+PNJ = { add_state_core = 440 }
+PNJ = { transfer_state = 440 }
+PNJ = { add_state_core = 1188 }
+DEL = { add_state_core = 440 }
+DEL = { add_state_core = 445 }
+DEL = { transfer_state = 445 }
+DEL = { add_state_core = 442 }
+DEL = { transfer_state = 442 }
+DEL = { add_state_core = 1189 }
+DEL = { transfer_state = 1189 }
+DEL = { add_state_core = 1191 }
+DEL = { transfer_state = 1191 }
+DEL = { add_state_core = 1188 }
+DEL = { transfer_state = 1188 }
+DEL = { inherit_technology = ROOT }
+DEL = { load_oob = "DEL_1936" }	
+PNJ = { load_oob = "PNJ_1936" }	
+DEL = { declare_war_on = {
+    target = PNJ
+    type = annex_everything
+}
+}
+BAL = { add_state_core = 444 }
+BAL = { transfer_state = 444 }
+JAK = { add_state_core = 787 }
+JAK = { transfer_state = 787 }
+JAK = { add_state_core = 441 }
+JAK = { transfer_state = 441 }
+BIH = { add_state_core = 435 }
+BIH = { transfer_state = 435 }
+SNH = { add_state_core = 443 }
+SNH = { transfer_state = 443 }
+GUJ = { add_state_core = 428 }
+GUJ = { transfer_state = 428 }
+RPF = { add_state_core = 433 }
+RPF = { transfer_state = 433 }
+PRF = { add_state_core = 437 }
+PRF = { transfer_state = 437 }
+BNL = { add_state_core = 430 }
+BNL = { transfer_state = 430 }
+BNL = { add_state_core = 431 }
+BNL = { transfer_state = 431 }
+ASM = { change_tag_from = ROOT }
+CIR = { add_state_core = 436 }
+CIR = { transfer_state = 436 }
+BBY = { add_state_core = 429 }
+BBY = { transfer_state = 429 }
+MYS = { add_state_core = 425 }
+MYS = { transfer_state = 425 }
+MYS = { load_oob = "MYS_1936" }
+TML = { add_state_core = 423 }
+TML = { transfer_state = 423 }
+MRS = { add_state_core = 424 }
+MRS = { transfer_state = 424 }
+HYD = { add_state_core = 427 }
+HYD = { transfer_state = 427 }
+ORS = { add_state_core = 426 }
+ORS = { transfer_state = 426 }
+ASM = { add_state_core = 432 }
+ASM = { transfer_state = 432 }
+ASM = { add_state_core = 434 }
+ASM = { transfer_state = 434 }
+BRM = { transfer_state = 288 }
+SNN = { add_state_core = 640 }
+SNN = { transfer_state = 640 }
+PRF = { add_state_core = 1190 }
+PRF = { transfer_state = 1190 }
+MRS = { add_state_core = 1192 }
+MRS = { transfer_state = 1192 }
+BNL = { load_oob = "BNL_1936" }
+BRM = { add_state_core = 1194 }
+BRM = { transfer_state = 1194 }
+BRM = { add_state_core = 1195 }
+BRM = { transfer_state = 1195 }
+BRM = { add_state_core = 1196 }
+BRM = { transfer_state = 1196 }
+TML = { load_oob = "TML_1936" }
+ASM = { load_oob = "ASM_1936" }
+JAK = { load_oob = "JAK_1936" }
+ORS = { load_oob = "ORS_1936" }
+BAL = { load_oob = "BAL_1936" }
+BIH = { load_oob = "BIH_1936" }
+CIR = { load_oob = "CIR_1936" }
+RPF = { load_oob = "RPF_1936" }
+PRF = { load_oob = "PRF_1936" }
+GUJ = { load_oob = "GUJ_1936" }
+BBY = { load_oob = "BBY_1936" }
+MRS = { load_oob = "MRS_1936" }
+SNH = { load_oob = "SNH_1936" }
+HYD = { load_oob = "HYD_1936" }
+
+
+}
+
+
+}
+}
+
+country_event = {
+id = raj.102
+title = raj.102.t
+desc = raj.102.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = POR
+MYS = { owns_state = 425 }
+owns_state = 180
+NOT = { has_war_with = SPR }
+NOT = { is_puppet = yes }
+}
+
+option = {
+name = raj.102.a
+ai_chance = { factor = 100}
+load_oob = "POR_GOA"
+declare_war_on = {
+    target = MYS
+    type = annex_everything
+}
+add_manpower = 100000
+
+}
+option = {
+name = raj.102.b
+ai_chance = { factor = 1}
+add_political_power = -100
+}
+}
+
+country_event = {
+id = raj.103
+title = raj.103.t
+desc = raj.103.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = NEP
+PNJ = { has_war_with = DEL }
+}
+
+option = {
+name = raj.103.a
+ai_chance = { factor = 100}
+add_state_core = 1189
+add_state_core = 1191
+add_manpower = 20000
+set_state_owner = 1189
+set_state_owner = 1191
+DEL = {
+country_event = {
+    id = raj.104
+    days = 3
+}
+}
+}
+option = {
+name = raj.103.b
+ai_chance = { factor = 1}
+add_political_power = -100
+}
+}
+
+country_event = {
+id = raj.104
+title = raj.104.t
+desc = raj.104.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = DEL
+}
+is_triggered_only = yes
+
+
+option = {
+name = raj.104.a
+ai_chance = { factor = 40}
+declare_war_on = {
+    target = NEP
+    type = annex_everything
+}
+
+}
+option = {
+name = raj.104.b
+ai_chance = { factor = 60}
+add_political_power = -100
+}
+}
+
+country_event = {
+id = raj.105
+title = raj.105.t
+desc = raj.105.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = BRJ
+}
+is_triggered_only = yes
+
+
+option = {
+name = raj.105.a
+ai_chance = { factor = 40}
+transfer_state = 422
+transfer_state = 281
+transfer_state = 710
+transfer_state = 709
+transfer_state = 707
+transfer_state = 733
+add_state_core = 422
+add_state_core = 281
+add_state_core = 733
+add_stability = 0.2
+add_war_support = 0.2
+load_oob = "BRJ_Ceylon"
+
+
+
+
+}
+}
+
+country_event = {
+id = raj.106
+title = raj.106.t
+desc = raj.106.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = RAJ
+controls_state = 428
+controls_state = 424
+}
+
+
+option = {
+name = raj.106.a
+ai_chance = { factor = 40}
+transfer_state = 428
+transfer_state = 424
+white_peace = BRJ
+hidden_effect = { 
+BRJ = { remove_ideas = brindian_war }
+}
+
+}
+}
+
+country_event = {
+id = raj.107
+title = raj.107.t
+desc = raj.107.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = BRJ
+has_army_manpower = {
+    size > 10000 
+}
+has_government = pelekist
+}
+
+
+option = {
+name = raj.107.a
+ai_chance = { factor = 100}
+declare_war_on = {
+    target = TML
+    type = annex_everything
+}
+
+}
+option = {
+name = raj.107.b
+ai_chance = { factor = 1}
+add_political_power = -100
+}
+}
+
+country_event = {
+id = raj.108
+title = raj.108.t
+desc = raj.108.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = ASM
+}
+
+
+option = {
+name = raj.108.a
+ai_chance = { factor = 100}
+declare_war_on = {
+    target = BNL
+    type = annex_everything
+}
+ORS = {
+country_event = {
+    id = raj.109
+    days = 5
+}
+}
+
+}
+option = {
+name = raj.108.b
+ai_chance = { factor = 1}
+add_political_power = -100
+}
+}
+
+country_event = {
+id = raj.109
+title = raj.109.t
+desc = raj.109.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = ORS
+}
+is_triggered_only = yes
+option = {
+name = raj.109.a
+ai_chance = { factor = 100}
+declare_war_on = {
+    target = BNL
+    type = annex_everything
+}
+
+}
+option = {
+name = raj.109.b
+ai_chance = { factor = 1}
+add_political_power = -100
+}
+}
+
+country_event = {
+id = raj.110
+title = raj.110.t
+desc = raj.110.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = ASM
+is_neighbor_of = ORS
+has_war = no
+}
+option = {
+name = raj.110.a
+ai_chance = { factor = 100}
+annex_country = {
+    target = ORS
+    transfer_troops = yes
+}
+set_cosmetic_tag = ASM_eastindia
+}
+}
+
+country_event = {
+id = raj.111
+title = raj.111.t
+desc = raj.111.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = ASM
+ORS = { exists = no }
+}
+
+
+option = {
+name = raj.111.a
+ai_chance = { factor = 50}
+declare_war_on = {
+    target = BHU
+    type = annex_everything
+}
+declare_war_on = {
+    target = SKK
+    type = annex_everything
+}
+hidden_effect = { NEP = {
+country_event = {
+    id = raj.112
+    days = 5
+}
+}
+}
+}
+option = {
+name = raj.111.b
+ai_chance = { factor = 50}
+add_political_power = -50
+}
+
+
+}
+
+country_event = {
+id = raj.112
+title = raj.112.t
+desc = raj.112.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = NEP
+}
+is_triggered_only = yes
+
+
+option = {
+name = raj.112.a
+ai_chance = { factor = 60}
+
+BHU = {
+country_event = {
+    id = raj.113
+}
+}
+NEP = { annex_country = {
+    target = SKK
+    transfer_troops = yes
+}
+}
+}
+option = {
+name = raj.112.b
+ai_chance = { factor = 40}
+add_political_power = -50
+}
+
+
+}
+
+country_event = {
+id = raj.113
+title = raj.113.t
+desc = raj.113.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+is_triggered_only = yes
+
+option = {
+name = raj.113.a
+ai_chance = { factor = 70}
+NEP = { annex_country = {
+    target = ROOT
+    transfer_troops = yes
+}
+}
+hidden_effect = { ASM = {
+country_event = {
+    id = raj.114
+    days = 1
+}
+}
+}
+
+}
+option = {
+name = raj.113.b
+ai_chance = { factor = 30}
+add_war_support = 0.25
+}
+}
+
+country_event = {
+id = raj.114
+title = raj.114.t
+desc = raj.114.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = ASM
+}
+is_triggered_only = yes
+
+
+option = {
+name = raj.114.a
+ai_chance = { factor = 60}
+declare_war_on = {
+    target = NEP
+    type = annex_everything
+}
+}
+option = {
+name = raj.114.b
+ai_chance = { factor = 40}
+add_political_power = -50
+}
+
+
+}
+
+country_event = {
+id = raj.115
+title = raj.115.t
+desc = raj.115.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = MYS
+controls_state = 321
+}
+
+
+option = {
+name = raj.115.a
+ai_chance = { factor = 99}
+transfer_state = 321
+white_peace = POR
+}
+
+option = {
+name = raj.115.b
+ai_chance = { factor = 1}
+add_political_power = -10
+}
+
+
+}
+
+country_event = {
+id = raj.116
+title = raj.116.t
+desc = raj.116.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = BRJ
+
+has_government = reactionary
+NOT = { owns_state = 424 }
+}
+
+
+option = {
+name = raj.116.a
+ai_chance = { factor = 70}
+
+create_country_leader = {
+	name = "Archibald Wavell"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = pelekist_subtype
+	traits = {
+		
+	}
+}
+
+add_popularity = {
+    ideology = pelekist
+    popularity = 0.3
+}
+
+set_politics = {
+	ruling_party = pelekist
+}
+
+}
+option = {
+name = raj.116.b
+ai_chance = { factor = 30}
+
+add_manpower = -500
+add_popularity = {
+    ideology = pelekist
+    popularity = -0.2
+}
+
+hidden_effect = {
+country_event = {
+id = raj.117
+days = 30
+}
+}
+
+}
+}
+
+country_event = {
+id = raj.117
+title = raj.117.t
+desc = raj.117.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = BRJ
+}
+
+
+option = {
+name = raj.117.a
+ai_chance = { factor = 65}
+
+create_country_leader = {
+	name = "Philip Gunawardena"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = national_socialist_subtype
+	traits = {
+		
+	}
+}
+
+add_popularity = {
+    ideology = national_socialist
+    popularity = 0.5
+}
+
+set_politics = {
+	ruling_party = national_socialist
+}
+
+set_cosmetic_tag = BRJ_socialist_ceylon
+
+}
+option = {
+name = raj.117.b
+ai_chance = { factor = 35}
+
+hidden_effect = {
+country_event = {
+id = raj.118
+days = 10
+}
+}
+
+}
+}
+
+country_event = {
+id = raj.118
+title = raj.118.t
+desc = raj.118.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = BRJ
+}
+
+
+option = {
+name = raj.118.a
+ai_chance = { factor = 65}
+
+SRL = { transfer_state = 422 }
+SRL = { load_oob = "SRL_1936" }
+declare_war_on = {
+    target = SRL
+    type = annex_everything
+}
+
+}
+
+}
+
+country_event = {
+id = raj.119
+title = raj.119.t
+desc = raj.119.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+trigger = {
+tag = BRJ
+owns_state = 422
+owns_state = 423
+}
+
+
+option = {
+name = raj.118.a
+ai_chance = { factor = 65}
+
+set_cosmetic_tag = BRJ_indian_empire
+
+hidden_effect = {
+create_country_leader = {
+	name = "Archibald I"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = pelekist_subtype
+	traits = {
+		
+	}
+}
+}
+
+}
+
+}

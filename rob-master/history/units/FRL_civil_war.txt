@@ -1,0 +1,239 @@
+##### Division Templates #####
+division_template = {
+name = "Liberal Rebels"
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Division d'Infanterie"		
+	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. de Forteresse
+	# Difference is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+	}
+}
+
+units = {
+division = {
+name = "Liberal Rebels"
+location = 11720
+division_template = "Liberal Rebels"
+start_experience_factor = 0.2
+start_equipment_factor = 0.6
+}
+division = {
+name = "Liberal Rebels"
+location = 6792
+division_template = "Liberal Rebels"
+start_experience_factor = 0.3
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Liberal Rebels"
+location = 3598
+division_template = "Liberal Rebels"
+start_experience_factor = 0.3
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "Liberal Rebels"
+location = 625
+division_template = "Liberal Rebels"
+start_experience_factor = 0.2
+start_equipment_factor = 0.4
+
+}
+division = {
+name = "Liberal Rebels"
+location = 620
+division_template = "Liberal Rebels"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "Liberal Rebels"
+location = 6618
+division_template = "Liberal Rebels"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Liberal Rebels"
+location = 9593
+division_template = "Liberal Rebels"
+start_experience_factor = 0.3
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Liberal Rebels"
+location = 11576
+division_template = "Liberal Rebels"
+start_experience_factor = 0.1
+start_equipment_factor = 0.3
+
+}
+division = {
+name = "Liberal Rebels"
+location = 6644
+division_template = "Liberal Rebels"
+start_experience_factor = 0.2
+start_equipment_factor = 0.3
+
+}
+division = {
+name = "Liberal Rebels"
+location = 9607
+division_template = "Liberal Rebels"
+start_experience_factor = 0.2
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Liberal Rebels"
+location = 3594
+division_template = "Liberal Rebels"
+start_experience_factor = 0.4
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Liberal Rebels"
+location = 9794
+division_template = "Liberal Rebels"
+start_experience_factor = 0.3
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Liberal Rebels"
+location = 9748
+division_template = "Liberal Rebels"
+start_experience_factor = 0.2
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Liberal Rebels"
+location = 769
+division_template = "Liberal Rebels"
+start_experience_factor = 0.4
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "Liberal Rebels"
+location = 6770
+division_template = "Liberal Rebels"
+start_experience_factor = 0.1
+
+
+}
+division = {
+name = "Liberal Rebels"
+location = 11711
+division_template = "Liberal Rebels"
+start_experience_factor = 0.1
+
+
+}
+division = {
+name = "Liberal Rebels"
+location = 11877
+division_template = "Liberal Rebels"
+start_experience_factor = 0.2
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Liberal Rebels"
+location = 958
+division_template = "Liberal Rebels"
+start_experience_factor = 0.2
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "Liberal Rebels"
+location = 3762
+division_template = "Liberal Rebels"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Liberal Rebels"
+location = 11875
+division_template = "Liberal Rebels"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Liberal Rebels"
+location = 11834
+division_template = "Liberal Rebels"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Liberal Rebels"
+location = 6792
+division_template = "Liberal Rebels"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "Liberal Rebels"
+location = 11720
+division_template = "Liberal Rebels"
+start_experience_factor = 0.5
+start_equipment_factor = 0.5
+
+}
+
+
+division = {
+name = "Division d'Infanterie"
+location = 9898
+division_template = "Division d'Infanterie"
+start_experience_factor = 0.5
+
+}
+division = {
+name = "Division d'Infanterie"
+location = 6766
+division_template = "Division d'Infanterie"
+start_experience_factor = 0.5
+
+}
+division = {
+name = "Division d'Infanterie"
+location = 620
+division_template = "Division d'Infanterie"
+start_experience_factor = 0.5
+}
+
+}

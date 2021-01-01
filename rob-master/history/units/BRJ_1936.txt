@@ -1,0 +1,152 @@
+division_template = {
+	name = "Indian Infantry"
+
+	division_names_group = RAJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "British Armor"
+
+	division_names_group = ENG_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		light_armor = { x = 2 y = 0 }
+		light_armor = { x = 2 y = 1 }
+		light_armor = { x = 2 y = 2 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "British Infantry"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = ENG_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = RAJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	#Royal Indian Army
+	division = {
+		name = "Madras Tank Brigade"
+		location = 10278
+		division_template = "British Armor"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Ahmedabad Tank Brigade"
+		location = 9975
+		division_template = "British Armor"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1st British Indian Garrison 'Imperial'"
+		location = 10152
+		division_template = "British Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2nd British Indian Garrison 'Windsor'"
+		location = 12734
+		division_template = "British Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3rd British Indian Garrison 'Essex Brigade'"
+		location = 12092
+		division_template = "British Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Madras Infantry"
+		location = 8067
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Travancore Loyalists"
+		location = 12164
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Madras Garrison"
+		location = 10278
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Gujarati Princely Forces"
+		location = 4064
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Northern Loyalists"
+		location = 7165
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Sikh Brigade"
+		location = 9975
+		division_template = "Indian Infantry"
+		start_experience_factor = 0.3
+	}
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "BRJ"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

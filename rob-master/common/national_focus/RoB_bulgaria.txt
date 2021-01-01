@@ -1,0 +1,1526 @@
+focus_tree = {
+	id = bulgaria
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = YYY
+		}
+	}
+	#Focus for Assist the Countryside
+	focus = {
+		id = BUL_assistthecountryside
+		icon = GFX_goal_unknown
+		x = 42
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_agriculturaleconomy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Death of the Old Army
+	focus = {
+		id = BUL_deathoftheoldarmy
+		icon = GFX_goal_unknown
+		x = 12
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_elitetankcorps 
+		}
+		prerequisite = { 
+			focus = BUL_reclaimingtheempire 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The State of the Army
+	focus = {
+		id = BUL_thestateofthearmy
+		icon = GFX_goal_unknown
+		x = 6
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thebulgarianarmy }
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	#Focus for Move Forces to Albania
+	focus = {
+		id = BUL_moveforcestoalbania
+		icon = GFX_goal_unknown
+		x = 51
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_alliancewithalbania }
+		ai_will_do = {
+			factor = 100
+		}
+		available = { 
+		is_in_faction_with = ALB
+		}
+		completion_reward = {
+		country_event = {
+    id = bulgaria.123
+}
+
+		}
+	}
+
+	#Focus for Invasion of Romania
+	focus = {
+		id = BUL_invasionofromania
+		icon = GFX_goal_unknown
+		x = 64
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_pushfordobrudja }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Push for Dobrudja
+	focus = {
+		id = BUL_pushfordobrudja
+		icon = GFX_goal_unknown
+		x = 63
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_ultimatumformacedonia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Sell West Macedonia
+	focus = {
+		id = BUL_sellwestmacedonia
+		icon = GFX_goal_unknown
+		x = 59
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_integratemacedonia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Seize East Thrace
+	focus = {
+		id = BUL_seizeeastthrace
+		icon = GFX_goal_unknown
+		x = 51
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_moveforcestoalbania }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Integrate Macedonia
+	focus = {
+		id = BUL_integratemacedonia
+		icon = GFX_goal_unknown
+		x = 59
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_secondmacedonianultimatum }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Pirot Line
+	focus = {
+		id = BUL_pirotline
+		icon = GFX_goal_unknown
+		x = 58
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_integratemacedonia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Second Macedonian Ultimatum
+	focus = {
+		id = BUL_secondmacedonianultimatum
+		icon = GFX_goal_unknown
+		x = 59
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_alliancewithcroatia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Suspend Elections
+	focus = {
+		id = BUL_suspendelections
+		icon = GFX_goal_unknown
+		x = 67
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_purgetheopposition }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Agricultural Economy
+	focus = {
+		id = BUL_agriculturaleconomy
+		icon = GFX_goal_unknown
+		x = 43
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_builduptheindustry }
+		mutually_exclusive = { focus = BUL_modernizedindustry }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Modernized Industry
+	focus = {
+		id = BUL_modernizedindustry
+		icon = GFX_goal_unknown
+		x = 47
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_builduptheindustry }
+		mutually_exclusive = { focus = BUL_agriculturaleconomy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for End the Isolation
+	focus = {
+		id = BUL_endtheisolation
+		icon = GFX_goal_unknown
+		x = 48
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_modernizedindustry }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Build up Civilian Industry
+	focus = {
+		id = BUL_buildupcivilianindustry
+		icon = GFX_goal_unknown
+		x = 44
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_agriculturaleconomy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Fund the Military Academies
+	focus = {
+		id = BUL_fundthemilitaryacademies
+		icon = GFX_goal_unknown
+		x = 8
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_trainourofficers }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Alliance with Croatia
+	focus = {
+		id = BUL_alliancewithcroatia
+		icon = GFX_goal_unknown
+		x = 59
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_ultimatumformacedonia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for A Stronger Bulgaria
+	focus = {
+		id = BUL_astrongerbulgaria
+		icon = GFX_goal_unknown
+		x = 47
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_openuptrade }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Self Sufficiency
+	focus = {
+		id = BUL_selfsufficiency
+		icon = GFX_goal_unknown
+		x = 43
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_combinedcivilianprojects }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Improve Infantry Equipment
+	focus = {
+		id = BUL_improveinfantryequipment
+		icon = GFX_goal_unknown
+		x = 3
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thestateofthearmy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Mobilize More Men
+	focus = {
+		id = BUL_mobilizemoremen
+		icon = GFX_goal_unknown
+		x = 5
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thestateofthearmy }
+		mutually_exclusive = { focus = BUL_aforceofelites }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for A Force of Elites
+	focus = {
+		id = BUL_aforceofelites
+		icon = GFX_goal_unknown
+		x = 7
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thestateofthearmy }
+		mutually_exclusive = { focus = BUL_mobilizemoremen }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Bulgarian Elite Division
+	focus = {
+		id = BUL_bulgarianelitedivision
+		icon = GFX_goal_unknown
+		x = 7
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_aforceofelites }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Open up Trade
+	focus = {
+		id = BUL_openuptrade
+		icon = GFX_goal_unknown
+		x = 47
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_requestfrenchassistance 
+		}
+		prerequisite = { 
+			focus = BUL_expandthesteelworks 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Combined Civilian Projects
+	focus = {
+		id = BUL_combinedcivilianprojects
+		icon = GFX_goal_unknown
+		x = 43
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_assistthemasses 
+		}
+		prerequisite = { 
+			focus = BUL_continuebuildingtheindustry 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Industrialize South Macedonia
+	focus = {
+		id = BUL_industrializesouthmacedonia
+		icon = GFX_goal_unknown
+		x = 57
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_integratesouthmacedonia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Bulgarian Military Industry
+	focus = {
+		id = BUL_bulgarianmilitaryindustry
+		icon = GFX_goal_unknown
+		x = 45
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_continuebuildingtheindustry 
+			focus = BUL_expandthesteelworks 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Industrialize West Thrace
+	focus = {
+		id = BUL_industrializewestthrace
+		icon = GFX_goal_unknown
+		x = 53
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_integratewestthrace }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Assist the Masses
+	focus = {
+		id = BUL_assistthemasses
+		icon = GFX_goal_unknown
+		x = 42
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_assistthecountryside }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Continue Building the Industry
+	focus = {
+		id = BUL_continuebuildingtheindustry
+		icon = GFX_goal_unknown
+		x = 44
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_buildupcivilianindustry }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Request French Assistance
+	focus = {
+		id = BUL_requestfrenchassistance
+		icon = GFX_goal_unknown
+		x = 48
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_endtheisolation }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Fortify the Greek Border
+	focus = {
+		id = BUL_fortifythegreekborder
+		icon = GFX_goal_unknown
+		x = 15
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_macedonianline 
+		}
+		prerequisite = { 
+			focus = BUL_danubeline 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Defenders of the Land
+	focus = {
+		id = BUL_defendersoftheland
+		icon = GFX_goal_unknown
+		x = 17
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_onestepahead }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Legacy of the 2nd Balkan War
+	focus = {
+		id = BUL_legacyofthe2ndbalkanwar
+		icon = GFX_goal_unknown
+		x = 16
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_fortifythegreekborder 
+		}
+		prerequisite = { 
+			focus = BUL_defendersoftheland 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Defeat in Detail
+	focus = {
+		id = BUL_defeatindetail
+		icon = GFX_goal_unknown
+		x = 12
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_reviewingourtactics }
+		mutually_exclusive = { focus = BUL_downtothetrenches }
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	#Focus for Lightning Warfare
+	focus = {
+		id = BUL_lightningwarfare
+		icon = GFX_goal_unknown
+		x = 13
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_defeatindetail }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Bulgarian Tanks
+	focus = {
+		id = BUL_bulgariantanks
+		icon = GFX_goal_unknown
+		x = 11
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_defeatindetail }
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	#Focus for Expand the Steelworks
+	focus = {
+		id = BUL_expandthesteelworks
+		icon = GFX_goal_unknown
+		x = 46
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_buildupinfrastructure }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Integrate South Macedonia
+	focus = {
+		id = BUL_integratesouthmacedonia
+		icon = GFX_goal_unknown
+		x = 56
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_victoryovergreece }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Build up Infrastructure
+	focus = {
+		id = BUL_buildupinfrastructure
+		icon = GFX_goal_unknown
+		x = 46
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_modernizedindustry }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Build up the Industry
+	focus = {
+		id = BUL_builduptheindustry
+		icon = GFX_goal_unknown
+		x = 45
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Bulgarization
+	focus = {
+		id = BUL_bulgarization
+		icon = GFX_goal_unknown
+		x = 55
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_integratewestthrace 
+		}
+		prerequisite = { 
+			focus = BUL_integratesouthmacedonia 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Reclaiming the Empire
+	focus = {
+		id = BUL_reclaimingtheempire
+		icon = GFX_goal_unknown
+		x = 11
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_spearheadtheirlines }
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	#Focus for The Bulgarian Armed Forces
+	focus = {
+		id = BUL_thebulgarianarmedforces
+		icon = GFX_goal_unknown
+		x = 23
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 30
+		}
+	}
+
+	#Focus for The Bulgarian Army
+	focus = {
+		id = BUL_thebulgarianarmy
+		icon = GFX_goal_unknown
+		x = 10
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thebulgarianarmedforces }
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	#Focus for The Junta Hangs on
+	focus = {
+		id = BUL_thejuntahangson
+		icon = GFX_goal_unknown
+		x = 70
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Integrate West Thrace
+	focus = {
+		id = BUL_integratewestthrace
+		icon = GFX_goal_unknown
+		x = 54
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_victoryovergreece }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for The Bulgarian Navy
+	focus = {
+		id = BUL_thebulgariannavy
+		icon = GFX_goal_unknown
+		x = 23
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thebulgarianarmedforces }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Filler
+	focus = {
+		id = BUL_filler
+		icon = GFX_goal_unknown
+		x = 77
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Black Sea Naval Bases
+	focus = {
+		id = BUL_blackseanavalbases
+		icon = GFX_goal_unknown
+		x = 24
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thebulgariannavy }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Expand our Ports
+	focus = {
+		id = BUL_expandourports
+		icon = GFX_goal_unknown
+		x = 20
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_blackseanavalbases 
+		}
+		prerequisite = { 
+			focus = BUL_rebuildvarnadockyard 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Increase Naval Production
+	focus = {
+		id = BUL_increasenavalproduction
+		icon = GFX_goal_unknown
+		x = 20
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_expandourports }
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	#Focus for Focus on Submarines
+	focus = {
+		id = BUL_focusonsubmarines
+		icon = GFX_goal_unknown
+		x = 22
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_blackseanavalbases 
+		}
+		prerequisite = { 
+			focus = BUL_rebuildvarnadockyard 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Controlling the Black Sea
+	focus = {
+		id = BUL_controllingtheblacksea
+		icon = GFX_goal_unknown
+		x = 22
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_focusonsubmarines }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Focus on Destroyers
+	focus = {
+		id = BUL_focusondestroyers
+		icon = GFX_goal_unknown
+		x = 24
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_rebuildvarnadockyard 
+		}
+		prerequisite = { 
+			focus = BUL_blackseanavalbases 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Mass Produce Destroyers
+	focus = {
+		id = BUL_massproducedestroyers
+		icon = GFX_goal_unknown
+		x = 24
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_focusondestroyers }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Down to the Trenches
+	focus = {
+		id = BUL_downtothetrenches
+		icon = GFX_goal_unknown
+		x = 16
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_reviewingourtactics }
+		mutually_exclusive = { focus = BUL_defeatindetail }
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	#Focus for One Step Ahead
+	focus = {
+		id = BUL_onestepahead
+		icon = GFX_goal_unknown
+		x = 17
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_downtothetrenches }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Expand Weapons Industry
+	focus = {
+		id = BUL_expandweaponsindustry
+		icon = GFX_goal_unknown
+		x = 15
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_downtothetrenches }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Build new Air Infrastructure
+	focus = {
+		id = BUL_buildnewairinfrastructure
+		icon = GFX_goal_unknown
+		x = 36
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thebulgarianairforce }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Focus on Fighters
+	focus = {
+		id = BUL_focusonfighters
+		icon = GFX_goal_unknown
+		x = 37
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_buyitalianplanes 
+		}
+		prerequisite = { 
+			focus = BUL_buildnewairinfrastructure 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Maintaining Air Supremacy
+	focus = {
+		id = BUL_maintainingairsupremacy
+		icon = GFX_goal_unknown
+		x = 37
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_focusonfighters }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Build Rocket Missiles
+	focus = {
+		id = BUL_buildrocketmissiles
+		icon = GFX_goal_unknown
+		x = 33
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_manufacturebombers }
+		mutually_exclusive = { focus = BUL_turntheskyblack }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Turn the Sky Black
+	focus = {
+		id = BUL_turntheskyblack
+		icon = GFX_goal_unknown
+		x = 35
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_manufacturebombers }
+		mutually_exclusive = { focus = BUL_buildrocketmissiles }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Defenders of the Air
+	focus = {
+		id = BUL_defendersoftheair
+		icon = GFX_goal_unknown
+		x = 36
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_maintainingairsupremacy 
+		}
+		prerequisite = { 
+			focus = BUL_turntheskyblack 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Anti Air Defences
+	focus = {
+		id = BUL_antiairdefences
+		icon = GFX_goal_unknown
+		x = 39
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_buildnewairinfrastructure }
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+	#Focus for Improve Sofia Air Base
+	focus = {
+		id = BUL_improvesofiaairbase
+		icon = GFX_goal_unknown
+		x = 39
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_antiairdefences }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Reviewing our Tactics
+	focus = {
+		id = BUL_reviewingourtactics
+		icon = GFX_goal_unknown
+		x = 14
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thebulgarianarmy }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for The Lion of the Balkans
+	focus = {
+		id = BUL_thelionofthebalkans
+		icon = GFX_goal_unknown
+		x = 6
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_extensiveofficertraining 
+		}
+		prerequisite = { 
+			focus = BUL_militaryresearchefforts 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Danube Line
+	focus = {
+		id = BUL_danubeline
+		icon = GFX_goal_unknown
+		x = 14
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_lightningwarfare 
+			focus = BUL_expandweaponsindustry 
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	#Focus for Invite British Advisors
+	focus = {
+		id = BUL_invitebritishadvisors
+		icon = GFX_goal_unknown
+		x = 26
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_rebuildvarnadockyard 
+		}
+		prerequisite = { 
+			focus = BUL_blackseanavalbases 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Rebuild Varna Dockyard
+	focus = {
+		id = BUL_rebuildvarnadockyard
+		icon = GFX_goal_unknown
+		x = 22
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thebulgariannavy }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for The Bulgarian Air Force
+	focus = {
+		id = BUL_thebulgarianairforce
+		icon = GFX_goal_unknown
+		x = 37
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thebulgarianarmedforces }
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	#Focus for An Offer to the Admiralty
+	focus = {
+		id = BUL_anoffertotheadmiralty
+		icon = GFX_goal_unknown
+		x = 26
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_invitebritishadvisors }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Buy Italian Planes
+	focus = {
+		id = BUL_buyitalianplanes
+		icon = GFX_goal_unknown
+		x = 38
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thebulgarianairforce }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Manufacture Bombers
+	focus = {
+		id = BUL_manufacturebombers
+		icon = GFX_goal_unknown
+		x = 35
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_buyitalianplanes 
+		}
+		prerequisite = { 
+			focus = BUL_buildnewairinfrastructure 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for The Ultimate Weapon
+	focus = {
+		id = BUL_theultimateweapon
+		icon = GFX_goal_unknown
+		x = 33
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_buildrocketmissiles }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Macedonian Line
+	focus = {
+		id = BUL_macedonianline
+		icon = GFX_goal_unknown
+		x = 16
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_expandweaponsindustry }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Spearhead their Lines
+	focus = {
+		id = BUL_spearheadtheirlines
+		icon = GFX_goal_unknown
+		x = 12
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_lightningwarfare 
+		}
+		prerequisite = { 
+			focus = BUL_bulgariantanks 
+		}
+		ai_will_do = {
+			factor = 15
+		}
+	}
+
+	#Focus for Elite Tank Corps
+	focus = {
+		id = BUL_elitetankcorps
+		icon = GFX_goal_unknown
+		x = 13
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_spearheadtheirlines }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Mobilize Civilian Divisions
+	focus = {
+		id = BUL_mobilizeciviliandivisions
+		icon = GFX_goal_unknown
+		x = 5
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_mobilizemoremen }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Train our Officers
+	focus = {
+		id = BUL_trainourofficers
+		icon = GFX_goal_unknown
+		x = 9
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thestateofthearmy }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	#Focus for Last Ditch Mobilization
+	focus = {
+		id = BUL_lastditchmobilization
+		icon = GFX_goal_unknown
+		x = 6
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_bulgarianelitedivision 
+			focus = BUL_mobilizeciviliandivisions 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Improve Support Equipment
+	focus = {
+		id = BUL_improvesupportequipment
+		icon = GFX_goal_unknown
+		x = 4
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_improveinfantryequipment }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Extensive Officer Training
+	focus = {
+		id = BUL_extensiveofficertraining
+		icon = GFX_goal_unknown
+		x = 7
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_fundthemilitaryacademies }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Military Research Efforts
+	focus = {
+		id = BUL_militaryresearchefforts
+		icon = GFX_goal_unknown
+		x = 5
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_improvesupportequipment }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Purge the Opposition
+	focus = {
+		id = BUL_purgetheopposition
+		icon = GFX_goal_unknown
+		x = 67
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_thejuntahangson }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Victory over Greece
+	focus = {
+		id = BUL_victoryovergreece
+		icon = GFX_goal_unknown
+		x = 55
+		y = 4
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = BUL_revoltinwestthrace 
+			focus = BUL_revoltinmacedonia 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Conference in Plovdiv
+	focus = {
+		id = BUL_conferenceinplovdiv
+		icon = GFX_goal_unknown
+		x = 51
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_ultimatumformacedonia }
+		ai_will_do = {
+			factor = 65
+		}
+		available = {
+		date > 1935.07.01
+		}
+		completion_reward = {
+		TUR = { country_event = {
+    id = bulgaria.111
+
+}
+}
+		}
+	}
+
+	#Focus for Revolt in West Thrace
+	focus = {
+		id = BUL_revoltinwestthrace
+		icon = GFX_goal_unknown
+		x = 54
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_ultimatumtogreece }
+		ai_will_do = {
+			factor = 50
+		}
+		available = { 
+		has_war_with = GRE
+		}
+		completion_reward = {
+		country_event = {
+    id = bulgaria.122
+}
+
+		}
+	}
+
+	#Focus for Alliance with Albania
+	focus = {
+		id = BUL_alliancewithalbania
+		icon = GFX_goal_unknown
+		x = 51
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_conferenceinplovdiv }
+		ai_will_do = {
+			factor = 50
+		}
+		available =  { 
+		is_in_faction_with = TUR
+		}
+		completion_reward = {
+		ALB = { country_event = {
+    id = bulgaria.119
+}
+}
+		}
+	}
+
+	#Focus for Ultimatum for Macedonia
+	focus = {
+		id = BUL_ultimatumformacedonia
+		icon = GFX_goal_unknown
+		x = 57
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		available = { AND = { 
+		country_exists = BOS 
+		CRO = { has_war_with = SER }
+		BOS = { has_war_with = SER }
+		}
+		}
+		completion_reward = {
+		country_event = {
+    id = bulgaria.100
+}
+		}
+	}
+
+	#Focus for Ultimatum to Greece
+	focus = {
+		id = BUL_ultimatumtogreece
+		icon = GFX_goal_unknown
+		x = 55
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_ultimatumformacedonia }
+		ai_will_do = {
+			factor = 50
+		}
+		available = { AND = { 
+		is_in_faction_with = ALB
+		is_in_faction_with = TUR
+		}
+		}
+		completion_reward = {
+				country_event = {
+    id = bulgaria.114
+}
+		}
+	}
+
+	#Focus for Revolt in Macedonia
+	focus = {
+		id = BUL_revoltinmacedonia
+		icon = GFX_goal_unknown
+		x = 56
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_ultimatumtogreece }
+		ai_will_do = {
+			factor = 25
+		}
+		available = { 
+		has_war_with = GRE
+		}
+		completion_reward = {
+		country_event = {
+    id = bulgaria.118
+}
+
+		}
+	}
+
+	#Focus for Industrialize Macedonia
+	focus = {
+		id = BUL_industrializemacedonia
+		icon = GFX_goal_unknown
+		x = 60
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_integratemacedonia }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Intervene in the Romanian Civil War
+	focus = {
+		id = BUL_interveneintheromaniancivilwar
+		icon = GFX_goal_unknown
+		x = 62
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = BUL_pushfordobrudja }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+#End of focuses 
+ }

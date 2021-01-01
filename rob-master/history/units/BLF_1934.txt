@@ -1,0 +1,322 @@
+division_template = {
+
+name = "British Infantry Division"
+
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+		recon = { x = 0 y = 1 }  
+		artillery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+
+name = "Socialist Militia"
+
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+
+}
+
+
+units = {
+
+division = {
+name = "6.British Infantry Division"
+location = 9239
+division_template = "British Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 1.0
+
+}
+division = {
+name = "7.British Infantry Division"
+location = 271
+division_template = "British Infantry Division"
+start_experience_factor = 0.2
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "8.British Infantry Division"
+location = 3501
+division_template = "British Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "9.British Infantry Division"
+location = 13070
+division_template = "British Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "10.British Infantry Division"
+location = 11446
+division_template = "British Infantry Division"
+start_experience_factor = 0.2
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "1.People's Division "Red Sickle""
+location = 11221
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "2.People's Division "Yellow Devils""
+location = 13424
+division_template = "Socialist Militia"
+start_experience_factor = 0.3
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "3.People's Division"
+location = 11523
+division_template = "Socialist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.4
+
+}
+division = {
+name = "4.People's Division"
+location = 221
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "5.People's Division"
+location = 9268
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "5.People's Division"
+location = 364
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "1.Somerset Socialist Militia"
+location = 3463
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "2.Somerset Socialist Militia"
+location = 13415
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "1.Welsh Socialist Division"
+location = 13405
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "2.Welsh Socialist Division"
+location = 377
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "3.Welsh Socialist Division"
+location = 13418
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "4.Welsh Socialist Division"
+location = 253
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "5.Welsh Socialist Division"
+location = 311
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "6.Welsh Socialist Division"
+location = 3274
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "1.Scottish Socialist Militia"
+location = 11378
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "2.Scottish Socialist Militia"
+location = 9314
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "3.Scottish Socialist Militia"
+location = 11218
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "4.Scottish Socialist Militia"
+location = 9350
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "5.Scottish Socialist Militia"
+location = 6350
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "1.Scottish Socialist Division"
+location = 200
+division_template = "Socialist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.8
+
+}
+division = {
+name = "2.Scottish Socialist Division"
+location = 3150
+division_template = "Socialist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "3.Scottish Socialist Division"
+location = 6385
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "4.Scottish Socialist Division"
+location = 159
+division_template = "Socialist Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "1.Midlands Socialist Division"
+location = 9315
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "2.Midlands Socialist Division"
+location = 9315
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "3.Midlands Socialist Division"
+location = 9315
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "4.Midlands Socialist Division"
+location = 11382
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "5.Midlands Socialist Division"
+location = 11382
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "6.Midlands Socialist Division"
+location = 9250
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "7.Midlands Socialist Division"
+location = 364
+division_template = "Socialist Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+}

@@ -1,0 +1,166 @@
+SLV_austrian_civil_war = {
+
+
+SLV_recruit_in_southern_carinth = {
+  fire_only_once = yes
+  available = {
+  controls_state = 1219
+	}
+	ai_will_do = {
+		base = 1000
+	}
+	days_remove = 3
+	remove_effect = {
+  	SLV = { load_oob = SLV_milita }
+	}
+}
+
+SLV_recruit_in_maribor = {
+	fire_only_once = yes
+  	available = {
+  	controls_state = 934
+	}
+	ai_will_do = {
+		base = 1000
+	}
+	days_remove = 3
+	remove_effect = {
+  	SLV = { load_oob = SLV_milita2 }
+	}
+}
+
+
+###if we take all our shit
+SLV_peace = {
+	fire_only_once = yes
+  	available = {
+    OR = {
+        AND = {
+        tag = SLV
+        has_war_with = AUS
+        AUS = { surrender_progress > 0.5 }
+        SLV = {
+            has_full_control_of_state = 934
+            has_full_control_of_state = 1127
+            has_full_control_of_state = 1128
+            has_full_control_of_state = 1219
+            }
+        } 
+        AND = {
+            tag = SLV
+            has_war_with = AUS
+            AUS = { surrender_progress > 0.7 }
+                OR = {
+                    AND = {
+                        has_full_control_of_state = 1127
+                        has_full_control_of_state = 1128
+                        }
+                    AND = {
+                        has_full_control_of_state = 934
+                        has_full_control_of_state = 1128
+                        }
+                	} 
+            	}
+        }
+	}
+	ai_will_do = {
+		base = 1000
+	}
+	complete_effect = {
+    	SLV = { transfer_state = 1127 } 
+    	SLV = { transfer_state = 934 }  
+    	SLV = { transfer_state = 1219 }
+    	AUS = {  white_peace = SLV}
+    	ACM = {  white_peace = SLV}
+        THR = {  white_peace = SLV}
+        SLV = {
+        	remove_ideas = {
+        		extensive_conscription
+        		slovenian_uprising
+            	}
+        	add_ideas = {   
+                limited_conscription
+                }
+        hidden_effect = { set_country_flag = SLV_civil_war_over }
+        }
+	}
+}
+###if Austrian republic dies
+SLV_peace_2 = {
+	fire_only_once = yes
+  	available = {
+  	AND = {
+        tag = SLV
+        OR = {
+            has_war_with = ACM
+            has_war_with = THR
+        	}
+        NOT = { SLV = {has_war_with = AUS } }
+        SLV = {
+            has_full_control_of_state = 934
+            has_full_control_of_state = 1127
+            has_full_control_of_state = 1128
+        	}
+		}
+	}
+	ai_will_do = {
+		base = 500
+	}
+	complete_effect = {
+    	SLV = { transfer_state = 1127 } 
+    	SLV = { transfer_state = 934 }  
+    	ACM = {  white_peace = SLV}
+        THR = {  white_peace = SLV}
+        SLV = {
+        	remove_ideas = {
+        		extensive_conscription
+        		slovenian_uprising
+            	}
+        	add_ideas = {   
+                limited_conscription
+                }
+        hidden_effect = { set_country_flag = SLV_civil_war_over }
+        }
+	}
+}	
+###civil war end
+}
+SLV_unification = {
+
+
+SLV_seize_benedikt = {
+  cost = 25
+  fire_only_once = yes
+  available = {
+	AND = { 
+		country_exists = CRO 
+		CRO = { has_war_with = SER }
+		has_country_flag = SLV_civil_war_over
+		}
+	}
+    	ai_will_do = {
+			base = 1000
+			}
+  complete_effect = {
+  country_event = { id = rob_slovenia.2 }
+ }
+ }
+
+SLV_recruit_in_benedikt = {
+	fire_only_once = yes
+
+  	available = {
+  	controls_state = 935
+	}
+	ai_will_do = {
+		base = 1000
+	}
+	days_remove = 3
+	remove_effect = {
+  	SLV = { load_oob = SLV_milita3 }
+	}
+}
+
+}
+###end of unification
+}

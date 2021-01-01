@@ -1,0 +1,252 @@
+ideas = {
+
+	country = {
+		austrian_socialist_paramilitaries = {
+			picture = GFX_idea_austrian_socialist_paramilitaries
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+
+			modifier = {
+				political_power_gain = -0.05
+				conscription = -0.01
+				army_org = -5
+				stability_factor = -0.05
+			}
+		}
+		austrian_civil_war = {
+		picture = GFX_idea_austrian_civil_war
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+
+			modifier = {
+				conscription = 0.02
+				army_org = 5
+				stability_factor = 0.15
+				surrender_limit = 0.4
+			}
+		}
+		austrian_brownshirt_terror = {
+			picture = GFX_idea_austrian_brownshirt_terror
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.10
+			}
+		}
+		austria_monarchist_growing = {
+			picture = GFX_idea_austria_monarchist_growing
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.05
+			}
+		}
+		crotian_economic_pact = {
+			picture = GFX_idea_crotian_economic_pact
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.03
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.03
+			}
+		}
+		austrian_bad_econ = {
+            picture = GFX_idea_austrian_bad_econ		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.20
+				production_factory_max_efficiency_factor = -0.20
+				production_speed_buildings_factor = -0.15
+				consumer_goods_factor = 0.10
+				min_export = -0.15
+				conversion_cost_mil_to_civ_factor = 0.70
+			}
+		}	
+
+		austrian_bad_econ_1 = {
+            picture = GFX_idea_austrian_bad_econ		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.20
+				production_factory_max_efficiency_factor = -0.10
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.075
+				min_export = -0.15
+				conversion_cost_mil_to_civ_factor = 0.25
+			}
+		}	
+		austrian_bad_econ_2 = {
+            picture = GFX_idea_austrian_bad_econ		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}	
+	
+
+		slovenian_autonomy = {
+        picture = GFX_idea_minority_troubles	
+			allowed = {
+			always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.20
+				conscription_factor = -0.10
+				consumer_goods_factor = 0.15
+
+			}
+		}
+ 		
+ 		festung_bregenz = {
+        picture = GFX_idea_minority_troubles	
+			allowed = {
+			always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+		conscription_factor	= 0.25
+		army_core_attack_factor = 0.3
+		army_core_defence_factor = 0.3
+			}
+		}
+
+
+		rebuilding_cities = {
+        picture = GFX_idea_minority_troubles	
+			allowed = {
+			always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			production_speed_buildings_factor = 0.1
+			}
+		}
+
+		trust_gov = {
+        picture = GFX_idea_minority_troubles	
+			allowed = {
+			always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			political_power_gain = 0.10
+			}
+		}
+
+		healthcare = {
+        picture = GFX_idea_minority_troubles	
+			allowed = {
+			always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			conscription_factor = 0.025
+			}
+		}
+}

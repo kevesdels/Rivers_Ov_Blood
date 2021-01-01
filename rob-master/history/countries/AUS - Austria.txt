@@ -1,0 +1,127 @@
+﻿capital = 1018
+
+oob = "AUS_1936"
+
+set_research_slots = 3
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 8
+	socialist = 7
+	democratic_socialist = 0
+	social_democracy = 15
+	social_liberal = 0
+	conservative = 5
+	authoritharian = 18
+	reactionary = 30
+	pelekist = 17
+}
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+	early_fighter = 1
+}
+add_ideas = {
+	crotian_economic_pact
+	austrian_bad_econ
+	austria_monarchist_growing
+	austrian_socialist_paramilitaries
+	austrian_brownshirt_terror
+}
+
+set_stability = 0.50
+
+create_country_leader = {
+	name = "Engelbert Dollfuss"
+	desc = "POLITICS_Engelbert_Dollfuss_DESC"
+	picture = "Engelbert_Dollfuss.dds"
+	expire = "1965.1.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Adolf Hitler"
+	desc = "POLITICS_KARL_RENNER_DESC"
+	picture = "Adolf_Hitler.dds"
+	expire = "1965.1.1"
+	ideology = pagan_pelekism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Arthur Seyss-Inquart"
+	desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+	expire = "1965.1.1"
+	ideology = pagan_pelekism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Alfred Klahr"
+	desc = "POLITICS_ALFRED_KLAHR_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Karl Eglseer"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { trait_mountaineer trickster }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Siegmund Knaus"
+	portrait_path = "Siegmund_Knaus.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Emil Fey"
+	portrait_path = "Major_Emil_Fey.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Emil Spannocchi"
+	portrait_path = "Emil Spannocchi.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
