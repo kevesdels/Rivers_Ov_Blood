@@ -1,0 +1,83 @@
+
+division_template = {
+	name = "Latviešu strēlnieki"				# Infantry Division	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+
+division_template = {
+	name = "Latviešu partizāni"				# Infantry Division	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+
+units = { 
+
+division = { # "I Latviešu strēlnieki"
+		name = "I Latviešu strēlnieki"
+		location = 9262
+		division_template = "Latviešu strēlnieki"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+}
+
+division = { # "II Latviešu strēlnieki"
+		name = "II Latviešu strēlnieki"
+		location = 11246
+		division_template = "Latviešu strēlnieki"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+}
+
+division = { # "III Latviešu strēlnieki"
+		name = "III Latviešu strēlnieki"
+		location = 6222
+		division_template = "Latviešu strēlnieki"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+}
+
+division = { # "I Latviešu partizāni"
+		name = "I Latviešu partizāni"
+		location = 310
+		division_template = "Latviešu partizāni"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+}
+
+division = { # "II Latviešu partizāni"
+		name = "II Latviešu patizāni"
+		location = 11358
+		division_template = "Latviešu partizāni"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+}
+
+division = { # "IiI Latviešu partizāni"
+		name = "III Latviešu patizāni"
+		location = 6222
+		division_template = "Latviešu partizāni"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+}
+
+
+}

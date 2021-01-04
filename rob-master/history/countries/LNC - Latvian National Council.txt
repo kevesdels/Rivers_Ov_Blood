@@ -1,6 +1,5 @@
 ﻿capital = 190
 
-oob = "LAT_1936"
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "LAT_1936_naval_mtg"
@@ -54,6 +53,10 @@ set_popularities = {
 	pelekist = 78
 }
 
+add_ideas = {
+extensive_conscription
+UBD_Latvian_cw
+}
 
 create_country_leader = {
 	name = "Gustavs Celmiņš"

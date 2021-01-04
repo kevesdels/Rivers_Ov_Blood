@@ -20,7 +20,7 @@ country_event = {
   name = "Everyone is mad, and everything is going to hell."
   add_stability =-0.1
   hidden_effect = {
-   country_event = { id = ubd.1 days = 10 }
+   country_event = { id = ubd.1 days = 60 }
   }
  }
 }
@@ -178,7 +178,7 @@ country_event = {
   add_war_support =-0.05
   add_popularity = { ideology = socialist popularity = 0.05 }
   hidden_effect = {
-   country_event = { id = ubd.9 days = 14 }
+   country_event = { id = ubd.10 days = 14 }
   }
  }
 
@@ -390,13 +390,607 @@ country_event = {
   ELP = { transfer_state = 13 }
   ECA = { transfer_state = 1268 }
   ECA = { transfer_state = 883 }
+  hidden_effect = {
+  LNC = { declare_war_on = { target = EST  type = annex_everything } }
+  LDF = { declare_war_on = { target = EST  type = annex_everything } }
+  LPR = { declare_war_on = { target = EST  type = annex_everything } }
+  ELA = { declare_war_on = { target = EST  type = annex_everything } }
+  ELP = { declare_war_on = { target = EST  type = annex_everything } }
+  ECA = { declare_war_on = { target = EST  type = annex_everything } }
+  LDF = { declare_war_on = { target = LNC  type = annex_everything } }
+  LNC = { declare_war_on = { target = LPR  type = annex_everything } }
+  LPR = { declare_war_on = { target = LDF  type = annex_everything } }
+  ELA = { declare_war_on = { target = ELP  type = annex_everything } }
+  ELP = { declare_war_on = { target = ECA  type = annex_everything } }
+  ECA = { declare_war_on = { target = ELA  type = annex_everything } }
   190 = { add_core_of = LNC }
-  
   881 = { add_core_of = LNC }
-  
   1010 = { add_core_of = LNC }
-  
-  
+  880 = { add_core_of = LPR }
+  891 = { add_core_of = LPR }
+  12 = { add_core_of = LDF }
+  191 = { add_core_of = ELA }
+  890 = { add_core_of = ELA }
+  882 = { add_core_of = ELA }
+  13 = { add_core_of = ELP }
+  1268 = { add_core_of = ECA }
+  883 = { add_core_of = ECA }
+  delete_unit_template_and_units = { division_template = "Baltische infanterie division" }
+  EST = { load_oob = "UBD_CW" }
+  LNC = { load_oob = "LNC_CW" }
+  LDF = { load_oob = "LDF_CW" }
+  LPR = { load_oob = "LPR_CW" }
+  ELA = { load_oob = "ELA_CW" }
+  ELP = { load_oob = "ELP_CW" }
+  ECA = { load_oob = "ECA_CW" }
+  190 = { add_core_of = LPR add_core_of = LDF }
+  881 = { add_core_of = LPR add_core_of = LDF }
+  1010 = { add_core_of = LPR add_core_of = LDF }
+  12 = { add_core_of = LPR add_core_of = LNC }
+  880 = { add_core_of = LDF add_core_of = LNC }
+  891 = { add_core_of = LDF add_core_of = LNC }
+  1266 = { add_core_of = LDF add_core_of = LNC add_core_of = LPR }
+  882 = { add_core_of = ECA  add_core_of = ELP }
+  191 = { add_core_of = ECA  add_core_of = ELP }
+  890 = { add_core_of = ECA  add_core_of = ELP }
+  13 = { add_core_of = ECA  add_core_of = ELA }
+  1267 = { add_core_of = ECA add_core_of = ELA add_core_of = ELP }
+  1268 = { add_core_of = ELP  add_core_of = ELA }
+  883 = { add_core_of = ELP  add_core_of = ELA }
+  SOV = { country_event = { id = ubd.20 days = 3} }
+  POL = { country_event = { id = ubd.21 days = 3} }
+  LIT = { country_event = { id = ubd.22 days = 3} }
+  GER = { country_event = { id = ubd.23 days = 3} }
+  FIN = { country_event = { id = ubd.24 days = 3} }
+  PRS = { country_event = { id = ubd.25 days = 3} }
+  }
  }
 
 }
+
+
+###CIVIL WAR VOLUNTEERS###
+
+
+##Soviets
+country_event = { 
+ id = ubd.20
+ title = "Times Are Changing"
+ desc = "With the recent disintegration of the United Baltic Duchy, multiple factions now strive for dominance in the area. Influential spokesmen have suggested that intervention is necessary to ensure our interests in the region. Generals agree, suggesting that this is the perfect opportunity to try out new tactics and gain experience in modern warfare. The question is, how will we act?"
+
+ is_triggered_only = yes
+
+ option = {
+ name = "Intervention is unnecessary"
+ add_political_power = -10
+  ai_chance = {
+      factor = 3
+    }
+ }
+ option = {
+ name = "Sending arms will be enough"
+ ai_chance = {
+      factor = 3
+    }
+    SOV = {
+      send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = ECA
+      }
+      send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = LPR
+      }
+
+    }
+
+    ECA = { country_event = { id = ubd.26 days = 1} }
+
+    LPR = { country_event = { id = ubd.26 days = 1} }
+ }
+ option = {
+ name = "Another war? Why not, maybe we will learn something. Vasiliy, get the men ready!"
+ ai_chance = {
+      factor = 3
+    }
+    SOV = { add_manpower = -4000}
+    ECA = { country_event = { id = ubd.32 days = 3 } }
+
+    LPR = { country_event = { id = ubd.27 days = 3} }
+ }
+}
+
+##Poland
+country_event = { 
+ id = ubd.21
+ title = "Times Are Changing"
+ desc = "With the recent disintegration of the United Baltic Duchy, multiple factions now strive for dominance in the area. Influential spokesmen have suggested that intervention is necessary to ensure our interests in the region. Generals agree, suggesting that this is the perfect opportunity to try out new tactics and gain experience in modern warfare. The question is, how will we act?"
+
+ is_triggered_only = yes
+
+ option = {
+ name = "Intervention is unnecessary"
+ add_political_power = -10
+  ai_chance = {
+      factor = 0
+    }
+ }
+ option = {
+ name = "Naturally we will aid anti-german sentiments. Send guns!"
+  ai_chance = {
+      factor = 2
+    }
+     POL = {
+      send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = ELA
+      }
+      send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = LNC
+      }
+    }
+    ELA = { country_event = { id = ubd.26 days = 1} }
+
+    LNC = { country_event = { id = ubd.26 days = 1} }
+ }
+ option = {
+ name = "As upholders of libery, we will defend democracy. Send guns!"
+  ai_chance = {
+      factor = 2
+    }
+      POL = {
+      send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = ELP
+      }
+      send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = LDF
+      }
+    }
+    ELP = { country_event = { id = ubd.26 days = 1} }
+
+    LDF = { country_event = { id = ubd.26 days = 1} }
+ }
+ option = {
+ name = "Who would pass opportunity to shot an ancient foe? Send men!"
+  ai_chance = {
+      factor = 3
+    }
+    POL = { add_manpower = -4000}
+    ELA = { country_event = { id = ubd.30 days = 3 } }
+
+    LNC = { country_event = { id = ubd.29 days = 3 }  }
+ }
+ option = {
+ name = "Only with direct assistance will freedoms justice prevail. Send men!"
+  ai_chance = {
+      factor = 3
+    }
+    POL = { add_manpower = -4000}
+    ELP = { country_event = { id = ubd.31 days = 3 } }
+
+    LDF = { country_event = { id = ubd.28 days = 3} }
+ }
+}
+
+##Lithuania
+country_event = { 
+ id = ubd.22
+ title = "Times Are Changing"
+ desc = "With the recent disintegration of the United Baltic Duchy, multiple factions now strive for dominance in the area. Influential spokesmen have suggested that intervention is necessary to ensure our interests in the region. Generals agree, suggesting that this is the perfect opportunity to try out new tactics and gain experience in modern warfare. The question is, how will we act?"
+
+ is_triggered_only = yes
+
+ option = {
+ name = "Intervention is unnecessary"
+ add_political_power = -10
+  ai_chance = {
+      factor = 0
+    }
+ }
+
+ option = {
+ name = "We will arm our brothers as much as we can"
+ ai_chance = {
+      factor = 3
+    }
+ #everyone besides conservatives, socdems and Mironas support LNC
+  if = {
+    limit = {
+    NOT = { has_country_flag = LIT_mironas_rules }
+    NOT = { has_government = conservative }
+    NOT = { has_government = social_democracy }
+    }
+    LIT = {
+      send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = LNC
+      }
+    }
+    LNC = { country_event = { id = ubd.26 days = 1} }
+ }
+ #conservative supportS LDF
+  if = {
+    limit = {
+    has_government = conservative
+    }
+    LIT = {
+      send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = LDF
+      }
+    }
+    LDF = { country_event = { id = ubd.26 days = 1} }
+ }
+ #social democracy supportS LPR
+   if = {
+    limit = {
+    has_government = social_democracy
+    }
+    LIT = {
+      send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = LPR
+      }
+    }
+    LPR = { country_event = { id = ubd.26 days = 1} }
+ }
+}
+ option = {
+ name = "Prepare expeditionary force, a battle awaits!"
+  ai_chance = {
+      factor = 3
+    }
+  if = {
+    limit = {
+    NOT = { has_country_flag = LIT_mironas_rules }
+    NOT = { has_government = conservative }
+    NOT = { has_government = social_democracy }
+    }
+    LIT = { add_manpower = -4000}
+    LNC = { country_event = { id = ubd.29 days = 3 } }
+  }
+
+  if = {
+    limit = {
+    has_government = social_democracy
+    }
+    LIT = { add_manpower = -4000}
+    LPR = { country_event = { id = ubd.27 days = 3 } }
+  }
+
+  if = {
+    limit = {
+    has_government = conservative
+    }
+    LIT = { add_manpower = -4000}
+    LDF = { country_event = { id = ubd.28 days = 3 } }
+  }
+
+ }
+}
+
+
+##Germany
+country_event = { 
+ id = ubd.23
+ title = "Times Are Changing"
+ desc = "With the recent disintegration of the United Baltic Duchy, multiple factions now strive for dominance in the area. Influential spokesmen have suggested that intervention is necessary to ensure our interests in the region. Generals agree, suggesting that this is the perfect opportunity to try out new tactics and gain experience in modern warfare. The question is, how will we act?"
+
+ is_triggered_only = yes
+
+ option = {
+ name = "Intervention is unnecessary"
+ add_political_power = -10
+  ai_chance = {
+      factor = 3
+    }
+ }
+ option = {
+ name = "We can't spare men, but equipment is plenty"
+  ai_chance = {
+      factor = 3
+    }
+    GER = {
+      send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = ECA
+      }
+    }
+
+    ECA = { country_event = { id = ubd.26 days = 1} }
+ }
+ option = {
+ name = "Socialism will fall if we remain inactive, provide direct support"
+  ai_chance = {
+      factor = 3
+    }
+  GER = { add_manpower = -4000}
+  ECA = { country_event = { id = ubd.32 days = 3 } }
+ }
+}
+
+##Finland
+country_event = { 
+ id = ubd.24
+ title = "Times Are Changing"
+ desc = "With the recent disintegration of the United Baltic Duchy, multiple factions now strive for dominance in the area. Influential spokesmen have suggested that intervention is necessary to ensure our interests in the region. Generals agree, suggesting that this is the perfect opportunity to try out new tactics and gain experience in modern warfare. The question is, how will we act?"
+
+ is_triggered_only = yes
+
+ option = {
+ name = "Intervention is unnecessary"
+  ai_chance = {
+      factor = 1
+    }
+ add_political_power = -10
+ }
+ option = {
+ name = "Lets provide equipment for our democrat brothers"
+  ai_chance = {
+      factor = 2
+    }
+     FIN = {
+      send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = ELP
+      }
+      ELP = { country_event = { id = ubd.26 days = 1} }
+    }
+ }
+  option = {
+ name = "Lets provide equipment for our nationalist brothers"
+  ai_chance = {
+      factor = 2
+    }
+      FIN = {
+      send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = ELA
+      }
+    }
+    ELA = { country_event = { id = ubd.26 days = 1} }
+ }
+ option = {
+ name = "Find volunteers, Estonian Liberation army will win this battle!"
+  ai_chance = {
+      factor = 3
+    }
+ FIN = { add_manpower = -4000}
+ ELA = { country_event = { id = ubd.30 days = 3 } }
+ }
+option = {
+ name = "Find volunteers, Estonian democrats will win this battle!"
+  ai_chance = {
+      factor = 3
+    }
+ FIN = { add_manpower = -4000}
+ ELP = { country_event = { id = ubd.31 days = 3 } }
+ }
+}
+
+##Prussia
+country_event = { 
+ id = ubd.25
+ title = "Times Are Changing"
+ desc = "With the recent disintegration of the United Baltic Duchy, multiple factions now strive for dominance in the area. Influential spokesmen have suggested that intervention is necessary to ensure our interests in the region. Generals agree, suggesting that this is the perfect opportunity to try out new tactics and gain experience in modern warfare. The question is, how will we act?"
+
+ is_triggered_only = yes
+
+ option = {
+ name = "Intervention is unnecessary"
+ add_political_power = -10
+  ai_chance = {
+      factor = 1
+    }
+ }
+
+ option = {
+ name = "We will arm our brothers as much as we can"
+  ai_chance = {
+      factor = 3
+    }
+  if = {
+    limit = {
+    NOT = { has_country_flag = rosenberg_victory }
+    NOT = { has_country_flag = vyddunas_victory }
+    }
+    PRS = {
+      send_equipment = {
+      equipment = infantry_equipment
+      amount = 1000
+      target = UBD
+      }
+    }
+    UBD = { country_event = { id = ubd.26 days = 1} }
+  }
+ }
+ 
+ option = {
+ name = "Prepare expeditionary force, a battle awaits!"
+  ai_chance = {
+      factor = 3
+    }
+  if = {
+    limit = {
+    NOT = { has_country_flag = rosenberg_victory }
+    NOT = { has_country_flag = vyddunas_victory }
+    }
+    PRS = { add_manpower = -4000}
+    UBD = { country_event = { id = ubd.33 days = 3} }
+  }
+ }
+}
+
+
+##RECIVED VOLUNTEERS##
+
+##Ammo received
+country_event = { 
+ id = ubd.26
+ title = "Aid received!"
+ desc = "Foreign benefactors have delivered us equipment that we so desperately need."
+ is_triggered_only = yes
+
+ option = {
+ name = "This will come in handy!"
+ }
+ }
+
+##LPR
+ country_event = { 
+ id = ubd.27
+ title = "Help arrives!"
+ desc = "Foreign benefactors have sent multiple volunteers to aid us in our struggle."
+ is_triggered_only = yes
+
+ option = {
+ name = "Yes! Deploy them immediately!"
+ LPR = { load_oob = "LPR_CW_V" }
+ }
+}
+
+##LDF
+ country_event = { 
+ id = ubd.28
+ title = "Help arrives!"
+ desc = "Foreign benefactors have sent multiple volunteers to aid us in our struggle."
+ is_triggered_only = yes
+
+ option = {
+ name = "Yes! Deploy them immediately!"
+ LDF = { load_oob = "LDF_CW_V" }
+ }
+}
+
+##LNC
+ country_event = { 
+ id = ubd.29
+ title = "Help arrives!"
+ desc = "Foreign benefactors have sent multiple volunteers to aid us in our struggle."
+ is_triggered_only = yes
+
+ option = {
+ name = "Yes! Deploy them immediately!"
+ LNC = { load_oob = "LNC_CW_V" }
+ }
+}
+
+##ELA
+ country_event = { 
+ id = ubd.30
+ title = "Help arrives!"
+ desc = "Foreign benefactors have sent multiple volunteers to aid us in our struggle."
+ is_triggered_only = yes
+
+ option = {
+ name = "Yes! Deploy them immediately!"
+ ELA = { load_oob = "ELA_CW_V" }
+ }
+}
+
+##ELP
+ country_event = { 
+ id = ubd.31
+ title = "Help arrives!"
+ desc = "Foreign benefactors have sent multiple volunteers to aid us in our struggle."
+ is_triggered_only = yes
+
+ option = {
+ name = "Yes! Deploy them immediately!"
+ ELP = { load_oob = "ELP_CW_V" }
+ }
+}
+
+##ECA
+ country_event = { 
+ id = ubd.32
+ title = "Help arrives!"
+ desc = "Foreign benefactors have sent multiple volunteers to aid us in our struggle."
+ is_triggered_only = yes
+
+ option = {
+ name = "Yes! Deploy them immediately!"
+ ECA = { load_oob = "ECA_CW_V" }
+ }
+}
+
+##UBD
+ country_event = { 
+ id = ubd.33
+ title = "Help arrives!"
+ desc = "Foreign benefactors have sent multiple volunteers to aid us in our struggle."
+ is_triggered_only = yes
+
+ option = {
+ name = "Yes! Deploy them immediately!"
+ EST = { load_oob = "UBD_CW_V" }
+ }
+}
+
+####Civil war clean ups
+
+##Latvia
+country_event = { 
+ id = ubd.
+ title = "The Civil war is over"
+ desc = ubd..d
+ 
+ trigger = {
+ OR = { tag = LDF tag = LNC tag = LPR }
+ has_full_control_of_state = 1010
+ has_full_control_of_state = 12
+ has_full_control_of_state = 880
+ has_full_control_of_state = 1266
+ has_full_control_of_state = 881
+ has_full_control_of_state = 190
+ }
+
+ mean_time_to_happen = { days = 7 }
+
+ option = {
+ name = "Victory, but at what cost?"
+ }
+
+
+ }
+
+
+###Estonia
+country_event = { 
+ id = ubd.
+ title = "The Civil war is over"
+ desc = ubd..d
+ 
+ trigger = {
+ OR = { tag = LDF tag = LNC tag = LPR }
+ has_full_control_of_state = 882
+ has_full_control_of_state = 1268
+ has_full_control_of_state = 1267
+ has_full_control_of_state = 13
+ has_full_control_of_state = 191
+ }
+
+ mean_time_to_happen = { days = 7 }
+
+ option = {
+ name = "Victory, but at what cost?"
+
+ }
+
+
+ }

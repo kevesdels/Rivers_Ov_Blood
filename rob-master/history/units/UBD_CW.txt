@@ -1,0 +1,128 @@
+division_template = {
+	name = "Baltische infanterie division"				# Infantry Division	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Baltische Schutzmannschaft"				# Infantry Division	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	######## LAND OOB ########
+	division = { # "I Baltische infanterie division EST"
+		name = "I Baltische infanterie Div."
+		location = 3152
+		division_template = "Baltische infanterie division"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "II Baltische infanterie division EST"
+	    name = "II Baltische infanterie Div."
+		location = 6099
+		division_template = "Baltische infanterie division"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "III Baltische infanterie division EST"
+		name = "III Baltische infanterie Div."
+		location = 3074
+		division_template = "Baltische infanterie division"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+
+	division = { # "IV Baltische infanterie division LV"
+		name = "IV Baltische infanterie Div."
+		location = 13624
+		division_template = "Baltische infanterie division"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "V Baltische infanterie division LV"
+		name = "V Baltische infanterie Div."
+		location = 13624
+		division_template = "Baltische infanterie division"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "VI Baltische infanterie division LV"
+		name = "VI Baltische infanterie Div."
+		location = 3525
+		division_template = "Baltische infanterie division"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+	division = { # "VII Baltische infanterie division LV"
+		name = "VII Baltische infanterie Div."
+		location = 9317
+		division_template = "Baltische infanterie division"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+	}
+
+	division = { # "I Baltische Schutzmannschaft LV"
+		name = "I Baltische Schutzmannschaft"
+		location = 13624
+		division_template = "Baltische Schutzmannschaft"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+
+	division = { # "II Baltische Schutzmannschaft LV"
+		name = "II Baltische Schutzmannschaft"
+		location = 11222
+		division_template = "Baltische Schutzmannschaft"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = { # "III Baltische Schutzmannschaft LV"
+		name = "III Baltische Schutzmannschaft"
+		location = 3152
+		division_template = "Baltische Schutzmannschaft"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = { # "IV Baltische Schutzmannschaft LV"
+		name = "IV Baltische Schutzmannschaft"
+		location = 9430
+		division_template = "Baltische Schutzmannschaft"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+
+	}

@@ -1,0 +1,69 @@
+
+
+division_template = {
+	name = "Latgaļu sarkanie strēlnieki"				# Infantry Division	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Latgaļu partizāni"				# Infantry Division	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = { 
+
+division = { # "I Latgaļu sarkanie strēlnieki"
+		name = "I Latgaļu sarkanie strēlnieki"
+		location = 341
+		division_template = "Latgaļu sarkanie strēlnieki"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
+
+}
+division = { # "I Latgaļu partizāni"
+		name = "I Latgaļu partizāni"
+		location = 9275
+		division_template = "Latgaļu partizāni"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+division = { # "II Latgaļu partizāni"
+		name = "II Latgaļu partizāni"
+		location = 319
+		division_template = "Latgaļu partizāni"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+division = { # "III Latgaļu partizāni"
+		name = "III Latgaļu partizāni"
+		location = 6459
+		division_template = "Latgaļu partizāni"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+division = { # "IV Latgaļu partizāni"
+		name = "IV Latgaļu partizāni"
+		location = 341
+		division_template = "Latgaļu partizāni"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+}

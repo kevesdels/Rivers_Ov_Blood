@@ -1,0 +1,70 @@
+
+division_template = {
+	name = "Latviešu strēlnieki"				# Infantry Division	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+units = { 
+
+division = { # "I Latviešu strēlnieki"
+		name = "I Latviešu strēlnieki"
+		location = 9240
+		division_template = "Latviešu strēlnieki"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+division = { # "II Latviešu strēlnieki"
+		name = "II Latviešu strēlnieki"
+		location = 13622
+		division_template = "Latviešu strēlnieki"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+division = { # "III Latviešu strēlnieki"
+		name = "III Latviešu strēlnieki"
+		location = 10493
+		division_template = "Latviešu strēlnieki"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+division = { # "IV Latviešu strēlnieki"
+		name = "IV Latviešu strēlnieki"
+		location = 13628
+		division_template = "Latviešu strēlnieki"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+division = { # "V Latviešu strēlnieki"
+		name = "V Latviešu strēlnieki"
+		location = 9501
+		division_template = "Latviešu strēlnieki"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+division = { # "VI Latviešu strēlnieki"
+		name = "VI Latviešu strēlnieki"
+		location = 9240
+		division_template = "Latviešu strēlnieki"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+}

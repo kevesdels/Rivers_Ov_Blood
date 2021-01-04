@@ -1,0 +1,73 @@
+
+
+division_template = {
+	name = "Jalavägi"				# Infantry Division	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Eesti partisanid"				# Infantry Division	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = { 
+
+division = { # "I Jalavägi"
+
+		location = 11127	
+		division_template = "Jalavägi"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+}
+
+
+division = { # "I Eesti partisanid"
+
+		location = 11443
+		division_template = "Eesti partisanid"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+division = { # "II Eesti partisanid"
+
+		location = 126
+		division_template = "Eesti partisanid"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+division = { # "III Eesti partisanid"
+
+		location = 9079
+		division_template = "Eesti partisanid"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+division = { # "IV Eesti partisanid"
+
+		location = 4640
+		division_template = "Eesti partisanid"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+}

@@ -1,0 +1,66 @@
+
+division_template = {
+	name = "Jalavägi"				# Infantry Division	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+units = { 
+
+
+division = { # "I Jalavägi"
+
+		location = 3174	
+		division_template = "Jalavägi"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+division = { # "II Jalavägi"
+
+		location = 3174	
+		division_template = "Jalavägi"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+}
+
+
+division = { # "III Jalavägi"
+
+		location = 308	
+		division_template = "Jalavägi"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+}
+
+
+division = { # "IV Jalavägi"
+
+		location = 567	
+		division_template = "Jalavägi"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+
+}
+
+
+division = { # "V Jalavägi"
+
+		location = 11291	
+		division_template = "Jalavägi"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+}
+
+
+}
