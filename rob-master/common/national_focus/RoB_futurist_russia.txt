@@ -1,0 +1,66 @@
+focus_tree = {
+    id = futurist_russia_focus
+
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 10
+            tag = AGR
+        }
+    }
+
+    default = no
+
+    focus = {
+        id = AGR_finish_five_year_plan
+        icon = GFX_goal_generic_construct_civ_factory
+        x = 1
+        y = 0
+        cost = 10
+        ai_will_do = {
+            factor = 5
+        }
+
+        available_if_capitulated = yes
+
+        bypass = {
+            custom_trigger_tooltip =  {
+                tooltip = construction_effort_tt
+                all_owned_state = {
+                    free_building_slots = {
+                        building = industrial_complex
+                        size < 2
+                        include_locked = yes
+                    }
+                }
+            }
+        }
+		focus = {
+		id = AGR_production_effort
+		text = production_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SOV_finish_five_year_plan }
+		x = 1
+		y = 1
+		relative_position_id = AGR_finish_five_year_plan
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
