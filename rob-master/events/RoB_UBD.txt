@@ -103,7 +103,7 @@ country_event = {
   add_popularity = { ideology = pelekist popularity = 0.02 }
   hidden_effect = {
    country_event = { id = ubd.5 days = 10 }
-   country_event = { id = ubd.6 days = 25 }
+   country_event = { id = ubd.6 days = 35 }
   }
  }
 
@@ -139,7 +139,7 @@ country_event = {
   add_stability =-0.03
   add_popularity = { ideology = socialist popularity = 0.03 }
   hidden_effect = {
-   country_event = { id = ubd.7 days = 12 }
+   country_event = { id = ubd.7 days = 20 }
   }
  }
 
@@ -158,7 +158,7 @@ country_event = {
   add_stability =-0.05
   add_popularity = { ideology = socialist popularity = 0.05 }
   hidden_effect = {
-   country_event = { id = ubd.8 days = 17 }
+   country_event = { id = ubd.8 days = 28 }
   }
  }
 
@@ -239,7 +239,7 @@ country_event = {
   add_popularity = { ideology = socialist popularity = 0.05 }
   add_popularity = { ideology = pelekist popularity = 0.05 }
   hidden_effect = {
-   country_event = { id = ubd.13 days = 13 }
+   country_event = { id = ubd.13 days = 18 }
   }
  }
 
@@ -260,7 +260,7 @@ country_event = {
   add_popularity = { ideology = social_liberal popularity = 0.05 }
   add_popularity = { ideology = social_democracy popularity = 0.05 }
   hidden_effect = {
-   country_event = { id = ubd.14 days = 15 }
+   country_event = { id = ubd.14 days = 25 }
   }
  }
 
@@ -279,7 +279,7 @@ country_event = {
   add_war_support =-0.08
   add_popularity = { ideology = pelekist popularity = 0.08 }
   hidden_effect = {
-   country_event = { id = ubd.15 days = 16 }
+   country_event = { id = ubd.15 days = 12 }
   }
  }
 
@@ -318,7 +318,7 @@ country_event = {
   add_war_support =-0.15
   add_popularity = { ideology = reactionary popularity = -0.05 }
   hidden_effect = {
-   country_event = { id = ubd.17 days = 17 }
+   country_event = { id = ubd.17 days = 32 }
   }
  }
 
@@ -335,7 +335,7 @@ country_event = {
  option = {
   name = "...Oh God..."
   hidden_effect = {
-   country_event = { id = ubd.18 days = 17 }
+   country_event = { id = ubd.18 days = 23 }
   }
  }
 
@@ -443,6 +443,7 @@ country_event = {
   GER = { country_event = { id = ubd.23 days = 3} }
   FIN = { country_event = { id = ubd.24 days = 3} }
   PRS = { country_event = { id = ubd.25 days = 3} }
+  EST = { set_country_flag = UBD_CW }
   }
  }
 
@@ -942,13 +943,13 @@ country_event = {
  }
 }
 
-####Civil war clean ups
+####CIVIL WAR CLEAN UP####
 
 ##Latvia
 country_event = { 
- id = ubd.
+ id = ubd.34
  title = "The Civil war is over"
- desc = ubd..d
+ desc = ubd.34
  
  trigger = {
  OR = { tag = LDF tag = LNC tag = LPR }
@@ -958,31 +959,87 @@ country_event = {
  has_full_control_of_state = 1266
  has_full_control_of_state = 881
  has_full_control_of_state = 190
+ has_war = no
  }
 
  mean_time_to_happen = { days = 7 }
 
  option = {
  name = "Victory, but at what cost?"
+
+ if = {
+  limit = {
+    tag = LPR
+    }
+    every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = EST 
+          is_core_of = LNC
+          is_core_of = LDF
+          }
+        }
+      remove_core_of = EST
+      remove_core_of = LNC
+      remove_core_of = LDF
  }
+}
 
 
+ if = {
+  limit = {
+    tag = LDF
+    }
+    every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = EST 
+          is_core_of = LNC
+          is_core_of = LPR
+          }
+        }
+      remove_core_of = EST
+      remove_core_of = LNC
+      remove_core_of = LPR
  }
+}
 
+ if = {
+  limit = {
+    tag = LNC
+    }
+    every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = EST 
+          is_core_of = LDF
+          is_core_of = LPR
+          }
+        }
+      remove_core_of = EST
+      remove_core_of = LDF
+      remove_core_of = LPR
+ }
+}
+
+}
+
+}
 
 ###Estonia
 country_event = { 
- id = ubd.
+ id = ubd.35
  title = "The Civil war is over"
- desc = ubd..d
+ desc = ubd.35
  
  trigger = {
- OR = { tag = LDF tag = LNC tag = LPR }
+ OR = { tag = ELA tag = ELP tag = ECA }
  has_full_control_of_state = 882
  has_full_control_of_state = 1268
  has_full_control_of_state = 1267
  has_full_control_of_state = 13
  has_full_control_of_state = 191
+ has_war = no
  }
 
  mean_time_to_happen = { days = 7 }
@@ -990,7 +1047,134 @@ country_event = {
  option = {
  name = "Victory, but at what cost?"
 
+ if = {
+  limit = {
+    tag = ELA
+    }
+    every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = EST 
+          is_core_of = ELP
+          is_core_of = ECA
+          }
+        }
+      remove_core_of = EST
+      remove_core_of = ELP
+      remove_core_of = ECA
+ }
+}
+
+
+ if = {
+  limit = {
+    tag = ELP
+    }
+    every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = EST 
+          is_core_of = ECA
+          is_core_of = ELA
+          }
+        }
+      remove_core_of = EST
+      remove_core_of = ECA
+      remove_core_of = ELA
+ }
+}
+
+ if = {
+  limit = {
+    tag = ECA
+    }
+    every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = EST 
+          is_core_of = ELA
+          is_core_of = ELP
+          }
+        }
+      remove_core_of = EST
+      remove_core_of = ELA
+      remove_core_of = ELP
+ }
+}
+
+}
+
+}
+
+###UBD
+country_event = { 
+ id = ubd.36
+ title = "Estland is quite..."
+ desc = ubd.36
+ fire_only_once = yes
+ trigger = {
+ tag = EST
+ has_full_control_of_state = 882
+ has_full_control_of_state = 1268
+ has_full_control_of_state = 1267
+ has_full_control_of_state = 13
+ has_full_control_of_state = 191
+ has_country_flag = UBD_CW
  }
 
+ mean_time_to_happen = { days = 7 }
+
+ option = {
+ name = "Victory, but at what cost?"
+    every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = ELA 
+          is_core_of = ELP
+          is_core_of = ECA
+          }
+        }
+      remove_core_of = ELA
+      remove_core_of = ELP
+      remove_core_of = ECA
+ }
+ }
+}
+
+###UBD
+country_event = { 
+ id = ubd.37
+ title = "Lettland is quite..."
+ desc = ubd.37
+ fire_only_once = yes
+
+ trigger = {
+ tag = EST
+ has_full_control_of_state = 882
+ has_full_control_of_state = 1268
+ has_full_control_of_state = 1267
+ has_full_control_of_state = 13
+ has_full_control_of_state = 191
+ has_country_flag = UBD_CW
+ }
+
+ mean_time_to_happen = { days = 7 }
+
+ option = {
+ name = "Victory, but at what cost?"
+ 
+    every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = LDF 
+          is_core_of = LNC
+          is_core_of = LPR
+          }
+        }
+      remove_core_of = LDF
+      remove_core_of = LNC
+      remove_core_of = LPR
+ }
+ }
 
  }
