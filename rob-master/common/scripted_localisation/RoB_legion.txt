@@ -1,0 +1,342 @@
+
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+
+
+
+##boys who want home
+defined_text = { #
+	name = GetReturnistContentLevel
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_returnist value = 90 compare = greater_than_or_equals }
+		}
+		localization_key = les_Returnist_loyal
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_returnist value = 70 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_returnist value = 90 compare = less_than }
+
+		}
+		localization_key = les_Returnist_calm
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_returnist value = 50 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_returnist value = 70 compare = less_than }
+
+		}
+		localization_key = les_Returnist_worried
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_returnist value = 30 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_returnist value = 50 compare = less_than }
+
+		}
+		localization_key = les_Returnist_angry
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_returnist value = 15 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_returnist value = 30 compare = less_than }
+
+		}
+		localization_key = les_Returnist_furious
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			NOT = {has_country_flag = les_returnist_gone}
+			check_variable = { var = LES_faction_returnist value = 10 compare = less_than }
+
+		}
+		localization_key = les_Returnist_rebellious
+	}
+	text = {
+		trigger = {
+		original_tag = LES
+		has_country_flag = les_returnist_gone
+		check_variable = { var = LES_faction_returnist value = 0 compare = equals }
+		}
+		localization_key = LES_faction_returnist_gone
+	}
+}
+
+##Russians who want to united, strong russia
+defined_text = { #
+	name = GetRusnatContentLevel
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_rusnat value = 90 compare = greater_than_or_equals }
+		}
+		localization_key = les_Rusnat_loyal
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_rusnat value = 70 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_rusnat value = 90 compare = less_than }
+
+		}
+		localization_key = les_Rusnat_calm
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_rusnat value = 50 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_rusnat value = 70 compare = less_than }
+
+		}
+		localization_key = les_Rusnat_worried
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_rusnat value = 30 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_rusnat value = 50 compare = less_than }
+
+		}
+		localization_key = les_Rusnat_angry
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_rusnat value = 10 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_rusnat value = 30 compare = less_than }
+		}
+		localization_key = les_Rusnat_furious
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			NOT = { has_country_flag = les_rusnat_gone }
+			check_variable = { var = LES_faction_rusnat value = 10 compare = less_than }
+
+		}
+		localization_key = les_Rusnat_rebellious
+	}
+	text = {
+		trigger = {
+		original_tag = LES
+		has_country_flag = les_rusnat_gone
+		check_variable = { var = LES_faction_rusnat value = 0 compare = equals }
+
+		}
+		localization_key = LES_faction_rusnat_gone
+	}
+}
+
+##Christians
+defined_text = { #
+	name = GetChristContentLevel
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_christian value = 90 compare = greater_than_or_equals }
+		}
+		localization_key = les_christ_loyal
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_christian value = 70 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_christian value = 90 compare = less_than }
+
+		}
+		localization_key = les_christ_calm
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_christian value = 50 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_christian value = 70 compare = less_than }
+
+		}
+		localization_key = les_christ_worried
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_christian value = 30 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_christian value = 50 compare = less_than }
+
+		}
+		localization_key = les_christ_angry
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_christian value = 10 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_christian value = 30 compare = less_than }
+
+		}
+		localization_key = les_christ_furious
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			NOT = { has_country_flag = les_christ_gone }
+			check_variable = { var = LES_faction_christian value = 10 compare = less_than }
+
+		}
+		localization_key = les_christ_rebellious
+	}
+	text = {
+		trigger = {
+		original_tag = LES
+		has_country_flag = les_christ_gone
+		check_variable = { var = LES_faction_christian value = 0 compare = equals }
+
+		}
+		localization_key = LES_faction_christian_gone
+	}
+
+}
+
+
+##Pagans
+defined_text = { #
+	name = GetPaganContentLevel
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_pagan value = 90 compare = greater_than_or_equals }
+		}
+		localization_key = les_pagan_loyal
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_pagan value = 70 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_pagan value = 90 compare = less_than }
+
+		}
+		localization_key = les_pagan_calm
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_pagan value = 50 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_pagan value = 70 compare = less_than }
+
+		}
+		localization_key = les_pagan_worried
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_pagan value = 30 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_pagan value = 50 compare = less_than }
+
+		}
+		localization_key = les_pagan_angry
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_pagan value = 10 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_pagan value = 30 compare = less_than }
+
+		}
+		localization_key = les_pagan_furious
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			NOT = {has_country_flag = les_pagan_gone}
+			check_variable = { var = LES_faction_pagan value = 10 compare = less_than }
+
+		}
+		localization_key = les_pagan_rebellious
+	}
+	text = {
+		trigger = {
+		original_tag = LES
+		has_country_flag = les_pagan_gone
+		check_variable = { var = LES_faction_pagan value = 0 compare = equals }
+		}
+		localization_key = LES_faction_pagan_gone
+	}
+}
+
+
+##Futurists
+defined_text = { #
+	name = GetPoetContentLevel
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_poet value = 90 compare = greater_than_or_equals }
+		}
+		localization_key = les_poet_loyal
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_poet value = 70 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_poet value = 90 compare = less_than }
+
+		}
+		localization_key = les_poet_calm
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_poet value = 50 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_poet value = 70 compare = less_than }
+
+		}
+		localization_key = les_poet_worried
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_poet value = 30 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_poet value = 50 compare = less_than }
+
+		}
+		localization_key = les_poet_angry
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			check_variable = { var = LES_faction_poet value = 10 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_poet value = 30 compare = less_than }
+
+		}
+		localization_key = les_poet_furious
+	}
+	text = {
+		trigger = {
+			original_tag = LES
+			NOT = {has_country_flag = les_poet_gone}
+			check_variable = { var = LES_faction_poet value = 10 compare = less_than }
+
+		}
+		localization_key = les_poet_rebellious
+	}
+	text = {
+		trigger = {
+		original_tag = LES
+		has_country_flag = les_poet_gone
+		check_variable = { var = LES_faction_poet value = 0 compare = equals }
+		}
+		localization_key = LES_faction_poet_gone
+	}
+}

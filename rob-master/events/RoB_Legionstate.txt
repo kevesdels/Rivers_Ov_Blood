@@ -19,6 +19,7 @@ trigger = {
 option = {
  name = legion.0.a
  add_political_power = 5
+hidden_effect = { country_event = { id = legion.31 days = 7 }}
 }
 }
 
@@ -34,19 +35,19 @@ option = {
  name = legion.1.a
  ai_chance = { factor = 5 }
  set_country_flag = christ
- hidden_effect = { country_event = { id = legion.2 days = 14 }}
+ hidden_effect = { country_event = { id = legion.2 days = 14 }   add_to_variable = { var = LES_faction_returnist  value = -15 }   add_to_variable = { var = LES_faction_christian value = 20} }
 }
 option = {
  name = legion.1.b
  ai_chance = { factor = 5 }
  set_country_flag = pagan
- hidden_effect = { country_event = { id = legion.2 days = 14 }}
+ hidden_effect = { country_event = { id = legion.2 days = 14 }  add_to_variable = { var = LES_faction_returnist  value = -15 }   add_to_variable = { var = LES_faction_pagan value = 20} }
 }
 option = {
  name = legion.1.c
  ai_chance = { factor = 5 }
  set_country_flag = poets
- hidden_effect = { country_event = { id = legion.2 days = 14 }}
+ hidden_effect = { country_event = { id = legion.2 days = 14 }  add_to_variable = { var = LES_faction_returnist  value = -15 }   add_to_variable = { var = LES_faction_poet value = 20} }
 }
 }
 
@@ -132,6 +133,16 @@ option = {
 
 add_popularity = {ideology = reactionary popularity =0.3}
 add_stability = -0.1
+
+hidden_effect = {
+	set_country_flag = les_poet_gone
+	set_country_flag = les_christ_gone
+	set_country_flag = les_pagan_gone
+	clear_variable = LES_faction_poet
+	clear_variable = LES_faction_christian
+	clear_variable = LES_faction_pagan
+	add_to_variable = { var = LES_faction_rusnat value = 45}
+	}
 }
 }
 
@@ -153,18 +164,18 @@ option = {
 				limit = {
 					AND = { has_country_flag = poets }
 				}
- 		AGR = { country_event = { id = agrussia.1 days = 14 } }
+ 		AGR = { country_event = { id = agrussia.1 days = 14 id = legion.30 days = 21} }
 		 }
 	 	if = {
 				limit = {
 					AND = { has_country_flag = pagan }
 				}
- 		AGR = { country_event = { id = agrussia.1 days = 14 } }
+ 		AGR = { country_event = { id = agrussia.1 days = 14 id = legion.30 days = 21} }
 		 }
  		if = {
 				limit = { has_country_flag = christ }
 				}
- 		AGR = { country_event = { id = agrussia.3 days = 41 } }
+ 		AGR = { country_event = { id = agrussia.3 days = 41 id = legion.30 days = 21} }
  		}
  	}
  }
@@ -688,6 +699,7 @@ trigger = {
  NOT = { country_exists = OMS )
  LES = { owns_state =  }
 }
+}
 mean_time_to_happen = { days = 3 }
 
 option = {
@@ -702,4 +714,41 @@ option = {
  ai_chance = 2
  653 = { add_manpower = -12341 }
  }
+
+ }
+
+
+### Famine mechanic introduction
+country_event = { 
+id = legion.30
+title = legion.30.t
+desc = legion.30.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.30.a
+ }
+
+ }
+
+
+### faction mechanic introduction
+country_event = { 
+id = legion.31
+title = legion.31.t
+desc = legion.31.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = legion.31.a
+ set_country_flag = les_factions
+ set_variable = { LES_faction_rusnat = 50 }
+ set_variable = { LES_faction_returnist = 50 }
+ set_variable = { LES_faction_christian = 50 }
+ set_variable = { LES_faction_pagan = 50 }
+ set_variable = { LES_faction_poet = 50 }
+ }
+
  }

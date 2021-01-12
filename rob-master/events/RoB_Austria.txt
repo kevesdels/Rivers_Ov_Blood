@@ -124,7 +124,7 @@ country_event = {
 				152 = { add_core_of = THR }
 				1017 = { add_core_of = THR }
 				AUS = { declare_war_on = { target = THR  type = annex_everything } }
-				AUS = { declare_war_on = { target = ACM  type = annex_everything } }
+				ACM = { declare_war_on = { target = AUS  type = annex_everything } }
 				THR = { declare_war_on = { target = ACM  type = annex_everything } }
 				delete_unit_template_and_units = { division_template = "Alpenjäger Division" }
 				delete_unit_template_and_units = { division_template = "Infanterie Division" }

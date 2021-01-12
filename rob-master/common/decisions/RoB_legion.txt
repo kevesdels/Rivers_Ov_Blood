@@ -46,6 +46,166 @@ LES_banish_x = {
         }
      }
 }
+
+##end of banish
+}
+
+LES_factions = {
+
+   
+   ##
+   LES_appease_returnist = {
+   visible = {
+        hidden_trigger = {
+        tag = LES
+      }
+   }
+   icon = GFX_decision_infiltrate_state
+    ai_will_do = {
+      base = 0
+    }
+  available = {
+    hidden_trigger = {
+    has_country_flag = les_factions
+    }
+   }
+   cost = 40
+   days_remove = 10
+
+   remove_effect = {
+   custom_effect_tooltip = les_tt_16
+  add_to_variable = { var = LES_faction_returnist value = 10 }
+  }
+}
+
+   LES_appease_russian_nationalist = {
+   visible = {
+      hidden_trigger = {
+        tag = LES
+      }
+   }
+   icon = GFX_decision_infiltrate_state
+    ai_will_do = {
+      base = 0
+    }
+  available = {
+    hidden_trigger = {
+    has_country_flag = les_factions
+    }
+   }
+   cost = 40
+   days_remove = 10
+
+   remove_effect = {
+   custom_effect_tooltip = les_tt_15
+  add_to_variable = { var = LES_faction_rusnat value = 10 }
+  }
+}
+
+   LES_appease_christian = {
+   visible = {
+      hidden_trigger = {
+        tag = LES
+      }
+   }
+   icon = GFX_decision_infiltrate_state
+    ai_will_do = {
+      base = 0
+    }
+  available = {
+    hidden_trigger = {
+    has_country_flag = les_factions
+    }
+   }
+   cost = 40
+   days_remove = 10
+
+   remove_effect = {
+   custom_effect_tooltip = les_tt_14
+  add_to_variable = { var = LES_faction_christian value = 10 }
+  }
+}
+
+   LES_appease_pagans = {
+   visible = {
+      hidden_trigger = {
+        tag = LES
+      }
+   }
+   icon = GFX_decision_infiltrate_state
+    ai_will_do = {
+      base = 0
+    }
+  available = {
+  hidden_trigger = {
+    has_country_flag = les_factions
+    }
+   }
+   cost = 40
+   days_remove = 10
+
+   remove_effect = {
+   custom_effect_tooltip = les_tt_13
+  add_to_variable = { var = LES_faction_pagan value = 10 }
+  }
+}
+
+   LES_appease_futurists = {
+   visible = {
+      hidden_trigger = {
+        tag = LES
+      }
+   }
+   icon = GFX_decision_infiltrate_state
+    ai_will_do = {
+      base = 0
+    }
+  available = {
+    hidden_trigger = {
+    has_country_flag = les_factions
+    }
+   }
+   cost = 40
+   days_remove = 10
+
+   remove_effect = {
+   custom_effect_tooltip = les_tt_12
+  add_to_variable = { var = LES_faction_poet value = 10 }
+  }
+}
+
+LES_discontent = {
+   icon = GFX_decision_infiltrate_state
+    ai_will_do = {
+      base = 0
+    }
+  available = {
+  hidden_trigger = {
+    NOT = { has_country_flag = les_factions} 
+    }
+   }
+  activation = {
+  hidden_trigger = {
+  has_country_flag = les_factions
+  }
+   }
+   days_mission_timeout = 120
+
+    timeout_effect = {
+
+      custom_effect_tooltip = les_tt_11
+      hidden_effect = {
+          add_to_variable = { var = LES_faction_rusnat value = -5 }
+          add_to_variable = { var = LES_faction_returnist value = -5 }
+          add_to_variable = { var = LES_faction_christian value = -5 }
+          add_to_variable = { var = LES_faction_pagan value = -5 }
+          add_to_variable = { var = LES_faction_poet value = -5 }
+          activate_mission = LES_see_discontent
+      }
+    }
+  }
+
+###end of factions
 }
 
 LES_unite = {

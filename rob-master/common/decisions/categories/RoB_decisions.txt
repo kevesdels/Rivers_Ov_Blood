@@ -568,12 +568,10 @@ LES_invasion = {
 	ROOT = {
 	has_full_control_of_state = 572
 	}
-	}
+}
 		  priority = {
 		  base = 120
 		  }
-
-
 }
 
 LES_banishaliens = {
@@ -588,12 +586,31 @@ LES_banishaliens = {
 	NOT = { is_ai = yes }
 	}
     }
-     }
 		  priority = {
 		  base = 120
 		  }
 }
 
+
+LES_factions = {
+
+  icon = GFX_decision_category_military_operation
+  picture = GFX_decision_germany_partisans
+  	visible = {
+  	hidden_trigger = {
+  		tag = LES
+  		has_country_flag = les_factions
+  		}
+  	}
+  	available = {
+  	hidden_trigger = {
+  		has_country_flag = les_factions
+  		}
+  	}
+		  priority = {
+		  base = 140
+		  }
+}
 
 ALL_executive = {
 

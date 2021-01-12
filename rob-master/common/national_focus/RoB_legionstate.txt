@@ -1377,7 +1377,10 @@ focus_tree = {
 
 		completion_reward = {
 		add_stability = -0.05
- 		add_popularity = {ideology = pelekist popularity =0.1}
+		 add_popularity = {ideology = pelekist popularity =0.1}
+		 hidden_effect = {
+		 add_to_variable = { var = LES_faction_returnist value = 15}
+		 }
 		}
 	}
 
@@ -1662,6 +1665,10 @@ focus_tree = {
 		}
 		completion_reward = {
 		LES = { country_event = { id = legion.9 days = 1 } }
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_christian value = 15}
+			add_to_variable = { var = LES_faction_poet value = -15}
+			}
 		}
 	}
 
@@ -1683,6 +1690,10 @@ focus_tree = {
 		completion_reward = {
 		add_manpower = -16302
 		add_stability = 0.04
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_christian value = 15}
+			add_to_variable = { var = LES_faction_poet value = -15}
+			}
 		}
 	}
 
@@ -3055,6 +3066,11 @@ focus_tree = {
 		add_ideas = {
 		LES_Old_Guard
 		}
+		hidden_effect = {
+		add_to_variable = { var = LES_faction_returnist value = 5}
+		add_to_variable = { var = LES_faction_christian value = 5}
+		add_to_variable = { var = LES_faction_pagan value = 5}
+		}
 		}
 	}
 
@@ -3295,6 +3311,9 @@ focus_tree = {
  	 }
 	completion_reward = {
 		add_command_power = 100
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_rusnat value = 15}
+			}
 		}
 	}
 
@@ -3316,6 +3335,10 @@ focus_tree = {
  	 }
 		completion_reward = {
 		add_war_support = 0.10
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_rusnat value = 5}
+			add_to_variable = { var = LES_faction_returnist value = 5}
+			}
 		}
 	}
 
@@ -3363,6 +3386,12 @@ focus_tree = {
 		completion_reward = {
 		add_stability = 0.1
 		add_popularity = {ideology = pelekist popularity =0.05}
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_rusnat value = 5}
+			add_to_variable = { var = LES_faction_poet value = 5}
+			add_to_variable = { var = LES_faction_christian value = 5}
+			add_to_variable = { var = LES_faction_pagan value = 5}
+			}
 		}
 	}
 
@@ -3574,6 +3603,10 @@ focus_tree = {
 		uses = 1
 		category = infantry_weapons
 		}
+		hidden_effect = {
+		add_to_variable = { var = LES_faction_rusnat value = 5}
+		add_to_variable = { var = LES_faction_poet value = 5}
+			}
 		}
 	}
 
@@ -4653,6 +4686,11 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_stability =  -0.03
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_christian value = 20}
+			add_to_variable = { var = LES_faction_pagan value = -20}
+			add_to_variable = { var = LES_faction_poet value = -5}
+			}
 		}
 	}
 
@@ -4672,6 +4710,11 @@ focus_tree = {
 		completion_reward = {
 		add_manpower = -11132
 		add_stability = -0.04
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_christian value = 30}
+			add_to_variable = { var = LES_faction_pagan value = -50}
+			add_to_variable = { var = LES_faction_poet value = -10}
+			}
 		}
 	}
 
@@ -4693,6 +4736,10 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_stability = 0.06
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_christian value = 10}
+			add_to_variable = { var = LES_faction_poet value = -5}
+			}
 		}
 	}
 
@@ -4735,6 +4782,11 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_stability = -0.1
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_christian value = 30}
+			add_to_variable = { var = LES_faction_pagan value = -15}
+			add_to_variable = { var = LES_faction_poet value = -15}
+			}
 		}
 	}
 
@@ -4988,6 +5040,11 @@ focus_tree = {
 		completion_reward = {
 		add_ideas = { LES_dab_on_abrahamics }
 		add_stability = -0.10
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_christian value = -50}
+			add_to_variable = { var = LES_faction_pagan value = 30}
+			add_to_variable = { var = LES_faction_poet value = 20}
+			}
 		}
 		
 	}
@@ -5007,6 +5064,11 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_stability = 0.06
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_christian value = -20}
+			add_to_variable = { var = LES_faction_pagan value = 10}
+			add_to_variable = { var = LES_faction_poet value = -5}
+			}
 		}
 	}
 
@@ -5029,6 +5091,11 @@ focus_tree = {
 		completion_reward = {
 		add_manpower = -672
 		add_stability = -0.07
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_christian value = -30}
+			add_to_variable = { var = LES_faction_pagan value = 15}
+			add_to_variable = { var = LES_faction_poet value = 15}
+			}
 		}
 	}
 
@@ -5050,6 +5117,11 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_stability = 0.03
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_christian value = -5}
+			add_to_variable = { var = LES_faction_pagan value = 10}
+			add_to_variable = { var = LES_faction_poet value = -5}
+			}
 		}
 	}
 
@@ -5115,6 +5187,11 @@ focus_tree = {
 		completion_reward = {
 		add_stability = 0.03
 		LES = { country_event = { id = legion.8 days = 1 } }
+		hidden_effect = {
+		add_to_variable = { var = LES_faction_christian value = 30}
+		add_to_variable = { var = LES_faction_pagan value = -15}
+		add_to_variable = { var = LES_faction_poet value = -15}
+		}
 		}
 	}
 
@@ -5159,6 +5236,11 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_stability = -0.05
+		hidden_effect = {
+			add_to_variable = { var = LES_faction_christian value = -30}
+			add_to_variable = { var = LES_faction_pagan value = 15}
+			add_to_variable = { var = LES_faction_poet value = 15}
+			}
 		}
 	}
 
