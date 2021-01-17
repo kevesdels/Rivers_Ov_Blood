@@ -438,6 +438,7 @@ country_event = {
   1268 = { add_core_of = ELP  add_core_of = ELA }
   883 = { add_core_of = ELP  add_core_of = ELA }
   SOV = { country_event = { id = ubd.20 days = 3} }
+  SOV = { country_event = { id = ubd.34 days = 10} }
   POL = { country_event = { id = ubd.21 days = 3} }
   LIT = { country_event = { id = ubd.22 days = 3} }
   GER = { country_event = { id = ubd.23 days = 3} }
@@ -943,13 +944,79 @@ country_event = {
  }
 }
 
+ ##Soviet Union takes over little states in UBD
+country_event = { 
+  id = ubd.34
+  title = "A Suggestion"
+  desc = "With Baltics in turmoil, we could move our border further without much protest from our neighbors. This will anger locals, but when have they mattered?"
+  is_triggered_only = yes
+ 
+  option = {
+  name = "Go for it"
+  ai_chance = {
+    factor = 5
+  }
+  add_political_power = -30
+  SOV = { transfer_state = 883 }
+  SOV = { transfer_state = 890 }
+  SOV = { transfer_state = 891 }
+  hidden_effect = { 
+    883 = { add_core_of = SOV }
+    890 = { add_core_of = SOV }
+    891 = { add_core_of = SOV }
+    }
+  }
+
+  option = {
+    name = "Why bother? The land is useless"
+    ai_chance = {
+      factor = 5
+    }
+    add_political_power = 10
+    }
+ }
+
+ ##Volunteers return !not done!
+ country_event = { 
+  id = ubd.35
+  title = "Volunteers Return"
+  desc = "With War in Estonia over, our men have returned with knowledge of modern war."
+  is_triggered_only = yes
+ 
+  option = {
+  name = "Wonderful"
+  trigger = {
+    OR = {
+      TAG = SOV 
+      TAG = POL
+    }
+   }
+   add_manpower = 2316
+   army_experience = 25
+  }
+
+  option = {
+    name = "Wonderful"
+    trigger = {
+      OR = {
+        TAG = FIN 
+        TAG = LIT
+        TAG = PRS
+        TAG = GER
+      }
+     }
+     add_manpower = 1481
+     army_experience = 10
+ }
+}
+
 ####CIVIL WAR CLEAN UP####
 
 ##Latvia
 country_event = { 
- id = ubd.34
+ id = ubd.36
  title = "The Civil war is over"
- desc = ubd.34
+ desc = ubd.36
  
  trigger = {
  OR = { tag = LDF tag = LNC tag = LPR }
@@ -982,8 +1049,8 @@ country_event = {
       remove_core_of = EST
       remove_core_of = LNC
       remove_core_of = LDF
- }
-}
+    }
+  }
 
 
  if = {
@@ -1001,8 +1068,8 @@ country_event = {
       remove_core_of = EST
       remove_core_of = LNC
       remove_core_of = LPR
- }
-}
+    }
+  }
 
  if = {
   limit = {
@@ -1019,18 +1086,17 @@ country_event = {
       remove_core_of = EST
       remove_core_of = LDF
       remove_core_of = LPR
- }
-}
-
+    }
+  }
 }
 
 }
 
 ###Estonia
 country_event = { 
- id = ubd.35
+ id = ubd.37
  title = "The Civil war is over"
- desc = ubd.35
+ desc = ubd.37
  
  trigger = {
  OR = { tag = ELA tag = ELP tag = ECA }
@@ -1108,9 +1174,9 @@ country_event = {
 
 ###UBD
 country_event = { 
- id = ubd.36
+ id = ubd.38
  title = "Estland is quite..."
- desc = ubd.36
+ desc = ubd.38
  fire_only_once = yes
  trigger = {
  tag = EST
@@ -1143,9 +1209,9 @@ country_event = {
 
 ###UBD
 country_event = { 
- id = ubd.37
+ id = ubd.39
  title = "Lettland is quite..."
- desc = ubd.37
+ desc = ubd.39
  fire_only_once = yes
 
  trigger = {
