@@ -123,6 +123,7 @@ target_trigger = { FROM = {owns_state = 228 } }
 	   NOT = {
 	    is_in_faction_with = FROM
 		has_war = yes
+		has_country_flag = UKR_justifying
 	   }
 	  }
       228 = {
@@ -131,7 +132,9 @@ target_trigger = { FROM = {owns_state = 228 } }
 	   }
 	  }
 }
-
+complete_effect = {
+	set_country_flag = UKR_justifying
+	}
 remove_effect = {
 every_country = {
 	limit = { controls_state = 228 }
@@ -142,7 +145,7 @@ every_country = {
 		}			
 	}
 }
-
+clr_country_flag = UKR_justifying
 }
 	ai_will_do = {
 			base = 200
@@ -157,17 +160,20 @@ target_trigger = { FROM = {owns_state = 218 owns_state = 245 } }
 	  has_country_flag = DSU_ukraine_united
       218 = {
 	   NOT = {
-	    is_owned_by = ROOT
+		is_owned_by = ROOT
 	   }
 	  }
 	  ROOT = {
 	   NOT = {
 	    is_in_faction_with = FROM
 		has_war = yes
+		has_country_flag = UKR_justifying
 	   }
 	  }
 }
-
+complete_effect = {
+	set_country_flag = UKR_justifying
+	}
 remove_effect = {
 218 = { add_core_of = ROOT }
 245 = { add_core_of = ROOT }
@@ -180,7 +186,7 @@ every_country = {
 		}			
 	}
 }
-
+clr_country_flag = UKR_justifying
 }
 	ai_will_do = {
 			base = 200
@@ -202,10 +208,13 @@ target_trigger = { FROM = {owns_state = 137 owns_state = 234 } }
 	   NOT = {
 	    is_in_faction_with = FROM
 		has_war = yes
+		has_country_flag = UKR_justifying
 	   }
 	  }
 }
-
+complete_effect = {
+	set_country_flag = UKR_justifying
+	}
 remove_effect = {
 137 = { add_core_of = ROOT }
 234 = { add_core_of = ROOT }
@@ -219,7 +228,7 @@ every_country = {
 		}			
 	}
 }
-
+clr_country_flag = UKR_justifying
 }
 	ai_will_do = {
 			base = 200
@@ -247,10 +256,13 @@ target_trigger = { FROM = {owns_state = 89 owns_state = 91 } }
 	   NOT = {
 	    is_in_faction_with = FROM
 		has_war = yes
+		has_country_flag = UKR_justifying
 	   }
 	  }
 }
-
+complete_effect = {
+	set_country_flag = UKR_justifying
+	}
 remove_effect = {
 91 = { add_core_of = ROOT }
 89 = { add_core_of = ROOT }
@@ -265,7 +277,7 @@ every_country = {
 		}			
 	}
 }
-
+clr_country_flag = UKR_justifying
 }
 	ai_will_do = {
 			base = 200
@@ -303,10 +315,13 @@ target_trigger = { FROM = {owns_state = 80 owns_state = 78 } }
 	   NOT = {
 	    is_in_faction_with = FROM
 		has_war = yes
+		has_country_flag = UKR_justifying
 	   }
 	  }
 }
-
+complete_effect = {
+	set_country_flag = UKR_justifying
+	}
 remove_effect = {
 80 = { add_core_of = ROOT }
 925 = { add_core_of = ROOT }
@@ -325,7 +340,7 @@ every_country = {
 		}			
 	}
 }
-
+clr_country_flag = UKR_justifying
 }
 	ai_will_do = {
 			base = 200

@@ -1,0 +1,148 @@
+division_template = {
+
+name = "British Infantry Division"
+
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+		recon = { x = 0 y = 1 }  
+		artillery = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+
+name = "BRC Militia"
+
+regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+
+}
+
+
+units = {
+
+division = {
+name = "15.British Infantry Division"
+location = 9250
+division_template = "British Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 1.0
+
+}
+division = {
+name = "16.British Infantry Division"
+location = 13408
+division_template = "British Infantry Division"
+start_experience_factor = 0.2
+start_equipment_factor = 0.9
+
+}
+division = {
+name = "17.British Infantry Division"
+location = 3205
+division_template = "British Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "18.British Infantry Division"
+location = 6363
+division_template = "British Infantry Division"
+start_experience_factor = 0.3
+start_equipment_factor = 0.9
+
+}
+
+division = {
+name = "1.Cheshire BRC Militia"
+location = 3205
+division_template = "BRC Militia"
+start_experience_factor = 0.2
+start_equipment_factor = 0.4
+
+}
+division = {
+name = "2.Cheshire BRC Militia"
+location = 3205
+division_template = "BRC Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.6
+
+}
+division = {
+name = "1.Debighshire BRC Militia"
+location = 9364
+division_template = "BRC Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.6
+}
+division = {
+name = "1.Gwynedd BRC Militia"
+location = 13403
+division_template = "BRC Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "2.Gwynedd BRC Militia"
+location = 13403
+division_template = "BRC Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.7
+
+}
+division = {
+name = "3.Gwynedd BRC Militia"
+location = 6363
+division_template = "BRC Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+
+division = {
+name = "1.Conwy BRC Militia"
+location = 13422
+division_template = "BRC Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "1.Lincolnshire BRC Militia"
+location = 13408
+division_template = "BRC Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+division = {
+name = "1.Wrexham BRC Militia"
+location = 13046
+division_template = "BRC Militia"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+
+}

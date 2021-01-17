@@ -61,8 +61,17 @@ PRS_foreign_policy = {
    } 
   }
  }
-  ai_will_do = {
-  base = 200
+ ai_will_do = {
+  base = 10
+  modifier = {
+    factor = 200
+      ROOT = {
+        strength_ratio = {
+        tag = POL
+        ratio > 0.50
+        }
+      }
+    }
  }
  complete_effect = {
   PRS = { declare_war_on = { target = POL type = annex_everything } }
@@ -77,7 +86,7 @@ PRS_foreign_policy = {
  }
  
  
-PRS_invade_lithuania = {
+PRS_invade_lithuania = { 
  cost = 25
  fire_only_once = yes
  available = {
@@ -90,8 +99,17 @@ PRS_invade_lithuania = {
    }
  LIT = { exists = yes }
 }
- ai_will_do = {
-  base = 200
+ai_will_do = {
+  base = 10
+  modifier = {
+    factor = 200
+      ROOT = {
+        strength_ratio = {
+        tag = LIT
+        ratio > 0.50
+        }
+      }
+    }
  }
 complete_effect = {
  PRS = { declare_war_on = { target = LIT type = annex_everything } }

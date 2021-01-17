@@ -1410,6 +1410,7 @@ LES_destroy_IRK = {
 ###Cores Red 5TH army
 LES_core_oms = {
   visible = {
+  tag = LES
   NOT = {
   has_country_flag = LES_cmf_oms
   }
@@ -1434,6 +1435,9 @@ LES_core_oms = {
  }
 
 LES_cm_oms = {
+          visible = {
+          tag = LES
+          }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 403
@@ -1493,7 +1497,10 @@ LES_core_ugc = {
  }
  }
 
- LES_cm_ = {
+ LES_cm_ugc = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 516
@@ -1553,6 +1560,9 @@ LES_core_tow = {
  }
 
  LES_cm_tow = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 570
@@ -1610,6 +1620,9 @@ LES_core_bwr = {
  }
 
  LES_cm_bwr = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 40
@@ -1665,6 +1678,9 @@ LES_core_krw = {
  }
 
  LES_cm_krw = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 568
@@ -1716,6 +1732,9 @@ LES_core_brw = {
  }
 
  LES_cm_brw= {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 567
@@ -1767,6 +1786,9 @@ LES_core_irk = {
  }
 
  LES_cm_irk = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 566
@@ -1826,6 +1848,9 @@ LES_core_job = {
  }
 
  LES_cm_job = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 1199
@@ -1897,6 +1922,9 @@ LES_core_fer = {
  }
 
  LES_cm_fer = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 1187
@@ -1965,6 +1993,9 @@ LES_core_jsw = {
  }
 
  LES_cm_jsw = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 988
@@ -2032,6 +2063,9 @@ LES_core_wfe = {
  }
 
  LES_cm_wfe = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 563
@@ -2098,6 +2132,9 @@ LES_core_jvd = {
  }
 
  LES_cm_jvd = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 408
@@ -2166,6 +2203,9 @@ LES_core_sfs = {
  }
 
  LES_cm_sfs = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 1223
@@ -2249,6 +2289,9 @@ LES_core_rdr = {
  }
 
  LES_cm_rdr = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 262
@@ -2366,6 +2409,9 @@ LES_core_sov = {
  }
 
  LES_cm_sov = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
                  controls_state = 214

@@ -571,51 +571,21 @@ RUS = {
 }
 }
 
-option = { ###for SOV
-name = ukraine.17.a
-trigger = { 
-TAG = SOV 
- DSU = {
- is_in_faction = no
- }
- SOV = {
- is_in_faction = yes
- }
-}
-SOV = {
-add_to_faction = DSU
-}
-DSU = {
- add_ai_strategy = {
-    type = alliance
-    id = "SOV"
-    value = 2000
-}
-}
-}
 
 option = { ###for SOV
 name = ukraine.17.a
 trigger = {
  TAG = SOV 
- DSU = {
- is_in_faction = no
- }
- SOV = {
- is_in_faction = no
- }
 }
-SOV = {
-create_faction = "Moscow Pact"
-add_to_faction = DSU
+SOV = { give_guarantee = DSU }
+DSU = { give_guarantee = SOV }
+
+diplomatic_relation = {
+    country = DSU
+    relation = non_aggression_pact
+    active = yes
 }
-DSU = {
- add_ai_strategy = {
-    type = alliance
-    id = "SOV"
-    value = 2000
-}
-}
+
 }
 
 option = { ###for general

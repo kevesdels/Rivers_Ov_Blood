@@ -647,6 +647,7 @@ BRU = { transfer_state = 1060 }
 BRU = { transfer_state = 1031 }
 BRU = { transfer_state = 1037 }
 BRU = { transfer_state = 1047 }
+BRU = { transfer_state = 1058 }
 1066 = { add_core_of = BRU }
 1075 = { add_core_of = BRU }
 1076 = { add_core_of = BRU }
@@ -665,6 +666,7 @@ BRU = { transfer_state = 1047 }
 1027 = { add_core_of = BRU }
 338 = { add_core_of = BRU }
 1062 = { add_core_of = BRU }
+1058 = { add_core_of = BRU }
 1064 = { add_core_of = BRU }
 1063 = { add_core_of = BRU }
 1060 = { add_core_of = BRU }
@@ -675,24 +677,24 @@ BRL = { transfer_state = 1049 }
 BRL = { transfer_state = 132 }
 BRL = { transfer_state = 1050 }
 BRL = { transfer_state = 123 }
+BRL = { transfer_state = 130 }
 1049 = { add_core_of = BRL }
 132 = { add_core_of = BRL }
 1050 = { add_core_of = BRL }
 123 = { add_core_of = BRL }
-BRU = { transfer_state = 1048 }
-BRU = { transfer_state = 130 }
-BRU = { transfer_state = 1058 }
-BRU = { transfer_state = 1046 }
-BRU = { transfer_state = 1045 }
-BRU = { transfer_state = 1053 }
-BRU = { transfer_state = 1044 }
-1048 = { add_core_of = BRU }
-130 = { add_core_of = BRU }
-1058 = { add_core_of = BRU }
-1046 = { add_core_of = BRU }
-1045 = { add_core_of = BRU }
-1053 = { add_core_of = BRU }
-1044 = { add_core_of = BRU }
+130 = { add_core_of = BRL }
+BRC = { transfer_state = 1048 }
+BRC = { transfer_state = 1046 }
+BRC = { transfer_state = 1045 }
+BRC = { transfer_state = 1053 }
+BRC = { transfer_state = 1044 }
+BRC = { transfer_state = 1038 }
+1048 = { add_core_of = BRC }
+1046 = { add_core_of = BRC }
+1045 = { add_core_of = BRC }
+1053 = { add_core_of = BRC }
+1044 = { add_core_of = BRC }
+1038 = { add_core_of = BRC }
 BRU = { load_oob = "BRU_1934" }
 BLF = { load_oob = "BLF_1934" }
 BRC = { load_oob = "BRC_1934" }
@@ -931,19 +933,19 @@ BRL = { transfer_state = 1049 }
 BRL = { transfer_state = 132 }
 BRL = { transfer_state = 1050 }
 BRL = { transfer_state = 123 }
+BRL = { transfer_state = 130 }
 1049 = { add_core_of = BRL }
 132 = { add_core_of = BRL }
 1050 = { add_core_of = BRL }
 123 = { add_core_of = BRL }
+130 = { add_core_of = BRL }
 BRU = { transfer_state = 1048 }
-BRU = { transfer_state = 130 }
 BRU = { transfer_state = 1058 }
 BRU = { transfer_state = 1046 }
 BRU = { transfer_state = 1045 }
 BRU = { transfer_state = 1053 }
 BRU = { transfer_state = 1044 }
 1048 = { add_core_of = BRU }
-130 = { add_core_of = BRU }
 1058 = { add_core_of = BRU }
 1046 = { add_core_of = BRU }
 1045 = { add_core_of = BRU }
@@ -1010,7 +1012,9 @@ hidden = yes
 
 immediate = {
 BRL = { declare_war_on = { type = annex_everything target = BRU } }
-BLF = { declare_war_on = { type = annex_everything target = BRU } }
+BRL = { declare_war_on = { type = annex_everything target = BRC } }
+BRU = { declare_war_on = { type = annex_everything target = BLF } }
+BLF = { declare_war_on = { type = annex_everything target = BRL } }
 news_event = { id = news_event.4 days = 1 }
 set_country_flag = ENG_civil_war
 if = {
@@ -1020,6 +1024,7 @@ if = {
   }
   }
 BRC = { declare_war_on = { type = annex_everything target = BRU } }
+BLF = { declare_war_on = { type = annex_everything target = BRC } }
 BRC = { declare_war_on = { type = annex_everything target = BLF } }
 }
 country_event = { id = united_kingdom.19 days = 15 }
