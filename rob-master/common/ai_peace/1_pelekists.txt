@@ -9,7 +9,7 @@ fascist_peace = {
 		OR = {
 			has_government = pelekist
 			AND = {
-				NOT = { OR = { has_government = democratic_socialist has_government = socialist has_government = national_socialist } }
+				NOT = { OR = { has_government = democratic_socialist has_government = socialist } }
 				NOT = { OR = { has_government = social_democracy has_government = social_liberal has_government = conservative } }
 				OR = {
 					any_country = {

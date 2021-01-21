@@ -207,6 +207,205 @@ LES_discontent = {
 
 ###end of factions
 }
+LES_economicalcentresdec = {
+
+LES_rural_infa  = {
+  icon = GFX_decision_infiltrate_state
+  visible = {
+    has_country_flag = LES_ruraleco
+  }
+  available = {
+    any_owned_state = {
+      hidden_trigger = {
+      NOT = {has_state_flag = LESinfaimproved }
+      }
+      OR = {
+      has_state_category = rural
+      has_state_category = pastoral
+      }
+    }
+  }
+
+    cost = 30
+    days_remove = 30
+
+    remove_effect = {
+      random_owned_state = {
+        limit = {
+          NOT = { has_state_flag = LESinfaimproved }
+          OR = {
+          has_state_category = rural
+          has_state_category = pastoral
+          }
+        }
+        add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+        }
+        set_state_flag = LESinfaimproved
+      }
+    }
+}
+
+LES_urban_infa  = {
+  icon = GFX_decision_infiltrate_state
+  visible = {
+    has_country_flag = LES_urbeco
+  }
+  available = {
+    any_owned_state = {
+      hidden_trigger = {
+      NOT = {has_state_flag = LESinfaimproved }
+      }
+      OR = {
+        has_state_category = town
+        has_state_category = large_town
+        has_state_category = city
+        has_state_category = large_city
+        has_state_category = metropolis
+        has_state_category = megalopolis
+      }
+    }
+  }
+
+    cost = 30
+    days_remove = 30
+
+    remove_effect = {
+      random_owned_state = {
+        limit = {
+          NOT = { has_state_flag = LESinfaimproved }
+          OR = {
+          has_state_category = town
+          has_state_category = large_town
+          has_state_category = city
+          has_state_category = large_city
+          has_state_category = metropolis
+          has_state_category = megalopolis
+          }
+        }
+        add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+        }
+        set_state_flag = LESinfaimproved
+      }
+    }
+}
+
+LES_rural_factory  = {
+  icon = GFX_decision_infiltrate_state
+  visible = {
+    has_country_flag = LES_ruraleco
+  }
+  available = {
+    any_owned_state = {
+      hidden_trigger = {
+      NOT = {has_state_flag = LESurbimproved }
+      }
+      OR = {
+      has_state_category = rural
+      has_state_category = pastoral
+      }
+    }
+  }
+
+    cost = 90
+    days_remove = 30
+
+    remove_effect = {
+      random_owned_state = {
+        limit = {
+          NOT = { has_state_flag = LESurbimproved }
+          OR = {
+          has_state_category = rural
+          has_state_category = pastoral
+          }
+        }
+        random_list = {
+        60 = {
+            add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+            }
+          }
+        40 = {
+            add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+            }
+          }
+        }
+        set_state_flag = LESurbimproved
+      }
+    }
+}
+
+LES_urban_factory  = {
+  icon = GFX_decision_infiltrate_state
+  visible = {
+    has_country_flag = LES_urbeco
+  }
+  available = {
+    any_owned_state = {
+      hidden_trigger = {
+      NOT = {has_state_flag = LESurbimproved }
+      }
+      OR = {
+        has_state_category = town
+        has_state_category = large_town
+        has_state_category = city
+        has_state_category = large_city
+        has_state_category = metropolis
+        has_state_category = megalopolis
+      }
+    }
+  }
+
+    cost = 90
+    days_remove = 30
+
+    remove_effect = {
+      random_owned_state = {
+        limit = {
+          NOT = { has_state_flag = LESurbimproved }
+          OR = {
+            has_state_category = town
+            has_state_category = large_town
+            has_state_category = city
+            has_state_category = large_city
+            has_state_category = metropolis
+            has_state_category = megalopolis
+          }
+        }
+        random_list = {
+        60 = {
+            add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+            }
+          }
+        40 = {
+            add_building_construction = {
+				    type = arms_factory
+				    level = 1
+				    instant_build = yes
+            }
+          }
+        }
+        set_state_flag = LESurbimproved
+      }
+    }
+}
+
+
+###end economics
+}
 
 LES_unite = {
 

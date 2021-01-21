@@ -8,7 +8,7 @@ focus_tree = {
 		}
 	}
 	continuous_focus_position = { x = 50 y = 2000 }
-	#Focus for Construct an Aerial Academy
+	#Focus for Construct an Aerial Academy 
 	focus = {
 		id = LES_constructanaerialacademy
 		icon = GFX_focus_PRS_trained_staff
@@ -5618,10 +5618,10 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		add_ideas = {
-		
+		add_political_power = 100
+		set_country_flag = LES_urbeco
+		custom_effect_tooltip = les_tt_17
 		}
-	}
 	}
 
 	#Focus for Economical centres_2
@@ -5636,6 +5636,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_political_power = 90
+			custom_effect_tooltip = les_tt_18
+		}
 	}
 
 	#Focus for Economical centres_3
@@ -5649,6 +5653,10 @@ focus_tree = {
 		prerequisite = { focus = LES_economicalcentres }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 30
+			custom_effect_tooltip = les_tt_19
 		}
 	}
 
@@ -5669,6 +5677,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+		add_political_power = 100
+		set_country_flag = LES_ruraleco
+		custom_effect_tooltip = les_tt_20
+		}
 	}
 
 
@@ -5684,6 +5697,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_political_power = 90
+			custom_effect_tooltip = les_tt_21
+		}
 	}
 
 	#Focus for Spread out industry_3
@@ -5697,6 +5714,10 @@ focus_tree = {
 		prerequisite = { focus = LES_spreadoutindustry }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 30
+			custom_effect_tooltip = les_tt_22
 		}
 	}
 
@@ -5715,6 +5736,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_ideas = {
+			LES_Maximize_Profit_1
+			}
+		}
 	}
 
 	#Focus for Maximize Profit_2
@@ -5729,6 +5755,30 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_Maximize_Profit_2
+					}
+				}
+			swap_ideas = {
+			remove_idea = LES_Maximize_Profit_2
+			add_idea = LES_Maximize_Profit_3
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_Maximize_Profit_1
+				}
+			}
+		swap_ideas = {
+		remove_idea = LES_Maximize_Profit_1
+		add_idea = LES_Maximize_Profit_2
+		}
+		}
+		}
 	}
 
 	#Focus for Maximize Profit_3
@@ -5742,6 +5792,30 @@ focus_tree = {
 		prerequisite = { focus = LES_maximizeprofit }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_Maximize_Profit_2
+					}
+				}
+			swap_ideas = {
+			remove_idea = LES_Maximize_Profit_2
+			add_idea = LES_Maximize_Profit_3
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_Maximize_Profit_1
+				}
+			}
+		swap_ideas = {
+		remove_idea = LES_Maximize_Profit_1
+		add_idea = LES_Maximize_Profit_2
+		}
+		}
 		}
 	}
 
@@ -5760,6 +5834,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_ideas = {
+				LES_Ecologicalmeasures_1
+				}
+		}
 	}
 
 	#Focus for Ecological Measures_2
@@ -5774,6 +5853,30 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_Ecologicalmeasures_2
+					}
+				}
+			swap_ideas = {
+			remove_idea = LES_Ecologicalmeasures_2
+			add_idea = LES_Ecologicalmeasures_3
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_Ecologicalmeasures_1
+				}
+			}
+		swap_ideas = {
+		remove_idea = LES_Ecologicalmeasures_1
+		add_idea = LES_Ecologicalmeasures_2
+		}
+		}
+		}
 	}
 
 	#Focus for Ecological Measures_3
@@ -5787,6 +5890,30 @@ focus_tree = {
 		prerequisite = { focus = LES_ecologicalmeasures }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_Ecologicalmeasures_2
+					}
+				}
+			swap_ideas = {
+			remove_idea = LES_Ecologicalmeasures_2
+			add_idea = LES_Ecologicalmeasures_3
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_Ecologicalmeasures_1
+				}
+			}
+		swap_ideas = {
+		remove_idea = LES_Ecologicalmeasures_1
+		add_idea = LES_Ecologicalmeasures_2
+		}
+		}
 		}
 	}
 

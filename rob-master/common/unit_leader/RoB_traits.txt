@@ -55,7 +55,9 @@ leader_traits = {
 		christian = { 
 		type = land
 		trait_type = personality_trait
-		
+		new_commander_weigh = {
+			base = 0
+		}
 		modifier = {
 		}
 
@@ -68,11 +70,13 @@ leader_traits = {
 		pagan = { 
 		type = land
 		trait_type = personality_trait
-		
+		new_commander_weigh = {
+			base = 0
+		}
 		modifier = {
 		}
 
-		custom_effect_tooltip = THIS_OFFICER_IS_A_DEVOUT_CHRISTIAN
+		custom_effect_tooltip = THIS_OFFICER_IS_A_DEVOUT_PAGAN
 		
 		non_shared_modifier = {
 		}
@@ -81,11 +85,13 @@ leader_traits = {
 		futurist = { 
 		type = land
 		trait_type = personality_trait
-		
+		new_commander_weigh = {
+			base = 0
+		}
 		modifier = {
 		}
 
-		custom_effect_tooltip = THIS_OFFICER_IS_A_DEVOUT_CHRISTIAN
+		custom_effect_tooltip = THIS_OFFICER_IS_A_DEVOUT_FUTURIST
 		
 		non_shared_modifier = {
 		}

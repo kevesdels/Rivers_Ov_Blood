@@ -1796,7 +1796,7 @@ LES_Fiercest_Infantry = {
    }
 }
 
-   LES_young_guardiansofyouth = {
+   LES_young_guardiansofyouth = { 
    picture = GFX_idea_minority_troubles 
    allowed = {
        always = no
@@ -2613,6 +2613,94 @@ LES_Fiercest_Infantry = {
 	 industrial_capacity_factory = 0.1
    }
  }
+
+ LES_Maximize_Profit_1 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+  industrial_capacity_factory = 0.05
+  }
+}
+
+LES_Maximize_Profit_2 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+  industrial_capacity_factory = 0.1
+  }
+}
+
+LES_Maximize_Profit_3 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+  industrial_capacity_factory = 0.1
+  production_factory_efficiency_gain_factor = 0.1
+  }
+}
+
+LES_Ecologicalmeasures_1 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+  industrial_capacity_factory = -0.05
+  }
+}
+
+LES_Ecologicalmeasures_2 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+  pelekist_drift = 0.03
+  industrial_capacity_factory = -0.1
+  }
+}
+
+LES_Ecologicalmeasures_3 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+  pelekist_drift = 0.05
+  stability_factor = 0.3
+  industrial_capacity_factory = -0.15
+  }
+}
 
 
 }}
