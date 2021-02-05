@@ -35,19 +35,19 @@ option = {
  name = legion.1.a
  ai_chance = { factor = 5 }
  set_country_flag = christ
- hidden_effect = { country_event = { id = legion.2 days = 14 }   add_to_variable = { var = LES_faction_returnist  value = -15 }   add_to_variable = { var = LES_faction_christian value = 20} }
+ hidden_effect = { country_event = { id = legion.2 days = 14 } returnist_decrease_15 = yes christian_increase_20 = yes }
 }
 option = {
  name = legion.1.b
  ai_chance = { factor = 5 }
  set_country_flag = pagan
- hidden_effect = { country_event = { id = legion.2 days = 14 }  add_to_variable = { var = LES_faction_returnist  value = -15 }   add_to_variable = { var = LES_faction_pagan value = 20} }
+ hidden_effect = { country_event = { id = legion.2 days = 14 } returnist_decrease_15 = yes pagan_increase_20 = yes }
 }
 option = {
  name = legion.1.c
  ai_chance = { factor = 5 }
  set_country_flag = poets
- hidden_effect = { country_event = { id = legion.2 days = 14 }  add_to_variable = { var = LES_faction_returnist  value = -15 }   add_to_variable = { var = LES_faction_poet value = 20} }
+ hidden_effect = { country_event = { id = legion.2 days = 14 } returnist_decrease_15 = yes futurist_increase_20 = yes }
 }
 }
 
@@ -79,6 +79,7 @@ option = {
  ai_chance = {
 			factor = 0
 		}
+ custom_effect_tooltip = les_tt_32
  hidden_effect = { country_event = { id = legion.4 days = 1 }}
 }
 option = {
@@ -104,7 +105,7 @@ option = {
 }
 }
 
-### Nigga = Dead, Sergey the man now
+### Nigga = Dead, Sergey the man now 
 country_event = { 
 id = legion.5
 title = legion.5.t
@@ -141,7 +142,7 @@ hidden_effect = {
 	clear_variable = LES_faction_poet
 	clear_variable = LES_faction_christian
 	clear_variable = LES_faction_pagan
-	add_to_variable = { var = LES_faction_rusnat value = 45}
+	returnist_increase_50 = yes
 	}
 }
 }
@@ -166,19 +167,15 @@ option = {
 				}
  		AGR = { country_event = { id = agrussia.1 days = 14 id = legion.30 days = 21} }
 		 }
-	 	if = {
-				limit = {
-					AND = { has_country_flag = pagan }
-				}
- 		AGR = { country_event = { id = agrussia.1 days = 14 id = legion.30 days = 21} }
-		 }
  		if = {
 				limit = { has_country_flag = christ }
-				}
+				
  		AGR = { country_event = { id = agrussia.3 days = 41 id = legion.30 days = 21} }
  		}
  	}
  }
+
+}
 
 
 
@@ -606,6 +603,7 @@ option = {
 	remove_core_of = AGR
 	remove_core_of = KAR
 }
+custom_effect_tooltip = 
  hidden_effect = {
  set_country_flag = triumph
  }
@@ -691,8 +689,8 @@ hidden_effect = { LES = { load_oob = "LES_Defectors" } }
 ### 5th Reds are gone
 country_event = { 
 id = legion.28
-title = legion.21.t
-desc = legion.21.d
+title = legion.28.t
+desc = legion.28.d
 fire_only_once = yes
 trigger = {
  tag = LES
@@ -744,11 +742,18 @@ is_triggered_only = yes
 option = {
  name = legion.31.a
  set_country_flag = les_factions
- set_variable = { LES_faction_rusnat = 50 }
- set_variable = { LES_faction_returnist = 50 }
- set_variable = { LES_faction_christian = 50 }
- set_variable = { LES_faction_pagan = 50 }
- set_variable = { LES_faction_poet = 50 }
+ set_variable = { LES_faction_rusnat = 30 }
+ set_variable = { LES_faction_returnist = 30 }
+ set_variable = { LES_faction_christian = 30 }
+ set_variable = { LES_faction_pagan = 30 }
+ set_variable = { LES_faction_poet = 30 }
+ set_variable = { LES_faction_sum = 0 }
+ add_to_variable = { LES_faction_sum = LES_faction_rusnat }
+ add_to_variable = { LES_faction_sum = LES_faction_returnist }
+ add_to_variable = { LES_faction_sum = LES_faction_christian }
+ add_to_variable = { LES_faction_sum = LES_faction_pagan }
+ add_to_variable = { LES_faction_sum = LES_faction_poet }
+ Legion_faction_summ_calc = yes
  }
 
  }

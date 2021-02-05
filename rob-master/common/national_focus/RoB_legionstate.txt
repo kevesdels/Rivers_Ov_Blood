@@ -65,6 +65,10 @@ focus_tree = {
 		add_ideas  = {
 		LES_femoidssubmit
 		}
+		custom_effect_tooltip = les_tt_26
+		hidden_effect = {
+			christian_increase_10 = yes
+			}
 		}
 	}
 
@@ -82,9 +86,13 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		add_ideas  ={
+		add_ideas  = {
 		LES_young_guardiansofyouth
 		}
+		custom_effect_tooltip = les_tt_29
+		hidden_effect = {
+			pagan_increase_10 = yes
+			}
 		}
 	}
 
@@ -105,6 +113,10 @@ focus_tree = {
 		add_ideas  ={
 		LES_femoidsliberated
 		}
+		custom_effect_tooltip = les_tt_30
+		hidden_effect = {
+			futurist_increase_10 = yes
+			}
 		}
 	}
 
@@ -1378,8 +1390,9 @@ focus_tree = {
 		completion_reward = {
 		add_stability = -0.05
 		 add_popularity = {ideology = pelekist popularity =0.1}
+		 custom_effect_tooltip = les_tt_24
 		 hidden_effect = {
-		 add_to_variable = { var = LES_faction_returnist value = 15}
+		 returnist_increase_15 = yes
 		 }
 		}
 	}
@@ -1502,6 +1515,14 @@ focus_tree = {
 		remove_ideas = {
 		LES_Risk_of_Famine_3
 		}
+		custom_effect_tooltip = les_tt_23
+		hidden_effect = {
+			returnist_increase_5 = yes
+			rusnat_increase_5 = yes
+			futurist_increase_5 =yes
+			christian_increase_5 = yes
+			pagan_increase_5 = yes
+			}
 		}
 	}
 
@@ -1648,6 +1669,12 @@ focus_tree = {
 		completion_reward = {
 		add_manpower = -13091
 		add_stability = 0.07
+		custom_effect_tooltip = les_tt_26
+		custom_effect_tooltip = les_tt_27
+		hidden_effect = {
+			christian_increase_15 = yes
+			futurist_decrease_15 = yes
+			}
 		}
 	}
 
@@ -1665,10 +1692,6 @@ focus_tree = {
 		}
 		completion_reward = {
 		LES = { country_event = { id = legion.9 days = 1 } }
-		hidden_effect = {
-			add_to_variable = { var = LES_faction_christian value = 15}
-			add_to_variable = { var = LES_faction_poet value = -15}
-			}
 		}
 	}
 
@@ -1690,9 +1713,11 @@ focus_tree = {
 		completion_reward = {
 		add_manpower = -16302
 		add_stability = 0.04
+		custom_effect_tooltip = les_tt_26
+		custom_effect_tooltip = les_tt_27
 		hidden_effect = {
-			add_to_variable = { var = LES_faction_christian value = 15}
-			add_to_variable = { var = LES_faction_poet value = -15}
+			christian_increase_15 = yes
+			futurist_increase_15 = yes
 			}
 		}
 	}
@@ -1876,6 +1901,10 @@ focus_tree = {
 		add_ideas ={
 		LES_reconstructxD
 		}
+		custom_effect_tooltip = les_tt_30
+		hidden_effect = {
+			futurist_increase_10 = yes
+			}
 		}
 	}
 
@@ -1896,6 +1925,10 @@ focus_tree = {
 		add_ideas = {
 		LES_eugenics
 		}
+		custom_effect_tooltip = les_tt_29
+		hidden_effect = {
+			pagan_increase_10 = yes
+			}
 		}
 	}
 
@@ -3067,9 +3100,9 @@ focus_tree = {
 		LES_Old_Guard
 		}
 		hidden_effect = {
-		add_to_variable = { var = LES_faction_returnist value = 5}
-		add_to_variable = { var = LES_faction_christian value = 5}
-		add_to_variable = { var = LES_faction_pagan value = 5}
+		returnist_increase_5 = yes
+		christian_increase_5 = yes
+		pagan_increase_5 = yes
 		}
 		}
 	}
@@ -3311,8 +3344,9 @@ focus_tree = {
  	 }
 	completion_reward = {
 		add_command_power = 100
+		custom_effect_tooltip = les_tt_25
 		hidden_effect = {
-			add_to_variable = { var = LES_faction_rusnat value = 15}
+			rusnat_increase_15 = yes
 			}
 		}
 	}
@@ -3335,9 +3369,11 @@ focus_tree = {
  	 }
 		completion_reward = {
 		add_war_support = 0.10
+		custom_effect_tooltip = les_tt_24
+		custom_effect_tooltip = les_tt_25
 		hidden_effect = {
-			add_to_variable = { var = LES_faction_rusnat value = 5}
-			add_to_variable = { var = LES_faction_returnist value = 5}
+			rusnat_increase_5 = yes
+			returnist_increase_5 = yes
 			}
 		}
 	}
@@ -3386,11 +3422,13 @@ focus_tree = {
 		completion_reward = {
 		add_stability = 0.1
 		add_popularity = {ideology = pelekist popularity =0.05}
+		custom_effect_tooltip = les_tt_23
 		hidden_effect = {
-			add_to_variable = { var = LES_faction_rusnat value = 5}
-			add_to_variable = { var = LES_faction_poet value = 5}
-			add_to_variable = { var = LES_faction_christian value = 5}
-			add_to_variable = { var = LES_faction_pagan value = 5}
+			returnist_increase_5 = yes
+			rusnat_increase_5 = yes
+			futurist_increase_5 = yes
+			christian_increase_5 = yes
+			pagan_increase_5 = yes
 			}
 		}
 	}
@@ -3604,8 +3642,8 @@ focus_tree = {
 		category = infantry_weapons
 		}
 		hidden_effect = {
-		add_to_variable = { var = LES_faction_rusnat value = 5}
-		add_to_variable = { var = LES_faction_poet value = 5}
+		rusnat_increase_5 = yes
+		futurist_increase_5 = yes
 			}
 		}
 	}
@@ -4667,6 +4705,10 @@ focus_tree = {
 		}
 		add_war_support = 0.05
 		add_stability = 0.05
+		custom_effect_tooltip = les_tt_26
+		hidden_effect = {
+			christian_increase_10 = yes
+			}
 		}
 	}
 
@@ -4686,10 +4728,13 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_stability =  -0.03
+		custom_effect_tooltip = les_tt_26
+		custom_effect_tooltip = les_tt_28
+		custom_effect_tooltip = les_tt_27
 		hidden_effect = {
-			add_to_variable = { var = LES_faction_christian value = 20}
-			add_to_variable = { var = LES_faction_pagan value = -20}
-			add_to_variable = { var = LES_faction_poet value = -5}
+			christian_increase_20 = yes
+			pagan_decrease_20 = yes
+			futurist_decrease_5 = yes
 			}
 		}
 	}
@@ -4710,10 +4755,13 @@ focus_tree = {
 		completion_reward = {
 		add_manpower = -11132
 		add_stability = -0.04
+		custom_effect_tooltip = les_tt_26
+		custom_effect_tooltip = les_tt_28
+		custom_effect_tooltip = les_tt_27
 		hidden_effect = {
-			add_to_variable = { var = LES_faction_christian value = 30}
-			add_to_variable = { var = LES_faction_pagan value = -50}
-			add_to_variable = { var = LES_faction_poet value = -10}
+			christian_increase_50 = yes
+			pagan_decrease_50 = yes
+			futurist_decrease_10 = yes
 			}
 		}
 	}
@@ -4736,9 +4784,11 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_stability = 0.06
+		custom_effect_tooltip = les_tt_26
+		custom_effect_tooltip = les_tt_27
 		hidden_effect = {
-			add_to_variable = { var = LES_faction_christian value = 10}
-			add_to_variable = { var = LES_faction_poet value = -5}
+			christian_increase_10 = yes
+			futurist_decrease_5 = yes
 			}
 		}
 	}
@@ -4782,10 +4832,13 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_stability = -0.1
+		custom_effect_tooltip = les_tt_26
+		custom_effect_tooltip = les_tt_28
+		custom_effect_tooltip = les_tt_27
 		hidden_effect = {
-			add_to_variable = { var = LES_faction_christian value = 30}
-			add_to_variable = { var = LES_faction_pagan value = -15}
-			add_to_variable = { var = LES_faction_poet value = -15}
+			christian_increase_20 = yes
+			pagan_decrease_10 = yes
+			futurist_decrease_10 = yes
 			}
 		}
 	}
@@ -5040,10 +5093,13 @@ focus_tree = {
 		completion_reward = {
 		add_ideas = { LES_dab_on_abrahamics }
 		add_stability = -0.10
+		custom_effect_tooltip = les_tt_29
+		custom_effect_tooltip = les_tt_30
+		custom_effect_tooltip = les_tt_31
 		hidden_effect = {
-			add_to_variable = { var = LES_faction_christian value = -50}
-			add_to_variable = { var = LES_faction_pagan value = 30}
-			add_to_variable = { var = LES_faction_poet value = 20}
+			christian_decrease_50 = yes
+			pagan_increase_50 = yes
+			futurist_increase_10 = yes
 			}
 		}
 		
@@ -5064,10 +5120,13 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_stability = 0.06
+		custom_effect_tooltip = les_tt_29
+		custom_effect_tooltip = les_tt_30
+		custom_effect_tooltip = les_tt_31
 		hidden_effect = {
-			add_to_variable = { var = LES_faction_christian value = -20}
-			add_to_variable = { var = LES_faction_pagan value = 10}
-			add_to_variable = { var = LES_faction_poet value = -5}
+			christian_decrease_20 = yes
+			pagan_increase_10 = yes
+			futurist_decrease_5 = yes
 			}
 		}
 	}
@@ -5091,10 +5150,13 @@ focus_tree = {
 		completion_reward = {
 		add_manpower = -672
 		add_stability = -0.07
+		custom_effect_tooltip = les_tt_29
+		custom_effect_tooltip = les_tt_30
+		custom_effect_tooltip = les_tt_31
 		hidden_effect = {
-			add_to_variable = { var = LES_faction_christian value = -30}
-			add_to_variable = { var = LES_faction_pagan value = 15}
-			add_to_variable = { var = LES_faction_poet value = 15}
+			christian_decrease_20 = yes
+			pagan_increase_10 = yes
+			futurist_increase_10 = yes
 			}
 		}
 	}
@@ -5117,10 +5179,13 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_stability = 0.03
+		custom_effect_tooltip = les_tt_29
+		custom_effect_tooltip = les_tt_31
+		custom_effect_tooltip = les_tt_27
 		hidden_effect = {
-			add_to_variable = { var = LES_faction_christian value = -5}
-			add_to_variable = { var = LES_faction_pagan value = 10}
-			add_to_variable = { var = LES_faction_poet value = -5}
+			christian_decrease_5 = yes 
+			pagan_increase_10 = yes
+			futurist_decrease_5 = yes
 			}
 		}
 	}
@@ -5187,10 +5252,13 @@ focus_tree = {
 		completion_reward = {
 		add_stability = 0.03
 		LES = { country_event = { id = legion.8 days = 1 } }
+		custom_effect_tooltip = les_tt_26
+		custom_effect_tooltip = les_tt_28
+		custom_effect_tooltip = les_tt_27
 		hidden_effect = {
-		add_to_variable = { var = LES_faction_christian value = 30}
-		add_to_variable = { var = LES_faction_pagan value = -15}
-		add_to_variable = { var = LES_faction_poet value = -15}
+		christian_increase_20 = yes
+		pagan_increase_10 = yes
+		futurist_increase_10 = yes
 		}
 		}
 	}
@@ -5236,10 +5304,13 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_stability = -0.05
+		custom_effect_tooltip = les_tt_29
+		custom_effect_tooltip = les_tt_30
+		custom_effect_tooltip = les_tt_31
 		hidden_effect = {
-			add_to_variable = { var = LES_faction_christian value = -30}
-			add_to_variable = { var = LES_faction_pagan value = 15}
-			add_to_variable = { var = LES_faction_poet value = 15}
+			christian_decrease_20 = yes
+			pagan_increase_10 = yes
+			futurist_increase_10 = yes
 			}
 		}
 	}
@@ -5579,6 +5650,10 @@ focus_tree = {
 		add_ideas = {
 		LES_socialism
 		}
+		custom_effect_tooltip = les_tt_26
+		hidden_effect = {
+			christian_increase_10 = yes
+			}
 		}
 	}
 
@@ -5599,6 +5674,10 @@ focus_tree = {
 		add_ideas = {
 		LES_corporations
 		}
+		custom_effect_tooltip = les_tt_26
+		hidden_effect = {
+			christian_increase_10 = yes
+			}
 		}
 	}
 

@@ -74,7 +74,7 @@ LES_factions = {
 
    remove_effect = {
    custom_effect_tooltip = les_tt_16
-  add_to_variable = { var = LES_faction_returnist value = 10 }
+   returnist_increase_10 = yes
   }
 }
 
@@ -98,7 +98,7 @@ LES_factions = {
 
    remove_effect = {
    custom_effect_tooltip = les_tt_15
-  add_to_variable = { var = LES_faction_rusnat value = 10 }
+   rusnat_increase_10 = yes
   }
 }
 
@@ -122,7 +122,7 @@ LES_factions = {
 
    remove_effect = {
    custom_effect_tooltip = les_tt_14
-  add_to_variable = { var = LES_faction_christian value = 10 }
+   christian_increase_10 = yes
   }
 }
 
@@ -146,7 +146,7 @@ LES_factions = {
 
    remove_effect = {
    custom_effect_tooltip = les_tt_13
-  add_to_variable = { var = LES_faction_pagan value = 10 }
+   pagan_increase_10 = yes
   }
 }
 
@@ -170,7 +170,7 @@ LES_factions = {
 
    remove_effect = {
    custom_effect_tooltip = les_tt_12
-  add_to_variable = { var = LES_faction_poet value = 10 }
+   futurist_increase_10 = yes
   }
 }
 
@@ -195,11 +195,11 @@ LES_discontent = {
 
       custom_effect_tooltip = les_tt_11
       hidden_effect = {
-          add_to_variable = { var = LES_faction_rusnat value = -5 }
-          add_to_variable = { var = LES_faction_returnist value = -5 }
-          add_to_variable = { var = LES_faction_christian value = -5 }
-          add_to_variable = { var = LES_faction_pagan value = -5 }
-          add_to_variable = { var = LES_faction_poet value = -5 }
+          rusnat_decrease_5 = yes
+          returnist_decrease_5 = yes
+          christian_decrease_5 = yes
+          pagan_decrease_5 = yes
+          futurist_decrease_5 = yes
           activate_mission = LES_see_discontent
       }
     }
@@ -439,7 +439,7 @@ if = {
  NOT = { is_in_faction_with = KAR}
  }
  has_war = no
- date > 1935.6.1
+ date > 1935.1.1
  }}
 KAR = {
   exists = yes
@@ -479,9 +479,11 @@ KAR = {
 LES_deal_with_KAR = {
   target_trigger = { FROM = {tag = KAR} }
    cost = 10
+   visible = {
+    LES = { owns_state = 571 }
+   }
  available = {
   LES = { owns_state = 571 }
-
   }
  ai_will_do = {
   base = 10
@@ -548,6 +550,9 @@ AGR =  { country_event = { id = agrussia.2 days = 3 } }
 LES_core_AGR {
   target_trigger = { FROM = {tag = AGR} }
   cost = 10
+  visible = {
+    LES = { owns_state = 1231 }
+  }
  available = {
  LES = { owns_state = 1231 }
   NOT = {
@@ -1577,9 +1582,9 @@ LES_destroy_IRK = {
   has_war = no
  }
  ai_will_do = {
-  base = 10
+  base = 0
    modifier = {
-   factor = 200
+   factor = 0
     ROOT = {
    strength_ratio = {
     tag = JVD

@@ -1,0 +1,875 @@
+
+
+Legion_faction_summ_calc = {
+
+	hidden_effect = {
+		LES = {
+		###All 5 factors at play
+		if = {
+
+			limit = {
+				AND = { 
+					NOT = { has_country_flag = les_pagan_gone }
+					NOT = { has_country_flag = les_christ_gone }
+					NOT = { has_country_flag = les_poet_gone }
+					NOT = { has_country_flag = les_returnist_gone }
+					NOT = { has_country_flag = les_rusnat_gone }
+				}
+			}
+				###no debuff
+				if = {
+					limit = {
+					check_variable = { var = LES_faction_sum value = 260  compare = greater_than_or_equals }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+				}
+
+				###slight debuff
+				if = {
+					limit = {
+					check_variable = { var = LES_faction_sum value = 220  compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 260 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_1 }
+				}
+				### minor debuff
+				if = {
+					limit = {
+					check_variable = { var = LES_faction_sum value = 180 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 220 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_2 }
+				}
+				### considerable debuf
+				if = {
+					limit = {
+					check_variable = { var = LES_faction_sum value = 140 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 180 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_3 }
+				}
+				### major debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 100 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 140 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_4 }
+				}
+				###shit
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 1 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 100 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					add_ideas = { LES_council_discontent_5 }
+				}
+
+		}###end of 5 factors
+
+		###No Christians at play
+		if = {
+
+			limit = {
+				AND = { 
+					NOT = { has_country_flag = les_pagan_gone }
+					NOT = { has_country_flag = les_poet_gone }
+					NOT = { has_country_flag = les_returnist_gone }
+					NOT = { has_country_flag = les_rusnat_gone }
+					has_country_flag = les_christ_gone
+				}
+			}
+				###no debuff
+				if = {
+					limit = {
+					check_variable = { var = LES_faction_sum value = 220  compare = greater_than_or_equals }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+				}
+
+				###slight debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 190  compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 220 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_1 }
+				}
+				### minor debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 170 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 190 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_2 }
+				}
+				### considerable debuf
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 150 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 170 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_3 }
+				}
+				### major debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 130 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 150 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_4 }
+				}
+				###shit
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 1 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 130 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					add_ideas = { LES_council_discontent_5 }
+				}
+
+		}###end of No Christians at play
+
+		###No Pagang at play
+		if = {
+
+			limit = {
+				AND = { 
+					NOT = { has_country_flag = les_christ_gone }
+					NOT = { has_country_flag = les_poet_gone }
+					NOT = { has_country_flag = les_returnist_gone }
+					NOT = { has_country_flag = les_rusnat_gone }
+					has_country_flag = les_pagan_gone
+				}
+			}
+				###no debuff
+				if = {
+					limit = {
+					check_variable = { var = LES_faction_sum value = 220  compare = greater_than_or_equals }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+				}
+
+				###slight debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 190  compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 220 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_1 }
+				}
+				### minor debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 170 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 190 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_2 }
+				}
+				### considerable debuf
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 150 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 170 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_3 }
+				}
+				### major debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 130 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 150 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_4 }
+				}
+				###shit
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 1 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 130 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					add_ideas = { LES_council_discontent_5 }
+				}
+
+		}###end of No Pagang at play
+
+		###No Pagang, No Futurist at play
+		if = {
+
+			limit = {
+				AND = { 
+					NOT = { has_country_flag = les_christ_gone }
+					NOT = { has_country_flag = les_returnist_gone }
+					NOT = { has_country_flag = les_rusnat_gone }
+					has_country_flag = les_poet_gone
+					has_country_flag = les_pagan_gone
+				}
+			}
+				###no debuff
+				if = {
+					limit = {
+					check_variable = { var = LES_faction_sum value = 170  compare = greater_than_or_equals }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+				}
+
+				###slight debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 150  compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 170 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_1 }
+				}
+				### minor debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 130 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 150 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_2 }
+				}
+				### considerable debuf
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 110 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 120 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_3 }
+				}
+				### major debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 90 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 110 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_4 }
+				}
+				###shit
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 1 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 90 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					add_ideas = { LES_council_discontent_5 }
+				}
+
+		}###end of No Pagang, No Futurist at play
+
+
+
+		###No christian, No returnist at play
+		if = {
+
+			limit = {
+				AND = { 
+					NOT = { has_country_flag = les_pagan_gone }
+					NOT = { has_country_flag = les_poet_gone }
+					NOT = { has_country_flag = les_rusnat_gone }
+					has_country_flag = les_returnist_gone
+					has_country_flag = les_christ_gone
+				}
+			}
+				###no debuff
+				if = {
+					limit = {
+					check_variable = { var = LES_faction_sum value = 170  compare = greater_than_or_equals }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+				}
+
+				###slight debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 150  compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 170 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_1 }
+				}
+				### minor debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 130 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 150 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_2 }
+				}
+				### considerable debuf
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 110 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 120 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_3 }
+				}
+				### major debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 90 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 110 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_4 }
+				}
+				###shit
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 1 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 90 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					add_ideas = { LES_council_discontent_5 }
+				}
+
+		}###end of No christian, No returnist at play
+
+		###No pagan, No futurist, no returnist at play
+		if = {
+
+			limit = {
+				AND = { 
+					NOT = { has_country_flag = les_christ_gone }
+					NOT = { has_country_flag = les_rusnat_gone }
+					has_country_flag = les_returnist_gone
+					has_country_flag = les_poet_gone
+					has_country_flag = les_pagan_gone
+				}
+			}
+				###no debuff
+				if = {
+					limit = {
+					check_variable = { var = LES_faction_sum value = 100  compare = greater_than_or_equals }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+				}
+
+				###slight debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 80  compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 100 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_1 }
+				}
+				### minor debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 60 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 80 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_2 }
+				}
+				### considerable debuf
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 40 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 60 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_4 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_3 }
+				}
+				### major debuff
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 20 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 40 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_5 }
+					add_ideas = { LES_council_discontent_4 }
+				}
+				###shit
+				if = {
+					limit= {
+					check_variable = { var = LES_faction_sum value = 1 compare = greater_than_or_equals }
+					check_variable = { var = LES_faction_sum value = 20 compare = less_than }
+					}
+					remove_ideas = { LES_council_discontent_1 }
+					remove_ideas = { LES_council_discontent_2 }
+					remove_ideas = { LES_council_discontent_3 }
+					remove_ideas = { LES_council_discontent_4 }
+					add_ideas = { LES_council_discontent_5 }
+
+				}
+
+		}###end of No pagan, No futurist, no returnist at play
+
+	}
+}###end of
+
+}###END OF LES
+
+
+
+
+
+###Pagan Faction###
+
+#plus
+
+pagan_increase_5 = {
+	add_to_variable = { var = LES_faction_pagan value = 5 }
+	add_to_variable = { var = LES_faction_sum value = 5 }
+	Legion_faction_summ_calc = yes
+}
+
+pagan_increase_10 = {
+	add_to_variable = { var = LES_faction_pagan value = 10 }
+	add_to_variable = { var = LES_faction_sum value = 10 }
+	Legion_faction_summ_calc = yes
+}
+
+pagan_increase_15 = {
+	add_to_variable = { var = LES_faction_pagan value = 15 }
+	add_to_variable = { var = LES_faction_sum value = 15 }
+	Legion_faction_summ_calc = yes
+}
+
+pagan_increase_20 = {
+	add_to_variable = { var = LES_faction_pagan value = 20 }
+	add_to_variable = { var = LES_faction_sum value = 20 }
+	Legion_faction_summ_calc = yes
+}
+
+pagan_increase_50 = {
+	add_to_variable = { var = LES_faction_pagan value = 50 }
+	add_to_variable = { var = LES_faction_sum value = 50 }
+	Legion_faction_summ_calc = yes
+}
+
+#minus
+
+pagan_decrease_5 = {
+	add_to_variable = { var = LES_faction_pagan value = -5 }
+	add_to_variable = { var = LES_faction_sum value = -5 }
+	Legion_faction_summ_calc = yes
+}
+
+pagan_decrease_10 = {
+	add_to_variable = { var = LES_faction_pagan value = -10 }
+	add_to_variable = { var = LES_faction_sum value = -10 }
+	Legion_faction_summ_calc = yes
+}
+
+pagan_decrease_15 = {
+	add_to_variable = { var = LES_faction_pagan value = -15 }
+	add_to_variable = { var = LES_faction_sum value = -15 }
+	Legion_faction_summ_calc = yes
+}
+
+pagan_decrease_20 = {
+	add_to_variable = { var = LES_faction_pagan value = -20 }
+	add_to_variable = { var = LES_faction_sum value = -20 }
+	Legion_faction_summ_calc = yes
+}
+
+pagan_decrease_50 = {
+	add_to_variable = { var = LES_faction_pagan value = -50 }
+	add_to_variable = { var = LES_faction_sum value = -50 }
+	Legion_faction_summ_calc = yes
+}
+
+
+###Christian Faction###
+
+#plus
+
+christian_increase_5 = {
+	add_to_variable = { var = LES_faction_christian value = 5 }
+	add_to_variable = { var = LES_faction_sum value = 5 }
+	Legion_faction_summ_calc = yes
+}
+
+christian_increase_10 = {
+	add_to_variable = { var = LES_faction_christian value = 10 }
+	add_to_variable = { var = LES_faction_sum value = 10 }
+	Legion_faction_summ_calc = yes
+}
+
+christian_increase_15 = {
+	add_to_variable = { var = LES_faction_christian value = 15 }
+	add_to_variable = { var = LES_faction_sum value = 15 }
+	Legion_faction_summ_calc = yes
+}
+
+christian_increase_20 = {
+	add_to_variable = { var = LES_faction_christian value = 20 }
+	add_to_variable = { var = LES_faction_sum value = 20 }
+	Legion_faction_summ_calc = yes
+}
+
+christian_increase_50 = {
+	add_to_variable = { var = LES_faction_christian value = 50 }
+	add_to_variable = { var = LES_faction_sum value = 50 }
+	Legion_faction_summ_calc = yes
+}
+
+#minuss
+
+christian_decrease_5 = {
+	add_to_variable = { var = LES_faction_christian value = -5 }
+	add_to_variable = { var = LES_faction_sum value = -5 }
+	Legion_faction_summ_calc = yes
+}
+
+christian_decrease_10 = {
+	add_to_variable = { var = LES_faction_christian value = -10 }
+	add_to_variable = { var = LES_faction_sum value = -10 }
+	Legion_faction_summ_calc = yes
+}
+
+christian_decrease_15 = {
+	add_to_variable = { var = LES_faction_christian value = -15 }
+	add_to_variable = { var = LES_faction_sum value = -15 }
+	Legion_faction_summ_calc = yes
+}
+
+christian_decrease_20 = {
+	add_to_variable = { var = LES_faction_christian value = -20 }
+	add_to_variable = { var = LES_faction_sum value = -20 }
+	Legion_faction_summ_calc = yes
+}
+
+christian_decrease_50 = {
+	add_to_variable = { var = LES_faction_christian value = -50 }
+	add_to_variable = { var = LES_faction_sum value = -50 }
+	Legion_faction_summ_calc = yes
+}
+
+###Futurist Faction###
+
+#plus
+
+futurist_increase_5 = {
+	add_to_variable = { var = LES_faction_poet value = 5 }
+	add_to_variable = { var = LES_faction_sum value = 5 }
+	Legion_faction_summ_calc = yes
+}
+
+futurist_increase_10 = {
+	add_to_variable = { var = LES_faction_poet value = 10 }
+	add_to_variable = { var = LES_faction_sum value = 10 }
+	Legion_faction_summ_calc = yes
+}
+
+futurist_increase_15 = {
+	add_to_variable = { var = LES_faction_poet value = 15 }
+	add_to_variable = { var = LES_faction_sum value = 15 }
+	Legion_faction_summ_calc = yes
+}
+
+futurist_increase_20 = {
+	add_to_variable = { var = LES_faction_poet value = 20 }
+	add_to_variable = { var = LES_faction_sum value = 20 }
+	Legion_faction_summ_calc = yes
+}
+
+futurist_increase_50 = {
+	add_to_variable = { var = LES_faction_poet value = 50 }
+	add_to_variable = { var = LES_faction_sum value = 50 }
+	Legion_faction_summ_calc = yes
+}
+
+#minus
+
+
+futurist_decrease_5 = {
+	add_to_variable = { var = LES_faction_poet value = -5 }
+	add_to_variable = { var = LES_faction_sum value = -5 }
+	Legion_faction_summ_calc = yes
+}
+
+futurist_decrease_10 = {
+	add_to_variable = { var = LES_faction_poet value = -10 }
+	add_to_variable = { var = LES_faction_sum value = -10 }
+	Legion_faction_summ_calc = yes
+}
+
+futurist_decrease_15 = {
+	add_to_variable = { var = LES_faction_poet value = -15 }
+	add_to_variable = { var = LES_faction_sum value = -15 }
+	Legion_faction_summ_calc = yes
+}
+
+futurist_decrease_20 = {
+	add_to_variable = { var = LES_faction_poet value = -20 }
+	add_to_variable = { var = LES_faction_sum value = -20 }
+	Legion_faction_summ_calc = yes
+}
+
+futurist_decrease_50 = {
+	add_to_variable = { var = LES_faction_poet value = -50 }
+	add_to_variable = { var = LES_faction_sum value = -50 }
+	Legion_faction_summ_calc = yes
+}
+
+
+
+
+###Rusnat Faction###
+
+#plus
+
+rusnat_increase_5 = {
+	add_to_variable = { var = LES_faction_rusnat value = 5 }
+	add_to_variable = { var = LES_faction_sum value = 5 }
+	Legion_faction_summ_calc = yes
+}
+
+rusnat_increase_10 = {
+	add_to_variable = { var = LES_faction_rusnat value = 10 }
+	add_to_variable = { var = LES_faction_sum value = 10 }
+	Legion_faction_summ_calc = yes
+}
+
+rusnat_increase_15 = {
+	add_to_variable = { var = LES_faction_rusnat value = 15 }
+	add_to_variable = { var = LES_faction_sum value = 15 }
+	Legion_faction_summ_calc = yes
+}
+
+rusnat_increase_20 = {
+	add_to_variable = { var = LES_faction_rusnat value = 20 }
+	add_to_variable = { var = LES_faction_sum value = 20 }
+	Legion_faction_summ_calc = yes
+}
+
+rusnat_increase_50 = {
+	add_to_variable = { var = LES_faction_rusnat value = 50 }
+	add_to_variable = { var = LES_faction_sum value = 50 }
+	Legion_faction_summ_calc = yes
+}
+
+#minus
+
+rusnat_decrease_5 = {
+	add_to_variable = { var = LES_faction_rusnat value = -5 }
+	add_to_variable = { var = LES_faction_sum value = -5 }
+	Legion_faction_summ_calc = yes
+}
+
+rusnat_decrease_10 = {
+	add_to_variable = { var = LES_faction_rusnat value = -10 }
+	add_to_variable = { var = LES_faction_sum value = -10 }
+	Legion_faction_summ_calc = yes
+}
+
+rusnat_decrease_15 = {
+	add_to_variable = { var = LES_faction_rusnat value = -15 }
+	add_to_variable = { var = LES_faction_sum value = -15 }
+	Legion_faction_summ_calc = yes
+}
+
+rusnat_decrease_20 = {
+	add_to_variable = { var = LES_faction_rusnat value = -20 }
+	add_to_variable = { var = LES_faction_sum value = -20 }
+	Legion_faction_summ_calc = yes
+}
+
+rusnat_decrease_50 = {
+	add_to_variable = { var = LES_faction_rusnat value = -50 }
+	add_to_variable = { var = LES_faction_sum value = -50 }
+	Legion_faction_summ_calc = yes
+}
+
+
+###Returnist Faction###
+
+#plus
+
+returnist_increase_5 = {
+	add_to_variable = { var = LES_faction_returnist value = 5 }
+	add_to_variable = { var = LES_faction_sum value = 5 }
+	Legion_faction_summ_calc = yes
+}
+
+returnist_increase_10 = {
+	add_to_variable = { var = LES_faction_returnist value = 10 }
+	add_to_variable = { var = LES_faction_sum value = 10 }
+	Legion_faction_summ_calc = yes
+}
+
+returnist_increase_15 = {
+	add_to_variable = { var = LES_faction_returnist value = 15 }
+	add_to_variable = { var = LES_faction_sum value = 15 }
+	Legion_faction_summ_calc = yes
+}
+
+returnist_increase_20 = {
+	add_to_variable = { var = LES_faction_returnist value = 20 }
+	add_to_variable = { var = LES_faction_sum value = 20 }
+	Legion_faction_summ_calc = yes
+}
+
+returnist_increase_50 = {
+	add_to_variable = { var = LES_faction_returnist value = 50 }
+	add_to_variable = { var = LES_faction_sum value = 50 }
+	Legion_faction_summ_calc = yes
+}
+
+#minus
+
+returnist_decrease_5 = {
+	add_to_variable = { var = LES_faction_returnist value = -5 }
+	add_to_variable = { var = LES_faction_sum value = -5 }
+	Legion_faction_summ_calc = yes
+}
+
+returnist_decrease_10 = {
+	add_to_variable = { var = LES_faction_returnist value = -10 }
+	add_to_variable = { var = LES_faction_sum value = -10 }
+	Legion_faction_summ_calc = yes
+}
+
+returnist_decrease_15 = {
+	add_to_variable = { var = LES_faction_returnist value = -15 }
+	add_to_variable = { var = LES_faction_sum value = -15 }
+	Legion_faction_summ_calc = yes
+}
+
+returnist_decrease_20 = {
+	add_to_variable = { var = LES_faction_returnist value = -20 }
+	add_to_variable = { var = LES_faction_sum value = -20 }
+	Legion_faction_summ_calc = yes
+}
+
+returnist_decrease_50 = {
+	add_to_variable = { var = LES_faction_returnist value = -50 }
+	add_to_variable = { var = LES_faction_sum value = -50 }
+	Legion_faction_summ_calc = yes
+}
