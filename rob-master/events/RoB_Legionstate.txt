@@ -143,6 +143,7 @@ hidden_effect = {
 	clear_variable = LES_faction_christian
 	clear_variable = LES_faction_pagan
 	returnist_increase_50 = yes
+	Legion_faction_summ_calc = yes
 	}
 }
 }
@@ -757,3 +758,54 @@ option = {
  }
 
  }
+
+ ### Futurist Faction destroyed
+ country_event = { 
+	id = legion.32
+	title = "Scourging of Lunatics"
+	desc = "Futurists faction fucking dies"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	 name = "Cute"
+	 set_country_flag = les_poet_gone
+	 clear_variable = LES_faction_poet
+	 Legion_faction_summ_calc = yes
+	 }
+	
+}
+
+ ### Pagan Faction destroyed
+ country_event = { 
+	id = legion.33
+	title = "Scourging of Pagans"
+	desc = "Pagan faction fucking dies"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	 name = "Cute"
+	 set_country_flag = les_pagan_gone
+	 clear_variable = LES_faction_pagan
+	 Legion_faction_summ_calc = yes
+	 }
+	
+}
+
+ ### Christian Faction destroyed
+ country_event = { 
+	id = legion.34
+	title = "Scourging of Christians"
+	desc = "Christian faction fucking dies"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	 name = "Cute"
+	 set_country_flag = les_christ_gone
+	 clear_variable = LES_faction_christian
+	 Legion_faction_summ_calc = yes
+	 }
+	
+}

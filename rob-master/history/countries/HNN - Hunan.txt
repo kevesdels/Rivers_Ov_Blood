@@ -12,30 +12,30 @@ set_convoys = 10
 
 
 set_popularities = {
-	national_socialist = 0
-	socialist = 0
-	democratic_socialist = 0
-	social_democracy = 0
-	social_liberal = 40
-	conservative = 60
-	authoritharian = 0
-	reactionary = 0
-	pelekist = 0
+	national_socialist = 1
+	socialist = 2
+	democratic_socialist = 3
+	social_democracy = 5
+	social_liberal = 4
+	conservative = 21
+	authoritharian = 56
+	reactionary = 7
+	pelekist = 1
 }
 
 set_politics = {
-	ruling_party = conservative
+	ruling_party = authoritharian
 	last_election = "1932.2.14"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 create_country_leader = {
-	name = "Charles Nungesser"
+	name = "Tang Shengzhi"
 	desc = "POLITICS_RICARDO_JIMENEZ_OREAMUNO_DESC"
-	picture = "Charles_Nungesser.tga"
+	picture = ""
 	expire = "1965.1.1"
-	ideology = conservative_subtype
+	ideology = authoritharian_subtype
 	traits = {
 		#
 	}

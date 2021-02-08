@@ -65,9 +65,10 @@ focus_tree = {
 		add_ideas  = {
 		LES_femoidssubmit
 		}
-		custom_effect_tooltip = les_tt_26
 		hidden_effect = {
+			if = { limit = { NOT = { has_country_flag = les_christ_gone }}
 			christian_increase_10 = yes
+			}
 			}
 		}
 	}
@@ -89,9 +90,10 @@ focus_tree = {
 		add_ideas  = {
 		LES_young_guardiansofyouth
 		}
-		custom_effect_tooltip = les_tt_29
 		hidden_effect = {
+			if = { limit = { NOT = { has_country_flag = les_pagan_gone }}
 			pagan_increase_10 = yes
+			}
 			}
 		}
 	}
@@ -113,9 +115,10 @@ focus_tree = {
 		add_ideas  ={
 		LES_femoidsliberated
 		}
-		custom_effect_tooltip = les_tt_30
 		hidden_effect = {
+			if = { limit = { NOT = { has_country_flag = les_poet_gone }}
 			futurist_increase_10 = yes
+		  }
 			}
 		}
 	}
@@ -1371,6 +1374,11 @@ focus_tree = {
 		add_ideas = {
 		LES_middle_ages
 		}
+		hidden_effect = {
+			if = { limit = { NOT = { has_country_flag = les_pagan_gone }}
+			pagan_increase_10 = yes
+			}
+			}
 		}
 	}
 
@@ -1674,6 +1682,7 @@ focus_tree = {
 		hidden_effect = {
 			christian_increase_15 = yes
 			futurist_decrease_15 = yes
+			country_event = { id = legion.32 days = 7 }
 			}
 		}
 	}
@@ -1717,7 +1726,7 @@ focus_tree = {
 		custom_effect_tooltip = les_tt_27
 		hidden_effect = {
 			christian_increase_15 = yes
-			futurist_increase_15 = yes
+			futurist_decrease_15 = yes
 			}
 		}
 	}
@@ -1901,9 +1910,10 @@ focus_tree = {
 		add_ideas ={
 		LES_reconstructxD
 		}
-		custom_effect_tooltip = les_tt_30
 		hidden_effect = {
+			if = { limit = { NOT = { has_country_flag = les_poet_gone }}
 			futurist_increase_10 = yes
+		  }
 			}
 		}
 	}
@@ -1925,9 +1935,10 @@ focus_tree = {
 		add_ideas = {
 		LES_eugenics
 		}
-		custom_effect_tooltip = les_tt_29
 		hidden_effect = {
+			if = { limit = { NOT = { has_country_flag = les_pagan_gone }}
 			pagan_increase_10 = yes
+			}
 			}
 		}
 	}
@@ -3100,9 +3111,15 @@ focus_tree = {
 		LES_Old_Guard
 		}
 		hidden_effect = {
+		if = { limit = { NOT = { has_country_flag = les_returnist_gone }}
 		returnist_increase_5 = yes
+		}
+		if = { limit = { NOT = { has_country_flag = les_christ_gone }}
 		christian_increase_5 = yes
+		}
+		if = { limit = { NOT = { has_country_flag = les_pagan_gone }}
 		pagan_increase_5 = yes
+		}
 		}
 		}
 	}
@@ -3618,6 +3635,14 @@ focus_tree = {
 		completion_reward = {
 		add_ideas = {
 		LES_Youthful_Army
+		}
+		hidden_effect = {
+		if = { limit = { NOT = { has_country_flag = les_poet_gone }}
+			futurist_increase_5 = yes
+		  }
+		if = { limit = { NOT = { has_country_flag = les_rusnat_gone }}
+		  rusnat_increase_5 = yes
+		  }
 		}
 		}
 	}
@@ -4705,9 +4730,10 @@ focus_tree = {
 		}
 		add_war_support = 0.05
 		add_stability = 0.05
-		custom_effect_tooltip = les_tt_26
 		hidden_effect = {
+			if = { limit = { NOT = { has_country_flag = les_christ_gone }}
 			christian_increase_10 = yes
+			}
 			}
 		}
 	}
@@ -4735,6 +4761,7 @@ focus_tree = {
 			christian_increase_20 = yes
 			pagan_decrease_20 = yes
 			futurist_decrease_5 = yes
+			country_event = { id = legion.33 days = 7 }
 			}
 		}
 	}
@@ -4762,6 +4789,7 @@ focus_tree = {
 			christian_increase_50 = yes
 			pagan_decrease_50 = yes
 			futurist_decrease_10 = yes
+			country_event = { id = legion.33 days = 48 }
 			}
 		}
 	}
@@ -4837,7 +4865,9 @@ focus_tree = {
 		custom_effect_tooltip = les_tt_27
 		hidden_effect = {
 			christian_increase_20 = yes
+			if = { limit = { NOT = { has_country_flag = les_pagan_gone }}
 			pagan_decrease_10 = yes
+			}
 			futurist_decrease_10 = yes
 			}
 		}
@@ -5100,6 +5130,7 @@ focus_tree = {
 			christian_decrease_50 = yes
 			pagan_increase_50 = yes
 			futurist_increase_10 = yes
+			country_event = { id = legion.34 days = 7 }
 			}
 		}
 		
@@ -5127,6 +5158,7 @@ focus_tree = {
 			christian_decrease_20 = yes
 			pagan_increase_10 = yes
 			futurist_decrease_5 = yes
+			country_event = { id = legion.34 days = 48 }
 			}
 		}
 	}
@@ -5154,7 +5186,9 @@ focus_tree = {
 		custom_effect_tooltip = les_tt_30
 		custom_effect_tooltip = les_tt_31
 		hidden_effect = {
+			if = { limit = { NOT = { has_country_flag = les_christ_gone }}
 			christian_decrease_20 = yes
+			}
 			pagan_increase_10 = yes
 			futurist_increase_10 = yes
 			}
@@ -5183,7 +5217,9 @@ focus_tree = {
 		custom_effect_tooltip = les_tt_31
 		custom_effect_tooltip = les_tt_27
 		hidden_effect = {
-			christian_decrease_5 = yes 
+			if = { limit = { NOT = { has_country_flag = les_christ_gone }}
+			christian_decrease_5 = yes
+			}
 			pagan_increase_10 = yes
 			futurist_decrease_5 = yes
 			}
@@ -5257,8 +5293,8 @@ focus_tree = {
 		custom_effect_tooltip = les_tt_27
 		hidden_effect = {
 		christian_increase_20 = yes
-		pagan_increase_10 = yes
-		futurist_increase_10 = yes
+		pagan_decrease_10 = yes
+		futurist_decrease_10 = yes
 		}
 		}
 	}
@@ -5650,9 +5686,10 @@ focus_tree = {
 		add_ideas = {
 		LES_socialism
 		}
-		custom_effect_tooltip = les_tt_26
 		hidden_effect = {
+			if = { limit = { NOT = { has_country_flag = les_christ_gone }}
 			christian_increase_10 = yes
+			}
 			}
 		}
 	}
@@ -5674,9 +5711,10 @@ focus_tree = {
 		add_ideas = {
 		LES_corporations
 		}
-		custom_effect_tooltip = les_tt_26
 		hidden_effect = {
-			christian_increase_10 = yes
+			if = { limit = { NOT = { has_country_flag = les_poet_gone }}
+			futurist_increase_10 = yes
+		  }
 			}
 		}
 	}

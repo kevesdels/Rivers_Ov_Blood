@@ -40,6 +40,7 @@ LES_banish_x = {
     remove_effect = {
     ROOT = {
       remove_ideas = {LES_banish_aliens}
+      rusnat_increase_10 = yes
       }
         FROM = {
         set_state_flag = banish
@@ -58,6 +59,7 @@ LES_factions = {
    visible = {
         hidden_trigger = {
         tag = LES
+        NOT = { has_country_flag = les_returnist_gone }
       }
    }
    icon = GFX_decision_infiltrate_state
@@ -67,6 +69,7 @@ LES_factions = {
   available = {
     hidden_trigger = {
     has_country_flag = les_factions
+    NOT = { has_country_flag = les_returnist_gone }
     }
    }
    cost = 40
@@ -82,6 +85,7 @@ LES_factions = {
    visible = {
       hidden_trigger = {
         tag = LES
+        NOT = { has_country_flag = les_rusnat_gone }
       }
    }
    icon = GFX_decision_infiltrate_state
@@ -91,11 +95,15 @@ LES_factions = {
   available = {
     hidden_trigger = {
     has_country_flag = les_factions
+    NOT = { has_country_flag = les_rusnat_gone }
     }
+    command_power = 50
    }
-   cost = 40
    days_remove = 10
 
+   complete_effect = {
+    add_command_power = -50
+  }
    remove_effect = {
    custom_effect_tooltip = les_tt_15
    rusnat_increase_10 = yes
@@ -106,6 +114,7 @@ LES_factions = {
    visible = {
       hidden_trigger = {
         tag = LES
+        NOT = { has_country_flag = les_christ_gone }
       }
    }
    icon = GFX_decision_infiltrate_state
@@ -115,11 +124,14 @@ LES_factions = {
   available = {
     hidden_trigger = {
     has_country_flag = les_factions
+    NOT = { has_country_flag = les_christ_gone }
     }
+    command_power = 50
    }
-   cost = 40
    days_remove = 10
-
+   complete_effect = {
+    add_command_power = -50
+  }
    remove_effect = {
    custom_effect_tooltip = les_tt_14
    christian_increase_10 = yes
@@ -130,6 +142,7 @@ LES_factions = {
    visible = {
       hidden_trigger = {
         tag = LES
+        NOT = { has_country_flag = les_pagan_gone }
       }
    }
    icon = GFX_decision_infiltrate_state
@@ -139,6 +152,7 @@ LES_factions = {
   available = {
   hidden_trigger = {
     has_country_flag = les_factions
+    NOT = { has_country_flag = les_pagan_gone }
     }
    }
    cost = 40
@@ -154,6 +168,7 @@ LES_factions = {
    visible = {
       hidden_trigger = {
         tag = LES
+        NOT = { has_country_flag = les_poet_gone }
       }
    }
    icon = GFX_decision_infiltrate_state
@@ -163,6 +178,7 @@ LES_factions = {
   available = {
     hidden_trigger = {
     has_country_flag = les_factions
+    NOT = { has_country_flag = les_poet_gone }
     }
    }
    cost = 40
@@ -195,12 +211,22 @@ LES_discontent = {
 
       custom_effect_tooltip = les_tt_11
       hidden_effect = {
-          rusnat_decrease_5 = yes
-          returnist_decrease_5 = yes
-          christian_decrease_5 = yes
-          pagan_decrease_5 = yes
-          futurist_decrease_5 = yes
-          activate_mission = LES_see_discontent
+      if = { limit = { NOT = { has_country_flag = les_poet_gone }}
+        futurist_decrease_5 = yes
+      }
+      if = { limit = { NOT = { has_country_flag = les_returnist_gone }}
+      returnist_decrease_5 = yes
+      }
+      if = { limit = { NOT = { has_country_flag = les_christ_gone }}
+      christian_decrease_5 = yes
+      }
+      if = { limit = { NOT = { has_country_flag = les_pagan_gone }}
+      pagan_decrease_5 = yes
+      }
+      if = { limit = { NOT = { has_country_flag = les_rusnat_gone }}
+      rusnat_decrease_5 = yes
+      }
+      activate_mission = LES_see_discontent
       }
     }
   }
