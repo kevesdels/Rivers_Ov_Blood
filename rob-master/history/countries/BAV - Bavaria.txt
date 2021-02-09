@@ -60,34 +60,67 @@ create_country_leader = {
 	}
 }
 create_corps_commander  = {
-	name = "Friedrich Dollmann"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	name = "August Zehender"
+	portrait_path = "August_Zehender.tga"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 31
+}
+
+create_corps_commander  = {
+	name = "Georg Bochmann"
+	portrait_path = "Georg Bochmann.tga"
 	traits = { }
 	skill = 2
-	attack_skill = 1
-    defense_skill = 3
+	attack_skill = 2
+    defense_skill = 2
     planning_skill = 2
     logistics_skill = 1
 }
 
 create_corps_commander  = {
-	name = "Franz Halder"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	name = "Helmuth von Pannwitz"
+	portrait_path = "Helmuth_von_Pannwitz.tga"
 	traits = { }
-	skill = 2
-	attack_skill = 1
-    defense_skill = 3
+	skill = 4
+	attack_skill = 3
+    defense_skill = 2
     planning_skill = 2
+    logistics_skill = 3
+}
+
+create_corps_commander  = {
+	name = "Otto Ernst Remer"
+	portrait_path = "Otto_ernst_remer.tga"
+	traits = { }
+	skill = 1
+	attack_skill = 2
+    defense_skill = 1
+    planning_skill = 1
     logistics_skill = 1
 }
 
 create_corps_commander  = {
-	name = "Alfred Jodl"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	name = "Otto Kumm"
+	portrait_path = "OttoKumm.tga"
 	traits = { }
-	skill = 2
-	attack_skill = 1
+	skill = 3
+	attack_skill = 2
     defense_skill = 3
     planning_skill = 2
-    logistics_skill = 1
+    logistics_skill = 2
+}
+
+create_corps_commander  = {
+	name = "Wagner Juergen"
+	portrait_path = "Wagner_Juergen.tga"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
 }
