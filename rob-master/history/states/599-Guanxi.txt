@@ -12,7 +12,6 @@ state= {
 	history= {
 		owner = GXC
 		add_core_of = GXC
-		add_core_of = CHI
 		
 		buildings = {
 			infrastructure = 3
@@ -22,15 +21,6 @@ state= {
 		}
 		victory_points = { 
 			10404 3 
-		}
-
-		1938.10.25 = {
-			if = {
-				limit = {
-					NOT = { has_dlc = "Waking the Tiger" }
-				}
-				CHI = { transfer_state = PREV }
-			}
 		}
 
 	}

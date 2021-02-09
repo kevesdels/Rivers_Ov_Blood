@@ -10,7 +10,6 @@ state={
 	history={
 		owner = XSM
 		add_core_of = XSM
-		add_core_of = CHI
 		
 		victory_points = {
 			12732 3 
@@ -20,20 +19,6 @@ state={
 			industrial_complex = 1
 			arms_factory = 1
 
-		}
-		1938.10.25 = {
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "Waking the Tiger" 
-					}
-
-				}
-				CHI = {
-					transfer_state = PREV
-
-				}
-			}
 		}
 	}
 }

@@ -7,7 +7,6 @@ state={
 	history={
 		owner = FIC
 		add_core_of = GXC
-		add_core_of = CHI
 		add_core_of = FIC
 
 		
@@ -22,17 +21,6 @@ state={
 				naval_base = 2
 			}
 
-		}
-
-		1938.10.25 = {
-			if = {
-				limit = {
-					NOT = { has_dlc = "Waking the Tiger" }
-				}
-				remove_core_of = GXC
-				CHI = { transfer_state = PREV }
-			}
-			controller = JAP
 		}
 	}
 
