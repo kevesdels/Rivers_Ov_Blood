@@ -1,0 +1,19 @@
+﻿###########################
+# Chonqing Event
+###########################
+
+add_namespace = cuba.chonqing_sige
+
+country_event = {
+	id = cuba.chonqing_sige.1
+	title = "The hammer strikes the gavel"
+	desc = cuba.chonqing_sige.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "For China!!!"
+		ai_chance = { factor = 90 }
+	}
+}
