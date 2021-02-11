@@ -3095,4 +3095,16 @@ spriteTypes = {
 		name = "GFX_picture_PRS_baltic_ritual"
 		texturefile = "gfx/event_pictures/PRS_baltic_ritual.tga"
 	}
+	frameAnimatedSpriteType = {
+    	name = "GFX_event_Bav_victory_royale"
+    	texturefile = "gfx/event_pictures/himmlar_victory.dds"
+    	noOfFrames = 50
+    	loadType = "INGAME"
+    	transparencecheck = no
+    	animation_rate_fps = 10
+    	looping = yes
+    	play_on_show = yes
+    	pause_on_loop = 0.0
+	}
+
 }

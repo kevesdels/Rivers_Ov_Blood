@@ -1,0 +1,34 @@
+focus_tree = {
+	id = german_focus_no_coallition
+		country = {
+		tag = BAV
+		factor = 0
+	}
+
+	continuous_focus_position = { x = 50 y = 3000 }
+	
+	
+	shared_focus = GER_rotevolksarmee
+	shared_focus = GER_rotevolksflotte
+	shared_focus = GER_roteluftwaffe
+	shared_focus = GER_germaneconomy
+	
+
+	#Focus for German Revanchism
+	focus = {
+		id = GER_a_new_germany
+		icon = GFX_focus_GER_german_revanchism
+		x = 5
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+		 add_popularity = { ideology = pelekist popularity = 0.1 }
+		}
+	}
+
+
+}

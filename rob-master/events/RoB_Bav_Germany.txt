@@ -1,0 +1,31 @@
+##########################
+###Socialist German Events
+##########################
+
+add_namespace = pelekist_germany
+
+
+country_event = { ###Germany in 1934
+id = pelekist_germany.1
+title = pelekist_germany.1.t
+desc = pelekist_germany.1.d
+picture = GFX_event_Bav_victory_royale
+fire_only_once = yes
+
+trigger = {
+tag = BAV
+date > 1934.1.1
+}
+country_exists = BAV
+mean_time_to_happen = { days = 2 }
+
+option = {
+name = pelekist_germany.1.a
+add_political_power = 10
+hidden_effect = {
+BAV = { country_event = { id = pelekist_germany.2 days = 15 } }
+}
+hidden_effect = { country_event = { id = pelekist_germany.2 days = 35 } }
+}
+}
+

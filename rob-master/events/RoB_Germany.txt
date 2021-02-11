@@ -1527,3 +1527,43 @@ country_event = { ###modernist art
   add_political_power = 10
 }
 }
+country_event = { ###modernist art
+ id = spartakus_germany.47
+ title = "Danish Puppet State"
+ desc = spartakus_germany.47.d
+ fire_only_once = yes
+ picture = GFX_picture_russia_kazan
+  
+ trigger = {
+  tag = GER
+  DEN = {is_puppet_of = GER}
+ }
+ 
+ mean_time_to_happen = { days = 0 }
+
+ option = {
+  name = "One More Step To A Better Europe"
+  GER = {set_state_owner = 804}
+  GER = {set_state_owner = 796}
+  GER = {set_state_owner = 1078} 
+  DEN = {every_state = {add_manpower = 10000}}
+  DEN = {transfer_navy = {
+    target = GER
+    }
+  DEN = {retire_ideology_leader = socialist}
+  DEN = {set_country_leader_ideology = socialist}
+  DEN = {create_country_leader = {
+    name = "Ernst Thalmann"
+    desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+    picture = "Ernst_Thälmann.tga"
+    expire = "1965.1.1"
+    ideology = marxism_leninism
+    traits = {
+     
+    }
+  }
+  }
+  }
+  }
+  }
+}

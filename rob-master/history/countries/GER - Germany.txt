@@ -215,8 +215,20 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
+	name = "John Sieg"
+	picture = "John_Sieg.dds"
+	traits = { trickster trait_reckless media_personality }
+	skill = 1
+	id = 4
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
 	name = "Walther von Seydlitz-Kurzbach"
-	picture = "Portrait_Germany_Erwin_Rommel.dds"
+	picture = "serwitz.dds"
 	traits = { trickster trait_reckless harsh_leader war_hero }
 	skill = 2
 	id = 5
@@ -240,7 +252,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Ernst Thälmann"
-	picture = "Portrait_Germany_Erwin_Rommel.dds"
+	picture = "Ernst_Thälmann.tga"
 	traits = { politically_connected trait_reckless aggressive_assaulter }
 	skill = 2
 	id = 7
@@ -252,7 +264,7 @@ create_corps_commander = {
 
 create_field_marshal = {
 	name = "Karl Liebknecht"
-	picture = "Portrait_Germany_Erwin_Rommel.dds"
+	picture = "karl_liebknecht.dds"
 	traits = { politically_connected trait_reckless war_hero inspirational_leader  }
 	skill = 2
 	id = 8
@@ -275,6 +287,30 @@ create_field_marshal = {
 }
 
 create_corps_commander = {
+	name = "Georg Freiherr Von Boeselager"
+	picture = "Georg_Freiherr_Von_Boeselager.tga"
+	traits = { politically_connected }
+	skill = 1
+	id = 12
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Otto Herfurth"
+	picture = "Otto_Herfurth.tga"
+	traits = { infantry_leader }
+	skill = 2
+	id = 12
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
 	name = "Fritz Erich Fellgiebel"
 	picture = "Portrait_GER_Fritz Erich Fellgiebel.tga"
 	traits = { trickster inflexible_strategist war_hero }
@@ -288,7 +324,7 @@ create_corps_commander = {
 
 create_field_marshal = {
 	name = "Kurt Eisner"
-	picture = "Portrait_Germany_Erwin_Rommel.dds"
+	picture = "kurt_eisner.tga"
 	traits = { politically_connected trait_reckless war_hero }
 	skill = 2
 	id = 10
@@ -299,8 +335,8 @@ create_field_marshal = {
 }
 
 create_field_marshal = {
-	name = "Franz Erdmann Mehring"
-	picture = "Portrait_Germany_Erwin_Rommel.dds"
+	name = "Karl Hoffman"
+	picture = "Karl_Hoffman.dds"
 	traits = { inspirational_leader skilled_staffer war_hero  }
 	skill = 2
 	id = 11
@@ -312,7 +348,7 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Erich Mühsam"
-	picture = "Portrait_Germany_Erwin_Rommel.dds"
+	picture = "Erich_Mühsam.tga"
 	traits = { politically_connected inflexible_strategist harsh_leader war_hero }
 	skill = 3
 	id = 12
