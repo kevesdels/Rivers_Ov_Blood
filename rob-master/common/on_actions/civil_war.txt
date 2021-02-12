@@ -1,0 +1,17 @@
+on_actions = {
+	set_variable = { germany_civil_war = 365 }
+	on_daily = {
+		effect = {
+			trigger = {
+				tag = GER
+				has_country_flag = civil_war
+			   }
+		set_temp_variable = { temp1 = germany_civil_war }
+		set_temp_variable = { temp2 = 1 }
+		subtract_from_temp_variable = { temp1 = temp2 }
+		set_variable = { germany_civil_war = temp1 }
+		
+
+		}
+	}
+}

@@ -634,6 +634,7 @@ option = { ###Revolution continues!
 name = spartakus_germany.14.a
 add_war_support = 0.15
 set_country_flag = GER_BAV_rebbelion
+set_country_flag = civil_war
 hidden_effect = { 
 52 = {
 add_core_of = BAV
@@ -1527,7 +1528,7 @@ country_event = { ###modernist art
   add_political_power = 10
 }
 }
-country_event = { ###modernist art
+country_event = { ###homofash art
  id = spartakus_germany.47
  title = "Danish Puppet State"
  desc = spartakus_germany.47.d
@@ -1566,4 +1567,184 @@ country_event = { ###modernist art
   }
   }
   }
+  country_event = { ###modernist art
+  id = spartakus_germany.48
+  title = "Collapse Iminent"
+  desc = spartakus_germany.48.d
+  fire_only_once = yes
+  picture = GFX_picture_russia_kazan
+   
+  trigger = {
+   tag = GER
+   has_country_flag = collapse
+  }
+  
+  mean_time_to_happen = { days = 3 }
+ 
+  option = {
+   name = "Modern Art"
+   BAD = {transfer_state = 791 }
+   BAD = {transfer_state = 1215 }
+   BAD = {add_state_core = 791 }
+   BAD = {add_state_core = 1215 }
+   WUR = {transfer_state = 50 }
+   RHN = {transfer_state = 57 }
+   WUR = {transfer_state = 799 }
+   WUR = {add_state_core = 50 }
+   WUR = {add_state_core = 799}
+   OLD = {transfer_state = 1211 }
+   OLD = {transfer_state = 1210 }
+   OLD = {add_state_core = 1211 }
+   OLD = {add_state_core = 1208 }
+   OLD = {add_state_core = 1210 }
+   HAN = {transfer_state = 979 }
+   HAN = {transfer_state = 1208 }
+   HAN = {add_state_core = 56 }
+   HAN = {add_state_core = 979 }
+ }
+ }
+ country_event = { ###modernist art
+ id = spartakus_germany.49
+ title = "Collapse Iminent"
+ desc = spartakus_germany.48.d
+ fire_only_once = yes
+ picture = GFX_picture_russia_kazan
+  
+ trigger = {
+  tag = GER
+  has_country_flag = collapse2
+ }
+ 
+ mean_time_to_happen = { days = 3 }
+
+ option = {
+  name = "Modern Art"
+  HAN = {transfer_state = 56 }
+  HAN = {transfer_state = 1209 }
+  HAN = {add_state_core = 1205 }
+  HAN = {add_state_core = 1209 }
+  SWH = {transfer_state = 58 }
+  SWH = {transfer_state = 58 }
+  HAN = {add_state_core = 59 }
+  WUR = {add_state_core = 799}
+  HAN = {transfer_state = 59 }
+  HES = {transfer_state = 790 }
+  HES = {add_state_core = 55 }
+  HES = {add_state_core = 790 }
+  HES = {transfer_state = 55 }
+}
+}
+country_event = { ###modernist art
+id = spartakus_germany.50
+title = "Collapse Iminent"
+desc = spartakus_germany.48.d
+fire_only_once = yes
+picture = GFX_picture_russia_kazan
+ 
+trigger = {
+ tag = GER
+ has_country_flag = collapse3
+}
+
+mean_time_to_happen = { days = 3 }
+
+option = {
+ name = "Modern Art"
+ HAN = {transfer_state = 1091 }
+ HAN = {transfer_state = 1205 }
+ HAN = {add_state_core = 1091 }
+ HAN = {add_state_core = 1204 }
+ HAN = {transfer_state = 1204 }
+ OLD = {transfer_state = 1208 }
+ OLD = {add_state_core = 1208 }
+ OLD = {add_state_core = 1209}
+ SAX = {transfer_state = 65 }
+ SAX = {transfer_state = 1092 }
+ SAX = {transfer_state = 795 }
+ SAX = {add_state_core = 795 }
+ SAX = {add_state_core = 65 }
+ SAX = {add_state_core = 1092 } 
+ POM = {add_state_core = 1095 }
+ POM = {transfer_state = 1095 }
+
+}
+}
+country_event = { ###modernist art
+id = spartakus_germany.51
+title = "U Mad?"
+desc = spartakus_germany.48.d
+fire_only_once = yes
+picture = GFX_picture_russia_kazan
+ 
+trigger = {
+ tag = GER
+ has_country_flag = collapse3
+}
+
+mean_time_to_happen = { days = 3 }
+
+option = {
+ name = "trollolo"
+ PRS = {transfer_state = 797 }
+ PRS = {add_state_core = 797 }
+ HAN = {add_state_core = 1204 }
+ HAN = {transfer_state = 1204 }
+ OLD = {transfer_state = 1208 }
+ OLD = {add_state_core = 1208 }
+ OLD = {add_state_core = 1209}
+ SAX = {transfer_state = 65 }
+ SAX = {transfer_state = 1092 }
+ SAX = {transfer_state = 795 }
+ SAX = {add_state_core = 795 }
+ SAX = {add_state_core = 65 }
+ SAX = {add_state_core = 1092 } 
+ POM = {add_state_core = 1095 }
+ POM = {transfer_state = 1095 }
+
+}
+}
+country_event = { ###modernist art
+id = spartakus_germany.52
+title = "U Mad?"
+desc = spartakus_germany.52.d
+fire_only_once = yes
+picture = GFX_picture_russia_kazan
+ 
+trigger = {
+ tag = GER
+ has_country_flag = collapse3
+}
+
+mean_time_to_happen = { days = 3 }
+
+option = {
+ name = "It's over"
+ TRG = {transfer_state = 60 }
+ TRG = {transfer_state = 1212 }
+ TRG = {transfer_state = 1207 }
+ TRG = {transfer_state = 1094 }
+ TRG = {transfer_state = 1206 }
+ BDB = {transfer_state = 793 }
+ BDB = {transfer_state = 794 }
+ BDB = {transfer_state = 794 }
+ BDB = {transfer_state = 1093 }
+ BDB = {transfer_state = 1203 }
+ BDB = {transfer_state = 64 }
+ POL = {transfer_state = 68 }
+ POM = {transfer_state = 63 }
+ PRS = {transfer_state = 797 }
+ MSZ = {transfer_state = 61 }
+ MSZ = {transfer_state = 1214 }
+ MSZ = {transfer_state = 1213 }
+ MSZ = {transfer_state = 62 }
+ BAV = {transfer_state = 52 }
+ BAV = {transfer_state = 798 }
+ BAV = {transfer_state = 800 }
+ BCP = {transfer_state = 54 }
+ BRP = {transfer_state = 1085 }
+ BRP = {transfer_state = 53 }
+ BRP = {transfer_state = 1087 }
+ BRP = {transfer_state = 1086 }
+}
+}
 }
