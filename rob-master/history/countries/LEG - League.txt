@@ -1,6 +1,6 @@
-﻿capital = 750
+﻿capital = 592 
 
-oob = "CHI_1936"
+oob = ""
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "CHI_1936_naval_mtg"
@@ -68,9 +68,9 @@ set_popularities = {
 }
 
 create_country_leader = {
-	name = "Wu Peifu"
+	name = "Sun Chuanfang"
 	desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
-	picture = "Portrait_China_Chiang_Kai_Shek.dds"
+	picture = "Chiang_kai_shek.tga"
 	expire = "1965.1.1"
 	ideology = authoritharian_subtype
 	traits = {
@@ -206,17 +206,6 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Fu Zuoyi"
 	gfx = "GFX_portrait_chi_fu_zuoyi"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_field_marshal = {
-	name = "Zhang Xueliang"
-	gfx = "GFX_portrait_chi_zhang_xueliang"
 	traits = { }
 	skill = 3
 	attack_skill = 3
