@@ -53,7 +53,7 @@ add_ideas = {
 
 
 set_politics = {
-	ruling_party = social_democracy
+	ruling_party = authoritharian
 	last_election = "1933.7.1"
 	election_frequency = 36
 	elections_allowed = yes
@@ -64,8 +64,8 @@ set_popularities = {
 	democratic_socialist = 0
 	social_democracy = 37
 	social_liberal = 30
-	conservative = 23
-	authoritharian = 0
+	conservative = 10
+	authoritharian = 13
 	reactionary = 6
 	pelekist = 3
 }
@@ -92,7 +92,16 @@ create_country_leader = {
 		#
 	}
 }
-
+create_country_leader = {
+	name = "Frederick Charles"
+	desc = "POLITICS_AIMO_AALTONEN_DESC"
+	picture = "Frederick_Charles.tga"
+	expire = "1965.1.1"
+	ideology = authoritharian_democracy
+	traits = {
+		#
+	}
+}
 create_country_leader = {
 	name = "Vilho Annala"
 	desc = "POLITICS_VILHO_ANNALA_DESC"
