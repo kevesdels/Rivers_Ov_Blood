@@ -604,9 +604,9 @@ option = {
 	remove_core_of = AGR
 	remove_core_of = KAR
 }
-custom_effect_tooltip = 
  hidden_effect = {
  set_country_flag = triumph
+ LES = { country_event = { id = legion.36 days = 33 } }
  }
 }
 
@@ -809,3 +809,217 @@ option = {
 	 }
 	
 }
+
+ ### Returnist Faction gone
+ country_event = { 
+	id = legion.35
+	title = "Farewell of Old timers"
+	desc = "Returnist faction fucking leaves"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	 name = "Cute"
+	 set_country_flag = les_returnist_gone
+	 clear_variable = LES_faction_returnist
+	 Legion_faction_summ_calc = yes
+	 }
+	
+}
+
+
+ ###SIBERIAN CONGRESS
+
+ ###Start of it
+ country_event = { 
+	id = legion.36
+	title = legion.36.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	 name = legion.36.a
+	 hidden_effect = {
+		LES = { country_event = { id = legion.37 days = 3 } }
+		}
+	 }
+	
+}
+
+
+ ### Economy
+ country_event = { 
+	id = legion.37
+	title = legion.37.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	 name = legion.37.a
+	 hidden_effect = {
+		LES = { country_event = { id = legion.38 days = 3 } }
+		}
+	 }
+	option = {
+	name = legion.37.b
+	hidden_effect = {
+		LES = { country_event = { id = legion.38 days = 3 } }
+		}
+	}
+	option = {
+	name = legion.37.c
+	hidden_effect = {
+		LES = { country_event = { id = legion.38 days = 3 } }
+		}
+	}
+	
+}
+
+### The Political part
+country_event = { 
+	id = legion.38
+	title = legion.38.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	 name = legion.38.a
+	 hidden_effect = {
+		LES = { country_event = { id = legion.39 days = 3 } }
+		}
+	 }
+	option = {
+	name = legion.38.b
+	hidden_effect = {
+		LES = { country_event = { id = legion.39 days = 3 } }
+		}
+	}
+	option = {
+	name = legion.38.c
+	hidden_effect = {
+		LES = { country_event = { id = legion.39 days = 3 } }
+		}
+	}
+	
+}
+
+### The Ethnic question
+country_event = { 
+	id = legion.39
+	title = legion.39.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	 name = legion.39.a
+	 hidden_effect = {
+		LES = { country_event = { id = legion.40 days = 3 } }
+		}
+	 }
+	option = {
+	name = legion.39.b
+	hidden_effect = {
+		LES = { country_event = { id = legion.40 days = 3 } }
+		}
+	}
+	option = {
+	name = legion.39.c
+	hidden_effect = {
+		LES = { country_event = { id = legion.40 days = 3 } }
+		}
+	}
+	
+}
+
+
+### The Women
+country_event = { 
+	id = legion.40
+	title = legion.40.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	 name = legion.40.a
+	 hidden_effect = {
+		LES = { country_event = { id = legion.41 days = 3 } }
+		}
+	 }
+	option = {
+	name = legion.40.b
+	hidden_effect = {
+		LES = { country_event = { id = legion.41 days = 3 } }
+		}
+	}
+	option = {
+	name = legion.40.c
+	hidden_effect = {
+		LES = { country_event = { id = legion.41 days = 3 } }
+		}
+	}
+	
+}
+
+### The end of slavic congress
+country_event = { 
+	id = legion.41
+	title = legion.41.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	 name = legion.41.a
+
+	 }
+	
+}
+ ###temp event for debugging
+ country_event = { 
+	id = legion.100
+	title = "Debugging Politics"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	###Confederation
+	option = {
+	 name = "Confederation"
+	 set_country_flag = les_confederation
+	 }
+	###EastandWest 
+	option = {
+	name = "East and West, uko in east"
+	set_country_flag = les_bigeastslav
+	}
+	###EastandWest
+	option = {
+		name =  "East and West, no uko in east"
+		set_country_flag = les_onlyruseastslav
+		}
+	###Unitary
+	option = {
+		name =  "Unitary"
+		set_country_flag = les_unitary
+		}
+}
+
+
+ ###temp event for debugging
+ country_event = { 
+	id = legion.101
+	title = "Debugging Politics"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	###Confederation
+	option = {
+	 name = "Baltics in west slavia"
+	 set_country_flag = les_balticinwestslav
+	 }
+	###EastandWest 
+	option = {
+	name = "No Baltics in west slavia"
+	}
+}
+
+
+

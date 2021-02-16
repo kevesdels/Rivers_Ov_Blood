@@ -1633,7 +1633,29 @@ LES_destroy_IRK = {
  }
  }
 
-
+ LES_destroy_proclaim_russia_united = {
+  fire_only_once = yes
+   available = {
+  has_full_control_of_state = 574
+  has_full_control_of_state = 560
+  has_full_control_of_state = 567
+  has_full_control_of_state = 40
+  has_full_control_of_state = 570
+  has_full_control_of_state = 568
+  has_full_control_of_state = 653
+  has_full_control_of_state = 576
+  has_full_control_of_state = 217
+  has_full_control_of_state = 257
+  has_full_control_of_state = 219
+  has_full_control_of_state = 249
+  }
+  complete_effect = {
+    set_country_flag = les_russia_secured
+  }
+  ai_will_do = {
+   base = 200
+  }
+  }
 ###Start of cores
 
 
@@ -3212,4 +3234,858 @@ les_5th_invades = {
 
 
 ##end of invasion
+}
+
+LES_easterneurope = {
+
+les_ee_ukr = {
+  target_trigger = { FROM = {tag = UKR} }
+  visible = {
+    NOT = {
+       tag = UKR
+       is_puppet_of = LES
+     }
+     MON = {
+      exists = yes
+     }
+     is_neighbor_of = UKR
+ }
+ available = {
+  is_neighbor_of = UKR
+    NOT = {
+   is_in_faction_with = UKR
+   is_puppet_of = LES
+   has_country_flag = LES_justifying
+  }
+  has_war = no
+ }
+ ai_will_do = {
+  base = 10
+   modifier = {
+   factor = 200
+    ROOT = {
+   strength_ratio = {
+    tag = UKR
+    ratio > 0.75
+   }
+  }
+   }
+ }
+ cost = 50
+ fire_only_once = yes
+ days_remove = 20
+ complete_effect = {
+ set_country_flag = LES_justifying
+ }
+ remove_effect = {
+  ROOT = {
+ declare_war_on = { target = UKR type = annex_everything }
+ clr_country_flag = LES_justifying
+  }
+ }
+ }
+}
+
+LES_easterneurope = {
+
+  les_ee_ukr = {
+    target_trigger = { FROM = {tag = UKR} }
+    visible = {
+      NOT = {
+         tag = UKR
+         is_puppet_of = LES
+       }
+       MON = {
+        exists = yes
+       }
+       is_neighbor_of = UKR
+   }
+   available = {
+    is_neighbor_of = UKR
+      NOT = {
+     is_in_faction_with = UKR
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = UKR
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = UKR type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+ 
+  les_ee_blr = {
+    target_trigger = { FROM = {tag = BLR} }
+    visible = {
+      NOT = {
+         tag = BLR
+         is_puppet_of = LES
+       }
+       BLR = {
+        exists = yes
+       }
+       is_neighbor_of = BLR
+   }
+   available = {
+    is_neighbor_of = BLR
+      NOT = {
+     is_in_faction_with = BLR
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = BLR
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = BLR type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+  les_ee_cbr = {
+    target_trigger = { FROM = {tag = CBR} }
+    visible = {
+      NOT = {
+         tag = CBR
+         is_puppet_of = LES
+       }
+       CBR = {
+        exists = yes
+       }
+       is_neighbor_of = CBR
+   }
+   available = {
+    is_neighbor_of = CBR
+      NOT = {
+     is_in_faction_with = CBR
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = CBR
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = CBR type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+  les_ee_dbr = {
+    target_trigger = { FROM = {tag = DBR} }
+    visible = {
+      NOT = {
+         tag = DBR
+         is_puppet_of = LES
+       }
+       DBR = {
+        exists = yes
+       }
+       is_neighbor_of = DBR
+   }
+   available = {
+    is_neighbor_of = DBR
+      NOT = {
+     is_in_faction_with = DBR
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = DBR
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = DBR type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+  les_ee_dsu = {
+    target_trigger = { FROM = {tag = DSU } }
+    visible = {
+      NOT = {
+         tag = DSU
+         is_puppet_of = LES
+       }
+       DSU = {
+        exists = yes
+       }
+       is_neighbor_of = DSU
+   }
+   available = {
+    is_neighbor_of = DSU
+      NOT = {
+     is_in_faction_with = DSU
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = DSU
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = DSU type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+  
+   les_ee_pol = {
+    target_trigger = { FROM = {tag = POL } }
+    visible = {
+      NOT = {
+         tag = POL
+         is_puppet_of = LES
+       }
+       POL = {
+        exists = yes
+       }
+       is_neighbor_of = POL
+   }
+   available = {
+    is_neighbor_of = POL
+      NOT = {
+     is_in_faction_with = POL
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = POL
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = POL type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_cze = {
+    target_trigger = { FROM = {tag = CZE } }
+    visible = {
+      NOT = {
+         tag = CZE
+         is_puppet_of = LES
+       }
+       CZE = {
+        exists = yes
+       }
+       is_neighbor_of = CZE
+   }
+   available = {
+    is_neighbor_of = CZE
+      NOT = {
+     is_in_faction_with = CZE
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = CZE
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = CZE type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_slo = {
+    target_trigger = { FROM = {tag = SLO } }
+    visible = {
+      NOT = {
+         tag = SLO
+         is_puppet_of = LES
+       }
+       SLO = {
+        exists = yes
+       }
+       is_neighbor_of = SLO
+   }
+   available = {
+    is_neighbor_of = SLO
+      NOT = {
+     is_in_faction_with = SLO
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = SLO
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = SLO type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_slv = {
+    target_trigger = { FROM = {tag = SLV } }
+    visible = {
+      NOT = {
+         tag = SLV
+         is_puppet_of = LES
+       }
+       SLV = {
+        exists = yes
+       }
+       is_neighbor_of = SLV
+   }
+   available = {
+    is_neighbor_of = SLV
+      NOT = {
+     is_in_faction_with = SLV
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = SLV
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = SLV type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_hun = {
+    target_trigger = { FROM = {tag = HUN } }
+    visible = {
+      NOT = {
+         tag = HUN
+         is_puppet_of = LES
+       }
+       HUN = {
+        exists = yes
+       }
+       is_neighbor_of = HUN
+   }
+   available = {
+    is_neighbor_of = HUN
+      NOT = {
+     is_in_faction_with = HUN
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = HUN
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = HUN type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_rom = {
+    target_trigger = { FROM = {tag = ROM } }
+    visible = {
+      NOT = {
+         tag = ROM
+         is_puppet_of = LES
+       }
+       ROM = {
+        exists = yes
+       }
+       is_neighbor_of = ROM
+   }
+   available = {
+    is_neighbor_of = ROM
+      NOT = {
+     is_in_faction_with = ROM
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = ROM
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = ROM type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_bul = {
+    target_trigger = { FROM = {tag = BUL } }
+    visible = {
+      NOT = {
+         tag = BUL
+         is_puppet_of = LES
+       }
+       BUL = {
+        exists = yes
+       }
+       is_neighbor_of = BUL
+   }
+   available = {
+    is_neighbor_of = BUL
+      NOT = {
+     is_in_faction_with = BUL
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = BUL
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = BUL type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_ser = {
+    target_trigger = { FROM = {tag = SER } }
+    visible = {
+      NOT = {
+         tag = SER
+         is_puppet_of = LES
+       }
+       SER = {
+        exists = yes
+       }
+       is_neighbor_of = SER
+   }
+   available = {
+    is_neighbor_of = SER
+      NOT = {
+     is_in_faction_with = SER
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = SER
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = BUL type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_ser = {
+    target_trigger = { FROM = {tag = SER } }
+    visible = {
+      NOT = {
+         tag = SER
+         is_puppet_of = LES
+       }
+       SER = {
+        exists = yes
+       }
+       is_neighbor_of = SER
+   }
+   available = {
+    is_neighbor_of = SER
+      NOT = {
+     is_in_faction_with = SER
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = SER
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = SER type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_ser = {
+    target_trigger = { FROM = {tag = SER } }
+    visible = {
+      NOT = {
+         tag = SER
+         is_puppet_of = LES
+       }
+       SER = {
+        exists = yes
+       }
+       is_neighbor_of = SER
+   }
+   available = {
+    is_neighbor_of = SER
+      NOT = {
+     is_in_faction_with = SER
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = SER
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = SER type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_cro = {
+    target_trigger = { FROM = {tag = CRO } }
+    visible = {
+      NOT = {
+         tag = CRO
+         is_puppet_of = LES
+       }
+       CRO = {
+        exists = yes
+       }
+       is_neighbor_of = CRO
+   }
+   available = {
+    is_neighbor_of = CRO
+      NOT = {
+     is_in_faction_with = CRO
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = CRO
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = CRO type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_bos = {
+    target_trigger = { FROM = {tag = BOS } }
+    visible = {
+      NOT = {
+         tag = BOS
+         is_puppet_of = LES
+       }
+       BOS = {
+        exists = yes
+       }
+       is_neighbor_of = BOS
+   }
+   available = {
+    is_neighbor_of = BOS
+      NOT = {
+     is_in_faction_with = BOS
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = BOS
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = BOS type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+##end of LES_easterneurope
 }

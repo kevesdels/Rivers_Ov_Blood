@@ -1,0 +1,1235 @@
+
+add_namespace = legion_political
+
+
+### Ukraine
+country_event = {
+ id = legion_political.1
+ desc = legion_political.1.d
+ title = "Fate of Ukraine"
+ fire_only_once = yes
+
+ mean_time_to_happen = { days = 1 }
+ trigger = {
+	has_war = no
+	UKR = { NOT = { is_puppet_of = ROOT } }
+	202 = { is_owned_and_controlled_by = ROOT }
+	 tag = LES
+   }
+
+###Federation option
+ option = {
+	name = "Create the Slavic Confederation Member State"
+	trigger = {
+	has_country_flag = les_confederation
+	}
+	ai_chance = { factor = 50 }
+	puppet = UKR
+	every_owned_state = {
+	  limit = { 
+	   NOT = {
+		is_claim_or_core = yes
+	   }
+		is_core_of = UKR
+	  }
+	  UKR = { transfer_state = PREV }
+	}
+   if = { 
+	limit = { ROOT = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes } }
+   UKR = {
+	set_cosmetic_tag = LES_gadja_puppet
+	} 
+   }  
+   }
+
+   ###Federation ignore
+   option = {
+	name = "Continue Military Occupation"
+	trigger = {
+	has_country_flag = les_confederation
+	}
+	ai_chance = { factor = 0 }
+	add_stability =-0.1
+	add_war_support =-0.1
+	add_political_power =-100
+   }
+
+   ###Ukraine in West Slavia, West slavia not formed yet
+   option = {
+	name = "Create West Slavic Federation"
+	trigger = {
+	has_country_flag = les_onlyruseastslav
+	NOT = { has_global_flag = LES_westslavformed }
+	}
+	puppet = UKR
+	every_owned_state = {
+	  limit = { 
+	   NOT = {
+		is_claim_or_core = yes
+	   }
+		is_core_of = UKR
+	  }
+	  UKR = { transfer_state = PREV }
+	}
+	UKR = {
+		set_cosmetic_tag = LES_westslav
+		set_country_flag = LES_westslavformedhere
+		}
+		set_global_flag = LES_westslavformed 
+   }
+
+   ###Ukraine in West Slavia, West slavia has been formed 
+   option = {
+	name = "Expand our West Slav Ally"
+	trigger = {
+	has_country_flag = les_onlyruseastslav
+	has_global_flag = LES_westslavformed
+	}
+	every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = UKR
+		}
+		every_country = {
+			limit = {
+				has_country_flag = LES_westslavformedhere
+			}
+			transfer_state = PREV
+			}
+  		}
+	}
+
+   ###Unitary/ Ukraine Not in west slavia
+   option = {
+	name = "Welcome Home, Brothers"
+	trigger = {
+		OR = {
+			has_country_flag = les_unitary
+			has_country_flag = les_bigeastslav
+		}
+	}
+	set_country_flag = LES_may_start_integrating_ukr
+  }
+  
+}
+
+### Belarus
+country_event = {
+	id = legion_political.2
+	desc = legion_political.2.d
+	title = "Fate of Belarus"
+	fire_only_once = yes
+   
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		tag = LES
+	   has_war = no
+	   BLR = { NOT = { is_puppet_of = ROOT } }
+	   206 = { is_owned_and_controlled_by = ROOT }
+	  }
+   
+   ###Federation option
+	option = {
+	   name = "Create the Slavic Confederation Member State"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 150 }
+	   puppet = BLR
+	   BLR = { remove_ideas = { belarusian_civil_war BLR_lithuanian_influence } }
+	   every_owned_state = {
+		 limit = { 
+		  NOT = {
+		   is_claim_or_core = yes
+		  }
+		  OR = {
+		  is_core_of = BLR
+		  is_core_of = CBR
+		  is_core_of = DBR
+		  }
+		 }
+		 add_core_of = BLR
+		 BLR = { transfer_state = PREV }
+	 }
+	 BLR = {
+		set_cosmetic_tag = LES_gadja_puppet
+		} 
+	  }
+   
+	  ###Federation ignore
+	  option = {
+	   name = "Continue Military Occupation"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 0 }
+	   add_stability =-0.04
+	   add_war_support =-0.04
+	   add_political_power =-40
+	  }
+   
+	  ###Belarus in West Slavia, West slavia not formed yet
+	  option = {
+	   name = "Create West Slavic Federation"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   NOT = { has_global_flag = LES_westslavformed }
+	   }
+	   puppet = BLR
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		 OR = {
+		 is_core_of = BLR
+		 is_core_of = CBR
+		 is_core_of = DBR
+		 }
+		}
+		add_core_of = BLR
+		BLR = { transfer_state = PREV }
+	    }
+	    BLR = {
+		   set_cosmetic_tag = LES_westslav
+		   set_country_flag = LES_westslavformedhere
+		   }
+		   set_global_flag = LES_westslavformed 
+	  }
+   
+	  ###Belarus in West Slavia, West slavia has been formed 
+	  option = {
+	   name = "Expand our West Slav Ally"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   has_global_flag = LES_westslavformed
+	   }
+	   every_owned_state = {
+		limit = { 
+			NOT = {
+			 is_claim_or_core = yes
+			}
+			OR = {
+			is_core_of = BLR
+			is_core_of = CBR
+			is_core_of = DBR
+			}
+		   }
+		   every_country = {
+			limit = {
+				has_country_flag = LES_westslavformedhere
+			}
+			transfer_state = PREV
+		}
+	   }
+	 }
+   
+	  ###Unitary/ Belarus Not in west slavia
+	  option = {
+	   name = "Welcome Home, Brothers"
+	   trigger = {
+		   OR = {
+			   has_country_flag = les_unitary
+			   has_country_flag = les_bigeastslav
+		   }
+	   }
+	   set_country_flag = LES_may_start_integrating_blr
+	 }
+	 
+   }
+
+### Poland
+country_event = {
+	id = legion_political.3
+	desc = legion_political.3.d
+	title = "Fate of Poland"
+	fire_only_once = yes
+   
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		tag = LES
+	   has_war = no
+	   POL = { NOT = { is_puppet_of = ROOT } }
+	   10 = { is_owned_and_controlled_by = ROOT }
+	  }
+   
+   ###Federation option
+	option = {
+	   name = "Create the Slavic Confederation Member State"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 150 }
+	   puppet = POL
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = POL
+		}
+		POL = { transfer_state = PREV }
+	  }
+	  POL = {
+		set_cosmetic_tag = LES_gadja_puppet
+		} 
+	  }
+   
+	  ###Federation ignore
+	  option = {
+	   name = "Continue Military Occupation"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 0 }
+	   add_stability =-0.1
+	   add_war_support =-0.1
+	   add_political_power =-100
+	  }
+   
+	  ###Polannd in West Slavia, West slavia not formed yet
+	  option = {
+	   name = "Create West Slavic Federation"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   NOT = { has_global_flag = LES_westslavformed }
+	   }
+	   puppet = POL
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = POL
+		}
+		POL = { transfer_state = PREV }
+	  }
+	    POL = {
+		   set_cosmetic_tag = LES_westslav
+		   set_country_flag = LES_westslavformedhere
+		   }
+		   set_global_flag = LES_westslavformed 
+	  }
+   
+	  ###Poland in West Slavia, West slavia has been formed 
+	  option = {
+	   name = "Expand our West Slav Ally"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   has_global_flag = LES_westslavformed
+	   }
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = POL
+		}
+		   every_country = {
+			limit = {
+				has_country_flag = LES_westslavformedhere
+			}
+			transfer_state = PREV
+		}
+	   }
+	 }
+   
+	  ###Unitary
+	  option = {
+	   name = "Welcome Home, Brothers"
+	   trigger = {
+		   OR = {
+			   has_country_flag = les_unitary
+			   has_country_flag = les_bigeastslav
+		   }
+	   }
+	   set_country_flag = LES_may_start_integrating_pol
+	 }
+	 
+   }
+
+
+### Czechia
+country_event = {
+	id = legion_political.4
+	desc = legion_political.4.d
+	title = "Fate of Czechia"
+	fire_only_once = yes
+   
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		tag = LES
+	   has_war = no
+	   CZE = { NOT = { is_puppet_of = ROOT } }
+	   9 = { is_owned_and_controlled_by = ROOT }
+	  }
+   
+   ###Federation option
+	option = {
+	   name = "Create the Slavic Confederation Member State"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 150 }
+	   puppet = CZE
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = CZE
+		}
+		CZE = { transfer_state = PREV }
+	  }
+	  CZE = {
+		set_cosmetic_tag = LES_gadja_puppet
+		} 
+	  }
+   
+	  ###Federation ignore
+	  option = {
+	   name = "Continue Military Occupation"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 0 }
+	   add_stability =-0.1
+	   add_war_support =-0.1
+	   add_political_power =-100
+	  }
+   
+	  ###West slavia not formed yet
+	  option = {
+	   name = "Create West Slavic Federation"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   NOT = { has_global_flag = LES_westslavformed }
+	   }
+	   puppet = CZE
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = CZE
+		}
+		CZE = { transfer_state = PREV }
+	  }
+	   CZE = {
+		   set_cosmetic_tag = LES_westslav
+		   set_country_flag = LES_westslavformedhere
+		   }
+		   set_global_flag = LES_westslavformed 
+	  }
+   
+	  ###West slavia has been formed 
+	  option = {
+	   name = "Expand our West Slav Ally"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   has_global_flag = LES_westslavformed
+	   }
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = CZE
+		}
+		   every_country = {
+			limit = {
+				has_country_flag = LES_westslavformedhere
+			}
+			transfer_state = PREV
+		}
+	   }
+	 }
+   
+	  ###Unitary
+	  option = {
+	   name = "Welcome Home, Brothers"
+	   trigger = {
+		   OR = {
+			   has_country_flag = les_unitary
+			   has_country_flag = les_bigeastslav
+		   }
+	   }
+	   set_country_flag = LES_may_start_integrating_cze
+	 }
+	 
+   }
+
+### Slovakia
+country_event = {
+	id = legion_political.5
+	desc = legion_political.5.d
+	title = "Fate of Slovakia"
+	fire_only_once = yes
+   
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		tag = LES
+	   has_war = no
+	   SLO = { NOT = { is_puppet_of = ROOT } }
+	   70 = { is_owned_and_controlled_by = ROOT }
+	  }
+   
+   ###Federation option
+	option = {
+	   name = "Create the Slavic Confederation Member State"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 150 }
+	   puppet = SLO
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = SLO
+		}
+		SLO = { transfer_state = PREV }
+	  }
+	  SLO = {
+		set_cosmetic_tag = LES_gadja_puppet
+		} 
+	  }
+   
+	  ###Federation ignore
+	  option = {
+	   name = "Continue Military Occupation"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 0 }
+	   add_stability =-0.05
+	   add_war_support =-0.05
+	   add_political_power =-50
+	  }
+   
+	  ###West slavia not formed yet
+	  option = {
+	   name = "Create West Slavic Federation"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   NOT = { has_global_flag = LES_westslavformed }
+	   }
+	   puppet = SLO
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = SLO
+		}
+		SLO = { transfer_state = PREV }
+	  }
+	   SLO = {
+		   set_cosmetic_tag = LES_westslav
+		   set_country_flag = LES_westslavformedhere
+		   }
+		   set_global_flag = LES_westslavformed 
+	  }
+   
+	  ###West slavia has been formed 
+	  option = {
+	   name = "Expand our West Slav Ally"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   has_global_flag = LES_westslavformed
+	   }
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = SLO
+		}
+		   every_country = {
+			limit = {
+				has_country_flag = LES_westslavformedhere
+			}
+			transfer_state = PREV
+		}
+	   }
+	 }
+   
+	  ###Unitary
+	  option = {
+	   name = "Welcome Home, Brothers"
+	   trigger = {
+		   OR = {
+			   has_country_flag = les_unitary
+			   has_country_flag = les_bigeastslav
+		   }
+	   }
+	   set_country_flag = LES_may_start_integrating_slo
+	 }
+	 
+   }
+
+   ### Hungary
+ country_event = {
+	id = legion_political.6
+	desc = legion_political.6.d
+	title = "Fate of Hungary"
+	fire_only_once = yes
+   
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		tag = LES
+	   has_war = no
+	   HUN = { NOT = { is_puppet_of = ROOT } }
+	   1025 = { is_owned_and_controlled_by = ROOT }
+	  }
+   
+   ###Federation option
+	option = {
+	   name = "Create the Slavic Confederation Member State"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 150 }
+	   puppet = SLO
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = HUN
+		}
+		HUN = { transfer_state = PREV }
+	  }
+	  HUN = {
+		set_cosmetic_tag = LES_gadja_puppet
+		} 
+	  }
+   
+	  ###Federation ignore
+	  option = {
+	   name = "Continue Military Occupation"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 0 }
+	   add_stability =-0.05
+	   add_war_support =-0.05
+	   add_political_power =-50
+	  }
+   
+	  ###West slavia not formed yet
+	  option = {
+	   name = "Create West Slavic Federation"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   NOT = { has_global_flag = LES_westslavformed }
+	   }
+	   puppet = HUN
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = HUN
+		}
+		HUN = { transfer_state = PREV }
+	  }
+	  HUN = {
+		   set_cosmetic_tag = LES_westslav
+		   set_country_flag = LES_westslavformedhere
+		   }
+		   set_global_flag = LES_westslavformed 
+	  }
+   
+	  ###West slavia has been formed 
+	  option = {
+	   name = "Expand our West Slav Ally"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   has_global_flag = LES_westslavformed
+	   }
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = HUN
+		}
+		   every_country = {
+			limit = {
+				has_country_flag = LES_westslavformedhere
+			}
+			transfer_state = PREV
+		}
+	   }
+	 }
+   
+	  ###Unitary
+	  option = {
+	   name = "Welcome Home, Brothers"
+	   trigger = {
+		   OR = {
+			   has_country_flag = les_unitary
+			   has_country_flag = les_bigeastslav
+		   }
+	   }
+	   set_country_flag = LES_may_start_integrating_hun
+	 }
+	 
+   }
+
+      ### Romania
+ country_event = {
+	id = legion_political.7
+	desc = legion_political.7.d
+	title = "Fate of Romania"
+	fire_only_once = yes
+   
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		tag = LES
+	   has_war = no
+	   ROM = { NOT = { is_puppet_of = ROOT } }
+	   46 = { is_owned_and_controlled_by = ROOT }
+	  }
+   
+   ###Federation option
+	option = {
+	   name = "Create the Slavic Confederation Member State"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 150 }
+	   puppet = SLO
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = ROM
+		}
+		ROM = { transfer_state = PREV }
+	  }
+	  ROM = {
+		set_cosmetic_tag = LES_gadja_puppet
+		} 
+	  }
+   
+	  ###Federation ignore
+	  option = {
+	   name = "Continue Military Occupation"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 0 }
+	   add_stability =-0.05
+	   add_war_support =-0.05
+	   add_political_power =-50
+	  }
+   
+	  ###West slavia not formed yet
+	  option = {
+	   name = "Create West Slavic Federation"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   NOT = { has_global_flag = LES_westslavformed }
+	   }
+	   puppet = ROM
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = ROM
+		}
+		ROM = { transfer_state = PREV }
+	  }
+	  ROM = {
+		   set_cosmetic_tag = LES_westslav
+		   set_country_flag = LES_westslavformedhere
+		   }
+		   set_global_flag = LES_westslavformed 
+	  }
+   
+	  ###West slavia has been formed 
+	  option = {
+	   name = "Expand our West Slav Ally"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   has_global_flag = LES_westslavformed
+	   }
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = ROM
+		}
+		   every_country = {
+			limit = {
+				has_country_flag = LES_westslavformedhere
+			}
+			transfer_state = PREV
+		}
+	   }
+	 }
+   
+	  ###Unitary
+	  option = {
+	   name = "Welcome Home, Brothers"
+	   trigger = {
+		   OR = {
+			   has_country_flag = les_unitary
+			   has_country_flag = les_bigeastslav
+		   }
+	   }
+	   set_country_flag = LES_may_start_integrating_rom
+	 }
+	 
+   }
+
+      ### Bulgaria
+	  country_event = {
+		id = legion_political.8
+		desc = legion_political.8.d
+		title = "Fate of Bulgaria"
+		fire_only_once = yes
+	   
+		mean_time_to_happen = { days = 1 }
+		trigger = {
+			tag = LES
+		   has_war = no
+		   BUL = { NOT = { is_puppet_of = ROOT } }
+		   48 = { is_owned_and_controlled_by = ROOT }
+		  }
+	   
+	   ###Federation option
+		option = {
+		   name = "Create the Slavic Confederation Member State"
+		   trigger = {
+		   has_country_flag = les_confederation
+		   }
+		   ai_chance = { factor = 150 }
+		   puppet = BUL
+		   every_owned_state = {
+			limit = { 
+			 NOT = {
+			  is_claim_or_core = yes
+			 }
+			  is_core_of = BUL
+			}
+			BUL = { transfer_state = PREV }
+		  }
+		  BUL = {
+			set_cosmetic_tag = LES_gadja_puppet
+			} 
+		  }
+	   
+		  ###Federation ignore
+		  option = {
+		   name = "Continue Military Occupation"
+		   trigger = {
+		   has_country_flag = les_confederation
+		   }
+		   ai_chance = { factor = 0 }
+		   add_stability =-0.05
+		   add_war_support =-0.05
+		   add_political_power =-50
+		  }
+	   
+		  ###West slavia not formed yet
+		  option = {
+		   name = "Create West Slavic Federation"
+		   trigger = {
+		   has_country_flag = les_onlyruseastslav
+		   NOT = { has_global_flag = LES_westslavformed }
+		   }
+		   puppet = BUL
+		   every_owned_state = {
+			limit = { 
+			 NOT = {
+			  is_claim_or_core = yes
+			 }
+			  is_core_of = BUL
+			}
+			BUL = { transfer_state = PREV }
+		  }
+		  BUL = {
+			   set_cosmetic_tag = LES_westslav
+			   set_country_flag = LES_westslavformedhere
+			   }
+			   set_global_flag = LES_westslavformed 
+		  }
+	   
+		  ###West slavia has been formed 
+		  option = {
+		   name = "Expand our West Slav Ally"
+		   trigger = {
+		   has_country_flag = les_onlyruseastslav
+		   has_global_flag = LES_westslavformed
+		   }
+		   every_owned_state = {
+			limit = { 
+			 NOT = {
+			  is_claim_or_core = yes
+			 }
+			  is_core_of = BUL
+			}
+			   every_country = {
+				limit = {
+					has_country_flag = LES_westslavformedhere
+				}
+				transfer_state = PREV
+			}
+		   }
+		 }
+	   
+		  ###Unitary
+		  option = {
+		   name = "Welcome Home, Brothers"
+		   trigger = {
+			   OR = {
+				   has_country_flag = les_unitary
+				   has_country_flag = les_bigeastslav
+			   }
+		   }
+		   set_country_flag = LES_may_start_integrating_bul
+		 }
+		 
+	   }
+
+### Serbia
+	  country_event = {
+		id = legion_political.9
+		desc = legion_political.9.d
+		title = "Fate of Serbia"
+		fire_only_once = yes
+	   
+		mean_time_to_happen = { days = 1 }
+		trigger = {
+			tag = LES
+		   has_war = no
+		   SER = { NOT = { is_puppet_of = ROOT } }
+		   1140 = { is_owned_and_controlled_by = ROOT }
+		  }
+	   
+	   ###Federation option
+		option = {
+		   name = "Create the Slavic Confederation Member State"
+		   trigger = {
+		   has_country_flag = les_confederation
+		   }
+		   ai_chance = { factor = 150 }
+		   puppet = SER
+		   every_owned_state = {
+			limit = { 
+			 NOT = {
+			  is_claim_or_core = yes
+			 }
+			  is_core_of = SER
+			}
+			SER = { transfer_state = PREV }
+		  }
+		  SER = {
+			set_cosmetic_tag = LES_gadja_puppet
+			} 
+		  }
+	   
+		  ###Federation ignore
+		  option = {
+		   name = "Continue Military Occupation"
+		   trigger = {
+		   has_country_flag = les_confederation
+		   }
+		   ai_chance = { factor = 0 }
+		   add_stability =-0.05
+		   add_war_support =-0.05
+		   add_political_power =-50
+		  }
+	   
+		  ###West slavia not formed yet
+		  option = {
+		   name = "Create West Slavic Federation"
+		   trigger = {
+		   has_country_flag = les_onlyruseastslav
+		   NOT = { has_global_flag = LES_westslavformed }
+		   }
+		   puppet = SER
+		   every_owned_state = {
+			limit = { 
+			 NOT = {
+			  is_claim_or_core = yes
+			 }
+			  is_core_of = SER
+			}
+			SER = { transfer_state = PREV }
+		  }
+		  SER = {
+			   set_cosmetic_tag = LES_westslav
+			   set_country_flag = LES_westslavformedhere
+			   }
+			   set_global_flag = LES_westslavformed 
+		  }
+	   
+		  ###West slavia has been formed 
+		  option = {
+		   name = "Expand our West Slav Ally"
+		   trigger = {
+		   has_country_flag = les_onlyruseastslav
+		   has_global_flag = LES_westslavformed
+		   }
+		   every_owned_state = {
+			limit = { 
+			 NOT = {
+			  is_claim_or_core = yes
+			 }
+			  is_core_of = SER
+			}
+			   every_country = {
+				limit = {
+					has_country_flag = LES_westslavformedhere
+				}
+				transfer_state = PREV
+			}
+		   }
+		 }
+	   
+		  ###Unitary
+		  option = {
+		   name = "Welcome Home, Brothers"
+		   trigger = {
+			   OR = {
+				   has_country_flag = les_unitary
+				   has_country_flag = les_bigeastslav
+			   }
+		   }
+		   set_country_flag = LES_may_start_integrating_ser
+		 }
+		 
+	   }
+### Croatia
+country_event = {
+	id = legion_political.10
+	desc = legion_political.10.d
+	title = "Fate of Croatia"
+	fire_only_once = yes
+   
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		tag = LES
+	   has_war = no
+	   CRO = { NOT = { is_puppet_of = ROOT } }
+	   109 = { is_owned_and_controlled_by = ROOT }
+	  }
+   
+   ###Federation option
+	option = {
+	   name = "Create the Slavic Confederation Member State"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 150 }
+	   puppet = CRO
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = CRO
+		}
+		CRO = { transfer_state = PREV }
+	  }
+	  CRO = {
+		set_cosmetic_tag = LES_gadja_puppet
+		} 
+	  }
+   
+	  ###Federation ignore
+	  option = {
+	   name = "Continue Military Occupation"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 0 }
+	   add_stability =-0.05
+	   add_war_support =-0.05
+	   add_political_power =-50
+	  }
+   
+	  ###West slavia not formed yet
+	  option = {
+	   name = "Create West Slavic Federation"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   NOT = { has_global_flag = LES_westslavformed }
+	   }
+	   puppet = CRO
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = CRO
+		}
+		CRO = { transfer_state = PREV }
+	  }
+	  CRO = {
+		   set_cosmetic_tag = LES_westslav
+		   set_country_flag = LES_westslavformedhere
+		   }
+		   set_global_flag = LES_westslavformed 
+	  }
+   
+	  ###West slavia has been formed 
+	  option = {
+	   name = "Expand our West Slav Ally"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   has_global_flag = LES_westslavformed
+	   }
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = CRO
+		}
+		   every_country = {
+			limit = {
+				has_country_flag = LES_westslavformedhere
+			}
+			transfer_state = PREV
+		}
+	   }
+	 }
+   
+	  ###Unitary
+	  option = {
+	   name = "Welcome Home, Brothers"
+	   trigger = {
+		   OR = {
+			   has_country_flag = les_unitary
+			   has_country_flag = les_bigeastslav
+		   }
+	   }
+	   set_country_flag = LES_may_start_integrating_cro
+	 }
+	 
+   }
+
+### Slovenia
+country_event = {
+	id = legion_political.11
+	desc = legion_political.11.d
+	title = "Fate of Slovenia"
+	fire_only_once = yes
+   
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		tag = LES
+	   has_war = no
+	   SLV = { NOT = { is_puppet_of = ROOT } }
+	   1128 = { is_owned_and_controlled_by = ROOT }
+	  }
+   
+   ###Federation option
+	option = {
+	   name = "Create the Slavic Confederation Member State"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 150 }
+	   puppet = SLV
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = SLV
+		}
+		SLV = { transfer_state = PREV }
+	  }
+	  SLV = {
+		set_cosmetic_tag = LES_gadja_puppet
+		} 
+	  }
+   
+	  ###Federation ignore
+	  option = {
+	   name = "Continue Military Occupation"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 0 }
+	   add_stability =-0.05
+	   add_war_support =-0.05
+	   add_political_power =-50
+	  }
+   
+	  ###West slavia not formed yet
+	  option = {
+	   name = "Create West Slavic Federation"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   NOT = { has_global_flag = LES_westslavformed }
+	   }
+	   puppet = SLV
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = SLV
+		}
+		SLV = { transfer_state = PREV }
+	  }
+	  SLV = {
+		   set_cosmetic_tag = LES_westslav
+		   set_country_flag = LES_westslavformedhere
+		   }
+		   set_global_flag = LES_westslavformed 
+	  }
+   
+	  ###West slavia has been formed 
+	  option = {
+	   name = "Expand our West Slav Ally"
+	   trigger = {
+	   has_country_flag = les_onlyruseastslav
+	   has_global_flag = LES_westslavformed
+	   }
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = SLV
+		}
+		   every_country = {
+			limit = {
+				has_country_flag = LES_westslavformedhere
+			}
+			transfer_state = PREV
+		}
+	   }
+	 }
+   
+	  ###Unitary
+	  option = {
+	   name = "Welcome Home, Brothers"
+	   trigger = {
+		   OR = {
+			   has_country_flag = les_unitary
+			   has_country_flag = les_bigeastslav
+		   }
+	   }
+	   set_country_flag = LES_may_start_integrating_slv
+	 }
+	 
+   }
+
+ ### Baltic Expansion ###
+
+ 

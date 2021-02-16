@@ -512,7 +512,7 @@ LES_russian_expansion = {
 	available = {
 	LES = {
 	has_full_control_of_state = 572
-	has_country_flag = triumph }
+	hidden_trigger = { has_country_flag = triumph }}
 	}
 		  priority = {
 		  base = 100
@@ -520,6 +520,23 @@ LES_russian_expansion = {
 
 
 }
+
+LES_easterneurope = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_decision_germany_partisans
+	  visible = {
+	   tag = LES
+	   has_country_flag = les_russia_secured
+	  }
+	  available = {
+	  hidden_trigger = { has_country_flag = les_russia_secured }
+	  }
+			priority = {
+			base = 100
+			}
+  
+  
+  }
 
 LES_unite = {
   icon = GFX_decision_category_military_operation

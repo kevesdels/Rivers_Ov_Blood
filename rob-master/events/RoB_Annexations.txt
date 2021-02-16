@@ -1024,6 +1024,7 @@ country_event = {
   10 = { is_owned_and_controlled_by = ROOT }
   NOT = {
    tag = POL
+   tag = LES
   }
  }
  
@@ -1062,7 +1063,7 @@ country_event = {
 country_event = {
  id = annex.16
  desc = annex.16.d
- title = "Fate of Bohemia"
+ title = "Fate of Czechia"
  fire_only_once = yes
  
  mean_time_to_happen = { days = 1 }
@@ -1072,6 +1073,7 @@ country_event = {
   9 = { is_owned_and_controlled_by = ROOT }
   NOT = {
    tag = CZE
+   tag = LES
   }
  }
  
@@ -1120,6 +1122,7 @@ country_event = {
   70 = { is_owned_and_controlled_by = ROOT }
   NOT = {
    tag = SLO
+   tag = LES
   }
  }
  
@@ -1168,6 +1171,7 @@ country_event = {
   1025 = { is_owned_and_controlled_by = ROOT }
   NOT = {
    tag = HUN
+   tag = LES
   }
  }
  
@@ -1599,6 +1603,7 @@ country_event = {
   784 = { is_owned_and_controlled_by = ROOT }
   NOT = {
    tag = LIT
+   tag = LES
   }
  }
  
@@ -1700,10 +1705,11 @@ country_event = {
    tag = BLR
    tag = CBR
    tag = DBR
+   tag = LES
   }
  }
  
- option = { ###liberate Bealrusian Socialist Republic
+ option = { ###liberate Belarusian Socialist Republic
   name = "Liberate Belarusian Socialist Republic"
   ai_chance = { factor = 150 }
   trigger = { SOCIALIST_ALIGNED_GOVERNMENT = yes CBR = { exists = no } }
@@ -1725,7 +1731,7 @@ country_event = {
 }
  }
  
- option = { ###liberate French Republic
+ option = { ###liberate Belarusian Republic
   name = "Liberate Belarusian Republic"
   ai_chance = { factor = 150 }
   trigger = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes BLR = { exists = no } }
@@ -1747,7 +1753,7 @@ country_event = {
 }
  }
  
- option = { ###liberate French State
+ option = { ###liberate Belarusian State
   name = "Liberate Belarusian State"
   ai_chance = { factor = 150 }
   trigger = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes BLR = { exists = no } }
@@ -1794,10 +1800,11 @@ country_event = {
   NOT = {
    tag = DSU
    tag = UKR
+   tag = LES
   }
  }
  
- option = { ###liberate Bealrusian Socialist Republic
+ option = { ###liberate Ukrainian Socialist Republic
   name = "Liberate Ukrainian Socialist Republic"
   ai_chance = { factor = 150 }
   trigger = { SOCIALIST_ALIGNED_GOVERNMENT = yes DSU = { exists = no } }
@@ -1817,7 +1824,7 @@ country_event = {
 }
  }
  
- option = { ###liberate French Republic
+ option = { ###liberate Ukrainian Republic
   name = "Liberate Ukrainian Republic"
   ai_chance = { factor = 150 }
   trigger = { SOCIALIST_ALIGNED_GOVERNMENT = no }

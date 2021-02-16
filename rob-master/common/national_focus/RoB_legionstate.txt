@@ -1408,7 +1408,7 @@ focus_tree = {
 	#Focus for Gadja Survives
 	focus = {
 		id = LES_radolasurvives
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_Ganja_survives
 		x = 16
 		y = 0
 		cost = 1
@@ -5450,6 +5450,9 @@ focus_tree = {
 		completion_reward = {
 		custom_effect_tooltip = les_tt_8
 		create_faction = "Pan-Slavic Confederation"
+		hidden_effect = {
+			set_country_flag = les_confederation
+		}
 		}
 	}
 
@@ -5468,6 +5471,9 @@ focus_tree = {
 		}
 		completion_reward = {
 		custom_effect_tooltip = les_tt_7
+		hidden_effect = {
+			set_country_flag = les_unitary
+		}
 		}
 	}
 
@@ -5486,6 +5492,9 @@ focus_tree = {
 		}
 		completion_reward = {
 		custom_effect_tooltip = les_tt_9
+		hidden_effect = {
+			set_country_flag = les_eastandwest
+		}
 		}
 	}
 
