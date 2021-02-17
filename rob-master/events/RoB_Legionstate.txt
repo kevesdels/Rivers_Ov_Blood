@@ -833,13 +833,15 @@ option = {
  ###Start of it
  country_event = { 
 	id = legion.36
-	title = legion.36.d
+	title = legion.36.t
+	desc = legion.36.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
 	 name = legion.36.a
 	 hidden_effect = {
+		set_country_flag = les_congress_starts
 		LES = { country_event = { id = legion.37 days = 3 } }
 		}
 	 }
@@ -850,25 +852,29 @@ option = {
  ### Economy
  country_event = { 
 	id = legion.37
-	title = legion.37.d
+	title = legion.37.t
+	desc = legion.37.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
 	 name = legion.37.a
 	 hidden_effect = {
+		set_country_flag = les_congress_economy
 		LES = { country_event = { id = legion.38 days = 3 } }
 		}
 	 }
 	option = {
 	name = legion.37.b
 	hidden_effect = {
+		set_country_flag = les_congress_economy
 		LES = { country_event = { id = legion.38 days = 3 } }
 		}
 	}
 	option = {
 	name = legion.37.c
 	hidden_effect = {
+		set_country_flag = les_congress_economy
 		LES = { country_event = { id = legion.38 days = 3 } }
 		}
 	}
@@ -878,35 +884,54 @@ option = {
 ### The Political part
 country_event = { 
 	id = legion.38
-	title = legion.38.d
+	title = legion.38.t
+	desc = legion.38.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
+	###confederation
 	option = {
 	 name = legion.38.a
 	 hidden_effect = {
+		set_country_flag = les_confederation
+		set_country_flag = les_congress_political
 		LES = { country_event = { id = legion.39 days = 3 } }
 		}
 	 }
+	 ###unitary
 	option = {
 	name = legion.38.b
 	hidden_effect = {
+		set_country_flag = les_unitary
+		set_country_flag = les_congress_political
 		LES = { country_event = { id = legion.39 days = 3 } }
 		}
 	}
+	###west and east big legion
 	option = {
 	name = legion.38.c
 	hidden_effect = {
+		set_country_flag = les_bigeastslav
+		set_country_flag = les_congress_political
 		LES = { country_event = { id = legion.39 days = 3 } }
 		}
 	}
-	
+	###west and east small legion
+	option = {
+	name = legion.38.d
+	hidden_effect = {
+		set_country_flag = les_onlyruseastslav
+		set_country_flag = les_congress_political
+		LES = { country_event = { id = legion.39 days = 3 } }
+		}
+	}
 }
 
 ### The Ethnic question
 country_event = { 
 	id = legion.39
-	title = legion.39.d
+	title = legion.39.t
+	desc = legion.39.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -914,18 +939,21 @@ country_event = {
 	 name = legion.39.a
 	 hidden_effect = {
 		LES = { country_event = { id = legion.40 days = 3 } }
+		set_country_flag = les_congress_ethnic
 		}
 	 }
 	option = {
 	name = legion.39.b
 	hidden_effect = {
 		LES = { country_event = { id = legion.40 days = 3 } }
+		set_country_flag = les_congress_ethnic
 		}
 	}
 	option = {
 	name = legion.39.c
 	hidden_effect = {
 		LES = { country_event = { id = legion.40 days = 3 } }
+		set_country_flag = les_congress_ethnic
 		}
 	}
 	
@@ -935,7 +963,8 @@ country_event = {
 ### The Women
 country_event = { 
 	id = legion.40
-	title = legion.40.d
+	title = legion.40.t
+	desc = legion.40.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -943,18 +972,21 @@ country_event = {
 	 name = legion.40.a
 	 hidden_effect = {
 		LES = { country_event = { id = legion.41 days = 3 } }
+		set_country_flag = les_congress_women
 		}
 	 }
 	option = {
 	name = legion.40.b
 	hidden_effect = {
 		LES = { country_event = { id = legion.41 days = 3 } }
+		set_country_flag = les_congress_women
 		}
 	}
 	option = {
 	name = legion.40.c
 	hidden_effect = {
 		LES = { country_event = { id = legion.41 days = 3 } }
+		set_country_flag = les_congress_women
 		}
 	}
 	
@@ -963,13 +995,16 @@ country_event = {
 ### The end of slavic congress
 country_event = { 
 	id = legion.41
-	title = legion.41.d
+	title = legion.41.t
+	desc = legion.41.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
 	 name = legion.41.a
-
+	 hidden_effect = {
+	 set_country_flag = les_congress_ends
+	 }
 	 }
 	
 }
@@ -1023,3 +1058,7 @@ country_event = {
 
 
 
+Split in Legion
+
+
+The Legionary Council is the de facto organizatory force in the Legion. Consisting of the capable and respectable veterans, these men decide the Legions actions in military fashion, yet it is not a monolithic entity.\n\nWith Karels betrayal during the early stages of the Russian civil war, it became evident that the Legion was not ideologically united. Situation has only worsened with time -  the Legion is more split than ever. Were it not for Gadjas infamous reputation when dealing with deserters, many would have followed the path of treason. Some are more influential than others, notably, Returnists - the old guard of czech and other european officers that joined the Legion during the Great War, the ever growing Russian faction, fueled by nationalist mission of reunification and the restoration of Russia's former glory. It is also worth mentioning the three ideological groups, the poetic futurists, the devout christians and the energetic pagans. Often in conflict with one another, the officers of the previously mentioned factions are currently aligned with Gadja, in hopes of convincing him that their vision for Russia and Slavs as a whole is the correct one.\n\nGadjas task is to navigate through political drama that plagues the Legionary Council. Appeasing everyone is out of the question. Favorites will have to be picked, factions will be angered, competency will be awarded. Choose well.

@@ -561,8 +561,8 @@ focus_tree = {
 		cost = 5
 		mutually_exclusive = { focus = LES_affirmitiveaction }
 		available_if_capitulated = yes
-		prerequisite = { focus = LES_enforcemotherhood_2 focus = LES_enforcemotherhood_3 }
-		prerequisite = { focus = LES_removingtheshackels_2 focus = LES_removingtheshackels_3 }
+		prerequisite = { focus = LES_enforcemotherhood_2 focus = LES_removingtheshackels_2 }
+		prerequisite = { focus = LES_enforcemotherhood_3 focus = LES_removingtheshackels_3 }
 		ai_will_do = {
 			factor = 1
 		}
@@ -942,8 +942,8 @@ focus_tree = {
 		cost = 5
 		mutually_exclusive = { focus = LES_ZZZZ }
 		available_if_capitulated = yes
-		prerequisite = { focus = LES_enforcemotherhood_2 focus = LES_enforcemotherhood_3 }
-		prerequisite = { focus = LES_removingtheshackels_2 focus = LES_removingtheshackels_3 }
+		prerequisite = { focus = LES_removingtheshackels_2 focus = LES_enforcemotherhood_2 }
+		prerequisite = { focus = LES_removingtheshackels_3 focus = LES_enforcemotherhood_3 }
 		ai_will_do = {
 			factor = 1
 		}
@@ -1822,13 +1822,20 @@ focus_tree = {
 		x = 34
 		y = 8
 		cost = 5
+		bypass = {
+			hidden_trigger = {
+			has_country_flag = les_congress_political
+			}
+		}
+		available = {
+			has_country_flag = les_congress_political
+			}
 		available_if_capitulated = yes
 		prerequisite = { focus = LES_questionsandanswers }
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-		add_political_power = -50
 		}
 	}
 
@@ -1839,17 +1846,20 @@ focus_tree = {
 		x = 39
 		y = 7
 		cost = 5
-		available = {
- 			AND = {
- 			has_country_flag = triumph
+		bypass = {
+			hidden_trigger = {
+			has_country_flag = les_congress_starts
 			}
+		}
+		available = {
+		has_country_flag = les_congress_starts
 		}
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-		add_political_power = 150
+		add_political_power = 75
 		}
 	}
 
@@ -2109,6 +2119,7 @@ focus_tree = {
 		prerequisite = { 
 		focus = LES_spiritoverbody
 		focus = LES_reshapingofaconstruct
+		focus = LES_racialeugenics
 		}
 		ai_will_do = {
 			factor = 1
@@ -2203,8 +2214,8 @@ focus_tree = {
 		cost = 5
 		mutually_exclusive = { focus = LES_XXXX }
 		available_if_capitulated = yes
-		prerequisite = { focus = LES_integreatehteunwilling_2 focus = LES_integreatehteunwilling_3}
-		prerequisite = { focus = LES_banishaliens_2 focus = LES_banishaliens_3 }
+		prerequisite = { focus = LES_integreatehteunwilling_2 focus = LES_banishaliens_2 }
+		prerequisite = { focus = LES_integreatehteunwilling_3 focus = LES_banishaliens_3 }
 		ai_will_do = {
 			factor = 1
 		}
@@ -2366,8 +2377,8 @@ focus_tree = {
 		cost = 5
 		mutually_exclusive = { focus = LES_geneticengineering }
 		available_if_capitulated = yes
-		prerequisite = { focus = LES_integreatehteunwilling_2 focus = LES_integreatehteunwilling_3}
-		prerequisite = { focus = LES_banishaliens_2 focus = LES_banishaliens_3 }
+		prerequisite = { focus = LES_integreatehteunwilling_2 focus = LES_banishaliens_2 }
+		prerequisite = { focus = LES_integreatehteunwilling_3 focus = LES_banishaliens_3 }
 		ai_will_do = {
 			factor = 1
 		}
@@ -5307,11 +5318,8 @@ focus_tree = {
 		y = 5
 		cost = 1
 		available = {
- 			AND = {
- 			has_country_flag = triumph
-			}
+ 			has_country_flag = les_congress_ends
 		}
-
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
@@ -5407,13 +5415,20 @@ focus_tree = {
 		x = 25
 		y = 8
 		cost = 5
+		bypass = {
+			hidden_trigger = {
+			has_country_flag = les_congress_economy
+			}
+		}
+		available = {
+			has_country_flag = les_congress_economy
+			}
 		available_if_capitulated = yes
 		prerequisite = { focus = LES_questionsandanswers }
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-		add_stability  = -0.03
 		}
 	}
 
@@ -5424,13 +5439,20 @@ focus_tree = {
 		x = 44
 		y = 8
 		cost = 5
+		bypass = {
+			hidden_trigger = {
+			has_country_flag = les_congress_ethnic
+			}
+		}
+		available = {
+			has_country_flag = les_congress_ethnic
+			}
 		available_if_capitulated = yes
 		prerequisite = { focus = LES_questionsandanswers }
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-		add_stability = -0.03
 		}
 	}
 
@@ -5509,7 +5531,8 @@ focus_tree = {
 		mutually_exclusive = { focus = LES_directrule }
 		prerequisite = { 
 		focus = LES_confederation
-		focus = LES_eastandwest }
+		focus = LES_eastandwest 
+		focus = LES_unitarypolitics }
 		ai_will_do = {
 			factor = 1
 		}
@@ -5554,7 +5577,8 @@ focus_tree = {
 		mutually_exclusive = { focus = LES_municipals }
 		prerequisite = { 
 		focus = LES_unitarypolitics
-		focus = LES_eastandwest }
+		focus = LES_eastandwest
+		focus = LES_confederation }
 		ai_will_do = {
 			factor = 1
 		}
@@ -5598,8 +5622,8 @@ focus_tree = {
 		available = { NOT = { has_completed_focus = LES_unitarypolitics } }
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = LES_equalinburden }
-		prerequisite = { focus = LES_municipals_2 focus = LES_municipals_3 }
-		prerequisite = { focus = LES_directrule_2 focus = LES_directrule_3 }
+		prerequisite = { focus = LES_municipals_2 focus = LES_municipals_2 }
+		prerequisite = { focus = LES_municipals_3 focus = LES_directrule_3 }
 		ai_will_do = {
 			factor = 1
 		}
@@ -5643,8 +5667,8 @@ focus_tree = {
 		available = { NOT = { has_completed_focus = LES_confederation } }
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = LES_cityprivilliges }
-		prerequisite = { focus = LES_municipals_2 focus = LES_municipals_3 }
-		prerequisite = { focus = LES_directrule_2 focus = LES_directrule_3 }
+		prerequisite = { focus = LES_municipals_2 focus = LES_directrule_2 }
+		prerequisite = { focus = LES_municipals_3 focus = LES_directrule_3 }
 		ai_will_do = {
 			factor = 1
 		}
@@ -5738,8 +5762,8 @@ focus_tree = {
 		mutually_exclusive = { focus = LES_spreadoutindustry }
 		available_if_capitulated = yes
 		prerequisite = { 
-		focus = LES_socialismwithslaviccharacteristics
-		focus = LES_followtheexampleofmiddleages }
+		focus = LES_followtheexampleofmiddleages 
+		focus = LES_divinecorporations }
 		ai_will_do = {
 			factor = 1
 		}
@@ -5797,8 +5821,8 @@ focus_tree = {
 		mutually_exclusive = { focus = LES_economicalcentres }
 		available_if_capitulated = yes
 		prerequisite = { 
-		focus = LES_divinecorporations
 		focus = LES_followtheexampleofmiddleages 
+		focus = LES_socialismwithslaviccharacteristics
 		}
 		ai_will_do = {
 			factor = 1
@@ -5857,8 +5881,8 @@ focus_tree = {
 		available = { NOT = { has_completed_focus = LES_divinecorporations } }
 		mutually_exclusive = { focus = LES_ecologicalmeasures }
 		available_if_capitulated = yes
-		prerequisite = { focus = LES_economicalcentres_2 focus = LES_economicalcentres_3 }
-		prerequisite = { focus = LES_spreadoutindustry_2 focus = LES_spreadoutindustry_3 }
+		prerequisite = { focus = LES_economicalcentres_2  focus = LES_spreadoutindustry_2 }
+		prerequisite = { focus = LES_economicalcentres_3 focus = LES_spreadoutindustry_3 }
 		ai_will_do = {
 			factor = 1
 		}
@@ -5955,8 +5979,12 @@ focus_tree = {
 		available = { NOT = { has_completed_focus = LES_socialismwithslaviccharacteristics } }
 		mutually_exclusive = { focus = LES_maximizeprofit }
 		available_if_capitulated = yes
-		prerequisite = { focus = LES_economicalcentres_2 focus = LES_economicalcentres_3 }
-		prerequisite = { focus = LES_spreadoutindustry_2 focus = LES_spreadoutindustry_3 }
+		prerequisite = {  
+		 focus = LES_economicalcentres_3 focus = LES_spreadoutindustry_3 
+		}
+		prerequisite = {
+			focus = LES_spreadoutindustry_2 focus = LES_economicalcentres_2
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -6050,13 +6078,20 @@ focus_tree = {
 		x = 54
 		y = 8
 		cost = 5
+		bypass = {
+		hidden_trigger = {
+		has_country_flag = les_congress_women
+			}
+		}
+		available = {
+			has_country_flag = les_congress_women
+			}
 		available_if_capitulated = yes
 		prerequisite = { focus = LES_questionsandanswers }
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-		add_stability = -0.03
 		}
 	}
 
@@ -6145,8 +6180,8 @@ focus_tree = {
 		x = 34
 		y = 14
 		cost = 5
-		prerequisite = { focus = LES_cityprivilliges_2 focus = LES_cityprivilliges_3 }
-		prerequisite = { focus = LES_equalinburden_2 focus = LES_equalinburden_3 }
+		prerequisite = { focus = LES_equalinburden_3 focus = LES_cityprivilliges_3 }
+		prerequisite = { focus = LES_cityprivilliges_2 focus = LES_equalinburden_2 }
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
@@ -6164,8 +6199,8 @@ focus_tree = {
 		y = 14
 		cost = 5
 		available_if_capitulated = yes
-		prerequisite = { focus = LES_ecologicalmeasures_2 focus = LES_ecologicalmeasures_3 }
-		prerequisite = { focus = LES_maximizeprofit_2 focus = LES_maximizeprofit_2 }
+		prerequisite = { focus = LES_ecologicalmeasures_2 focus = LES_maximizeprofit_2 }
+		prerequisite = { focus = LES_ecologicalmeasures_3 focus = LES_maximizeprofit_3 }
 		ai_will_do = {
 			factor = 1
 		}
@@ -6182,8 +6217,8 @@ focus_tree = {
 		y = 14
 		cost = 5
 		available_if_capitulated = yes
-		prerequisite = { focus = LES_geneticengineering_2 focus = LES_geneticengineering_3}
-		prerequisite = { focus = LES_XXXX_2 focus = LES_XXXX_3 }
+		prerequisite = { focus = LES_XXXX_3 focus = LES_geneticengineering_3 }
+		prerequisite = { focus = LES_geneticengineering_2 focus = LES_XXXX_2 }
 		ai_will_do = {
 			factor = 1
 		}
@@ -6200,8 +6235,8 @@ focus_tree = {
 		y = 14
 		cost = 5
 		available_if_capitulated = yes
-		prerequisite = { focus = LES_ZZZZ_2 focus = LES_ZZZZ_3}
-		prerequisite = { focus = LES_affirmitiveaction_2 focus = LES_affirmitiveaction_3 }
+		prerequisite = { focus = LES_ZZZZ_2 focus = LES_affirmitiveaction_2 }
+		prerequisite = { focus = LES_ZZZZ_3 focus = LES_affirmitiveaction_3 }
 		ai_will_do = {
 			factor = 1
 		}
