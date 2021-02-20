@@ -158,24 +158,16 @@ is_triggered_only = yes
 
 option = {
  name = legion.6.a
-
+hidden_effect = {
  remove_unit_leader = 5721
- hidden_effect = {
  set_country_flag = LES_survives
-	 	if = {
-				limit = {
-					AND = { has_country_flag = poets }
-				}
- 		AGR = { country_event = { id = agrussia.1 days = 14 id = legion.30 days = 21} }
-		 }
- 		if = {
-				limit = { has_country_flag = christ }
-				
- 		AGR = { country_event = { id = agrussia.3 days = 41 id = legion.30 days = 21} }
+ country_event = { id = legion.30 days = 21 }
+	 if = {
+		limit = { has_country_flag = christ }
+ 		AGR = { country_event = { id = agrussia.3 days = 41 } }
  		}
- 	}
- }
-
+	}
+}
 }
 
 
@@ -545,12 +537,14 @@ fire_only_once = yes
 is_triggered_only = yes
 
 option = {
- name = legion.21.
+ name = legion.21.a
  ai_chance = { factor = 9 }
  LES = { add_state_core = 571 }
  army_experience = 15
  add_popularity = {ideology = socialist popularity = 0.15 }
+ hidden_effect = {
  LES = { load_oob = LES_Defectors}
+ }
  }
 
 option = {
@@ -743,11 +737,11 @@ is_triggered_only = yes
 option = {
  name = legion.31.a
  set_country_flag = les_factions
- set_variable = { LES_faction_rusnat = 30 }
- set_variable = { LES_faction_returnist = 30 }
- set_variable = { LES_faction_christian = 30 }
- set_variable = { LES_faction_pagan = 30 }
- set_variable = { LES_faction_poet = 30 }
+ set_variable = { LES_faction_rusnat = 35 }
+ set_variable = { LES_faction_returnist = 35 }
+ set_variable = { LES_faction_christian = 35 }
+ set_variable = { LES_faction_pagan = 35 }
+ set_variable = { LES_faction_poet = 35 }
  set_variable = { LES_faction_sum = 0 }
  add_to_variable = { LES_faction_sum = LES_faction_rusnat }
  add_to_variable = { LES_faction_sum = LES_faction_returnist }

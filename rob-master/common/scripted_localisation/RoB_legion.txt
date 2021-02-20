@@ -18,15 +18,15 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_returnist value = 90 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_returnist value = 85 compare = greater_than_or_equals }
 		}
 		localization_key = les_Returnist_loyal
 	}
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_returnist value = 70 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_returnist value = 90 compare = less_than }
+			check_variable = { var = LES_faction_returnist value = 65 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_returnist value = 85 compare = less_than }
 
 		}
 		localization_key = les_Returnist_calm
@@ -34,8 +34,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_returnist value = 50 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_returnist value = 70 compare = less_than }
+			check_variable = { var = LES_faction_returnist value = 35 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_returnist value = 65 compare = less_than }
 
 		}
 		localization_key = les_Returnist_worried
@@ -43,8 +43,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_returnist value = 30 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_returnist value = 50 compare = less_than }
+			check_variable = { var = LES_faction_returnist value = 15 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_returnist value = 35 compare = less_than }
 
 		}
 		localization_key = les_Returnist_angry
@@ -52,8 +52,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_returnist value = 15 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_returnist value = 30 compare = less_than }
+			check_variable = { var = LES_faction_returnist value = 1 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_returnist value = 15 compare = less_than }
 
 		}
 		localization_key = les_Returnist_furious
@@ -62,7 +62,7 @@ defined_text = { #
 		trigger = {
 			original_tag = LES
 			NOT = {has_country_flag = les_returnist_gone}
-			check_variable = { var = LES_faction_returnist value = 10 compare = less_than }
+			check_variable = { var = LES_faction_returnist value = 1 compare = less_than }
 
 		}
 		localization_key = les_Returnist_rebellious
@@ -83,15 +83,15 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_rusnat value = 90 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_rusnat value = 85 compare = greater_than_or_equals }
 		}
 		localization_key = les_Rusnat_loyal
 	}
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_rusnat value = 70 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_rusnat value = 90 compare = less_than }
+			check_variable = { var = LES_faction_rusnat value = 65 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_rusnat value = 85 compare = less_than }
 
 		}
 		localization_key = les_Rusnat_calm
@@ -99,8 +99,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_rusnat value = 50 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_rusnat value = 70 compare = less_than }
+			check_variable = { var = LES_faction_rusnat value = 35 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_rusnat value = 65 compare = less_than }
 
 		}
 		localization_key = les_Rusnat_worried
@@ -108,8 +108,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_rusnat value = 30 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_rusnat value = 50 compare = less_than }
+			check_variable = { var = LES_faction_rusnat value = 15 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_rusnat value = 35 compare = less_than }
 
 		}
 		localization_key = les_Rusnat_angry
@@ -117,8 +117,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_rusnat value = 10 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_rusnat value = 30 compare = less_than }
+			check_variable = { var = LES_faction_rusnat value = 1 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_rusnat value = 15 compare = less_than }
 		}
 		localization_key = les_Rusnat_furious
 	}
@@ -126,7 +126,7 @@ defined_text = { #
 		trigger = {
 			original_tag = LES
 			NOT = { has_country_flag = les_rusnat_gone }
-			check_variable = { var = LES_faction_rusnat value = 10 compare = less_than }
+			check_variable = { var = LES_faction_rusnat value = 1 compare = less_than }
 
 		}
 		localization_key = les_Rusnat_rebellious
@@ -148,15 +148,15 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_christian value = 90 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_christian value = 85 compare = greater_than_or_equals }
 		}
 		localization_key = les_christ_loyal
 	}
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_christian value = 70 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_christian value = 90 compare = less_than }
+			check_variable = { var = LES_faction_christian value = 65 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_christian value = 85 compare = less_than }
 
 		}
 		localization_key = les_christ_calm
@@ -164,8 +164,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_christian value = 50 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_christian value = 70 compare = less_than }
+			check_variable = { var = LES_faction_christian value = 35 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_christian value = 65 compare = less_than }
 
 		}
 		localization_key = les_christ_worried
@@ -173,8 +173,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_christian value = 30 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_christian value = 50 compare = less_than }
+			check_variable = { var = LES_faction_christian value = 15 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_christian value = 35 compare = less_than }
 
 		}
 		localization_key = les_christ_angry
@@ -182,8 +182,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_christian value = 10 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_christian value = 30 compare = less_than }
+			check_variable = { var = LES_faction_christian value = 1 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_christian value = 15 compare = less_than }
 
 		}
 		localization_key = les_christ_furious
@@ -192,7 +192,7 @@ defined_text = { #
 		trigger = {
 			original_tag = LES
 			NOT = { has_country_flag = les_christ_gone }
-			check_variable = { var = LES_faction_christian value = 10 compare = less_than }
+			check_variable = { var = LES_faction_christian value = 1 compare = less_than }
 
 		}
 		localization_key = les_christ_rebellious
@@ -216,15 +216,15 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_pagan value = 90 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_pagan value = 85 compare = greater_than_or_equals }
 		}
 		localization_key = les_pagan_loyal
 	}
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_pagan value = 70 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_pagan value = 90 compare = less_than }
+			check_variable = { var = LES_faction_pagan value = 65 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_pagan value = 85 compare = less_than }
 
 		}
 		localization_key = les_pagan_calm
@@ -232,8 +232,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_pagan value = 50 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_pagan value = 70 compare = less_than }
+			check_variable = { var = LES_faction_pagan value = 35 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_pagan value = 65 compare = less_than }
 
 		}
 		localization_key = les_pagan_worried
@@ -241,8 +241,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_pagan value = 30 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_pagan value = 50 compare = less_than }
+			check_variable = { var = LES_faction_pagan value = 15 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_pagan value = 35 compare = less_than }
 
 		}
 		localization_key = les_pagan_angry
@@ -250,8 +250,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_pagan value = 10 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_pagan value = 30 compare = less_than }
+			check_variable = { var = LES_faction_pagan value = 1 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_pagan value = 15 compare = less_than }
 
 		}
 		localization_key = les_pagan_furious
@@ -260,7 +260,7 @@ defined_text = { #
 		trigger = {
 			original_tag = LES
 			NOT = {has_country_flag = les_pagan_gone}
-			check_variable = { var = LES_faction_pagan value = 10 compare = less_than }
+			check_variable = { var = LES_faction_pagan value = 1 compare = less_than }
 
 		}
 		localization_key = les_pagan_rebellious
@@ -282,15 +282,15 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_poet value = 90 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_poet value = 85 compare = greater_than_or_equals }
 		}
 		localization_key = les_poet_loyal
 	}
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_poet value = 70 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_poet value = 90 compare = less_than }
+			check_variable = { var = LES_faction_poet value = 65 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_poet value = 85 compare = less_than }
 
 		}
 		localization_key = les_poet_calm
@@ -298,8 +298,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_poet value = 50 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_poet value = 70 compare = less_than }
+			check_variable = { var = LES_faction_poet value = 35 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_poet value = 65 compare = less_than }
 
 		}
 		localization_key = les_poet_worried
@@ -307,8 +307,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_poet value = 30 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_poet value = 50 compare = less_than }
+			check_variable = { var = LES_faction_poet value = 15 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_poet value = 35 compare = less_than }
 
 		}
 		localization_key = les_poet_angry
@@ -316,8 +316,8 @@ defined_text = { #
 	text = {
 		trigger = {
 			original_tag = LES
-			check_variable = { var = LES_faction_poet value = 10 compare = greater_than_or_equals }
-			check_variable = { var = LES_faction_poet value = 30 compare = less_than }
+			check_variable = { var = LES_faction_poet value = 1 compare = greater_than_or_equals }
+			check_variable = { var = LES_faction_poet value = 15 compare = less_than }
 
 		}
 		localization_key = les_poet_furious
@@ -326,7 +326,7 @@ defined_text = { #
 		trigger = {
 			original_tag = LES
 			NOT = {has_country_flag = les_poet_gone}
-			check_variable = { var = LES_faction_poet value = 10 compare = less_than }
+			check_variable = { var = LES_faction_poet value = 1 compare = less_than }
 
 		}
 		localization_key = les_poet_rebellious
