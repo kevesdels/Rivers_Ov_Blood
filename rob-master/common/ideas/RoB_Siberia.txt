@@ -28,7 +28,7 @@ ideas = {
 	 removal_cost = -1
 	 picture = GFX_idea_minority_troubles
 	 modifier = {
-			consumer_goods_factor = 0.15
+			consumer_goods_factor = 0.15 
 			industrial_capacity_dockyard = -0.15
 			industrial_capacity_factory = -0.15
 			production_speed_buildings_factor = -0.15
@@ -312,5 +312,37 @@ ideas = {
 
 			}
 	}
+	
+	civil_war_attrition = {
+		allowed = {
+		   always = no
+		 }
+		 allowed_civil_war = {
+					always = yes
+				}
+		 removal_cost = -1
+		 picture = GFX_idea_civil_war_attrition
+		 modifier = {
+					conscription_factor	 = -0.4
+					conscription = -0.025
+					MONTHLY_POPULATION	= -0.8
+				}
+		}
+	
+		civil_war_attrition_2 = {
+		allowed = {
+		   always = no
+		 }
+		 allowed_civil_war = {
+					always = yes
+				}
+		 removal_cost = -1
+		 picture = civil_war_attrition
+		 modifier = {
+					conscription_factor	 = -0.2
+					conscription = -0.01
+					MONTHLY_POPULATION	= -0.8
+				}
+		}
 }
 }

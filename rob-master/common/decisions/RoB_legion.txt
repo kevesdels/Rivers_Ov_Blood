@@ -1,59 +1,58 @@
-LES_banishaliens = {
-
-LES_banish_x = {
-
-    available = {
-        any_owned_state = {
-            is_core_of = ROOT
-        NOT = {has_state_flag = banish}
-      }
-    }
-    visible = {has_country_flag = enablebanish}
-
-    ai_will_do = {
-      base = 1
-    }
-    state_target = yes
-
-    on_map_mode = map_and_decisions_view 
-
-    target_array = controlled_states
-
-    target_trigger = {
-      FROM = {
-          is_core_of = ROOT
-          state_population > 10000
-            NOT = {has_state_flag = banish}
-          }
-       }
-
-    fire_only_once = yes
-
-    days_remove = 60
-
-    complete_effect = {
-      ROOT = {
-      add_ideas = {LES_banish_aliens}
-      }
-    }
-
-    remove_effect = {
-    ROOT = {
-      remove_ideas = {LES_banish_aliens}
-      rusnat_increase_10 = yes
-      }
-        FROM = {
-        set_state_flag = banish
-        }
-     }
-}
-
-##end of banish
-}
 
 LES_factions = {
 
-   
+  
+LES_banish_x = {
+
+  available = {
+      any_owned_state = {
+          is_core_of = ROOT
+      NOT = {has_state_flag = banish}
+    }
+  }
+  visible = {has_country_flag = enablebanish}
+
+  ai_will_do = {
+    base = 1
+  }
+  state_target = yes
+
+  on_map_mode = map_and_decisions_view 
+
+  target_array = controlled_states
+
+  target_trigger = {
+    FROM = {
+        is_core_of = ROOT
+        state_population > 10000
+          NOT = {has_state_flag = banish}
+        }
+     }
+
+  fire_only_once = yes
+
+  days_remove = 60
+
+  complete_effect = {
+    ROOT = {
+    add_ideas = {LES_banish_aliens}
+    }
+  }
+
+  remove_effect = {
+  ROOT = {
+    remove_ideas = {LES_banish_aliens}
+    rusnat_increase_10 = yes
+    }
+      FROM = {
+      set_state_flag = banish
+      }
+      custom_effect_tooltip = les_tt_25
+   }
+
+} 
+
+
    ##
    LES_appease_returnist = {
    visible = {
@@ -435,6 +434,7 @@ LES_urban_factory  = {
 
 LES_unite = {
 
+
 ###
 LES_destroy_KAR = {
   target_trigger = { FROM = {tag = KAR} }
@@ -524,6 +524,7 @@ LES_deal_with_KAR = {
  }
 
 ###
+
 LES_annex_AGR = {
   target_trigger = { FROM = {tag = AGR} }
    cost = 25
@@ -553,6 +554,7 @@ if = {
   AGR = { owns_state = 571 }
 }
  }
+ check_variable = { var = LES_faction_poet value = 85 compare = greater_than_or_equals }
  }
 
  ai_will_do = {

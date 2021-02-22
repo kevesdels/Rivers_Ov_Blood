@@ -591,24 +591,6 @@ LES_invasion = {
 		  }
 }
 
-LES_banishaliens = {
-
-  icon = GFX_decision_category_military_operation
-  picture = GFX_decision_germany_partisans
-  	visible = {
-  	tag = LES
-  	}
-    available = {
-    ROOT = {
-	NOT = { is_ai = yes }
-	}
-    }
-		  priority = {
-		  base = 120
-		  }
-}
-
-
 LES_factions = {
 
   icon = GFX_decision_category_military_operation
