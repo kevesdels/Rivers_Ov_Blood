@@ -143,6 +143,47 @@ name = "War"
 CRO = { declare_war_on = { target = SLV  type = annex_everything } }
 }
 }
+###Can't stop winning path
+country_event = {
+	id = croatia.6
+	title = "Victory In Serbia"
+	desc = croatia.6.d
+	fire_only_once = yes
+	picture = GFX_picture_Croatia_1
+	is_triggered_only = yes
+	
+	option = { ###war
+	name = "Today Croatia, Tomorow Europe!"
+	country_event = {
+		id = croatia.7
+		days = 10
+		random = 10
+	}
+	hidden_effect ={ 
+		create_faction = "Balkan Committee"
+		add_to_faction = BOS
 
+
+		load_focus_tree = croatia_focus2
+	}
+	}
+	}
+
+	country_event = {
+		id = croatia.7
+		title = "Victory In Serbai"
+		desc = croatia.7.d
+		fire_only_once = yes
+		picture = GFX_picture_Croatia_1
+		is_triggered_only = yes
+		
+		option = { ###war
+		name = "Today Croatia, Tomorow Europe!"
+		country_event = {
+			id = croatia.7
+			days = 10
+			random = 10
+		}
+		}
+		}
 ###END
-}

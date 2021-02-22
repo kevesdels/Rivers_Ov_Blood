@@ -85,8 +85,7 @@ ai_chance = { factor = 80}
 
 hidden_effect = { ROM = { country_event = { id = bulgaria.104 days = 3 } } }
 declare_war_on = {
-    target = SER
-    type = annex_everything
+    declare_war_on = { target = SER  type = puppet } 
 }
 
 
@@ -221,19 +220,7 @@ fire_only_once = yes
 trigger = {
 tag = BUL
 has_war_with = SER
-OR = { controls_state = 106
-ALB = { controls_state = 106 }
-TUR = { controls_state = 106 }
-}
-OR = { controls_state = 870
-ALB = { controls_state = 870 }
-TUR = { controls_state = 870 }
-}
-OR = { controls_state = 871
-ALB = { controls_state = 871 }
-TUR = { controls_state = 871 }
-}
-controls_state = 48
+SER = { surrender_progress > 0.3 }
 
 }
 picture = GFX_picture_bosnian_revolt

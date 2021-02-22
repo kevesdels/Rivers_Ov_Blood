@@ -1,0 +1,241 @@
+focus_tree = {
+	id = croatia_focus2
+	
+	country = {
+		factor = 0
+	}
+	
+	reset_on_civilwar = no
+	focus = {
+		id = CRO_Victroy_is_ours
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 6
+		y = 0
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 20
+		}
+	}
+	focus = {
+		id = CRO_Situation_in_bosnia
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 3
+		y = 1
+		cost = 10
+		
+		available_if_capitulated = yes
+		available = {
+			has_country_flag = CRO_BOS
+	   }
+		completion_reward = {
+			add_political_power = -25
+			}
+		}
+	focus = {
+		id = CRO_burn_the_churches
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			BOS = { add_stability = -0.1 }
+		}
+	}
+	focus = {
+		id = CRO_school_remove_orthodox
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			BOS = { add_stability = -0.1 }
+			BOS = { every_owned_state = {
+       		 add_manpower = -10000 }
+    	}
+		}
+	}
+	focus = {
+		id = CRO_death_for_partisans
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 4
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			BOS = { add_stability = -0.1 }
+			BOS = { every_owned_state = {
+       		 add_manpower = -10000 }
+    	}
+		}
+	}
+		focus = {
+		id = CRO_our_new_territories
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 9
+		y = 1
+		cost = 10
+		
+		available_if_capitulated = yes
+		available = {
+			has_country_flag = CRO_BOS
+	   }
+		completion_reward = {
+			add_political_power = 20
+			}
+		}
+	focus = {
+		id = CRO_repair_destroyed_towns
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 8
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_list = {
+				25 = {
+					869 = { add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+							}
+					}
+				}
+				25 = {
+					45 = { add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+							}
+					}
+				}
+				25 = {
+					764 = { add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+							}
+					}
+				}
+				25 = {
+					1139 = { add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+							}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = CRO_equipment_issue
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 10
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			BOS = { add_stability = -0.1 }
+			BOS = { every_owned_state = {
+       		 add_manpower = -10000 }
+    	}
+		}
+	}
+	focus = {
+		id = CRO_increasing_conscription
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 10
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+       		add_manpower = 10000 
+		}
+	}
+	###dumbniggerchoosesidescatchmybackscratchyoursyeyeass
+	focus = {
+		id = CRO_austrian_civl_war_issue
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 12
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = CRO_conscripting_fellow_christians
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 10
+		y = 4
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+       		add_manpower = 10000 
+		}
+	}
+	###immakingthiswhilelisteningtostalkersoundtrackfor2hoursnownothingismoredepressingihatevideogamesgoodthingnoonewillseethis
+	focus = {
+		id = CRO_removing_of_serbs
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 8
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+       	
+		}
+	}
+	focus = {
+		id = CRO_hungarian_question
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 8
+		y = 4
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+       	
+		}
+	}
+	focus = {
+		id = CRO_a_new_crusade
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 9
+		y = 5
+		cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+       	
+		}
+	}
+#End of focuses 
+ }

@@ -1,0 +1,234 @@
+focus_tree = {
+	id = rob-pol-national-camp
+	continuous_focus_position = { x = 0 y = 1000 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = xxx
+		}
+	}
+	#Embrace Economic Auturky
+	focus = {
+		id = xxx_embrace_economic_auturky
+		icon = GFX_xxx_embrace_economic_auturky-445
+		x = 5
+		y = 5
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Destruction of The Marshal's Cult
+	focus = {
+		id = xxx_destruction_of_the_marshals_cult
+		icon = GFX_xxx_destruction_of_the_marshals_cult-445
+		x = 1
+		y = 3
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Give Jewish Property To Poles
+	focus = {
+		id = xxx_give_jewish_property_to_poles
+		icon = GFX_xxx_give_jewish_property_to_poles-445
+		x = 5
+		y = 3
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Numerus Nullus
+	focus = {
+		id = xxx_numerus_nullus
+		icon = GFX_xxx_numerus_nullus-445
+		x = 5
+		y = 2
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Rejection_of_capitalism
+	focus = {
+		id = xxx_rejection_of_capitalism
+		icon = GFX_xxx_rejection_of_capitalism-445
+		x = 3
+		y = 1
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { }
+	}
+
+	#The Rise Of The National Camp
+	focus = {
+		id = xxx_the_rise_of_the_national_camp
+		icon = GFX_xxx_the_rise_of_the_national_camp-6808
+		x = 3
+		y = 0
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			add_political_power = 50
+			add_popularity = { 
+			ideology = reactionary
+			popularity = 0.07 
+			}
+			
+		}
+	}
+
+	#Purging The Sanitation Government followers
+	focus = {
+		id = xxx_purging_the_sanitation_government_followers
+		icon = GFX_xxx_purging_the_sanitation_government_followers-445
+		x = 5
+		y = 1
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Empowering The State
+	focus = {
+		id = xxx_empowering_the_state
+		icon = GFX_xxx_empowering_the_state-445
+		x = 1
+		y = 1
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		select_effect = {
+			add_stability = 0.05
+			
+			add_political_power = 50
+			
+		}
+	}
+
+	#Nationalize The Banking sector
+	focus = {
+		id = xxx_nationalize_the_banking_sector
+		icon = GFX_xxx_nationalize_the_banking_sector-445
+		x = 3
+		y = 2
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Nationalization Of Foreign Property
+	focus = {
+		id = xxx_nationalization_of_foreign_property
+		icon = GFX_xxx_nationalization_of_foreign_property-445
+		x = 3
+		y = 3
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Idealization of our heros
+	focus = {
+		id = xxx_idealization_of_our_heros
+		icon = GFX_xxx_idealization_of_our_heros-445
+		x = 1
+		y = 2
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_war_support = 5
+			
+		}
+	}
+
+	#Mandatory Conscription
+	focus = {
+		id = xxx_mandatory_conscription
+		icon = GFX_xxx_mandatory_conscription-445
+		x = 2
+		y = 4
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Embrace Syndicalist Economics
+	focus = {
+		id = xxx_embrace_syndicalist_economics
+		icon = GFX_xxx_embrace_syndicalist_economics-445
+		x = 4
+		y = 4
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Merge Worker Unions and Business Conglomerates
+	focus = {
+		id = xxx_merge_worker_unions_and_business_conglomerates
+		icon = GFX_xxx_merge_worker_unions_and_business_conglomerates-445
+		x = 3
+		y = 5
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#An Armed Nation
+	focus = {
+		id = xxx_an_armed_nation
+		icon = GFX_xxx_an_armed_nation-445
+		x = 1
+		y = 5
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Destruction Of Western Materialism
+	focus = {
+		id = xxx_destruction_of_western_materialism
+		icon = GFX_xxx_destruction_of_western_materialism-445
+		x = 3
+		y = 7
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#A New Poland
+	focus = {
+		id = xxx_a_new_poland
+		icon = GFX_xxx_a_new_poland-445
+		x = 3
+		y = 8
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+}
