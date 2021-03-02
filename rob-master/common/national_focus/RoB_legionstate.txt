@@ -1400,7 +1400,7 @@ focus_tree = {
 		 add_popularity = {ideology = pelekist popularity =0.1}
 		 custom_effect_tooltip = les_tt_24
 		 hidden_effect = {
-		 returnist_increase_15 = yes
+		 returnist_increase_5 = yes
 		 }
 		}
 	}
@@ -1815,6 +1815,29 @@ focus_tree = {
 	}
 	}
 
+	####
+	focus = {
+		id = LES_pagang
+		icon = GFX_goal_unknown
+		x = 11
+		y = 13
+		cost = 5
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LES_veneration 
+			focus = LES_supremacyofliving
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		
+		}
+
+	}
 	#Focus for Form of Our Pan Slavic State
 	focus = {
 		id = LES_formofourpanslavicstate
@@ -2823,7 +2846,7 @@ focus_tree = {
       	}
 
 		completion_reward = {
-		add_manpower = -5000
+		add_manpower = -4500
 		}
 	}
 
@@ -3374,7 +3397,7 @@ focus_tree = {
 		add_command_power = 100
 		custom_effect_tooltip = les_tt_25
 		hidden_effect = {
-			rusnat_increase_15 = yes
+			rusnat_increase_5 = yes
 			}
 		}
 	}
@@ -4950,6 +4973,28 @@ focus_tree = {
 	}
 	}
 
+	focus = {
+		id = LES_speedaway
+		icon = GFX_goal_unknown
+		x = 15
+		y = 13
+		cost = 5
+		available = {
+			
+		}
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = LES_freeingoneselffromthepast 
+			focus = LES_speedtowardstheextremelyviolentfuture 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		
+		}
+	}
+	
 	#Focus for ...Speed Towards the Extremely Violent Future...
 	focus = {
 		id = LES_speedtowardstheextremelyviolentfuture
@@ -6133,6 +6178,26 @@ focus_tree = {
     	remove_idea = LES_Vaticans_Crusaders_3
     	add_idea = LES_Vaticans_Crusaders_4
 		}
+		}
+	}
+
+	#Focus for Free the Opressed
+	focus = {
+		id = LES_heavenonearth
+		icon = GFX_goal_unknown
+		x = 5
+		y = 13
+		cost = 5
+		available = {
+			
+	   }
+		available_if_capitulated = yes
+		prerequisite = { focus = LES_thejewishquestion focus = LES_thetruechristianstate }
+		prerequisite = { focus = LES_thejewishquestion focus = LES_freetheopressed }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
 		}
 	}
 

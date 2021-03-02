@@ -35,19 +35,19 @@ option = {
  name = legion.1.a
  ai_chance = { factor = 5 }
  set_country_flag = christ
- hidden_effect = { country_event = { id = legion.2 days = 14 } returnist_decrease_15 = yes christian_increase_20 = yes }
+ hidden_effect = { country_event = { id = legion.2 days = 14 } returnist_decrease_10 = yes futurist_decrease_10 = yes pagan_decrease_10 = yes christian_increase_20 = yes }
 }
 option = {
  name = legion.1.b
  ai_chance = { factor = 5 }
  set_country_flag = pagan
- hidden_effect = { country_event = { id = legion.2 days = 14 } returnist_decrease_15 = yes pagan_increase_20 = yes }
+ hidden_effect = { country_event = { id = legion.2 days = 14 } returnist_decrease_10 = yes christian_decrease_10 = yes futurist_decrease_10 = yes pagan_increase_20 = yes }
 }
 option = {
  name = legion.1.c
  ai_chance = { factor = 5 }
  set_country_flag = poets
- hidden_effect = { country_event = { id = legion.2 days = 14 } returnist_decrease_15 = yes futurist_increase_20 = yes }
+ hidden_effect = { country_event = { id = legion.2 days = 14 } returnist_decrease_10 = yes pagan_decrease_10 = yes christian_decrease_10 = yes futurist_increase_20 = yes }
 }
 }
 
@@ -162,15 +162,10 @@ hidden_effect = {
  remove_unit_leader = 5721
  set_country_flag = LES_survives
  country_event = { id = legion.30 days = 21 }
-	 if = {
-		limit = { has_country_flag = christ }
- 		AGR = { country_event = { id = agrussia.3 days = 41 } }
- 		}
-	}
+ country_event = { id = legion.43 days = 95 }
 }
 }
-
-
+}
 
 
 ### Christian events
@@ -542,6 +537,7 @@ option = {
  LES = { add_state_core = 571 }
  army_experience = 15
  add_popularity = {ideology = socialist popularity = 0.15 }
+ custom_effect_tooltip = les_tt_34
  hidden_effect = {
  LES = { load_oob = LES_Defectors}
  }
@@ -583,10 +579,8 @@ LES = { owns_state = 571 }
 571 = { is_core_of = LES }
 LES = { owns_state = 572 }
 572 = { is_core_of = LES }
-LES = { owns_state = 1231 }
-1231 = { is_core_of = LES }
 }
-mean_time_to_happen = { days = 3 }
+mean_time_to_happen = { days = 7 }
 
 option = {
  name = legion.23.a
@@ -595,7 +589,6 @@ option = {
     limit = { 
 	is_core_of = LES
 	}
-	remove_core_of = AGR
 	remove_core_of = KAR
 }
  hidden_effect = {
@@ -606,7 +599,7 @@ option = {
 
 }
 
-### Them futu-something niggas dont like jewsus
+### Them futu-something dosent like gadja so war
 country_event = { 
 id = legion.24
 title = legion.24.t
@@ -616,13 +609,12 @@ is_triggered_only = yes
 
 option = {
  name = legion.24.a
- 
 }
 
 }
 
 
-### we will force them to suck on christs cock
+### we will force them to suck on gadjas cock
 country_event = { 
 id = legion.25
 title = legion.25.t
@@ -633,6 +625,11 @@ is_triggered_only = yes
 option = {
  name = legion.25.a
  LES = { add_state_core = 1231 }
+ hidden_effect = {
+ remove_core_of = AGR
+ set_country_flag = les_poet_gone
+ clear_variable = LES_faction_poet
+ }
 }
 }
 
@@ -640,7 +637,7 @@ option = {
 country_event = { 
 id = legion.26
 title = "The plea"
-desc = legion.26.d
+desc =  "Gadja is reading a frontline report, a smug grin on his face. It seems that the unity of their enemy is falling, as some of Karels men are offfering to switch sides."
 fire_only_once = yes
 trigger = {
  tag = LES
@@ -653,7 +650,7 @@ mean_time_to_happen = { days = 3 }
 option = {
 name  = "Tell them to prove their words"
 hidden_effect = {
-	AGR = { country_event = { id = agrussia.4 days = 5 } }
+	KAR = { country_event = { id = agrussia.4 days = 5 } }
 	}
 }
 
@@ -1002,6 +999,682 @@ country_event = {
 	 }
 	
 }
+
+### The futurists chimp out
+country_event = { 
+	id = legion.42
+	title = legion.42.t
+	desc = legion.42.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	 name = legion.42.a
+	 set_country_flag = les_poet_rebellion
+	 }
+	
+}
+
+
+
+### The futurists angry or happy event uno
+country_event = { 
+	id = legion.43
+	title = legion.43.t
+	desc = legion.43.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	 name = legion.43.a
+	 add_political_power = 10
+	 	hidden_effect = {
+			futurist_decrease_10 = yes
+			LES = { country_event = { id = legion.44 days = 75 } }
+		}
+	 }
+
+	option = {
+	name = legion.43.b
+		hidden_effect = {
+			LES = { country_event = { id = legion.44 days = 75 } }
+		}
+	}
+}
+
+### The futurists angry or happy event dwa
+country_event = { 
+	id = legion.44
+	title = legion.44.t
+	desc = legion.44.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	 name = legion.44.a
+	 add_political_power = 20
+	 	hidden_effect = {
+			futurist_decrease_50 = yes
+		}
+	 }
+
+	option = {
+	name = legion.44.b
+		hidden_effect = {
+			pagan_decrease_10 = yes
+		}
+	}
+}
+
+
+### The returnists go away with pacific fleet
+country_event = { 
+	id = legion.45
+	title = legion.45.t
+	desc = legion.45.d
+	fire_only_once = yes
+	trigger = {
+		tag = LES
+		OR = {
+			LES = { owns_state = 560 }
+			LES = { owns_state = 970 }		
+		}
+		WFE =  { exists = no }
+	}
+	
+	option = {
+	 name = legion.45.a
+	 add_political_power = 250
+			 if = {
+				 limit = {
+					check_variable = { var = LES_faction_returnist value = 85 compare = less_than }
+					check_variable = { var = LES_faction_returnist value = 65 compare = greater_than_or_equals }
+				 }
+				 remove_unit_leader = 9985
+				 remove_unit_leader = 9983
+				 set_country_flag = les_returnist_2away
+				 set_country_flag = les_returnist_gone
+				 clear_variable = LES_faction_returnist
+				 CZE = { country_event =  { id = legion.48 days = 28 } }
+			 }
+			 if = {
+				limit = {
+				   check_variable = { var = LES_faction_returnist value = 65 compare = less_than }
+				   check_variable = { var = LES_faction_returnist value = 35 compare = greater_than_or_equals }
+				}
+				remove_unit_leader = 9985
+				remove_unit_leader = 9986
+				remove_unit_leader = 9983
+				set_country_flag = les_returnist_3away
+				set_country_flag = les_returnist_gone
+				clear_variable = LES_faction_returnist
+				CZE = { country_event =  { id = legion.48 days = 28 } }
+			}
+			if = {
+				limit = {
+				   check_variable = { var = LES_faction_returnist value = 35 compare = less_than }
+				   check_variable = { var = LES_faction_returnist value = 15 compare = greater_than_or_equals }
+				}
+				remove_unit_leader = 9985
+				remove_unit_leader = 9986
+				remove_unit_leader = 9981
+				remove_unit_leader = 9983
+				set_country_flag = les_returnist_4away
+				set_country_flag = les_returnist_gone
+				clear_variable = LES_faction_returnist
+				CZE = { country_event =  { id = legion.48 days = 28 } }
+			}
+			if = {
+				limit = {
+				   check_variable = { var = LES_faction_returnist value = 15 compare = less_than }
+				   check_variable = { var = LES_faction_returnist value = 1 compare = greater_than_or_equals }
+				}
+				remove_unit_leader = 9985
+				remove_unit_leader = 9986
+				remove_unit_leader = 9981
+				remove_unit_leader = 9983
+				remove_unit_leader = 9984
+				set_country_flag = les_returnist_5away
+				set_country_flag = les_returnist_gone
+				clear_variable = LES_faction_returnist
+				CZE = { country_event =  { id = legion.48 days = 28 } }
+			}
+			if = {
+				limit = {
+				   check_variable = { var = LES_faction_returnist value = 1 compare = less_than }
+				}
+				remove_unit_leader = 9985
+				remove_unit_leader = 9986
+				remove_unit_leader = 9981
+				remove_unit_leader = 9983
+				remove_unit_leader = 9984
+				remove_unit_leader = 9982
+				set_country_flag = les_returnist_6away
+				set_country_flag = les_returnist_gone
+				clear_variable = LES_faction_returnist
+				CZE = { country_event =  { id = legion.48 days = 28 } }
+			}
+	 }
+
+	option = {
+	name = legion.45.b
+		hidden_effect = {
+			returnist_decrease_50 = yes
+		}
+	}
+}
+
+
+### The returnists go away through black sea
+country_event = { 
+	id = legion.46
+	title = legion.46.t
+	desc = legion.46.d
+	fire_only_once = yes
+	trigger = {
+		tag = LES
+		OR = {
+			OR = {
+				LES = { owns_state = 218 }
+				LES = { owns_state = 234 }		
+				LES = { owns_state = 137 }
+				LES = { owns_state = 985 }	
+				LES = { owns_state = 231 }
+			}
+			AND = {
+				OR = {
+					LES = { owns_state = 227 }
+					LES = { owns_state = 200 }		
+					LES = { owns_state = 196 }
+					LES = { owns_state = 197 }
+				}
+				NOT = { LES = { owns_state = 192 } }
+				NOT = { LES = { owns_state = 829 } }
+				NOT = { LES = { owns_state = 198 } }
+				NOT = { LES = { owns_state = 199 } }
+				NOT = { LES = { owns_state = 1083 } }
+				NOT = { LES = { owns_state = 93 } }
+			}
+		}
+	}
+	
+	option = {
+	 name = legion.46.a
+	 add_political_power = 250
+		if = {
+			limit = {
+			   check_variable = { var = LES_faction_returnist value = 85 compare = less_than }
+			   check_variable = { var = LES_faction_returnist value = 65 compare = greater_than_or_equals }
+			}
+			remove_unit_leader = 9985
+			remove_unit_leader = 9983
+			set_country_flag = les_returnist_2away
+			set_country_flag = les_returnist_gone
+			clear_variable = LES_faction_returnist
+			CZE = { country_event =  { id = legion.48 days = 21 } }
+		}
+		if = {
+		   limit = {
+			  check_variable = { var = LES_faction_returnist value = 65 compare = less_than }
+			  check_variable = { var = LES_faction_returnist value = 35 compare = greater_than_or_equals }
+		   }
+		   remove_unit_leader = 9985
+		   remove_unit_leader = 9983
+		   remove_unit_leader = 9986
+		   set_country_flag = les_returnist_3away
+		   set_country_flag = les_returnist_gone
+		   clear_variable = LES_faction_returnist
+		   CZE = { country_event =  { id = legion.48 days = 21 } }
+	   }
+	   if = {
+		   limit = {
+			  check_variable = { var = LES_faction_returnist value = 35 compare = less_than }
+			  check_variable = { var = LES_faction_returnist value = 15 compare = greater_than_or_equals }
+		   }
+		   remove_unit_leader = 9985
+		   remove_unit_leader = 9983
+		   remove_unit_leader = 9986
+		   remove_unit_leader = 9981
+		   set_country_flag = les_returnist_4away
+		   set_country_flag = les_returnist_gone
+		   clear_variable = LES_faction_returnist
+		   CZE = { country_event =  { id = legion.48 days = 21 } }
+	   }
+	   if = {
+		   limit = {
+			  check_variable = { var = LES_faction_returnist value = 15 compare = less_than }
+			  check_variable = { var = LES_faction_returnist value = 1 compare = greater_than_or_equals }
+		   }
+		   remove_unit_leader = 9985
+		   remove_unit_leader = 9983
+		   remove_unit_leader = 9986
+		   remove_unit_leader = 9981
+		   remove_unit_leader = 9984
+		   set_country_flag = les_returnist_5away
+		   set_country_flag = les_returnist_gone
+		   clear_variable = LES_faction_returnist
+		   CZE = { country_event =  { id = legion.48 days = 21 } }
+	   }
+	   if = {
+		   limit = {
+			  check_variable = { var = LES_faction_returnist value = 1 compare = less_than }
+		   }
+		   remove_unit_leader = 9985
+		   remove_unit_leader = 9983
+		   remove_unit_leader = 9986
+		   remove_unit_leader = 9981
+		   remove_unit_leader = 9984
+		   remove_unit_leader = 9982
+		   set_country_flag = les_returnist_6away
+		   set_country_flag = les_returnist_gone
+		   clear_variable = LES_faction_returnist
+		   CZE = { country_event =  { id = legion.48 days = 21 } }
+	   }
+	 }
+
+	option = {
+	name = legion.46.b
+		hidden_effect = {
+			returnist_decrease_50 = yes
+		}
+	}
+}
+
+
+### The czechs return home
+country_event = { 
+	id = legion.48
+	title = legion.48.t
+	desc = legion.48.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+	name = legion.48.a
+	if = {
+		limit = { CZE  = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+	ai_chance = { factor = 2 }
+	}
+	if = {
+		limit = { NOT = { CZE  = { SOCIALIST_ALIGNED_GOVERNMENT = yes } } }
+	ai_chance = { factor = 8 }
+	}
+    if = {
+		  limit = {
+			 LES = { has_country_flag = les_returnist_2away }
+		  }
+		  create_corps_commander = {
+			name = "Josef Jiří Švec"
+			picture = "Josef_Jiří_Švec.tga"
+			traits = { winter_specialist war_hero  }
+			skill = 4
+			id = 9998
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		  	}
+		  create_corps_commander = {
+			name = "Oleg Svátek"
+			picture = "Oleg_Svátek.tga"
+			traits = { old_guard }
+			skill = 2
+			id = 9983
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			}
+	}
+	if = {
+		limit = {
+		   LES = { has_country_flag = les_returnist_3away }
+		}
+		create_corps_commander = {
+			name = "Josef Jiří Švec"
+			picture = "Josef_Jiří_Švec.tga"
+			traits = { winter_specialist war_hero  }
+			skill = 4
+			id = 9985
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		  }
+		  create_corps_commander = {
+			name = "Oleg Svátek"
+			picture = "Oleg_Svátek.tga"
+			traits = { old_guard }
+			skill = 2
+			id = 9983
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		create_field_marshal = {
+			name = "Jan Syrový"
+			picture = "Portrait_LES_jan_syrov.tga"
+			traits = { offensive_doctrine }
+			skill = 3
+			id = 9986
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	if = {
+		limit = {
+		   LES = { has_country_flag = les_returnist_4away }
+		}
+		create_corps_commander = {
+			name = "Josef Jiří Švec"
+			picture = "Josef_Jiří_Švec.tga"
+			traits = { winter_specialist war_hero  }
+			skill = 4
+			id = 9985
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		  }
+		  create_corps_commander = {
+			name = "Oleg Svátek"
+			picture = "Oleg_Svátek.tga"
+			traits = { old_guard }
+			skill = 2
+			id = 9983
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		create_field_marshal = {
+			name = "Jan Syrový"
+			picture = "Portrait_LES_jan_syrov.tga"
+			traits = { offensive_doctrine }
+			skill = 3
+			id = 9986
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		create_corps_commander = {
+			name = "Vojtěch Luža"
+			picture = "Vojtěch_Luža.tga"
+			traits = { fast_planner }
+			skill = 2
+			id = 9981
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	if = {
+		limit = {
+		   LES = { has_country_flag = les_returnist_5away }
+		}
+		create_corps_commander = {
+			name = "Josef Jiří Švec"
+			picture = "Josef_Jiří_Švec.tga"
+			traits = { winter_specialist war_hero  }
+			skill = 4
+			id = 9985
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		  }
+		  create_corps_commander = {
+			name = "Oleg Svátek"
+			picture = "Oleg_Svátek.tga"
+			traits = { old_guard }
+			skill = 2
+			id = 9983
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		create_field_marshal = {
+			name = "Jan Syrový"
+			picture = "Portrait_LES_jan_syrov.tga"
+			traits = { offensive_doctrine }
+			skill = 3
+			id = 9986
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		create_corps_commander = {
+			name = "Vojtěch Luža"
+			picture = "Vojtěch_Luža.tga"
+			traits = { fast_planner }
+			skill = 2
+			id = 9981
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "Václav Šára"
+			picture = "Václav_Šára.tga"
+			traits = {  }
+			skill = 1
+			id = 9984
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	if = {
+		limit = {
+		   LES = { has_country_flag = les_returnist_6away }
+		}
+		create_corps_commander = {
+			name = "Josef Jiří Švec"
+			picture = "Josef_Jiří_Švec.tga"
+			traits = { winter_specialist war_hero  }
+			skill = 4
+			id = 9985
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		  }
+		  create_corps_commander = {
+			name = "Oleg Svátek"
+			picture = "Oleg_Svátek.tga"
+			traits = { old_guard }
+			skill = 2
+			id = 9983
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		create_field_marshal = {
+			name = "Jan Syrový"
+			picture = "Portrait_LES_jan_syrov.tga"
+			traits = { offensive_doctrine }
+			skill = 3
+			id = 9986
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		create_corps_commander = {
+			name = "Vojtěch Luža"
+			picture = "Vojtěch_Luža.tga"
+			traits = { fast_planner }
+			skill = 2
+			id = 9981
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "Václav Šára"
+			picture = "Václav_Šára.tga"
+			traits = {  }
+			skill = 1
+			id = 9984
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "Stanislav Čeček"
+			picture = "Portrait_LES_stansilav_chechek.tga"
+			traits = { winter_specialist infantry_leader }
+			skill = 3
+			id = 9982
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	 }
+
+	option = {
+	name = legion.48.b
+	if = {
+		limit = { CZE  = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+	ai_chance = { factor = 8 }
+	}
+	if = {
+		limit = { NOT = { CZE  = { SOCIALIST_ALIGNED_GOVERNMENT = yes } } }
+	ai_chance = { factor = 2 }
+	}
+		hidden_effect = {
+			set_country_flag = les_returnists_imprisoned
+		}
+	}
+}
+
+### The returnists go away through european borders
+country_event = { 
+	id = legion.47
+	title = legion.47.t
+	desc = legion.47.d
+	fire_only_once = yes
+	trigger = {
+		tag = LES
+		NOT = { has_country_flag = les_returnist_gone }
+			OR = {
+				 LES = { owns_state = 192 } 
+				 LES = { owns_state = 829 } 
+				 LES = { owns_state = 198 } 
+				 LES = { owns_state = 199 } 
+				 LES = { owns_state = 1083 }  
+				 LES = { owns_state = 933 } 
+				 LES = { owns_state = 93 } 
+				 LES = { owns_state = 94 } 
+				 LES = { owns_state = 95 }
+				 LES = { owns_state = 96 }  
+				 LES = { owns_state = 207 } 
+				 LES = { owns_state = 208 } 
+				 LES = { owns_state = 209 } 
+				 LES = { owns_state = 210 } 
+				 LES = { owns_state = 195 } 
+				 LES = { owns_state = 214 }
+				 LES = { owns_state = 215 } 
+				 LES = { owns_state = 216 }  
+
+			}
+		}
+	
+	option = {
+	 name = legion.47.a
+		if = {
+			limit = {
+			   check_variable = { var = LES_faction_returnist value = 85 compare = less_than }
+			   check_variable = { var = LES_faction_returnist value = 65 compare = greater_than_or_equals }
+			}
+			remove_unit_leader = 9985
+			remove_unit_leader = 9983
+			set_country_flag = les_returnist_2away
+			set_country_flag = les_returnist_gone
+			clear_variable = LES_faction_returnist
+			CZE = { country_event =  { id = legion.48 days = 14 } }
+		}
+		if = {
+		   limit = {
+			  check_variable = { var = LES_faction_returnist value = 65 compare = less_than }
+			  check_variable = { var = LES_faction_returnist value = 35 compare = greater_than_or_equals }
+		   }
+		   remove_unit_leader = 9985
+		   remove_unit_leader = 9986
+		   remove_unit_leader = 9983
+		   set_country_flag = les_returnist_3away
+		   set_country_flag = les_returnist_gone
+		   clear_variable = LES_faction_returnist
+		   CZE = { country_event =  { id = legion.48 days = 14 } }
+	   }
+	   if = {
+		   limit = {
+			  check_variable = { var = LES_faction_returnist value = 35 compare = less_than }
+			  check_variable = { var = LES_faction_returnist value = 15 compare = greater_than_or_equals }
+		   }
+		   remove_unit_leader = 9985
+		   remove_unit_leader = 9986
+		   remove_unit_leader = 9981
+		   remove_unit_leader = 9983
+		   set_country_flag = les_returnist_4away
+		   set_country_flag = les_returnist_gone
+		   clear_variable = LES_faction_returnist
+		   CZE = { country_event =  { id = legion.48 days = 14 } }
+	   }
+	   if = {
+		   limit = {
+			  check_variable = { var = LES_faction_returnist value = 15 compare = less_than }
+			  check_variable = { var = LES_faction_returnist value = 1 compare = greater_than_or_equals }
+		   }
+		   remove_unit_leader = 9985
+		   remove_unit_leader = 9986
+		   remove_unit_leader = 9981
+		   remove_unit_leader = 9983
+		   remove_unit_leader = 9984
+		   set_country_flag = les_returnist_5away
+		   set_country_flag = les_returnist_gone
+		   clear_variable = LES_faction_returnist
+		   CZE = { country_event =  { id = legion.48 days = 14 } }
+	   }
+	   if = {
+		   limit = {
+			  check_variable = { var = LES_faction_returnist value = 1 compare = less_than }
+		   }
+		   remove_unit_leader = 9985
+		   remove_unit_leader = 9986
+		   remove_unit_leader = 9981
+		   remove_unit_leader = 9983
+		   remove_unit_leader = 9984
+		   remove_unit_leader = 9982
+		   set_country_flag = les_returnist_6away
+		   set_country_flag = les_returnist_gone
+		   clear_variable = LES_faction_returnist
+		   CZE = { country_event =  { id = legion.48 days = 14 } }
+	   }
+	 }
+
+	option = {
+	name = legion.47.b
+		hidden_effect = {
+			returnist_decrease_50 = yes
+		}
+	}
+}
+
  ###temp event for debugging
  country_event = { 
 	id = legion.100

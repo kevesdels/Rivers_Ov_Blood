@@ -1,12 +1,22 @@
 on_actions = {
       on_startup = {
-		effect = {
-			ENG = { country_event = { id = united_kingdom.5 days = 35 } }
-			LIT = { country_event = { id = lithuania.4 days = 251 } }
-			SPR = { country_event = { id = rob_spain.0 days = 1 } }
-			ENG = { country_event = { id = united_kingdom.4 days = 65 } }
-			PRS = { country_event = { id = prussia.2 days = 10 } }
+			effect = {
+				ENG = { country_event = { id = united_kingdom.5 days = 35 } }
+				LIT = { country_event = { id = lithuania.4 days = 251 } }
+				SPR = { country_event = { id = rob_spain.0 days = 1 } }
+				ENG = { country_event = { id = united_kingdom.4 days = 65 } }
+				PRS = { country_event = { id = prussia.2 days = 10 } }
 			}
-			}
-			}
+		}
+		on_weekly_LES = {
+			effect = { 
+				if = { 
+					limit = { AND = { check_variable = { var = LES_faction_poet value = 1 compare = less_than } NOT = { has_country_flag = les_poet_gone has_country_flag = futurist_discontent_misson_done } } AGR = { exists = yes is_puppet_of = LES} LES = { has_country_flag = les_factions } }
+					country_event = { id = legion.42 days = 1 }
+					AGR = { country_event = { id = agrussia.3  days = 3 } }
+					set_country_flag = futurist_discontent_misson_done
+				  }
+			} 
+		}
+	}
 			

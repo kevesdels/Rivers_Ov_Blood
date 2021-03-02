@@ -1,5 +1,4 @@
 
-
 Legion_faction_summ_calc = {
 
 	hidden_effect = {
@@ -91,16 +90,43 @@ Legion_faction_summ_calc = {
 
 		}###end of 5 factors
 
-		###No Christians at play
+		### 4 factors at play
 		if = {
 
 			limit = {
-				AND = { 
-					NOT = { has_country_flag = les_pagan_gone }
-					NOT = { has_country_flag = les_poet_gone }
-					NOT = { has_country_flag = les_returnist_gone }
-					NOT = { has_country_flag = les_rusnat_gone }
-					has_country_flag = les_christ_gone
+			OR = {
+			     ###NO CHRIST
+				 AND = { 
+						NOT = { has_country_flag = les_pagan_gone }
+						NOT = { has_country_flag = les_poet_gone }
+						NOT = { has_country_flag = les_returnist_gone }
+						NOT = { has_country_flag = les_rusnat_gone }
+						has_country_flag = les_christ_gone
+					}
+				###No Futurist
+				 AND = { 
+						NOT = { has_country_flag = les_pagan_gone }
+						NOT = { has_country_flag = les_christ_gone }
+						NOT = { has_country_flag = les_returnist_gone }
+						NOT = { has_country_flag = les_rusnat_gone }
+						has_country_flag = les_poet_gone
+					}
+				###No Pagan
+				 AND = { 
+						NOT = { has_country_flag = les_poet_gone}
+						NOT = { has_country_flag = les_christ_gone }
+						NOT = { has_country_flag = les_returnist_gone }
+						NOT = { has_country_flag = les_rusnat_gone }
+						has_country_flag = les_pagan_gone
+					}
+				###No Returnist
+				 AND = { 
+						NOT = { has_country_flag = les_poet_gone}
+						NOT = { has_country_flag = les_christ_gone }
+						NOT = { has_country_flag = les_pagan_gone}
+						NOT = { has_country_flag = les_rusnat_gone }
+						has_country_flag = les_returnist_gone
+					}
 				}
 			}
 				###no debuff
@@ -176,105 +202,55 @@ Legion_faction_summ_calc = {
 					add_ideas = { LES_council_discontent_5 }
 				}
 
-		}###end of No Christians at play
+		}###end of 4 factors at play
 
-		###No Pagang at play
+	
+
+		###3 factors at play
 		if = {
 
 			limit = {
-				AND = { 
-					NOT = { has_country_flag = les_christ_gone }
-					NOT = { has_country_flag = les_poet_gone }
-					NOT = { has_country_flag = les_returnist_gone }
-					NOT = { has_country_flag = les_rusnat_gone }
-					has_country_flag = les_pagan_gone
-				}
-			}
-				###no debuff
-				if = {
-					limit = {
-					check_variable = { var = LES_faction_sum value = 220  compare = greater_than_or_equals }
+				OR = {
+					###No pagan no futurist
+					AND = { 
+						NOT = { has_country_flag = les_christ_gone }
+						NOT = { has_country_flag = les_returnist_gone }
+						NOT = { has_country_flag = les_rusnat_gone }
+						has_country_flag = les_poet_gone
+						has_country_flag = les_pagan_gone
 					}
-					remove_ideas = { LES_council_discontent_1 }
-					remove_ideas = { LES_council_discontent_2 }
-					remove_ideas = { LES_council_discontent_3 }
-					remove_ideas = { LES_council_discontent_4 }
-					remove_ideas = { LES_council_discontent_5 }
-				}
-
-				###slight debuff
-				if = {
-					limit= {
-					check_variable = { var = LES_faction_sum value = 190  compare = greater_than_or_equals }
-					check_variable = { var = LES_faction_sum value = 220 compare = less_than }
+					###No christ no futurist
+					AND = { 
+						NOT = { has_country_flag = les_pagan_gone }
+						NOT = { has_country_flag = les_returnist_gone }
+						NOT = { has_country_flag = les_rusnat_gone }
+						has_country_flag = les_poet_gone
+						has_country_flag = les_christ_gone
 					}
-					remove_ideas = { LES_council_discontent_2 }
-					remove_ideas = { LES_council_discontent_3 }
-					remove_ideas = { LES_council_discontent_4 }
-					remove_ideas = { LES_council_discontent_5 }
-					add_ideas = { LES_council_discontent_1 }
-				}
-				### minor debuff
-				if = {
-					limit= {
-					check_variable = { var = LES_faction_sum value = 170 compare = greater_than_or_equals }
-					check_variable = { var = LES_faction_sum value = 190 compare = less_than }
+					###No christ no returnist
+					AND = { 
+						NOT = { has_country_flag = les_pagan_gone }
+						NOT = { has_country_flag = les_poet_gone }
+						NOT = { has_country_flag = les_rusnat_gone }
+						has_country_flag = les_returnist_gone
+						has_country_flag = les_christ_gone
 					}
-					remove_ideas = { LES_council_discontent_1 }
-					remove_ideas = { LES_council_discontent_3 }
-					remove_ideas = { LES_council_discontent_4 }
-					remove_ideas = { LES_council_discontent_5 }
-					add_ideas = { LES_council_discontent_2 }
-				}
-				### considerable debuf
-				if = {
-					limit= {
-					check_variable = { var = LES_faction_sum value = 150 compare = greater_than_or_equals }
-					check_variable = { var = LES_faction_sum value = 170 compare = less_than }
+					###No pagan no returnist
+					AND = { 
+						NOT = { has_country_flag = les_christ_gone }
+						NOT = { has_country_flag = les_poet_gone }
+						NOT = { has_country_flag = les_rusnat_gone }
+						has_country_flag = les_pagan_gone
+						has_country_flag = les_returnist_gone
 					}
-					remove_ideas = { LES_council_discontent_1 }
-					remove_ideas = { LES_council_discontent_2 }
-					remove_ideas = { LES_council_discontent_4 }
-					remove_ideas = { LES_council_discontent_5 }
-					add_ideas = { LES_council_discontent_3 }
-				}
-				### major debuff
-				if = {
-					limit= {
-					check_variable = { var = LES_faction_sum value = 130 compare = greater_than_or_equals }
-					check_variable = { var = LES_faction_sum value = 150 compare = less_than }
+					###No christ no returnist
+					AND = { 
+						NOT = { has_country_flag = les_pagan_gone }
+						NOT = { has_country_flag = les_poet_gone }
+						NOT = { has_country_flag = les_rusnat_gone }
+						has_country_flag = les_christ_gone
+						has_country_flag = les_returnist_gone
 					}
-					remove_ideas = { LES_council_discontent_1 }
-					remove_ideas = { LES_council_discontent_2 }
-					remove_ideas = { LES_council_discontent_3 }
-					remove_ideas = { LES_council_discontent_5 }
-					add_ideas = { LES_council_discontent_4 }
-				}
-				###shit
-				if = {
-					limit= {
-					check_variable = { var = LES_faction_sum value = 1 compare = greater_than_or_equals }
-					check_variable = { var = LES_faction_sum value = 130 compare = less_than }
-					}
-					remove_ideas = { LES_council_discontent_1 }
-					remove_ideas = { LES_council_discontent_2 }
-					remove_ideas = { LES_council_discontent_3 }
-					remove_ideas = { LES_council_discontent_4 }
-					add_ideas = { LES_council_discontent_5 }
-				}
-
-		}###end of No Pagang at play
-
-		###No Pagang, No Futurist at play
-		if = {
-
-			limit = {
-				AND = { 
-					NOT = { has_country_flag = les_christ_gone }
-					NOT = { has_country_flag = les_returnist_gone }
-					NOT = { has_country_flag = les_rusnat_gone }
-					has_country_flag = les_poet_gone
-					has_country_flag = les_pagan_gone
 				}
 			}
 				###no debuff
@@ -350,107 +326,30 @@ Legion_faction_summ_calc = {
 					add_ideas = { LES_council_discontent_5 }
 				}
 
-		}###end of No Pagang, No Futurist at play
+		}###end 3 factors at play
 
 
-
-		###No christian, No returnist at play
+		### 2 factors at play
 		if = {
 
 			limit = {
-				AND = { 
-					NOT = { has_country_flag = les_pagan_gone }
-					NOT = { has_country_flag = les_poet_gone }
-					NOT = { has_country_flag = les_rusnat_gone }
-					has_country_flag = les_returnist_gone
-					has_country_flag = les_christ_gone
-				}
-			}
-				###no debuff
-				if = {
-					limit = {
-					check_variable = { var = LES_faction_sum value = 170  compare = greater_than_or_equals }
+				OR = {
+				    ### Only Christ and Rusnat
+					AND = { 
+						NOT = { has_country_flag = les_christ_gone }
+						NOT = { has_country_flag = les_rusnat_gone }
+						has_country_flag = les_returnist_gone
+						has_country_flag = les_poet_gone
+						has_country_flag = les_pagan_gone
 					}
-					remove_ideas = { LES_council_discontent_1 }
-					remove_ideas = { LES_council_discontent_2 }
-					remove_ideas = { LES_council_discontent_3 }
-					remove_ideas = { LES_council_discontent_4 }
-					remove_ideas = { LES_council_discontent_5 }
-				}
-
-				###slight debuff
-				if = {
-					limit= {
-					check_variable = { var = LES_faction_sum value = 150  compare = greater_than_or_equals }
-					check_variable = { var = LES_faction_sum value = 170 compare = less_than }
+				    ### Only Pagan and Rusnat
+					AND = { 
+						NOT = { has_country_flag = les_pagan_gone }
+						NOT = { has_country_flag = les_rusnat_gone }
+						has_country_flag = les_returnist_gone
+						has_country_flag = les_poet_gone
+						has_country_flag = les_christ_gone
 					}
-					remove_ideas = { LES_council_discontent_2 }
-					remove_ideas = { LES_council_discontent_3 }
-					remove_ideas = { LES_council_discontent_4 }
-					remove_ideas = { LES_council_discontent_5 }
-					add_ideas = { LES_council_discontent_1 }
-				}
-				### minor debuff
-				if = {
-					limit= {
-					check_variable = { var = LES_faction_sum value = 130 compare = greater_than_or_equals }
-					check_variable = { var = LES_faction_sum value = 150 compare = less_than }
-					}
-					remove_ideas = { LES_council_discontent_1 }
-					remove_ideas = { LES_council_discontent_3 }
-					remove_ideas = { LES_council_discontent_4 }
-					remove_ideas = { LES_council_discontent_5 }
-					add_ideas = { LES_council_discontent_2 }
-				}
-				### considerable debuf
-				if = {
-					limit= {
-					check_variable = { var = LES_faction_sum value = 110 compare = greater_than_or_equals }
-					check_variable = { var = LES_faction_sum value = 120 compare = less_than }
-					}
-					remove_ideas = { LES_council_discontent_1 }
-					remove_ideas = { LES_council_discontent_2 }
-					remove_ideas = { LES_council_discontent_4 }
-					remove_ideas = { LES_council_discontent_5 }
-					add_ideas = { LES_council_discontent_3 }
-				}
-				### major debuff
-				if = {
-					limit= {
-					check_variable = { var = LES_faction_sum value = 90 compare = greater_than_or_equals }
-					check_variable = { var = LES_faction_sum value = 110 compare = less_than }
-					}
-					remove_ideas = { LES_council_discontent_1 }
-					remove_ideas = { LES_council_discontent_2 }
-					remove_ideas = { LES_council_discontent_3 }
-					remove_ideas = { LES_council_discontent_5 }
-					add_ideas = { LES_council_discontent_4 }
-				}
-				###shit
-				if = {
-					limit= {
-					check_variable = { var = LES_faction_sum value = 1 compare = greater_than_or_equals }
-					check_variable = { var = LES_faction_sum value = 90 compare = less_than }
-					}
-					remove_ideas = { LES_council_discontent_1 }
-					remove_ideas = { LES_council_discontent_2 }
-					remove_ideas = { LES_council_discontent_3 }
-					remove_ideas = { LES_council_discontent_4 }
-					add_ideas = { LES_council_discontent_5 }
-				}
-
-		}###end of No christian, No returnist at play
-
-		###No pagan, No futurist, no returnist at play
-		if = {
-
-			limit = {
-				AND = { 
-					NOT = { has_country_flag = les_christ_gone }
-					NOT = { has_country_flag = les_rusnat_gone }
-					has_country_flag = les_returnist_gone
-					has_country_flag = les_poet_gone
-					has_country_flag = les_pagan_gone
 				}
 			}
 				###no debuff
@@ -527,15 +426,13 @@ Legion_faction_summ_calc = {
 
 				}
 
-		}###end of No pagan, No futurist, no returnist at play
+		}###end of 2 factors at play
 
-	}
-}###end of
+	}###end of if
 
-}###END OF LES
+}###end of LES
 
-
-
+}###END OF summ calc
 
 
 ###Pagan Faction###

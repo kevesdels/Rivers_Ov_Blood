@@ -40,7 +40,7 @@ option = {
 }
 
 
-###fuck christians bottom text
+###fuck gadja bottom text
 country_event = { 
 id =  agrussia.3
 title =  agrussia.3.t
@@ -51,9 +51,8 @@ is_triggered_only = yes
 option = {
  name =  agrussia.3.a
   hidden_effect = {
- LES = { country_event = { id = legion.24 days = 1 }}
+ LES = { country_event = { id = legion.24 days = 1 } }
  LES  = { end_puppet = AGR }
- LES = { set_country_flag = LES_early_game_war }
  }
  AGR = { declare_war_on = { target = LES type = annex_everything }}
 }

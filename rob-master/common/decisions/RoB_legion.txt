@@ -71,7 +71,7 @@ LES_banish_x = {
     NOT = { has_country_flag = les_returnist_gone }
     }
    }
-   cost = 40
+   cost = 50
    days_remove = 10
 
    remove_effect = {
@@ -96,7 +96,7 @@ LES_banish_x = {
     has_country_flag = les_factions
     NOT = { has_country_flag = les_rusnat_gone }
     }
-    command_power = 50
+    command_power = 60
    }
    days_remove = 10
 
@@ -125,7 +125,7 @@ LES_banish_x = {
     has_country_flag = les_factions
     NOT = { has_country_flag = les_christ_gone }
     }
-    command_power = 50
+    command_power = 60
    }
    days_remove = 10
    complete_effect = {
@@ -154,7 +154,7 @@ LES_banish_x = {
     NOT = { has_country_flag = les_pagan_gone }
     }
    }
-   cost = 40
+   cost = 50
    days_remove = 10
 
    remove_effect = {
@@ -167,7 +167,7 @@ LES_banish_x = {
    visible = {
       hidden_trigger = {
         tag = LES
-        NOT = { has_country_flag = les_poet_gone }
+        NOT = { has_country_flag = les_poet_gone has_country_flag = les_poet_rebellion }
       }
    }
    icon = GFX_decision_infiltrate_state
@@ -177,10 +177,10 @@ LES_banish_x = {
   available = {
     hidden_trigger = {
     has_country_flag = les_factions
-    NOT = { has_country_flag = les_poet_gone }
+    NOT = { has_country_flag = les_poet_gone has_country_flag = les_poet_rebellion }
     }
    }
-   cost = 40
+   cost = 50
    days_remove = 10
 
    remove_effect = {
@@ -232,6 +232,8 @@ LES_discontent = {
 
 ###end of factions
 }
+
+### start of industry centres
 LES_economicalcentresdec = {
 
 LES_rural_infa  = {
@@ -523,7 +525,7 @@ LES_deal_with_KAR = {
  }
  }
 
-###
+ ### 
 
 LES_annex_AGR = {
   target_trigger = { FROM = {tag = AGR} }
@@ -572,41 +574,32 @@ if = {
  fire_only_once = yes
 complete_effect = {
 AGR =  { country_event = { id = agrussia.2 days = 3 } }
- }}
-
-###
-LES_core_AGR {
-  target_trigger = { FROM = {tag = AGR} }
-  cost = 10
-  visible = {
-    LES = { owns_state = 1231 }
-  }
- available = {
- LES = { owns_state = 1231 }
-  NOT = {
-  1231 = { is_core_of = LES }
-  }
  }
+
+}
+
+LES_annex_AGR_2 = {
+visible = {
+    LES = { owns_state = 1231 }
+   }
+
+available = {
+  LES = { owns_state = 1231 }
+  NOT = {
+    1231 = { is_core_of = LES }
+    }
+ }
+
+  cost = 10
 
  ai_will_do = {
-  base = 10
-   modifier = {
-   factor = 200
-    ROOT = {
-   strength_ratio = {
-    tag = AGR
-    ratio > 0.25
-   }
-  }
-   }
+  base = 30
  }
- fire_only_once = yes
- complete_effect = {
-    LES = { country_event = { id = legion.25 days = 1 } }
-  }
-
+complete_effect = {
+  LES = { country_event = { id = legion.25 days = 1 } }
  }
 
+}
  ##end of unite
  }
 

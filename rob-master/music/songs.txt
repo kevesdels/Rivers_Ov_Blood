@@ -8,6 +8,61 @@ music = {
 	}
 }
 
+
+###Vivaldi
+
+### WAR  ### 
+music = {
+	song = "rob_war_1" ##  Bassoon Concerto per Marchese de Morzin in G minor RV 496 I. Allegro
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "rob_war_2" ##  Bassoon Concerto per Marchese de Morzin in G minor RV 496 III. Allegro
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "rob_war_3" ##  Concerto No.4 in F minor, Op.8, RV 297,  L'inverno , Allegro Non Molto
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}		
+	}	
+}
+
+
+Emīls Dārziņš
+### PEACE
+
+music = {
+	song = "rob_peace_1" ##  Emīls Dārziņš - Melanholiskais valsis
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_war = no
+		}		
+	}	
+}
+
 # PEACE SONGS ##################
 music = {
 	song = "general_peace_1"
