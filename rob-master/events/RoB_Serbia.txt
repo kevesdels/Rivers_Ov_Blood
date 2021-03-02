@@ -16,7 +16,7 @@ picture = GFX_picture_bosnian_revolt
 
 trigger = {
 tag = SER
-date > 1934.6.7
+CRO = { has_completed_focus = CRO_the_great_liberation}
 }
 mean_time_to_happen = { days = 1 }
 
@@ -66,27 +66,7 @@ desc = serbia.102.d
 fire_only_once = yes
 trigger = {
 tag = BOS
-OR = { 
-controls_state = 1140
-CRO = { controls_state = 1140 }
-MNT = { controls_state = 1140 }
-}
-OR = { 
-controls_state = 1117
-CRO = { controls_state = 1117 }
-MNT = { controls_state = 1117 }
-}
-OR = { 
-controls_state = 105
-CRO = { controls_state = 105 }
-MNT = { controls_state = 105 }
-}
-OR = { 
-controls_state = 764
-CRO = { controls_state = 764 }
-MNT = { controls_state = 764 }
-}
-controls_state = 104
+surrender_progress > 0.3
 
 }
 picture = GFX_picture_bosnian_revolt
@@ -116,7 +96,13 @@ CRO = { transfer_state = 45 }
 CRO = { transfer_state = 1139 }
 CRO = { transfer_state = 764 }
 CRO = { transfer_state = 869 }
-CRO = { set_country_flag = croatia_victory }
+
+CRO = { country_event = {
+    id = croatia.6
+    days = 0
+    random = 0
+    } 
+}
 
 add_stability = 0.1
 
