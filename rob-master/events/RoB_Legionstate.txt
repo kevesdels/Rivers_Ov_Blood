@@ -584,14 +584,14 @@ mean_time_to_happen = { days = 7 }
 
 option = {
  name = legion.23.a
-
+ 
+ hidden_effect = {
  every_state = {
     limit = { 
 	is_core_of = LES
 	}
 	remove_core_of = KAR
 }
- hidden_effect = {
  set_country_flag = triumph
  LES = { country_event = { id = legion.36 days = 33 } }
  }
@@ -626,7 +626,7 @@ option = {
  name = legion.25.a
  LES = { add_state_core = 1231 }
  hidden_effect = {
- remove_core_of = AGR
+ 1231 = { remove_core_of = AGR }
  set_country_flag = les_poet_gone
  clear_variable = LES_faction_poet
  }
@@ -650,7 +650,7 @@ mean_time_to_happen = { days = 3 }
 option = {
 name  = "Tell them to prove their words"
 hidden_effect = {
-	KAR = { country_event = { id = agrussia.4 days = 5 } }
+	KAR = { country_event = { id = legion.49 days = 5 } }
 	}
 }
 
@@ -661,9 +661,39 @@ hidden_effect = { LES = { load_oob = "LES_Defectors" }}
 }
 }
 
+###Karel is dead
+country_event = { 
+id = legion.49
+title =  "Karel is dead"
+desc = legion.49
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name =  legion.49.a
+ desc = "Might as well give up"
+ add_war_support = -0.3
+ add_stability = -0.3
+ LES = { country_event = { id = legion.27 days = 2 } }
+
+ set_politics = {
+ ruling_party = democratic_socialist
+ elections_allowed = no
+}
+ create_country_leader = {
+	name = "Mikhail Simenh"
+	desc = ""
+	picture = ""
+	expire = "1960.1.1"
+	ideology = anarcho_socialism
+	traits = {}
+}
+}
+}
+
 ###Karel defectors kill karel
 country_event = { 
-id = legion.27.t
+id = legion.27
 title = "A sunny day for Legion"
 desc = legion.27.d
 fire_only_once = yes
@@ -676,7 +706,6 @@ add_war_support = 0.1
 hidden_effect = { LES = { load_oob = "LES_Defectors" } }
 }
 }
-
 
 ### 5th Reds are gone
 country_event = { 
@@ -858,14 +887,14 @@ option = {
 	option = {
 	name = legion.37.b
 	hidden_effect = {
-		set_country_flag = les_congress_economy
+		set_country_flag = les_congress_economy_2
 		LES = { country_event = { id = legion.38 days = 3 } }
 		}
 	}
 	option = {
 	name = legion.37.c
 	hidden_effect = {
-		set_country_flag = les_congress_economy
+		set_country_flag = les_congress_economy_3
 		LES = { country_event = { id = legion.38 days = 3 } }
 		}
 	}
@@ -909,7 +938,7 @@ country_event = {
 	}
 	###west and east small legion
 	option = {
-	name = legion.38.d
+	name = legion.38.e
 	hidden_effect = {
 		set_country_flag = les_onlyruseastslav
 		set_country_flag = les_congress_political
@@ -937,14 +966,14 @@ country_event = {
 	name = legion.39.b
 	hidden_effect = {
 		LES = { country_event = { id = legion.40 days = 3 } }
-		set_country_flag = les_congress_ethnic
+		set_country_flag = les_congress_ethnic_2
 		}
 	}
 	option = {
 	name = legion.39.c
 	hidden_effect = {
 		LES = { country_event = { id = legion.40 days = 3 } }
-		set_country_flag = les_congress_ethnic
+		set_country_flag = les_congress_ethnic_3
 		}
 	}
 	
@@ -970,14 +999,14 @@ country_event = {
 	name = legion.40.b
 	hidden_effect = {
 		LES = { country_event = { id = legion.41 days = 3 } }
-		set_country_flag = les_congress_women
+		set_country_flag = les_congress_women_2
 		}
 	}
 	option = {
 	name = legion.40.c
 	hidden_effect = {
 		LES = { country_event = { id = legion.41 days = 3 } }
-		set_country_flag = les_congress_women
+		set_country_flag = les_congress_women_3
 		}
 	}
 	

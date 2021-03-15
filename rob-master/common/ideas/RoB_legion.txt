@@ -54,8 +54,6 @@ LES_council_discontent_2 = {
 
   modifier = {
   army_org = -4
-  army_attack_factor = -0.1
-  army_defence_factor = -0.1
   stability_factor = -0.05
   political_power_gain = -0.1
   }
@@ -74,8 +72,8 @@ LES_council_discontent_3 = {
 
   modifier = {
   army_org = -6
-  army_attack_factor = -0.2
-  army_defence_factor = -0.1
+  army_attack_factor = -0.05
+  army_defence_factor = -0.05
   stability_factor = -0.1
   political_power_gain = -0.15
   }
@@ -94,8 +92,8 @@ LES_council_discontent_4 = {
 
   modifier = {
   army_org = -8
-  army_attack_factor = -0.2
-  army_defence_factor = -0.2
+  army_attack_factor = -0.1
+  army_defence_factor = -0.1
   stability_factor = -0.1
   political_power_gain = -0.20
   }
@@ -114,8 +112,8 @@ LES_council_discontent_5 = {
 
   modifier = {
   army_org = -10
-  army_defence_factor = -0.25
-  army_attack_factor = -0.25
+  army_defence_factor = -0.15
+  army_attack_factor = -0.15
   stability_factor = -0.15
   political_power_gain = -0.20
   }
@@ -265,8 +263,6 @@ LES_Fiercest_Infantry = {
 			}
      removal_cost = -1
 	 modifier = {
-	stability_weekly = -0.0010
-    war_support_weekly = -0.0010
     political_power_gain = -0.25
 	 }
 
@@ -281,8 +277,8 @@ LES_Fiercest_Infantry = {
 			}
      removal_cost = -1
 	 modifier = {
-	stability_weekly = 0.0015
-    war_support_weekly = 0.0015
+	stability_weekly = 0.0005
+    war_support_weekly = 0.0005
 	 }
 
 }

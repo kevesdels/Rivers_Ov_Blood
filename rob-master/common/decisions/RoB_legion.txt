@@ -459,7 +459,6 @@ if = {
    has_country_flag = LES_justifying
   }
   has_war = no
-  date > 1935.1.1
  }
 if = {
  AGR = { 
@@ -467,7 +466,6 @@ if = {
  NOT = { is_in_faction_with = KAR}
  }
  has_war = no
- date > 1935.1.1
  }}
 KAR = {
   exists = yes
@@ -548,15 +546,7 @@ if = {
   AGR = { owns_state = 1231 }
 }
  }
-  OR = {
-if = {
-  LES = { owns_state = 571 }
-}
-if = {
-  AGR = { owns_state = 571 }
-}
- }
- check_variable = { var = LES_faction_poet value = 85 compare = greater_than_or_equals }
+ check_variable = { var = LES_faction_poet value = 60 compare = greater_than_or_equals }
  }
 
  ai_will_do = {
@@ -577,10 +567,14 @@ AGR =  { country_event = { id = agrussia.2 days = 3 } }
  }
 
 }
-
+### after rebellion agr annexed
 LES_annex_AGR_2 = {
 visible = {
     LES = { owns_state = 1231 }
+    NOT = {
+      1231 = { is_core_of = LES }
+      }
+      check_variable = { var = LES_faction_poet value = 1 compare = less_than }
    }
 
 available = {
@@ -589,7 +583,7 @@ available = {
     1231 = { is_core_of = LES }
     }
  }
-
+ fire_only_once = yes
   cost = 10
 
  ai_will_do = {
@@ -600,6 +594,7 @@ complete_effect = {
  }
 
 }
+
  ##end of unite
  }
 
@@ -1646,6 +1641,18 @@ LES_destroy_IRK = {
   }
   complete_effect = {
     set_country_flag = les_russia_secured
+    if = { 
+      limit = { has_country_flag = les_confederation }
+      set_cosmetic_tag = LES_slavicfed
+    }
+    if = { 
+      limit = { OR = { has_country_flag = les_onlyruseastslav has_country_flag = les_bigeastslav } }
+      set_cosmetic_tag = LES_eastslavia
+    }
+    if = { 
+      limit = { has_country_flag = les_unitary }
+      set_cosmetic_tag = LES_slavia
+    }
   }
   ai_will_do = {
    base = 200
@@ -3233,56 +3240,6 @@ les_5th_invades = {
 
 LES_easterneurope = {
 
-les_ee_ukr = {
-  target_trigger = { FROM = {tag = UKR} }
-  visible = {
-    NOT = {
-       tag = UKR
-       is_puppet_of = LES
-     }
-     MON = {
-      exists = yes
-     }
-     is_neighbor_of = UKR
- }
- available = {
-  is_neighbor_of = UKR
-    NOT = {
-   is_in_faction_with = UKR
-   is_puppet_of = LES
-   has_country_flag = LES_justifying
-  }
-  has_war = no
- }
- ai_will_do = {
-  base = 10
-   modifier = {
-   factor = 200
-    ROOT = {
-   strength_ratio = {
-    tag = UKR
-    ratio > 0.75
-   }
-  }
-   }
- }
- cost = 50
- fire_only_once = yes
- days_remove = 20
- complete_effect = {
- set_country_flag = LES_justifying
- }
- remove_effect = {
-  ROOT = {
- declare_war_on = { target = UKR type = annex_everything }
- clr_country_flag = LES_justifying
-  }
- }
- }
-}
-
-LES_easterneurope = {
-
   les_ee_ukr = {
     target_trigger = { FROM = {tag = UKR} }
     visible = {
@@ -4077,6 +4034,295 @@ LES_easterneurope = {
    remove_effect = {
     ROOT = {
    declare_war_on = { target = BOS type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_ukr = {
+    target_trigger = { FROM = {tag = UKR} }
+    visible = {
+      NOT = {
+         tag = UKR
+         is_puppet_of = LES
+       }
+       MON = {
+        exists = yes
+       }
+       is_neighbor_of = UKR
+   }
+   available = {
+    is_neighbor_of = UKR
+      NOT = {
+     is_in_faction_with = UKR
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = UKR
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = UKR type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_est = {
+    target_trigger = { FROM = {tag = EST } }
+    visible = {
+      NOT = {
+         tag = EST
+         is_puppet_of = LES
+       }
+       MON = {
+        exists = yes
+       }
+       is_neighbor_of = EST
+   }
+   available = {
+    is_neighbor_of = EST
+      NOT = {
+     is_in_faction_with = EST
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = EST
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = EST type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   les_ee_lit = {
+    target_trigger = { FROM = {tag = LIT } }
+    visible = {
+      NOT = {
+         tag = LIT
+         is_puppet_of = LES
+       }
+       MON = {
+        exists = yes
+       }
+       is_neighbor_of = LIT
+   }
+   available = {
+    is_neighbor_of = LIT
+      NOT = {
+     is_in_faction_with = LIT
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = LIT
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = LIT type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+
+   ### Special conditions ###
+
+
+   ### WHO EVER OWNS THRACE AND MACEDONIA
+   les_ee_gre = {
+    target_trigger = { FROM = {tag = GRE } }
+    visible = {
+      NOT = {
+         tag = GRE
+         is_puppet_of = LES
+       }
+       MON = {
+        exists = yes
+       }
+       is_neighbor_of = GRE
+   }
+   available = {
+    is_neighbor_of = GRE
+      NOT = {
+     is_in_faction_with = GRE
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = GRE
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = GRE type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   ###IF ITALY HAS SLAV LANDS
+   les_ee_ita = {
+    target_trigger = { FROM = {tag = ITA } }
+    visible = {
+      NOT = {
+         tag = ITA
+         is_puppet_of = LES
+       }
+       MON = {
+        exists = yes
+       }
+       is_neighbor_of = ITA
+   }
+   available = {
+    is_neighbor_of = ITA
+      NOT = {
+     is_in_faction_with = ITA
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = ITA
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = ITA type = annex_everything }
+   clr_country_flag = LES_justifying
+    }
+   }
+   }
+
+   ### IF PRUSSIA DOSENT GIVE UP SLAV LANDS
+   les_ee_prs = {
+    target_trigger = { FROM = {tag = PRS } }
+    visible = {
+      NOT = {
+         tag = PRS
+         is_puppet_of = LES
+       }
+       MON = {
+        exists = yes
+       }
+       is_neighbor_of = PRS
+   }
+   available = {
+    is_neighbor_of = PRS
+      NOT = {
+     is_in_faction_with = PRS
+     is_puppet_of = LES
+     has_country_flag = LES_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = PRS
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = PRS type = annex_everything }
    clr_country_flag = LES_justifying
     }
    }

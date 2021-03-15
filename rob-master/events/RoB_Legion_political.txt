@@ -593,7 +593,7 @@ country_event = {
 	   has_country_flag = les_confederation
 	   }
 	   ai_chance = { factor = 150 }
-	   puppet = SLO
+	   puppet = HUN
 	   every_owned_state = {
 		limit = { 
 		 NOT = {
@@ -681,7 +681,7 @@ country_event = {
 	 
    }
 
-      ### Romania
+ ### Romania
  country_event = {
 	id = legion_political.7
 	desc = legion_political.7.d
@@ -703,7 +703,7 @@ country_event = {
 	   has_country_flag = les_confederation
 	   }
 	   ai_chance = { factor = 150 }
-	   puppet = SLO
+	   puppet = ROM
 	   every_owned_state = {
 		limit = { 
 		 NOT = {
@@ -1133,6 +1133,22 @@ country_event = {
 	   has_war = no
 	   SLV = { NOT = { is_puppet_of = ROOT } }
 	   1128 = { is_owned_and_controlled_by = ROOT }
+	   NOT = { 
+		   810 = { is_owned_and_controlled_by = ROOT } 
+			4 = { is_owned_and_controlled_by = ROOT } 
+		   1015 = { is_owned_and_controlled_by = ROOT } 
+		   1016 = { is_owned_and_controlled_by = ROOT } 
+		   806 = { is_owned_and_controlled_by = ROOT } 
+		   152 = { is_owned_and_controlled_by = ROOT } 
+		   807 = { is_owned_and_controlled_by = ROOT } 
+		   810 = { is_owned_and_controlled_by = ROOT } 
+		   1015 = { is_owned_and_controlled_by = ROOT } 
+		   1021 = { is_owned_and_controlled_by = ROOT } 
+		   1020 = { is_owned_and_controlled_by = ROOT } 
+		   1018 = { is_owned_and_controlled_by = ROOT } 
+		   1022 = { is_owned_and_controlled_by = ROOT } 
+		   1019 = { is_owned_and_controlled_by = ROOT } 
+		}
 	  }
    
    ###Federation option
@@ -1230,6 +1246,676 @@ country_event = {
 	 
    }
 
+
  ### Baltic Expansion ###
 
  
+### Prussia
+country_event = {
+	id = legion_political.12
+	desc = legion_political.12.d
+	title = "Fate of Prussia"
+	fire_only_once = yes
+   
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		tag = LES
+	   has_war = no
+	   PRS = { NOT = { is_puppet_of = ROOT } }
+	   763 = { is_owned_and_controlled_by = ROOT }
+	  }
+   
+   ###Federation option
+	option = {
+	   name = "Create the Slavic Confederation Member State"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 150 }
+	   puppet = PRS
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		  is_core_of = PRS
+		}
+		PRS = { transfer_state = PREV }
+	  }
+	  PRS = {
+		set_cosmetic_tag = LES_gadja_puppet
+		} 
+	  }
+
+	  ###Fed. Poland gets it
+	  option = {
+		name = "Give it to Poland"
+		trigger = {
+		has_country_flag = les_confederation
+		POL = { is_puppet_of = LES }
+		}
+		ai_chance = { factor = 150 }
+		if = { limit = { 188 = { is_owned_and_controlled_by = ROOT } } POL = { transfer_state = 188 } 188 = { add_core_of = POL} }
+		if = { limit = { 763 = { is_owned_and_controlled_by = ROOT } } POL = { transfer_state = 763 } 763 = { add_core_of = POL} }
+		if = { limit = { 5 = { is_owned_and_controlled_by = ROOT } } POL = { transfer_state = 5 } 5 = { add_core_of = POL} }
+		if = { limit = { 980 = { is_owned_and_controlled_by = ROOT } } POL = { transfer_state = 980 } 980 = { add_core_of = POL} }
+		if = { limit = { 85 = { is_owned_and_controlled_by = ROOT } } POL = { transfer_state = 85 } 85 = { add_core_of = POL} }
+	   }
+
+	  ###Fed. Poland and Pribaltika split it
+	  option = {
+		name = "Split it Among Member States"
+		trigger = {
+		has_country_flag = les_confederation
+		AND = {
+		POL = { is_puppet_of = LES }
+		EST = { is_puppet_of = LES }
+		}
+		}
+		ai_chance = { factor = 150 }
+		if = { limit = { 188 = { is_owned_and_controlled_by = ROOT } } EST = { transfer_state = 188 } 188 = { add_core_of = EST} }
+		if = { limit = { 763 = { is_owned_and_controlled_by = ROOT } } POL = { transfer_state = 763 } 763 = { add_core_of = POL} }
+		if = { limit = { 5 = { is_owned_and_controlled_by = ROOT } } POL = { transfer_state = 5 } 5 = { add_core_of = POL} }
+		if = { limit = { 980 = { is_owned_and_controlled_by = ROOT } } POL = { transfer_state = 980 } 980 = { add_core_of = POL} }
+		if = { limit = { 85 = { is_owned_and_controlled_by = ROOT } } POL = { transfer_state = 85 } 85 = { add_core_of = POL} }
+	   }
+	   
+	  ###Federation ignore
+	  option = {
+	   name = "Continue Military Occupation"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 0 }
+	   add_stability =-0.05
+	   add_war_support =-0.05
+	   add_political_power =-50
+	  }
+   
+	  ###Unitary
+	  option = {
+	   name = "Welcome Home, Brothers"
+	   trigger = {
+		   OR = {
+			   has_country_flag = les_unitary
+		   }
+	   }
+	   set_country_flag = LES_may_start_integrating_prs
+	 }
+	 
+   }
+
+
+
+### Fate of Baltics
+country_event = {
+	id = legion_political.13
+	desc = legion_political.13.d
+	title = "Fate of Baltics"
+	fire_only_once = yes
+   
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		tag = LES
+	   has_war = no
+	   EST = { NOT = { is_puppet_of = ROOT } }
+	   1266 = { is_owned_and_controlled_by = ROOT }
+	   1267 = { is_owned_and_controlled_by = ROOT }
+	   784 = { is_owned_and_controlled_by = ROOT }
+	  }
+   
+   ###Federation option
+	option = {
+	   name = "Create the Pribaltik Federation"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 150 }
+	   puppet = EST
+	   every_owned_state = {
+		limit = { 
+		 NOT = {
+		  is_claim_or_core = yes
+		 }
+		 OR = {
+		  is_core_of = EST
+		  is_core_of = LAT
+		  is_core_of = LIT
+		 }
+		}
+		add_core_of = EST
+		EST = { transfer_state = PREV }
+	  }
+	  EST = {
+		set_cosmetic_tag = LES_pribaltika
+		} 
+	  }
+   
+	  ###Federation ignore
+	  option = {
+	   name = "Continue Military Occupation"
+	   trigger = {
+	   has_country_flag = les_confederation
+	   }
+	   ai_chance = { factor = 0 }
+	   add_stability =-0.05
+	   add_war_support =-0.05
+	   add_political_power =-50
+	  }
+   
+	  ###Unitary
+	  option = {
+	   name = "Welcome Home, Brothers"
+	   trigger = {
+		   OR = {
+			   has_country_flag = les_unitary
+		   }
+	   }
+	   set_country_flag = LES_may_start_integrating_est
+	 }
+	 
+   }
+
+
+
+
+   #### greece
+
+   country_event = {
+	id = legion_political.14
+	desc = legion_political.14.d
+	title = "Fate of Greece"
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+	tag = LES
+	 has_war = no
+	 GRE = { NOT = { is_puppet_of = ROOT } }
+	 47 = { is_owned_and_controlled_by = ROOT }
+	}
+	
+	option = {
+		name = "Award Bulgaria, Puppet the rest."
+		trigger = {
+			BUL = { is_puppet_of = LES }
+		}
+		puppet = GRE
+		ai_chance = { factor = 50 }
+		if = { limit = { 731 = { is_owned_and_controlled_by = ROOT } } BUL = { transfer_state = 731 } }
+		if = { limit = { 184 = { is_owned_and_controlled_by = ROOT } } BUL = { transfer_state = 184 } }
+		if = { limit = { 991 = { is_owned_and_controlled_by = ROOT } } BUL = { transfer_state = 991 } }
+		if = { limit = { 990 = { is_owned_and_controlled_by = ROOT } } BUL = { transfer_state = 990 } }
+		if = { limit = { 989 = { is_owned_and_controlled_by = ROOT } } BUL = { transfer_state = 989 } }
+
+		every_owned_state = {
+		  limit = { 
+		   NOT = {
+			is_claim_or_core = yes
+		   }
+			is_core_of = GRE
+		  }
+		  GRE = { transfer_state = PREV }
+		}  
+	   }
+
+	   option = {
+		name = "Create Sclavenia, Puppet the rest."
+
+		puppet = SCL
+		ai_chance = { factor = 50 }
+		if = { limit = { 731 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 731 } 731 = { add_core_of = SCL } }
+		if = { limit = { 184 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 184 } 184 = { add_core_of = SCL } }
+		if = { limit = { 991 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 991 } 991 = { add_core_of = SCL } }
+		if = { limit = { 990 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 990 } 990 = { add_core_of = SCL } }
+		if = { limit = { 989 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 989 } 989 = { add_core_of = SCL } }
+		if = { limit = { 1012 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 1012 } 1012 = { add_core_of = SCL } }
+		if = { limit = { 1013 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 1013 } 1013 = { add_core_of = SCL } }
+		if = { limit = { 976 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 976 } 976 = { add_core_of = SCL } }
+		if = { limit = { 977 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 977 } 977 = { add_core_of = SCL } }
+		if = { limit = { 185 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 185 } 185 = { add_core_of = SCL } }
+		if = { limit = { 1011 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 1011 } 1011 = { add_core_of = SCL } }
+		if = { limit = { 47 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 47 } 47 = { add_core_of = SCL } }
+		if = { limit = { 341 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 341 } 341 = { add_core_of = SCL } }
+		if = { limit = { 978 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 978 } 978 = { add_core_of = SCL } }
+		
+		puppet = GRE
+		every_owned_state = {
+		  limit = { 
+		   NOT = {
+			is_claim_or_core = yes
+		   }
+			is_core_of = GRE
+		  }
+		  GRE = { transfer_state = PREV }
+		}
+		
+		SCL = {
+			set_cosmetic_tag = LES_gadja_puppet
+		}
+
+	   }
+
+	option = {
+	 name = "Create a Puppet State"
+	 puppet = GRE
+	 ai_chance = { factor = 50 }
+	 every_owned_state = {
+	   limit = { 
+		NOT = {
+		 is_claim_or_core = yes
+		}
+		 is_core_of = GRE
+	   }
+	   GRE = { transfer_state = PREV }
+	 }  
+	}
+	
+	option = {
+	 name = "Continue Military Occupation"
+	 ai_chance = { factor = 0 }
+	 add_stability =-0.03
+	 add_war_support =-0.03
+	 add_political_power =-30
+	}
+   
+   }
+
+
+   country_event = {
+	id = legion_political.15
+	desc = legion_political.15.d
+	title = "Fate of Germany"
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+	tag = LES
+	 has_war = no
+	 GER = { NOT = { is_puppet_of = ROOT } }
+	 64 = { is_owned_and_controlled_by = ROOT }
+	}
+	
+	option = {
+		name = "Release Sorbia, Puppet the rest."
+		trigger = {
+		has_country_flag = les_confederation	
+		}
+		ai_chance = { factor = 50 }
+		if = { limit = { 63 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 63 } 63 = { add_core_of = SRB } }
+		if = { limit = { 68 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 68 } 68 = { add_core_of = SRB } }
+		if = { limit = { 1093 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 1093 } 1093 = { add_core_of = SRB } }
+		if = { limit = { 65 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 65 } 65 = { add_core_of = SRB } }
+		if = { limit = { 1095 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 1095 } 1095 = { add_core_of = SRB } }
+		if = { limit = { 797 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 797 } 797 = { add_core_of = SRB } }
+		if = { limit = { 62 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 62 } 62 = { add_core_of = SRB } }
+		if = { limit = { 1213 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 1213 } 1213 = { add_core_of = SRB } }
+		if = { limit = { 61 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 61 } 61 = { add_core_of = SRB } }
+		if = { limit = { 1214 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 1214 } 1214 = { add_core_of = SRB } }
+		if = { limit = { 794 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 794 } 794 = { add_core_of = SRB } }
+
+		puppet = GER
+		puppet = SRB
+		SRB = {
+			set_cosmetic_tag = LES_gadja_puppet
+		}
+		every_owned_state = {
+		  limit = { 
+		   NOT = {
+			is_claim_or_core = yes
+		   }
+			is_core_of = GER
+		  }
+		  GER = { transfer_state = PREV }
+		}
+		GER = { set_capital = 790 }  
+	   }
+
+	   option = {
+		name = "Award Poland, Release Sorbia, Puppet the rest."
+		trigger = {
+		has_country_flag = les_confederation
+		POL = { is_puppet_of = LES }	
+		}
+		ai_chance = { factor = 50 }
+		if = { limit = { 63 = { is_owned_and_controlled_by = ROOT } } POL = { transfer_state = 63 } 63 = { add_core_of = POL } }
+		if = { limit = { 68 = { is_owned_and_controlled_by = ROOT } } POL = { transfer_state = 68 } 68 = { add_core_of = POL } }
+		if = { limit = { 1093 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 1093 } 1093 = { add_core_of = SRB } }
+		if = { limit = { 65 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 65 } 65 = { add_core_of = SRB } }
+		if = { limit = { 1095 = { is_owned_and_controlled_by = ROOT } } POL = { transfer_state = 1095 } 1095 = { add_core_of = POL } }
+		if = { limit = { 797 = { is_owned_and_controlled_by = ROOT } } POL = { transfer_state = 797 } 797 = { add_core_of = POL } }
+		if = { limit = { 62 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 62 } 62 = { add_core_of = SRB } }
+		if = { limit = { 1213 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 1213 } 1213 = { add_core_of = SRB } }
+		if = { limit = { 61 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 61 } 61 = { add_core_of = SRB } }
+		if = { limit = { 1214 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 1214 } 1214 = { add_core_of = SRB } }
+		if = { limit = { 794 = { is_owned_and_controlled_by = ROOT } } SRB = { transfer_state = 794 } 794 = { add_core_of = SRB } }
+
+		puppet = GER
+		puppet = SRB
+		SRB = {
+			set_cosmetic_tag = LES_gadja_puppet
+		}
+		every_owned_state = {
+		  limit = { 
+		   NOT = {
+			is_claim_or_core = yes
+		   }
+			is_core_of = GER
+		  }
+		  GER = { transfer_state = PREV }
+		}
+		GER = { set_capital = 790 }  
+	   }
+
+	option = {
+	 name = "Create a Puppet State"
+	 puppet = GER
+	 ai_chance = { factor = 50 }
+	 every_owned_state = {
+	   limit = { 
+		NOT = {
+		 is_claim_or_core = yes
+		}
+		 is_core_of = GER
+	   }
+	   GER = { transfer_state = PREV }
+	 }  
+	}
+	
+	option = {
+	 name = "Continue Military Occupation"
+	 ai_chance = { factor = 0 }
+	 add_stability =-0.03
+	 add_war_support =-0.03
+	 add_political_power =-30
+	}
+   
+   }
+
+
+   country_event = {
+	id = legion_political.16
+	desc = legion_political.16.d
+	title = "Fate of Austria"
+	fire_only_once = yes
+   
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+	 tag = LES
+	 has_war = no
+	 ACM = { NOT = { is_puppet_of = ROOT } }
+	 1018 = { is_owned_and_controlled_by = ROOT }
+	 NOT = {
+	  tag = THR
+	  tag = AUS
+	  tag = ACM
+	 }
+	}
+	
+	option = { ###liberate Austrian State
+	 name = "Create Austrian Puppet State"
+	 ai_chance = { factor = 150  }
+	 trigger = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes }
+	 puppet = THR
+	 THR = { remove_ideas = { austrian_bad_econ austrian_civil_war } }
+	 every_owned_state = {
+	   limit = { 
+		NOT = {
+		 is_claim_or_core = yes
+		}
+		OR = {
+		is_core_of = AUS
+		is_core_of = THR
+		is_core_of = ACM
+		}
+	   }
+	   add_core_of = THR
+	   THR = { transfer_state = PREV }
+   }
+}
+
+	option = { 
+	 name = "Liberate Slovenia, Puppet the rest"
+	 ai_chance = { factor = 150  }
+	 trigger = {  
+		has_country_flag = les_confederation
+		SLV = { exists = no }
+	 }
+	 puppet = THR
+	 puppet = SLV
+	 if = { limit = { 934 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 934 } 934 = { add_core_of = SLV } }
+	 if = { limit = { 1127 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1127 } 1127 = { add_core_of = SLV } }
+	 if = { limit = { 1128 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1128 } 1128 = { add_core_of = SLV } }
+	 if = { limit = { 1219 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1219 } 1219 = { add_core_of = SLV } }
+	 THR = { remove_ideas = { austrian_bad_econ austrian_civil_war } }
+	 every_owned_state = {
+	   limit = { 
+		NOT = {
+		 is_claim_or_core = yes
+		}
+		OR = {
+		is_core_of = AUS
+		is_core_of = THR
+		is_core_of = ACM
+		}
+	   }
+	   add_core_of = THR
+	   THR = { transfer_state = PREV }
+   }
+   SLV = {
+	set_cosmetic_tag = LES_gadja_puppet
+	}
+}
+
+option = { 
+	name = "Create Carantania, Puppet the rest"
+	ai_chance = { factor = 150  }
+	trigger = { 
+		has_country_flag = les_confederation
+		SLV = { exists = no }
+	}
+	puppet = SLV
+	if = { limit = { 934 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 934 } 934 = { add_core_of = SLV } }
+	if = { limit = { 1127 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1127 } 1127 = { add_core_of = SLV } }
+	if = { limit = { 1128 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1128 } 1128 = { add_core_of = SLV } }
+	if = { limit = { 1219 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1219 } 1219 = { add_core_of = SLV } }
+	if = { limit = { 4 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 4 } 4 = { add_core_of = SLV } }
+	if = { limit = { 1015 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1015 } 1015 = { add_core_of = SLV } }
+	if = { limit = { 1016 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1016 } 1016 = { add_core_of = SLV } }
+	if = { limit = { 806 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 806 } 806 = { add_core_of = SLV } }
+	if = { limit = { 152 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 152 } 152 = { add_core_of = SLV } }
+	if = { limit = { 807 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 807 } 807 = { add_core_of = SLV } }
+	if = { limit = { 810 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 810 } 810 = { add_core_of = SLV } }
+	if = { limit = { 1015 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1015 } 1015 = { add_core_of = SLV } }
+	if = { limit = { 1021 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1021 } 1021 = { add_core_of = SLV } }
+	if = { limit = { 1020 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1020 } 1020 = { add_core_of = SLV } }
+	if = { limit = { 1018 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1018 } 1018 = { add_core_of = SLV } }
+	if = { limit = { 1022 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1022 } 1022 = { add_core_of = SLV } }
+	if = { limit = { 1019 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1019 } 1019 = { add_core_of = SLV } }
+
+	puppet = THR
+	THR = { remove_ideas = { austrian_bad_econ austrian_civil_war } }
+	every_owned_state = {
+	  limit = { 
+	   NOT = {
+		is_claim_or_core = yes
+	   }
+	   OR = {
+	   is_core_of = AUS
+	   is_core_of = THR
+	   is_core_of = ACM
+	   }
+	  }
+	  add_core_of = THR
+	  THR = { transfer_state = PREV }
+  }
+  SLV = {
+	set_cosmetic_tag = LES_carantania
+	}
+
+}
+
+option = { 
+	name = "Award Member States, Puppet the rest"
+	ai_chance = { factor = 150  }
+	trigger = {  
+	has_country_flag = les_confederation
+	OR = {
+		SLV = { is_puppet_of = LES }
+		HUN = { is_puppet_of = LES }
+		CZE = { is_puppet_of = LES }
+		}
+	}
+	### SHIT TO CZECH
+	if = {
+		limit = {
+			CZE = { is_puppet_of = LES }
+		}
+		if = { limit = { 807 = { is_owned_and_controlled_by = ROOT } } CZE = { transfer_state = 807 } 807 = { add_core_of = CZE } }
+	}
+
+	### SHIT TO HUNGARY
+	if = {
+		limit = {
+			HUN = { is_puppet_of = LES }
+		}
+		if = { limit = { 810 = { is_owned_and_controlled_by = ROOT } } HUN = { transfer_state = 810 } 810 = { add_core_of = HUN } }
+	}
+	
+	### SHIT TO SLOVENIA
+	if = {
+		limit = {
+			SLV = { is_puppet_of = LES }
+		}
+		if = { limit = { 934 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 63 } 63 = { add_core_of = SLV } }
+		if = { limit = { 1127 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 68 } 68 = { add_core_of = SLV } }
+		if = { limit = { 1128 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1093 } 1093 = { add_core_of = SLV } }
+		if = { limit = { 1219 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1093 } 1093 = { add_core_of = SLV } }
+	}
+	puppet = THR
+	THR = { remove_ideas = { austrian_bad_econ austrian_civil_war } }
+	every_owned_state = {
+	  limit = { 
+	   NOT = {
+		is_claim_or_core = yes
+	   }
+	   OR = {
+	   is_core_of = AUS
+	   is_core_of = THR
+	   is_core_of = ACM
+	   }
+	  }
+	  add_core_of = THR
+	  THR = { transfer_state = PREV }
+  }
+}
+	
+	option = { ###continue occupation
+	 name = "Continue Military Occupation"
+	 ai_chance = { factor = 0 }
+	 add_stability =-0.06
+	 add_war_support =-0.06
+	 add_political_power =-60
+	
+	}
+   
+   }
+
+   country_event = {
+	id = legion_political.17
+	desc = legion_political.17.d
+	title = "Fate of Albania"
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+	 has_war = no
+	 ALB = { NOT = { is_puppet_of = ROOT } }
+	 1135 = { is_owned_and_controlled_by = ROOT }
+	 NOT = {
+	  tag = ALB
+	 }
+	}
+
+	option = { 
+		name = "Award Member States, Puppet the rest"
+		ai_chance = { factor = 150  }
+		trigger = {  
+		has_country_flag = les_confederation
+		OR = {
+			GRE = { is_puppet_of = LES }
+			SCL = { is_puppet_of = LES }
+			SER = { is_puppet_of = LES }
+			}
+		}
+		### SHIT TO GREECE
+		if = {
+			limit = {
+				GRE = { is_puppet_of = LES }
+				NOT = { SCL = { is_puppet_of = LES } }
+			}
+			if = { limit = { 1131 = { is_owned_and_controlled_by = ROOT } } GRE = { transfer_state = 1131 } }
+			if = { limit = { 1132 = { is_owned_and_controlled_by = ROOT } } GRE = { transfer_state = 1132 } }
+			if = { limit = { 1133 = { is_owned_and_controlled_by = ROOT } } GRE = { transfer_state = 1133 } }
+		}
+	
+		### SHIT TO SCLAVENI
+		if = {
+			limit = {
+				SCL = { is_puppet_of = LES }
+			}
+			if = { limit = { 1131 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 1131 } }
+			if = { limit = { 1132 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 1132 } }
+			if = { limit = { 1133 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 1133 } }
+		}
+		
+		### SHIT TO SERBIA
+		if = {
+			limit = {
+				SER = { is_puppet_of = LES }
+			}
+			if = { limit = { 1138 = { is_owned_and_controlled_by = ROOT } } SER = { transfer_state = 1138 } }
+			if = { limit = { 1134 = { is_owned_and_controlled_by = ROOT } } SER = { transfer_state = 1134 } }
+		}
+		every_owned_state = {
+			limit = { 
+			 NOT = {
+			  is_claim_or_core = yes
+			 }
+			  is_core_of = ALB
+			}
+			ALB = { transfer_state = PREV }
+		  }
+
+	}
+
+	option = {
+	 name = "Create a Puppet State"
+	 puppet = ALB
+	 ai_chance = { factor = 50 }
+	 every_owned_state = {
+	   limit = { 
+		NOT = {
+		 is_claim_or_core = yes
+		}
+		 is_core_of = ALB
+	   }
+	   ALB = { transfer_state = PREV }
+	 }
+	if = { 
+	 limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+	 ALB = {
+	 set_cosmetic_tag = Generic_puppet_socialist
+	 } 
+	}  
+	}
+	
+	option = {
+	 name = "Continue Military Occupation"
+	 ai_chance = { factor = 0 }
+	 add_stability =-0.03
+	 add_war_support =-0.03
+	 add_political_power =-30
+	}
+   
+   }
