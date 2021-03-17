@@ -1,0 +1,42 @@
+ideas = {
+   country = {
+   
+   tsar_kiril = {
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_bosnian_uprising
+	 
+	 modifier = {
+				stability_factor = 0.05
+			}
+   
+   }
+
+
+}
+}
+ bulgarian_militarism = {
+   allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_bosnian_uprising
+	 
+	 modifier = {
+				 offence = 0.02
+				 war_support_weekly	= 0.01
+			}    recruitable_population = 0.004
+   
+   }
+
+
+}
+}
