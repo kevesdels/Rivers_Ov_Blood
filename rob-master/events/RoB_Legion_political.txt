@@ -1821,6 +1821,8 @@ option = {
    
    }
 
+
+   ### Albania
    country_event = {
 	id = legion_political.17
 	desc = legion_political.17.d
@@ -1919,3 +1921,44 @@ option = {
 	}
    
    }
+
+
+
+
+
+   ### Mongolia peace deal once over 50% surrender progress
+country_event = {
+	id = legion_political.18
+	desc = legion_political.18.d
+	title = "Mongols Offer peace"
+	fire_only_once = yes
+   
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		tag = LES
+		at_war_with = MON
+		MON = { surrender_progress > 0.5}
+		country_exists = MON
+	  }
+   
+   ### Peace option
+	option = {
+	   name = "Peace out"
+	   ai_chance = { factor = 150 }
+	   if = { limit = { 329 = { is_owned_and_controlled_by = MON } } LES = { transfer_state = 329 } }
+	   if = { limit = { 564 = { is_owned_and_controlled_by = MON } } LES = { transfer_state = 564 } }
+	   if = { limit = { 566 = { is_owned_and_controlled_by = MON } } LES = { transfer_state = 566 } }
+	   if = { limit = { 1120 = { is_owned_and_controlled_by = MON } } LES = { transfer_state = 1120 } }
+	   if = { limit = { 1198 = { is_owned_and_controlled_by = MON } } LES = { transfer_state = 1198 } }
+	   if = { limit = { 1227 = { is_owned_and_controlled_by = MON } } LES = { transfer_state = 1227 } }
+	   white_peace = MON
+	  }
+   
+	  ### ignore peace offer
+	  option = {
+	   name = "Continue the Fight"
+	   ai_chance = { factor = 0 }
+	   add_political_power = 10
+	  }
+	   
+}

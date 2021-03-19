@@ -3,8 +3,8 @@ ideas = {
 country = {
 
 
-	LES_disorganised_army = {
-		picture = LES_army	
+	LES_guns_blazin = {
+		picture = GFX_idea_minority_troubles	
 		allowed = {
 		always = no
 		}
@@ -17,13 +17,12 @@ country = {
 			
 
 		modifier = {
-		army_org = -5
-		army_defence_factor = -0.1
+    political_power_gain = 0.15
 		}
 }
 
 LES_council_discontent_1 = {
-  picture = GFX_idea_minority_troubles	
+  picture = LES_army	
   allowed = {
   always = no
   }
@@ -35,14 +34,13 @@ LES_council_discontent_1 = {
     
   modifier = {
   army_org = -2
-  army_attack_factor = -0.1
   stability_factor = -0.05
   political_power_gain = -0.05
   }
 }
 
 LES_council_discontent_2 = {
-  picture = GFX_idea_minority_troubles	
+  picture = LES_army	
   allowed = {
   always = no
   }
@@ -60,7 +58,7 @@ LES_council_discontent_2 = {
 }
 
 LES_council_discontent_3 = {
-  picture = GFX_idea_minority_troubles	
+  picture = LES_army	
   allowed = {
   always = no
   }
@@ -80,7 +78,7 @@ LES_council_discontent_3 = {
 }
 
 LES_council_discontent_4 = {
-  picture = GFX_idea_minority_troubles	
+  picture = LES_army	
   allowed = {
   always = no
   }
@@ -100,7 +98,7 @@ LES_council_discontent_4 = {
 }
 
 LES_council_discontent_5 = {
-  picture = GFX_idea_minority_troubles	
+  picture = LES_army	
   allowed = {
   always = no
   }
@@ -277,9 +275,42 @@ LES_Fiercest_Infantry = {
 			}
      removal_cost = -1
 	 modifier = {
-	stability_weekly = 0.0005
-    war_support_weekly = 0.0005
+	  stability_weekly = 0.001
+    war_support_weekly = 0.001
+    political_power_gain = 0.1
 	 }
+
+}
+
+LES_epic_horsies = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+    cavalry_attack_factor = 0.3
+    cavalry_defence_factor = 0.3
+  }
+
+}
+
+LES_nice_horsies = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+    cavalry_attack_factor = 0.15
+    cavalry_defence_factor = 0.15
+  }
 
 }
 
@@ -714,8 +745,6 @@ LES_Fiercest_Infantry = {
      removal_cost = -1
    modifier = {
    weekly_manpower = -500
-   stability_weekly = -0.001
-   war_support_weekly = 0.001
    }
 }
    LES_eugenics_RE_1Ba = {
@@ -1584,6 +1613,167 @@ LES_Fiercest_Infantry = {
    research_speed_factor = 0.05
    }
 }
+
+LES_eugenics_IU_1 = {
+  picture = GFX_idea_minority_troubles 
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+  army_attack_factor = 0.025
+  army_defence_factor = 0.025
+  industrial_capacity_factory = 0.025
+  production_factory_max_efficiency_factor = 0.025
+  research_speed_factor = 0.025
+  MONTHLY_POPULATION = -0.25
+  training_time_factor = 0.10
+  non_core_manpower = 0.1
+  }
+}
+
+  LES_eugenics_IU_1b = {
+  picture = GFX_idea_minority_troubles 
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+  army_attack_factor = 0.025
+  army_defence_factor = 0.025
+  industrial_capacity_factory = 0.025
+  production_factory_max_efficiency_factor = 0.025
+  research_speed_factor = 0.025
+  MONTHLY_POPULATION = -0.25
+  training_time_factor = 0.10
+  non_core_manpower = 0.1
+  resistance_target = -0.15
+  }
+}
+
+LES_eugenics_IU_GC_2 = {
+  picture = GFX_idea_minority_troubles 
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+  army_attack_factor = 0.025
+  army_defence_factor = 0.025
+  industrial_capacity_factory = 0.025
+  production_factory_max_efficiency_factor = 0.025
+  research_speed_factor = 0.025
+  MONTHLY_POPULATION = -0.25
+  training_time_factor = 0.10
+  non_core_manpower = 0.1
+  resistance_target = -0.15
+  compliance_gain = 0.1
+  }
+}
+
+
+LES_eugenics_IU_GC_2a = {
+  picture = GFX_idea_minority_troubles 
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+  army_attack_factor = 0.025
+  army_defence_factor = 0.025
+  industrial_capacity_factory = 0.025
+  production_factory_max_efficiency_factor = 0.025
+  research_speed_factor = 0.025
+  MONTHLY_POPULATION = -0.25
+  training_time_factor = 0.10
+  non_core_manpower = 0.1
+  resistance_target = -0.15
+  compliance_gain = 0.2
+  stability_weekly = 0.001
+  }
+}
+
+LES_eugenics_IU_GC_2b = {
+  picture = GFX_idea_minority_troubles 
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+  army_attack_factor = 0.025
+  army_defence_factor = 0.025
+  industrial_capacity_factory = 0.025
+  production_factory_max_efficiency_factor = 0.025
+  research_speed_factor = 0.025
+  MONTHLY_POPULATION = -0.25
+  training_time_factor = 0.10
+  non_core_manpower = 0.1
+  resistance_target = -0.15
+  compliance_gain = 0.3
+  stability_weekly = 0.002
+  }
+}
+
+ LES_eugenics_IU_KA = {
+  picture = GFX_idea_minority_troubles 
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+  army_attack_factor = 0.025
+  army_defence_factor = 0.025
+  industrial_capacity_factory = 0.025
+  production_factory_max_efficiency_factor = 0.025
+  research_speed_factor = 0.025
+  MONTHLY_POPULATION = -0.25
+  training_time_factor = 0.10
+  non_core_manpower = 0.1
+  resistance_target = -0.15
+  consumer_goods_factor = 0.05
+  }
+}
+ LES_eugenics_IU_KA2 = {
+  picture = GFX_idea_minority_troubles 
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+  army_attack_factor = 0.025
+  army_defence_factor = 0.025
+  industrial_capacity_factory = 0.025
+  production_factory_max_efficiency_factor = 0.025
+  research_speed_factor = 0.025
+  MONTHLY_POPULATION = -0.25
+  training_time_factor = 0.10
+  non_core_manpower = 0.1
+  resistance_target = -0.15
+  consumer_goods_factor = 0.05
+  research_speed_factor = 0.05
+  }
+}
    LES_femoidsliberated = {
    picture = GFX_idea_minority_troubles 
    allowed = {
@@ -2226,7 +2416,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    industrial_capacity_factory = -0.025
    }
 }
@@ -2240,7 +2430,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+      political_power_gain = 0.1
    MONTHLY_POPULATION = 0.10
    industrial_capacity_factory = -0.05
    }
@@ -2255,7 +2445,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = 0.25
    industrial_capacity_factory = -0.075
    }
@@ -2270,7 +2460,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = 0.40
    industrial_capacity_factory = -0.1
    }
@@ -2285,7 +2475,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = 0.55
    industrial_capacity_factory = -0.075
    }
@@ -2315,7 +2505,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = 0.90
    industrial_capacity_factory = -0.15
    }
@@ -2330,7 +2520,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = 0.30
    consumer_goods_factor = 0.02
    industrial_capacity_factory = -0.05
@@ -2346,7 +2536,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = 0.20
    consumer_goods_factor = 0.04
    research_speed_factor = 0.02
@@ -2362,7 +2552,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = 0.10
    consumer_goods_factor = 0.06
    industrial_capacity_factory = 0.05
@@ -2379,7 +2569,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = -0.10
    consumer_goods_factor = 0.02
    industrial_capacity_factory = 0.05
@@ -2397,7 +2587,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = -0.15
    consumer_goods_factor = 0.04
    production_speed_arms_factory_factor = -0.05
@@ -2415,7 +2605,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = -0.2
    industrial_capacity_factory = 0.025
    consumer_goods_factor = 0.06
@@ -2434,7 +2624,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = 0.1
    consumer_goods_factor = 0.04
    production_speed_arms_factory_factor = -0.1
@@ -2452,7 +2642,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = 0.2
    industrial_capacity_factory = -0.025
    consumer_goods_factor = 0.02
@@ -2471,7 +2661,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = 0.3
    industrial_capacity_factory = -0.05
    production_speed_arms_factory_factor = -0.05
@@ -2489,7 +2679,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = -0.3
    industrial_capacity_factory = 0.05
    consumer_goods_factor = 0.06
@@ -2508,7 +2698,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = -0.3
    industrial_capacity_factory = 0.1
    consumer_goods_factor = 0.06
@@ -2528,7 +2718,7 @@ LES_Fiercest_Infantry = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = -0.4
    industrial_capacity_factory = 0.15
    consumer_goods_factor = 0.06
@@ -2637,6 +2827,22 @@ LES_Fiercest_Infantry = {
 
 }
 
+LES_diverting_funds = {
+  picture = GFX_idea_minority_troubles 
+  allowed = {
+      always = no
+    }
+  allowed_civil_war = {
+       always = no
+     }
+    removal_cost = -1
+  modifier = {
+   
+ consumer_goods_factor = 0.10
+  }
+
+}
+
  LES_Engineers = {
    picture = GFX_idea_minority_troubles	
    allowed = {
@@ -2662,8 +2868,8 @@ LES_Fiercest_Infantry = {
 			}
      removal_cost = -1
 	 modifier = {
-	 industrial_capacity_factory = -0.1
-   consumer_goods_factor = -0.10
+	 industrial_capacity_factory = 0.1
+   consumer_goods_factor = -0.05
 	 production_factory_max_efficiency_factor = 0.1
    }
  }

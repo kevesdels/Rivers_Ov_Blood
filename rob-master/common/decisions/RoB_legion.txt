@@ -4,6 +4,8 @@ LES_factions = {
   
 LES_banish_x = {
 
+  icon  = GFX_decision_generic_police_action
+
   available = {
       any_owned_state = {
           is_core_of = ROOT
@@ -17,7 +19,7 @@ LES_banish_x = {
   }
   state_target = yes
 
-  on_map_mode = map_and_decisions_view 
+  on_map_mode = map_only
 
   target_array = controlled_states
 
@@ -61,7 +63,7 @@ LES_banish_x = {
         NOT = { has_country_flag = les_returnist_gone }
       }
    }
-   icon = GFX_decision_infiltrate_state
+   icon = GFX_decision_generic_speech
     ai_will_do = {
       base = 0
     }
@@ -80,6 +82,36 @@ LES_banish_x = {
   }
 }
 
+LES_appease_returnist_2 = {
+  visible = {
+       hidden_trigger = {
+       tag = LES
+       NOT = { has_country_flag = les_returnist_gone }
+     }
+  }
+  icon = GFX_decision_hol_attract_foreign_investors
+   ai_will_do = {
+     base = 0
+   }
+ available = {
+   hidden_trigger = {
+   has_country_flag = les_factions
+   NOT = { has_country_flag = les_returnist_gone }
+   }
+  }
+  days_remove = 30
+
+  complete_effect = {
+    add_ideas = { LES_diverting_funds }
+  }
+
+  remove_effect = {
+  custom_effect_tooltip = les_tt_16
+  remove_ideas = { LES_diverting_funds }
+  returnist_increase_5 = yes
+ }
+}
+
    LES_appease_russian_nationalist = {
    visible = {
       hidden_trigger = {
@@ -87,7 +119,7 @@ LES_banish_x = {
         NOT = { has_country_flag = les_rusnat_gone }
       }
    }
-   icon = GFX_decision_infiltrate_state
+   icon = GFX_decision_generic_military
     ai_will_do = {
       base = 0
     }
@@ -96,7 +128,7 @@ LES_banish_x = {
     has_country_flag = les_factions
     NOT = { has_country_flag = les_rusnat_gone }
     }
-    command_power = 60
+    command_power = 50
    }
    days_remove = 10
 
@@ -109,6 +141,33 @@ LES_banish_x = {
   }
 }
 
+LES_appease_russian_nationalist_2 = {
+  visible = {
+     hidden_trigger = {
+       tag = LES
+       NOT = { has_country_flag = les_rusnat_gone }
+     }
+  }
+  icon = GFX_decision_generic_ignite_civil_war
+   ai_will_do = {
+     base = 0
+   }
+ available = {
+   hidden_trigger = {
+   has_country_flag = les_factions
+   NOT = { has_country_flag = les_rusnat_gone }
+   }
+  }
+  days_remove = 90
+
+  complete_effect = {
+   add_stability = -0.03
+   custom_effect_tooltip = les_tt_15
+   rusnat_increase_10 = yes
+ }
+  remove_effect = {
+ }
+}
    LES_appease_christian = {
    visible = {
       hidden_trigger = {
@@ -116,7 +175,7 @@ LES_banish_x = {
         NOT = { has_country_flag = les_christ_gone }
       }
    }
-   icon = GFX_decision_infiltrate_state
+   icon = GFX_decision_generic_military
     ai_will_do = {
       base = 0
     }
@@ -125,7 +184,7 @@ LES_banish_x = {
     has_country_flag = les_factions
     NOT = { has_country_flag = les_christ_gone }
     }
-    command_power = 60
+    command_power = 50
    }
    days_remove = 10
    complete_effect = {
@@ -163,6 +222,69 @@ LES_banish_x = {
   }
 }
 
+LES_appease_christian_2 = {
+  visible = {
+     hidden_trigger = {
+       tag = LES
+       NOT = { has_country_flag = les_christ_gone }
+     }
+  }
+  icon = GFX_decision_generic_prepare_civil_war
+   ai_will_do = {
+     base = 0
+   }
+ available = {
+   hidden_trigger = {
+   has_country_flag = les_factions
+   NOT = { has_country_flag = les_christ_gone has_country_flag = LES_favour_pagans }
+   }
+  }
+  days_remove = 90
+  complete_effect = {
+   add_stability = -0.03
+   custom_effect_tooltip = les_tt_14
+   custom_effect_tooltip = les_tt_28
+   christian_increase_10 = yes
+   set_country_flag = LES_favour_Christians
+ }
+  remove_effect = {
+    clr_country_flag = LES_favour_Christians
+ }
+}
+
+LES_appease_pagans_2 = {
+  visible = {
+     hidden_trigger = {
+       tag = LES
+       NOT = { has_country_flag = les_pagan_gone }
+     }
+  }
+  icon = GFX_decision_generic_prepare_civil_war
+   ai_will_do = {
+     base = 0
+   }
+ available = {
+ hidden_trigger = {
+   has_country_flag = les_factions
+   NOT = { has_country_flag = les_pagan_gone has_country_flag = LES_favour_Christians }
+   }
+  }
+  days_remove = 90
+
+  complete_effect = {
+    add_stability = -0.03
+    custom_effect_tooltip = les_tt_13
+		custom_effect_tooltip = les_tt_31
+    set_country_flag = LES_favour_pagans
+    christian_decrease_10 = yes
+    pagan_increase_10 = yes
+  }
+
+  remove_effect = {
+    clr_country_flag = LES_favour_pagans
+ }
+}
+
    LES_appease_futurists = {
    visible = {
       hidden_trigger = {
@@ -170,7 +292,7 @@ LES_banish_x = {
         NOT = { has_country_flag = les_poet_gone has_country_flag = les_poet_rebellion }
       }
    }
-   icon = GFX_decision_infiltrate_state
+   icon = GFX_decision_generic_air
     ai_will_do = {
       base = 0
     }
@@ -189,8 +311,36 @@ LES_banish_x = {
   }
 }
 
+LES_appease_futurists_2 = {
+  visible = {
+     hidden_trigger = {
+       tag = LES
+       NOT = { has_country_flag = les_poet_gone has_country_flag = les_poet_rebellion }
+     }
+  }
+  icon = GFX_decision_generic_air
+   ai_will_do = {
+     base = 0
+   }
+ available = {
+   hidden_trigger = {
+   has_country_flag = les_factions
+   NOT = { has_country_flag = les_poet_gone has_country_flag = les_poet_rebellion }
+   }
+   LES = { has_manpower = 3000}
+  }
+  days_remove = 30
+  complete_effect = {
+    add_manpower = -3000
+  }
+  remove_effect = {
+  custom_effect_tooltip = les_tt_12
+  futurist_increase_10 = yes
+ }
+}
+
 LES_discontent = {
-   icon = GFX_decision_infiltrate_state
+   icon = GFX_decision_revolt
     ai_will_do = {
       base = 0
     }
@@ -237,11 +387,14 @@ LES_discontent = {
 LES_economicalcentresdec = {
 
 LES_rural_infa  = {
-  icon = GFX_decision_infiltrate_state
+  icon = GFX_decision_generic_construction
   visible = {
     has_country_flag = LES_ruraleco
   }
   available = {
+    hidden_trigger = {
+    set_country_flag = LES_eco_rural_roads
+    }
     any_owned_state = {
       hidden_trigger = {
       NOT = {has_state_flag = LESinfaimproved }
@@ -276,11 +429,14 @@ LES_rural_infa  = {
 }
 
 LES_urban_infa  = {
-  icon = GFX_decision_infiltrate_state
+  icon = GFX_decision_generic_construction
   visible = {
     has_country_flag = LES_urbeco
   }
   available = {
+    hidden_trigger = {
+    has_country_flag = LES_eco_cities_roads
+    }
     any_owned_state = {
       hidden_trigger = {
       NOT = {has_state_flag = LESinfaimproved }
@@ -323,11 +479,14 @@ LES_urban_infa  = {
 }
 
 LES_rural_factory  = {
-  icon = GFX_decision_infiltrate_state
+  icon = GFX_decision_generic_factory
   visible = {
     has_country_flag = LES_ruraleco
   }
   available = {
+    hidden_trigger = {
+    has_country_flag = LES_eco_rural_factories
+    }
     any_owned_state = {
       hidden_trigger = {
       NOT = {has_state_flag = LESurbimproved }
@@ -373,11 +532,14 @@ LES_rural_factory  = {
 }
 
 LES_urban_factory  = {
-  icon = GFX_decision_infiltrate_state
+  icon = GFX_decision_generic_factory
   visible = {
     has_country_flag = LES_urbeco
   }
   available = {
+    hidden_trigger = {
+    has_country_flag = LES_eco_cities_factories
+    }
     any_owned_state = {
       hidden_trigger = {
       NOT = {has_state_flag = LESurbimproved }
@@ -484,7 +646,7 @@ KAR = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -546,7 +708,7 @@ if = {
   AGR = { owns_state = 1231 }
 }
  }
- check_variable = { var = LES_faction_poet value = 60 compare = greater_than_or_equals }
+ check_variable = { var = LES_faction_poet value = 80 compare = greater_than_or_equals }
  }
 
  ai_will_do = {
@@ -626,7 +788,7 @@ LES_russian_expansion= {
   }
   has_war = no
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -661,7 +823,7 @@ LES_russian_expansion= {
   }
   has_war = no
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -697,7 +859,7 @@ LES_russian_expansion= {
   }
   has_war = no
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -744,7 +906,7 @@ LES_russian_expansion= {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -795,7 +957,7 @@ LES_destroy_TOW = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -842,7 +1004,7 @@ LES_destroy_OMS = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -891,7 +1053,7 @@ LES_destroy_BWR = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -938,7 +1100,7 @@ LES_destroy_CAU = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -985,7 +1147,7 @@ LES_destroy_CAA = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1032,7 +1194,7 @@ LES_destroy_CRM = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1079,7 +1241,7 @@ LES_destroy_FER = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1126,7 +1288,7 @@ LES_destroy_WFE = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1174,7 +1336,7 @@ LES_destroy_WFE = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1222,7 +1384,7 @@ LES_destroy_WFE = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1269,7 +1431,7 @@ LES_destroy_WFE = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1283,7 +1445,7 @@ LES_destroy_WFE = {
  }
  }
  
-   LES_destroy_BRW = {
+  LES_destroy_BRW = {
   target_trigger = { FROM = {tag = BRW} }
   visible = {
     NOT = {
@@ -1316,7 +1478,7 @@ LES_destroy_WFE = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1330,7 +1492,7 @@ LES_destroy_WFE = {
  }
  }
  
-    LES_destroy_UGC = {
+  LES_destroy_UGC = {
   target_trigger = { FROM = {tag = UGC} }
   visible = {
     NOT = {
@@ -1363,7 +1525,7 @@ LES_destroy_WFE = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1410,7 +1572,7 @@ LES_destroy_IRK = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1458,7 +1620,7 @@ LES_destroy_IRK = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1466,6 +1628,12 @@ LES_destroy_IRK = {
  }
  remove_effect = {
   ROOT = {
+  add_state_claim = 329
+  add_state_claim = 1227
+  add_state_claim = 1198
+  add_state_claim = 1120
+  if = { limit = { 564 = { is_owned_by = MON } } LES = { add_state_claim = 564 } }
+  if = { limit = { 566 = { is_owned_by = MON } } LES = { add_state_claim = 566 } }
  declare_war_on = { target = MON type = annex_everything }
  clr_country_flag = LES_justifying
   }
@@ -1506,7 +1674,7 @@ LES_destroy_IRK = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1557,7 +1725,7 @@ LES_destroy_IRK = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1609,7 +1777,7 @@ LES_destroy_IRK = {
   }
    }
  }
- cost = 50
+ cost = 30
  fire_only_once = yes
  days_remove = 20
  complete_effect = {
@@ -1643,16 +1811,17 @@ LES_destroy_IRK = {
     set_country_flag = les_russia_secured
     if = { 
       limit = { has_country_flag = les_confederation }
-      set_cosmetic_tag = LES_slavicfed
+      LES = { set_cosmetic_tag = LES_slavicfed }
     }
     if = { 
       limit = { OR = { has_country_flag = les_onlyruseastslav has_country_flag = les_bigeastslav } }
-      set_cosmetic_tag = LES_eastslavia
+      LES = { set_cosmetic_tag = LES_eastslavia }
     }
     if = { 
       limit = { has_country_flag = les_unitary }
-      set_cosmetic_tag = LES_slavia
+      LES = { set_cosmetic_tag = LES_slavia }
     }
+    remove_ideas = { civil_war_attrition_2 }
   }
   ai_will_do = {
    base = 200
@@ -1670,10 +1839,14 @@ LES_core_oms = {
   }
   LES = { owns_state = 403 }
   LES = { owns_state = 653 }
+  NOT = { 403 = { is_core_of = LES} }
+  NOT = { 653 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 403 }
   LES = { owns_state = 653 }
+  NOT = { 403 = { is_core_of = LES} }
+  NOT = { 653 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -1713,6 +1886,7 @@ LES_cm_oms = {
               add_core_of = LES
               remove_core_of = OMS
               }
+              clr_country_flag = LES_cmf_oms
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_oms
@@ -1731,12 +1905,20 @@ LES_core_ugc = {
   LES = { owns_state = 579 }
   LES = { owns_state = 577 }
   LES = { owns_state = 580 }
+  NOT = { 516 = { is_core_of = LES} }
+  NOT = { 579 = { is_core_of = LES} }
+  NOT = { 577 = { is_core_of = LES} }
+  NOT = { 580 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 516 }
   LES = { owns_state = 579 }
   LES = { owns_state = 577 }
   LES = { owns_state = 580 }
+  NOT = { 516 = { is_core_of = LES} }
+  NOT = { 579 = { is_core_of = LES} }
+  NOT = { 577 = { is_core_of = LES} }
+  NOT = { 580 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -1744,7 +1926,7 @@ LES_core_ugc = {
    factor = 200
    }
  }
- cost = 50
+ cost = 30
  days_remove = 1
  remove_effect = {
  set_country_flag = LES_cmf_ugc
@@ -1780,6 +1962,7 @@ LES_core_ugc = {
               add_core_of = LES
               remove_core_of = UGC
               }
+              clr_country_flag = LES_cmf_ugc
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_ugc
@@ -1795,10 +1978,14 @@ LES_core_tow = {
   }
   LES = { owns_state = 578 }
   LES = { owns_state = 570 }
+  NOT = { 578 = { is_core_of = LES} }
+  NOT = { 570 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 578 }
   LES = { owns_state = 570 }
+  NOT = { 578 = { is_core_of = LES} }
+  NOT = { 570 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -1838,6 +2025,7 @@ LES_core_tow = {
               add_core_of = LES
               remove_core_of = TOW
               }
+              clr_country_flag = LES_cmf_tow
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_tow
@@ -1854,11 +2042,17 @@ LES_core_bwr = {
   LES = { owns_state = 40 }
   LES = { owns_state = 654 }
   LES = { owns_state = 569 }
+  NOT = { 40 = { is_core_of = LES} }
+  NOT = { 654 = { is_core_of = LES} }
+  NOT = { 569 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 40 }
   LES = { owns_state = 654 }
   LES = { owns_state = 569 }
+  NOT = { 40 = { is_core_of = LES} }
+  NOT = { 654 = { is_core_of = LES} }
+  NOT = { 569 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -1900,6 +2094,7 @@ LES_core_bwr = {
               add_core_of = LES
               remove_core_of = BWR
               }
+              clr_country_flag = LES_cmf_bwr
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_bwr
@@ -1914,9 +2109,11 @@ LES_core_krw = {
   has_country_flag = LES_cmf_krw
   }
   LES = { owns_state = 568 }
+  NOT = { 568 = { is_core_of = LES} }
  }
  available = {
  LES = { owns_state = 568 }
+ NOT = { 568 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -1954,6 +2151,7 @@ LES_core_krw = {
               add_core_of = LES
               remove_core_of = KRW
               }
+              clr_country_flag = LES_cmf_krw
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_krw
@@ -1968,9 +2166,11 @@ LES_core_brw = {
   has_country_flag = LES_cmf_brw
   }
   LES = { owns_state = 567 }
+  NOT = { 567 = { is_core_of = LES} }
  }
  available = {
  LES = { owns_state = 567 }
+ NOT = { 567 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -2008,6 +2208,7 @@ LES_core_brw = {
               add_core_of = LES
               remove_core_of = BRW
               }
+              clr_country_flag = LES_cmf_brw
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_brw
@@ -2022,9 +2223,15 @@ LES_core_irk = {
   has_country_flag = LES_cmf_irk
   }
   LES = { owns_state = 566 }
+  LES = { owns_state = 564 }
+  NOT = { 566 = { is_core_of = LES} }
+  NOT = { 564 = { is_core_of = LES} }
  }
  available = {
- LES = { owns_state = 566 }
+  LES = { owns_state = 566 }
+  LES = { owns_state = 564 }
+  NOT = { 566 = { is_core_of = LES} }
+  NOT = { 564 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -2062,6 +2269,7 @@ LES_core_irk = {
               add_core_of = LES
               remove_core_of = IRK
               }
+              clr_country_flag = LES_cmf_irk
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_irk
@@ -2080,6 +2288,11 @@ LES_core_job = {
   LES = { owns_state = 1200 }
   LES = { owns_state = 1201 }
   LES = { owns_state = 1186 }
+  NOT = { 1199 = { is_core_of = LES} }
+  NOT = { 1202 = { is_core_of = LES} }
+  NOT = { 1200 = { is_core_of = LES} }
+  NOT = { 1201 = { is_core_of = LES} }
+  NOT = { 1186 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 1199 }
@@ -2087,6 +2300,11 @@ LES_core_job = {
   LES = { owns_state = 1200 }
   LES = { owns_state = 1201 }
   LES = { owns_state = 1186 }
+  NOT = { 1199 = { is_core_of = LES} }
+  NOT = { 1202 = { is_core_of = LES} }
+  NOT = { 1200 = { is_core_of = LES} }
+  NOT = { 1201 = { is_core_of = LES} }
+  NOT = { 1186 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -2094,7 +2312,7 @@ LES_core_job = {
    factor = 200
    }
  }
- cost = 50
+ cost = 30
  days_remove = 1
  remove_effect = {
  set_country_flag = LES_cmf_job
@@ -2132,6 +2350,7 @@ LES_core_job = {
               add_core_of = LES
               remove_core_of = JOB
               }
+              clr_country_flag = LES_cmf_job
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_job
@@ -2152,6 +2371,13 @@ LES_core_fer = {
   LES = { owns_state = 644 }
   LES = { owns_state = 562 }
   LES = { owns_state = 637 }
+  NOT = { 1187 = { is_core_of = LES} }
+  NOT = { 982 = { is_core_of = LES} }
+  NOT = { 565 = { is_core_of = LES} }
+  NOT = { 574 = { is_core_of = LES} }
+  NOT = { 644 = { is_core_of = LES} }
+  NOT = { 562 = { is_core_of = LES} }
+  NOT = { 637 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 1187 }
@@ -2161,6 +2387,13 @@ LES_core_fer = {
   LES = { owns_state = 644 }
   LES = { owns_state = 562 }
   LES = { owns_state = 637 }
+  NOT = { 1187 = { is_core_of = LES} }
+  NOT = { 982 = { is_core_of = LES} }
+  NOT = { 565 = { is_core_of = LES} }
+  NOT = { 574 = { is_core_of = LES} }
+  NOT = { 644 = { is_core_of = LES} }
+  NOT = { 562 = { is_core_of = LES} }
+  NOT = { 637 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -2210,6 +2443,7 @@ LES_core_fer = {
               add_core_of = LES
               remove_core_of = FER
               }
+              clr_country_flag = LES_cmf_fer
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_fer
@@ -2227,11 +2461,17 @@ LES_core_jsw = {
   LES = { owns_state = 988 }
   LES = { owns_state = 576 }
   LES = { owns_state = 575 }
+  NOT = { 988 = { is_core_of = LES} }
+  NOT = { 576 = { is_core_of = LES} }
+  NOT = { 575 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 988 }
   LES = { owns_state = 576 }
   LES = { owns_state = 575 }
+  NOT = { 988 = { is_core_of = LES} }
+  NOT = { 576 = { is_core_of = LES} }
+  NOT = { 575 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -2239,7 +2479,7 @@ LES_core_jsw = {
    factor = 200
    }
  }
- cost = 50
+ cost = 30
  days_remove = 1
  remove_effect = {
  set_country_flag = LES_cmf_jsw
@@ -2273,6 +2513,7 @@ LES_core_jsw = {
               add_core_of = LES
               remove_core_of = JSW
               }
+              clr_country_flag = LES_cmf_jsw
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_jsw
@@ -2293,6 +2534,13 @@ LES_core_wfe = {
   LES = { owns_state = 657 }
   LES = { owns_state = 560 }
   LES = { owns_state = 970 }
+  NOT = { 563 = { is_core_of = LES} }
+  NOT = { 1229 = { is_core_of = LES} }
+  NOT = { 1228 = { is_core_of = LES} }
+  NOT = { 561 = { is_core_of = LES} }
+  NOT = { 657 = { is_core_of = LES} }
+  NOT = { 560 = { is_core_of = LES} }
+  NOT = { 970 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 563 }
@@ -2302,6 +2550,13 @@ LES_core_wfe = {
   LES = { owns_state = 657 }
   LES = { owns_state = 560 }
   LES = { owns_state = 970 }
+  NOT = { 563 = { is_core_of = LES} }
+  NOT = { 1229 = { is_core_of = LES} }
+  NOT = { 1228 = { is_core_of = LES} }
+  NOT = { 561 = { is_core_of = LES} }
+  NOT = { 657 = { is_core_of = LES} }
+  NOT = { 560 = { is_core_of = LES} }
+  NOT = { 970 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -2351,6 +2606,7 @@ LES_core_wfe = {
               add_core_of = LES
               remove_core_of = WFE
               }
+              clr_country_flag = LES_cmf_wfe
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_wfe
@@ -2367,10 +2623,14 @@ LES_core_jvd = {
   }
   LES = { owns_state = 409 }
   LES = { owns_state = 408 }
+  NOT = { 408 = { is_core_of = LES} }
+  NOT = { 409 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 409 }
   LES = { owns_state = 408 }
+  NOT = { 408 = { is_core_of = LES} }
+  NOT = { 409 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -2410,6 +2670,7 @@ LES_core_jvd = {
               add_core_of = LES
               remove_core_of = JVD
               }
+              clr_country_flag = LES_cmf_jvd
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_jvd
@@ -2432,6 +2693,14 @@ LES_core_sfs = {
   LES = { owns_state = 1226 }
   LES = { owns_state = 1225 }
   LES = { owns_state = 1230 }
+  NOT = { 1223 = { is_core_of = LES} }
+  NOT = { 1222 = { is_core_of = LES} }
+  NOT = { 1221 = { is_core_of = LES} }
+  NOT = { 1224 = { is_core_of = LES} }
+  NOT = { 1197 = { is_core_of = LES} }
+  NOT = { 1226 = { is_core_of = LES} }
+  NOT = { 1225 = { is_core_of = LES} }
+  NOT = { 1230 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 1223 }
@@ -2442,6 +2711,14 @@ LES_core_sfs = {
   LES = { owns_state = 1226 }
   LES = { owns_state = 1225 }
   LES = { owns_state = 1230 }
+  NOT = { 1223 = { is_core_of = LES} }
+  NOT = { 1222 = { is_core_of = LES} }
+  NOT = { 1221 = { is_core_of = LES} }
+  NOT = { 1224 = { is_core_of = LES} }
+  NOT = { 1197 = { is_core_of = LES} }
+  NOT = { 1226 = { is_core_of = LES} }
+  NOT = { 1225 = { is_core_of = LES} }
+  NOT = { 1230 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -2493,6 +2770,7 @@ LES_core_sfs = {
               add_core_of = LES
               remove_core_of = SFS
               }
+              clr_country_flag = LES_cmf_sfs
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_sfs
@@ -2516,6 +2794,15 @@ LES_core_rdr = {
   LES = { owns_state = 256 }
   LES = { owns_state = 249 }
   LES = { owns_state = 651 }
+  NOT = { 262 = { is_core_of = LES} }
+  NOT = { 581 = { is_core_of = LES} }
+  NOT = { 397 = { is_core_of = LES} }
+  NOT = { 398 = { is_core_of = LES} }
+  NOT = { 573 = { is_core_of = LES} }
+  NOT = { 399 = { is_core_of = LES} }
+  NOT = { 256 = { is_core_of = LES} }
+  NOT = { 249 = { is_core_of = LES} }
+  NOT = { 651 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 262 }
@@ -2528,6 +2815,15 @@ LES_core_rdr = {
   LES = { owns_state = 256 }
   LES = { owns_state = 249 }
   LES = { owns_state = 651 }
+  NOT = { 262 = { is_core_of = LES} }
+  NOT = { 581 = { is_core_of = LES} }
+  NOT = { 397 = { is_core_of = LES} }
+  NOT = { 398 = { is_core_of = LES} }
+  NOT = { 573 = { is_core_of = LES} }
+  NOT = { 399 = { is_core_of = LES} }
+  NOT = { 256 = { is_core_of = LES} }
+  NOT = { 249 = { is_core_of = LES} }
+  NOT = { 651 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -2583,6 +2879,7 @@ LES_core_rdr = {
               add_core_of = LES
               remove_core_of = RDR
               }
+              clr_country_flag = LES_cmf_rdr
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_rdr
@@ -2607,8 +2904,6 @@ LES_core_sov = {
   LES = { owns_state = 209 }
   LES = { owns_state = 210 }
   LES = { owns_state = 263 }
-  LES = { owns_state = 264 }
-  LES = { owns_state = 244 }
   LES = { owns_state = 246 }
   LES = { owns_state = 242 }
   LES = { owns_state = 243 }
@@ -2616,11 +2911,32 @@ LES_core_sov = {
   LES = { owns_state = 219 }
   LES = { owns_state = 247 }
   LES = { owns_state = 248 }
-  LES = { owns_state = 253 }
   LES = { owns_state = 223 }
   LES = { owns_state = 254 }
   LES = { owns_state = 253 }
   LES = { owns_state = 252 }
+  NOT = { 214 = { is_core_of = LES} }
+  NOT = { 215 = { is_core_of = LES} }
+  NOT = { 216 = { is_core_of = LES} }
+  NOT = { 351 = { is_core_of = LES} }
+  NOT = { 244 = { is_core_of = LES} }
+  NOT = { 195 = { is_core_of = LES} }
+  NOT = { 208 = { is_core_of = LES} }
+  NOT = { 209 = { is_core_of = LES} }
+  NOT = { 210 = { is_core_of = LES} }
+  NOT = { 263 = { is_core_of = LES} }
+  NOT = { 264 = { is_core_of = LES} }
+  NOT = { 246 = { is_core_of = LES} }
+  NOT = { 242 = { is_core_of = LES} }
+  NOT = { 243 = { is_core_of = LES} }
+  NOT = { 205 = { is_core_of = LES} }
+  NOT = { 219 = { is_core_of = LES} }
+  NOT = { 247 = { is_core_of = LES} }
+  NOT = { 248 = { is_core_of = LES} }
+  NOT = { 223 = { is_core_of = LES} }
+  NOT = { 254 = { is_core_of = LES} }
+  NOT = { 253 = { is_core_of = LES} }
+  NOT = { 252 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 214 }
@@ -2634,8 +2950,6 @@ LES_core_sov = {
   LES = { owns_state = 209 }
   LES = { owns_state = 210 }
   LES = { owns_state = 263 }
-  LES = { owns_state = 264 }
-  LES = { owns_state = 244 }
   LES = { owns_state = 246 }
   LES = { owns_state = 242 }
   LES = { owns_state = 243 }
@@ -2643,11 +2957,32 @@ LES_core_sov = {
   LES = { owns_state = 219 }
   LES = { owns_state = 247 }
   LES = { owns_state = 248 }
-  LES = { owns_state = 253 }
   LES = { owns_state = 223 }
   LES = { owns_state = 254 }
   LES = { owns_state = 253 }
   LES = { owns_state = 252 }
+  NOT = { 214 = { is_core_of = LES} }
+  NOT = { 215 = { is_core_of = LES} }
+  NOT = { 216 = { is_core_of = LES} }
+  NOT = { 351 = { is_core_of = LES} }
+  NOT = { 244 = { is_core_of = LES} }
+  NOT = { 195 = { is_core_of = LES} }
+  NOT = { 208 = { is_core_of = LES} }
+  NOT = { 209 = { is_core_of = LES} }
+  NOT = { 210 = { is_core_of = LES} }
+  NOT = { 263 = { is_core_of = LES} }
+  NOT = { 264 = { is_core_of = LES} }
+  NOT = { 246 = { is_core_of = LES} }
+  NOT = { 242 = { is_core_of = LES} }
+  NOT = { 243 = { is_core_of = LES} }
+  NOT = { 205 = { is_core_of = LES} }
+  NOT = { 219 = { is_core_of = LES} }
+  NOT = { 247 = { is_core_of = LES} }
+  NOT = { 248 = { is_core_of = LES} }
+  NOT = { 223 = { is_core_of = LES} }
+  NOT = { 254 = { is_core_of = LES} }
+  NOT = { 253 = { is_core_of = LES} }
+  NOT = { 252 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -2732,6 +3067,7 @@ LES_core_sov = {
               add_core_of = LES
               remove_core_of = SOV
               }
+              clr_country_flag = LES_cmf_sov
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_sov
@@ -2759,6 +3095,20 @@ LES_core_rus = {
   LES = { owns_state = 930 }
   LES = { owns_state = 265 }
   LES = { owns_state = 239 }
+  NOT = { 244 = { is_core_of = LES} }
+  NOT = { 222 = { is_core_of = LES} }
+  NOT = { 220 = { is_core_of = LES} }
+  NOT = { 240 = { is_core_of = LES} }
+  NOT = { 228 = { is_core_of = LES} }
+  NOT = { 260 = { is_core_of = LES} }
+  NOT = { 258 = { is_core_of = LES} }
+  NOT = { 257 = { is_core_of = LES} }
+  NOT = { 255 = { is_core_of = LES} }
+  NOT = { 250 = { is_core_of = LES} }
+  NOT = { 401 = { is_core_of = LES} }
+  NOT = { 930 = { is_core_of = LES} }
+  NOT = { 265 = { is_core_of = LES} }
+  NOT = { 239 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 244 }
@@ -2775,6 +3125,20 @@ LES_core_rus = {
   LES = { owns_state = 930 }
   LES = { owns_state = 265 }
   LES = { owns_state = 239 }
+  NOT = { 244 = { is_core_of = LES} }
+  NOT = { 222 = { is_core_of = LES} }
+  NOT = { 220 = { is_core_of = LES} }
+  NOT = { 240 = { is_core_of = LES} }
+  NOT = { 228 = { is_core_of = LES} }
+  NOT = { 260 = { is_core_of = LES} }
+  NOT = { 258 = { is_core_of = LES} }
+  NOT = { 257 = { is_core_of = LES} }
+  NOT = { 255 = { is_core_of = LES} }
+  NOT = { 250 = { is_core_of = LES} }
+  NOT = { 401 = { is_core_of = LES} }
+  NOT = { 930 = { is_core_of = LES} }
+  NOT = { 265 = { is_core_of = LES} }
+  NOT = { 239 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -2835,6 +3199,7 @@ LES_core_rus = {
               add_core_of = LES
               remove_core_of = RUS
               }
+              clr_country_flag = LES_cmf_rus
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_rus
@@ -2850,10 +3215,14 @@ LES_core_caa = {
   }
   LES = { owns_state = 983 }
   LES = { owns_state = 236 }
+  NOT = { 983 = { is_core_of = LES} }
+  NOT = { 236 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 983 }
   LES = { owns_state = 236 }
+  NOT = { 983 = { is_core_of = LES} }
+  NOT = { 236 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -2890,6 +3259,7 @@ LES_core_caa = {
               add_core_of = LES
               remove_core_of = CAA
               }
+              clr_country_flag = LES_cmf_caa
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_caa
@@ -2911,6 +3281,14 @@ LES_core_cau = {
   LES = { owns_state = 235 }
   LES = { owns_state = 986 }
   LES = { owns_state = 232 }
+  NOT = { 217 = { is_core_of = LES} }
+  NOT = { 245 = { is_core_of = LES} }
+  NOT = { 218 = { is_core_of = LES} }
+  NOT = { 238 = { is_core_of = LES} }
+  NOT = { 237 = { is_core_of = LES} }
+  NOT = { 235 = { is_core_of = LES} }
+  NOT = { 986 = { is_core_of = LES} }
+  NOT = { 232 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 217 }
@@ -2921,6 +3299,14 @@ LES_core_cau = {
   LES = { owns_state = 235 }
   LES = { owns_state = 986 }
   LES = { owns_state = 232 }
+  NOT = { 217 = { is_core_of = LES} }
+  NOT = { 245 = { is_core_of = LES} }
+  NOT = { 218 = { is_core_of = LES} }
+  NOT = { 238 = { is_core_of = LES} }
+  NOT = { 237 = { is_core_of = LES} }
+  NOT = { 235 = { is_core_of = LES} }
+  NOT = { 986 = { is_core_of = LES} }
+  NOT = { 232 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -2969,6 +3355,7 @@ LES_core_cau = {
               add_core_of = LES
               remove_core_of = CAU
               }
+              clr_country_flag = LES_cmf_cau
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_cau
@@ -2985,11 +3372,17 @@ LES_core_crm = {
   LES = { owns_state = 234 }
   LES = { owns_state = 985 }
   LES = { owns_state = 137 }
+  NOT = { 234 = { is_core_of = LES} }
+  NOT = { 985 = { is_core_of = LES} }
+  NOT = { 137 = { is_core_of = LES} }
  }
  available = {
   LES = { owns_state = 234 }
   LES = { owns_state = 985 }
   LES = { owns_state = 137 }
+  NOT = { 234 = { is_core_of = LES} }
+  NOT = { 985 = { is_core_of = LES} }
+  NOT = { 137 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -3028,6 +3421,7 @@ LES_core_crm = {
               add_core_of = LES
               remove_core_of = CRM
               }
+              clr_country_flag = LES_cmf_crm
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_crm
@@ -3205,6 +3599,7 @@ if = {
     remove_core_of = KZR
 }
 }
+clr_country_flag = LES_cmf_kaz
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_kaz
@@ -3224,6 +3619,7 @@ les_5th_invades = {
           activation = {
           has_war = yes
           country_exists = OMS
+          NOT = { has_war_with = OMS }
           }
           is_good = no
           days_mission_timeout = 200

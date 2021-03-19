@@ -2218,6 +2218,17 @@ focus_tree = {
 			add_idea = LES_reconstructxD_IU_1
 			}
 		}
+			if = {
+					limit = {
+						AND = {
+						has_idea = LES_eugenics
+						}
+					}
+			swap_ideas = {
+			remove_idea = LES_eugenics
+			add_idea = LES_eugenics_IU_1
+			}
+		}
 	}
 }
 
@@ -2271,6 +2282,17 @@ focus_tree = {
 			swap_ideas = {
 			remove_idea = LES_reconstructxD_IU_1
 			add_idea = LES_reconstructxD_IU_1Ba
+			}
+		}
+			if = {
+					limit = {
+						AND = {
+						has_idea = LES_eugenics_IU_1
+						}
+					}
+			swap_ideas = {
+			remove_idea = LES_eugenics_IU_1
+			add_idea = LES_eugenics_IU_1b
 			}
 		}
 	}
@@ -2357,7 +2379,17 @@ focus_tree = {
 			add_idea = LES_reconstructxD_IU_KA
 			}
 		}
-
+			if = {
+					limit = {
+						AND = {
+						has_idea = LES_eugenics_IU_1b
+						}
+					}
+			swap_ideas = {
+			remove_idea = LES_eugenics_IU_1b
+			add_idea = LES_eugenics_IU_KA
+			}
+		}
 
 		}
 	}
@@ -2436,6 +2468,18 @@ focus_tree = {
 			add_idea = LES_reconstructxD_IU_KA2
 			}
 		}
+			if = {
+					limit = {
+						AND = {
+						has_idea = LES_eugenics_IU_KA
+						}
+					}
+			swap_ideas = {
+			remove_idea = LES_eugenics_IU_KA
+			add_idea = LES_eugenics_IU_KA2
+			}
+		}
+		
 		}
 }
 
@@ -2520,6 +2564,18 @@ focus_tree = {
 			add_idea = LES_reconstructxD_BA_GC
 			}
 		}
+			if = {
+					limit = {
+						AND = {
+						has_idea = LES_eugenics_IU_1b
+						}
+					}
+			swap_ideas = {
+			remove_idea = LES_eugenics_IU_1b
+			add_idea = LES_eugenics_IU_GC_2
+			}
+		}
+
 		}
 	}
 
@@ -2624,6 +2680,30 @@ focus_tree = {
 			add_idea = LES_reconstructxD_BA_GC_Aa
 			}
 		}
+
+			if = {
+					limit = {
+						AND = {
+						has_idea = LES_eugenics_IU_GC_2a
+						}
+					}
+			swap_ideas = {
+			remove_idea = LES_eugenics_IU_GC_2a
+			add_idea = LES_eugenics_IU_GC_2b
+			}
+		}
+			if = {
+					limit = {
+						AND = {
+						has_idea = LES_eugenics_IU_GC_2
+						}
+					}
+			swap_ideas = {
+			remove_idea = LES_eugenics_IU_GC_2
+			add_idea = LES_eugenics_IU_GC_2a
+			}
+		}
+
 		}
 	}
 
@@ -2728,6 +2808,30 @@ focus_tree = {
 			add_idea = LES_reconstructxD_BA_GC_Ba
 			}
 		}
+
+			if = {
+					limit = {
+						AND = {
+						has_idea = LES_eugenics_IU_GC_2a
+						}
+					}
+			swap_ideas = {
+			remove_idea = LES_eugenics_IU_GC_2a
+			add_idea = LES_eugenics_IU_GC_2b
+			}
+		}
+			if = {
+					limit = {
+						AND = {
+						has_idea = LES_eugenics_IU_GC_2
+						}
+					}
+			swap_ideas = {
+			remove_idea = LES_eugenics_IU_GC_2
+			add_idea = LES_eugenics_IU_GC_2a
+			}
+		}
+
 		}
 	}
 
@@ -4462,13 +4566,13 @@ focus_tree = {
       	}
 		}
 		completion_reward = {
-		remove_ideas = { LES_disorganised_army }
+		add_ideas = { LES_guns_blazin }
 		}
 	}
 
-	#Focus for Raid Democrat Ammunition Depots
+	#Focus for Deal with Armsman
 	focus = {
-		id = LES_raiddemocratammunitiondepots
+		id = LES_deal_with_armsman
 		icon = GFX_goal_unknown
 		x = 70
 		y = 2
@@ -4483,7 +4587,14 @@ focus_tree = {
       	}
       	}
 		completion_reward = {
-		LES = { country_event = { id = legion.14 days = 1 } }
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type = arms_factory
+				    level = 2
+				    instant_build = yes
+            }
+			}
 		}
 	}
 
@@ -4566,7 +4677,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { 
 			focus = LES_fieldscavenging 
-			focus = LES_raiddemocratammunitiondepots
+			focus = LES_deal_with_armsman
 			focus = LES_standartiserifles 
 		}
 		ai_will_do = {
@@ -5930,6 +6041,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			set_country_flag = LES_eco_cities_factories
 			add_political_power = 90
 			custom_effect_tooltip = les_tt_18
 		}
@@ -5949,6 +6061,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 30
+			set_country_flag = LES_eco_cities_roads
 			custom_effect_tooltip = les_tt_19
 		}
 	}
@@ -5992,6 +6105,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 90
+			set_country_flag = LES_eco_rural_factories
 			custom_effect_tooltip = les_tt_21
 		}
 	}
@@ -6010,6 +6124,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 30
+			set_country_flag = LES_eco_rural_roads
 			custom_effect_tooltip = les_tt_22
 		}
 	}
