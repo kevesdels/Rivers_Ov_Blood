@@ -538,6 +538,26 @@ LES_easterneurope = {
   
   }
 
+LES_easterneurope_integration = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_decision_germany_partisans
+	  visible = {
+	   tag = LES
+	   AND = {
+	   has_country_flag = les_unitary
+	   has_country_flag = les_russia_secured
+	   }
+	  }
+	  available = {
+	  hidden_trigger = { has_country_flag = les_russia_secured }
+	  }
+			priority = {
+			base = 90
+			}
+  
+  
+  }
+
 LES_unite = {
   icon = GFX_decision_category_military_operation
   picture = GFX_decision_germany_partisans

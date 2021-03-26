@@ -1644,7 +1644,8 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		add_political_power = 200
+		add_political_power = 250
+		add_ideas = { LES_forwards }
 		}
 	}
 
@@ -1866,7 +1867,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		
+			add_ideas = { LES_pagang }
 		}
 
 	}
@@ -3416,22 +3417,25 @@ focus_tree = {
 		completion_reward = {
 		add_ideas = {
 		LES_road_guardposts
-		}	
-		572 = {
-		add_building_construction = {
-		type = bunker
-		level = 2
-		province = 9292
-		instant_build = yes
 		}
-		}
-		1231 = {
-		add_building_construction = {
-		type = bunker
-		level = 1
-		province = 1694
-		instant_build = yes
-		}
+		custom_effect_tooltip = les_tt_36
+		hidden_effect = {
+			572 = {
+				add_building_construction = {
+				type = bunker
+				level = 2
+				province = 9292
+				instant_build = yes
+				}
+			}
+			1231 = {
+				add_building_construction = {
+				type = bunker
+				level = 1
+				province = 1694
+				instant_build = yes
+				}
+			}
 		}
 	}
 }
@@ -3958,13 +3962,14 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-
+		custom_effect_tooltip = les_tt_36
+		hidden_effect = {
 		1231 = {
-		add_building_construction = {
-		type = bunker
-		level = 2
-		province = 4209
-		instant_build = yes
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 4209
+			instant_build = yes
 		}}
 
 		1231 = {
@@ -4024,6 +4029,7 @@ focus_tree = {
 		}}
 
 		}
+	}
 	}
 
 	#Focus for Flexibility
@@ -4670,7 +4676,7 @@ focus_tree = {
 	#Focus for A Mosin for Every Man
 	focus = {
 		id = LES_amosinforeveryman
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_a_mosin_for_every_soldier
 		x = 73
 		y = 3
 		cost = 5
@@ -5158,7 +5164,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		
+		add_ideas = { LES_onthemomentum }
 		}
 	}
 	
@@ -5691,7 +5697,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		custom_effect_tooltip = les_tt_8
+		custom_effect_tooltip = les_tt_25
 		create_faction = "Pan-Slavic Confederation"
 		hidden_effect = {
 			set_country_flag = les_confederation
@@ -5774,6 +5780,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_ideas= {LES_municipalsz}
+		}
 	}
 
 	#Focus for municipals_2
@@ -5788,6 +5797,30 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_municipalsz_2
+					}
+				}
+		swap_ideas = {
+			remove_idea = LES_municipalsz_2
+			add_idea = LES_municipalsz_3
+			}
+	}
+		if = {
+				limit = {
+					AND = {
+					has_idea = LES_municipalsz
+					}
+				}
+		swap_ideas = {
+		remove_idea = LES_municipalsz
+		add_idea = LES_municipalsz_2
+		}
+	}
+		}
 	}
 
 	#Focus for municipals_3
@@ -5801,6 +5834,30 @@ focus_tree = {
 		prerequisite = { focus = LES_municipals }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_municipalsz_2
+					}
+				}
+		swap_ideas = {
+			remove_idea = LES_municipalsz_2
+			add_idea = LES_municipalsz_3
+			}
+	}
+		if = {
+				limit = {
+					AND = {
+					has_idea = LES_municipalsz
+					}
+				}
+		swap_ideas = {
+		remove_idea = LES_municipalsz
+		add_idea = LES_municipalsz_2
+		}
+	}
 		}
 	}
 
@@ -5820,6 +5877,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_ideas = { LES_directrulez }
+		}
 	}
 
 	#Focus for Direct Rule_2
@@ -5833,6 +5893,30 @@ focus_tree = {
 		prerequisite = { focus = LES_directrule }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+		if = {
+				limit = {
+					AND = {
+					has_idea = LES_directrulez_2
+					}
+				}
+		swap_ideas = {
+			remove_idea = LES_directrulez_2
+			add_idea = LES_directrulez_3
+			}
+	}
+		if = {
+				limit = {
+					AND = {
+					has_idea = LES_directrulez
+					}
+				}
+		swap_ideas = {
+		remove_idea = LES_directrulez
+		add_idea = LES_directrulez_2
+		}
+	}
 		}
 	}
 
@@ -5848,6 +5932,30 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_directrulez_2
+					}
+				}
+		swap_ideas = {
+			remove_idea = LES_directrulez_2
+			add_idea = LES_directrulez_3
+			}
+	}
+		if = {
+				limit = {
+					AND = {
+					has_idea = LES_directrulez
+					}
+				}
+		swap_ideas = {
+		remove_idea = LES_directrulez
+		add_idea = LES_directrulez_2
+		}
+	}
+		}
 	}
 
 	#Focus for Grant Privilleges To Citys
@@ -5857,7 +5965,6 @@ focus_tree = {
 		x = 32
 		y = 12
 		cost = 5
-		available = { NOT = { has_completed_focus = LES_unitarypolitics } }
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = LES_equalinburden }
 		prerequisite = { focus = LES_municipals_2 focus = LES_municipals_2 }
@@ -5865,7 +5972,31 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_directrulez_3
+					}
+				}
+		swap_ideas = {
+			remove_idea = LES_directrulez_3
+			add_idea = LES_directrulez_4
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_municipalsz_3
+				}
+			}
+		swap_ideas = {
+		remove_idea = LES_municipalsz_3
+		add_idea = LES_munidirectrulez_4
+		}
+		}
 	}
+}
 
 	#Focus for Grant Privilleges To Citys_2
 	focus = {
@@ -5878,6 +6009,52 @@ focus_tree = {
 		prerequisite = { focus = LES_cityprivilliges }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_directrulez_5
+					}
+				}
+		swap_ideas = {
+			remove_idea = LES_directrulez_5
+			add_idea = LES_directrulez_6
+			}
+	}
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_directrulez_4
+					}
+				}
+		swap_ideas = {
+			remove_idea = LES_directrulez_4
+			add_idea = LES_directrulez_5
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_munidirectrulez_5
+				}
+			}
+	swap_ideas = {
+		remove_idea = LES_munidirectrulez_5
+		add_idea = LES_munidirectrulez_6
+		}
+}
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_munidirectrulez_4
+				}
+			}
+	swap_ideas = {
+		remove_idea = LES_munidirectrulez_4
+		add_idea = LES_munidirectrulez_5
+		}
+	}
 		}
 	}
 
@@ -5893,6 +6070,52 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_directrulez_5
+					}
+				}
+		swap_ideas = {
+			remove_idea = LES_directrulez_5
+			add_idea = LES_directrulez_6
+			}
+	}
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_directrulez_4
+					}
+				}
+		swap_ideas = {
+			remove_idea = LES_directrulez_4
+			add_idea = LES_directrulez_5
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_munidirectrulez_5
+				}
+			}
+	swap_ideas = {
+		remove_idea = LES_munidirectrulez_5
+		add_idea = LES_munidirectrulez_6
+		}
+}
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_munidirectrulez_4
+				}
+			}
+	swap_ideas = {
+		remove_idea = LES_munidirectrulez_4
+		add_idea = LES_munidirectrulez_5
+		}
+	}
+		}
 	}
 
 	#Focus for Equal in Burden
@@ -5902,13 +6125,36 @@ focus_tree = {
 		x = 36
 		y = 12
 		cost = 5
-		available = { NOT = { has_completed_focus = LES_confederation } }
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = LES_cityprivilliges }
 		prerequisite = { focus = LES_municipals_2 focus = LES_directrule_2 }
 		prerequisite = { focus = LES_municipals_3 focus = LES_directrule_3 }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+		if = {
+		limit = {
+			AND = {
+			has_idea = LES_municipalsz_3
+			}
+		}
+		swap_ideas = {
+			remove_idea = LES_municipalsz_3
+			add_idea = LES_municipalsz_4
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_directrulez_3
+				}
+			}
+			swap_ideas = {
+				remove_idea = LES_directrulez_3
+				add_idea = LES_directmunicipalsz_4
+				}
+			}
 		}
 	}
 
@@ -5924,6 +6170,52 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {	
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_directmunicipalsz_5
+				}
+			}
+	swap_ideas = {
+		remove_idea = LES_directmunicipalsz_5
+		add_idea = LES_directmunicipalsz_6
+		}
+}
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_directmunicipalsz_4
+				}
+			}
+	swap_ideas = {
+		remove_idea = LES_directmunicipalsz_4
+		add_idea = LES_directmunicipalsz_5
+		}
+}		
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_municipalsz_5
+				}
+			}
+	swap_ideas = {
+		remove_idea = LES_municipalsz_5
+		add_idea = LES_municipalsz_6
+		}
+}
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_municipalsz_4
+				}
+			}
+	swap_ideas = {
+		remove_idea = LES_municipalsz_4
+		add_idea = LES_municipalsz_5
+		}
+}
+		}
 	}
 
 	#Focus for Equal in Burden_3
@@ -5937,6 +6229,52 @@ focus_tree = {
 		prerequisite = { focus = LES_equalinburden }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_municipalsz_5
+					}
+				}
+		swap_ideas = {
+			remove_idea = LES_municipalsz_5
+			add_idea = LES_municipalsz_6
+			}
+	}
+			if = {
+				limit = {
+					AND = {
+					has_idea = LES_municipalsz_4
+					}
+				}
+		swap_ideas = {
+			remove_idea = LES_municipalsz_4
+			add_idea = LES_municipalsz_5
+			}
+	}		
+			if = {
+			limit = {
+				AND = {
+				has_idea = LES_directmunicipalsz_5
+				}
+			}
+	swap_ideas = {
+		remove_idea = LES_directmunicipalsz_5
+		add_idea = LES_directmunicipalsz_6
+		}
+}
+		if = {
+			limit = {
+				AND = {
+				has_idea = LES_directmunicipalsz_4
+				}
+			}
+	swap_ideas = {
+		remove_idea = LES_directmunicipalsz_4
+		add_idea = LES_directmunicipalsz_5
+		}
+}	
 		}
 	}
 
@@ -6411,6 +6749,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			add_ideas = { LES_heavenonearth }
 		}
 	}
 

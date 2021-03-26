@@ -30,7 +30,11 @@ country_event = {
 	   NOT = {
 		is_claim_or_core = yes
 	   }
+	   OR = {
 		is_core_of = UKR
+		is_core_of = DSU
+		is_core_of = FTT
+	   }
 	  }
 	  UKR = { transfer_state = PREV }
 	}
@@ -67,7 +71,11 @@ country_event = {
 	   NOT = {
 		is_claim_or_core = yes
 	   }
+	   OR = {
 		is_core_of = UKR
+		is_core_of = DSU
+		is_core_of = FTT
+	   }
 	  }
 	  UKR = { transfer_state = PREV }
 	}
@@ -90,7 +98,11 @@ country_event = {
 		 NOT = {
 		  is_claim_or_core = yes
 		 }
-		  is_core_of = UKR
+		 OR = {
+			is_core_of = UKR
+			is_core_of = DSU
+			is_core_of = FTT
+		   }
 		}
 		every_country = {
 			limit = {
@@ -1389,6 +1401,17 @@ country_event = {
 	  EST = {
 		set_cosmetic_tag = LES_pribaltika
 		} 
+		EST = {
+			create_country_leader = {
+				name = "Vladimirs Trofimovs"
+				desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+				picture = "Vladimirs_Trofimovs.tga"
+				expire = "1965.1.1"
+				ideology = pelekist_subtype
+				traits = {
+				}
+			}
+		}
 	  }
    
 	  ###Federation ignore
@@ -1494,6 +1517,17 @@ country_event = {
 			set_cosmetic_tag = LES_gadja_puppet
 		}
 
+		SCL = { 
+			create_country_leader = {
+				name = "Todor Aleksandrov"
+				desc = ""
+				picture = "Todor_Aleksandrov.tga"
+				expire = "1965.1.1"
+				ideology = pelekist_subtype
+				traits = {
+				}
+			}
+		}
 	   }
 
 	option = {
@@ -1559,6 +1593,17 @@ country_event = {
 		SRB = {
 			set_cosmetic_tag = LES_gadja_puppet
 		}
+		SRB = {
+			create_country_leader = {
+				name = "Pawol Nedo"
+				desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+				picture = "Pawol_Nedo.tga"
+				expire = "1965.1.1"
+				ideology = pelekist_subtype
+				traits = {
+				}
+			}
+		}
 		every_owned_state = {
 		  limit = { 
 		   NOT = {
@@ -1594,6 +1639,17 @@ country_event = {
 		puppet = SRB
 		SRB = {
 			set_cosmetic_tag = LES_gadja_puppet
+		}
+		SRB = {
+			create_country_leader = {
+				name = "Pawol Nedo"
+				desc = "POLITICS_Panteleimon_Ponomarenko_DESC"
+				picture = "Pawol_Nedo.tga"
+				expire = "1965.1.1"
+				ideology = pelekist_subtype
+				traits = {
+				}
+			}
 		}
 		every_owned_state = {
 		  limit = { 

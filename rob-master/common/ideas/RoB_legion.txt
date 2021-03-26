@@ -21,6 +21,472 @@ country = {
 		}
 }
 
+LES_pagang = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+  command_power_gain_mult = 0.25
+  max_command_power = 20
+  experience_loss_factor = -0.25
+  army_morale = 10
+  }
+}
+
+LES_heavenonearth = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    war_support_factor = 0.2
+    stability_factor = 0.2
+    monthly_population = 0.3
+    enemy_operative_capture_chance_factor = 0.5
+  }
+}
+
+LES_onthemomentum = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    air_attack_factor = 0.25 
+    air_defence_factor = 0.25
+    air_accidents_factor = 0.5
+    air_weather_penalty = -0.5
+    air_mission_xp_gain_factor = 0.20
+    air_ace_generation_chance_factor = 0.5
+  }
+}
+
+LES_forwards = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+  political_power_gain = 1
+  }
+}
+
+LES_directrulez = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    resistance_growth_on_our_occupied_states = 0.15
+    offensive_war_stability_factor = 0.2
+    justify_war_goal_time = -0.05
+
+  }
+}
+
+LES_directrulez_2 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    resistance_growth_on_our_occupied_states = 0.25
+    offensive_war_stability_factor = 0.4
+    justify_war_goal_time = -0.1
+  }
+}
+
+LES_directrulez_3 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    resistance_growth_on_our_occupied_states = 0.35
+    offensive_war_stability_factor = 0.6
+    justify_war_goal_time = -0.15
+  }
+}
+
+LES_directrulez_4 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    resistance_growth_on_our_occupied_states = 0.35
+    offensive_war_stability_factor = 0.6
+    justify_war_goal_time = -0.15
+    industrial_capacity_factory = 0.04
+    production_factory_max_efficiency_factor = 0.02
+  }
+}
+
+LES_directrulez_5 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    resistance_growth_on_our_occupied_states = 0.35
+    offensive_war_stability_factor = 0.6
+    justify_war_goal_time = -0.15
+    industrial_capacity_factory = 0.06
+    production_factory_max_efficiency_factor = 0.04
+    global_building_slots_factor = 0.1
+  }
+}
+
+LES_directrulez_6 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    resistance_growth_on_our_occupied_states = 0.35
+    offensive_war_stability_factor = 0.6
+    justify_war_goal_time = -0.15
+    industrial_capacity_factory = 0.1
+    production_factory_max_efficiency_factor = 0.05
+    global_building_slots_factor = 0.2
+  }
+}
+
+
+LES_munidirectrulez_4 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    compliance_growth_on_our_occupied_states = -0.35
+    occupation_cost = -0.35
+    industrial_capacity_factory = 0.04
+    production_factory_max_efficiency_factor = 0.02
+  }
+}
+
+
+LES_munidirectrulez_5 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    compliance_growth_on_our_occupied_states = -0.35
+    occupation_cost = -0.35
+    industrial_capacity_factory = 0.06
+    production_factory_max_efficiency_factor = 0.04
+    global_building_slots_factor = 0.1
+  }
+}
+
+
+LES_munidirectrulez_6 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    compliance_growth_on_our_occupied_states = -0.35
+    occupation_cost = -0.35
+    industrial_capacity_factory = 0.1
+    production_factory_max_efficiency_factor = 0.05
+    global_building_slots_factor = 0.2
+  }
+}
+
+LES_municipalsz = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    compliance_growth_on_our_occupied_states = -0.15
+    occupation_cost = -0.15
+  }
+}
+
+LES_municipalsz_2 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    compliance_growth_on_our_occupied_states = -0.25
+    occupation_cost = -0.25
+  }
+}
+
+LES_municipalsz_3 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    compliance_growth_on_our_occupied_states = -0.35
+    occupation_cost = -0.35
+  }
+}
+
+LES_municipalsz_4 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    compliance_growth_on_our_occupied_states = -0.35
+    occupation_cost = -0.35
+    production_speed_infrastructure_factor = 0.1
+    political_power_gain = 0.05
+  }
+}
+
+LES_municipalsz_5 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    compliance_growth_on_our_occupied_states = -0.35
+    occupation_cost = -0.35
+    production_speed_infrastructure_factor = 0.2
+    political_power_gain = 0.1
+  }
+}
+
+LES_municipalsz_6 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    compliance_growth_on_our_occupied_states = -0.35
+    occupation_cost = -0.35
+    production_speed_infrastructure_factor = 0.35
+    political_power_gain = 0.15
+  }
+}
+
+LES_directmunicipalsz_4 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    resistance_growth_on_our_occupied_states = 0.35
+    offensive_war_stability_factor = 0.6
+    justify_war_goal_time = -0.15
+    production_speed_infrastructure_factor = 0.1
+    political_power_gain = 0.05
+  }
+}
+
+LES_directmunicipalsz_5 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    resistance_growth_on_our_occupied_states = 0.35
+    offensive_war_stability_factor = 0.6
+    justify_war_goal_time = -0.15
+    production_speed_infrastructure_factor = 0.25
+    political_power_gain = 0.1
+  }
+}
+
+LES_directmunicipalsz_6 = {
+  picture = GFX_idea_minority_troubles	
+  allowed = {
+  always = no
+  }
+
+  allowed_civil_war = {
+  always = no
+  }
+
+  removal_cost = -1
+    
+
+  modifier = {
+    resistance_growth_on_our_occupied_states = 0.35
+    offensive_war_stability_factor = 0.6
+    justify_war_goal_time = -0.15
+    production_speed_infrastructure_factor = 0.35
+    political_power_gain = 0.15
+  }
+}
+
 LES_council_discontent_1 = {
   picture = LES_army	
   allowed = {
@@ -36,6 +502,7 @@ LES_council_discontent_1 = {
   army_org = -2
   stability_factor = -0.05
   political_power_gain = -0.05
+  command_power_gain = -0.10
   }
 }
 
@@ -54,6 +521,7 @@ LES_council_discontent_2 = {
   army_org = -4
   stability_factor = -0.05
   political_power_gain = -0.1
+  command_power_gain = -0.20
   }
 }
 
@@ -74,6 +542,7 @@ LES_council_discontent_3 = {
   army_defence_factor = -0.05
   stability_factor = -0.1
   political_power_gain = -0.15
+  command_power_gain = -0.30
   }
 }
 
@@ -94,6 +563,7 @@ LES_council_discontent_4 = {
   army_defence_factor = -0.1
   stability_factor = -0.1
   political_power_gain = -0.20
+  command_power_gain = -0.40
   }
 }
 
@@ -114,6 +584,7 @@ LES_council_discontent_5 = {
   army_attack_factor = -0.15
   stability_factor = -0.15
   political_power_gain = -0.20
+  command_power_gain = -0.50
   }
 }
 
@@ -2490,7 +2961,7 @@ LES_eugenics_IU_GC_2b = {
       }
      removal_cost = -1
    modifier = {
-   stability_weekly = 0.001
+   political_power_gain = 0.1
    MONTHLY_POPULATION = 0.70
    industrial_capacity_factory = -0.1
    }
@@ -2838,7 +3309,7 @@ LES_diverting_funds = {
     removal_cost = -1
   modifier = {
    
- consumer_goods_factor = 0.10
+ consumer_goods_factor = 0.15
   }
 
 }
