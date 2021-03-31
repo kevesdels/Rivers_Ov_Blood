@@ -538,6 +538,51 @@ LES_easterneurope = {
   
   }
 
+LES_caucasus = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_decision_germany_partisans
+	  visible = {
+	   tag = LES
+	   has_country_flag = les_russia_secured
+	  }
+	  available = {
+	  hidden_trigger = { has_country_flag = les_russia_secured }
+	  }
+			priority = {
+			base = 99
+			}
+  }
+
+  LES_central_asia = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_decision_germany_partisans
+	  visible = {
+	   tag = LES
+	   has_country_flag = les_russia_secured
+	  }
+	  available = {
+	  hidden_trigger = { has_country_flag = les_russia_secured }
+	  }
+			priority = {
+			base = 99
+			}
+  }
+
+  LES_far_east = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_decision_germany_partisans
+	  visible = {
+	   tag = LES
+	   has_country_flag = les_russia_secured
+	  }
+	  available = {
+	  hidden_trigger = { has_country_flag = les_russia_secured }
+	  }
+			priority = {
+			base = 98
+			}
+  }
+
 LES_easterneurope_integration = {
 	icon = GFX_decision_category_military_operation
 	picture = GFX_decision_germany_partisans
@@ -646,6 +691,20 @@ LES_economicalcentresdec = {
 		base = 100
 		}
 }
+
+LES_research_bonuses_cate = {
+	icon = GFX_decision_category_generic
+		visible = {
+		hidden_trigger = {
+			tag = LES
+			has_country_flag = les_research_bonuses	
+			}
+	}
+	priority = {
+		base = 100
+		}
+}
+
 
 ALL_executive = {
 

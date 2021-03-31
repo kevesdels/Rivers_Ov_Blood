@@ -57,6 +57,9 @@ focus_tree = {
 		y = 2
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+		has_country_flag = FER_policy_USA
+		}
 		prerequisite = { focus = FER_republicanforeignpolicy }
 		ai_will_do = {
 			factor = 25
@@ -718,6 +721,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			
+		}
 	}
 
 	#Focus for Industry in Irkutsk
@@ -735,6 +741,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			
+		}
 	}
 
 	#Focus for Conquer Irkutsk from the Mongols
@@ -748,6 +757,9 @@ focus_tree = {
 		prerequisite = { focus = FER_russianunification }
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+			
 		}
 	}
 
@@ -768,6 +780,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			
+		}
 	}
 
 	#Focus for Proclaim Siberian Republic
@@ -782,6 +797,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			
+		}
 	}
 
 	#Focus for On Our Own
@@ -792,6 +810,9 @@ focus_tree = {
 		y = 2
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+		has_country_flag = FER_policy_alone
+		}
 		prerequisite = { focus = FER_republicanforeignpolicy }
 		ai_will_do = {
 			factor = 25
@@ -899,12 +920,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			add_opinion_modifier = {
+					target = SFS
+					modifier = FER_approach
+				}
+		}
 	}
 
 	#Focus for Ties with Nikolayevsk
 	focus = {
 		id = FER_tieswithnikolayevsk
-		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		icon = GFX_goal_unknown 
 		x = 41
 		y = 4
 		cost = 5
@@ -912,6 +939,12 @@ focus_tree = {
 		prerequisite = { focus = FER_approachtheadmirals }
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+		add_opinion_modifier = {
+				target = WFE
+				modifier = FER_befriend
+			}
 		}
 	}
 
@@ -923,9 +956,19 @@ focus_tree = {
 		y = 3
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+			is_neighbor_of = SFS
+			SFS = { exists = yes }
+		}
 		prerequisite = { focus = FER_russianunification }
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+		add_opinion_modifier = {
+				target = SFS
+				modifier = FER_help
+			}
 		}
 	}
 
@@ -937,9 +980,19 @@ focus_tree = {
 		y = 4
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+			is_neighbor_of = SFS
+			SFS = { exists = yes }
+		}
 		prerequisite = { focus = FER_befriendthefreestate }
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+		add_opinion_modifier = {
+				target = SFS
+				modifier = FER_befriend
+			}
 		}
 	}
 
@@ -955,6 +1008,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			
+		}
 	}
 
 	#Focus for Unification with Irkutsk
@@ -969,6 +1025,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			
+		}
 	}
 
 	#Focus for Reconcile with the Jews
@@ -979,9 +1038,19 @@ focus_tree = {
 		y = 3
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+			is_neighbor_of = JOB
+			JOB = { exists = yes }
+		}
 		prerequisite = { focus = FER_russianunification }
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+		add_opinion_modifier = {
+			target = JOB
+			modifier = FER_help
+		}
 		}
 	}
 
@@ -1101,6 +1170,9 @@ focus_tree = {
 		y = 2
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+		has_country_flag = FER_policy_JAP
+		}
 		prerequisite = { focus = FER_republicanforeignpolicy }
 		ai_will_do = {
 			factor = 25
@@ -1780,8 +1852,19 @@ completion_reward = {
 		y = 1
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+			OR = {
+			has_country_flag = FER_policy_JAP
+			has_country_flag = FER_policy_USA
+			has_country_flag = FER_policy_RUS
+			has_country_flag = FER_policy_alone
+			}
+		}
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+		add_political_power = 75
 		}
 	}
 
@@ -1826,6 +1909,9 @@ completion_reward = {
 		y = 2
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+		has_country_flag = FER_policy_RUS
+		}
 		prerequisite = { focus = FER_republicanforeignpolicy }
 		ai_will_do = {
 			factor = 25
@@ -1844,12 +1930,15 @@ completion_reward = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+
+		}
 	}
 
 	#Focus for Connect the Railroads
 	focus = {
 		id = FER_connecttherailroads
-		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		icon = GFX_goal_unknown
 		x = 42
 		y = 5
 		cost = 5
@@ -1858,12 +1947,15 @@ completion_reward = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			
+		}
 	}
 
 	#Focus for Uniting the East
 	focus = {
 		id = FER_unitingtheeast
-		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		icon = GFX_goal_unknown
 		x = 41
 		y = 6
 		cost = 5
@@ -1877,6 +1969,9 @@ completion_reward = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			
+		}
 	}
 
 	#Focus for Promise Autonomy Under Russia
@@ -1887,6 +1982,18 @@ completion_reward = {
 		y = 5
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+			OR = {
+			AND = {
+				is_neighbor_of = JOB
+		    	JOB = { exists = yes }
+				}
+			AND = {
+				is_neighbor_of = SFS
+		    	SFS = { exists = yes }
+				}
+			}
+		}
 		prerequisite = { 
 			focus = FER_donatefood 
 		}
@@ -1895,6 +2002,22 @@ completion_reward = {
 		}
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					is_neighbor_of = SFS
+					SFS = { exists = yes }
+				}
+				SFS = { country_event = { id = fareastrep.6 days = 3 } }
+			}
+			if = {
+				limit = {
+					is_neighbor_of = JOB
+					JOB = { exists = yes }
+				}
+				JOB = { country_event = { id = fareastrep.6 days = 3 } }
+			}
 		}
 	}
 
@@ -1906,16 +2029,27 @@ completion_reward = {
 		y = 4
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+			is_neighbor_of = JOB
+		    JOB = { exists = yes }
+		}
 		prerequisite = { focus = FER_reconcilewiththejews }
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+		give_guarantee = JOB
+		add_opinion_modifier = {
+			target = JOB
+			modifier = FER_befriend
+		}
 		}
 	}
 
 	#Focus for Destroy the Reds
 	focus = {
 		id = FER_destroythereds
-		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		icon = GFX_goal_unknown 
 		x = 45
 		y = 7
 		cost = 5
@@ -1928,6 +2062,9 @@ completion_reward = {
 		}
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+			
 		}
 	}
 

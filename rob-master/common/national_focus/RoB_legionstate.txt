@@ -1892,6 +1892,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			custom_effect_tooltip = les_tt_38
 		}
 	}
 
@@ -2409,6 +2410,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		custom_effect_tooltip = les_tt_4
+		set_country_flag = les_research_bonuses
 		}
 	}
 
@@ -4620,11 +4622,16 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_tech_bonus = {
-	      name = specialforces
-	      bonus = 1.0
-	      uses = 1
-	      technology = special_forces
-           } 
+				name = ROB_special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = tech_special_forces
+				technology = advanced_special_forces
+				technology = improved_special_forces
+				technology = extreme_environment_training
+				technology = survival_training
+				technology = elite_forces
+			}
 		}
 	}
 
@@ -5647,6 +5654,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			custom_effect_tooltip = les_tt_38
 		}
 	}
 
@@ -5671,6 +5679,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			custom_effect_tooltip = les_tt_38
 		}
 	}
 
@@ -6355,7 +6364,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { 
 		focus = LES_followtheexampleofmiddleages 
-		focus = LES_divinecorporations }
+		focus = LES_divinecorporations focus = LES_socialismwithslaviccharacteristics }
 		ai_will_do = {
 			factor = 1
 		}
@@ -6417,7 +6426,7 @@ focus_tree = {
 		prerequisite = { 
 		focus = LES_followtheexampleofmiddleages 
 		focus = LES_socialismwithslaviccharacteristics
-		}
+		focus = LES_divinecorporations	}
 		ai_will_do = {
 			factor = 1
 		}
@@ -6474,7 +6483,6 @@ focus_tree = {
 		x = 23
 		y = 12
 		cost = 5
-		available = { NOT = { has_completed_focus = LES_divinecorporations } }
 		mutually_exclusive = { focus = LES_ecologicalmeasures }
 		available_if_capitulated = yes
 		prerequisite = { focus = LES_economicalcentres_2  focus = LES_spreadoutindustry_2 }
@@ -6572,7 +6580,6 @@ focus_tree = {
 		x = 27
 		y = 12
 		cost = 5
-		available = { NOT = { has_completed_focus = LES_socialismwithslaviccharacteristics } }
 		mutually_exclusive = { focus = LES_maximizeprofit }
 		available_if_capitulated = yes
 		prerequisite = {  
@@ -6688,6 +6695,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+			custom_effect_tooltip = les_tt_38
 		}
 	}
 

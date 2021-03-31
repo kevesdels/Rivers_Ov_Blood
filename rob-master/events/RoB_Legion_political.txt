@@ -285,8 +285,53 @@ country_event = {
 		POL = { transfer_state = PREV }
 	  }
 	  POL = {
-		set_cosmetic_tag = LES_gadja_puppet
+		set_cosmetic_tag = POL_gadja_pelekist
 		} 
+		if = {
+			limit = { LES = { has_country_flag = christ } }
+			POL = {
+				create_country_leader = {
+					name = "Władysław Kołodziej"
+					desc = ""
+					picture = "Władysław_Kołodziej.dds"
+					expire = "1965.1.1"
+					ideology = christian_pelekism
+					traits = {
+						syncretic_theolog
+					}
+				}
+			} 
+		}
+		if = {
+			limit = { LES = { has_country_flag = pagan } }
+			POL = {
+				create_country_leader = {
+					name = "Jan Stachniuk"
+					desc = ""
+					picture = "Jan_Stachniuk.dds"
+					expire = "1965.1.1"
+					ideology = pagan_pelekism
+					traits = {
+						social_reformer
+					}
+				}
+			} 
+		}
+		if = {
+			limit = { LES = { has_country_flag = poets } }
+			POL = {
+				create_country_leader = {
+					name = "Stanisław Szukalski"
+					desc = ""
+					picture = "Stanisław_Szukalski.dds"
+					expire = "1965.1.1"
+					ideology = futuristic_pelekism
+					traits = {
+						great_architect
+					}
+				}
+			} 
+		}
 	  }
    
 	  ###Federation ignore
@@ -508,6 +553,20 @@ country_event = {
 	  SLO = {
 		set_cosmetic_tag = LES_gadja_puppet
 		} 
+		if = {
+			limit = { OR = { has_country_flag = pagan has_country_flag = poets }}
+			SLO = {
+				create_country_leader = {
+					name = "Vojtech Tuka"
+					desc = ""
+					picture = "Vojtech_Tuka.dds"
+					expire = "1965.1.1"
+					ideology = pelekist_subtype
+					traits = {
+					}
+				}
+			}
+		}
 	  }
    
 	  ###Federation ignore
@@ -616,7 +675,19 @@ country_event = {
 		HUN = { transfer_state = PREV }
 	  }
 	  HUN = {
-		set_cosmetic_tag = LES_gadja_puppet
+		set_cosmetic_tag = HUN_gadja_puppet
+		}
+	  HUN = {
+			create_country_leader = {
+				name = "Árpád Szakasits"
+				desc = ""
+				picture = "Árpád_Szakasits.dds"
+				expire = "1965.1.1"
+				ideology = pelekist_subtype
+				traits = {
+					figurehead_president
+				}
+			}
 		} 
 	  }
    
@@ -1296,6 +1367,16 @@ country_event = {
 	  }
 	  PRS = {
 		set_cosmetic_tag = LES_gadja_puppet
+		set_country_flag = PRS_gadja_puppet
+		create_country_leader = {
+			name = "Alfred Rosenberg"
+			desc = ""
+			picture = "Alfred_Rosenberg.tga"
+			expire = "1951.1.1"
+			ideology = pagan_pelekism
+			traits = {
+			}
+		}
 		} 
 	  }
 
@@ -1409,6 +1490,7 @@ country_event = {
 				expire = "1965.1.1"
 				ideology = pelekist_subtype
 				traits = {
+					appeaser
 				}
 			}
 		}
@@ -1484,7 +1566,9 @@ country_event = {
 
 	   option = {
 		name = "Create Sclavenia, Puppet the rest."
-
+		trigger = {
+			has_country_flag = les_confederation
+		}
 		puppet = SCL
 		ai_chance = { factor = 50 }
 		if = { limit = { 731 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 731 } 731 = { add_core_of = SCL } }
@@ -1601,6 +1685,7 @@ country_event = {
 				expire = "1965.1.1"
 				ideology = pelekist_subtype
 				traits = {
+					nationalist_symbol
 				}
 			}
 		}
@@ -1648,6 +1733,7 @@ country_event = {
 				expire = "1965.1.1"
 				ideology = pelekist_subtype
 				traits = {
+					nationalist_symbol
 				}
 			}
 		}
@@ -1989,11 +2075,10 @@ country_event = {
 	title = "Mongols Offer peace"
 	fire_only_once = yes
    
-	mean_time_to_happen = { days = 1 }
 	trigger = {
 		tag = LES
 		at_war_with = MON
-		MON = { surrender_progress > 0.5}
+		MON = { surrender_progress > 0.40}
 		country_exists = MON
 	  }
    
@@ -2018,3 +2103,110 @@ country_event = {
 	  }
 	   
 }
+
+
+
+   ### Italy
+   country_event = {
+	id = legion_political.19
+	desc = legion_political.19.d
+	title = "Fate of Italy"
+	fire_only_once = yes
+	
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+	 has_war = no
+	 ITA = { NOT = { is_puppet_of = ROOT } }
+	 2 = { is_owned_and_controlled_by = ROOT }
+	 NOT = {
+	  tag = ITA
+	 }
+	}
+
+	option = { 
+		name = "Award Member States, Puppet the rest"
+		ai_chance = { factor = 150  }
+		trigger = {  
+		has_country_flag = les_confederation
+		OR = {
+			SLV = { is_puppet_of = LES }
+			CRO = { is_puppet_of = LES }
+			SER = { is_puppet_of = LES }
+			}
+		}
+		### SHIT TO GREECE
+		if = {
+			limit = {
+				GRE = { is_puppet_of = LES }
+				NOT = { SCL = { is_puppet_of = LES } }
+			}
+			if = { limit = { 164 = { is_owned_and_controlled_by = ROOT } } GRE = { transfer_state = 164 } }
+		}
+	
+		### SHIT TO SERBIA
+		if = {
+			limit = {
+				SER = { is_puppet_of = LES }
+			}
+			if = { limit = { 940 = { is_owned_and_controlled_by = ROOT } } SCL = { transfer_state = 940 } }
+		}
+		
+		### SHIT TO CROATIA
+		if = {
+			limit = {
+				CRO = { is_puppet_of = LES }
+			}
+			if = { limit = { 1123 = { is_owned_and_controlled_by = ROOT } } CRO = { transfer_state = 1123 } }
+			if = { limit = { 938 = { is_owned_and_controlled_by = ROOT } } CRO = { transfer_state = 938 } }
+			if = { limit = { 1124 = { is_owned_and_controlled_by = ROOT } } CRO = { transfer_state = 1124 } }
+			if = { limit = { 103 = { is_owned_and_controlled_by = ROOT } } CRO = { transfer_state = 103 } }
+			if = { limit = { 163 = { is_owned_and_controlled_by = ROOT } } CRO = { transfer_state = 163 } }
+			if = { limit = { 939 = { is_owned_and_controlled_by = ROOT } } CRO = { transfer_state = 939 } }
+			if = { limit = { 1125 = { is_owned_and_controlled_by = ROOT } } CRO = { transfer_state = 1125 } }
+			if = { limit = { 736 = { is_owned_and_controlled_by = ROOT } } CRO = { transfer_state = 736 } }
+		}
+		### SHIT TO Slovenia
+		if = {
+			limit = {
+				SLV = { is_puppet_of = LES }
+			}
+			if = { limit = { 102 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 102 } }
+			if = { limit = { 1126 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 1126 } }
+			if = { limit = { 866 = { is_owned_and_controlled_by = ROOT } } SLV = { transfer_state = 866 } }
+		}
+		every_owned_state = {
+			limit = { 
+			 NOT = {
+			  is_claim_or_core = yes
+			 }
+			  is_core_of = ITA
+			}
+			ITA = { transfer_state = PREV }
+		  }
+
+	}
+
+	option = {
+	 name = "Create a Puppet State"
+	 puppet = ITA
+	 ai_chance = { factor = 50 }
+	 every_owned_state = {
+	   limit = { 
+		NOT = {
+		 is_claim_or_core = yes
+		}
+		 is_core_of = ITA
+	   }
+	   ITA = { transfer_state = PREV }
+	 }
+	}  
+	
+	option = {
+	 name = "Continue Military Occupation"
+	 ai_chance = { factor = 0 }
+	 add_stability =-0.3
+	 add_war_support =-0.3
+	 add_political_power =-300
+	}
+   
+   }

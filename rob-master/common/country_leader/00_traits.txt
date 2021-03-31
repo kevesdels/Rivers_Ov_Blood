@@ -389,6 +389,7 @@ leader_traits = {
 		}
 	}
 	
+
 	exiled = {
 		random = no
 		
@@ -616,6 +617,12 @@ leader_traits = {
 		}
 	}
 
+	figurehead_president = {
+		random = no
+		stability_factor = -0.05
+		political_power_factor = 0.05
+	}
+
 	the_dean_of_mexican_marxism = { #Vicente Lombardo
 		random = no
 
@@ -758,18 +765,6 @@ leader_traits = {
 		}
 	}
 
-	kaiserin_of_the_people = {
-		stability_weekly = 0.001
-		stability_factor = 0.05
-		war_support_factor = 0.05
-		army_core_defence_factor = 0.1
-		political_power_factor = 0.15
-	}
-
-	victoria_iii = {
-		stability_factor = 0.05
-	}
-
 	incognito = {
 		pelekism_ideology_drift = 0.1
 		drift_defence_factor = 0.15
@@ -846,11 +841,6 @@ leader_traits = {
 		random = no
 		war_support_factor = 0.05
 		resistance_damage_to_garrison = 0.15
-	}
-
-	wilhelmina = {
-		random = no
-		stability_factor = 0.15
 	}
 
 	queen_of_the_people = {
@@ -970,6 +960,18 @@ leader_traits = {
 		pelekist_drift = 0.1
 		generate_wargoal_tension = -0.5
 		justify_war_goal_time = -0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	syncretic_theolog = {
+		random = no
+		sprite = 13
+
+		reactionary_drift = 0.05
+		pelekist_drift = 0.1
 		
 		ai_will_do = {
 			factor = 1

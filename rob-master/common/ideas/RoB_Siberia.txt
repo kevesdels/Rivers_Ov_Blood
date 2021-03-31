@@ -90,62 +90,6 @@ ideas = {
 			}
 	}
 
-   FER_far_eastern_democracatic_beacon = {
-	allowed = {
-       always = no
-     }
-	 allowed_civil_war = {
-				always = yes
-			}
-	 removal_cost = -1
-	 picture = GFX_idea_minority_troubles
-	 modifier = {
-			political_power_factor = 0.15	
-			stability_factor = 0.10	
-			war_support_factor = 0.10	
-			surrender_limit = 0.25	
-
-
-			}
-	}
-
-   FER_tacit_american_support = {
-	allowed = {
-       always = no
-     }
-	 allowed_civil_war = {
-				always = yes
-			}
-	 removal_cost = -1
-	 picture = GFX_idea_minority_troubles
-	 modifier = {
-			stability_factor = 0.10		
-			conservative_acceptance = 85	
-			consumer_goods_factor = -0.05
-
-
-			}
-	}
-
-   FER_loose_control = {
-	allowed = {
-       always = no
-     }
-	 allowed_civil_war = {
-				always = yes
-			}
-	 removal_cost = -1
-	 picture = GFX_idea_minority_troubles
-	 modifier = {
-			planning_speed = -0.2
-			army_org_factor = -0.2
-			training_time_factor = 0.1
-
-
-
-			}
-	}
-
    SFS_german_origin = {
 	allowed = {
        always = no

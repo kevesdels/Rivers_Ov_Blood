@@ -1050,6 +1050,8 @@ country_event = {
       remove_core_of = LNC
       remove_core_of = LDF
     }
+    1266 = { add_core_of = LAT }
+    ROOT = { set_capital = 1266 }
   }
 
 
@@ -1069,6 +1071,8 @@ country_event = {
       remove_core_of = LNC
       remove_core_of = LPR
     }
+    1266 = { add_core_of = LAT }
+    ROOT = { set_capital = 1266 }
   }
 
  if = {
@@ -1087,6 +1091,8 @@ country_event = {
       remove_core_of = LDF
       remove_core_of = LPR
     }
+    1266 = { add_core_of = LAT }
+    ROOT = { set_capital = 1266 }
   }
 }
 
@@ -1129,6 +1135,7 @@ country_event = {
       remove_core_of = ELP
       remove_core_of = ECA
  }
+ ROOT = { set_capital = 1267 }
 }
 
 
@@ -1148,6 +1155,7 @@ country_event = {
       remove_core_of = ECA
       remove_core_of = ELA
  }
+ ROOT = { set_capital = 1267 }
 }
 
  if = {
@@ -1166,6 +1174,7 @@ country_event = {
       remove_core_of = ELA
       remove_core_of = ELP
  }
+ ROOT = { set_capital = 1267 }
 }
 
 }

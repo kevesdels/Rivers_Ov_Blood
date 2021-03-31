@@ -17,8 +17,8 @@ slovenian_uprising
 }
 
 set_politics = {
-	ruling_party = pelekist 
-	last_election = "1930.11.9"
+	ruling_party = reactionary 
+	last_election = "1934.11.9"
 	election_frequency = 48
 	elections_allowed = no
 }
@@ -30,9 +30,9 @@ set_popularities = {
 	social_democracy = 0
 	social_liberal = 0
 	conservative = 0
-	authoritharian = 13
-	reactionary = 0
-	pelekist = 51
+	authoritharian = 15
+	reactionary = 36
+	pelekist = 13
 }
 
 
@@ -42,6 +42,16 @@ create_country_leader = {
 	name = "Karl Novak"
 	desc = ""
 	picture = "karl_novak.tga"
+	expire = "1960.1.1"
+	ideology = reactionary_subtype
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Anton Korošec"
+	desc = ""
+	picture = "Anton_Korošec.dds"
 	expire = "1960.1.1"
 	ideology = pelekist_subtype
 	traits = {

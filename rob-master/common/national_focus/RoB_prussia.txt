@@ -38,7 +38,10 @@ focus_tree = {
 		y = 0
 		cost = 5
 		available = {
-		has_country_flag = rosenberg_victory
+			OR = {
+			has_country_flag = rosenberg_victory
+			hidden_trigger = {has_country_flag = PRS_gadja_puppet}
+			}
 		}
 		available_if_capitulated = yes
 		ai_will_do = {

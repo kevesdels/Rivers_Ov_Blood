@@ -1,0 +1,76 @@
+#################
+###Mongolian Events
+#################
+
+add_namespace = fareastrep
+
+
+###foregin policy
+
+country_event = {
+id = fareastrep.5
+title = "The Course of Our Nation"
+desc = fareastrep.5.d
+fire_only_once = yes
+picture = GFX_picture_bosnian_revolt
+
+trigger = {
+datedate > 1934.6.1
+}
+
+option = {
+name = "The Americans have our Back"
+set_country_flag = FER_policy_USA
+ai_chance = { factor = 0 }
+}
+
+option = {
+name = "The Japanese Will Help US"
+set_country_flag = FER_policy_JAP  
+ai_chance = { factor = 0 }
+}
+
+option = {
+name = "Our duty is to unite Russia"
+set_country_flag = FER_policy_RUS
+ai_chance = { factor = 5 }
+}
+
+option = {
+name = "You cant trust anyone"
+set_country_flag = FER_policy_alone  
+ai_chance = { factor = 0 }
+}
+
+}
+
+
+
+
+
+country_event = {
+    id = fareastrep.6
+    title = "The Far East Republic Promises Autonomy"
+    desc = fareastrep.6.d
+    fire_only_once = yes
+    picture = GFX_picture_bosnian_revolt
+    is_triggered_only = yes
+    
+    option = {
+    name = "We gladly accept"
+    ai_chance = { factor = 1 }
+    ROOT = { annex_country = { target = FROM transfer_troops = yes } }
+    }
+    
+    option = {
+    name = "There is no need"
+    ai_chance = { factor = 0 }
+    add_political_power = 10
+    add_opinion_modifier = {
+        target = FROM
+        modifier = FER_refused_autonomy
+    }
+    }
+    
+    
+    }

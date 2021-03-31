@@ -1205,19 +1205,6 @@ LES_nice_horsies = {
    training_time_factor = 0.10
    }
 }
-   LES_banish_aliens = {
-   picture = GFX_idea_minority_troubles 
-   allowed = {
-       always = no
-     }
-   allowed_civil_war = {
-        always = no
-      }
-     removal_cost = -1
-   modifier = {
-   weekly_manpower = -500
-   }
-}
    LES_eugenics_RE_1Ba = {
    picture = GFX_idea_minority_troubles 
    allowed = {
@@ -2670,7 +2657,7 @@ LES_eugenics_IU_GC_2b = {
    modifier = {
    drift_defence_factor = 0.5
    MONTHLY_POPULATION = -0.35
-   consumer_goods_factor = 0.10
+   consumer_goods_factor = 0.06
    industrial_capacity_factory = 0.1
    production_speed_arms_factory_factor = -0.05
    production_speed_industrial_complex_factor = 0.15
@@ -3213,7 +3200,7 @@ LES_eugenics_IU_GC_2b = {
   war_support_factor = -0.1
 	consumer_goods_factor = 0.1
 	production_speed_buildings_factor = -0.2
-	MONTHLY_POPULATION = -0.4
+	MONTHLY_POPULATION = -0.15
    }
 
 }
@@ -3231,7 +3218,7 @@ LES_eugenics_IU_GC_2b = {
   war_support_factor = -0.08
   consumer_goods_factor = 0.1
   production_speed_buildings_factor = -0.10
-  MONTHLY_POPULATION = -0.2
+  MONTHLY_POPULATION = -0.1
    }
 
 }
@@ -3248,7 +3235,7 @@ LES_eugenics_IU_GC_2b = {
   stability_factor = -0.05
   war_support_factor = -0.05
   consumer_goods_factor = 0.1
-  MONTHLY_POPULATION = -0.1
+  MONTHLY_POPULATION = -0.05
    }
 
 }

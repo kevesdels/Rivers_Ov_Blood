@@ -1991,6 +1991,7 @@ country_event = {
    tag = ITA
    tag = PIE
    tag = SIC
+   tag = LES
   }
  }
  
@@ -2216,6 +2217,7 @@ country_event = {
       is_core_of = KYR
 	}
 	KYR = { transfer_state = PREV }
+  
   }
  if = { 
   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
@@ -2255,17 +2257,33 @@ country_event = {
  
  option = {
   name = "Create a Puppet State"
+  trigger = {
+    KAZ = { exists = yes }
+    KZR = { exists = no }
+  }
   puppet = KZR
+  KAZ = { remove_ideas = { KZR_freedom_fighting KZR_kazakh_war } }
   ai_chance = { factor = 50 }
   every_owned_state = {
     limit = { 
      NOT = {
 	  is_claim_or_core = yes
 	 }
-      is_core_of = KAZ
+   OR = {
+    is_core_of = KAZ
+    is_core_of = KZR
+  }
 	}
 	KZR = { transfer_state = PREV }
 	PREV = { add_core_of = KZR }
+  }
+  if = {
+    limit = {
+      KYR = { exists = yes }
+      NOT = { KYR = { is_puppet_of = ROOT } }
+      586 = { is_owned_and_controlled_by = ROOT }
+    }
+    KZR = { transfer_state = 586 }
   }
  if = { 
   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
@@ -2275,6 +2293,82 @@ country_event = {
  }  
  }
  
+ option = {
+  name = "Create a Puppet State"
+  trigger = {
+    KZR = { exists = yes }
+    KAZ = { exists = no }
+  }
+  puppet = KAZ
+  KAZ = { remove_ideas = { KAZ_triumverate KAZ_overextended_state } }
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+   OR = {
+      is_core_of = KAZ
+      is_core_of = KZR
+   }
+	}
+	KAZ = { transfer_state = PREV }
+	PREV = { add_core_of = KAZ }
+  }
+  if = {
+    limit = {
+      KYR = { exists = yes }
+      NOT = { KYR = { is_puppet_of = ROOT } }
+      586 = { is_owned_and_controlled_by = ROOT }
+    }
+    KAZ = { transfer_state = 586 }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  KAZ = {
+  set_cosmetic_tag = Generic_puppet_socialist
+  } 
+ }  
+ }
+
+ option = {
+  name = "Create a Puppet State"
+  trigger = {
+    KZR = { exists = no }
+    KAZ = { exists = no }
+  }
+  puppet = KAZ
+ KAZ = { remove_ideas = { KAZ_triumverate KAZ_overextended_state } }
+  ai_chance = { factor = 50 }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+   OR = {
+      is_core_of = KAZ
+      is_core_of = KZR
+   }
+	}
+	KAZ = { transfer_state = PREV }
+	PREV = { add_core_of = KAZ }
+  }
+  if = {
+    limit = {
+      KYR = { exists = yes }
+      NOT = { KYR = { is_puppet_of = ROOT } }
+      586 = { is_owned_and_controlled_by = ROOT }
+    }
+    KAZ = { transfer_state = 586 }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  KAZ = {
+  set_cosmetic_tag = Generic_puppet_socialist
+  } 
+ }  
+ }
+
  option = {
   name = "Continue Military Occupation"
   ai_chance = { factor = 0 }
@@ -2349,6 +2443,12 @@ country_event = {
    tag = LAT
    tag = EST
    tag = LES
+   tag = LNC
+   tag = LDR
+   tag = LPR
+   tag = ELP
+   tag = ELA
+   tag = ECA
   }
  }
  

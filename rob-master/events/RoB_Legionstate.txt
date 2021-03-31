@@ -75,6 +75,15 @@ fire_only_once = yes
 is_triggered_only = yes
 
 option = {
+	name = legion.3.b
+	ai_chance = {
+			   factor = 10
+		   }
+	hidden_effect = { country_event = { id = legion.6 days = 7 }}
+   }
+
+
+option = {
  name = legion.3.a
  ai_chance = {
 			factor = 0
@@ -82,13 +91,7 @@ option = {
  custom_effect_tooltip = les_tt_32
  hidden_effect = { country_event = { id = legion.4 days = 1 }}
 }
-option = {
- name = legion.3.b
- ai_chance = {
-			factor = 10
-		}
- hidden_effect = { country_event = { id = legion.6 days = 7 }}
-}
+
 }
 
 ###he chads up and goes anyway
@@ -449,7 +452,7 @@ option = {
  add_tech_bonus = {
 	name = gwtank 
 	bonus = 1.0
-	uses = 3
+	uses = 1
 	technology = gwtank 
 	}
  	if = {
@@ -495,23 +498,21 @@ is_triggered_only = yes
 
 option = {
  name = legion.19.a
- add_manpower = 3083‬
- army_experience = 15
- add_equipment_to_stockpile = {
- type = motorized_equipment_1
- amount = 231
- producer = RDR
- 		}
-}
-  add_tech_bonus = {
-	name = cars 
-	bonus = 1.0
-	uses = 1
-	technology = motorised_infantry 
+ 	army_experience = 15
+ 	add_manpower = 3083
+ 	add_tech_bonus = {
+		name = cars 
+		bonus = 1.0
+		uses = 1
+		technology = motorised_infantry 
+		}
+	add_equipment_to_stockpile = {
+		type = motorized_equipment_1
+		amount = 231
+		producer = ENG
+	   }
 	}
 }
-
-
 
 ### Futurists joins legion
 country_event = { 
@@ -545,10 +546,13 @@ option = {
  LES = { add_state_core = 571 }
  army_experience = 15
  add_popularity = {ideology = socialist popularity = 0.15 }
+ if = {
+limit = { NOT = { has_country_flag = LES_kar_defectors_defect } }
  custom_effect_tooltip = les_tt_34
  hidden_effect = {
  LES = { load_oob = LES_Defectors}
  }
+}
  }
 
 option = {
@@ -669,7 +673,7 @@ hidden_effect = {
 option = {
 name  = "A warm welcome for brothers in arms!"
 ai_chance = { factor = 0 }
-hidden_effect = { LES = { load_oob = "LES_Defectors" }}
+hidden_effect = { LES = { load_oob = "LES_Defectors" } set_country_flag = LES_kar_defectors_defect }
 }
 }
 
@@ -715,7 +719,7 @@ option = {
 name  = "Good riddance!"
 add_stability = 0.1
 add_war_support = 0.1
-hidden_effect = { LES = { load_oob = "LES_Defectors" } }
+hidden_effect = { LES = { load_oob = "LES_Defectors" } set_country_flag = LES_kar_defectors_defect }
 }
 }
 
@@ -1844,6 +1848,58 @@ country_event = {
 	}
 }
 
+### New Capital
+country_event = { 
+	id = legion.55
+	title = "The Question of Capital"
+	desc = "Where should it be?"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#Moscow
+	option = {
+	 name = "Moscow"
+	 	LES = { set_capital = 219 }  
+		 hidden_effect = { country_event = { id = legion.56 days = 35 }}
+	 }
+	 #Leningrad
+	option = {
+	name = "Leningrad"
+		LES = { set_capital = 195 }  
+		hidden_effect = { country_event = { id = legion.56 days = 35 }}
+	}
+	#Kazan
+	option = {
+		name = "Kazan"
+		LES = { set_capital = 249 }  
+		hidden_effect = { country_event = { id = legion.56 days = 35 }}
+	}
+	#Chelyabinsk
+	option = {
+		name = "Chelyabinsk"
+		hidden_effect = { country_event = { id = legion.56 days = 35 }}
+	}
+}
+
+
+|### New Capital
+country_event = { 
+	id = legion.56
+	title = "Renaming Cities"
+	desc = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#change lenningrad and nikolaigrad to bla bla
+	option = {
+	 name = "Rename"
+	 }
+	#nothing changes
+	option = {
+	name = "I would rather not"
+	}
+}
+
  ###temp event for debugging
  country_event = { 
 	id = legion.100
@@ -1890,4 +1946,60 @@ country_event = {
 	option = {
 	name = "No Baltics in west slavia"
 	}
+}
+
+
+ ###temp event for debugging
+ country_event = { 
+	id = legion.102
+	title = "Debugging Russia"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	###for annexing all niggas for russian req
+	option = {
+	 name = "Annex all decison req"
+	 set_country_flag = triumph
+	 annex_country = { target = AGR transfer_troops = no }
+	 annex_country = { target = OMS transfer_troops = no }
+	 annex_country = { target = KAR transfer_troops = no }
+	 annex_country = { target = UGC transfer_troops = no }
+	 annex_country = { target = BRW transfer_troops = no }
+	 annex_country = { target = TOW transfer_troops = no }
+	 annex_country = { target = RDR transfer_troops = no }
+	 annex_country = { target = RUS transfer_troops = no }
+	 annex_country = { target = SOV transfer_troops = no }
+	 annex_country = { target = CAU transfer_troops = no }
+	 annex_country = { target = BWR transfer_troops = no }
+	 annex_country = { target = KRW transfer_troops = no }
+	 annex_country = { target = JSW transfer_troops = no }
+	 annex_country = { target = FER transfer_troops = no }
+	 annex_country = { target = JOB transfer_troops = no }
+	 annex_country = { target = IRK transfer_troops = no }
+	 annex_country = { target = WFE transfer_troops = no }
+	 }
+
+
+	 option = {
+		name = "Annex all eastern europe slavi tags"
+		annex_country = { target = BLR transfer_troops = no }
+		annex_country = { target = CBR transfer_troops = no }
+		annex_country = { target = DBR transfer_troops = no }
+		annex_country = { target = UKR transfer_troops = no }
+		annex_country = { target = DSU transfer_troops = no }
+		annex_country = { target = FTT transfer_troops = no }
+		annex_country = { target = LIT transfer_troops = no }
+		annex_country = { target = EST transfer_troops = no }
+		annex_country = { target = POL transfer_troops = no }
+		annex_country = { target = CZE transfer_troops = no }
+		annex_country = { target = SLO transfer_troops = no }
+		annex_country = { target = HUN transfer_troops = no }
+		annex_country = { target = ROM transfer_troops = no }
+		annex_country = { target = HUN transfer_troops = no }
+		annex_country = { target = BUL transfer_troops = no }
+		annex_country = { target = SER transfer_troops = no }
+		annex_country = { target = CRO transfer_troops = no }
+		annex_country = { target = WFE transfer_troops = no }
+		}
+
 }

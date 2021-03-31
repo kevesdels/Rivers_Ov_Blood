@@ -26,7 +26,7 @@ LES_banish_x = {
   target_trigger = {
     FROM = {
         is_core_of = ROOT
-        state_population > 10000
+        state_population > 20000
           NOT = {has_state_flag = banish}
         }
      }
@@ -36,15 +36,75 @@ LES_banish_x = {
   days_remove = 60
 
   complete_effect = {
-    ROOT = {
-    add_ideas = {LES_banish_aliens}
+    if = {
+      limit = {
+         FROM = {
+          AND = { state_population > 20000  state_population < 50000
+         } 
+       }
     }
+    add_manpower = -2000
   }
+      if = {
+      limit = {
+         FROM = {
+          AND = { state_population > 50000  state_population < 150000
+         } 
+       }
+    }
+    add_manpower = -4000
+  }
+      if = {
+      limit = {
+         FROM = {
+          AND = { state_population > 150000  state_population < 350000
+         } 
+       }
+    }
+    add_manpower = -6000
+  }
+      if = {
+      limit = {
+         FROM = {
+          AND = { state_population > 350000  state_population < 650000
+         } 
+       }
+    }
+    add_manpower = -8000
+  }
+      if = {
+      limit = {
+         FROM = {
+          AND = { state_population > 650000  state_population < 1000000
+         } 
+       }
+    }
+    add_manpower = -10000
+  }
+      if = {
+      limit = {
+         FROM = {
+          AND = { state_population > 1000000  state_population < 2000000
+         } 
+       }
+    }
+    add_manpower = -15000
+  }
+
+        if = {
+      limit = {
+         FROM = {
+          AND = { state_population > 2000000
+         } 
+       }
+    }
+    add_manpower = -20000
+  }
+}
 
   remove_effect = {
   ROOT = {
-    remove_ideas = {LES_banish_aliens}
-    rusnat_increase_10 = yes
+    rusnat_increase_5 = yes
     }
       FROM = {
       set_state_flag = banish
@@ -330,51 +390,14 @@ LES_appease_futurists_2 = {
    has_country_flag = les_factions
    NOT = { has_country_flag = les_poet_gone has_country_flag = les_poet_rebellion }
    }
-   if = { limit = { has_army_manpower < 100000 }
-   LES = { has_manpower > 3000}
-   }
-   if = {  AND = { has_army_manpower < 250000 has_army_manpower > 100000 }
-   LES = { has_manpower > 5000}
-   }
-   if = {  AND = { has_army_manpower < 500000 has_army_manpower > 250000 }
-   LES = { has_manpower > 7500}
-   }
-   if = {  AND = { has_army_manpower < 1000000  has_army_manpower > 500000 }
-   LES = { has_manpower > 10000}
-   }
-   if = {  limit = { has_army_manpower > 1000000 }
-   LES = { has_manpower > 15000}
-   }
   }
   days_remove = 60
   complete_effect = {
-    if = { limit = { has_army_manpower < 100000  NOT = { has_country_flag = LES_transfering_recruits } }
-    add_manpower = -3000
-    set_country_flag = LES_transfering_recruits
-    }
-    if = { limit = { AND = { has_army_manpower < 250000 has_army_manpower > 100000 } NOT = { has_country_flag = LES_transfering_recruits } }
     add_manpower = -5000
-    set_country_flag = LES_transfering_recruits
-    }
-    if = { limit = {  AND = { has_army_manpower < 500000 has_army_manpower > 250000 } NOT = { has_country_flag = LES_transfering_recruits } }
-    add_manpower = -7500
-    set_country_flag = LES_transfering_recruits
-    }
-    if = { limit = { AND = { has_army_manpower < 1000000  has_army_manpower > 500000 } NOT = { has_country_flag = LES_transfering_recruits } }
-    add_manpower = -10000
-    set_country_flag = LES_transfering_recruits
-    }
-    if = { limit = { has_army_manpower > 1000000 NOT = { has_country_flag = LES_transfering_recruits } }
-    add_manpower = -15000
-    set_country_flag = LES_transfering_recruits
-    }
   }
   remove_effect = {
   custom_effect_tooltip = les_tt_12
   futurist_increase_10 = yes
-  hidden_effect = {
-  clr_country_flag = LES_transfering_recruits
-  }
  }
 }
 
@@ -422,6 +445,102 @@ LES_discontent = {
 ###end of factions
 }
 
+### Research bonuses
+LES_research_bonuses_cate = {
+
+  ###land warfare
+  LES_research_warfare = {
+    icon = GFX_decision_generic_research
+    visible = {
+      has_country_flag = les_research_bonuses
+    }
+    available = {
+      hidden_trigger = {
+      has_country_flag = les_research_bonuses
+      }
+      
+   }
+  
+  fixed_random_seed = no
+  cost = 100
+  days_remove = 30
+  
+  remove_effect = {
+    random_list = {
+      33 = {
+      add_tech_bonus = {
+        name = guns
+        bonus = 0.5
+        uses = 1
+        category = infantry_weapons
+        }
+      }
+  
+      33 = {
+      add_tech_bonus = {
+        name = guns
+        bonus = 0.5
+        uses = 1
+        category = artillery
+        }
+      }
+  
+      33 = {
+      add_tech_bonus = {
+        name = guns
+        bonus = 0.5
+        uses = 1
+        category = support_tech
+       }
+      }
+  
+    }
+  }
+}
+  
+  ###industry techs
+  LES_research_industry = {
+    icon = GFX_decision_generic_research
+    visible = {
+      has_country_flag = les_research_bonuses
+    }
+    available = {
+      hidden_trigger = {
+      has_country_flag = les_research_bonuses
+      }
+      
+   }
+    fixed_random_seed = no
+    cost = 100
+    days_remove = 30
+  
+    remove_effect = {
+      random_list = {
+      50 = {
+      add_tech_bonus = {
+        name = guns
+        bonus = 0.5
+        uses = 1
+        category = electronics
+      }
+     }
+  
+      50 = {
+      add_tech_bonus = {
+        name = guns
+        bonus = 0.5
+        uses = 1
+        category = industry
+      }
+     }
+  
+    }
+ }
+}
+
+###end of research bonuses
+}
+
 ### start of industry centres
 LES_economicalcentresdec = {
 
@@ -432,7 +551,7 @@ LES_rural_infa  = {
   }
   available = {
     hidden_trigger = {
-    set_country_flag = LES_eco_rural_roads
+    has_country_flag = LES_eco_rural_roads
     }
     any_owned_state = {
       hidden_trigger = {
@@ -536,7 +655,7 @@ LES_rural_factory  = {
       }
     }
   }
-
+  fixed_random_seed = no
     cost = 90
     days_remove = 30
 
@@ -672,7 +791,7 @@ KAR = {
   exists = yes
 }
  }
-
+ priority = 10 
  ai_will_do = {
   base = 10
    modifier = {
@@ -827,6 +946,7 @@ LES_russian_expansion= {
   }
   has_war = no
  }
+ priority = 10 
  cost = 30
  fire_only_once = yes
  days_remove = 20
@@ -862,6 +982,7 @@ LES_russian_expansion= {
   }
   has_war = no
  }
+ priority = 10 
  cost = 30
  fire_only_once = yes
  days_remove = 20
@@ -898,6 +1019,7 @@ LES_russian_expansion= {
   }
   has_war = no
  }
+ priority = 10 
  cost = 30
  fire_only_once = yes
  days_remove = 20
@@ -933,6 +1055,7 @@ LES_russian_expansion= {
   }
   has_war = no
  }
+ priority = 8
  ai_will_do = {
   base = 0
    modifier = {
@@ -952,11 +1075,11 @@ LES_russian_expansion= {
  set_country_flag = LES_justifying
  }
  remove_effect = {
- LES = { add_state_claim = 590
-  add_state_claim = 588
-  add_state_claim = 583
-  add_state_claim = 582}
   ROOT = {
+    add_state_claim = 590
+    add_state_claim = 588
+    add_state_claim = 583
+    add_state_claim = 582
  declare_war_on = { target = KZR type = annex_everything }
  clr_country_flag = LES_justifying
   }
@@ -984,6 +1107,7 @@ LES_destroy_TOW = {
   }
   has_war = no
  }
+ priority = 10 
  ai_will_do = {
   base = 10
    modifier = {
@@ -1043,6 +1167,7 @@ LES_destroy_OMS = {
   }
    }
  }
+ priority = 10 
  cost = 30
  fire_only_once = yes
  days_remove = 20
@@ -1080,6 +1205,7 @@ LES_destroy_BWR = {
   }
   has_war = no
  }
+ priority = 10 
  ai_will_do = {
   base = 10
    modifier = {
@@ -1127,6 +1253,7 @@ LES_destroy_CAU = {
   }
   has_war = no
  }
+ priority = 10 
  ai_will_do = {
   base = 10
    modifier = {
@@ -1174,6 +1301,7 @@ LES_destroy_CAA = {
   }
   has_war = no
  }
+ priority = 10 
  ai_will_do = {
   base = 10
    modifier = {
@@ -1233,6 +1361,7 @@ LES_destroy_CRM = {
   }
    }
  }
+ priority = 10 
  cost = 30
  fire_only_once = yes
  days_remove = 20
@@ -1268,6 +1397,7 @@ LES_destroy_FER = {
   }
   has_war = no
  }
+ priority = 10 
  ai_will_do = {
   base = 10
    modifier = {
@@ -1315,6 +1445,7 @@ LES_destroy_WFE = {
   }
   has_war = no
  }
+ priority = 10 
  ai_will_do = {
   base = 10
    modifier = {
@@ -1363,6 +1494,7 @@ LES_destroy_WFE = {
   }
   has_war = no
  }
+ priority = 10 
  ai_will_do = {
   base = 10
    modifier = {
@@ -1423,6 +1555,7 @@ LES_destroy_WFE = {
   }
    }
  }
+ priority = 8 
  cost = 30
  fire_only_once = yes
  days_remove = 20
@@ -1458,6 +1591,7 @@ LES_destroy_WFE = {
   }
   has_war = no
  }
+ priority = 10 
  ai_will_do = {
   base = 10
    modifier = {
@@ -1505,6 +1639,7 @@ LES_destroy_WFE = {
   }
   has_war = no
  }
+ priority = 10 
  ai_will_do = {
   base = 10
    modifier = {
@@ -1543,6 +1678,7 @@ LES_destroy_WFE = {
      }
      is_neighbor_of = UGC
  }
+ priority = 10 
  available = {
   is_neighbor_of = UGC
     NOT = {
@@ -1552,6 +1688,7 @@ LES_destroy_WFE = {
   }
   has_war = no
  }
+ priority = 8
  ai_will_do = {
   base = 10
    modifier = {
@@ -1599,6 +1736,7 @@ LES_destroy_IRK = {
   }
   has_war = no
  }
+ priority = 10 
  ai_will_do = {
   base = 10
    modifier = {
@@ -1647,6 +1785,7 @@ LES_destroy_IRK = {
   }
   has_war = no
  }
+ priority = 8
  ai_will_do = {
   base = 10
    modifier = {
@@ -1701,6 +1840,7 @@ LES_destroy_IRK = {
   }
   has_war = no
  }
+ priority = 9
  ai_will_do = {
   base = 10
    modifier = {
@@ -1752,6 +1892,7 @@ LES_destroy_IRK = {
 }
 
  }
+ priority = 8
  ai_will_do = {
   base = 0
    modifier = {
@@ -1782,54 +1923,6 @@ LES_destroy_IRK = {
  }
  }
 
- LES_destroy_JVD = {
-  target_trigger = { FROM = {tag = JVD} }
-  visible = {
-    NOT = {
-       tag = JVD
-       is_puppet_of = LES
-     }
-     JVD = {
-      exists = yes
-     }
-     is_neighbor_of = JVD
-
- }
- available = {
-  is_neighbor_of = JVD
-    NOT = {
-   is_in_faction_with = JVD
-   is_puppet_of = LES
-   has_country_flag = LES_justifying
-  }
-  has_war = no
- }
- ai_will_do = {
-  base = 0
-   modifier = {
-   factor = 0
-    ROOT = {
-   strength_ratio = {
-    tag = JVD
-    ratio > 0.75
-   }
-  }
-   }
- }
- cost = 30
- fire_only_once = yes
- days_remove = 20
- complete_effect = {
- set_country_flag = LES_justifying
- }
- remove_effect = {
-  ROOT = {
- declare_war_on = { target = JVD type = annex_everything }
- clr_country_flag = LES_justifying
-  }
- }
- }
-
  LES_destroy_FNS = {
   target_trigger = { FROM = {tag = FNS} }
   visible = {
@@ -1852,6 +1945,7 @@ LES_destroy_IRK = {
   }
   has_war = no
  }
+ priority = 10
  ai_will_do = {
   base = 0
    modifier = {
@@ -1909,7 +2003,11 @@ LES_destroy_IRK = {
       LES = { set_cosmetic_tag = LES_slavia }
     }
     remove_ideas = { civil_war_attrition_2 }
+    hidden_effect = {
+    LES = { country_event =  { id = legion.55 days = 30 } }
+    }
   }
+  priority = 12
   ai_will_do = {
    base = 200
   }
@@ -1917,23 +2015,27 @@ LES_destroy_IRK = {
 ###Start of cores
 
 
-###Cores Red 5TH army
-LES_core_oms = {
+### Cores yenisseisk
+
+LES_core_jsw = {
   visible = {
-  tag = LES
   NOT = {
-  has_country_flag = LES_cmf_oms
+  has_country_flag = LES_cmf_jsw
   }
-  LES = { owns_state = 403 }
-  LES = { owns_state = 653 }
-  NOT = { 403 = { is_core_of = LES} }
-  NOT = { 653 = { is_core_of = LES} }
+  LES = { owns_state = 988 }
+  LES = { owns_state = 576 }
+  LES = { owns_state = 575 }
+  NOT = { 988 = { is_core_of = LES} }
+  NOT = { 576 = { is_core_of = LES} }
+  NOT = { 575 = { is_core_of = LES} }
  }
  available = {
-  LES = { owns_state = 403 }
-  LES = { owns_state = 653 }
-  NOT = { 403 = { is_core_of = LES} }
-  NOT = { 653 = { is_core_of = LES} }
+  LES = { owns_state = 988 }
+  LES = { owns_state = 576 }
+  LES = { owns_state = 575 }
+  NOT = { 988 = { is_core_of = LES} }
+  NOT = { 576 = { is_core_of = LES} }
+  NOT = { 575 = { is_core_of = LES} }
   }
  ai_will_do = {
   base = 10
@@ -1941,45 +2043,127 @@ LES_core_oms = {
    factor = 200
    }
  }
- cost = 50
+ cost = 30
  days_remove = 1
  remove_effect = {
- set_country_flag = LES_cmf_oms
+ set_country_flag = LES_cmf_jsw
  }
  }
 
-LES_cm_oms = {
-          visible = {
-          tag = LES
-          }
+ LES_cm_jsw = {
+  visible = {
+    tag = LES
+    }
           available = {  ###Missson ends
               NOT = {
-                 controls_state = 403
-                 controls_state = 653
+                 controls_state = 988
+                 controls_state = 575
+                 controls_state = 576
                  }
               }
           activation = { ### misson starts
               LES = {
-                has_country_flag = LES_cmf_oms
-                controls_state = 403
-                controls_state = 653
+                has_country_flag = LES_cmf_jsw
+                controls_state = 988
+                controls_state = 575
+                controls_state = 576
                }
             }
            is_good = yes
            days_mission_timeout = 90 ###days to core
            timeout_effect = { ### cores states
              every_state = {
-              limit = { is_core_of = OMS }
+              limit = { is_core_of = JSW }
               add_core_of = LES
-              remove_core_of = OMS
+              remove_core_of = JSW
               }
-              clr_country_flag = LES_cmf_oms
+              clr_country_flag = LES_cmf_jsw
           }
           complete_effect = { ###Resets coring
-            clr_country_flag = LES_cmf_oms
+            clr_country_flag = LES_cmf_jsw
             }
 }
 
+### Cores Jewish fags
+
+LES_core_job = {
+  visible = {
+  NOT = {
+  has_country_flag = LES_cmf_job
+  }
+  LES = { owns_state = 1199 }
+  LES = { owns_state = 1202 }
+  LES = { owns_state = 1200 }
+  LES = { owns_state = 1201 }
+  LES = { owns_state = 1186 }
+  NOT = { 1199 = { is_core_of = LES} }
+  NOT = { 1202 = { is_core_of = LES} }
+  NOT = { 1200 = { is_core_of = LES} }
+  NOT = { 1201 = { is_core_of = LES} }
+  NOT = { 1186 = { is_core_of = LES} }
+ }
+ available = {
+  LES = { owns_state = 1199 }
+  LES = { owns_state = 1202 }
+  LES = { owns_state = 1200 }
+  LES = { owns_state = 1201 }
+  LES = { owns_state = 1186 }
+  NOT = { 1199 = { is_core_of = LES} }
+  NOT = { 1202 = { is_core_of = LES} }
+  NOT = { 1200 = { is_core_of = LES} }
+  NOT = { 1201 = { is_core_of = LES} }
+  NOT = { 1186 = { is_core_of = LES} }
+  }
+ ai_will_do = {
+  base = 10
+   modifier = {
+   factor = 200
+   }
+ }
+ cost = 30
+ days_remove = 1
+ remove_effect = {
+ set_country_flag = LES_cmf_job
+ }
+ }
+
+ LES_cm_job = {
+  visible = {
+    tag = LES
+    }
+          available = {  ###Missson ends
+              NOT = {
+                 controls_state = 1199
+                 controls_state = 1200
+                 controls_state = 1201
+                 controls_state = 1186
+                 controls_state = 1202
+                 }
+              }
+          activation = { ### misson starts
+              LES = {
+                has_country_flag = LES_cmf_job
+                controls_state = 1199
+                controls_state = 1200
+                controls_state = 1201
+                controls_state = 1186
+                controls_state = 1202
+               }
+            }
+           is_good = yes
+           days_mission_timeout = 90 ###days to core
+           timeout_effect = { ### cores states
+             every_state = {
+              limit = { is_core_of = JOB }
+              add_core_of = LES
+              remove_core_of = JOB
+              }
+              clr_country_flag = LES_cmf_job
+          }
+          complete_effect = { ###Resets coring
+            clr_country_flag = LES_cmf_job
+            }
+}
 
 ### Cores Ugric federation
 
@@ -2116,6 +2300,68 @@ LES_core_tow = {
           }
           complete_effect = { ###Resets coring
             clr_country_flag = LES_cmf_tow
+            }
+}
+###Cores Red 5TH army
+LES_core_oms = {
+  visible = {
+  tag = LES
+  NOT = {
+  has_country_flag = LES_cmf_oms
+  }
+  LES = { owns_state = 403 }
+  LES = { owns_state = 653 }
+  NOT = { 403 = { is_core_of = LES} }
+  NOT = { 653 = { is_core_of = LES} }
+ }
+ available = {
+  LES = { owns_state = 403 }
+  LES = { owns_state = 653 }
+  NOT = { 403 = { is_core_of = LES} }
+  NOT = { 653 = { is_core_of = LES} }
+  }
+ ai_will_do = {
+  base = 10
+   modifier = {
+   factor = 200
+   }
+ }
+ cost = 50
+ days_remove = 1
+ remove_effect = {
+ set_country_flag = LES_cmf_oms
+ }
+ }
+
+LES_cm_oms = {
+          visible = {
+          tag = LES
+          }
+          available = {  ###Missson ends
+              NOT = {
+                 controls_state = 403
+                 controls_state = 653
+                 }
+              }
+          activation = { ### misson starts
+              LES = {
+                has_country_flag = LES_cmf_oms
+                controls_state = 403
+                controls_state = 653
+               }
+            }
+           is_good = yes
+           days_mission_timeout = 90 ###days to core
+           timeout_effect = { ### cores states
+             every_state = {
+              limit = { is_core_of = OMS }
+              add_core_of = LES
+              remove_core_of = OMS
+              }
+              clr_country_flag = LES_cmf_oms
+          }
+          complete_effect = { ###Resets coring
+            clr_country_flag = LES_cmf_oms
             }
 }
 
@@ -2363,87 +2609,6 @@ LES_core_irk = {
             }
 }
 
-### Cores Jewish fags
-
-LES_core_job = {
-  visible = {
-  NOT = {
-  has_country_flag = LES_cmf_job
-  }
-  LES = { owns_state = 1199 }
-  LES = { owns_state = 1202 }
-  LES = { owns_state = 1200 }
-  LES = { owns_state = 1201 }
-  LES = { owns_state = 1186 }
-  NOT = { 1199 = { is_core_of = LES} }
-  NOT = { 1202 = { is_core_of = LES} }
-  NOT = { 1200 = { is_core_of = LES} }
-  NOT = { 1201 = { is_core_of = LES} }
-  NOT = { 1186 = { is_core_of = LES} }
- }
- available = {
-  LES = { owns_state = 1199 }
-  LES = { owns_state = 1202 }
-  LES = { owns_state = 1200 }
-  LES = { owns_state = 1201 }
-  LES = { owns_state = 1186 }
-  NOT = { 1199 = { is_core_of = LES} }
-  NOT = { 1202 = { is_core_of = LES} }
-  NOT = { 1200 = { is_core_of = LES} }
-  NOT = { 1201 = { is_core_of = LES} }
-  NOT = { 1186 = { is_core_of = LES} }
-  }
- ai_will_do = {
-  base = 10
-   modifier = {
-   factor = 200
-   }
- }
- cost = 30
- days_remove = 1
- remove_effect = {
- set_country_flag = LES_cmf_job
- }
- }
-
- LES_cm_job = {
-  visible = {
-    tag = LES
-    }
-          available = {  ###Missson ends
-              NOT = {
-                 controls_state = 1199
-                 controls_state = 1200
-                 controls_state = 1201
-                 controls_state = 1186
-                 controls_state = 1202
-                 }
-              }
-          activation = { ### misson starts
-              LES = {
-                has_country_flag = LES_cmf_job
-                controls_state = 1199
-                controls_state = 1200
-                controls_state = 1201
-                controls_state = 1186
-                controls_state = 1202
-               }
-            }
-           is_good = yes
-           days_mission_timeout = 90 ###days to core
-           timeout_effect = { ### cores states
-             every_state = {
-              limit = { is_core_of = JOB }
-              add_core_of = LES
-              remove_core_of = JOB
-              }
-              clr_country_flag = LES_cmf_job
-          }
-          complete_effect = { ###Resets coring
-            clr_country_flag = LES_cmf_job
-            }
-}
-
 ### Cores far eastern republic
 
 LES_core_fer = {
@@ -2538,74 +2703,6 @@ LES_core_fer = {
 }
 
 
-### Cores yenisseisk
-
-LES_core_jsw = {
-  visible = {
-  NOT = {
-  has_country_flag = LES_cmf_jsw
-  }
-  LES = { owns_state = 988 }
-  LES = { owns_state = 576 }
-  LES = { owns_state = 575 }
-  NOT = { 988 = { is_core_of = LES} }
-  NOT = { 576 = { is_core_of = LES} }
-  NOT = { 575 = { is_core_of = LES} }
- }
- available = {
-  LES = { owns_state = 988 }
-  LES = { owns_state = 576 }
-  LES = { owns_state = 575 }
-  NOT = { 988 = { is_core_of = LES} }
-  NOT = { 576 = { is_core_of = LES} }
-  NOT = { 575 = { is_core_of = LES} }
-  }
- ai_will_do = {
-  base = 10
-   modifier = {
-   factor = 200
-   }
- }
- cost = 30
- days_remove = 1
- remove_effect = {
- set_country_flag = LES_cmf_jsw
- }
- }
-
- LES_cm_jsw = {
-  visible = {
-    tag = LES
-    }
-          available = {  ###Missson ends
-              NOT = {
-                 controls_state = 988
-                 controls_state = 575
-                 controls_state = 576
-                 }
-              }
-          activation = { ### misson starts
-              LES = {
-                has_country_flag = LES_cmf_jsw
-                controls_state = 988
-                controls_state = 575
-                controls_state = 576
-               }
-            }
-           is_good = yes
-           days_mission_timeout = 90 ###days to core
-           timeout_effect = { ### cores states
-             every_state = {
-              limit = { is_core_of = JSW }
-              add_core_of = LES
-              remove_core_of = JSW
-              }
-              clr_country_flag = LES_cmf_jsw
-          }
-          complete_effect = { ###Resets coring
-            clr_country_flag = LES_cmf_jsw
-            }
-}
 
 ### Cores russian pacific fleet
 
@@ -2699,71 +2796,6 @@ LES_core_wfe = {
             clr_country_flag = LES_cmf_wfe
             }
 }
-
-
-### Cores vladivostock
-
-LES_core_jvd = {
-  visible = {
-  NOT = {
-  has_country_flag = LES_cmf_jvd
-  }
-  LES = { owns_state = 409 }
-  LES = { owns_state = 408 }
-  NOT = { 408 = { is_core_of = LES} }
-  NOT = { 409 = { is_core_of = LES} }
- }
- available = {
-  LES = { owns_state = 409 }
-  LES = { owns_state = 408 }
-  NOT = { 408 = { is_core_of = LES} }
-  NOT = { 409 = { is_core_of = LES} }
-  }
- ai_will_do = {
-  base = 10
-   modifier = {
-   factor = 200
-   }
- }
- cost = 50
- days_remove = 1
- remove_effect = {
- set_country_flag = LES_cmf_jvd
- }
- }
-
- LES_cm_jvd = {
-  visible = {
-    tag = LES
-    }
-          available = {  ###Missson ends
-              NOT = {
-                 controls_state = 408
-                 controls_state = 409
-                 }
-              }
-          activation = { ### misson starts
-              LES = {
-                has_country_flag = LES_cmf_jvd
-                controls_state = 408
-                controls_state = 409
-               }
-            }
-           is_good = yes
-           days_mission_timeout = 90 ###days to core
-           timeout_effect = { ### cores states
-             every_state = {
-              limit = { is_core_of = JVD }
-              add_core_of = LES
-              remove_core_of = JVD
-              }
-              clr_country_flag = LES_cmf_jvd
-          }
-          complete_effect = { ###Resets coring
-            clr_country_flag = LES_cmf_jvd
-            }
-}
-
 
 ### Cores Sretensk
 
@@ -2918,7 +2950,7 @@ LES_core_rdr = {
    factor = 200
    }
  }
- cost = 50
+ cost = 200
  days_remove = 1
  remove_effect = {
  set_country_flag = LES_cmf_rdr
@@ -3077,7 +3109,7 @@ LES_core_sov = {
    factor = 200
    }
  }
- cost = 50
+ cost = 200
  days_remove = 1
  remove_effect = {
  set_country_flag = LES_cmf_sov
@@ -3233,7 +3265,7 @@ LES_core_rus = {
    factor = 200
    }
  }
- cost = 50
+ cost = 200
  days_remove = 1
  remove_effect = {
  set_country_flag = LES_cmf_rus
@@ -4011,7 +4043,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = UKR
-         is_puppet_of = LES
+         UKR = { is_puppet_of = LES }
        }
        MON = {
         exists = yes
@@ -4023,7 +4055,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = UKR
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4043,12 +4075,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = UKR type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4058,7 +4090,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = BLR
-         is_puppet_of = LES
+         BLR = { is_puppet_of = LES }
        }
        BLR = {
         exists = yes
@@ -4070,7 +4102,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = BLR
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4090,12 +4122,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = BLR type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4105,7 +4137,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = CBR
-         is_puppet_of = LES
+         CBR = { is_puppet_of = LES }
        }
        CBR = {
         exists = yes
@@ -4117,7 +4149,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = CBR
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4137,12 +4169,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = CBR type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4152,7 +4184,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = DBR
-         is_puppet_of = LES
+         DBR = { is_puppet_of = LES }
        }
        DBR = {
         exists = yes
@@ -4164,7 +4196,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = DBR
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4184,12 +4216,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = DBR type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4199,7 +4231,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = DSU
-         is_puppet_of = LES
+         DSU = { is_puppet_of = LES }
        }
        DSU = {
         exists = yes
@@ -4211,7 +4243,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = DSU
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4231,12 +4263,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = DSU type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4246,7 +4278,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = POL
-         is_puppet_of = LES
+         POL = { is_puppet_of = LES }
        }
        POL = {
         exists = yes
@@ -4256,9 +4288,11 @@ LES_easterneurope = {
    available = {
     is_neighbor_of = POL
       NOT = {
+        OR = {
      is_in_faction_with = POL
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
+        }
     }
     has_war = no
    }
@@ -4278,12 +4312,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = POL type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4293,7 +4327,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = CZE
-         is_puppet_of = LES
+         CZE = { is_puppet_of = LES }
        }
        CZE = {
         exists = yes
@@ -4305,7 +4339,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = CZE
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4325,12 +4359,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = CZE type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4340,7 +4374,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = SLO
-         is_puppet_of = LES
+         SLO = { is_puppet_of = LES }
        }
        SLO = {
         exists = yes
@@ -4352,7 +4386,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = SLO
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4372,12 +4406,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = SLO type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4387,7 +4421,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = SLV
-         is_puppet_of = LES
+         SLV = { is_puppet_of = LES }
        }
        SLV = {
         exists = yes
@@ -4399,7 +4433,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = SLV
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4419,12 +4453,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = SLV type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4434,7 +4468,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = HUN
-         is_puppet_of = LES
+         HUN = { is_puppet_of = LES }
        }
        HUN = {
         exists = yes
@@ -4446,7 +4480,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = HUN
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4466,12 +4500,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = HUN type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4481,7 +4515,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = ROM
-         is_puppet_of = LES
+         ROM = { is_puppet_of = LES }
        }
        ROM = {
         exists = yes
@@ -4493,7 +4527,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = ROM
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4513,12 +4547,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = ROM type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4528,7 +4562,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = BUL
-         is_puppet_of = LES
+         BUL = { is_puppet_of = LES }
        }
        BUL = {
         exists = yes
@@ -4540,7 +4574,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = BUL
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4560,12 +4594,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = BUL type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4576,7 +4610,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = SER
-         is_puppet_of = LES
+         SER = { is_puppet_of = LES }
        }
        SER = {
         exists = yes
@@ -4588,7 +4622,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = SER
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4608,12 +4642,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = SER type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4623,7 +4657,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = CRO
-         is_puppet_of = LES
+         CRO = { is_puppet_of = LES }
        }
        CRO = {
         exists = yes
@@ -4635,7 +4669,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = CRO
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4655,12 +4689,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = CRO type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4670,7 +4704,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = BOS
-         is_puppet_of = LES
+         BOS = { is_puppet_of = LES }
        }
        BOS = {
         exists = yes
@@ -4682,7 +4716,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = BOS
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4702,12 +4736,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = BOS type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4717,7 +4751,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = UKR
-         is_puppet_of = LES
+         UKR = { is_puppet_of = LES }
        }
        UKR = {
         exists = yes
@@ -4729,7 +4763,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = UKR
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4749,12 +4783,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = UKR type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4764,7 +4798,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = EST
-         is_puppet_of = LES
+         EST = { is_puppet_of = LES }
        }
        EST = {
         exists = yes
@@ -4774,9 +4808,11 @@ LES_easterneurope = {
    available = {
     is_neighbor_of = EST
       NOT = {
+        OR = {
      is_in_faction_with = EST
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
+      }
     }
     has_war = no
    }
@@ -4796,12 +4832,341 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = EST type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
+    }
+   }
+   }
+
+   les_ee_eca = {
+    target_trigger = { FROM = {tag = ECA } }
+    visible = {
+      NOT = {
+         tag = ECA
+         ECA = { is_puppet_of = LES }
+       }
+       ECA = {
+        exists = yes
+       }
+       is_neighbor_of = ECA
+   }
+   available = {
+    is_neighbor_of = ECA
+      NOT = {
+     is_in_faction_with = ECA
+     is_puppet_of = LES
+     has_country_flag = LES_ee_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = ECA
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_ee_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = ECA type = annex_everything }
+   clr_country_flag = LES_ee_justifying
+    }
+   }
+   }
+
+   les_ee_ela = {
+    target_trigger = { FROM = {tag = ELA } }
+    visible = {
+      NOT = {
+         tag = ELA
+         ELA = { is_puppet_of = LES }
+       }
+       ELA = {
+        exists = yes
+       }
+       is_neighbor_of = ELA
+   }
+   available = {
+    is_neighbor_of = ELA
+      NOT = {
+     is_in_faction_with = ELA
+     is_puppet_of = LES
+     has_country_flag = LES_ee_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = ELA
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_ee_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = ELA type = annex_everything }
+   clr_country_flag = LES_ee_justifying
+    }
+   }
+   }
+
+   les_ee_elp = {
+    target_trigger = { FROM = {tag = ELP } }
+    visible = {
+      NOT = {
+         tag = ELP
+         ELA = { is_puppet_of = LES }
+       }
+       ELP = {
+        exists = yes
+       }
+       is_neighbor_of = ELP
+   }
+   available = {
+    is_neighbor_of = ELP
+      NOT = {
+     is_in_faction_with = ELP
+     is_puppet_of = LES
+     has_country_flag = LES_ee_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = ELP
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_ee_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = ELP type = annex_everything }
+   clr_country_flag = LES_ee_justifying
+    }
+   }
+   }
+
+   les_ee_lat = {
+    target_trigger = { FROM = {tag = LAT } }
+    visible = {
+      NOT = {
+         tag = LAT
+         LAT = { is_puppet_of = LES }
+       }
+       ELP = {
+        exists = yes
+       }
+       is_neighbor_of = LAT
+   }
+   available = {
+    is_neighbor_of = LAT
+      NOT = {
+     is_in_faction_with = LAT
+     is_puppet_of = LES
+     has_country_flag = LES_ee_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = LAT
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_ee_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = LAT type = annex_everything }
+   clr_country_flag = LES_ee_justifying
+    }
+   }
+   }
+
+   les_ee_lpr = {
+    target_trigger = { FROM = {tag = LPR } }
+    visible = {
+      NOT = {
+         tag = LPR
+         LPR = { is_puppet_of = LES }
+       }
+       ELP = {
+        exists = yes
+       }
+       is_neighbor_of = LPR
+   }
+   available = {
+    is_neighbor_of = LPR
+      NOT = {
+     is_in_faction_with = LPR
+     is_puppet_of = LES
+     has_country_flag = LES_ee_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = LPR
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_ee_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = LPR type = annex_everything }
+   clr_country_flag = LES_ee_justifying
+    }
+   }
+   }
+
+   les_ee_ldf = {
+    target_trigger = { FROM = {tag = LDF } }
+    visible = {
+      NOT = {
+         tag = LDF
+         LDF = { is_puppet_of = LES }
+       }
+       ELP = {
+        exists = yes
+       }
+       is_neighbor_of = LDF
+   }
+   available = {
+    is_neighbor_of = LDF
+      NOT = {
+     is_in_faction_with = LDF
+     is_puppet_of = LES
+     has_country_flag = LES_ee_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = LDF
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_ee_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = LDF type = annex_everything }
+   clr_country_flag = LES_ee_justifying
+    }
+   }
+   }
+
+   les_ee_lnc = {
+    target_trigger = { FROM = {tag = LNC } }
+    visible = {
+      NOT = {
+         tag = LNC
+         LNC = { is_puppet_of = LES }
+       }
+       ELP = {
+        exists = yes
+       }
+       is_neighbor_of = LNC
+   }
+   available = {
+    is_neighbor_of = LNC
+      NOT = {
+     is_in_faction_with = LNC
+     is_puppet_of = LES
+     has_country_flag = LES_ee_justifying
+    }
+    has_war = no
+   }
+   ai_will_do = {
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = LNC
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 50
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_ee_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = LNC type = annex_everything }
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4811,7 +5176,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = LIT
-         is_puppet_of = LES
+         LIT = { is_puppet_of = LES }
        }
        LIT = {
         exists = yes
@@ -4823,7 +5188,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = LIT
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4843,12 +5208,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = LIT type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4857,73 +5222,23 @@ LES_easterneurope = {
    ### Special conditions ###
 
 
-   ### WHO EVER OWNS THRACE AND MACEDONIA
-   les_ee_gre = {
-    target_trigger = { FROM = {tag = GRE } }
-    visible = {
-      NOT = {
-         tag = GRE
-         is_puppet_of = LES
-       }
-       GRE = {
-        exists = yes
-       }
-       is_neighbor_of = GRE
-   }
-   available = {
-    is_neighbor_of = GRE
-      NOT = {
-     is_in_faction_with = GRE
-     is_puppet_of = LES
-     has_country_flag = LES_justifying
-    }
-    has_war = no
-   }
-   ai_will_do = {
-    base = 10
-     modifier = {
-     factor = 200
-      ROOT = {
-     strength_ratio = {
-      tag = GRE
-      ratio > 0.75
-     }
-    }
-     }
-   }
-   cost = 50
-   fire_only_once = yes
-   days_remove = 20
-   complete_effect = {
-   set_country_flag = LES_justifying
-   }
-   remove_effect = {
-    ROOT = {
-   declare_war_on = { target = GRE type = annex_everything }
-   clr_country_flag = LES_justifying
-    }
-   }
-   }
-
    ###IF ITALY HAS SLAV LANDS
    les_ee_ita = {
     target_trigger = { FROM = {tag = ITA } }
     visible = {
       NOT = {
          tag = ITA
-         is_puppet_of = LES
+         ITA = { is_puppet_of = LES }
        }
        PRS = {
         exists = yes
        }
-       is_neighbor_of = ITA
    }
    available = {
-    is_neighbor_of = ITA
       NOT = {
      is_in_faction_with = ITA
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -4943,12 +5258,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = ITA type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -4959,24 +5274,22 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = PRS
-         is_puppet_of = LES
+         PRS = { is_puppet_of = LES }
        }
        PRS = {
         exists = yes
        }
-       is_neighbor_of = PRS
    }
    available = {
-    is_neighbor_of = PRS
       NOT = {
      is_in_faction_with = PRS
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
    ai_will_do = {
-    base = 10
+    base = 9
      modifier = {
      factor = 200
       ROOT = {
@@ -4991,12 +5304,12 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = PRS type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -5005,25 +5318,23 @@ LES_easterneurope = {
     target_trigger = { FROM = {tag = GER} }
     visible = {
       NOT = {
-         tag = UKR
-         is_puppet_of = LES
+         tag = GER
+         GER = { is_puppet_of = LES }
        }
        GER = {
         exists = yes
        }
-       is_neighbor_of = GER
    }
    available = {
-    is_neighbor_of = GER
       NOT = {
      is_in_faction_with = GER
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
    ai_will_do = {
-    base = 10
+    base = 8
      modifier = {
      factor = 200
       ROOT = {
@@ -5038,16 +5349,61 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
    declare_war_on = { target = GER type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
 
+    ### WHO EVER OWNS THRACE AND MACEDONIA
+    les_ee_gre = {
+      target_trigger = { FROM = {tag = GRE } }
+      visible = {
+        NOT = {
+           tag = GRE
+           GRE = { is_puppet_of = LES }
+         }
+         GRE = {
+          exists = yes
+         }
+     }
+     available = {
+        NOT = {
+       is_in_faction_with = GRE
+       is_puppet_of = LES
+       has_country_flag = LES_ee_justifying
+      }
+      has_war = no
+     }
+     ai_will_do = {
+      base = 8
+       modifier = {
+       factor = 200
+        ROOT = {
+       strength_ratio = {
+        tag = GRE
+        ratio > 0.75
+       }
+      }
+       }
+     }
+     cost = 50
+     fire_only_once = yes
+     days_remove = 20
+     complete_effect = {
+     set_country_flag = LES_ee_justifying
+     }
+     remove_effect = {
+      ROOT = {
+     declare_war_on = { target = GRE type = annex_everything }
+     clr_country_flag = LES_ee_justifying
+      }
+     }
+     }
 
    
    les_ee_fin = {
@@ -5055,7 +5411,7 @@ LES_easterneurope = {
     visible = {
       NOT = {
          tag = FIN
-         is_puppet_of = LES
+         FIN = { is_puppet_of = LES }
        }
        FIN = {
         exists = yes
@@ -5067,7 +5423,7 @@ LES_easterneurope = {
       NOT = {
      is_in_faction_with = FIN
      is_puppet_of = LES
-     has_country_flag = LES_justifying
+     has_country_flag = LES_ee_justifying
     }
     has_war = no
    }
@@ -5087,12 +5443,16 @@ LES_easterneurope = {
    fire_only_once = yes
    days_remove = 20
    complete_effect = {
-   set_country_flag = LES_justifying
+   set_country_flag = LES_ee_justifying
    }
    remove_effect = {
     ROOT = {
+      add_state_claim = 146
+      add_state_claim = 929
+      add_state_claim = 147
+      add_state_claim = 722
    declare_war_on = { target = FIN type = annex_everything }
-   clr_country_flag = LES_justifying
+   clr_country_flag = LES_ee_justifying
     }
    }
    }
@@ -6756,4 +7116,1010 @@ LES_easterneurope_integration = {
 
   
   ##end of LES_easterneurope_integration
+}
+
+
+LES_caucasus = {
+
+  LES_caucasus_GEO = {
+    target_trigger = { FROM = {tag = GEO } }
+     visible = {
+       NOT = {
+          tag = GEO
+          is_puppet_of = LES
+        }
+        GEO = {
+         exists = yes
+        }
+        is_neighbor_of = GEO
+    }
+    available = {
+      GEO = {
+         exists = yes
+        }
+     is_neighbor_of = GEO
+     NOT = {
+      is_in_faction_with = GEO
+      is_puppet_of = LES
+      has_country_flag = LES_cau_justifying
+     }
+     has_war = no
+    }
+    priority = 10 
+    cost = 30
+    fire_only_once = yes
+    days_remove = 20
+    complete_effect = {
+    set_country_flag = LES_cau_justifying
+    }
+    remove_effect = {
+     ROOT = {
+      declare_war_on = { target = GEO type = annex_everything }
+      clr_country_flag = LES_cau_justifying
+   }
+    }
+    }
+
+    LES_caucasus_AZR = {
+      target_trigger = { FROM = {tag = AZR } }
+       visible = {
+         NOT = {
+            tag = AZR
+            is_puppet_of = LES
+          }
+          AZR = {
+           exists = yes
+          }
+          is_neighbor_of = AZR
+      }
+      available = {
+        AZR = {
+           exists = yes
+          }
+       is_neighbor_of = AZR
+       NOT = {
+        is_in_faction_with = AZR
+        is_puppet_of = LES
+        has_country_flag = LES_cau_justifying
+       }
+       has_war = no
+      }
+      priority = 10 
+      cost = 30
+      fire_only_once = yes
+      days_remove = 20
+      complete_effect = {
+      set_country_flag = LES_cau_justifying
+      }
+      remove_effect = {
+       ROOT = {
+        declare_war_on = { target = AZR type = annex_everything }
+        clr_country_flag = LES_cau_justifying
+     }
+      }
+      }
+
+  
+      LES_caucasus_DAG = {
+        target_trigger = { FROM = {tag = DAG } }
+         visible = {
+           NOT = {
+              tag = DAG
+              is_puppet_of = LES
+            }
+            DAG = {
+             exists = yes
+            }
+            is_neighbor_of = DAG
+        }
+        available = {
+          DAG = {
+             exists = yes
+            }
+         is_neighbor_of = DAG
+         NOT = {
+          is_in_faction_with = AZR
+          is_puppet_of = LES
+          has_country_flag = LES_cau_justifying
+         }
+         has_war = no
+        }
+        priority = 10 
+        cost = 30
+        fire_only_once = yes
+        days_remove = 20
+        complete_effect = {
+        set_country_flag = LES_cau_justifying
+        }
+        remove_effect = {
+         ROOT = {
+          declare_war_on = { target = DAG type = annex_everything }
+          clr_country_flag = LES_cau_justifying
+       }
+        }
+        }
+
+        LES_caucasus_CHE = {
+        target_trigger = { FROM = {tag = CHE } }
+         visible = {
+           NOT = {
+              tag = CHE
+              is_puppet_of = LES
+            }
+            CHE = {
+             exists = yes
+            }
+            is_neighbor_of = CHE
+        }
+        available = {
+          CHE = {
+             exists = yes
+            }
+         is_neighbor_of = CHE
+         NOT = {
+          is_in_faction_with = CHE
+          is_puppet_of = LES
+          has_country_flag = LES_cau_justifying
+         }
+         has_war = no
+        }
+        priority = 10 
+        cost = 30
+        fire_only_once = yes
+        days_remove = 20
+        complete_effect = {
+        set_country_flag = LES_cau_justifying
+        }
+        remove_effect = {
+         ROOT = {
+          declare_war_on = { target = CHE type = annex_everything }
+          clr_country_flag = LES_cau_justifying
+       }
+        }
+        }
+
+        LES_caucasus_MRP = {
+        target_trigger = { FROM = {tag = MRP } }
+         visible = {
+           NOT = {
+              tag = MRP
+              is_puppet_of = LES
+            }
+            CHE = {
+             exists = yes
+            }
+            is_neighbor_of = MRP
+        }
+        available = {
+          MRP = {
+             exists = yes
+            }
+         is_neighbor_of = MRP
+         NOT = {
+          is_in_faction_with = MRP
+          is_puppet_of = LES
+          has_country_flag = LES_cau_justifying
+         }
+         has_war = no
+        }
+        priority = 10 
+        cost = 30
+        fire_only_once = yes
+        days_remove = 20
+        complete_effect = {
+        set_country_flag = LES_cau_justifying
+        }
+        remove_effect = {
+         ROOT = {
+          declare_war_on = { target = MRP type = annex_everything }
+          clr_country_flag = LES_cau_justifying
+       }
+        }
+        }
+
+
+        LES_core_cau_mountains = {
+          visible = {
+          tag = LES
+          NOT = {
+          has_country_flag = LES_cau_mountains
+          }
+          OR = {
+          NOT = { 931 = { is_core_of = LES} }
+          NOT = { 233 = { is_core_of = LES} }
+          NOT = { 987 = { is_core_of = LES} }
+          }
+         }
+         available = {
+          LES = { owns_state = 233 }
+          LES = { owns_state = 931 }
+          LES = { owns_state = 932 }
+          LES = { owns_state = 987 }
+          }
+         ai_will_do = {
+          base = 10
+           modifier = {
+           factor = 200
+           }
+         }
+         cost = 100
+         days_remove = 1
+         remove_effect = {
+         set_country_flag = LES_cau_mountains
+         }
+         }
+          LES_cm_cau_mountains= {
+                  visible = {
+                  tag = LES
+                  }
+                  available = {  ###Missson ends
+                      NOT = {
+                         controls_state = 233
+                         controls_state = 931
+                         controls_state = 932
+                         controls_state = 987
+                         }
+                      }
+                  activation = { ### misson starts
+                      LES = {
+                        has_country_flag = LES_cau_mountains
+                        controls_state = 233
+                        controls_state = 931
+                        controls_state = 932
+                        controls_state = 987
+                       }
+                    }
+                   is_good = yes
+                   days_mission_timeout = 150 ###days to core
+                   timeout_effect = { ### cores states
+                   every_owned_state = {
+                    limit = { 	
+                      OR = {	 
+                      is_core_of = DAG
+                      is_core_of = CHE
+                      is_core_of = MRP
+                      }
+                      }
+                    add_core_of = LES
+                    }
+                      clr_country_flag = LES_cau_mountains
+                  }
+                  complete_effect = { ###Resets coring
+                    clr_country_flag = LES_cau_mountains
+                    }
+        }
+
+
+        LES_core_cau_geo = {
+          target_trigger = { FROM = {tag = GEO } }
+          visible = {
+          tag = LES
+          NOT = {
+          has_country_flag = LES_cau_GEO
+          }
+          NOT = { 231 = { is_core_of = LES} }
+         }
+         available = {
+          LES = { owns_state = 231 }
+          }
+         ai_will_do = {
+          base = 10
+           modifier = {
+           factor = 200
+           }
+         }
+         cost = 100
+         days_remove = 1
+         remove_effect = {
+         set_country_flag = LES_cau_GEO
+         }
+         }
+          LES_cm_cau_geo = {
+                  visible = {
+                  tag = LES
+                  }
+                  available = {  ###Missson ends
+                      NOT = {
+                         controls_state = 231
+                         }
+                      }
+                  activation = { ### misson starts
+                      LES = {
+                        has_country_flag = LES_cau_GEO
+                        controls_state = 231
+                       }
+                    }
+                   is_good = yes
+                   days_mission_timeout = 150 ###days to core
+                   timeout_effect = { ### cores states
+                   every_owned_state = {
+                    limit = { 	 
+                      is_core_of = GEO
+                      }
+                    add_core_of = LES
+                    }
+                      clr_country_flag = LES_cau_GEO
+                  }
+                  complete_effect = { ###Resets coring
+                    clr_country_flag = LES_cau_GEO
+                    }
+        }
+
+        LES_core_cau_azr = {
+          target_trigger = { FROM = {tag = AZR } }
+          visible = {
+          tag = LES
+          NOT = {
+          has_country_flag = LES_cau_azr
+          }
+          NOT = { 229 = { is_core_of = LES} }
+         }
+         available = {
+          LES = { owns_state = 229 }
+          }
+         ai_will_do = {
+          base = 10
+           modifier = {
+           factor = 200
+           }
+         }
+         cost = 100
+         days_remove = 1
+         remove_effect = {
+         set_country_flag = LES_cau_azr
+         }
+         }
+          LES_cm_cau_azr = {
+                  visible = {
+                  tag = LES
+                  }
+                  available = {  ###Missson ends
+                      NOT = {
+                         controls_state = 229
+                         }
+                      }
+                  activation = { ### misson starts
+                      LES = {
+                        has_country_flag = LES_cau_azr
+                        controls_state = 229
+                       }
+                    }
+                   is_good = yes
+                   days_mission_timeout = 150 ###days to core
+                   timeout_effect = { ### cores states
+                   every_owned_state = {
+                    limit = { 	 
+                      is_core_of = AZR
+                      }
+                    add_core_of = LES
+                    }
+                      clr_country_flag = LES_cau_azr
+                  }
+                  complete_effect = { ###Resets coring
+                    clr_country_flag = LES_cau_azr
+                    }
+        }
+  #end of caucasus
+}
+
+
+LES_central_asia ={
+
+  LES_central_asia_UZB = {
+    target_trigger = { FROM = {tag = UZB } }
+     visible = {
+       NOT = {
+          tag = UZB
+          is_puppet_of = LES
+        }
+        UZB = {
+         exists = yes
+        }
+        is_neighbor_of = UZB
+    }
+    available = {
+      UZB = {
+         exists = yes
+        }
+     is_neighbor_of = UZB
+     NOT = {
+      is_in_faction_with = UZB
+      is_puppet_of = LES
+      has_country_flag = LES_central_asia_justifying
+     }
+     has_war = no
+    }
+    priority = 10 
+    cost = 30
+    fire_only_once = yes
+    days_remove = 20
+    complete_effect = {
+    set_country_flag = LES_central_asia_justifying
+    }
+    remove_effect = {
+     ROOT = {
+      declare_war_on = { target = UZB type = annex_everything }
+      clr_country_flag = LES_central_asia_justifying
+   }
+    }
+    }
+
+    LES_central_asia_KHV = {
+      target_trigger = { FROM = {tag = KHV } }
+       visible = {
+         NOT = {
+            tag = KHV
+            is_puppet_of = LES
+          }
+          KHV = {
+           exists = yes
+          }
+          is_neighbor_of = KHV
+      }
+      available = {
+        KHV = {
+           exists = yes
+          }
+       is_neighbor_of = KHV
+       NOT = {
+        is_in_faction_with = KHV
+        is_puppet_of = LES
+        has_country_flag = LES_central_asia_justifying
+       }
+       has_war = no
+      }
+      priority = 10 
+      cost = 30
+      fire_only_once = yes
+      days_remove = 20
+      complete_effect = {
+      set_country_flag = LES_central_asia_justifying
+      }
+      remove_effect = {
+       ROOT = {
+        declare_war_on = { target = KHV type = annex_everything }
+        clr_country_flag = LES_central_asia_justifying
+     }
+      }
+      }
+
+      LES_central_asia_KYR = {
+        target_trigger = { FROM = {tag = KYR } }
+         visible = {
+           NOT = {
+              tag = KYR
+              is_puppet_of = LES
+            }
+            KYR = {
+             exists = yes
+            }
+            is_neighbor_of = KYR
+        }
+        available = {
+          KYR = {
+             exists = yes
+            }
+         is_neighbor_of = KYR
+         NOT = {
+          is_in_faction_with = KYR
+          is_puppet_of = LES
+          has_country_flag = LES_central_asia_justifying
+         }
+         has_war = no
+        }
+        priority = 10 
+        cost = 30
+        fire_only_once = yes
+        days_remove = 20
+        complete_effect = {
+        set_country_flag = LES_central_asia_justifying
+        }
+        remove_effect = {
+         ROOT = {
+          declare_war_on = { target = KYR type = annex_everything }
+          clr_country_flag = LES_central_asia_justifying
+       }
+        }
+        }
+
+        LES_central_asia_TMS = {
+          target_trigger = { FROM = {tag = TMS } }
+           visible = {
+             NOT = {
+                tag = TMS
+                is_puppet_of = LES
+              }
+              TMS = {
+               exists = yes
+              }
+              is_neighbor_of = TMS
+          }
+          available = {
+            TMS = {
+               exists = yes
+              }
+           is_neighbor_of = TMS
+           NOT = {
+            is_in_faction_with = TMS
+            is_puppet_of = LES
+            has_country_flag = LES_central_asia_justifying
+           }
+           has_war = no
+          }
+          priority = 10 
+          cost = 30
+          fire_only_once = yes
+          days_remove = 20
+          complete_effect = {
+          set_country_flag = LES_central_asia_justifying
+          }
+          remove_effect = {
+           ROOT = {
+            declare_war_on = { target = TMS type = annex_everything }
+            clr_country_flag = LES_central_asia_justifying
+         }
+          }
+          }
+
+          LES_central_asia_TRS = {
+            target_trigger = { FROM = {tag = TRS } }
+             visible = {
+               NOT = {
+                  tag = TRS
+                  is_puppet_of = LES
+                }
+                TRS = {
+                 exists = yes
+                }
+                is_neighbor_of = TRS
+            }
+            available = {
+              TRS = {
+                 exists = yes
+                }
+             is_neighbor_of = TRS
+             NOT = {
+              is_in_faction_with = TRS
+              is_puppet_of = LES
+              has_country_flag = LES_central_asia_justifying
+             }
+             has_war = no
+            }
+            priority = 10 
+            cost = 30
+            fire_only_once = yes
+            days_remove = 20
+            complete_effect = {
+            set_country_flag = LES_central_asia_justifying
+            }
+            remove_effect = {
+             ROOT = {
+              declare_war_on = { target = TRS type = annex_everything }
+              clr_country_flag = LES_central_asia_justifying
+           }
+            }
+            }
+
+
+            ###cores start
+            LES_core_ca_KYR = {
+              target_trigger = { FROM = {tag = KYR } }
+              visible = {
+              tag = LES
+              NOT = {
+              has_country_flag = LES_ca_kyr
+              }
+              NOT = { 1217 = { is_core_of = LES} }
+             }
+             available = {
+              LES = { owns_state = 732 }
+              LES = { owns_state = 1217 }
+              LES = { owns_state = 1218 }
+              }
+             ai_will_do = {
+              base = 10
+               modifier = {
+               factor = 200
+               }
+             }
+             cost = 100
+             days_remove = 1
+             remove_effect = {
+             set_country_flag = LES_ca_kyr
+             }
+             }
+              LES_cm_ca_kyr = {
+                      visible = {
+                      tag = LES
+                      }
+                      available = {  ###Missson ends
+                          NOT = {
+                             controls_state = 732
+                             controls_state = 1217
+                             controls_state = 1218
+                             }
+                          }
+                      activation = { ### misson starts
+                          LES = {
+                            has_country_flag = LES_ca_kyr
+                            controls_state = 732
+                            controls_state = 1217
+                            controls_state = 1218
+                           }
+                        }
+                       is_good = yes
+                       days_mission_timeout = 150 ###days to core
+                       timeout_effect = { ### cores states
+                       every_owned_state = {
+                        limit = { 	 
+                          is_core_of = KYR
+                          }
+                        add_core_of = LES
+                        }
+                          clr_country_flag = LES_ca_kyr
+                      }
+                      complete_effect = { ###Resets coring
+                        clr_country_flag = LES_ca_kyr
+                        }
+            }
+
+            LES_core_ca_UZB = {
+              target_trigger = { FROM = {tag = UZB } }
+              visible = {
+              tag = LES
+              NOT = {
+              has_country_flag = LES_ca_UZB
+              }
+              NOT = { 1177 = { is_core_of = LES} }
+             }
+             available = {
+              LES = { owns_state = 1177 }
+              LES = { owns_state = 1178 }
+              }
+             ai_will_do = {
+              base = 10
+               modifier = {
+               factor = 200
+               }
+             }
+             cost = 100
+             days_remove = 1
+             remove_effect = {
+             set_country_flag = LES_ca_UZB
+             }
+             }
+              LES_cm_ca_UZB = {
+                      visible = {
+                      tag = LES
+                      }
+                      available = {  ###Missson ends
+                          NOT = {
+                             controls_state = 1177
+                             controls_state = 1178
+                             }
+                          }
+                      activation = { ### misson starts
+                          LES = {
+                            has_country_flag = LES_ca_UZB
+                            controls_state = 1177
+                            controls_state = 1178
+                           }
+                        }
+                       is_good = yes
+                       days_mission_timeout = 150 ###days to core
+                       timeout_effect = { ### cores states
+                       every_owned_state = {
+                        limit = { 	 
+                          is_core_of = UZB
+                          }
+                        add_core_of = LES
+                        }
+                          clr_country_flag = LES_ca_UZB
+                      }
+                      complete_effect = { ###Resets coring
+                        clr_country_flag = LES_ca_UZB
+                        }
+            }
+
+            LES_core_ca_khv = {
+              target_trigger = { FROM = {tag = KHV } }
+              visible = {
+              tag = LES
+              NOT = {
+              has_country_flag = LES_ca_khv
+              }
+              NOT = { 1176 = { is_core_of = LES} }
+             }
+             available = {
+              LES = { owns_state = 1176 }
+              }
+             ai_will_do = {
+              base = 10
+               modifier = {
+               factor = 200
+               }
+             }
+             priority = 1
+             cost = 75
+             days_remove = 1
+             remove_effect = {
+             set_country_flag = LES_ca_khv
+             }
+             }
+              LES_cm_ca_khv = {
+                      visible = {
+                      tag = LES
+                      }
+                      available = {  ###Missson ends
+                          NOT = {
+                             controls_state = 1176
+                             }
+                          }
+                      activation = { ### misson starts
+                          LES = {
+                            has_country_flag = LES_ca_khv
+                            controls_state = 1176
+                           }
+                        }
+                       is_good = yes
+                       days_mission_timeout = 150 ###days to core
+                       timeout_effect = { ### cores states
+                       every_owned_state = {
+                        limit = { 	 
+                          is_core_of = KHV
+                          }
+                        add_core_of = LES
+                        }
+                          clr_country_flag = LES_ca_khv
+                      }
+                      complete_effect = { ###Resets coring
+                        clr_country_flag = LES_ca_khv
+                        }
+            }
+
+            LES_core_ca_tms = {
+              target_trigger = { FROM = {tag = TMS } }
+              visible = {
+              tag = LES
+              NOT = {
+              has_country_flag = LES_ca_tms
+              }
+              NOT = { 584 = { is_core_of = LES} }
+             }
+             available = {
+              LES = { owns_state = 1175 }
+              LES = { owns_state = 1179 }
+              LES = { owns_state = 1180 }
+              LES = { owns_state = 1181 }
+              LES = { owns_state = 1182 }
+              LES = { owns_state = 1183 }
+              LES = { owns_state = 1184 }
+              LES = { owns_state = 1185 }
+              }
+             ai_will_do = {
+              base = 10
+               modifier = {
+               factor = 200
+               }
+             }
+             cost = 100
+             days_remove = 1
+             remove_effect = {
+             set_country_flag = LES_ca_tms
+             }
+             }
+              LES_cm_ca_tms = {
+                      visible = {
+                      tag = LES
+                      }
+                      available = {  ###Missson ends
+                          NOT = {
+                             controls_state = 1175
+                             controls_state = 1179
+                             controls_state = 1180
+                             controls_state = 1181
+                             controls_state = 1182
+                             controls_state = 1183
+                             controls_state = 1184
+                             controls_state = 1185
+                             }
+                          }
+                      activation = { ### misson starts
+                          LES = {
+                            has_country_flag = LES_ca_tms
+                            controls_state = 1175
+                            controls_state = 1179
+                            controls_state = 1180
+                            controls_state = 1181
+                            controls_state = 1182
+                            controls_state = 1183
+                            controls_state = 1184
+                            controls_state = 1185
+                           }
+                        }
+                       is_good = yes
+                       days_mission_timeout = 150 ###days to core
+                       timeout_effect = { ### cores states
+                       every_owned_state = {
+                        limit = { 	 
+                          is_core_of = TMS
+                          }
+                        add_core_of = LES
+                        }
+                          clr_country_flag = LES_ca_tms
+                      }
+                      complete_effect = { ###Resets coring
+                        clr_country_flag = LES_ca_tms
+                        }
+            }
+#end of LES_central_asia
+}
+
+
+
+LES_far_east = {
+
+  LES_destroy_JVD = {
+    target_trigger = { FROM = {tag = JVD} }
+    visible = {
+      NOT = {
+         tag = JVD
+         is_puppet_of = LES
+       }
+       JVD = {
+        exists = yes
+       }
+       is_neighbor_of = JVD
+  
+   }
+   available = {
+    is_neighbor_of = JVD
+      NOT = {
+     is_in_faction_with = JVD
+     is_puppet_of = LES
+     has_country_flag = LES_fare_justifying
+    }
+    has_war = no
+   }
+   priority = 8
+   ai_will_do = {
+    base = 0
+     modifier = {
+     factor = 0
+      ROOT = {
+     strength_ratio = {
+      tag = JVD
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 30
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_fare_justifying
+   }
+   remove_effect = {
+    ROOT = {
+   declare_war_on = { target = JVD type = annex_everything }
+   clr_country_flag = LES_fare_justifying
+    }
+   }
+   }
+
+
+   LES_take_alaska = {
+    target_trigger = { FROM = {tag = USA} }
+    visible = {
+      NOT = {
+         tag = USA
+         is_puppet_of = LES
+       }
+       USA = {
+        exists = yes
+       }
+  
+   }
+   available = {
+      NOT = {
+     is_in_faction_with = USA
+     is_puppet_of = LES
+     has_country_flag = LES_fare_justifying
+    }
+    has_war = no
+   }
+   priority = 8
+   ai_will_do = {
+    base = 0
+     modifier = {
+     factor = 0
+      ROOT = {
+     strength_ratio = {
+      tag = USA
+      ratio > 0.75
+     }
+    }
+     }
+   }
+   cost = 30
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LES_fare_justifying
+   }
+   remove_effect = {
+    ROOT = {
+      add_state_claim = 463
+      add_state_claim = 650
+   declare_war_on = { target = USA type = annex_everything }
+   clr_country_flag = LES_fare_justifying
+    }
+   }
+   }
+
+### Cores vladivostock
+
+LES_core_jvd = {
+  visible = {
+  NOT = {
+  has_country_flag = LES_cmf_jvd
+  }
+  LES = { owns_state = 409 }
+  LES = { owns_state = 408 }
+  NOT = { 408 = { is_core_of = LES} }
+  NOT = { 409 = { is_core_of = LES} }
+ }
+ available = {
+  LES = { owns_state = 409 }
+  LES = { owns_state = 408 }
+  NOT = { 408 = { is_core_of = LES} }
+  NOT = { 409 = { is_core_of = LES} }
+  }
+ ai_will_do = {
+  base = 10
+   modifier = {
+   factor = 200
+   }
+ }
+ cost = 50
+ days_remove = 1
+ remove_effect = {
+ set_country_flag = LES_cmf_jvd
+ }
+ }
+
+ LES_cm_jvd = {
+  visible = {
+    tag = LES
+    }
+          available = {  ###Missson ends
+              NOT = {
+                 controls_state = 408
+                 controls_state = 409
+                 }
+              }
+          activation = { ### misson starts
+              LES = {
+                has_country_flag = LES_cmf_jvd
+                controls_state = 408
+                controls_state = 409
+               }
+            }
+           is_good = yes
+           days_mission_timeout = 90 ###days to core
+           timeout_effect = { ### cores states
+             every_state = {
+              limit = { is_core_of = JVD }
+              add_core_of = LES
+              remove_core_of = JVD
+              }
+              clr_country_flag = LES_cmf_jvd
+          }
+          complete_effect = { ###Resets coring
+            clr_country_flag = LES_cmf_jvd
+            }
+}
+
+  #end of LES_far_east
 }
