@@ -52,6 +52,65 @@ ideas = {
 			}
 	}
 
+	FER_loose_control_2 = {
+		allowed = {
+		   always = no
+		 }
+		 allowed_civil_war = {
+					always = yes
+				}
+		 removal_cost = -1
+		 picture = GFX_idea_minority_troubles
+		 modifier = {
+				planning_speed = -0.15
+				army_org_factor = -0.1
+				}
+	}
+
+	FER_loose_control_3 = {
+		allowed = {
+		   always = no
+		 }
+		 allowed_civil_war = {
+					always = yes
+				}
+		 removal_cost = -1
+		 picture = GFX_idea_minority_troubles
+		 modifier = {
+				army_org_factor = -0.1
+				}
+	}
+
+	FER_grand_army = {
+		allowed = {
+		   always = no
+		 }
+		 allowed_civil_war = {
+					always = yes
+				}
+		 removal_cost = -1
+		 picture = GFX_idea_minority_troubles
+		 modifier = {
+			conscription =0.01
+			army_org_factor = 0.05
+			army_morale_factor = 0.05
+				}
+	}
+
+	FER_scouting_wasteland = {
+		allowed = {
+		   always = no
+		 }
+		 allowed_civil_war = {
+					always = yes
+				}
+		 removal_cost = -1
+		 picture = GFX_idea_minority_troubles
+		 modifier = {
+			air_range_factor = 0.1
+			}
+	}
+
 	FER_sending_help = {
 	allowed = {
        always = no
@@ -97,4 +156,66 @@ ideas = {
 		industrial_capacity_dockyard = 0.08
 		}
 	}
-}
+
+	FER_forgein_naval_experts = {
+		allowed = { always = no }
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GFX_idea_minority_troubles
+		modifier = {
+		   naval_hit_chance = 0.05
+		   naval_coordination = 0.05
+			 }
+		}
+
+	FER_river_tactics = {
+		allowed = { always = no }
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GFX_idea_minority_troubles
+		modifier = {
+		river_crossing_factor = -0.25
+		}
+	}
+
+	FER_recon_tier = {
+		allowed = {
+			 always = no
+		   }
+		   allowed_civil_war = {
+					  always = yes
+				  }
+		   removal_cost = -1
+		   picture = GFX_idea_famine_of_1933
+		   modifier = {
+			  army_attack_factor = 0.05
+			  recon_factor = 0.1
+			}
+	}
+
+	FER_bear_of_defence = {
+		allowed = { always = no }
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GFX_idea_famine_of_1933
+		modifier = {
+		   army_defence_factor = 0.10
+			 }
+	}
+
+	
+	FER_siberian_king = {
+		allowed = {
+		   always = no
+		 }
+		 allowed_civil_war = {
+					always = yes
+				}
+		 removal_cost = -1
+		 picture = GFX_idea_minority_troubles
+		 modifier = {
+				winter_attrition_factor = -0.5
+				acclimatization_cold_climate_gain_factor = 0.5
+				out_of_supply_factor = -0.25
+				}
+		}

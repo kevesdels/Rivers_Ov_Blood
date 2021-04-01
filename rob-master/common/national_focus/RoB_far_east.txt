@@ -60,6 +60,9 @@ focus_tree = {
 		available = {
 		has_country_flag = FER_policy_USA
 		}
+		bypass = {
+			has_country_flag = FER_policy_USA
+		}
 		prerequisite = { focus = FER_republicanforeignpolicy }
 		ai_will_do = {
 			factor = 25
@@ -185,7 +188,7 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 	}
 
@@ -490,7 +493,7 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 25
+			factor = 0
 		}
 	}
 
@@ -503,7 +506,7 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 25
+			factor = 0
 		}
 	}
 
@@ -667,6 +670,24 @@ focus_tree = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			565 = { add_extra_state_shared_building_slots = 1 }
+			565 = { 
+				add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+				}
+			}
+			982 = { add_extra_state_shared_building_slots = 1 }
+			982 = { 
+				add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+				}
+			}
+		}
 	}
 
 	#Focus for Improve the Capital
@@ -722,14 +743,34 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			
+			564 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+				}
+			565 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+				}
+			}
+			566 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+				}
+			}
 		}
 	}
 
 	#Focus for Industry in Irkutsk
 	focus = {
 		id = FER_industryinirkutsk
-		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		icon = GFX_goal_unknown 
 		x = 50
 		y = 5
 		cost = 5
@@ -742,24 +783,45 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			
+			564 = { add_extra_state_shared_building_slots = 1 }
+			566 = { add_extra_state_shared_building_slots = 1 }
+			564 = { 
+				add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+				}
+			}
+			566 = { 
+				add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+				}
+			}
 		}
 	}
 
 	#Focus for Conquer Irkutsk from the Mongols
 	focus = {
 		id = FER_conquerirkutskfromthemongols
-		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		icon = GFX_goal_unknown 
 		x = 48
 		y = 3
 		cost = 5
+		available = {
+			IRK = { exists = no }
+		}
 		available_if_capitulated = yes
 		prerequisite = { focus = FER_russianunification }
 		ai_will_do = {
 			factor = 25
 		}
 		completion_reward = {
-			
+		create_wargoal = {
+			    type = annex_everything
+			    target = MON
+			}
 		}
 	}
 
@@ -781,7 +843,15 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			
+		566 = { add_extra_state_shared_building_slots = 1 }
+		566 = { 
+			add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+			}
+		}
+		FER = { set_capital = 566 }
 		}
 	}
 
@@ -792,13 +862,37 @@ focus_tree = {
 		x = 45
 		y = 8
 		cost = 5
+		available = {
+			owns_state = 40
+			owns_state = 567
+			owns_state = 568
+			owns_state = 570
+			owns_state = 576
+		}
 		available_if_capitulated = yes
-		prerequisite = { focus = FER_destroythereds }
+		prerequisite = { focus = FER_destroythereds  }
+		prerequisite = { focus = FER_challange_romanovs }
 		ai_will_do = {
 			factor = 25
 		}
 		completion_reward = {
-			
+		set_cosmetic_tag = RUS_SIB
+			every_state = {
+			  limit = { 
+			  OR = {
+			  is_core_of = TOW 
+			  is_core_of = KRW 
+			  is_core_of = BRW
+			  is_core_of = BWR
+			  is_core_of = IRK
+			  is_core_of = JSW
+			  is_core_of = JOB
+			  is_core_of = WFE   	   	
+			  }
+			  }
+			  add_core_of = ROOT
+		  
+		  }
 		}
 	}
 
@@ -812,6 +906,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		available = {
 		has_country_flag = FER_policy_alone
+		}
+		bypass = {
+			has_country_flag = FER_policy_alone
 		}
 		prerequisite = { focus = FER_republicanforeignpolicy }
 		ai_will_do = {
@@ -921,10 +1018,12 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
+			WFE = {
 			add_opinion_modifier = {
-					target = SFS
+					target = FER
 					modifier = FER_approach
 				}
+			}
 		}
 	}
 
@@ -941,9 +1040,14 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-		add_opinion_modifier = {
-				target = WFE
-				modifier = FER_befriend
+			WFE = {
+				add_opinion_modifier = {
+						target = FER
+						modifier = FER_befriend
+					}
+				}
+			add_ideas = {
+				FER_cooperation_with_wfe
 			}
 		}
 	}
@@ -965,9 +1069,11 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-		add_opinion_modifier = {
-				target = SFS
-				modifier = FER_help
+			SFS = {
+				add_opinion_modifier = {
+					target = FER
+					modifier = FER_help
+				}
 			}
 		}
 	}
@@ -989,9 +1095,15 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-		add_opinion_modifier = {
-				target = SFS
+			SFS = {
+			add_opinion_modifier = {
+				target = FER
 				modifier = FER_befriend
+			}
+		}
+			add_timed_idea = {
+				idea = FER_sending_help
+				days = 120
 			}
 		}
 	}
@@ -1009,14 +1121,19 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			
+			IRK = {
+				add_opinion_modifier = {
+						target = FER
+						modifier = FER_befriend
+					}
+				}
 		}
 	}
 
 	#Focus for Unification with Irkutsk
 	focus = {
 		id = FER_unificationwithirkutsk
-		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		icon = GFX_goal_unknown 
 		x = 49
 		y = 4
 		cost = 5
@@ -1026,7 +1143,10 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-			
+			if = {
+			limit = { IRK = { exists = yes } }
+			IRK = { country_event = { id = fareastrep.8 days = 3 } }
+			}
 		}
 	}
 
@@ -1047,10 +1167,12 @@ focus_tree = {
 			factor = 25
 		}
 		completion_reward = {
-		add_opinion_modifier = {
-			target = JOB
-			modifier = FER_help
-		}
+		JOB = {
+			add_opinion_modifier = {
+				target = FER
+				modifier = FER_help
+			}
+			}
 		}
 	}
 
@@ -1173,6 +1295,9 @@ focus_tree = {
 		available = {
 		has_country_flag = FER_policy_JAP
 		}
+		bypass = {
+			has_country_flag = FER_policy_JAP
+		}
 		prerequisite = { focus = FER_republicanforeignpolicy }
 		ai_will_do = {
 			factor = 25
@@ -1209,6 +1334,9 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+			add_ideas = { FER_scouting_wasteland }
 		}
 	}
 
@@ -1885,7 +2013,7 @@ completion_reward = {
 	#Focus for Encourage Immigration
 	focus = {
 		id = FER_encourageimmigration
-		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		icon = GFX_goal_unknown 
 		x = 27
 		y = 5
 		cost = 5
@@ -1904,7 +2032,7 @@ completion_reward = {
 	#Focus for Russian Unification
 	focus = {
 		id = FER_russianunification
-		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		icon = GFX_goal_unknown
 		x = 45
 		y = 2
 		cost = 5
@@ -1912,16 +2040,22 @@ completion_reward = {
 		available = {
 		has_country_flag = FER_policy_RUS
 		}
+		bypass = {
+			has_country_flag = FER_policy_RUS
+		}
 		prerequisite = { focus = FER_republicanforeignpolicy }
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+			
 		}
 	}
 
 	#Focus for Adopt Naval Doctrines
 	focus = {
 		id = FER_adoptnavaldoctrines
-		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		icon = GFX_goal_unknown 
 		x = 40
 		y = 5
 		cost = 5
@@ -1931,7 +2065,12 @@ completion_reward = {
 			factor = 25
 		}
 		completion_reward = {
-
+		 add_tech_bonus = {
+	      name = doctrine_bonus
+	      bonus = 1.0
+	      uses = 2
+	      category = naval_doctrine
+           }
 		}
 	}
 
@@ -1948,7 +2087,27 @@ completion_reward = {
 			factor = 25
 		}
 		completion_reward = {
-			
+			560 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+				}
+			561 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+				}
+			}
+			574 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -1970,7 +2129,11 @@ completion_reward = {
 			factor = 25
 		}
 		completion_reward = {
-			
+			WFE = { country_event = { id = fareastrep.7 days = 3 } }
+			swap_ideas = {
+				remove_idea = FER_cooperation_with_wfe
+				add_idea = FER_cooperation_with_wfe_2
+				}
 		}
 	}
 
@@ -2009,7 +2172,7 @@ completion_reward = {
 					is_neighbor_of = SFS
 					SFS = { exists = yes }
 				}
-				SFS = { country_event = { id = fareastrep.6 days = 3 } }
+				SFS = { country_event = { id = fareastrep.13 days = 3 } }
 			}
 			if = {
 				limit = {
@@ -2039,10 +2202,12 @@ completion_reward = {
 		}
 		completion_reward = {
 		give_guarantee = JOB
-		add_opinion_modifier = {
-			target = JOB
-			modifier = FER_befriend
-		}
+		JOB = {
+			add_opinion_modifier = {
+				target = FER
+				modifier = FER_befriend
+			}
+			}
 		}
 	}
 
@@ -2050,7 +2215,7 @@ completion_reward = {
 	focus = {
 		id = FER_destroythereds
 		icon = GFX_goal_unknown 
-		x = 45
+		x = 47
 		y = 7
 		cost = 5
 		available_if_capitulated = yes
@@ -2064,7 +2229,59 @@ completion_reward = {
 			factor = 25
 		}
 		completion_reward = {
-			
+			create_wargoal = {
+				type = annex_everything
+				target = JSW
+			}
+		}
+	}
+
+	#Focus for Challange The Romanovs
+	focus = {
+		id = FER_challange_romanovs
+		icon = GFX_goal_unknown 
+		x = 43
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FER_movecapitaltoirkutsk 
+		}
+		prerequisite = { 
+			focus = FER_unitingtheeast 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+			if = {
+				limit = { TOW = { exists = yes } }
+				create_wargoal = {
+					type = annex_everything
+					target = TOW
+				}
+			}
+			if = {
+				limit = { KRW = { exists = yes } }
+				create_wargoal = {
+					type = annex_everything
+					target = KRW
+				}
+			}
+			if = {
+				limit = { BRW = { exists = yes } }
+				create_wargoal = {
+					type = annex_everything
+					target = BRW
+				}
+			}
+			if = {
+				limit = { BWR = { exists = yes } }
+				create_wargoal = {
+					type = annex_everything
+					target = BWR
+				}
+			}
 		}
 	}
 
@@ -2353,6 +2570,9 @@ completion_reward = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			army_experience = 25
+		}
 	}
 
 	#Focus for Foreign Drill Experts
@@ -2366,6 +2586,12 @@ completion_reward = {
 		prerequisite = { focus = FER_consolidatethearmy }
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FER_loose_control
+				add_idea = FER_loose_control_2
+				}
 		}
 	}
 
@@ -2381,6 +2607,9 @@ completion_reward = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			add_ideas = { FER_siberian_king }
+		}
 	}
 
 	#Focus for Raise Skirmishers
@@ -2394,6 +2623,11 @@ completion_reward = {
 		prerequisite = { focus = FER_usingthewinter }
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+			add_ideas = {
+				FER_recon_tier
+			}
 		}
 	}
 
@@ -2414,6 +2648,12 @@ completion_reward = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FER_loose_control_2
+				add_idea = FER_loose_control_3
+				}
+		}
 	}
 
 	#Focus for Form The Grand Army
@@ -2427,6 +2667,10 @@ completion_reward = {
 		prerequisite = { focus = FER_theconferenceofgenerals }
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+			remove_ideas = { FER_loose_control_3 }
+			add_ideas = { FER_grand_army }
 		}
 	}
 
@@ -2443,6 +2687,14 @@ completion_reward = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
 	}
 
 	#Focus for Raiding the Sea
@@ -2457,6 +2709,18 @@ completion_reward = {
 		mutually_exclusive = { focus = FER_modeltheoldrussianfleet }
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
 		}
 	}
 
@@ -2476,6 +2740,17 @@ completion_reward = {
 		}
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
 		}
 	}
 
@@ -2641,6 +2916,14 @@ completion_reward = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
 	}
 
 	#Focus for Modern Weapons
@@ -2655,12 +2938,21 @@ completion_reward = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
 	}
 
 	#Focus for The Fleet of the East
 	focus = {
 		id = FER_thefleetoftheeast
-		icon = GFX_goal_unknown ##Unfortunately, the tool could not find your icon in the game's files
+		icon = GFX_goal_unknown 
 		x = 60
 		y = 2
 		cost = 5
@@ -2668,6 +2960,42 @@ completion_reward = {
 		prerequisite = { focus = FER_fareasternarmedforces }
 		ai_will_do = {
 			factor = 5
+		}
+		completion_reward = {
+			navy_experience = 50
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -2688,6 +3016,9 @@ completion_reward = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			add_ideas = { FER_bear_of_defence }
+		}
 	}
 
 	#Focus for River Defence Tactics
@@ -2705,6 +3036,11 @@ completion_reward = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			add_ideas = {
+				FER_river_tactics
+			}
+		}
 	}
 
 	#Focus for The Skies Above the Snow
@@ -2719,6 +3055,22 @@ completion_reward = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			574 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			air_experience = 50
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
 	}
 
 	#Focus for Provincial Air Bases
@@ -2732,6 +3084,22 @@ completion_reward = {
 		prerequisite = { focus = FER_theskiesabovethesnow }
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+			565 = {
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+			562 = {
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
 		}
 	}
 
@@ -2750,6 +3118,11 @@ completion_reward = {
 		ai_will_do = {
 			factor = 25
 		}
+		completion_reward = {
+			add_ideas = {
+				FER_forgein_naval_experts
+			}
+		}
 	}
 
 	#Focus for Develop Newer Planes
@@ -2763,6 +3136,20 @@ completion_reward = {
 		prerequisite = { focus = FER_theskiesabovethesnow }
 		ai_will_do = {
 			factor = 25
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
 		}
 	}
 

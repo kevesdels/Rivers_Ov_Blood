@@ -15,7 +15,7 @@ fire_only_once = yes
 picture = GFX_picture_bosnian_revolt
 
 trigger = {
-datedate > 1934.6.1
+date > 1935.6.1
 }
 
 option = {
@@ -47,11 +47,64 @@ ai_chance = { factor = 0 }
 
 
 
-
+###jews
 country_event = {
     id = fareastrep.6
     title = "The Far East Republic Promises Autonomy"
     desc = fareastrep.6.d
+    picture = GFX_picture_bosnian_revolt
+    is_triggered_only = yes
+    
+    option = {
+    name = "We gladly accept"
+    ai_chance = { factor = 1 }
+    FER = { country_event = { id = fareastrep.10 days = 1 } }
+    FROM = { annex_country = { target = ROOT transfer_troops = yes } }  
+    }  
+
+    option = {
+    name = "There is no need"
+    ai_chance = { factor = 0 }
+    add_political_power = 10
+    add_opinion_modifier = {
+        target = FROM
+        modifier = FER_refused_autonomy
+        }
+    }
+    
+}
+###srenetsk
+country_event = {
+    id = fareastrep.13
+    title = "The Far East Republic Promises Autonomy"
+    desc = fareastrep.13.d
+    picture = GFX_picture_bosnian_revolt
+    is_triggered_only = yes
+    
+    option = {
+    name = "We gladly accept"
+    ai_chance = { factor = 1 }
+    FER = { country_event = { id = fareastrep.11 days = 1 } }
+    FROM = { annex_country = { target = ROOT transfer_troops = yes } }  
+    }  
+
+    option = {
+    name = "There is no need"
+    ai_chance = { factor = 0 }
+    add_political_power = 10
+    add_opinion_modifier = {
+        target = FROM
+        modifier = FER_refused_autonomy
+        }
+    }
+    
+}
+
+### White fleet
+country_event = {
+    id = fareastrep.7
+    title = "The Far East Republic Proposes Cooperation"
+    desc = fareastrep.7.d
     fire_only_once = yes
     picture = GFX_picture_bosnian_revolt
     is_triggered_only = yes
@@ -59,7 +112,8 @@ country_event = {
     option = {
     name = "We gladly accept"
     ai_chance = { factor = 1 }
-    ROOT = { annex_country = { target = FROM transfer_troops = yes } }
+    FER = { country_event = { id = fareastrep.12 days = 1 } }
+    FROM = { annex_country = { target = ROOT transfer_troops = yes } }
     }
     
     option = {
@@ -69,8 +123,121 @@ country_event = {
     add_opinion_modifier = {
         target = FROM
         modifier = FER_refused_autonomy
-    }
+        }
     }
     
+}
+
+### irkutsk
+country_event = {
+    id = fareastrep.8
+    title = "The Far East Republic Proposes Unification"
+    desc = fareastrep.8.d
+    fire_only_once = yes
+    picture = GFX_picture_bosnian_revolt
+    is_triggered_only = yes
     
+    option = {
+    name = "We gladly accept"
+    ai_chance = { factor = 1 }
+    FER = { country_event = { id = fareastrep.9 days = 1 } }
+    FROM = { annex_country = { target = ROOT transfer_troops = yes } }
     }
+    
+    option = {
+    name = "There is no need"
+    ai_chance = { factor = 0 }
+    add_political_power = 10
+    add_opinion_modifier = {
+        target = FROM
+        modifier = FER_refused_autonomy
+        }
+    }
+    
+}
+
+###iRKUTSK ACCEPTS
+country_event = {
+    id = fareastrep.9
+    title = "Irkutsk"
+    desc = fareastrep.9.d
+    fire_only_once = yes
+    picture = GFX_picture_bosnian_revolt
+    is_triggered_only = yes
+    
+    option = {
+    name = "Uraa!"
+    ai_chance = { factor = 1 }
+    564 = { add_core_of = FER }
+    566 = { add_core_of = FER }
+    }
+}
+
+
+###jews ACCEPTS
+country_event = {
+    id = fareastrep.10
+    title = "Jews Accept"
+    desc = fareastrep.10.d
+    fire_only_once = yes
+    picture = GFX_picture_bosnian_revolt
+    is_triggered_only = yes
+    
+    option = {
+    name = "Uraa!"
+    ai_chance = { factor = 1 }
+    1186 = { add_core_of = FER }
+    1199 = { add_core_of = FER }
+    1200 = { add_core_of = FER }
+    1201 = { add_core_of = FER }
+    1202 = { add_core_of = FER }
+    }
+}
+
+
+###srenetsk ACCEPTS
+country_event = {
+    id = fareastrep.11
+    title = "Srenetsk Accepts"
+    desc = fareastrep.11.d
+    fire_only_once = yes
+    picture = GFX_picture_bosnian_revolt
+    is_triggered_only = yes
+    
+    option = {
+    name = "Uraa!"
+    ai_chance = { factor = 1 }
+    1197 = { add_core_of = FER }
+    1221 = { add_core_of = FER }
+    1222 = { add_core_of = FER }
+    1223 = { add_core_of = FER }
+    1224 = { add_core_of = FER }
+    1225 = { add_core_of = FER }
+    1226 = { add_core_of = FER }
+    1230 = { add_core_of = FER }
+    }
+}
+
+
+###white fleete ACCEPTS
+country_event = {
+    id = fareastrep.12
+    title = "The Admirals Accept"
+    desc = fareastrep.12.d
+    fire_only_once = yes
+    picture = GFX_picture_bosnian_revolt
+    is_triggered_only = yes
+    
+    option = {
+    name = "Uraa!"
+    ai_chance = { factor = 1 }
+    560 = { add_core_of = FER }
+    561 = { add_core_of = FER }
+    563 = { add_core_of = FER }
+    657 = { add_core_of = FER }
+    970 = { add_core_of = FER }
+    1228 = { add_core_of = FER }
+    1229 = { add_core_of = FER }
+    1230 = { add_core_of = FER }
+    }
+}
