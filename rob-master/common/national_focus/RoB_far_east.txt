@@ -31,7 +31,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		prerequisite = { focus = FER_universalsuffrage }
 		ai_will_do = {
-			factor = 25
+			factor = 0
 		}
 	}
 
@@ -735,6 +735,10 @@ focus_tree = {
 		y = 5
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+			owns_state = 566
+			owns_state = 564
+		}
 		prerequisite = { 
 			focus = FER_unificationwithirkutsk 
 			focus = FER_conquerirkutskfromthemongols 
@@ -774,6 +778,10 @@ focus_tree = {
 		x = 50
 		y = 5
 		cost = 5
+		available = {
+			owns_state = 566
+			owns_state = 564
+		}
 		available_if_capitulated = yes
 		prerequisite = { 
 			focus = FER_unificationwithirkutsk 
@@ -832,6 +840,10 @@ focus_tree = {
 		x = 49
 		y = 6
 		cost = 5
+		available = {
+			owns_state = 566
+			owns_state = 564
+		}
 		available_if_capitulated = yes
 		prerequisite = { 
 			focus = FER_southernsiberianrailroad 
@@ -1116,6 +1128,9 @@ focus_tree = {
 		y = 3
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+			IRK = { exists = yes }
+		}
 		prerequisite = { focus = FER_russianunification }
 		ai_will_do = {
 			factor = 25
@@ -1138,6 +1153,9 @@ focus_tree = {
 		y = 4
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+			IRK = { exists = yes }
+		}
 		prerequisite = { focus = FER_approachirkutsk }
 		ai_will_do = {
 			factor = 25

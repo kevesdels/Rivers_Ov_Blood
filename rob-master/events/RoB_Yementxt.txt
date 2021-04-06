@@ -37,7 +37,7 @@ UAE = { transfer_state = 944 }
 UAE = { load_oob = "UAE_1936" } 
 YEM = { country_event = { id = yemen.101 days = 3 } }
 SAU = { country_event = { id = yemen.100 days = 3 } }
-IRQ = { country_event = { id = yemen.102 days = 3 } }
+HJZ = { country_event = { id = yemen.102 days = 3 } }
 }
 
 }
@@ -139,7 +139,7 @@ fire_only_once = yes
 picture = GFX_picture_bosnian_revolt
 
 trigger = {
-tag = IRQ
+tag = HJZ
 country_exists = UAE
 }
 
@@ -147,7 +147,7 @@ option = {
 name = yemen.102.a
 ai_chance = { factor = 100}
 transfer_state = 656
-656 = { add_core_of = IRQ }
+656 = { add_core_of = HJZ }
 
 
 }
@@ -209,12 +209,7 @@ ISR = { transfer_state = 454 }
 454 = { add_core_of = ISR }
 ISR = { transfer_state = 1216 }
 1216 = { add_core_of = ISR }
-JOR = { transfer_state = 455 }
-455 = { add_core_of = JOR }
-JOR = { transfer_state = 947 }
-947 = { add_core_of = JOR }
 ISR = { load_oob = "ISR_1936" } 
-JOR = { load_oob = "JOR_1936" } 
 EGY = { country_event = { id = yemen.105 days = 3 } }
 
 }

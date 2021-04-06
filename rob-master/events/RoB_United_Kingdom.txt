@@ -222,14 +222,14 @@ hidden_effect = { country_event = { id = united_kingdom.12 days = 25 } }
 ###Conservative Victory - New Government (Crush Reactionaries)
 country_event = {
 id = united_kingdom.6
-title = united_kingdom.6.t
+title = "First Actions"
 desc = united_kingdom.6.d
 fire_only_once = yes
 is_triggered_only = yes
 
 
 option = { ###Squash Reactionaries
-name = united_kingdom.6.a
+name = "Crush Reactionaries"
 add_political_power = -80
 add_stability = -0.05
 hidden_effect = { 
@@ -250,7 +250,7 @@ is_triggered_only = yes
 
 
 option = { ###Squash Socialists
-name = united_kingdom.7.a
+name = "Crush Socialists"
 add_political_power = -80
 add_stability = -0.05
 hidden_effect = { country_event = { id = united_kingdom.8 days = 20 } }
@@ -261,13 +261,13 @@ add_popularity = { ideology = socialist popularity = -0.07 }
 ###Labour Riots
 country_event = {
 id = united_kingdom.8
-title = united_kingdom.8.t
+title = "Labour Riots"
 desc = united_kingdom.8.d
 fire_only_once = yes
 is_triggered_only = yes
 
 option = {
-name = united_kingdom.8.a
+name = "Try to calm them"
 add_stability = -0.1
 hidden_effect = { country_event = { id = united_kingdom.10 days = 20 } }
 }
@@ -277,13 +277,13 @@ hidden_effect = { country_event = { id = united_kingdom.10 days = 20 } }
 ###Reactionary Riots
 country_event = {
 id = united_kingdom.9
-title = united_kingdom.9.t
+title = "Reactionary Riots"
 desc = united_kingdom.9.d
 fire_only_once = yes
 is_triggered_only = yes
 
 option = {
-name = united_kingdom.9.a
+name = "Try to calm them"
 add_political_power = -100
 hidden_effect = { country_event = { id = united_kingdom.11 days = 20 } }
 }
@@ -292,7 +292,7 @@ hidden_effect = { country_event = { id = united_kingdom.11 days = 20 } }
 ###Labour Absorbed
 country_event = {
 id = united_kingdom.10
-title = united_kingdom.10.t
+title = "Labour Absorbed"
 desc = united_kingdom.10.d
 fire_only_once = yes
 is_triggered_only = yes
@@ -322,7 +322,7 @@ hidden_effect = { country_event = { id = united_kingdom.11 days = 20 } }
 ###British Union Formed
 country_event = {
 id = united_kingdom.11
-title = united_kingdom.11.t
+title = "British Union Formed"
 desc = united_kingdom.11.d
 fire_only_once = yes
 is_triggered_only = yes
@@ -334,6 +334,10 @@ add_popularity = { ideology = reactionary popularity = 0.15 }
 add_popularity = { ideology = authoritharian popularity = -0.05 }
 add_popularity = { ideology = conservative popularity = -0.08 }
 set_country_flag = ENG_british_union_formed
+if = {
+	limit = { ruling_party = socialist }
+	set_country_flag = ENG_labour_absorbed
+}
 }
 }
 
@@ -366,7 +370,7 @@ hidden_effect =  { country_event = { id = united_kingdom.9 days = 40 } }
 ###UK STATUS:FUCKED
 country_event = {
 id = united_kingdom.13
-title = united_kingdom.13.t
+title = "The Situation Worsens"
 desc = united_kingdom.13.d
 fire_only_once = yes
 
@@ -378,7 +382,7 @@ has_country_flag = ENG_labour_absorbed
 }
 
 option = {
-name = united_kingdom.13.a
+name = "Shit"
 add_stability =-0.15
 hidden_effect = { country_event = { id = united_kingdom.14 days = 7 } }
 }
@@ -387,7 +391,7 @@ hidden_effect = { country_event = { id = united_kingdom.14 days = 7 } }
 ###Last Disscussion
 country_event = {
 id = united_kingdom.14
-title = united_kingdom.14.t
+title = "Last Disscussions"
 desc = united_kingdom.14.d
 fire_only_once = yes
 is_triggered_only = yes
@@ -424,13 +428,13 @@ hidden_effect = { country_event = { id = united_kingdom.15 days = 15 } }
 ###Reactionary offer to conservatives
 country_event = {
 id = united_kingdom.15
-title = united_kingdom.15.t
+title = "Reactionary offer to Conservatives"
 desc = united_kingdom.15.d
 fire_only_once = yes
 is_triggered_only = yes
 
 option = { ###They accept
-name = united_kingdom.15.a
+name = "Conservatives accept"
 add_political_power = 30
 add_popularity = { ideology = reactionary popularity = 0.15 } 
 add_popularity = { ideology = conservative popularity = -0.15 } 
@@ -438,7 +442,7 @@ set_country_flag = ENG_conservatives_absorbed
 }
 
 option = { ###They reject
-name = united_kingdom.15.b
+name = "Conservatives decline"
 add_political_power = 30
 set_country_flag = ENG_conservatives_independant
 }
@@ -562,6 +566,7 @@ create_country_leader = {
 }
 }
 IRE = { country_event = { id = ireland.1 days = 20 } }
+ENG = { country_event = { id = united_kingdom.24 days = 1 } }
 ENG = { country_event = { id = united_kingdom.18 days = 5 } }
 BLF = { transfer_state = 861 }
 BLF = { transfer_state = 120 }
@@ -593,36 +598,6 @@ BLF = { transfer_state = 127 }
 BLF = { transfer_state = 1034 }
 BLF = { transfer_state = 125 }
 BLF = { transfer_state = 1032 }
-861 = { add_core_of = BLF }
-120 = { add_core_of = BLF }
-1069 = { add_core_of = BLF }
-1068 = { add_core_of = BLF }
-1067 = { add_core_of = BLF }
-1070 = { add_core_of = BLF }
-136 = { add_core_of = BLF }
-1071 = { add_core_of = BLF }
-1073 = { add_core_of = BLF }
-1072 = { add_core_of = BLF }
-121 = { add_core_of = BLF }
-133 = { add_core_of = BLF }
-1051 = { add_core_of = BLF }
-129 = { add_core_of = BLF }
-1042 = { add_core_of = BLF }
-1043 = { add_core_of = BLF }
-122 = { add_core_of = BLF }
-1041 = { add_core_of = BLF }
-1040 = { add_core_of = BLF }
-1039 = { add_core_of = BLF }
-1059 = { add_core_of = BLF }
-1061 = { add_core_of = BLF }
-1065 = { add_core_of = BLF }
-1030 = { add_core_of = BLF }
-1028 = { add_core_of = BLF }
-1029 = { add_core_of = BLF }
-127 = { add_core_of = BLF }
-1034 = { add_core_of = BLF }
-125 = { add_core_of = BLF }
-1032 = { add_core_of = BLF }
 BRU = { transfer_state = 1066 }
 BRU = { transfer_state = 1075 }
 BRU = { transfer_state = 1076 }
@@ -648,53 +623,17 @@ BRU = { transfer_state = 1031 }
 BRU = { transfer_state = 1037 }
 BRU = { transfer_state = 1047 }
 BRU = { transfer_state = 1058 }
-1066 = { add_core_of = BRU }
-1075 = { add_core_of = BRU }
-1076 = { add_core_of = BRU }
-1074 = { add_core_of = BRU }
-1036 = { add_core_of = BRU }
-131 = { add_core_of = BRU }
-1035 = { add_core_of = BRU }
-1052 = { add_core_of = BRU }
-1054 = { add_core_of = BRU }
-1059 = { add_core_of = BRU }
-1055 = { add_core_of = BRU }
-1056 = { add_core_of = BRU }
-128 = { add_core_of = BRU }
-1057 = { add_core_of = BRU }
-126 = { add_core_of = BRU }
-1027 = { add_core_of = BRU }
-338 = { add_core_of = BRU }
-1062 = { add_core_of = BRU }
-1058 = { add_core_of = BRU }
-1064 = { add_core_of = BRU }
-1063 = { add_core_of = BRU }
-1060 = { add_core_of = BRU }
-1031 = { add_core_of = BRU }
-1037 = { add_core_of = BRU }
-1047 = { add_core_of = BRU }
 BRL = { transfer_state = 1049 }
 BRL = { transfer_state = 132 }
 BRL = { transfer_state = 1050 }
 BRL = { transfer_state = 123 }
 BRL = { transfer_state = 130 }
-1049 = { add_core_of = BRL }
-132 = { add_core_of = BRL }
-1050 = { add_core_of = BRL }
-123 = { add_core_of = BRL }
-130 = { add_core_of = BRL }
 BRC = { transfer_state = 1048 }
 BRC = { transfer_state = 1046 }
 BRC = { transfer_state = 1045 }
 BRC = { transfer_state = 1053 }
 BRC = { transfer_state = 1044 }
 BRC = { transfer_state = 1038 }
-1048 = { add_core_of = BRC }
-1046 = { add_core_of = BRC }
-1045 = { add_core_of = BRC }
-1053 = { add_core_of = BRC }
-1044 = { add_core_of = BRC }
-1038 = { add_core_of = BRC }
 BRU = { load_oob = "BRU_1934" }
 BLF = { load_oob = "BLF_1934" }
 BRC = { load_oob = "BRC_1934" }
@@ -820,6 +759,7 @@ create_country_leader = {
 }
 }
 IRE = { country_event = { id = ireland.1 days = 20 } }
+ENG = { country_event = { id = united_kingdom.24 days = 1 } }
 ENG = { country_event = { id = united_kingdom.18 days = 5 } }
 BLF = { transfer_state = 861 }
 BLF = { transfer_state = 120 }
@@ -851,36 +791,6 @@ BLF = { transfer_state = 127 }
 BLF = { transfer_state = 1034 }
 BLF = { transfer_state = 125 }
 BLF = { transfer_state = 1032 }
-861 = { add_core_of = BLF }
-120 = { add_core_of = BLF }
-1069 = { add_core_of = BLF }
-1068 = { add_core_of = BLF }
-1067 = { add_core_of = BLF }
-1070 = { add_core_of = BLF }
-136 = { add_core_of = BLF }
-1071 = { add_core_of = BLF }
-1073 = { add_core_of = BLF }
-1072 = { add_core_of = BLF }
-121 = { add_core_of = BLF }
-133 = { add_core_of = BLF }
-1051 = { add_core_of = BLF }
-129 = { add_core_of = BLF }
-1042 = { add_core_of = BLF }
-1043 = { add_core_of = BLF }
-122 = { add_core_of = BLF }
-1041 = { add_core_of = BLF }
-1040 = { add_core_of = BLF }
-1039 = { add_core_of = BLF }
-1059 = { add_core_of = BLF }
-1061 = { add_core_of = BLF }
-1065 = { add_core_of = BLF }
-1030 = { add_core_of = BLF }
-1028 = { add_core_of = BLF }
-1029 = { add_core_of = BLF }
-127 = { add_core_of = BLF }
-1034 = { add_core_of = BLF }
-125 = { add_core_of = BLF }
-1032 = { add_core_of = BLF }
 BRU = { transfer_state = 1066 }
 BRU = { transfer_state = 1075 }
 BRU = { transfer_state = 1076 }
@@ -905,52 +815,17 @@ BRU = { transfer_state = 1060 }
 BRU = { transfer_state = 1031 }
 BRU = { transfer_state = 1037 }
 BRU = { transfer_state = 1047 }
-1066 = { add_core_of = BRU }
-1075 = { add_core_of = BRU }
-1076 = { add_core_of = BRU }
-1074 = { add_core_of = BRU }
-1036 = { add_core_of = BRU }
-131 = { add_core_of = BRU }
-1035 = { add_core_of = BRU }
-1052 = { add_core_of = BRU }
-1054 = { add_core_of = BRU }
-1059 = { add_core_of = BRU }
-1055 = { add_core_of = BRU }
-1056 = { add_core_of = BRU }
-128 = { add_core_of = BRU }
-1057 = { add_core_of = BRU }
-126 = { add_core_of = BRU }
-1027 = { add_core_of = BRU }
-338 = { add_core_of = BRU }
-1062 = { add_core_of = BRU }
-1064 = { add_core_of = BRU }
-1063 = { add_core_of = BRU }
-1060 = { add_core_of = BRU }
-1031 = { add_core_of = BRU }
-1037 = { add_core_of = BRU }
-1047 = { add_core_of = BRU }
 BRL = { transfer_state = 1049 }
 BRL = { transfer_state = 132 }
 BRL = { transfer_state = 1050 }
 BRL = { transfer_state = 123 }
 BRL = { transfer_state = 130 }
-1049 = { add_core_of = BRL }
-132 = { add_core_of = BRL }
-1050 = { add_core_of = BRL }
-123 = { add_core_of = BRL }
-130 = { add_core_of = BRL }
 BRU = { transfer_state = 1048 }
 BRU = { transfer_state = 1058 }
 BRU = { transfer_state = 1046 }
 BRU = { transfer_state = 1045 }
 BRU = { transfer_state = 1053 }
 BRU = { transfer_state = 1044 }
-1048 = { add_core_of = BRU }
-1058 = { add_core_of = BRU }
-1046 = { add_core_of = BRU }
-1045 = { add_core_of = BRU }
-1053 = { add_core_of = BRU }
-1044 = { add_core_of = BRU }
 BRU = { load_oob = "BRU_1934" }
 BLF = { load_oob = "BLF_1934" }
 BRC = { load_oob = "BRC_1934" }
@@ -971,6 +846,165 @@ ENG = { end_puppet = BRJ }
 BRJ = { leave_faction = yes }
 }
 }
+}
+
+###add cores to CW sides
+country_event = {
+	id = united_kingdom.24
+	title = "Silence before the storm"
+	desc = united_kingdom.21.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = united_kingdom.24.a
+
+		if = {
+			limit = { has_country_flag = ENG_conservatives_absorbed } 
+			861 = { add_core_of = BLF }
+		120 = { add_core_of = BLF }
+		1069 = { add_core_of = BLF }
+		1068 = { add_core_of = BLF }
+		1067 = { add_core_of = BLF }
+		1070 = { add_core_of = BLF }
+		136 = { add_core_of = BLF }
+		1071 = { add_core_of = BLF }
+		1073 = { add_core_of = BLF }
+		1072 = { add_core_of = BLF }
+		121 = { add_core_of = BLF }
+		133 = { add_core_of = BLF }
+		1051 = { add_core_of = BLF }
+		129 = { add_core_of = BLF }
+		1042 = { add_core_of = BLF }
+		1043 = { add_core_of = BLF }
+		122 = { add_core_of = BLF }
+		1041 = { add_core_of = BLF }
+		1040 = { add_core_of = BLF }
+		1039 = { add_core_of = BLF }
+		1059 = { add_core_of = BLF }
+		1061 = { add_core_of = BLF }
+		1065 = { add_core_of = BLF }
+		1030 = { add_core_of = BLF }
+		1028 = { add_core_of = BLF }
+		1029 = { add_core_of = BLF }
+		127 = { add_core_of = BLF }
+		1034 = { add_core_of = BLF }
+		125 = { add_core_of = BLF }
+		1032 = { add_core_of = BLF }
+
+		1066 = { add_core_of = BRU }
+		1075 = { add_core_of = BRU }
+		1076 = { add_core_of = BRU }
+		1074 = { add_core_of = BRU }
+		1036 = { add_core_of = BRU }
+		131 = { add_core_of = BRU }
+		1035 = { add_core_of = BRU }
+		1052 = { add_core_of = BRU }
+		1054 = { add_core_of = BRU }
+		1059 = { add_core_of = BRU }
+		1055 = { add_core_of = BRU }
+		1056 = { add_core_of = BRU }
+		128 = { add_core_of = BRU }
+		1057 = { add_core_of = BRU }
+		126 = { add_core_of = BRU }
+		1027 = { add_core_of = BRU }
+		338 = { add_core_of = BRU }
+		1062 = { add_core_of = BRU }
+		1064 = { add_core_of = BRU }
+		1063 = { add_core_of = BRU }
+		1060 = { add_core_of = BRU }
+		1031 = { add_core_of = BRU }
+		1037 = { add_core_of = BRU }
+		1047 = { add_core_of = BRU }
+		1048 = { add_core_of = BRU }
+		1058 = { add_core_of = BRU }
+		1046 = { add_core_of = BRU }
+		1045 = { add_core_of = BRU }
+		1053 = { add_core_of = BRU }
+		1044 = { add_core_of = BRU }
+
+		1049 = { add_core_of = BRL }
+		132 = { add_core_of = BRL }
+		1050 = { add_core_of = BRL }
+		123 = { add_core_of = BRL }
+		130 = { add_core_of = BRL }
+		}
+
+		if = {
+			limit = { has_country_flag = ENG_conservatives_independant } 
+
+			861 = { add_core_of = BLF }
+			120 = { add_core_of = BLF }
+			1069 = { add_core_of = BLF }
+			1068 = { add_core_of = BLF }
+			1067 = { add_core_of = BLF }
+			1070 = { add_core_of = BLF }
+			136 = { add_core_of = BLF }
+			1071 = { add_core_of = BLF }
+			1073 = { add_core_of = BLF }
+			1072 = { add_core_of = BLF }
+			121 = { add_core_of = BLF }
+			133 = { add_core_of = BLF }
+			1051 = { add_core_of = BLF }
+			129 = { add_core_of = BLF }
+			1042 = { add_core_of = BLF }
+			1043 = { add_core_of = BLF }
+			122 = { add_core_of = BLF }
+			1041 = { add_core_of = BLF }
+			1040 = { add_core_of = BLF }
+			1039 = { add_core_of = BLF }
+			1059 = { add_core_of = BLF }
+			1061 = { add_core_of = BLF }
+			1065 = { add_core_of = BLF }
+			1030 = { add_core_of = BLF }
+			1028 = { add_core_of = BLF }
+			1029 = { add_core_of = BLF }
+			127 = { add_core_of = BLF }
+			1034 = { add_core_of = BLF }
+			125 = { add_core_of = BLF }
+			1032 = { add_core_of = BLF }
+
+			1066 = { add_core_of = BRU }
+			1075 = { add_core_of = BRU }
+			1076 = { add_core_of = BRU }
+			1074 = { add_core_of = BRU }
+			1036 = { add_core_of = BRU }
+			131 = { add_core_of = BRU }
+			1035 = { add_core_of = BRU }
+			1052 = { add_core_of = BRU }
+			1054 = { add_core_of = BRU }
+			1059 = { add_core_of = BRU }
+			1055 = { add_core_of = BRU }
+			1056 = { add_core_of = BRU }
+			128 = { add_core_of = BRU }
+			1057 = { add_core_of = BRU }
+			126 = { add_core_of = BRU }
+			1027 = { add_core_of = BRU }
+			338 = { add_core_of = BRU }
+			1062 = { add_core_of = BRU }
+			1058 = { add_core_of = BRU }
+			1064 = { add_core_of = BRU }
+			1063 = { add_core_of = BRU }
+			1060 = { add_core_of = BRU }
+			1031 = { add_core_of = BRU }
+			1037 = { add_core_of = BRU }
+			1047 = { add_core_of = BRU }
+
+			1049 = { add_core_of = BRL }
+			132 = { add_core_of = BRL }
+			1050 = { add_core_of = BRL }
+			123 = { add_core_of = BRL }
+			130 = { add_core_of = BRL }
+
+			1048 = { add_core_of = BRC }
+			1046 = { add_core_of = BRC }
+			1045 = { add_core_of = BRC }
+			1053 = { add_core_of = BRC }
+			1044 = { add_core_of = BRC }
+			1038 = { add_core_of = BRC }
+		}
+	}
 }
 
 
@@ -1000,6 +1034,7 @@ IRE = { transfer_state = 1121 }
 
 }
 }
+
 
 ###Civil War starts 
 country_event = {

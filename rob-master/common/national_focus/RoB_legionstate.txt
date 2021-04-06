@@ -3420,7 +3420,7 @@ focus_tree = {
 		add_ideas = {
 		LES_road_guardposts
 		}
-		custom_effect_tooltip = les_tt_36
+		custom_effect_tooltip = les_tt_40
 		hidden_effect = {
 			572 = {
 				add_building_construction = {
@@ -3433,7 +3433,7 @@ focus_tree = {
 			1231 = {
 				add_building_construction = {
 				type = bunker
-				level = 1
+				level = 2
 				province = 1694
 				instant_build = yes
 				}
@@ -4002,7 +4002,7 @@ focus_tree = {
 		add_building_construction = {
 		type = bunker
 		level = 2
-		province = 12101
+		province = 12517
 		instant_build = yes
 		}}
 
@@ -4010,7 +4010,7 @@ focus_tree = {
 		add_building_construction = {
 		type = bunker
 		level = 2
-		province = 12102
+		province = 1233
 		instant_build = yes
 		}}
 
@@ -4018,7 +4018,7 @@ focus_tree = {
 		add_building_construction = {
 		type = bunker
 		level = 2
-		province = 307
+		province = 12287
 		instant_build = yes
 		}}
 
@@ -4028,6 +4028,30 @@ focus_tree = {
 		level = 2
 		province = 10133
 		instant_build = yes
+		}}
+
+		572 = {
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 307
+			instant_build = yes
+		}}
+
+		572 = {
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 12102
+			instant_build = yes
+		}}
+
+		572 = {
+			add_building_construction = {
+			type = bunker
+			level = 2
+			province = 1387
+			instant_build = yes
 		}}
 
 		}
@@ -5976,7 +6000,7 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = yes
 		mutually_exclusive = { focus = LES_equalinburden }
-		prerequisite = { focus = LES_municipals_2 focus = LES_municipals_2 }
+		prerequisite = { focus = LES_municipals_2 focus = LES_directrule_2 }
 		prerequisite = { focus = LES_municipals_3 focus = LES_directrule_3 }
 		ai_will_do = {
 			factor = 1

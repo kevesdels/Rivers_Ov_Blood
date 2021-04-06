@@ -1,0 +1,135 @@
+##### Division Templates #####
+
+division_template = {
+	name = "Division Coloniale"		
+	division_names_group = FRA_COL_01
+	# Represents: Div. d'Inf. Coloniale, Div. d'Inf. Nord-Africaine
+	# Difference from DI is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+	}
+}
+
+division_template = {
+	name = "Division de Cavalerie" 	# Division de Cavalerie
+	division_names_group = FRA_CAV_01
+	# Note: Transformed to DLC, DLM divisions, 1936-39 
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 64 ACs/scout cars
+	}
+}
+
+division_template = {
+	name = "Brigade Coloniale"			# Represents: 2xRgt colonial forces and , usually with old equipment
+	division_names_group = FRA_COL_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+##### OOB #####
+units = {
+		
+		division = {	# 1
+		location = 792
+		division_template = "Division Coloniale"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+
+		division = {	# 2
+		location = 792
+		division_template = "Division Coloniale"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+
+	division = {	# 3
+		location = 12473
+		division_template = "Division Coloniale"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+
+	division = {	# 4
+		location = 12473
+		division_template = "Brigade Coloniale"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+
+	division = {	# 5
+		location = 11746
+		division_template = "Brigade Coloniale"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+
+	division = {	# 6
+		location = 3942
+		division_template = "Brigade Coloniale"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+
+	division = {	# 7
+		location = 10106
+		division_template = "Brigade Coloniale"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+
+	division = {	# 8
+		location = 10793
+		division_template = "Brigade Coloniale"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+
+	division = {	# 9
+		location = 4512
+		division_template = "Brigade Coloniale"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+
+	division = {	# 10
+		location = 7620
+		division_template = "Brigade Coloniale"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+
+	division = {	# 11
+		location = 1549
+		division_template = "Division de Cavalerie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+}
+
+

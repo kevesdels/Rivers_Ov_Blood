@@ -32,6 +32,9 @@ set_country_flag = bosnia_has_revolted
 SER = { country_event = { id = serbia.101 days = 10 }}
 HUN = { 
 country_event = { id = rob_hungary.5 days = 7 }}
+hidden_effect = {
+    BOS = { country_event = { id = bosnia.1 days = 1 }}
+    }
 }
 option = {
 name = serbia.100.b
@@ -41,6 +44,9 @@ SER = { country_event = { id = serbia.101 days = 10 }}
 HUN = { 
 country_event = { id = rob_hungary.5 days = 7 } 
 	  }
+hidden_effect = {
+     BOS = { country_event = { id = bosnia.1 days = 1 }}
+    }
 }
 }
 
@@ -65,7 +71,7 @@ title = serbia.102.t
 desc = serbia.102.d
 fire_only_once = yes
 trigger = {
-tag = BOS
+tag = SER
 surrender_progress > 0.3
 
 }

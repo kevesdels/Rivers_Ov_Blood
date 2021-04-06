@@ -5,7 +5,9 @@ LES_factions = {
 LES_banish_x = {
 
   icon  = GFX_decision_generic_police_action
-
+  ai_will_do = {
+    base = 0
+    }
   available = {
       any_owned_state = {
           is_core_of = ROOT
@@ -125,7 +127,15 @@ LES_banish_x = {
    }
    icon = GFX_decision_generic_speech
     ai_will_do = {
-      base = 0
+      base = 200
+      modifier = {
+        factor = 0
+        check_variable = { var = LES_faction_sum value = 260  compare = greater_than_or_equals }
+      }
+      modifier = {
+        factor = 0
+        check_variable = { var = LES_faction_returnist value = 50  compare = greater_than_or_equals }
+      }
     }
   available = {
     hidden_trigger = {
@@ -150,9 +160,17 @@ LES_appease_returnist_2 = {
      }
   }
   icon = GFX_decision_hol_attract_foreign_investors
-   ai_will_do = {
-     base = 0
-   }
+  ai_will_do = {
+    base = 200
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_sum value = 260  compare = greater_than_or_equals }
+    }
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_returnist value = 50  compare = greater_than_or_equals }
+    }
+  }
  available = {
    hidden_trigger = {
    has_country_flag = les_factions
@@ -180,9 +198,17 @@ LES_appease_returnist_2 = {
       }
    }
    icon = GFX_decision_generic_military
-    ai_will_do = {
-      base = 0
+   ai_will_do = {
+    base = 200
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_sum value = 260  compare = greater_than_or_equals }
     }
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_rusnat value = 50  compare = greater_than_or_equals }
+    }
+  }
   available = {
     hidden_trigger = {
     has_country_flag = les_factions
@@ -209,9 +235,17 @@ LES_appease_russian_nationalist_2 = {
      }
   }
   icon = GFX_decision_generic_ignite_civil_war
-   ai_will_do = {
-     base = 0
-   }
+  ai_will_do = {
+    base = 200
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_sum value = 260  compare = greater_than_or_equals }
+    }
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_rusnat value = 50  compare = greater_than_or_equals }
+    }
+  }
  available = {
    hidden_trigger = {
    has_country_flag = les_factions
@@ -222,7 +256,9 @@ LES_appease_russian_nationalist_2 = {
   days_remove = 90
 
   complete_effect = {
+    if = { limit = { is_ai = no }
    add_stability = -0.03
+  }
    custom_effect_tooltip = les_tt_15
    rusnat_increase_10 = yes
  }
@@ -237,9 +273,17 @@ LES_appease_russian_nationalist_2 = {
       }
    }
    icon = GFX_decision_generic_military
-    ai_will_do = {
-      base = 0
+   ai_will_do = {
+    base = 200
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_sum value = 260  compare = greater_than_or_equals }
     }
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_christian value = 50  compare = greater_than_or_equals }
+    }
+  }
   available = {
     hidden_trigger = {
     has_country_flag = les_factions
@@ -265,9 +309,17 @@ LES_appease_russian_nationalist_2 = {
       }
    }
    icon = GFX_decision_svarog
-    ai_will_do = {
-      base = 0
+   ai_will_do = {
+    base = 200
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_sum value = 260  compare = greater_than_or_equals }
     }
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_pagan value = 50  compare = greater_than_or_equals }
+    }
+  }
   available = {
   hidden_trigger = {
     has_country_flag = les_factions
@@ -292,9 +344,17 @@ LES_appease_christian_2 = {
      }
   }
   icon = GFX_decision_generic_prepare_civil_war
-   ai_will_do = {
-     base = 0
-   }
+  ai_will_do = {
+    base = 200
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_sum value = 260  compare = greater_than_or_equals }
+    }
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_christian value = 50  compare = greater_than_or_equals }
+    }
+  }
  available = {
    hidden_trigger = {
    has_country_flag = les_factions
@@ -304,7 +364,9 @@ LES_appease_christian_2 = {
   }
   days_remove = 90
   complete_effect = {
+   if = { limit = { is_ai = no }
    add_stability = -0.03
+  }
    custom_effect_tooltip = les_tt_14
    custom_effect_tooltip = les_tt_28
    christian_increase_10 = yes
@@ -323,9 +385,17 @@ LES_appease_pagans_2 = {
      }
   }
   icon = GFX_decision_generic_prepare_civil_war
-   ai_will_do = {
-     base = 0
-   }
+  ai_will_do = {
+    base = 200
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_sum value = 260  compare = greater_than_or_equals }
+    }
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_pagan value = 50  compare = greater_than_or_equals }
+    }
+  }
  available = {
  hidden_trigger = {
    has_country_flag = les_factions
@@ -335,7 +405,9 @@ LES_appease_pagans_2 = {
   days_remove = 90
 
   complete_effect = {
-    add_stability = -0.03
+    if = { limit = { is_ai = no }
+   add_stability = -0.03
+  }
     custom_effect_tooltip = les_tt_13
 		custom_effect_tooltip = les_tt_31
     set_country_flag = LES_favour_pagans
@@ -356,9 +428,17 @@ LES_appease_pagans_2 = {
       }
    }
    icon = GFX_decision_generic_air
-    ai_will_do = {
-      base = 0
+   ai_will_do = {
+    base = 200
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_sum value = 260  compare = greater_than_or_equals }
     }
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_poet value = 80  compare = greater_than_or_equals }
+    }
+  }
   available = {
     hidden_trigger = {
     has_country_flag = les_factions
@@ -382,18 +462,29 @@ LES_appease_futurists_2 = {
      }
   }
   icon = GFX_decision_generic_air
-   ai_will_do = {
-     base = 0
-   }
+  ai_will_do = {
+    base = 200
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_sum value = 260  compare = greater_than_or_equals }
+    }
+    modifier = {
+      factor = 0
+      check_variable = { var = LES_faction_poet value = 70  compare = greater_than_or_equals }
+    }
+  }
  available = {
    hidden_trigger = {
    has_country_flag = les_factions
+   has_manpower > 5000
    NOT = { has_country_flag = les_poet_gone has_country_flag = les_poet_rebellion }
    }
   }
   days_remove = 60
   complete_effect = {
+    if = { limit = { is_ai = no }
     add_manpower = -5000
+   }
   }
   remove_effect = {
   custom_effect_tooltip = les_tt_12
@@ -1809,7 +1900,7 @@ LES_destroy_IRK = {
   add_state_claim = 329
   add_state_claim = 1227
   add_state_claim = 1198
-  add_state_claim = 1120
+  add_state_claim = 1220
   if = { limit = { 564 = { is_owned_by = MON } } LES = { add_state_claim = 564 } }
   if = { limit = { 566 = { is_owned_by = MON } } LES = { add_state_claim = 566 } }
  declare_war_on = { target = MON type = annex_everything }
@@ -3644,13 +3735,21 @@ LES_core_mon = {
  LES_cm_mon = {
           available = {  ###Missson ends
               NOT = {
-                 controls_state = 
+                 controls_state = 564
+                 controls_state = 1227
+                 controls_state = 1198
+                 controls_state = 1220
+                 controls_state = 329
                  }
               }
           activation = { ### misson starts
               LES = {
                 has_country_flag = LES_cmf_mon
-                controls_state = 
+                controls_state = 564
+                controls_state = 1227
+                controls_state = 1198
+                controls_state = 1220
+                controls_state = 329
                }
             }
            is_good = yes

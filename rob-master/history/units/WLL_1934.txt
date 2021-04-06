@@ -1,0 +1,132 @@
+﻿division_template = {
+	name = "Division d'Infanterie"		# Same for "Active" and "Reserve" Infantry Divisions
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }  
+	}
+}
+division_template = {
+	name = "Division de Cavalerie"  	# Cavalry Division
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      	# Actually, 2x bicycle cav bns
+		engineer = { x = 0 y = 1 }   
+	}
+}
+division_template = {
+	name = "Cavalerie Motorisée"  		# Motorized Cavalry Brigade
+										# Note: motorized cavalry. Most sources have them truck-equipped.
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Division Coloniale"			# Colonial militia, lower experience, equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+### OOB ###
+units = {
+	##### L'Armée Belge #####
+	# I Corps d'Armée
+	division= {	# "4ème Division d'Infanterie"
+		location = 3516
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+
+	# II Corps d'Armée
+	division= {	# "6ème Division d'Infanterie"
+		location = 9536  
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+
+	# III Corps d'Armée
+	division= {	# "2ème Division d'Infanterie"
+		location = 11519  
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "3ème Division d'Infanterie"
+		location = 13801  
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+
+	# IV Corps d'Armée
+	division= {	# "5ème Division d'Infanterie"
+		location = 9418  
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+
+	# Corps d'Cavalerie
+	division= {	# "1ère Division d'Infanterie"
+		location = 9444  
+		division_template = "Division d'Infanterie"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "2ème Division de Cavalerie"
+		location = 13237  
+		division_template = "Division de Cavalerie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+}
+
+air_wings = {
+	### Aéronautique Militaire Belge -- Brussels (Nivelle)
+	6 = {
+		# 2e Régiment d'Aéronautique 
+		# Consisted of 50 operational Gladiator Is, Hurricanes, CR.42s in 1940
+		# Only had Fairey Fox recon/l bombers that were also used as fighters in 1936, along with trainers
+		fighter_equipment_0 =  {
+			owner = "BEL" 
+			amount = 20
+		}
+	}
+}

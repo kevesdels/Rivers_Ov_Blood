@@ -1,0 +1,56 @@
+##### Division Templates #####
+
+division_template = {
+	name = "Division Coloniale"		
+	division_names_group = FRA_COL_01
+	# Represents: Div. d'Inf. Coloniale, Div. d'Inf. Nord-Africaine
+	# Difference from DI is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+	}
+}
+
+##### OOB #####
+units = {
+		
+		division = {	# 1
+		location = 792
+		division_template = "Division Coloniale"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+
+		division = {	# 2
+		location = 792
+		division_template = "Division Coloniale"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+
+	division = {	# 3
+		location = 792
+		division_template = "Division Coloniale"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.6
+	}
+
+	division = {	# 4
+		location = 792
+		division_template = "Brigade Coloniale"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+}
+
+

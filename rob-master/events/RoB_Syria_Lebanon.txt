@@ -1,0 +1,1013 @@
+##############################
+###French Syria Lebanin Events
+##############################
+
+add_namespace = syrialeb
+
+
+###Syrialeb:Start of unrest
+country_event = {
+id = syrialeb.1
+title = "Wave of Unrest"
+desc = syrialeb.1
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = "Troubling"
+add_stability = -0.15
+add_war_support = -0.15
+hidden_effect = {
+  SYR = { country_event = { id = syrialeb.2 days = 5 } }
+  }
+}
+
+}
+
+###French colonials authorities strike back at revolters
+country_event = {
+  id = syrialeb.2
+  title = "Revolters Shot and Beaten by Police"
+  desc = syrialeb.2.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  option = {
+  name = "Police Brutality...."
+  add_stability = -0.05
+  add_manpower = -461
+  hidden_effect = {
+    SYR = { country_event = { id = syrialeb.3 days = 4 } }
+    }
+  }
+  
+}
+
+###Syrialeb:Mosul revolters take control of mosul
+country_event = {
+  id = syrialeb.3
+  title = "Mosul Revolts"
+  desc = indochina.3.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  option = {
+  name = "This will be put down, soon."
+  MOS = {
+    transfer_state = 1275
+    load_oob = "MOS_1935"
+    add_ideas = {
+      mosul_uprising
+    }
+  }
+  1275 = { add_core_of = MOS }
+  676 = { add_core_of = MOS }
+  SYR = { declare_war_on = { target = MOS  type = annex_everything } }
+  add_ideas = {
+    fsl_turmoil
+  }
+  hidden_effect = {
+    SYR = { country_event = { id = syrialeb.5 days = 3 } }
+    ARM = { country_event = { id = syrialeb.6 days = 9 } }
+    TUR = { country_event = { id = syrialeb.15 days = 16 } }
+    HJZ = { country_event = { id = syrialeb.18 days = 3 } }
+    PER = { country_event = { id = syrialeb.23 days = 3 } }
+    }
+  }
+  
+}
+  
+###Syrialeb: Plea to Itallians
+country_event = {
+  id = syrialeb.5
+  title = "Screaming for Assistance"
+  desc = syrialeb.5.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###Yo guys if we are fucked so are you
+  option = {
+    name = "Italians, help!"
+    hidden_effect = {
+    ITA = { country_event = { id = syrialeb.19 days = 3 } }
+    }
+  }
+}
+
+
+###Armenia: Do we expand our borders or ignore the situation?
+country_event = {
+  id = syrialeb.6
+  title = syrialeb.6.t
+  desc = syrialeb.6.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+
+  ###occupy sirnak
+  option = {
+    name = syrialeb.6.a
+    ai_chance = { factor = 8}
+    add_manpower = 1000
+    transfer_state = 960
+    960 = { add_core_of = ARM }
+    hidden_effect = {
+    SYR = { country_event = { id = syrialeb.7 days = 1 } }
+    }
+  }
+  option = {
+  name = syrialeb.6.b
+  ai_chance = { factor = 2}
+  add_political_power = -20
+  }
+  }
+
+###Syrialeb:Armenians seize sirnak
+country_event = {
+  id = syrialeb.7
+  title = "Armenians occupy Sirnak"
+  desc = syrialeb.7.d
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  ###take it back!
+  option = {
+    name = "Give it Back!"
+    ai_chance = { factor = 0 }
+    SYR = { declare_war_on = { target = ARM  type = annex_everything } }
+    hidden_effect = {
+    959 = { add_claim_by = ARM }
+    ARM = { set_country_flag = SYR_war_with_armenia }
+    }
+  }
+  ###go out
+  option = {
+  name = "For now, lets ignore them"
+  ai_chance = { factor = 10 }
+  add_political_power = -50
+  }
+}
+
+
+###Armenia: We seized mus, peace?
+country_event = {
+  id = syrialeb.8
+  title = "Armenians occupy Sirnak"
+  desc = syrialeb.8.d
+  fire_only_once = yes
+  trigger = {
+    tag = ARM
+    has_country_flag = tur_fsl_national_borders
+    at_war_with = SYR
+    SYR = { surrender_progress > 0.20 }
+    959 = { is_controlled_by = ARM }
+  }
+  mean_time_to_happen = { days = 1 }
+
+  ###yo nigga u dead peacce
+  option = {
+    name = "Peace"
+    ai_chance = { factor = 10 }
+    transfer_state = 960
+    960 = { add_core_of = ARM }
+    white_peace = SYR
+  }
+  ###go out
+  option = {
+  name = "Continue"
+  ai_chance = { factor = 0 }
+  add_political_power = -20
+  }
+}
+
+
+###Kingdom of Arabia: Offer protetion to Mosul
+country_event = {
+  id = syrialeb.9
+  title = "Offer Protection to Mosul"
+  desc = syrialeb.9.d
+  fire_only_once = yes
+  trigger = {
+    tag = HJZ
+    SYR = { exists = no }
+    MOS = { 
+      exists = yes 
+      is_puppet = no 
+      has_war = no 
+    }
+    OR = {
+      has_country_flag = HJZ_all_in
+      has_country_flag = HJZ_support_MOS
+    }
+  }
+  mean_time_to_happen = { days = 30 }
+  
+  ###Sends offer for unification
+  option = {
+    name = "Send the Offer"
+    ai_chance = { factor = 10 }
+    MOS = { country_event = { id = syrialeb.10 days = 3 } }
+    }
+
+  ### No offer
+  option = {
+    name = "No offer"
+    ai_chance = { factor = 0 }
+    }
+  }
+
+
+###Mosul: Offer of protetion to us from arabs
+country_event = {
+  id = syrialeb.10
+  title = "Arabia Offers Unification"
+  desc = syrialeb.10.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###Yes!!!
+  option = {
+    name = "We agree"
+    ai_chance = { factor = 5 }
+    HJZ = { country_event = { id = syrialeb.11 days = 2 } }
+    }
+  ###No
+  option = {
+      name = "We will be fine, alone"
+      ai_chance = { factor = 5 }
+      HJZ = { country_event = { id = syrialeb.12 days = 2 } }
+      }
+  }
+
+###Kingdom of Arabia: Offer of protection accepted by Mosul
+country_event = {
+  id = syrialeb.11
+  title = "Mosul Accepts"
+  desc = syrialeb.11.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###Cheers
+  option = {
+    name = "Inshallah"
+    ai_chance = { factor = 1 }
+    add_political_power = 50
+    annex_country = { target = MOS transfer_troops = yes }
+    1275 = { add_core_of = HJZ }
+    676 = { add_core_of = HJZ }
+    }
+  }
+
+###Kingdom of Arabia: Offer of protection denied by Mosul
+country_event = {
+  id = syrialeb.12
+  title = "Mosul Declines"
+  desc = syrialeb.12.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###Then by force you WILL join
+  option = {
+    name = "Wrong Choice"
+    ai_chance = { factor = 1 }
+    if = {
+      limit = { MOS = { is_in_faction_with = HJZ } }
+      HJZ = { leave_faction = yes }
+    }
+    declare_war_on = { target = MOS  type = annex_everything }
+    hidden_effect = {
+      PER = { country_event = { id = syrialeb.13 days = 2 } }
+    }
+    }
+  ###oh well
+  option = {
+      name = "Oh well"
+      ai_chance = { factor = 0 }
+      }
+  }
+
+  ###Persia: Do we use Arabian agression for expansion?
+country_event = {
+  id = syrialeb.13
+  title = "Intervention in Mesopotamia"
+  desc = syrialeb.13.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###Why not?
+  option = {
+    name = "Go go go"
+    ai_chance = { factor = 8 }
+    291 = { add_claim_by = PER }
+    945 = { add_claim_by = PER }
+    946 = { add_claim_by = PER }
+    declare_war_on = { target = HJZ  type = annex_everything }
+    set_country_flag = Mos_protection
+    create_faction = "Persian Sphere"
+    add_to_faction = MOS
+    }
+  ###Im scared :(
+  option = {
+      name = "No go"
+      ai_chance = { factor = 2 }
+      }
+  }
+
+###Persia: Victory = Peace out
+country_event = {
+  id = syrialeb.14
+  title = "Offer Peace to Arabs?"
+  desc = syrialeb.14.d
+  fire_only_once = yes
+  trigger = {
+    tag = PER
+    has_country_flag = mos_protection
+    HJZ = { surrender_progress > 0.50 }
+    at_war_with = HJZ
+  }
+  mean_time_to_happen = { days = 1 }
+
+  ###
+  option = {
+    name = "Peace"
+    ai_chance = { factor = 10 }
+    transfer_state = 291
+    transfer_state = 945
+    transfer_state = 946
+    if = {
+      limit = { OR = { 656 = { is_controlled_by = PER } 656 = { is_controlled_by = HJZ }  656 = { is_controlled_by = MOS } } }
+      transfer_state = 656
+    }
+    white_peace = PER
+    add_war_support = 0.10
+    add_political_power = 100
+    }
+  ###Want to continue
+  option = {
+      name = "No go"
+      ai_chance = { factor = 0 }
+      add_political_power = -30
+  }
+}
+
+###Turkey: Do we expand our borders as they should be or go all in?
+country_event = {
+  id = syrialeb.15
+  title = syrialeb.15.t
+  desc = syrialeb.15.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  option = {
+    name = syrialeb.15.a
+    ai_chance = { factor = 10 }
+    declare_war_on = { target = SYR  type = annex_everything }
+    set_country_flag = tur_fsl_national_borders
+    }
+  
+  option = {
+      name = syrialeb.15.a
+      ai_chance = { factor = 0 }
+      declare_war_on = { target = SYR  type = annex_everything }
+      set_country_flag = tur_fsl_imperial_borders
+      }
+  }
+
+###Turkey: National Peace
+country_event = {
+  id = syrialeb.16
+  title = syrialeb.16.t
+  desc = syrialeb.16.d
+  fire_only_once = yes
+  trigger = {
+    tag = TUR
+    has_country_flag = tur_fsl_national_borders
+    at_war_with = SYR
+    SYR = { surrender_progress > 0.50 }
+    OR = {
+      AND = {
+        350 = { is_controlled_by = TUR }
+        961 = { is_controlled_by = TUR }
+      }
+      AND = {
+        1001 = { is_controlled_by = TUR }
+        961 = { is_controlled_by = TUR }
+      }
+      AND = {
+        350 = { is_controlled_by = TUR }
+        677 = { is_controlled_by = TUR }
+      }
+      AND = {
+        961 = { is_controlled_by = TUR }
+        877 = { is_controlled_by = TUR }
+      }
+      AND = {
+        961 = { is_controlled_by = TUR }
+        344 = { is_controlled_by = TUR }
+      }
+      AND = {
+        1001 = { is_controlled_by = TUR }
+        344 = { is_controlled_by = TUR }
+      }
+    }
+  }
+
+  mean_time_to_happen = { days = 1 }
+
+  ###Peace
+  option = {
+    name = syrialeb.16.a
+    ai_chance = { factor = 1 }
+    if = {
+      limit = { OR = { 344 = { is_controlled_by = TUR }  344 = { is_controlled_by = SYR } } }
+      transfer_state = 344
+    }
+    if = {
+      limit = { OR = { 350 = { is_controlled_by = TUR }  350 = { is_controlled_by = SYR } } }
+      transfer_state = 350
+    }
+    if = {
+      limit = { OR = { 877 = { is_controlled_by = TUR }  877 = { is_controlled_by = SYR } } }
+      transfer_state = 877
+    }
+    if = {
+      limit = { OR = { 961 = { is_controlled_by = TUR }  961 = { is_controlled_by = SYR } } }
+      transfer_state = 961
+    }
+    if = {
+      limit = { OR = { 1001 = { is_controlled_by = TUR }  1001 = { is_controlled_by = SYR } } }
+      transfer_state = 1001
+    }
+    if = {
+      limit = { OR = { 959 = { is_controlled_by = TUR }  959 = { is_controlled_by = SYR } } }
+      transfer_state = 959
+    }
+    if = {
+      limit = { OR = { 960 = { is_controlled_by = TUR }  960 = { is_controlled_by = SYR } } }
+      transfer_state = 960
+    }
+    white_peace = SYR
+    add_war_support = 0.10
+    add_political_power = 100
+    set_country_flag = tur_got_np_syr
+    }
+  #Continue
+  option = {
+    name = syrialeb.16.b
+    ai_chance = { factor = 0 }
+    add_political_power = -40
+    }
+  }
+
+  
+###Turkey: Get out Peace
+country_event = {
+  id = syrialeb.17
+  title = syrialeb.17.t
+  desc = syrialeb.17.d
+  fire_only_once = yes
+  trigger = {
+    tag = TUR
+    OR = {
+      has_country_flag = tur_fsl_national_borders
+      has_country_flag = tur_fsl_imperial_borders
+    }
+    TUR = { surrender_progress > 0.2 }
+    at_war_with = SYR
+  }
+
+  mean_time_to_happen = { days = 1 }
+
+  ###Bail out peace
+  option = {
+    name = syrialeb.17.a
+    ai_chance = { factor = 5 }
+    white_peace = SYR
+    }
+
+  ###WE WILL WIN
+  option = {
+      name = syrialeb.17.a
+      ai_chance = { factor = 5}
+    }
+  }
+
+###Kingdom of Arabia: Will it support rebels or go in for a kill?
+country_event = {
+  id = syrialeb.18
+  title = syrialeb.18.t
+  desc = syrialeb.18.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###Supports rebels, dont attack immedietly
+  option = {
+    name = syrialeb.18.a
+    ai_chance = { factor = 4}
+    MOS = { country_event = { id = syrialeb.21 days = 3 } }
+    add_manpower = -5000
+    add_war_support = 0.05
+    add_war_support = 0.03
+    set_country_flag = HJZ_support_MOS
+    }
+
+  ###All in
+  option = {
+      name = syrialeb.18.b
+      ai_chance = { factor = 6}
+      declare_war_on = { target = SYR  type = annex_everything }
+      add_political_power = 100
+      add_manpower = 5000
+      553 = { add_core_of = HJZ }
+      677 = { add_core_of = HJZ }
+      680 = { add_core_of = HJZ }
+      877 = { add_claim_by = HJZ }
+      set_country_flag = HJZ_all_in
+      create_faction = "Arab League"
+      add_to_faction = MOS
+      }
+  }
+
+
+###Italy: Will it support French middleast colony or ignore its shit?
+country_event = {
+  id = syrialeb.19
+  title = "Assist French in Syria?"
+  desc = syrialeb.19.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###Sure,Supports french syria
+  option = {
+    name = "Sure"
+    ai_chance = { factor = 6 }
+    SYR = { country_event = { id = syrialeb.20 days = 3 } }
+    }
+
+  ###Nope
+  option = {
+      name = "No way"
+      ai_chance = { factor = 4 }
+      SYR = { country_event = { id = syrialeb.21 days = 3 } }
+      }
+  }
+
+###Syrialeb: Italian Help
+country_event = {
+  id = syrialeb.20
+  title = "Italian Aid Arrives"
+  desc = syrialeb.20.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###YES
+  option = {
+    name = "Hurray"
+    SYR = { load_oob = "FSL_ITA_AID" }
+
+    }
+  }
+
+###Syrialeb: Italians dont care
+country_event = {
+  id = syrialeb.20
+  title = "Italians are silent"
+  desc = syrialeb.20.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###Fuck
+  option = {
+    name = "..."
+    }
+  }
+
+
+###Mosul: Arabin Help arrives
+country_event = {
+  id = syrialeb.21
+  title = syrialeb.21.t
+  desc = syrialeb.21.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###Supports rebels, dont attack immedietly
+  option = {
+    name = syrialeb.21.a
+    MOS = { load_oob = "MOS_HJZ_help" }
+    add_war_support = 0.05
+    add_war_support = 0.03
+    }
+  }
+
+###Kingdom of Arabia: Will we let the rebelion die or go in for a kill?
+country_event = {
+  id = syrialeb.22
+  title = syrialeb.22.t
+  desc = syrialeb.22.d
+  fire_only_once = yes
+  trigger = {
+    tag = HJZ
+    MOS = { surrender_progress > 0.7 }
+    MOS = { at_war_with = SYR }
+    NOT = { has_country_flag = HJZ_all_in }
+    has_country_flag = HJZ_support_MOS
+  }
+mean_time_to_happen = { days = 1 }
+
+  ###Aid rebels directly 
+  option = {
+    name = syrialeb.22.a
+    ai_chance = { factor = 3 }
+    create_faction = "United Islam Front"
+		add_to_faction = MOS
+    }
+
+  ###All in
+  option = {
+      name = syrialeb.22.b
+      ai_chance = { factor = 6 }
+      declare_war_on = { target = SYR  type = annex_everything }
+      add_political_power = 100
+      add_manpower = 5000
+      553 = { add_claim_by = HJZ }
+      677 = { add_claim_by = HJZ }
+      680 = { add_claim_by = HJZ }
+      571 = { add_claim_by = HJZ }
+      877 = { add_claim_by = HJZ }
+      }
+
+   option = {
+        name = syrialeb.22.c
+        ai_chance = { factor = 1 }
+        add_political_power = -100
+        }
+  }
+
+###Persia: Will it support Mosul rebellion or ignore its shit?
+country_event = {
+  id = syrialeb.23
+  title = syrialeb.23.t
+  desc = syrialeb.23.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###Sure,Supports Mosul
+  option = {
+    name = syrialeb.23.a
+    ai_chance = { factor = 7 }
+    add_manpower = -5000
+    MOS = { country_event = { id = syrialeb.24 days = 3 } }
+    }
+
+  ###Nope
+  option = {
+      name = syrialeb.23.b
+      ai_chance = { factor = 3 }
+      }
+  }
+
+###Mosul: Persian Help arrives
+country_event = {
+  id = syrialeb.24
+  title = syrialeb.24.t
+  desc = syrialeb.24.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###YES
+  option = {
+    name = syrialeb.24.a
+    MOS = { load_oob = "MOS_PER_help" }
+    add_war_support = 0.05
+    add_war_support = 0.03
+    }
+  }
+
+
+###Persia: Loss = Peace out
+country_event = {
+  id = syrialeb.25
+  title = "Offer Peace to Arabs?"
+  desc = syrialeb.25.d
+  fire_only_once = yes
+  trigger = {
+    tag = PER
+    has_country_flag = mos_protection
+    PER = { surrender_progress > 0.40 }
+    at_war_with = HJZ
+  }
+  mean_time_to_happen = { days = 1 }
+
+  ###
+  option = {
+    name = "Peace"
+    ai_chance = { factor = 10 }
+    HJZ = {
+    transfer_state = 413
+    transfer_state = 421
+    white_peace = PER
+    add_war_support = 0.10
+    add_political_power = 100
+    }
+    }
+  ###Want to continue
+  option = {
+      name = "No go"
+      ai_chance = { factor = 0 }
+      add_political_power = -30
+  }
+}
+
+###Kingdom of Arabia: Get out Peace with French syria
+country_event = {
+  id = syrialeb.26
+  title = syrialeb.26.t
+  desc = syrialeb.26.d
+  fire_only_once = yes
+  trigger = {
+    tag = HJZ
+    OR = {
+      has_country_flag = HJZ_all_in
+      has_country_flag = HJZ_support_MOS
+    }
+    HJZ = { surrender_progress > 0.8 }
+    at_war_with = SYR
+  }
+
+  mean_time_to_happen = { days = 1 }
+
+  ###Bail out peace
+  option = {
+    name = syrialeb.26.a
+    ai_chance = { factor = 1 }
+    white_peace = SYR
+    if = { limit = { has_country_flag = HJZ_all_in }
+    clr_country_flag = HJZ_all_in
+    }
+    if = { limit = { has_country_flag = HJZ_support_MOS }
+    clr_country_flag = HJZ_support_MOS
+    }
+    if = {
+      limit = { OR = { 946 = { is_controlled_by = HJZ }  946 = { is_controlled_by = SYR } } }
+      SYR = { transfer_state = 946 }
+    }
+    if = {
+      limit = { OR = { 291 = { is_controlled_by = HJZ }  291 = { is_controlled_by = SYR } } }
+      SYR = { transfer_state = 291 }
+    }
+    if = {
+      limit = { OR = { 656 = { is_controlled_by = HJZ }  656 = { is_controlled_by = SYR } } }
+      SYR = { transfer_state = 656 }
+    }
+    if = {
+      limit = { OR = { 945 = { is_controlled_by = HJZ }  945 = { is_controlled_by = SYR } } }
+      SYR = { transfer_state = 945 }
+    }
+    if = {
+      limit = { OR = { 554 = { is_controlled_by = HJZ }  554 = { is_controlled_by = SYR } } }
+      SYR = { transfer_state = 554 }
+    }
+  }
+  ###We still can win?
+  option = {
+    name = syrialeb.26.b
+    ai_chance = { factor = 0 }
+  }
+}
+
+###Mosul: So turkey won, its just syria and us now, we control our shit, lets offer a peace so we can get further in game
+country_event = {
+  id = syrialeb.27
+  title = syrialeb.27.t
+  desc = syrialeb.27.d
+  fire_only_once = yes
+  trigger = {
+    tag = MOS
+   TUR = { has_country_flag = tur_got_np_syr }
+   MOS = { surrender_progress < 0.1 }
+   has_war_with = SYR
+   NOT = { SYR = { has_war_with = HJZ } }
+  }
+  mean_time_to_happen = { days = 1 }
+
+  ###Send it
+  option = {
+    name = syrialeb.27.a
+    SYR = { country_event = { id = syrialeb.28 days = 3 } }
+  }
+}
+
+###Syrialeb: Do we give up on Mosul
+country_event = {
+  id = syrialeb.28
+  title = syrialeb.28.t
+  desc = syrialeb.28.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###Fine
+  option = {
+    name = syrialeb.27.a
+    ai_chance = { factor = 1 }
+    white_peace = MOS
+    set_country_flag = fsyr_p_mos
+  }
+
+  ###No way
+  option = {
+      name = syrialeb.27.a
+   ai_chance = { factor = 0 }
+    }
+}
+
+###Kingdom of Arabia: mosul got independent, finish off french syria?
+country_event = {
+  id = syrialeb.29
+  title = "Do we invade whats left of French Syria?"
+  desc = syrialeb.29.d
+  fire_only_once = yes
+  trigger = {
+    tag = HJZ
+    SYR = { exists = yes  has_country_flag = fsyr_p_mos }
+    MOS = { 
+      exists = yes 
+      is_puppet = no 
+      has_war = no 
+    }
+   NOT = { has_country_flag = HJZ_all_in }
+  }
+  mean_time_to_happen = { days = 7 }
+  
+  ###attacks syria
+  option = {
+    name = "Yes"
+    ai_chance = { factor = 10 }
+      declare_war_on = { target = SYR  type = annex_everything }
+      add_political_power = 100
+      add_manpower = 5000
+      553 = { add_core_of = HJZ }
+      677 = { add_core_of = HJZ }
+      680 = { add_core_of = HJZ }
+      877 = { add_claim_by = HJZ }
+      set_country_flag = HJZ_all_in
+    }
+
+  ### does not attack
+  option = {
+    name = "No"
+    ai_chance = { factor = 0 }
+    }
+  }
+
+  ###Kingdom of Arabia: Get out Peace with French syria
+country_event = {
+  id = syrialeb.26
+  title = syrialeb.26.t
+  desc = syrialeb.26.d
+  fire_only_once = yes
+  trigger = {
+    tag = HJZ
+    OR = {
+      has_country_flag = HJZ_all_in
+      has_country_flag = HJZ_support_MOS
+    }
+    HJZ = { surrender_progress > 0.6 }
+    at_war_with = SYR
+  }
+
+  mean_time_to_happen = { days = 1 }
+
+  ###Bail out peace
+  option = {
+    name = syrialeb.26.a
+    ai_chance = { factor = 1 }
+    white_peace = SYR
+    if = { limit = { at_war_with = FRA } 
+    white_peace = FRA
+    }
+    if = { limit = { has_country_flag = HJZ_all_in }
+    clr_country_flag = HJZ_all_in
+    }
+    if = { limit = { has_country_flag = HJZ_support_MOS }
+    clr_country_flag = HJZ_support_MOS
+    }
+    if = {
+      limit = { OR = { 946 = { is_controlled_by = HJZ }  946 = { is_controlled_by = SYR } } }
+      SYR = { transfer_state = 946 }
+    }
+    if = {
+      limit = { OR = { 291 = { is_controlled_by = HJZ }  291 = { is_controlled_by = SYR } } }
+      SYR = { transfer_state = 291 }
+    }
+    if = {
+      limit = { OR = { 656 = { is_controlled_by = HJZ }  656 = { is_controlled_by = SYR } } }
+      SYR = { transfer_state = 656 }
+    }
+    if = {
+      limit = { OR = { 945 = { is_controlled_by = HJZ }  945 = { is_controlled_by = SYR } } }
+      SYR = { transfer_state = 945 }
+    }
+    if = {
+      limit = { OR = { 554 = { is_controlled_by = HJZ }  554 = { is_controlled_by = SYR } } }
+      SYR = { transfer_state = 554 }
+    }
+  }
+  ###We still can win?
+  option = {
+    name = syrialeb.26.b
+    ai_chance = { factor = 0 }
+  }
+}
+
+###Mosul: So turkey won, its just syria and us now, we control our shit, lets offer a peace so we can get further in game
+country_event = {
+  id = syrialeb.27
+  title = syrialeb.27.t
+  desc = syrialeb.27.d
+  fire_only_once = yes
+  trigger = {
+    tag = MOS
+   TUR = { has_country_flag = tur_got_np_syr }
+   SYR = { surrender_progress > 0.1 }
+   MOS = { surrender_progress < 0.1 }
+   has_war_with = SYR
+   NOT = { SYR = { has_war_with = HJZ } }
+  }
+  mean_time_to_happen = { days = 1 }
+
+  ###Send it
+  option = {
+    name = syrialeb.27.a
+    SYR = { country_event = { id = syrialeb.28 days = 3 } }
+  }
+}
+
+###Syrialeb: Do we give up on Mosul
+country_event = {
+  id = syrialeb.28
+  title = syrialeb.28.t
+  desc = syrialeb.28.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###Fine
+  option = {
+    name = syrialeb.27.a
+    ai_chance = { factor = 1 }
+    white_peace = MOS
+    set_country_flag = fsyr_p_mos
+  }
+
+  ###No way
+  option = {
+      name = syrialeb.27.a
+   ai_chance = { factor = 0 }
+    }
+}
+
+###Kingdom of Arabia: get cores on mousl
+country_event = {
+  id = syrialeb.30
+  title = "bla bla"
+  desc = syrialeb.30.d
+  fire_only_once = yes
+  trigger = {
+    tag = HJZ
+    MOS = { 
+      exists = no 
+    }
+    NOT = { 676 = { is_core_of = HJZ } }
+    NOT = { 1275 = { is_core_of = HJZ } }
+    676 = { is_owned_by = HJZ }
+    1275 = { is_owned_by = HJZ }
+  }
+  mean_time_to_happen = { days = 3 }
+  
+  ###cores
+  option = {
+    name = "Inshallah"
+    676 = { add_core_of = HJZ }
+    1275 = { add_core_of = HJZ }
+    }
+  }
+
+###Syrialeb:French Aid Arrives
+country_event = {
+id = syrialeb.1001
+title = syrialeb.10.t
+desc = syrialeb.10.d
+fire_only_once = yes
+trigger = { 
+tag = SYR
+has_war = yes
+NOT = { FRA = { has_war = yes } }
+}
+mean_time_to_happen = { days = 1 }
+
+option = {
+name = syrialeb.10.a
+SYR = { load_oob = "FSL_FRA_AID" }
+
+}
+}

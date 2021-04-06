@@ -1,5 +1,59 @@
 GER_german_expansion = {
 
+  GER_aus_cw_2 = {
+   cost = 30
+   ai_will_do = {
+  base = 2000
+    }
+   fire_only_once = yes
+   visible = {
+    OR = {
+      AUS = { has_war_with = THR }
+      ACM = { has_war_with = THR }
+      ACM = { has_war_with = AUS }
+    }
+   }
+   available = {
+    has_war = no
+    date > 1935.2.1
+    OR = {
+      AUS = { has_war_with = THR }
+      ACM = { has_war_with = THR }
+      ACM = { has_war_with = AUS }
+    }
+   custom_trigger_tooltip = {
+   tooltip = "Austrians Are Still Busy"
+   }
+   }
+  complete_effect = {
+  if = {
+   limit = { ACM = { exists = yes } }
+   GER = { 
+   add_to_faction = ACM 
+   add_to_war = { 
+    targeted_alliance = ACM 
+    enemy = THR 
+    hostility_reason = asked_to_join
+    }
+    add_to_war = { 
+    targeted_alliance = ACM 
+    enemy = AUS 
+    hostility_reason = asked_to_join
+    }
+   }
+
+    } 
+  if = {
+   limit = { AND = { ACM = { exists = no }  THR = { exists = yes } } }
+   GER = { declare_war_on = { target = THR  type = annex_everything } }
+    } 
+  if = {
+   limit = { AND = { ACM = { exists = no }  AUS = { exists = yes } } }
+   GER = { declare_war_on = { target = AUS  type = annex_everything } }
+    }
+  }
+ }
+
  GER_anchluss_austria = {
  cost = 30
  ai_will_do = {
@@ -73,7 +127,7 @@ GER_german_expansion = {
     }
    }
  }
- 
+
  GER_subjugate_chechzs = {
  cost = 30
  ai_will_do = {
@@ -303,6 +357,57 @@ GER_german_expansion = {
 
 GER_german_export_revolution = {
 
+ GER_aus_cw = {
+   cost = 30
+   ai_will_do = {
+  base = 2000
+    }
+   fire_only_once = yes
+    visible = {
+    OR = {
+      AUS = { has_war_with = THR }
+      ACM = { has_war_with = THR }
+      ACM = { has_war_with = AUS }
+    }
+   }
+   available = {
+    has_war = no
+    date > 1935.2.1
+    OR = {
+      AUS = { has_war_with = THR }
+      ACM = { has_war_with = THR }
+      ACM = { has_war_with = AUS }
+    }
+   custom_trigger_tooltip = {
+   tooltip = "Austrians Are Still Busy"
+   }
+   }
+  complete_effect = {
+  if = {
+   limit = { ACM = { exists = yes } }
+   GER = { add_to_faction = ACM }
+    add_to_war = { 
+    targeted_alliance = ACM 
+    enemy = THR 
+    hostility_reason = asked_to_join
+    }
+    add_to_war = { 
+    targeted_alliance = ACM 
+    enemy = AUS 
+    hostility_reason = asked_to_join
+    }
+    } 
+  if = {
+   limit = { AND = { ACM = { exists = no }  THR = { exists = yes } } }
+   GER = { declare_war_on = { target = THR  type = annex_everything } }
+    } 
+  if = {
+   limit = { AND = { ACM = { exists = no }  AUS = { exists = yes } } }
+   GER = { declare_war_on = { target = AUS  type = annex_everything } }
+    }
+  }
+ }
+
  GER_austrian_revolution = {
   cost = 30
   ai_will_do = {
@@ -458,7 +563,7 @@ GER_german_export_revolution = {
   GER = { declare_war_on = { target = POL  type = annex_everything } }
    }
  }
- 
+
    GER_prussian_revolution = {
    cost = 30
    ai_will_do = {

@@ -1074,6 +1074,13 @@ country_event = {
 	option = {
 	 name = legion.43.a
 	 add_political_power = 10
+	 ai_chance = {
+		 factor = 1
+		 modifier = {
+			 factor = 9
+			 has_country_flag = pagan
+		 }
+	 }
 	 	hidden_effect = {
 			futurist_decrease_10 = yes
 			LES = { country_event = { id = legion.44 days = 75 } }
@@ -1082,6 +1089,13 @@ country_event = {
 
 	option = {
 	name = legion.43.b
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 9
+			has_country_flag = poets
+		}
+	}
 		hidden_effect = {
 			LES = { country_event = { id = legion.44 days = 75 } }
 		}
@@ -1098,6 +1112,13 @@ country_event = {
 	
 	option = {
 	 name = legion.44.a
+	 ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 9
+			has_country_flag = pagan
+		}
+	}
 	 add_political_power = 20
 	 	hidden_effect = {
 			futurist_decrease_50 = yes
@@ -1106,6 +1127,13 @@ country_event = {
 
 	option = {
 	name = legion.44.b
+	ai_chance = {
+		factor = 1
+		modifier = {
+			factor = 9
+			has_country_flag = poets
+		}
+	}
 		hidden_effect = {
 			pagan_decrease_10 = yes
 		}
@@ -1780,6 +1808,7 @@ country_event = {
 	 name = legion.52.a
 	 LES = { country_event = { id = legion.36 days = 14 } }
 	 set_country_flag = triumph
+	 custom_effect_tooltip = les_tt_39
 	 }
 }
 

@@ -2086,12 +2086,12 @@ country_event = {
 	option = {
 	   name = "Peace out"
 	   ai_chance = { factor = 150 }
-	   if = { limit = { 329 = { is_owned_and_controlled_by = MON } } LES = { transfer_state = 329 } }
-	   if = { limit = { 564 = { is_owned_and_controlled_by = MON } } LES = { transfer_state = 564 } }
-	   if = { limit = { 566 = { is_owned_and_controlled_by = MON } } LES = { transfer_state = 566 } }
-	   if = { limit = { 1120 = { is_owned_and_controlled_by = MON } } LES = { transfer_state = 1120 } }
-	   if = { limit = { 1198 = { is_owned_and_controlled_by = MON } } LES = { transfer_state = 1198 } }
-	   if = { limit = { 1227 = { is_owned_and_controlled_by = MON } } LES = { transfer_state = 1227 } }
+	   if = { limit = { 329 = { is_owned_by = MON } } LES = { transfer_state = 329 } }
+	   if = { limit = { 564 = { is_owned_by = MON } } LES = { transfer_state = 564 } }
+	   if = { limit = { 566 = { is_owned_by = MON } } LES = { transfer_state = 566 } }
+	   if = { limit = { 1120 = { is_owned_by = MON } } LES = { transfer_state = 1120 } }
+	   if = { limit = { 1198 = { is_owned_by = MON } } LES = { transfer_state = 1198 } }
+	   if = { limit = { 1227 = { is_owned_by = MON } } LES = { transfer_state = 1227 } }
 	   white_peace = MON
 	  }
    
