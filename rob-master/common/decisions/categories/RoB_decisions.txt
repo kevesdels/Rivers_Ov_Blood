@@ -718,6 +718,26 @@ picture = GFX_decision_germany_partisansxczsc
 	base = 120
 	}
 }
+
+fra_post_civil_war = {
+	icon = GFX_decision_category_military_operation	
+	picture = GFX_decision_germany_partisansxczsc
+		visible = {
+		OR = {
+			tag = FRS
+			tag = FRA
+			tag = FRR
+			tag = FRL
+			}
+			has_war = no
+			has_country_flag = FRA_civil_war
+		}
+		priority = {
+		base = 120
+		}
+}
+
+
 ALL_executive = {
 
   icon = GFX_decision_category_military_operation

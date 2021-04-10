@@ -1,0 +1,18 @@
+
+ technology_sharing_group = {
+
+	id = german_research
+	name = german_research_name
+	desc = german_research_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        is_in_faction_with = GER
+        NOT = {
+        tag = POL
+        }
+    }
+
+}

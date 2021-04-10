@@ -2,13 +2,13 @@
 ###Polish Events
 ################
 
-add_namespace = poland
+add_namespace = rob_poland
 
 ###Starting Event
 country_event = {
- id = poland.0
- title = poland.0.t
- desc = poland.0.d
+ id = rob_poland.0
+ title = rob_poland.0.t
+ desc = rob_poland.0.d
  fire_only_once = yes
  
  trigger = {
@@ -22,35 +22,319 @@ country_event = {
  option = {
   name = poland.0.a
   add_political_power = 10
+  hidden_effect = {
+    POL = { country_event = { id = rob_poland.1 days =  21 } }
+  }
  }
 }
 
 
+ ###THE MAN DIES
+ country_event = {
+  id = rob_poland.1
+  title = "Death of Pilsudski"
+  desc = rob_poland.1.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###pity
+   name = "Oh no"
+   retire_country_leader = yes
+    create_country_leader = {
+    name = "Political Chaos"
+    desc = ""
+    picture = ""
+    expire = "1965.1.1"
+    ideology = authoritharian_subtype 
+    traits = {}
+  }
+   set_country_flag = pol_pilsuduski_death
+  }
+
+ }
+
+###Invitation to Intermarium
+country_event = {
+  id = rob_poland.2
+  title = "Poland Proposes Alliance"
+  desc = rob_poland.2.d
+  is_triggered_only = yes
+  
+  
+  option = { ###join
+   name = "Agree"
+   ai_chance = {
+    factor = 100
+   }
+   POL = { add_to_faction = ROOT }
+  }
+  
+  option = {  ###dont
+   name = "Refuse"
+   ai_chance = {
+    factor = 0
+   }
+   if = {
+     limit = {
+       ROOT = {
+         tag = CZE
+       }
+     }
+    72 = {
+      add_claim_by = POL
+    }
+    74 = {
+      add_claim_by = POL
+    }
+    884 = {
+      add_claim_by = POL
+    }
+     POL = { create_wargoal = { target = ROOT  type = annex_everything } }
+  }
+  if = {
+    limit = {
+      ROOT = {
+        NOT = { tag = CZE }
+      }
+     }
+  POL = { create_wargoal = { target = ROOT  type = annex_everything } }
+    }
+  }
+ }
+
+ ###Invitation to Warsaw Pact
+country_event = {
+  id = rob_poland.3
+  title = "Poland Proposes Alliance"
+  desc = rob_poland.3.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###join
+   name = "Agree"
+   ai_chance = {
+    factor = 100
+   }
+   POL = { add_to_faction = ROOT }
+  }
+  
+  option = {  ###dont
+   name = "Refuse"
+     ai_chance = {
+    factor = 0
+   }
+  }
+ }
+
+
+###Join Spartakists
+country_event = {
+  id = rob_poland.4
+  title = "Poland Proposes Alliance"
+  desc = rob_poland.4.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###help them!
+   name = "Agree"
+   ai_chance = {
+    factor = 100
+   }
+   GER = { add_to_faction = POM }
+  }
+  
+  option = {  ###leave them
+   name = "Refuse"
+     ai_chance = {
+    factor = 0
+   }
+  }
+ }
+
+
+
+
+###Poland seekks friends in west
+country_event = {
+  id = rob_poland.5
+  title = "Poland Seeks Friendship"
+  desc = rob_poland.5.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###yeye
+   name = "Lend a Shoulder"
+   POL = { set_country_flag = pol_friend }
+   ai_chance = {
+    factor = 100
+   }
+  }
+  
+  option = {  ###fuck off polak
+   name = "Turn our Backs"
+     ai_chance = {
+    factor = 0
+   }
+  }
+ }
+
+
+ ###Ukraine: Land for Alliance
+country_event = {
+  id = rob_poland.6
+  title = "Poland Offers a Deal"
+  desc = rob_poland.6.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###yeye
+   name = "Fine"
+   ai_chance = {
+    factor = 100
+   }
+   UKR = {
+    transfer_state = 91
+    transfer_state = 89
+   }
+   POL = {
+   89 = { remove_core_of = POL }
+   91 = { remove_core_of = POL }
+   }
+   89 = { add_core_of = UKR }
+   91 = { add_core_of = UKR }
+  }
+  
+  option = {  ###fuck off polak
+   name = "No way"
+     ai_chance = {
+    factor = 0
+   }
+  }
+ }
+
+
+###Prussia: Alliance
+country_event = {
+  id = rob_poland.7
+  title = "Poland Offers an Alliance"
+  desc = "Poland promises to aid our reclamation of mainland"
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###yeye
+   name = "Fine"
+   ai_chance = {
+    factor = 100
+   }
+   POL = { add_to_faction = ROOT }
+  }
+  
+  option = {  ###fuck off polak
+   name = "No way"
+     ai_chance = {
+    factor = 0
+   }
+   POL = { create_wargoal = { target = PRS  type = annex_everything } }
+  }
+ }
+
+ ###Prussia: demand danzig
+country_event = {
+  id = rob_poland.8
+  title = "Poland Demands Danzig"
+  desc = rob_poland.8.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###yeye
+   name = "Fine"
+   ai_chance = {
+    factor = 2
+   }
+   85 = {
+    add_core_of = POL
+  }
+
+  POL = {
+    transfer_state = 85
+    }
+  }
+  
+  option = {  ###fuck off polak
+   name = "No way"
+     ai_chance = {
+    factor = 8
+   }
+   85 = {
+    add_core_of = POL
+  }
+   POL = { create_wargoal = { target = PRS  type = annex_everything } }
+  }
+ }
+
+
+  ###USA: Alliance
+country_event = {
+  id = rob_poland.9
+  title = "Poland: Resources for Guarantee"
+  desc = rob_poland.9.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###yeye
+   name = "OfC"
+   ai_chance = {
+    factor = 2
+   }
+   give_guarantee = POL
+  }
+
+  option = { ###yeye
+   name = "No way"
+   ai_chance = {
+    factor = 0
+   }
+
+  }
+  }
+ }
+
+
+
+ 
 ###Belarusian Civil War Starts Again
 country_event = {
- id = poland.1
- title = poland.1.t
- desc = poland.1.d
- fire_only_once = yes
- is_triggered_only = yes
- 
- 
- option = { ###help them!
-  name = poland.1.a
-  add_political_power = 100
-  declare_war_on = { type = annex_everything target = BLR }
-  create_faction = "Belarusian-Polish Pact"
-  add_to_faction = DBR
-  ai_chance = {
-   factor = 100
+  id = rob_poland.11
+  title = rob_poland.1.t
+  desc = rob_poland.1.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###help them!
+   name = rob_poland.11.a
+   add_political_power = 100
+   declare_war_on = { type = annex_everything target = BLR }
+   create_faction = "Belarusian-Polish Pact"
+   add_to_faction = DBR
+   ai_chance = {
+    factor = 100
+   }
+  }
+  
+  option = {  ###leave them
+   name = rob_poland.11.b
+   add_political_power = -50
+     ai_chance = {
+    factor = 10
+   }
   }
  }
- 
- option = {  ###leave them
-  name = poland.1.b
-  add_political_power = -50
-    ai_chance = {
-   factor = 10
-  }
- }
-}

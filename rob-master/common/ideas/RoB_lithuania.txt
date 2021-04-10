@@ -461,6 +461,20 @@ lithuanian_stormtroopers = {
 	 }
 	 }
 	 
+	lit_indus_rev = {
+  	allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+	 modifier = {
+	 industrial_capacity_factory = 0.1
+	 }
+	 }
+
 	 struggle = {
   allowed = {
        always = no

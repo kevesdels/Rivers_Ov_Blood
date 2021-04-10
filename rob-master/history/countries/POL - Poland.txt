@@ -9,10 +9,10 @@ set_war_support = 0.82
 
 
 set_politics = {
-	ruling_party = conservative
+	ruling_party = authoritharian
 	last_election = "1926.6.7"
 	election_frequency = 72
-	elections_allowed = yes
+	elections_allowed = no
 }
 set_popularities = {
 	national_socialist = 0
@@ -20,8 +20,8 @@ set_popularities = {
 	democratic_socialist = 13
 	social_democracy = 7
 	social_liberal = 0
-	conservative = 31
-	authoritharian = 15
+	conservative = 15
+	authoritharian = 31
 	reactionary = 12
 	pelekist = 5
 }
@@ -68,7 +68,9 @@ if = {
 
 add_ideas = {
 	limited_conscription
-
+	pol_cypher_bureau
+	pol_colonels
+	pol_depression
 }
 
 create_country_leader = {
@@ -80,6 +82,23 @@ create_country_leader = {
 	traits = {}
 }
 
+create_country_leader = {
+	name = "Bolesław Bierut"
+	desc = ""
+	picture = "Bolesław_Bierut.dds"
+	expire = "1965.1.1"
+	ideology = socialist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Józef Piłsudski"
+	desc = "POLITICS_VASYL_DESC"
+	picture = "Portrait_POL_Pilsudski.tga"
+	expire = "1965.1.1"
+	ideology = authoritharian_democracy
+	traits = {}
+}
 
 create_country_leader = {
 	name = "Wincenty Witos"
@@ -91,15 +110,31 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Józef Piłsudski"
-	desc = "POLITICS_VASYL_DESC"
-	picture = "Portrait_POL_Pilsudski.tga"
+	name = "Walery Sławek"
+	desc = ""
+	picture = ""
 	expire = "1965.1.1"
-	ideology = military_junta
+	ideology = social_democracy_subtype 
 	traits = {}
 }
 
+create_country_leader = {
+	name = "Eustachy Sapieha"
+	desc = ""
+	picture = "Portrait_POL_Eustachy_Sapieha.tga"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype 
+	traits = {}
+}
 
+create_country_leader = {
+	name = "Henryk Rossman"
+	desc = ""
+	picture = "Henryk_Rossman.dds"
+	expire = "1965.1.1"
+	ideology = reactionary_subtype 
+	traits = {}
+}
 
 ## Army
 create_field_marshal = {

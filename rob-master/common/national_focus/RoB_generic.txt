@@ -661,9 +661,8 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = ROB_naval_effort }
 		mutually_exclusive = { focus = ROB_large_navy }
-		x = -1
+		x = 8
 		y = 1
-		relative_position_id = naval_effort
 		cost = 10
 
 		available_if_capitulated = yes

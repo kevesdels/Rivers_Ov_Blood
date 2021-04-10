@@ -1612,11 +1612,12 @@ country_event = {
   NOT = {
    tag = LIT
    tag = LES
+   tag = SAG
   }
  }
  
  option = {
-  name = "Create a Puppet State"
+  name = "Create a Lithuanian Puppet State"
   puppet = LIT
   ai_chance = { factor = 50 }
   every_owned_state = {
@@ -1632,6 +1633,40 @@ country_event = {
   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
  LIT = {
   set_cosmetic_tag = Generic_puppet_socialist
+  } 
+ }  
+ }
+
+ option = {
+  name = "Create a Lithuanian and Samogtian Puppet State"
+  ai_chance = { factor = 50 }
+  puppet = SAG
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = SAG
+	}
+	SAG = { transfer_state = PREV }
+  }
+  puppet = LIT
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = LIT
+	}
+	LIT = { transfer_state = PREV }
+  }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+ LIT = {
+  set_cosmetic_tag = Generic_puppet_socialist
+  } 
+  SAG = {
+    set_cosmetic_tag = Generic_puppet_socialist
   } 
  }  
  }
@@ -2090,6 +2125,7 @@ country_event = {
   NOT = {
    tag = TRS
    tag = TMS
+   tag = SOV
   }
  }
  
@@ -2155,6 +2191,7 @@ country_event = {
   1176 = { is_owned_and_controlled_by = ROOT }
   NOT = {
    tag = KHV
+   tag = SOV
   }
  }
  
@@ -2252,6 +2289,7 @@ country_event = {
   NOT = {
    tag = KZR
    tag = KAZ
+   tag = SOV
   }
  }
  
@@ -2393,6 +2431,7 @@ country_event = {
   1177 = { is_owned_and_controlled_by = ROOT }
   NOT = {
    tag = UZB
+   tag = SOV
   }
  }
  

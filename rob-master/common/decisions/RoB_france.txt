@@ -1,0 +1,132 @@
+fra_post_civil_war = {
+
+
+FRA_reenstablish_lordship_over_syr = {
+  fire_only_once = yes
+  available = {
+	SYR = { 
+		exists = yes 
+		is_puppet = no
+		has_war = no
+		}
+	}
+	ai_will_do = {
+		base = 1000
+	}
+	cost = 40
+	days_remove = 3
+	remove_effect = {
+	puppet = SYR
+	}
+}
+
+FRA_assist_syr = {
+	fire_only_once = yes
+  	available = {
+	OR = {
+  		SYR = { has_war_with = HJZ }
+		SYR = { has_war_with = TUR }
+		SYR = { has_war_with = MOS }
+		SYR = { has_war_with = ARM }
+		}
+	}
+	ai_will_do = {
+		base = 1000
+	}
+	cost = 20
+	days_remove = 3
+	remove_effect = {
+		if = {
+			limit =  { SYR = { has_war_with = HJZ } }
+			add_to_war = { 
+				targeted_alliance = SYR 
+				enemy = HJZ 
+				hostility_reason = asked_to_join
+			}
+		}
+		if = {
+			limit =  { SYR = { has_war_with = TUR } }
+			add_to_war = { 
+				targeted_alliance = SYR 
+				enemy = TUR 
+				hostility_reason = asked_to_join
+			}
+		}
+		if = {
+			limit =  { SYR = { has_war_with = MOS } }
+			add_to_war = { 
+				targeted_alliance = SYR 
+				enemy = MOS 
+				hostility_reason = asked_to_join
+			}
+		}
+		if = {
+			limit =  { SYR = { has_war_with = ARM } }
+			add_to_war = { 
+				targeted_alliance = SYR 
+				enemy = ARM 
+				hostility_reason = asked_to_join
+			}
+		}
+	}
+}
+
+
+FRA_reenstablish_lordship_over_FEA = {
+	fire_only_once = yes
+	available = {
+	  FEA = { 
+		  exists = yes 
+		  is_puppet = no
+		  has_war = no
+		  }
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  cost = 20
+	  days_remove = 3
+	  remove_effect = {
+	  puppet = FEA
+	  }
+  }
+
+  FRA_reenstablish_lordship_over_FWA = {
+	fire_only_once = yes
+	available = {
+	  FWA = { 
+		  exists = yes 
+		  is_puppet = no
+		  has_war = no
+		  }
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  cost = 20
+	  days_remove = 3
+	  remove_effect = {
+	  puppet = FWA
+	  }
+  }
+
+  FRA_reenstablish_lordship_over_FIC = {
+	fire_only_once = yes
+	available = {
+		FIC = { 
+		  exists = yes 
+		  is_puppet = no
+		  has_war = no
+		  }
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  cost = 20
+	  days_remove = 3
+	  remove_effect = {
+	  puppet = FIC
+	  }
+  }
+###end of fra_post_civil_war
+}

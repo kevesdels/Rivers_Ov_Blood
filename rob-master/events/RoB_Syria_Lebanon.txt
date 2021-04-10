@@ -195,6 +195,7 @@ country_event = {
       is_puppet = no 
       has_war = no 
     }
+    NOT = { has_country_flag = hjz_total_defeat }
     OR = {
       has_country_flag = HJZ_all_in
       has_country_flag = HJZ_support_MOS
@@ -366,10 +367,17 @@ country_event = {
     }
   
   option = {
-      name = syrialeb.15.a
+      name = syrialeb.15.b
       ai_chance = { factor = 0 }
       declare_war_on = { target = SYR  type = annex_everything }
       set_country_flag = tur_fsl_imperial_borders
+      }
+  ###nope
+  option = {
+      name = "Nope"
+      ai_chance = { 
+      factor = 0 
+      }
       }
   }
 
@@ -447,6 +455,14 @@ country_event = {
       transfer_state = 960
     }
     white_peace = SYR
+    SYR = {
+    if = { limit = { has_war_with = BUL }
+    white_peace = BUL
+  }
+    if = { limit = { has_war_with = ALB }
+    white_peace = ALB
+  }
+  }
     add_war_support = 0.10
     add_political_power = 100
     set_country_flag = tur_got_np_syr
@@ -541,6 +557,7 @@ country_event = {
   option = {
     name = "Sure"
     ai_chance = { factor = 6 }
+    add_manpower = -5000
     SYR = { country_event = { id = syrialeb.20 days = 3 } }
     }
 
@@ -618,7 +635,9 @@ mean_time_to_happen = { days = 1 }
   ###Aid rebels directly 
   option = {
     name = syrialeb.22.a
-    ai_chance = { factor = 3 }
+    ai_chance = { 
+    factor = 3 
+    }
     create_faction = "United Islam Front"
 		add_to_faction = MOS
     }
@@ -626,7 +645,9 @@ mean_time_to_happen = { days = 1 }
   ###All in
   option = {
       name = syrialeb.22.b
-      ai_chance = { factor = 6 }
+      ai_chance = { 
+        factor = 6 
+      }
       declare_war_on = { target = SYR  type = annex_everything }
       add_political_power = 100
       add_manpower = 5000
@@ -748,24 +769,25 @@ country_event = {
     if = { limit = { has_country_flag = HJZ_support_MOS }
     clr_country_flag = HJZ_support_MOS
     }
+    set_country_flag = hjz_total_defeat
     if = {
-      limit = { OR = { 946 = { is_controlled_by = HJZ }  946 = { is_controlled_by = SYR } } }
+      limit = { OR = { 946 = { is_controlled_by = HJZ }  946 = { is_controlled_by = SYR } 946 = { is_controlled_by = FRA } } }
       SYR = { transfer_state = 946 }
     }
     if = {
-      limit = { OR = { 291 = { is_controlled_by = HJZ }  291 = { is_controlled_by = SYR } } }
+      limit = { OR = { 291 = { is_controlled_by = HJZ }  291 = { is_controlled_by = SYR } 291 = { is_controlled_by = FRA } } }
       SYR = { transfer_state = 291 }
     }
     if = {
-      limit = { OR = { 656 = { is_controlled_by = HJZ }  656 = { is_controlled_by = SYR } } }
+      limit = { OR = { 656 = { is_controlled_by = HJZ }  656 = { is_controlled_by = SYR } 656 = { is_controlled_by = FRA } } }
       SYR = { transfer_state = 656 }
     }
     if = {
-      limit = { OR = { 945 = { is_controlled_by = HJZ }  945 = { is_controlled_by = SYR } } }
+      limit = { OR = { 945 = { is_controlled_by = HJZ }  945 = { is_controlled_by = SYR } 945 = { is_controlled_by = FRA } } }
       SYR = { transfer_state = 945 }
     }
     if = {
-      limit = { OR = { 554 = { is_controlled_by = HJZ }  554 = { is_controlled_by = SYR } } }
+      limit = { OR = { 554 = { is_controlled_by = HJZ }  554 = { is_controlled_by = SYR } 554 = { is_controlled_by = FRA } } }
       SYR = { transfer_state = 554 }
     }
   }
@@ -786,6 +808,7 @@ country_event = {
     tag = MOS
    TUR = { has_country_flag = tur_got_np_syr }
    MOS = { surrender_progress < 0.1 }
+   SYR = { surrender_progress > 0.1 }
    has_war_with = SYR
    NOT = { SYR = { has_war_with = HJZ } }
   }
@@ -837,13 +860,15 @@ country_event = {
     }
    NOT = { has_country_flag = HJZ_all_in }
   }
-  mean_time_to_happen = { days = 7 }
+  mean_time_to_happen = { days = 1 }
   
   ###attacks syria
   option = {
     name = "Yes"
-    ai_chance = { factor = 10 }
-      declare_war_on = { target = SYR  type = annex_everything }
+    ai_chance = { 
+      factor = 200 
+    }
+      create_wargoal = { target = SYR  type = annex_everything }
       add_political_power = 100
       add_manpower = 5000
       553 = { add_core_of = HJZ }
@@ -856,7 +881,7 @@ country_event = {
   ### does not attack
   option = {
     name = "No"
-    ai_chance = { factor = 0 }
+    ai_chance = { factor = 1 }
     }
   }
 
@@ -995,8 +1020,8 @@ country_event = {
 ###Syrialeb:French Aid Arrives
 country_event = {
 id = syrialeb.1001
-title = syrialeb.10.t
-desc = syrialeb.10.d
+title = syrialeb.1001.t
+desc = syrialeb.1001.d
 fire_only_once = yes
 trigger = { 
 tag = SYR
@@ -1006,7 +1031,7 @@ NOT = { FRA = { has_war = yes } }
 mean_time_to_happen = { days = 1 }
 
 option = {
-name = syrialeb.10.a
+name = syrialeb.1001.a
 SYR = { load_oob = "FSL_FRA_AID" }
 
 }

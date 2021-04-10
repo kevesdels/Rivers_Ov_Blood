@@ -1450,43 +1450,5 @@ add_stability =-0.5
 
 }
 
-##POST CIVIL WAR REPUPPET COLONIES
-country_event = { 
-id = rob_france.34
-title = rob_france.34.t
-desc = rob_france.34.d
-fire_only_once = yes
-trigger = {
-	OR = {
-		tag = FRS
-		tag = FRA
-		tag = FRR
-		tag = FRL
-		}
-		has_war = no
-		SYR = { NOT = { is_puppet = no } }
-		FEA = { NOT = { is_puppet = no } }
-		FWA = { NOT = { is_puppet = no } }
-		FIC = { NOT = { is_puppet = no } }
-}
-
-option = { 
-name = rob_france.34.a
-if = { limit = { SYR = { exists = yes } } 
-puppet = SYR 
-}
-if = { limit = { FEA = { exists = yes } } 
-puppet = FEA 
-}
-if = { limit = { FWA = { exists = yes } } 
-puppet = FWA 
-}
-if = { limit = { FIC = { exists = yes } } 
-puppet = FIC 
-}
-
-}
-
-}
 
 
