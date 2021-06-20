@@ -277,7 +277,7 @@ option = { ###liberate French Socialist Republic
   name = "Liberate French State"
   ai_chance = { factor = 150 }
   trigger = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes }
-  puppet = FRR
+  puppet = FRP
   every_owned_state = {
     limit = { 
      NOT = {
@@ -1635,6 +1635,9 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }  
+ hidden_effect = {
+  LIT = { remove_ideas = { pelekists_rising semi_loyal_military pearl_of_stability } }
+ }
  }
 
  option = {
@@ -1651,6 +1654,9 @@ country_event = {
 	SAG = { transfer_state = PREV }
   }
   puppet = LIT
+  hidden_effect = {
+    LIT = { remove_ideas = { pelekists_rising semi_loyal_military pearl_of_stability samogitian_identity } }
+  }
   every_owned_state = {
     limit = { 
      NOT = {
@@ -2674,6 +2680,7 @@ option = { ###liberate French Socialist Republic
   GER = { set_cosmetic_tag = GER_reactionary }
   hidden_effect = {
   GER = {
+  GER = { remove_ideas = { spartakus_triumphant rampant_corruption german_partisans } }
   set_party_name = { ideology = social_liberal long_name = "Fortschrittliche Volkspartei" name = "FVP" }
   set_party_name = { ideology = conservative long_name = "Deutschkonservative Partei" name = "DkP" }
   set_party_name = { ideology = authoritharian long_name = "Deutsche Generäle" name = "DG" }
@@ -2767,6 +2774,7 @@ option = { ###liberate French Socialist Republic
   puppet = GER
   GER = { set_cosmetic_tag = GER_reactionary }
  hidden_effect = {
+  GER = { remove_ideas = { spartakus_triumphant rampant_corruption german_partisans } }
   GER = {
   set_party_name = { ideology = social_liberal long_name = "Fortschrittliche Volkspartei" name = "FVP" }
   set_party_name = { ideology = conservative long_name = "Deutschkonservative Partei" name = "DkP" }

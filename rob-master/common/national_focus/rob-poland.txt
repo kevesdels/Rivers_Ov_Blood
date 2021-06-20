@@ -18,6 +18,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		available = {
+			has_country_flag = pol_politics
+		}
 		completion_reward = {
 			navy_experience = 50
 			865 = {
@@ -73,9 +76,19 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
-		prerequisite = { focus = POL_the_battle_for_relevancy  }
+		available = {
+			784 = { is_owned_by = POL }
+			LIT = { exists = no }
+		}
+		prerequisite = { 
+			focus = POL_the_battle_for_relevancy  
+		}
 		completion_reward = {
+			hidden_effect = {
+				set_cosmetic_tag = POL_monarchy_2
+				}
 			custom_effect_tooltip = pol_tt_1
+			
 		}
 	}
 
@@ -149,6 +162,11 @@ focus_tree = {
 		x = 17
 		y = 0
 		cost = 10
+		available = {
+			hidden_trigger = {
+			has_country_flag = pol_never_set_country_flag_xd
+			}
+		}
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
@@ -302,6 +320,7 @@ focus_tree = {
 		mutually_exclusive = { focus = POL_bolshevist_takeover  }
 		completion_reward = {
 			add_popularity = { ideology = national_socialist   popularity = -0.12 }
+			add_popularity = { ideology = authoritharian   popularity = -0.04 }
 			remove_ideas = {
 				pol_colonels
 			}
@@ -493,7 +512,7 @@ focus_tree = {
 				picture = "Jozef_Haller.dds"
 				expire = "1965.1.1"
 				ideology = authoritharian_subtype 
-				traits = {}
+				traits = { army_veteran }
 			}
 			add_popularity = { ideology = authoritharian  popularity = 0.2 }
 			set_country_flag = pol_politics
@@ -711,8 +730,14 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
-		prerequisite = { focus = POL_welcome_foreign_immigrants  focus = POL_from_the_ministry_of_public_security  }
-		mutually_exclusive = { focus = POL_hand_in_hand_with_spartacists  focus = POL_the_west_knows_best  }
+		available = { 
+			has_country_flag = pol_depression_gone
+		}
+		prerequisite = { 
+			focus = POL_welcome_foreign_immigrants  
+			focus = POL_from_the_ministry_of_public_security  
+		}
+		mutually_exclusive = { focus = POL_hand_in_hand_with_spartacists  focus = POL_the_west_knows_best focus = POL_the_warsaw_pact }
 		completion_reward = {
 			add_ideas = {
 				pol_isolasionism
@@ -734,12 +759,17 @@ focus_tree = {
 					
 		}
 		available = {
-			GER = {
-				exists = yes
-				SOCIALIST_ALIGNED_GOVERNMENT = yes
+			AND = {
+				GER = {
+					exists = yes
+					SOCIALIST_ALIGNED_GOVERNMENT = yes
+				}
+				has_country_flag = pol_depression_gone
 			}
 		}
-		prerequisite = { focus = POL_from_the_ministry_of_public_security  }
+		prerequisite = { 
+			focus = POL_from_the_ministry_of_public_security 
+		 }
 		mutually_exclusive = { focus = POL_silent_solitude  focus = POL_the_warsaw_pact  }
 		completion_reward = {
 			GER = { country_event = { id = rob_poland.4 days = 3 } }
@@ -759,7 +789,12 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
-		prerequisite = { focus = POL_from_the_ministry_of_public_security  }
+		available = { 
+			has_country_flag = pol_depression_gone
+		}
+		prerequisite = { 
+			focus = POL_from_the_ministry_of_public_security 
+		 }
 		mutually_exclusive = { focus = POL_silent_solitude  focus = POL_hand_in_hand_with_spartacists  }
 		completion_reward = {
 			create_faction = "Warsaw Pact"
@@ -918,7 +953,7 @@ focus_tree = {
 				picture = "Portrait_Poland_Edward_Smigy_Rydz.tga"
 				expire = "1965.1.1"
 				ideology = authoritharian_subtype 
-				traits = {}
+				traits = { the_colonel }
 			}
 			set_country_flag = pol_politics
 		}
@@ -1117,6 +1152,13 @@ focus_tree = {
 				   instant_build = yes
 				  }
 			  }
+			10 = { 
+				add_building_construction = {
+				  type = radar_station 
+				   level = 1
+				   instant_build = yes
+				  }
+			  }
 		}
 	}
 
@@ -1250,6 +1292,7 @@ focus_tree = {
 				ideology = reactionary 
 				long_name = "Endecja" 
 				name = "ND" 
+				set_country_flag = pol_politics
 			}
 			}
 			create_country_leader = {
@@ -1260,7 +1303,6 @@ focus_tree = {
 				ideology = military_junta 
 				traits = {}
 			}
-			set_country_flag = pol_politics
 		}
 	}
 
@@ -1371,6 +1413,10 @@ focus_tree = {
 				election_frequency = 72
 				elections_allowed = no
 			}
+			hidden_effect = {
+				set_cosmetic_tag = POL_ONR
+				set_country_flag = pol_politics
+			}
 			add_popularity = { ideology = reactionary  popularity = 0.2 }
 		}
 	}
@@ -1407,7 +1453,16 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
-		prerequisite = { focus = POL_the_red_poppy_blossoms  focus = POL_the_eagle_peaks_its_head  }
+		available = { 
+				has_country_flag = pol_depression_gone
+				custom_effect_tooltip = pol_tt_2
+			}
+		prerequisite = { 
+			focus = POL_the_eagle_peaks_its_head  
+		}
+		prerequisite = { 
+			focus = POL_the_red_poppy_blossoms  
+		}
 		mutually_exclusive = { focus = POL_the_west_knows_best  }
 		completion_reward = {
 			create_faction = "Międzymorze"
@@ -1427,7 +1482,15 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
-		prerequisite = { focus = POL_the_red_poppy_blossoms  focus = POL_the_eagle_peaks_its_head  }
+		available = { 
+			has_country_flag = pol_depression_gone
+		}
+		prerequisite = { 
+			focus = POL_the_eagle_peaks_its_head  
+		}
+		prerequisite = { 
+			focus = POL_the_red_poppy_blossoms  
+		}
 		mutually_exclusive = { focus = POL_the_legacy_of_pilsuduski  focus = POL_silent_solitude  }
 		completion_reward = {
 			add_political_power = 120
@@ -1451,18 +1514,7 @@ focus_tree = {
 		prerequisite = { focus = POL_delegation_to_the_soviets  }
 		mutually_exclusive = { focus = POL_invitation_to_warsaw_pact  }
 		completion_reward = {
-			diplomatic_relation = {
-				country = SOV
-				relation = non_aggression_pact
-				active = yes
-		}
-		SOV = {
-			diplomatic_relation = {
-				country = POL
-				relation = non_aggression_pact
-				active = yes
-		}
-		}
+			SOV = { country_event = { id = rob_poland.11 days = 3 } }
 		}
 	}
 
@@ -1700,6 +1752,7 @@ focus_tree = {
 		mutually_exclusive = { focus = POL_convince_through_force  }
 		completion_reward = {
 		   UKR = { country_event = { id = rob_poland.6 days = 3 } }
+		   custom_effect_tooltip = pol_tt_3
 		}
 	}
 
@@ -1766,6 +1819,7 @@ focus_tree = {
 					
 		}
 		prerequisite = { focus = POL_the_ukrainian_question  }
+		mutually_exclusive = { focus = POL_land_for_alliance  }
 		completion_reward = {
 			if = {
 				limit = { UKR = { exists = yes } }
@@ -2008,10 +2062,12 @@ focus_tree = {
 			}
 			hidden_effect = {
 			set_party_name = { 
-				ideology = reactionary 
-				long_name = "Polscy Monarchiści" 
-				name = "Polscy Monarchiści" 
-			}
+					ideology = reactionary 
+					long_name = "Polscy Monarchiści" 
+					name = "Polscy Monarchiści" 
+				}
+			set_cosmetic_tag = POL_monarchy
+			set_country_flag = pol_politics
 			}
 			create_country_leader = {
 				name = "Fryderyk Krystian"
@@ -2019,7 +2075,7 @@ focus_tree = {
 				picture = "Georg_Crown_Prince_of_Saxony.tga"
 				expire = "1965.1.1"
 				ideology = reactionary_monarchy 
-				traits = {}
+				traits = { new_monarch }
 			}
 		}
 	}
@@ -2203,6 +2259,7 @@ focus_tree = {
 				  }
 				}
 			}
+			custom_effect_tooltip = pol_tt_5
 		}
 	}
 
@@ -2270,25 +2327,82 @@ focus_tree = {
 		prerequisite = { focus = POL_use_antigerman_sentiment  }
 		completion_reward = {
 			if = {
-				limit = { has_completed_focus = POL_seek_friends_in_italy }
-				ITA = { country_event = { id = spartakus_germany.26 days = 3 } }
+				limit = { 
+					has_completed_focus = POL_seek_friends_in_italy 
+					ITA = {
+						NOT = {
+							OR = {
+								is_in_faction_with = GER
+								is_puppet_of = GER
+							}
+						}
+					}
+				}
+				ITA = { country_event = { id = rob_poland.10 days = 3 } }
 			}
 			if = {
-				limit = { has_completed_focus = POL_seek_friends_in_france }
+				limit = { 
+					has_completed_focus = POL_seek_friends_in_france 
+				}
 
-				if = { limit = { FRA = { has_country_flag = pol_french_eco_pact } }
-				FRA = { country_event = { id = spartakus_germany.26 days = 3 } }
+				if = { 
+					limit = { 
+						FRA = { has_country_flag = pol_french_eco_pact } 
+						FRA = {
+							NOT = {
+								OR = {
+									is_in_faction_with = GER
+									is_puppet_of = GER
+								}
+							}
+						}
+					}
+				FRA = { country_event = { id = rob_poland.10 days = 3 } }
 				}
-				if = { limit = { FRL = { has_country_flag = pol_french_eco_pact } }
-				FRL = { country_event = { id = spartakus_germany.26 days = 3 } }
+				if = { 
+					limit = { 
+					FRL = { has_country_flag = pol_french_eco_pact } 
+					FRL = {
+						NOT = {
+							OR = {
+								is_in_faction_with = GER
+								is_puppet_of = GER
+							}
+						}
+					}
 				}
-				if = { limit = { FRP = { has_country_flag = pol_french_eco_pact } }
-				FRP = { country_event = { id = spartakus_germany.26 days = 3 } }
+				FRL = { country_event = { id = rob_poland.10 days = 3 } }
 				}
-				if = { limit = { FRR = { has_country_flag = pol_french_eco_pact } }
-				FRR = { country_event = { id = spartakus_germany.26 days = 3 } }
+				if = { 
+					limit = { 
+					FRP = { has_country_flag = pol_french_eco_pact } 
+					FRP = {
+						NOT = {
+							OR = {
+								is_in_faction_with = GER
+								is_puppet_of = GER
+							}
+						}
+					}
+				}
+				FRP = { country_event = { id = rob_poland.10 days = 3 } }
+				}
+				if = { 
+					limit = { 
+						FRR = { has_country_flag = pol_french_eco_pact } 
+						FRR = {
+							NOT = {
+								OR = {
+									is_in_faction_with = GER
+									is_puppet_of = GER
+								}
+							}
+						}
+					}
+				FRR = { country_event = { id = rob_poland.10 days = 3 } }
 				}
 			}
+			custom_effect_tooltip = pol_tt_6
 		}
 	}
 
@@ -2593,7 +2707,7 @@ focus_tree = {
 					}
 				}
 			}
-
+			custom_effect_tooltip = pol_tt_4
 		}
 	}
 
@@ -2636,11 +2750,11 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { DBR = { exists = yes } }
-				create_wargoal = { target = DBR  type = annex_everything }
+				create_wargoal = { target = DBR  type = liberate_wargoal }
 			}
 			if = {
 				limit = { BLR = { exists = yes } }
-				create_wargoal = { target = DBR  type = annex_everything }
+				create_wargoal = { target = DBR  type = liberate_wargoal }
 			}
 		}
 	}
@@ -2682,11 +2796,11 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { UKR = { exists = yes } }
-				create_wargoal = { target = DBR  type = annex_everything }
+				create_wargoal = { target = DBR  type = liberate_wargoal }
 			}
 			if = {
 				limit = { FTT = { exists = yes } }
-				create_wargoal = { target = DBR  type = annex_everything }
+				create_wargoal = { target = DBR  type = liberate_wargoal }
 			}
 		}
 	}
@@ -2972,6 +3086,7 @@ focus_tree = {
 				limit = { SOV = { has_non_aggression_pact_with = POL } }
 				POL = { remove_from_faction = SOV }
 			}
+			custom_effect_tooltip = "We will distance ourselves from Soviets"
 		}
 	}
 
@@ -2990,6 +3105,7 @@ focus_tree = {
 					
 		}
 		prerequisite = { focus = POL_secure_baltics  }
+		mutually_exclusive = { focus = POL_backstab_soviets  }
 		completion_reward = {
 			add_war_support = 0.05
 			add_stability = 0.05
@@ -3016,9 +3132,10 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = POL_hand_in_hand_with_spartacists  }
-		mutually_exclusive = { focus = POL_backstab_soviets  }
 		completion_reward = {
-			add_to_tech_sharing_group = german_research
+			add_ideas = {
+				pol_german_tech
+			}
 		}
 	}
 
@@ -3509,7 +3626,7 @@ focus_tree = {
 		y = 3
 		cost = 5
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = POL_expand_the_rail_network  }
 		completion_reward = {
@@ -3605,7 +3722,7 @@ focus_tree = {
 		y = 4
 		cost = 5
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = POL_reintroduce_the_marka  }
 		completion_reward = {
@@ -3631,6 +3748,9 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = { 
 				pol_depression_4
+			}
+			hidden_effect = {
+				set_country_flag = pol_depression_gone
 			}
 		}
 	}
@@ -4394,6 +4514,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = POL_mechanization_of_the_army  }
 		prerequisite = { focus = POL_missile_research }
+		mutually_exclusive = { focus = POL_tank_killers  }
 		completion_reward = {
 			add_tech_bonus = {
 				name = rocket_bonus

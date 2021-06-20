@@ -77,8 +77,13 @@ remove_ideas = {
 set_country_flag = kaiser_dead
 
 
-hidden_effect = { retire_country_leader = yes }
-hidden_effect = { create_country_leader = {
+hidden_effect = { 
+	retire_country_leader = yes 
+	set_politics = {
+		ruling_party = reactionary
+		elections_allowed = no
+	 }
+	create_country_leader = {
 	name = "Prussian Reichstag"
 	desc = ""
 	picture = "Reichstag.tga"

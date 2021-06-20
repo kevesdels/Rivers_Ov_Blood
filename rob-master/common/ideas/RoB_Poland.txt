@@ -947,5 +947,21 @@ ideas = {
 			political_power_gain = 0.15
 			}
 		}
+		pol_german_tech = {
+			picture = GFX_idea_austrian_socialist_paramilitarieswer
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			research_speed_factor = 0.05
+			}
+		}
 	}
 }

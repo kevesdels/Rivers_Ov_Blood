@@ -20,9 +20,10 @@ PRS_foreign_policy = {
  complete_effect = {
   add_stability = 0.2
   set_cosmetic_tag = PRS_EMP
+  set_faction_name = "German Sphere"
  }
  }
- PRS_reclaim_homeland = {
+ PRS_reclaim_homeland = { ####fall barbadosssa
  cost = 25
  fire_only_once = yes
  available = {
@@ -43,7 +44,7 @@ PRS_foreign_policy = {
   every_state = {
     limit = { is_core_of = GER }
 	add_core_of = PRS
-}
+  }
  }
  }
   PRS_polish_campaing = {
@@ -82,6 +83,7 @@ PRS_foreign_policy = {
  803 = { add_core_of = PRS }
  67 = { add_core_of = PRS }
  762 = { add_core_of = PRS }
+ 802 = { add_core_of = PRS }
  }
  }
  
@@ -146,6 +148,7 @@ PRS_invite_ubd = {
   base = 200
  }
  available = {
+ EST = { exists = yes }
  date > 1935.3.1
    NOT = { 
 	has_country_leader = {
@@ -181,6 +184,7 @@ PRS_german_expansion = {
   has_full_control_of_state = 50
  }
  complete_effect = {
+  28 = { add_core_of = PRS }
   every_country = {
 	limit = { controls_state = 28 }
 	PRS = { 
@@ -267,6 +271,7 @@ PRS_german_expansion = {
   has_full_control_of_state = 42
  }
  complete_effect = {
+  8 = { add_core_of = PRS }
   every_country = {
 	limit = { controls_state = 8 }
 	PRS = { 
@@ -286,7 +291,6 @@ PRS_german_expansion = {
  }
  available = {
   has_war = no
-  8 = { is_owned_by = PRS }
   NOT = {
   813 = { is_owned_by = PRS }
   812 = { is_owned_by = PRS }

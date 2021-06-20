@@ -443,7 +443,15 @@ country_event = {
   LIT = { country_event = { id = ubd.22 days = 3} }
   GER = { country_event = { id = ubd.23 days = 3} }
   FIN = { country_event = { id = ubd.24 days = 3} }
-  PRS = { country_event = { id = ubd.25 days = 3} }
+  if = {
+    limit = {
+      PRS = {
+        NOT = { has_country_flag = rosenberg_victory }
+        NOT = { has_country_flag = vyddunas_victory }
+        }
+        PRS = { country_event = { id = ubd.25 days = 3} }
+      }
+  }
   EST = { set_country_flag = UBD_CW }
   }
  }
@@ -523,6 +531,11 @@ country_event = {
  name = "Naturally we will aid anti-german sentiments. Send guns!"
   ai_chance = {
       factor = 2
+    }
+    trigger = {
+      AND = {
+        NOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes }
+      }
     }
      POL = {
       send_equipment = {
@@ -806,11 +819,6 @@ country_event = {
   ai_chance = {
       factor = 3
     }
-  if = {
-    limit = {
-    NOT = { has_country_flag = rosenberg_victory }
-    NOT = { has_country_flag = vyddunas_victory }
-    }
     PRS = {
       send_equipment = {
       equipment = infantry_equipment
@@ -819,7 +827,6 @@ country_event = {
       }
     }
     UBD = { country_event = { id = ubd.26 days = 1} }
-  }
  }
  
  option = {
@@ -827,14 +834,8 @@ country_event = {
   ai_chance = {
       factor = 3
     }
-  if = {
-    limit = {
-    NOT = { has_country_flag = rosenberg_victory }
-    NOT = { has_country_flag = vyddunas_victory }
-    }
     PRS = { add_manpower = -4000}
     UBD = { country_event = { id = ubd.33 days = 3} }
-  }
  }
 }
 
