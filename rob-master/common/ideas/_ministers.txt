@@ -412,6 +412,199 @@ ideas = {
       hog_agrarian
      }   
     }
+
+   ###POLAND
+   POL_wladyslaw_gomulka = {
+   allowed = { original_tag = POL }
+   picture = POL_Wladyslaw_Gomulka
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = national_socialist
+	}
+	}
+	
+   traits = {
+    national_socialist_min
+    goverment_head
+    hog_vanguardist_socialist
+    }   
+   }
+
+   POL_boleslaw_bierut = {
+   allowed = { original_tag = POL }
+   picture = POL_boleslaw_bierut
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = socialist
+	}
+	}
+	
+   traits = {
+    socialist_min
+    goverment_head
+    hog_socialist_revolutionary
+    }   
+   }
+
+   POL_stanislaw_thugutt = {
+   allowed = { original_tag = POL }
+   picture = POL_stanislaw_thugutt
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+	}
+	}
+	
+   traits = {
+    social_liberal_min
+    goverment_head
+    hog_staunch_democrat
+    }   
+   }
+
+   POL_jozef_haller_rob = {
+   allowed = { original_tag = POL }
+   picture = POL_jozef_haller_rob
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = authoritharian
+   NOT = { has_country_flag = pol_monarchy_active }
+	}
+	}
+	
+   traits = {
+   authoritharian_min
+   goverment_head
+   hog_war_hero
+    }   
+   }
+
+   POL_walery_slawek = {
+   allowed = { original_tag = POL }
+   picture = POL_walery_slawek
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+	}
+	}
+	
+   traits = {
+   social_democracy_min
+   goverment_head
+   hog_agrarian
+    }   
+   }
+
+   POL_wincenty_witos = {
+   allowed = { original_tag = POL }
+   picture = POL_wincenty_witos
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+	}
+	}
+	
+   traits = {
+   conservative_min
+   goverment_head
+   hog_capitalist
+    }   
+   }
+
+   POL_edward_rydz_smigly_rob = {
+   allowed = { original_tag = POL }
+   picture = POL_edward_rydz_smigly_rob
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = authoritharian
+   NOT = { has_country_flag = pol_monarchy_active }
+	}
+	}
+	
+   traits = {
+   authoritharian_min
+   goverment_head
+   hog_old_guard
+    }   
+   }
+
+   POL_roman_dmowski = {
+   allowed = { original_tag = POL }
+   picture = POL_roman_dmowski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = reactionary
+	}
+	}
+	
+   traits = {
+   reactionary_min
+   goverment_head
+   hog_reactionary
+    }   
+   }
+
+   POL_henryk_rossman = {
+   allowed = { original_tag = POL }
+   picture = POL_henryk_rossman
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = reactionary
+	}
+	}
+	
+   traits = {
+   reactionary_min
+   goverment_head
+   hog_incompetant_leader
+    }   
+   }
+
+   POL_fryderyk_krystian = {
+   allowed = { original_tag = POL }
+   picture = POL_fryderyk_krystian
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = reactionary
+   has_country_flag = pol_monarchy_active
+	}
+	}
+	
+   traits = {
+   reactionary_min
+   goverment_head
+   hog_monarch
+    }   
+   }
+
+   POL_jozef_pilsudzki = {
+   allowed = { original_tag = POL }
+   picture = POL_jozef_pilsudzki
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+	has_government = authoritharian
+   NOT = { has_country_flag = pol_pilsuduski_death }
+	}
+	}
+	
+   traits = {
+   authoritharian_min
+   goverment_head
+   hog_war_hero
+    }   
+   }
+
   }
  interior_minister = {
  
@@ -851,6 +1044,181 @@ ideas = {
     im_efficent_planner
     }   
    }
+   ###POLAND
+
+   POL_mieczyslaw_moczar_im = {
+   allowed = { original_tag = POL }
+   picture = POL_mieczyslaw_moczar
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = national_socialist
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    interior_minister
+    im_xenophone
+    }   
+   }
+
+   POL_stefan_krolikowski_im = {
+   allowed = { original_tag = POL }
+   picture = POL_stefan_krolikowski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = SOCIALIST_ALIGNED_GOVERNMENT
+	}
+	}
+   
+   traits = {
+    socialist_min
+    interior_minister
+    im_administrator
+    }   
+   }
+
+   POL_herman_diamand_im = {
+   allowed = { original_tag = POL }
+   picture = POL_herman_diamand
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = DEMOCRATIC_ALIGNED_GOVERNMENT
+	}
+	}
+   
+   traits = {
+    social_liberal_min
+    interior_minister
+    im_egalitarian
+    }   
+   }
+
+   POL_felicjan_slawoj_skladkowski_im = {
+   allowed = { original_tag = POL }
+   picture = POL_felicjan_slawoj_skladkowski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = authoritharian
+    NOT = { has_country_flag = pol_monarchy_active }
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    interior_minister
+    im_modernizer
+    }   
+   }
+
+   POL_adam_skwarczynski_im = {
+   allowed = { original_tag = POL }
+   picture = POL_adam_skwarczynski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = DEMOCRATIC_ALIGNED_GOVERNMENT
+	}
+	}
+   
+   traits = {
+    social_democracy_min
+    interior_minister
+    im_union_background
+    }   
+   }
+
+   POL_tadeusz_holowko_im = {
+   allowed = { original_tag = POL }
+   picture = POL_tadeusz_holowko
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = DEMOCRATIC_ALIGNED_GOVERNMENT
+	}
+	}
+   
+   traits = {
+    conservative_min
+    interior_minister
+    im_egalitarian
+    }   
+   }
+
+   POL_bronislaw_pieracki_im = {
+   allowed = { original_tag = POL }
+   picture = POL_bronislaw_pieracki
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = authoritharian
+    NOT = { has_country_flag = pol_monarchy_active }
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    interior_minister
+    im_militarist
+    }   
+   }
+
+   POL_stanislaw_grabski_im = {
+   allowed = { original_tag = POL }
+   picture = POL_stanislaw_grabski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = reactionary
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    interior_minister
+    im_xenophone
+    }   
+   }
+
+   POL_zygmunt_berezowski_im = {
+   allowed = { original_tag = POL }
+   picture = POL_zygmunt_berezowski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = reactionary
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    interior_minister
+    im_administrator
+    }   
+   }
+
+   POL_leon_aleksander_sapieha_im = {
+   allowed = { original_tag = POL }
+   picture = POL_leon_aleksander_sapieha
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = reactionary
+    has_country_flag = pol_monarchy_active
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    interior_minister
+    im_aristocrat
+    }   
+   }
+   
   }
   
   foreign_head = {
@@ -1288,6 +1656,182 @@ ideas = {
     fm_neutral_bystander
     }   
    }
+
+   ###POLAND
+
+   POL_sylwester_wojewodzki_fm = {
+   allowed = { original_tag = POL }
+   picture = POL_sylwester_wojewodzki
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = national_socialist
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    foreign_head
+    fm_militant_socialist
+    }   
+   }
+
+   POL_stanislaw_thugutt_fm = {
+   allowed = { original_tag = POL }
+   picture = POL_stanislaw_thugutt
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = SOCIALIST_ALIGNED_GOVERNMENT
+	}
+	}
+   
+   traits = {
+    socialist_min
+    foreign_head
+    fm_realpolitik
+    }   
+   }
+
+   POL_jan_dabski_fm = {
+   allowed = { original_tag = POL }
+   picture = POL_jan_dabski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = DEMOCRATIC_ALIGNED_GOVERNMENT
+	}
+	}
+   
+   traits = {
+    social_liberal_min
+    foreign_head
+    fm_realpolitik
+    }   
+   }
+
+   POL_tadeusz_schaetzel_fm = {
+   allowed = { original_tag = POL }
+   picture = POL_tadeusz_schaetzel
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = authoritharian
+    NOT = { has_country_flag = pol_monarchy_active }
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    foreign_head
+    fm_imperialist
+    }   
+   }
+
+   POL_tytus_filipowicz_fm = {
+   allowed = { original_tag = POL }
+   picture = POL_tytus_filipowicz
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = DEMOCRATIC_ALIGNED_GOVERNMENT
+	}
+	}
+   
+   traits = {
+    social_democracy_min
+    foreign_head
+    fm_isolationism
+    }   
+   }
+
+   POL_ignacy_moscicki_fm = {
+   allowed = { original_tag = POL }
+   picture = POL_ignacy_moscicki
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = DEMOCRATIC_ALIGNED_GOVERNMENT
+	}
+	}
+   
+   traits = {
+    conservative_min
+    foreign_head
+    fm_neutral_bystander
+    }   
+   }
+
+   POL_jozef_beck_rob_fm = {
+   allowed = { original_tag = POL }
+   picture = POL_jozef_beck_rob
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = authoritharian
+    NOT = { has_country_flag = pol_monarchy_active }
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    foreign_head
+    fm_imperialist
+    }   
+   }
+
+   POL_aleksander_skrzynski_fm = {
+   allowed = { original_tag = POL }
+   picture = POL_aleksander_skrzynski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = reactionary
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    foreign_head
+    fm_realpolitik
+    }   
+   }
+
+   POL_jan_mosdorf_fm = {
+   allowed = { original_tag = POL }
+   picture = POL_jan_mosdorf
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = reactionary
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    foreign_head
+    fm_isolationism
+    }   
+   }
+
+   POL_maurycy_klemens_zamoyski_fm = {
+   allowed = { original_tag = POL }
+   picture = POL_maurycy_klemens_zamoyski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = reactionary
+    has_country_flag = pol_monarchy_active
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    foreign_head
+    fm_realpolitik
+    }   
+   }
+
  }
  
  economy_head = {
@@ -1695,6 +2239,148 @@ ideas = {
     em_corporatist
     }   
    }
+
+   ###POLAND
+
+   POL_marian_spychalski_em = {
+   allowed = { original_tag = POL }
+   picture = POL_marian_spychalski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = national_socialist
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    economy_head
+    em_central_planner
+    }   
+   }
+
+   POL_edward_osobka_morawski_em = {
+   allowed = { original_tag = POL }
+   picture = POL_edward_osobka_morawski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = SOCIALIST_ALIGNED_GOVERNMENT
+	}
+	}
+   
+   traits = {
+    socialist_min
+    economy_head
+    em_market_socialist
+    }   
+   }
+
+   POL_adam_koc_em = {
+   allowed = { original_tag = POL }
+   picture = POL_adam_koc
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = authoritharian
+    NOT = { has_country_flag = pol_monarchy_active }
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    economy_head
+    em_union_man
+    }   
+   }
+
+   POL_leon_kozlowski_em = {
+   allowed = { original_tag = POL }
+   picture = POL_leon_kozlowski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = DEMOCRATIC_ALIGNED_GOVERNMENT
+	}
+	}
+   
+   traits = {
+    social_democracy_min
+    economy_head
+    em_welfare_supporter
+    }   
+   }
+
+   POL_eugeniusz_kwiatkowski_em = {
+   allowed = { original_tag = POL }
+   picture = POL_eugeniusz_kwiatkowski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = DEMOCRATIC_ALIGNED_GOVERNMENT
+	}
+	}
+   
+   traits = {
+    conservative_min
+    economy_head
+    em_market_socialist
+    }   
+   }
+
+   POL_jerzy_zdziechowski_em = {
+   allowed = { original_tag = POL }
+   picture = POL_jerzy_zdziechowski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = authoritharian
+    NOT = { has_country_flag = pol_monarchy_active }
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    economy_head
+    em_welfare_supporter
+    }   
+   }
+
+   POL_adam_doboszynski_em = {
+   allowed = { original_tag = POL }
+   picture = POL_adam_doboszynski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = reactionary
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    economy_head
+    em_corporatist
+    }   
+   }
+
+   POL_stefan_tyszkiewicz_em = {
+   allowed = { original_tag = POL }
+   picture = POL_stefan_tyszkiewicz
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = reactionary
+    has_country_flag = pol_monarchy_active
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    economy_head
+    em_autarchist
+    }   
+   }
+
   }
   
   defense_minister = {
@@ -2142,6 +2828,148 @@ ideas = {
     dm_elitist
     }   
    }
+
+   ###POLAND
+
+   POL_edward_ochab_dm = {
+   allowed = { original_tag = POL }
+   picture = POL_edward_ochab
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = national_socialist
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    defense_minister
+    dm_mass_conscription_supporter
+    }   
+   }
+
+   POL_stanislaw_mikolajczyk_dm = {
+   allowed = { original_tag = POL }
+   picture = POL_stanislaw_mikolajczyk
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = SOCIALIST_ALIGNED_GOVERNMENT
+	}
+	}
+   
+   traits = {
+    socialist_min
+    defense_minister
+    dm_civilian_administator
+    }   
+   }
+
+   POL_ignacy_matuszewski_dm = {
+   allowed = { original_tag = POL }
+   picture = POL_ignacy_matuszewski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = authoritharian
+    NOT = { has_country_flag = pol_monarchy_active }
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    defense_minister
+    dm_oppresor
+    }   
+   }
+
+   POL_edmund_charaszkiewicz_dm = {
+   allowed = { original_tag = POL }
+   picture = POL_edmund_charaszkiewicz
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = DEMOCRATIC_ALIGNED_GOVERNMENT
+	}
+	}
+   
+   traits = {
+    conservative_min
+    defense_minister
+    dm_militarist
+    }   
+   }
+
+   POL_kazimierz_switalski_dm = {
+   allowed = { original_tag = POL }
+   picture = POL_kazimierz_switalski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = authoritharian
+    NOT = { has_country_flag = pol_monarchy_active }
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    defense_minister
+    dm_experienced_soldier
+    }   
+   }
+
+   POL_wojciech_korfanty_dm = {
+   allowed = { original_tag = POL }
+   picture = POL_wojciech_korfanty
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = reactionary
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    interior_minister
+    dm_civilian_administator
+    }   
+   }
+
+   POL_jedrzej_giertych_dm = {
+   allowed = { original_tag = POL }
+   picture = POL_jedrzej_giertych
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = reactionary
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    defense_minister
+    dm_militarist
+    }   
+   }
+
+   POL_adam_tarnowski_dm = {
+   allowed = { original_tag = POL }
+   picture = POL_adam_tarnowski
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = reactionary
+    has_country_flag = pol_monarchy_active
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    defense_minister
+    dm_militarist
+    }   
+   }
+
   }
  }
  

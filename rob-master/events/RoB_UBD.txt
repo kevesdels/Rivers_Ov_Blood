@@ -529,13 +529,9 @@ country_event = {
  }
  option = {
  name = "Naturally we will aid anti-german sentiments. Send guns!"
+  trigger = { ROOT = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes } }
   ai_chance = {
       factor = 2
-    }
-    trigger = {
-      AND = {
-        NOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes }
-      }
     }
      POL = {
       send_equipment = {
@@ -555,6 +551,7 @@ country_event = {
  }
  option = {
  name = "As upholders of libery, we will defend democracy. Send guns!"
+  trigger = { ROOT = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes } }
   ai_chance = {
       factor = 2
     }
@@ -576,6 +573,7 @@ country_event = {
  }
  option = {
  name = "Who would pass opportunity to shot an ancient foe? Send men!"
+ trigger = { ROOT = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes } }
   ai_chance = {
       factor = 3
     }
@@ -586,6 +584,7 @@ country_event = {
  }
  option = {
  name = "Only with direct assistance will freedoms justice prevail. Send men!"
+ trigger = { ROOT = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes } }
   ai_chance = {
       factor = 3
     }
@@ -754,6 +753,7 @@ country_event = {
  }
  option = {
  name = "Lets provide equipment for our democrat brothers"
+ trigger = { ROOT = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes } }
   ai_chance = {
       factor = 2
     }
@@ -768,6 +768,7 @@ country_event = {
  }
   option = {
  name = "Lets provide equipment for our nationalist brothers"
+ trigger = { ROOT = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes } }
   ai_chance = {
       factor = 2
     }
@@ -782,6 +783,7 @@ country_event = {
  }
  option = {
  name = "Find volunteers, Estonian Liberation army will win this battle!"
+ trigger = { ROOT = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes } }
   ai_chance = {
       factor = 3
     }
@@ -790,6 +792,7 @@ country_event = {
  }
 option = {
  name = "Find volunteers, Estonian democrats will win this battle!"
+ trigger = { ROOT = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes } }
   ai_chance = {
       factor = 3
     }
@@ -863,7 +866,9 @@ country_event = {
 
  option = {
  name = "Yes! Deploy them immediately!"
- LPR = { load_oob = "LPR_CW_V" }
+ hidden_effect = {
+    LPR = { load_oob = "LPR_CW_V" }
+  }
  }
 }
 
@@ -876,7 +881,9 @@ country_event = {
 
  option = {
  name = "Yes! Deploy them immediately!"
- LDF = { load_oob = "LDF_CW_V" }
+  hidden_effect = {
+    LDF = { load_oob = "LDF_CW_V" }
+  }
  }
 }
 
@@ -889,7 +896,9 @@ country_event = {
 
  option = {
  name = "Yes! Deploy them immediately!"
- LNC = { load_oob = "LNC_CW_V" }
+   hidden_effect = {
+    LNC = { load_oob = "LNC_CW_V" }
+  }
  }
 }
 
@@ -902,7 +911,9 @@ country_event = {
 
  option = {
  name = "Yes! Deploy them immediately!"
- ELA = { load_oob = "ELA_CW_V" }
+   hidden_effect = {
+    ELA = { load_oob = "ELA_CW_V" }
+  }
  }
 }
 
@@ -915,7 +926,9 @@ country_event = {
 
  option = {
  name = "Yes! Deploy them immediately!"
- ELP = { load_oob = "ELP_CW_V" }
+  hidden_effect = {
+    ELP = { load_oob = "ELP_CW_V" }
+  }
  }
 }
 
@@ -928,7 +941,9 @@ country_event = {
 
  option = {
  name = "Yes! Deploy them immediately!"
- ECA = { load_oob = "ECA_CW_V" }
+  hidden_effect = {
+   ECA = { load_oob = "ECA_CW_V" }
+  }
  }
 }
 
@@ -941,7 +956,9 @@ country_event = {
 
  option = {
  name = "Yes! Deploy them immediately!"
- EST = { load_oob = "UBD_CW_V" }
+  hidden_effect = {
+   EST = { load_oob = "UBD_CW_V" }
+  }
  }
 }
 
@@ -1251,6 +1268,254 @@ country_event = {
       remove_core_of = LNC
       remove_core_of = LPR
  }
+ }
+
+ }
+
+
+
+###Return land back to civil war side
+country_event = { 
+ id = ubd.40
+ title = "Foreign land"
+ desc = "With war of independence raging on, we have seized lands belonging to our brother nation. We should grant it back to locals, but who deserves it?"
+
+ trigger = {
+
+   ### checks if has land from other civil war niggas (ex: estis have latvian land)
+   OR = {
+     ###es*onians give land
+     AND = {
+       OR = {
+        tag = ELA
+        tag = ELP
+        tag = ECA
+       }
+      any_owned_state = { 
+        OR = {
+            is_core_of = LDF 
+            is_core_of = LNC
+            is_core_of = LPR
+            }
+          }
+        }
+
+      ###Latvians give land
+       AND = {
+       OR = {
+        tag = LDF
+        tag = LNC
+        tag = LPR
+       }
+      any_owned_state = { 
+        OR = {
+            is_core_of = ELA 
+            is_core_of = ELP
+            is_core_of = ECA
+            }
+          }
+        }
+     }
+     ###checks if civil war is active
+     OR = {
+       has_idea = UBD_Estonian_cw
+       has_idea = UBD_Latvian_cw
+     }
+     NOT = { has_country_flag = ubd_i_am_nigger }
+  }
+
+###estonian option
+ option = {
+ name = "The Reds can be trusted"
+ trigger = {
+    OR = {
+        tag = ELA
+        tag = ELP
+        tag = ECA
+       }
+    LPR = { exists = yes }
+ }
+ai_will_do = {
+     	base = 1
+		  
+      modifier = {
+			factor = 100
+			ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes }
+		}
+	}
+  every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = LDF 
+          is_core_of = LNC
+          is_core_of = LPR
+          }
+        }
+      LPR = { transfer_state = PREV }
+    }
+ }
+
+###LATVIAN option
+ option = {
+ name = "The Reds can be trusted"
+ trigger = {
+    OR = {
+        tag = LDF
+        tag = LNC
+        tag = LPR
+       }
+    ECA = { exists = yes }
+ }
+ai_will_do = {
+     	base = 1
+		  
+      modifier = {
+			factor = 100
+			ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes }
+		}
+	}
+  every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = ELA 
+          is_core_of = ELP
+          is_core_of = ECA
+          }
+        }
+      ECA = { transfer_state = PREV }
+    }
+ }
+
+###estonian option
+ option = {
+ name = "The Democrats can be trusted"
+ trigger = {
+    OR = {
+        tag = ELA
+        tag = ELP
+        tag = ECA
+       }
+    LDF = { exists = yes }
+ }
+ai_will_do = {
+     	base = 1
+		  
+      modifier = {
+			factor = 100
+			ROOT = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes }
+		}
+	}
+  every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = LDF 
+          is_core_of = LNC
+          is_core_of = LPR
+          }
+        }
+      LDF = { transfer_state = PREV }
+    }
+ }
+
+###LATVIAN option
+ option = {
+ name = "The Democrats can be trusted"
+ trigger = {
+    OR = {
+        tag = LDF
+        tag = LNC
+        tag = LPR
+       }
+    ELP = { exists = yes }
+ }
+ai_will_do = {
+     	base = 1
+		  
+      modifier = {
+			factor = 100
+			ROOT = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes }
+		}
+	}
+  every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = ELA 
+          is_core_of = ELP
+          is_core_of = ECA
+          }
+        }
+      ELP = { transfer_state = PREV }
+    }
+ }
+
+###estonian option
+ option = {
+ name = "The Nationalists can be trusted"
+ trigger = {
+    OR = {
+        tag = ELA
+        tag = ELP
+        tag = ECA
+       }
+    LNC = { exists = yes }
+ }
+ai_will_do = {
+     	base = 1
+		  
+      modifier = {
+			factor = 100
+			ROOT = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes }
+		}
+	}
+  every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = LDF 
+          is_core_of = LNC
+          is_core_of = LPR
+          }
+        }
+      LNC = { transfer_state = PREV }
+    }
+ }
+
+###LATVIAN option
+ option = {
+ name = "The Nationalists can be trusted"
+ trigger = {
+    OR = {
+        tag = LDF
+        tag = LNC
+        tag = LPR
+       }
+    ELA = { exists = yes }
+ }
+ai_will_do = {
+     	base = 1
+		  
+      modifier = {
+			factor = 100
+			ROOT = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes }
+		}
+	}
+  every_owned_state = { 
+      limit = { 
+        OR = {
+          is_core_of = ELA 
+          is_core_of = ELP
+          is_core_of = ECA
+          }
+        }
+      ELA = { transfer_state = PREV }
+    }
+ }
+
+ option = {
+ name = "MINE!"
+ add_stability = -0.2
+ add_war_support = -0.2
+ add_political_power = -150
+ set_country_flag = ubd_i_am_nigger
  }
 
  }

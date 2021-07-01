@@ -579,7 +579,7 @@ focus_tree = {
 	#Focus for ZZZZ(kitchen)
 	focus = {
 		id = LES_ZZZZ
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_put_em_in_the_kitchens
 		x = 56
 		y = 12
 		cost = 5
@@ -1460,7 +1460,7 @@ focus_tree = {
 	#Focus for Communal farmers
 	focus = {
 		id = LES_communalfarmers
-		icon = GFX_focus_SOV_bukharins_privatize_state_land
+		icon = GFX_focus_LES_collective_farming
 		x = 34
 		y = 4
 		cost = 5
@@ -1534,7 +1534,7 @@ focus_tree = {
 	#Focus for Self-Sustenance
 	focus = {
 		id = LES_selfsustenance
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_self_suffecientcy_achieved
 		x = 36
 		y = 5
 		cost = 5
@@ -1622,7 +1622,7 @@ focus_tree = {
 	#Focus for Onwards!
 	focus = {
 		id = LES_onwards
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_onwards
 		x = 39
 		y = 15
 		cost = 5
@@ -1963,7 +1963,7 @@ focus_tree = {
 	#Focus for Reshaping of a Construct
 	focus = {
 		id = LES_reshapingofaconstruct
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_reshaping_of_a_construct
 		x = 44
 		y = 9
 		cost = 5
@@ -2043,7 +2043,8 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		set_country_flag = enablebanish
+		set_country_flag = enablebanish	
+		set_country_flag = banishtoggleon
 		custom_effect_tooltip = les_tt_6
 		}
 	}
@@ -2123,7 +2124,7 @@ focus_tree = {
 	#Focus for Banish aliens_3
 	focus = {
 		id = LES_banishaliens_3
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_work_camps
 		x = 47
 		y = 11
 		cost = 5
@@ -2183,7 +2184,7 @@ focus_tree = {
 	#Focus for Integrate the Unwilling
 	focus = {
 		id = LES_integreatehteunwilling
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_integrate_the_unwilling
 		x = 42
 		y = 10
 		cost = 5
@@ -2237,7 +2238,7 @@ focus_tree = {
 	#Focus for Integrate the Unwilling_2
 	focus = {
 		id = LES_integreatehteunwilling_2
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_ban_minority_languages
 		x = 41
 		y = 11
 		cost = 5
@@ -2254,7 +2255,7 @@ focus_tree = {
 	#Focus for Integrate the Unwilling_3
 	focus = {
 		id = LES_integreatehteunwilling_3
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_break_up_communities
 		x = 43
 		y = 11
 		cost = 5
@@ -2303,7 +2304,7 @@ focus_tree = {
 	#Focus for Genetic Engineering
 	focus = {
 		id = LES_geneticengineering
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_Kin_altering
 		x = 46
 		y = 12
 		cost = 5
@@ -2489,7 +2490,7 @@ focus_tree = {
 	#Focus for XXXX
 	focus = {
 		id = LES_XXXX
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_gods_children
 		x = 42
 		y = 12
 		cost = 5
@@ -2585,7 +2586,7 @@ focus_tree = {
 	#Focus for XXXX_2
 	focus = {
 		id = LES_XXXX_2
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_discredit_racialists
 		x = 41
 		y = 13
 		cost = 5
@@ -2713,7 +2714,7 @@ focus_tree = {
 	#Focus for XXXX_3
 	focus = {
 		id = LES_XXXX_3
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_propogade_unity
 		x = 43
 		y = 13
 		cost = 5
@@ -2848,6 +2849,7 @@ focus_tree = {
 		available = {
  			AND = {
  			has_country_flag = path
+			 has_manpower > 8000
 			}
 		}
 		available_if_capitulated = yes
@@ -2871,7 +2873,7 @@ focus_tree = {
 	#Focus for Chelyabisnk Tractor factory
 	focus = {
 		id = LES_chelyabisnktractorfactory
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_tractor_factory
 		x = 34
 		y = 3
 		cost = 5
@@ -2946,7 +2948,7 @@ focus_tree = {
 	#Focus for Expand the Chelyabinsk Hospital
 	focus = {
 		id = LES_expandthechelyabinskhospital
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_chernobylst_hospital
 		x = 32
 		y = 3
 		cost = 5
@@ -2982,14 +2984,16 @@ focus_tree = {
 	#Focus for Demobilise the 4th Regiment
 	focus = {
 		id = LES_demobilisethe4thregiment
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_demobilize_the_fourth
 		x = 29
 		y = 0
 		cost = 5
 		available = {
  			AND = {
  			has_country_flag = path
+			has_manpower > 4500
 			}
+  
 		}
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -3090,7 +3094,7 @@ focus_tree = {
 	#Focus for Keep It Traditional
 	focus = {
 		id = LES_keepittraditional
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_keep_it_traditional
 		x = 38
 		y = 2
 		cost = 5
@@ -3113,7 +3117,7 @@ focus_tree = {
 	#Focus for Modernise Farming
 	focus = {
 		id = LES_modernisefarming
-		icon = GFX_SOV_try_to_improve_farming
+		icon = GFX_focus_LES_modernize_farming
 		x = 34
 		y = 2
 		cost = 5
@@ -3136,7 +3140,7 @@ focus_tree = {
 	#Focus for Redistribute Farmland
 	focus = {
 		id = LES_redistributefarmland
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_redistribute_farmland
 		x = 36
 		y = 1
 		cost = 5
@@ -3200,7 +3204,7 @@ focus_tree = {
 	#Focus for Importing Animals
 	focus = {
 		id = LES_importinganimals
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_import_horses
 		x = 38
 		y = 3
 		cost = 5
@@ -3251,7 +3255,7 @@ focus_tree = {
 	#Focus for Legions Army
 	focus = {
 		id = LES_legionsarmy
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_legion_army
 		x = 59
 		y = 0
 		cost = 5
@@ -3590,7 +3594,7 @@ focus_tree = {
 	#Focus for The Wonders of Propaganda
 	focus = {
 		id = LES_thewondersofpropaganda
-		icon = GFX_focus_LIT_indoctrinateyouth
+		icon = GFX_focus_sdasdasdads
 		x = 13
 		y = 1
 		cost = 5
@@ -3699,7 +3703,7 @@ focus_tree = {
 	#Focus for Locked and Loaded
 	focus = {
 		id = LES_lockedandloaded
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_power_solidified
 		x = 16
 		y = 4
 		cost = 2
@@ -3777,7 +3781,7 @@ focus_tree = {
 	#Focus for Recon Planes
 	focus = {
 		id = LES_reconplanes
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_recon_planes
 		x = 82
 		y = 2
 		cost = 5
@@ -4284,7 +4288,7 @@ focus_tree = {
 	#Focus for Accelerate Further!
 	focus = {
 		id = LES_acceleratefurther
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_accellerate_further
 		x = 52
 		y = 5
 		cost = 5
@@ -4478,7 +4482,7 @@ focus_tree = {
 		completion_reward = {
         add_equipment_to_stockpile = {
          type = light_tank_equipment_1
-					amount = 250
+					amount = 400
 					producer = LES
              }
 		}
@@ -4487,7 +4491,7 @@ focus_tree = {
 	#Focus for Anti-Tank Guns
 	focus = {
 		id = LES_antitankguns
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_anti_tank_guns
 		x = 57
 		y = 4
 		cost = 5
@@ -4561,7 +4565,7 @@ focus_tree = {
 	#Focus for Recruit Ukrainian Sybiraks
 	focus = {
 		id = LES_recruitukrainiansybiraks
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_recruit_ukrainian_sybrats
 		x = 68
 		y = 1
 		cost = 5
@@ -4922,7 +4926,7 @@ focus_tree = {
 	#Focus for The Winds Shall Be Ours
 	focus = {
 		id = LES_thewindsshallbeours
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_the_winds_shall_be_ours
 		x = 82
 		y = 5
 		cost = 5
@@ -4944,7 +4948,7 @@ focus_tree = {
 	#Focus for Spirit Over Body
 	focus = {
 		id = LES_spiritoverbody
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_spriti_over_body
 		x = 41
 		y = 9
 		cost = 5
@@ -5370,7 +5374,7 @@ focus_tree = {
 	#Focus for Declaration of War
 	focus = {
 		id = LES_declarationofwar
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_declare_war_on_christianity
 		x = 14
 		y = 7
 		cost = 1
@@ -5562,7 +5566,7 @@ focus_tree = {
 	#Focus for The Matter of Religion
 	focus = {
 		id = LES_thematterofreligion
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_question_of_religion
 		x = 9
 		y = 5
 		cost = 1
@@ -5581,7 +5585,7 @@ focus_tree = {
 	#Focus for The Abrahamic Menace
 	focus = {
 		id = LES_theabrahamicmenace
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_abrahamic_menace
 		x = 13
 		y = 6
 		cost = 2
@@ -5685,7 +5689,7 @@ focus_tree = {
 	#Focus for The Ethnic Issue
 	focus = {
 		id = LES_theethnicissue
-		icon = GFX_goal_unknown
+		icon = GFX_focus_LES_The_ethnic_issue
 		x = 44
 		y = 8
 		cost = 5

@@ -110,7 +110,7 @@ units = {
 		location = 907
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.4
 
 	}
 	division = {
@@ -122,7 +122,7 @@ units = {
 		location = 11868
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.4
 
 	}
 
@@ -153,7 +153,7 @@ units = {
 		location = 6643
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.4
 
 	}
 	division = {
@@ -165,7 +165,7 @@ units = {
 		location = 614
 		division_template = "Konjička Divizija"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.4
 
 	}
 
@@ -180,7 +180,7 @@ units = {
 		location = 3623
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.4
 
 	}
 
@@ -195,7 +195,7 @@ units = {
 		location = 833
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.4
 
 	}
 	division = {
@@ -207,7 +207,7 @@ units = {
 		location = 11899
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.4
 
 	}
 	
@@ -221,7 +221,7 @@ units = {
 		location = 3833
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.4
 
 	}
 	division = {
@@ -256,14 +256,14 @@ air_wings = {
 	107 = {
 		# 1. Vazduhoplovna Brigada -- Dewotine D.1/9/27 fighters
 		fighter_equipment_0 = {
-			owner = "YUG" 
+			owner = "SER" 
 			amount = 48
 		}
 	}
 	104 = {
 		# 2. Vazduhoplovna Brigada  -- Hawker Fury and Ikarus IK-2 fighters
 		fighter_equipment_0 = {
-			owner = "YUG" 
+			owner = "SER" 
 			amount = 48
 		}
 	}
@@ -274,7 +274,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_1
-			creator = "YUG"
+			creator = "SER"
 		}
 		requested_factories = 1
 		progress = 0.37
@@ -283,7 +283,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = support_equipment_1
-			creator = "YUG"
+			creator = "SER"
 		}
 		requested_factories = 1
 		progress = 0.76

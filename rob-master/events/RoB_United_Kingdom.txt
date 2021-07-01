@@ -566,7 +566,6 @@ create_country_leader = {
 }
 }
 IRE = { country_event = { id = ireland.1 days = 20 } }
-ENG = { country_event = { id = united_kingdom.24 days = 1 } }
 ENG = { country_event = { id = united_kingdom.18 days = 5 } }
 BLF = { transfer_state = 861 }
 BLF = { transfer_state = 120 }
@@ -634,6 +633,30 @@ BRC = { transfer_state = 1045 }
 BRC = { transfer_state = 1053 }
 BRC = { transfer_state = 1044 }
 BRC = { transfer_state = 1038 }
+BRU = { 
+	every_state = {
+     limit = { is_core_of = ENG NOT = { OR = { is_core_of = IRE is_core_of = SAF } } }
+              add_core_of = BRU
+    }
+}
+BLF = { 
+	every_state = {
+     limit = { is_core_of = ENG NOT = { OR = { is_core_of = IRE is_core_of = SAF } } }
+              add_core_of = BLF
+    }
+}
+BRC = { 
+	every_state = {
+     limit = { is_core_of = ENG NOT = { OR = { is_core_of = IRE is_core_of = SAF } } }
+              add_core_of = BRC
+    }
+}
+BRL = { 
+	every_state = {
+     limit = { is_core_of = ENG NOT = { OR = { is_core_of = IRE is_core_of = SAF } } }
+              add_core_of = BRL
+    }
+}
 BRU = { load_oob = "BRU_1934" }
 BLF = { load_oob = "BLF_1934" }
 BRC = { load_oob = "BRC_1934" }
@@ -826,6 +849,30 @@ BRU = { transfer_state = 1046 }
 BRU = { transfer_state = 1045 }
 BRU = { transfer_state = 1053 }
 BRU = { transfer_state = 1044 }
+BRU = { 
+	every_state = {
+     limit = { is_core_of = ENG NOT = { OR = { is_core_of = IRE is_core_of = SAF } } }
+              add_core_of = BRU
+    }
+}
+BLF = { 
+	every_state = {
+     limit = { is_core_of = ENG NOT = { OR = { is_core_of = IRE is_core_of = SAF } } }
+              add_core_of = BLF
+    }
+}
+BRC = { 
+	every_state = {
+     limit = { is_core_of = ENG NOT = { OR = { is_core_of = IRE is_core_of = SAF } } }
+              add_core_of = BRC
+    }
+}
+BRL = { 
+	every_state = {
+     limit = { is_core_of = ENG NOT = { OR = { is_core_of = IRE is_core_of = SAF } } }
+              add_core_of = BRL
+    }
+}
 BRU = { load_oob = "BRU_1934" }
 BLF = { load_oob = "BLF_1934" }
 BRC = { load_oob = "BRC_1934" }
@@ -846,165 +893,6 @@ ENG = { end_puppet = BRJ }
 BRJ = { leave_faction = yes }
 }
 }
-}
-
-###add cores to CW sides
-country_event = {
-	id = united_kingdom.24
-	title = "Silence before the storm"
-	desc = united_kingdom.21.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	
-	option = {
-		name = united_kingdom.24.a
-
-		if = {
-			limit = { has_country_flag = ENG_conservatives_absorbed } 
-			861 = { add_core_of = BLF }
-		120 = { add_core_of = BLF }
-		1069 = { add_core_of = BLF }
-		1068 = { add_core_of = BLF }
-		1067 = { add_core_of = BLF }
-		1070 = { add_core_of = BLF }
-		136 = { add_core_of = BLF }
-		1071 = { add_core_of = BLF }
-		1073 = { add_core_of = BLF }
-		1072 = { add_core_of = BLF }
-		121 = { add_core_of = BLF }
-		133 = { add_core_of = BLF }
-		1051 = { add_core_of = BLF }
-		129 = { add_core_of = BLF }
-		1042 = { add_core_of = BLF }
-		1043 = { add_core_of = BLF }
-		122 = { add_core_of = BLF }
-		1041 = { add_core_of = BLF }
-		1040 = { add_core_of = BLF }
-		1039 = { add_core_of = BLF }
-		1059 = { add_core_of = BLF }
-		1061 = { add_core_of = BLF }
-		1065 = { add_core_of = BLF }
-		1030 = { add_core_of = BLF }
-		1028 = { add_core_of = BLF }
-		1029 = { add_core_of = BLF }
-		127 = { add_core_of = BLF }
-		1034 = { add_core_of = BLF }
-		125 = { add_core_of = BLF }
-		1032 = { add_core_of = BLF }
-
-		1066 = { add_core_of = BRU }
-		1075 = { add_core_of = BRU }
-		1076 = { add_core_of = BRU }
-		1074 = { add_core_of = BRU }
-		1036 = { add_core_of = BRU }
-		131 = { add_core_of = BRU }
-		1035 = { add_core_of = BRU }
-		1052 = { add_core_of = BRU }
-		1054 = { add_core_of = BRU }
-		1059 = { add_core_of = BRU }
-		1055 = { add_core_of = BRU }
-		1056 = { add_core_of = BRU }
-		128 = { add_core_of = BRU }
-		1057 = { add_core_of = BRU }
-		126 = { add_core_of = BRU }
-		1027 = { add_core_of = BRU }
-		338 = { add_core_of = BRU }
-		1062 = { add_core_of = BRU }
-		1064 = { add_core_of = BRU }
-		1063 = { add_core_of = BRU }
-		1060 = { add_core_of = BRU }
-		1031 = { add_core_of = BRU }
-		1037 = { add_core_of = BRU }
-		1047 = { add_core_of = BRU }
-		1048 = { add_core_of = BRU }
-		1058 = { add_core_of = BRU }
-		1046 = { add_core_of = BRU }
-		1045 = { add_core_of = BRU }
-		1053 = { add_core_of = BRU }
-		1044 = { add_core_of = BRU }
-
-		1049 = { add_core_of = BRL }
-		132 = { add_core_of = BRL }
-		1050 = { add_core_of = BRL }
-		123 = { add_core_of = BRL }
-		130 = { add_core_of = BRL }
-		}
-
-		if = {
-			limit = { has_country_flag = ENG_conservatives_independant } 
-
-			861 = { add_core_of = BLF }
-			120 = { add_core_of = BLF }
-			1069 = { add_core_of = BLF }
-			1068 = { add_core_of = BLF }
-			1067 = { add_core_of = BLF }
-			1070 = { add_core_of = BLF }
-			136 = { add_core_of = BLF }
-			1071 = { add_core_of = BLF }
-			1073 = { add_core_of = BLF }
-			1072 = { add_core_of = BLF }
-			121 = { add_core_of = BLF }
-			133 = { add_core_of = BLF }
-			1051 = { add_core_of = BLF }
-			129 = { add_core_of = BLF }
-			1042 = { add_core_of = BLF }
-			1043 = { add_core_of = BLF }
-			122 = { add_core_of = BLF }
-			1041 = { add_core_of = BLF }
-			1040 = { add_core_of = BLF }
-			1039 = { add_core_of = BLF }
-			1059 = { add_core_of = BLF }
-			1061 = { add_core_of = BLF }
-			1065 = { add_core_of = BLF }
-			1030 = { add_core_of = BLF }
-			1028 = { add_core_of = BLF }
-			1029 = { add_core_of = BLF }
-			127 = { add_core_of = BLF }
-			1034 = { add_core_of = BLF }
-			125 = { add_core_of = BLF }
-			1032 = { add_core_of = BLF }
-
-			1066 = { add_core_of = BRU }
-			1075 = { add_core_of = BRU }
-			1076 = { add_core_of = BRU }
-			1074 = { add_core_of = BRU }
-			1036 = { add_core_of = BRU }
-			131 = { add_core_of = BRU }
-			1035 = { add_core_of = BRU }
-			1052 = { add_core_of = BRU }
-			1054 = { add_core_of = BRU }
-			1059 = { add_core_of = BRU }
-			1055 = { add_core_of = BRU }
-			1056 = { add_core_of = BRU }
-			128 = { add_core_of = BRU }
-			1057 = { add_core_of = BRU }
-			126 = { add_core_of = BRU }
-			1027 = { add_core_of = BRU }
-			338 = { add_core_of = BRU }
-			1062 = { add_core_of = BRU }
-			1058 = { add_core_of = BRU }
-			1064 = { add_core_of = BRU }
-			1063 = { add_core_of = BRU }
-			1060 = { add_core_of = BRU }
-			1031 = { add_core_of = BRU }
-			1037 = { add_core_of = BRU }
-			1047 = { add_core_of = BRU }
-
-			1049 = { add_core_of = BRL }
-			132 = { add_core_of = BRL }
-			1050 = { add_core_of = BRL }
-			123 = { add_core_of = BRL }
-			130 = { add_core_of = BRL }
-
-			1048 = { add_core_of = BRC }
-			1046 = { add_core_of = BRC }
-			1045 = { add_core_of = BRC }
-			1053 = { add_core_of = BRC }
-			1044 = { add_core_of = BRC }
-			1038 = { add_core_of = BRC }
-		}
-	}
 }
 
 

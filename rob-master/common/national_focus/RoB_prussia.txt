@@ -1794,6 +1794,15 @@ focus_tree = {
 		prerequisite = { 
 			focus = PRS_powertonobility 
 		}
+		bypass = { 
+			OR = {
+				AND = {
+					LIT = { exists = yes }
+					LIT =  { is_puppet_of = PRS }
+				}
+			}
+			has_war_with = LIT
+		}
 		ai_will_do = {
 			factor = 1
 		}

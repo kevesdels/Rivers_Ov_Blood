@@ -1366,14 +1366,10 @@ focus_tree = {
 			factor = 65
 		}
 		available = {
-		date > 1935.07.01
+		date > 1935.09.01
 		}
 		completion_reward = {
-		TUR = { country_event = {
-    id = bulgaria.111
-
-}
-}
+		TUR = { country_event = { id = bulgaria.111 } }
 		}
 	}
 

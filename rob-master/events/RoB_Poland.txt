@@ -71,61 +71,6 @@ country_event = {
   option = { ###join
    name = "Agree"
    ai_chance = {
-    factor = 100
-   }
-   hidden_effect = {
-    POL = { country_event = { id = rob_poland.14 days = 3 } }
-  }
-  }
-  
-  option = {  ###dont
-   name = "Refuse"
-   ai_chance = {
-    factor = 0
-   }
-   if = {
-     limit = {
-       ROOT = {
-         tag = CZE
-       }
-     }
-    72 = {
-      add_claim_by = POL
-    }
-    74 = {
-      add_claim_by = POL
-    }
-    884 = {
-      add_claim_by = POL
-    }
-     POL = { create_wargoal = { target = ROOT  type = annex_everything } }
-  }
-  if = {
-    limit = {
-      ROOT = {
-        NOT = { tag = CZE }
-      }
-     }
-  POL = { create_wargoal = { target = ROOT  type = annex_everything } }
-    }
-    hidden_effect = {
-      POL = { country_event = { id = rob_poland.15 days = 3 } }
-    }
-  }
- }
-
- ###Invitation to Warsaw Pact
-country_event = {
-  id = rob_poland.3
-  title = "Poland Proposes Alliance"
-  desc = rob_poland.3.d
-  fire_only_once = yes
-  is_triggered_only = yes
-  
-  
-  option = { ###join
-   name = "Agree"
-   ai_chance = {
     base = 5
     modifier = {
       factor = 5
@@ -154,7 +99,7 @@ country_event = {
     modifier = {
       add = 2
       has_opinion = {
-        target = GER
+        target = POL
         value > 50
       }
     }
@@ -162,7 +107,7 @@ country_event = {
     modifier = {
       add = 4
       has_opinion = {
-        target = GER
+        target = POL
         value > 100
       }
     }
@@ -170,7 +115,7 @@ country_event = {
     modifier = {
       add = 6
       has_opinion = {
-        target = GER
+        target = POL
         value > 175
       }
     }
@@ -213,6 +158,139 @@ country_event = {
 
    }
    hidden_effect = {
+    POL = { country_event = { id = rob_poland.14 days = 3 } }
+  }
+  }
+  
+  option = {  ###dont
+   name = "Refuse"
+     ai_chance = {
+    base  = 7
+
+    modifier = {
+      add = 4
+      has_opinion = {
+        target = POL
+        value < 50
+      }
+    }
+
+    modifier = {
+      add = 8
+      has_opinion = {
+        target = POL
+        value < 100
+      }
+    }
+
+    modifier = {
+      add = 12
+      has_opinion = {
+        target = POL
+        value < 175
+      }
+    }
+   }
+
+
+   if = {
+     limit = {
+       ROOT = {
+         tag = CZE
+       }
+     }
+    72 = {
+      add_claim_by = POL
+    }
+    74 = {
+      add_claim_by = POL
+    }
+    884 = {
+      add_claim_by = POL
+    }
+  }
+  custom_effect_tooltip = "Refusal Might Spark War"
+    hidden_effect = {
+      POL = { country_event = { id = rob_poland.15 days = 3 } }
+    }
+  }
+ }
+
+ ###Invitation to Warsaw Pact
+country_event = {
+  id = rob_poland.3
+  title = "Poland Proposes Alliance"
+  desc = rob_poland.3.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###join
+   name = "Agree"
+   ai_chance = {
+    base = 5
+    modifier = {
+      factor = 5
+      AND = {
+        ROOT = {
+          SOCIALIST_ALIGNED_GOVERNMENT = yes
+        }
+        POL = {
+          SOCIALIST_ALIGNED_GOVERNMENT = yes
+        }
+      }
+    }
+
+    modifier = {
+      add = 2
+      has_opinion = {
+        target = POL
+        value > 50
+      }
+    }
+
+    modifier = {
+      add = 4
+      has_opinion = {
+        target = POL
+        value > 100
+      }
+    }
+
+    modifier = {
+      add = 6
+      has_opinion = {
+        target = POL
+        value > 175
+      }
+    }
+
+    modifier = {
+      factor = 4
+      strength_ratio = {
+          tag = FROM
+          ratio < 5
+      }
+    }
+
+    modifier = {
+      factor = 2
+      strength_ratio = {
+          tag = FROM
+          ratio < 3
+      }
+    }
+
+    modifier = {
+      factor = 0.5
+      strength_ratio = {
+          tag = FROM
+          ratio < 2
+      }
+    }
+
+   }
+   hidden_effect = {
     POL = { country_event = { id = rob_poland.16 days = 3 } }
   }
 
@@ -226,7 +304,7 @@ country_event = {
     modifier = {
       add = 4
       has_opinion = {
-        target = GER
+        target = POL
         value < 50
       }
     }
@@ -234,7 +312,7 @@ country_event = {
     modifier = {
       add = 8
       has_opinion = {
-        target = GER
+        target = POL
         value < 100
       }
     }
@@ -242,14 +320,12 @@ country_event = {
     modifier = {
       add = 12
       has_opinion = {
-        target = GER
+        target = POL
         value < 175
       }
     }
    }
-   hidden_effect = {
-    POL = { country_event = { id = rob_poland.17 days = 3 } }
-  }
+   hidden_effect = { POL = { country_event = { id = rob_poland.17 days = 3 } } }
   }
  }
 
@@ -268,7 +344,7 @@ country_event = {
    ai_chance = {
     factor = 100
    }
-   GER = { add_to_faction = POM }
+   GER = { add_to_faction = POL }
   }
   
   option = {  ###leave them
@@ -320,7 +396,7 @@ country_event = {
   option = { ###yeye
    name = "Fine"
    ai_chance = {
-    factor = 100
+    factor = 7
    }
    UKR = {
     transfer_state = 91
@@ -332,13 +408,19 @@ country_event = {
    }
    89 = { add_core_of = UKR }
    91 = { add_core_of = UKR }
+   hidden_effect = {
+     POL = { country_event = { id = rob_poland.14 days = 3 }}
+    }
   }
   
   option = {  ###fuck off polak
    name = "No way"
      ai_chance = {
-    factor = 0
+    factor = 3
    }
+   hidden_effect = {
+     POL = { country_event = { id = rob_poland.25 days = 3 }}
+    }
   }
  }
 
@@ -354,18 +436,131 @@ country_event = {
   
   option = { ###yeye
    name = "Fine"
-   ai_chance = {
-    factor = 100
+    ai_chance = {
+    base = 5
+    modifier = {
+      factor = 5
+      AND = {
+        ROOT = {
+          DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+        }
+        POL = {
+          DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+        }
+      }
+    }
+
+    modifier = {
+      add = 2
+      AND = {
+        ROOT = {
+          DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+        }
+        POL = {
+          ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+        }
+      }
+    }
+
+    modifier = {
+      add = 2
+      has_opinion = {
+        target = POL
+        value > 50
+      }
+    }
+
+    modifier = {
+      add = 4
+      has_opinion = {
+        target = POL
+        value > 100
+      }
+    }
+
+    modifier = {
+      add = 6
+      has_opinion = {
+        target = POL
+        value > 175
+      }
+    }
+
+    modifier = {
+      factor = 0
+      AND = {
+        ROOT = {
+          SOCIALIST_ALIGNED_GOVERNMENT = yes
+        }
+        POL = {
+          ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+        }
+      }
+    }
+
+    modifier = {
+      factor = 4
+      strength_ratio = {
+          tag = FROM
+          ratio < 5
+      }
+    }
+
+    modifier = {
+      factor = 2
+      strength_ratio = {
+          tag = FROM
+          ratio < 3
+      }
+    }
+
+    modifier = {
+      factor = 0.5
+      strength_ratio = {
+          tag = FROM
+          ratio < 2
+      }
+    }
+
    }
-   POL = { add_to_faction = ROOT }
+   hidden_effect = {
+     POL = { country_event = { id = rob_poland.14 days =  3 } }
+   }
   }
   
   option = {  ###fuck off polak
    name = "No way"
-     ai_chance = {
-    factor = 0
+    ai_chance = {
+    base = 9
+
+    modifier = {
+      add = 4
+      has_opinion = {
+        target = GER
+        value < 50
+      }
+    }
+
+    modifier = {
+      add = 8
+      has_opinion = {
+        target = GER
+        value < 100
+      }
+    }
+
+    modifier = {
+      add = 12
+      has_opinion = {
+        target = GER
+        value < 175
+      }
+    }
    }
-   POL = { create_wargoal = { target = PRS  type = annex_everything } }
+   custom_effect_tooltip = "Refusal Will Lead to War"
+    hidden_effect = {
+     POL = { country_event = { id = rob_poland.15 days =  3 } }
+   }
   }
  }
 
@@ -383,12 +578,15 @@ country_event = {
    ai_chance = {
     factor = 2
    }
-   85 = {
+  85 = {
     add_core_of = POL
   }
 
   POL = {
     transfer_state = 85
+    }
+    hidden_effect = {
+      POL = { country_event = { id = rob_poland.26 days =  3 } }
     }
   }
   
@@ -397,10 +595,9 @@ country_event = {
      ai_chance = {
     factor = 8
    }
-   85 = {
-    add_core_of = POL
-  }
-   POL = { create_wargoal = { target = PRS  type = annex_everything } }
+  hidden_effect = {
+    POL = { country_event = { id = rob_poland.26 days =  3 } }
+    }
   }
  }
 
@@ -415,7 +612,7 @@ country_event = {
   
   
   option = { ###yeye
-   name = "OfC"
+   name = "Ofc"
    ai_chance = {
     factor = 2
    }
@@ -595,10 +792,31 @@ country_event = {
   option = { 
    name = "Too bad"
    ai_chance = {
-    factor = 100
+    factor = 1
    }
   }
 
+  option = { 
+  name = "You dare?"
+  trigger = {
+     NOT = { FROM = { tag = PRS } }
+    }
+   ai_chance = {
+    factor = 1
+   }
+   POL = { create_wargoal = { target = ROOT  type = annex_everything } }
+  }
+
+  option = { 
+   name = "Fuck'em up"
+   trigger = {
+     FROM = { tag = PRS }
+    }
+   ai_chance = {
+    factor = 100
+   }
+    POL = { create_wargoal = { target = PRS  type = annex_everything } }
+  }
  }
 
 ###Invitation to Warsaw pact: agreed
@@ -633,6 +851,283 @@ country_event = {
     factor = 100
    }
 
+  }
+
+ }
+
+###Belaruss: Breaks off?
+country_event = {
+  id = rob_poland.18
+  title = "Chance for Freedom"
+  desc = "With our unoffical sovereign undergoing socialist takeover, we should consider distancing ourselfs, at least for now."
+  is_triggered_only = yes
+  
+  
+  option = { 
+   name = "Belaruss breaks free from Polish domination"
+   ai_chance = {
+    factor = 100
+   }
+  remove_ideas = {
+  DBR_polish_dominance
+  }
+  POL = { end_puppet = DBR }
+  add_political_power = 150
+   POL = { country_event = { id = rob_poland.19 days =  3 } }
+  }
+
+  option = { 
+   name = "Nothing Changes"
+   ai_chance = {
+    factor = 0
+   }
+
+  }
+
+ }
+
+###Poland: Belaruss breaks off
+country_event = {
+  id = rob_poland.19
+  title = "Urgent Issue"
+  desc = "The Belarusian parliament has informed us that diplomatic contacts with our government will be suspended for a while, to get a better understanding of the situation in Poland after the chaos that Pilsuduski's death caused. Carefully worded, but the intent is clear - Belarusian republic is attempting to break off."
+  is_triggered_only = yes
+  
+  
+  option = { 
+   name = "Remind them WHO liberated them."
+   ai_chance = {
+    factor = 3
+   }
+   declare_war_on = { target = DBR type = annex_everything }
+   add_war_support = -0.20
+   add_stability = -0.10
+  }
+
+  option = { 
+   name = "Belarus is free to do as it wishes."
+   ai_chance = {
+    factor = 7
+   }
+   add_political_power = -50
+  }
+
+ }
+
+
+###Invitation to Spartacus Coallition
+country_event = {
+  id = rob_poland.20
+  title = "Polands Proposal"
+  desc = "Poland is asking us to join Spartacus Coallition."
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###join
+   name = "Agree"
+   ai_chance = {
+    base = 5
+   }
+   hidden_effect = {
+    POL = { country_event = { id = rob_poland.21 days = 3 } }
+  }
+
+  }
+  
+  option = {  ###dont
+   name = "Refuse"
+     ai_chance = {
+    base  = 2
+     }
+   hidden_effect = { POL = { country_event = { id = rob_poland.22 days = 3 } } }
+  }
+}
+
+###Invitation to spartakist faction: agreed
+country_event = {
+  id = rob_poland.21
+  title = "Success"
+  desc = "Our diplomatic play has resulted in the Spartacus Coallition growing larger."
+  is_triggered_only = yes
+  
+  
+  option = { 
+   name = "Excellent"
+   ai_chance = {
+    factor = 100
+   }
+   hidden_effect = { GER = { country_event = { id = rob_poland.23 days = 1 } } }
+  }
+
+ }
+
+###Invitation to Spartacus Coallition: denied
+country_event = {
+  id = rob_poland.22
+  title = "Failure"
+  desc = "Our diplomatic play has not resulted in expansion of the Spartacus Coallition."
+  is_triggered_only = yes
+  
+  
+  option = { 
+   name = "So be it."
+   ai_chance = {
+    factor = 100
+   }
+
+  }
+
+ }
+
+###Germany: Poland has found new allies
+country_event = {
+  id = rob_poland.23
+  title = "Polish Telegram"
+  desc = "Our Polish comrades seem to have negotiated expansion of the Spartacus Coallition without consultating with us. If we so desire, we have the rights to veto the expansion of the faction."
+  is_triggered_only = yes
+  
+  
+  option = { 
+   name = "Good job, Poles!"
+   ai_chance = {
+    factor = 8
+   }
+    GER = { add_to_faction = FROM }
+  }
+
+  option = { 
+   name = "Unacceptable"
+   ai_chance = {
+    factor = 2
+   }
+    add_opinion_modifier = {
+				target = POL
+				modifier = POL_upstart
+				}
+	  POL = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = POL_tyrant
+					}
+			  }
+  }
+
+ }
+
+###Poland: Invade Commie Ukraine
+country_event = {
+  id = rob_poland.24
+  title = "The Red Ruthenians"
+  desc = "With our involvement in Ukraine, the ukrainian socialist forces are now a problem that should be addressed. Although for now they have decided to not test our might with border skirmishes, this might be a reality soon in making. Therefore, some generals have proposed a preemptive strike against the socialist forces. Is this a chance to gain favour with the locals or an unnecessary loss of our men?"
+  fire_only_once = yes
+  trigger = {
+    UKR = { exists = no }
+    DSU = { exists = yes }
+    NOT = { at_war_with = DSU SOCIALIST_ALIGNED_GOVERNMENT = yes }
+    tag = POL
+    any_owned_state = { 
+      OR = {
+          is_core_of = DSU 
+          is_core_of = UKR
+          }
+      }
+  }
+  
+  
+  option = { ###yeye
+   name = "It is Our Duty to See the Region Unified"
+   ai_chance = {
+    factor = 7
+   }
+    POL = { create_wargoal = { target = DSU  type = annex_everything } }  
+    add_political_power = -50
+  }
+  
+  option = {  ###no way no war
+   name = "What Will They do, Throw Cans at us?"
+     ai_chance = {
+    factor = 3
+   }
+  add_stability = 0.02
+  }
+ }
+
+
+
+###Poland: Ukraine refuses
+country_event = {
+  id = rob_poland.25
+  title = "Ukraine Refuses"
+  desc = "The Ukrainian Government has declined our generous offer..."
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###yeye
+   name = "A Shame"
+   ai_chance = {
+    factor = 10
+   }
+   add_political_power = -50
+  }
+  
+  option = {  ###fuck off polak
+   name = "Then We Will Bring Them in Through Force!"
+     ai_chance = {
+    factor = 2
+   }
+  POL = { create_wargoal = { target = UKR  type = annex_everything } }
+  add_stability = -0.10
+  add_war_support = -0.10
+  }
+ }
+
+###Poland: Prussia Agrees to give Danzig
+country_event = {
+  id = rob_poland.26
+  title = "Danzig is Ours!"
+  desc = "The Prussian Government has yielded to our demands for the port city of Danzig. The nation is rejoicing and the Americans have informed us that they are pleased with our victory. Already the expansion of city ports is being planned and with total control of the Vistula river, the economy will surely benefit!"
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###yeye
+   name = "Dzień Zwycięstwa!"
+   ai_chance = {
+    factor = 10
+   }
+   add_political_power = 50
+  }
+
+ }
+
+###Poland: Prussia Agrees to give Danzig
+country_event = {
+  id = rob_poland.26
+  title = "Prussian Refusal"
+  desc = "The Prussian Government has not only refused our demand, but has expelled all Polish diplomats from the country! If we do not respond to this, our prestige will plummet and our allies will be disappointed!"
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  
+  option = { ###yeye
+   name = "Fuck'em up"
+   ai_chance = {
+    factor = 7
+   }
+    85 = {
+        add_core_of = POL
+    }
+    POL = { create_wargoal = { target = PRS  type = annex_everything } }
+  }
+
+  option = { ###yeye
+   name = "Oh well!"
+   ai_chance = {
+    factor = 3
+   }
+   add_political_power = -150
   }
 
  }

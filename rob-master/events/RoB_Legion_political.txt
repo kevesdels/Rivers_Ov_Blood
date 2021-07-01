@@ -2077,8 +2077,9 @@ country_event = {
    
 	trigger = {
 		tag = LES
-		at_war_with = MON
-		MON = { surrender_progress > 0.40}
+		LES = { at_war_with = MON }
+		MON = { surrender_progress > 0.40 }
+		NOT = { MON = { at_war_with = FER } }
 		country_exists = MON
 	  }
    
@@ -2210,3 +2211,87 @@ country_event = {
 	}
    
    }
+
+
+### Mongolia peace deal once over 50% surrender progress
+country_event = {
+	id = legion_political.20
+	desc = legion_political.20.d
+	title = "Kazahs Offer peace"
+	fire_only_once = yes
+   
+	trigger = {
+	OR  = {
+		AND = {
+			tag = LES
+			at_war_with = KAZ
+			KAZ = { surrender_progress > 0.70}
+			country_exists = KAZ
+			NOT = { country_exists = KZR }
+		}
+		AND = {
+			tag = LES
+			at_war_with = KZR
+			KZR = { surrender_progress > 0.70}
+			country_exists = KZR
+			NOT = { country_exists = KAZ }
+		}
+	  }
+	}
+   
+   ### Peace option
+	option = {
+	   name = "We Will Take What is Ours"
+	   ai_chance = { factor = 1 }
+	   if = { limit = { 582 = { is_owned_by = MON } } LES = { transfer_state = 582 } }
+	   if = { limit = { 583 = { is_owned_by = MON } } LES = { transfer_state = 583 } }
+	   if = { limit = { 588 = { is_owned_by = MON } } LES = { transfer_state = 588 } }
+	   if = { limit = { 590 = { is_owned_by = MON } } LES = { transfer_state = 590 } }
+	   if = {
+		   limit = {
+			   at_war_with = KAZ
+		   }
+		   	white_peace = KAZ
+	   }
+	   if = {
+		   limit = {
+			   at_war_with = KZR
+		   }
+		   	white_peace = KZR
+	   }
+	  }
+
+	option = {
+	   name = "More..."
+	   ai_chance = { factor = 1	}
+	   if = { limit = { 402 = { is_owned_by = MON } } LES = { transfer_state = 402 } }
+	   if = { limit = { 404 = { is_owned_by = MON } } LES = { transfer_state = 404 } }	  
+	   if = { limit = { 406 = { is_owned_by = MON } } LES = { transfer_state = 406 } }
+	   if = { limit = { 407 = { is_owned_by = MON } } LES = { transfer_state = 407 } } 
+	   if = { limit = { 582 = { is_owned_by = MON } } LES = { transfer_state = 582 } }
+	   if = { limit = { 583 = { is_owned_by = MON } } LES = { transfer_state = 583 } }
+	   if = { limit = { 588 = { is_owned_by = MON } } LES = { transfer_state = 588 } }
+	   if = { limit = { 589 = { is_owned_by = MON } } LES = { transfer_state = 589 } }
+	   if = { limit = { 590 = { is_owned_by = MON } } LES = { transfer_state = 590 } }
+	   if = {
+		   limit = {
+			   at_war_with = KAZ
+		   }
+		   	white_peace = KAZ
+	   }
+	   if = {
+		   limit = {
+			   at_war_with = KZR
+		   }
+		   	white_peace = KZR
+	   }
+	  }
+
+	  ### ignore peace offer
+	  option = {
+	   name = "Continue the Fight"
+	   ai_chance = { factor = 1 }
+	   add_political_power = 10
+	  }
+	   
+}

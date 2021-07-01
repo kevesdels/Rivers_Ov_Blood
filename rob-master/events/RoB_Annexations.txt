@@ -9,6 +9,7 @@ country_event = {
  desc = annex.1.d
  title = "Fate of Austria"
  fire_only_once = yes
+ 
 
  mean_time_to_happen = { days = 1 }
  trigger = {
@@ -144,7 +145,16 @@ country_event = {
   SWI = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          SWI = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      SWI = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -343,6 +353,15 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }  
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          SPR = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      SPR = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -380,6 +399,15 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          BSQ = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      BSQ = { drop_cosmetic_tag = yes }
+  }
 
  every_owned_state = {
     limit = { 
@@ -396,6 +424,15 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }
+  if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          CAT = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      CAT = { drop_cosmetic_tag = yes }
+  }
 
  every_owned_state = {
     limit = { 
@@ -411,7 +448,16 @@ country_event = {
   SPR = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          SPR = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      SPR = { drop_cosmetic_tag = yes }
+  }  
  }
 }
 
@@ -450,7 +496,16 @@ country_event = {
  POR = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          POR = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      POR = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -469,6 +524,7 @@ country_event = {
  desc = annex.6.d
  title = "Fate of British Isles"
  fire_only_once = yes
+
  mean_time_to_happen = { days = 1 }
  trigger = {
   has_war = no
@@ -601,7 +657,16 @@ country_event = {
  IRE = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          IRE = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      IRE = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -649,7 +714,16 @@ country_event = {
  LUX = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          LUX = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      LUX = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -698,7 +772,16 @@ country_event = {
  WLL = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          WLL = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      WLL = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -736,6 +819,15 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          WLL = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      WLL = { drop_cosmetic_tag = yes }
+  }
 
  } 
  
@@ -784,7 +876,16 @@ country_event = {
  FLA = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          FLA = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      FLA = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -809,6 +910,15 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          WLL = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      WLL = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -855,7 +965,16 @@ country_event = {
  HOL = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          HOL = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      HOL = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -902,7 +1021,16 @@ country_event = {
  DEN = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          DEN = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      DEN = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -951,6 +1079,15 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          SWE = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      SWE = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -998,7 +1135,16 @@ country_event = {
  FIN = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          FIN = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      FIN = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -1042,12 +1188,75 @@ country_event = {
 	}
 	POL = { transfer_state = PREV }
   }
- if = { 
-  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
- POL = {
-  set_cosmetic_tag = Generic_puppet_socialist
-  } 
- }  
+  hidden_effect = {
+  POL = {
+      remove_ideas_with_trait = goverment_head
+      remove_ideas_with_trait = interior_minister
+      remove_ideas_with_trait = foreign_head
+      remove_ideas_with_trait = economy_head
+      remove_ideas_with_trait = defense_minister
+      remove_ideas = {
+        pol_colonels
+        pol_cypher_bureau
+      }
+    }
+    ####monarchy gone
+  if = {
+    limit = {
+      AND = {
+      ROOT = { NOT = { has_government = reactionary } }
+      POL = { has_cosmetic_tag = POL_monarchy }
+      }
+    }
+    POL = { 
+      clr_country_flag  = pol_monarchy_active
+      drop_cosmetic_tag = yes 
+      set_party_name = { 
+					ideology = reactionary 
+					long_name = "Endecja" 
+					name = "ND" 
+				}
+      }
+  }
+   ####ONR gone
+  if = {
+    limit = {
+      AND = {
+        ROOT = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = no }
+        POL = { has_cosmetic_tag = POL_ONR }
+        }
+      }
+      POL = { drop_cosmetic_tag = yes }
+      create_country_leader = {
+	      name = "Roman Dmowski"
+	      desc = ""
+	      picture = "Portrait_Poland_Roman_Dmowski.tga"
+	      expire = "1965.1.1"
+	      ideology = reactionary_subtype 
+	      traits = {}
+      }
+      set_party_name = { 
+					ideology = reactionary 
+					long_name = "Endecja" 
+					name = "ND" 
+				}
+    }
+  if = { 
+    limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+      POL = {
+        set_cosmetic_tag = Generic_puppet_socialist
+        } 
+      }  
+  if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          POL = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      POL = { drop_cosmetic_tag = yes }
+  }
+ }
  }
  
  option = {
@@ -1096,7 +1305,16 @@ country_event = {
   CZE = {
    set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          CZE = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      CZE = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -1146,6 +1364,15 @@ country_event = {
    set_cosmetic_tag = Generic_puppet_socialist
   } 
  }  
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          SLO = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      SLO = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -1195,6 +1422,15 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          HUN = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      HUN = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -1244,6 +1480,15 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }  
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          CRO = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      CRO = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -1294,7 +1539,16 @@ country_event = {
  BOS = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          BOS = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      BOS = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -1343,6 +1597,15 @@ country_event = {
    set_cosmetic_tag = Generic_puppet_socialist
   } 
  }  
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          SER = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      SER = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -1392,6 +1655,15 @@ country_event = {
    set_cosmetic_tag = Generic_puppet_socialist
   } 
  }  
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          ROM = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      ROM = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -1441,6 +1713,15 @@ country_event = {
    set_cosmetic_tag = Generic_puppet_socialist
   } 
  }  
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          BUL = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      BUL = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -1490,6 +1771,15 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }  
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          ALB = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      ALB = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -1537,7 +1827,16 @@ country_event = {
   GRE = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          GRE = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      GRE = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -1584,7 +1883,16 @@ country_event = {
   TUR = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- } 
+ }
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          TUR = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      TUR = { drop_cosmetic_tag = yes }
+  } 
  }
  
  option = {
@@ -1635,6 +1943,15 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }  
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          LIT = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      LIT = { drop_cosmetic_tag = yes }
+  }
  hidden_effect = {
   LIT = { remove_ideas = { pelekists_rising semi_loyal_military pearl_of_stability } }
  }
@@ -1675,6 +1992,24 @@ country_event = {
     set_cosmetic_tag = Generic_puppet_socialist
   } 
  }  
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          SAG = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      SAG = { drop_cosmetic_tag = yes }
+  }
+      if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          LIT = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      LIT = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -1722,7 +2057,16 @@ country_event = {
  NOR = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          NOR = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      NOR = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -2103,7 +2447,16 @@ country_event = {
  PER = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          PER = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      PER = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -2219,7 +2572,16 @@ country_event = {
  KHV = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          KHV = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      KHV = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -2267,7 +2629,16 @@ country_event = {
  KYR = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          KYR = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      KYR = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -2334,7 +2705,16 @@ country_event = {
  KZR = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          KZR = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      KZR = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -2367,12 +2747,29 @@ country_event = {
     }
     KAZ = { transfer_state = 586 }
   }
+  if = {
+    limit = {
+      KYR = { exists = yes }
+      NOT = { KYR = { is_puppet_of = ROOT } }
+      732 = { is_owned_and_controlled_by = ROOT }
+    }
+    KAZ = { transfer_state = 732 }
+  }
  if = { 
   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
   KAZ = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          KAZ = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      KAZ = { drop_cosmetic_tag = yes }
+  }  
  }
 
  option = {
@@ -2405,12 +2802,29 @@ country_event = {
     }
     KAZ = { transfer_state = 586 }
   }
+  if = {
+    limit = {
+      KYR = { exists = yes }
+      NOT = { KYR = { is_puppet_of = ROOT } }
+      732 = { is_owned_and_controlled_by = ROOT }
+    }
+    KAZ = { transfer_state = 732 }
+  }
  if = { 
   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
   KAZ = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          KAZ = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      KAZ = { drop_cosmetic_tag = yes }
+  }  
  }
 
  option = {
@@ -2459,7 +2873,16 @@ country_event = {
  UZB = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          UZB = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      UZB = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -2528,6 +2951,15 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }
+ if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          LAT = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      LAT = { drop_cosmetic_tag = yes }
+  }
  EST = { set_cosmetic_tag = EST_liberated }  
  }
  
@@ -2550,6 +2982,15 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }
+  if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          EST = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      EST = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -2616,7 +3057,16 @@ country_event = {
  PRS = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
- }  
+ }
+     if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          PRS = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      PRS = { drop_cosmetic_tag = yes }
+  }  
  }
  
  option = {
@@ -2908,6 +3358,15 @@ country_event = {
   set_cosmetic_tag = Generic_puppet_socialist
   } 
  }  
+    if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          AFG = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      AFG = { drop_cosmetic_tag = yes }
+  }
  }
 
  option = { ###continue occupation
@@ -2957,6 +3416,15 @@ country_event = {
    MON = {
    set_cosmetic_tag = Generic_puppet_socialist
    } 
+  }
+      if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          MON = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      MON = { drop_cosmetic_tag = yes }
   }  
   }
 

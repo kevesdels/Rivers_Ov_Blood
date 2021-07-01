@@ -97,6 +97,22 @@ hog_incompetant_leader = {
  
  random = no 
 }
+
+hog_monarch = {
+ political_power_factor = 0.05
+ stability_factor = 0.01
+ war_support_factor = 0.01
+ 
+ random = no 
+}
+
+
+hog_capitalist = {
+ industrial_capacity_factory = 0.03
+ stability_factor = 0.03
+ 
+ random = no 
+}
 #####################
 #Interior Minister
 #####################
@@ -143,10 +159,30 @@ im_efficent_planner = {
  random = no 
 }
 
+im_aristocrat = {
+political_power_factor = 0.01
+ 
+ random = no 
+}
+
+im_administrator = {
+political_power_factor = 0.03
+stability_factor = 0.03
+ 
+ random = no 
+}
+
 im_militarist = {
  industrial_capacity_factory = 0.05
  resistance_target = -0.05
  
+ random = no 
+}
+
+im_xenophone = {   
+non_core_manpower = -0.05    
+encryption = 0.25
+
  random = no 
 }
 
@@ -157,9 +193,24 @@ im_inexperienced_buercrat = {
  random = no 
 }
 
+im_egalitarian = {
+stability_factor = 0.01
+monthly_population = 0.03
+war_support_factor = -0.02
+
+ random = no 
+}
+
 im_capitalist = {
  industrial_capacity_factory = 0.02
  stability_factor = 0.02
+ 
+ random = no 
+}
+
+im_modernizer = {
+ production_speed_buildings_factor = 0.07
+ stability_factor = -0.04
  
  random = no 
 }
@@ -392,4 +443,12 @@ dm_inept_administator = {
  
  random = no 
 }
+
+dm_oppresor = {
+ consumer_goods_factor = -0.03
+ stability_factor = -0.04
+ 
+ random = no 
+}
+
 }

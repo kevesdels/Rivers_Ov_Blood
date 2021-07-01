@@ -16,8 +16,11 @@ focus_tree = {
 		y = 15
 		cost = 5
 		search_filters = {
-			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		available = {
 			has_country_flag = pol_politics
 		}
@@ -48,6 +51,9 @@ focus_tree = {
 		available = {
 			has_country_flag = pol_politics
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_the_four_year_plan  }
 		completion_reward = {
 			swap_ideas = {
@@ -76,6 +82,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 12
+ 	 	}
 		available = {
 			784 = { is_owned_by = POL }
 			LIT = { exists = no }
@@ -109,6 +118,9 @@ focus_tree = {
 
 		}
 		prerequisite = { focus = POL_kings_constitution  }
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		completion_reward = {
 			create_wargoal = { target = LIT  type = annex_everything }
 		}
@@ -125,8 +137,12 @@ focus_tree = {
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
+						FOCUS_FILTER_INDUSTRY
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_empower_the_trade_unions  }
 		completion_reward = {
 			add_ideas  = {
@@ -146,8 +162,12 @@ focus_tree = {
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
+						FOCUS_FILTER_INDUSTRY
 					
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_provide_for_the_people  }
 		completion_reward = {
 			add_ideas = { pol_reform_economy }
@@ -188,10 +208,14 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_the_death_of_pilsuduski  }
-		mutually_exclusive = { focus = POL_embrace_radical_nationalism  focus = POL_strengthen_the_sanation_government  focus = POL_support_the_endecja_movement  focus = POL_support_the_centrist_alliance  focus = POL_restore_the_polish_monarchy  }
+		mutually_exclusive = { focus = POL_nco_coup focus = POL_embrace_radical_nationalism  focus = POL_strengthen_the_sanation_government  focus = POL_support_the_endecja_movement  focus = POL_support_the_centrist_alliance  focus = POL_restore_the_polish_monarchy  }
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = -150
+			add_stability = -0.25
 		}
 	}
 
@@ -205,6 +229,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_the_four_year_plan  }
 		completion_reward = {
 			90 = { 
@@ -239,7 +266,7 @@ focus_tree = {
 	focus = {
 		id = POL_support_the_centrist_alliance
 		icon = GFX_POL_support_the_centrist_alliance-445
-		x = 13
+		x = 11
 		y = 1
 		cost = 5
 		search_filters = {
@@ -247,10 +274,38 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 5
+ 	 	}
 		prerequisite = { focus = POL_the_death_of_pilsuduski  }
-		mutually_exclusive = { focus = POL_oppose_nationalism  focus = POL_strengthen_the_sanation_government  focus = POL_support_the_endecja_movement  focus = POL_embrace_radical_nationalism  focus = POL_restore_the_polish_monarchy  }
+		mutually_exclusive = { focus = POL_nco_coup focus = POL_oppose_nationalism  focus = POL_strengthen_the_sanation_government  focus = POL_support_the_endecja_movement  focus = POL_embrace_radical_nationalism  focus = POL_restore_the_polish_monarchy  }
 		completion_reward = {
-			add_political_power = 150
+			add_political_power = -100
+			add_stability = -0.10
+		}
+	}
+
+	#Support the Centrist Alliance
+
+	focus = {
+		id = POL_nco_coup
+		icon = GFX_POL_nco_coup
+		x = 15
+		y = 1
+		cost = 5
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
+		prerequisite = { focus = POL_the_death_of_pilsuduski  }
+		mutually_exclusive = { foucs = POL_support_the_centrist_alliance focus = POL_oppose_nationalism  focus = POL_strengthen_the_sanation_government  focus = POL_support_the_endecja_movement  focus = POL_embrace_radical_nationalism  focus = POL_restore_the_polish_monarchy  }
+		completion_reward = {
+			add_political_power = -150
+			add_stability = -0.20
 		}
 	}
 
@@ -267,6 +322,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_oppose_nationalism  }
 		completion_reward = {
 		set_politics = {
@@ -277,6 +335,17 @@ focus_tree = {
 		}
 		add_popularity = { ideology = socialist    popularity = 0.2 }
 		add_popularity = { ideology = national_socialist    popularity = 0.2 }
+		hidden_effect = {
+			add_ideas = {
+				POL_boleslaw_bierut
+				POL_stanislaw_grabski_im
+				POL_stanislaw_thugutt_fm
+				POL_edward_osobka_morawski_em
+				POL_stanislaw_mikolajczyk_dm
+			}
+			DBR = { country_event = { id = rob_poland.18 days =  9 } }
+		}
+
 		}
 	}
 
@@ -316,6 +385,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_the_polish_socialist_party  }
 		mutually_exclusive = { focus = POL_bolshevist_takeover  }
 		completion_reward = {
@@ -341,6 +413,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_provide_for_the_people  }
 		completion_reward = {
 			add_tech_bonus = {
@@ -365,6 +440,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_defend_the_proletariat  }
 		completion_reward = {
 				add_popularity = { ideology = socialist   popularity = 0.13 }
@@ -385,6 +463,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_reform_the_economy  }
 		completion_reward = {
 			add_ideas = { 
@@ -406,6 +487,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_proclaim_the_socialist_republic }
 		prerequisite = { focus = POL_defend_the_proletariat  }
 		completion_reward = {
@@ -428,6 +512,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_secularise_the_state  }
 		completion_reward = {
 			add_stability = 0.1
@@ -448,7 +535,11 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_reverse_the_may_coup  }
+		prerequisite = { focus = POL_calm_the_public }
 		completion_reward = {
 			add_ideas = {
 				pol_spirit_freedom
@@ -469,11 +560,38 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 6
+ 	 	}
 		prerequisite = { focus = POL_tighten_the_governments_grip  focus = POL_reverse_the_may_coup  }
+		prerequisite = { focus = POL_calm_the_public }
 		completion_reward = {
 			add_ideas = {
 				pol_maternity
 			}
+		}
+	}
+
+	#Calm the public
+
+	focus = {
+		id = POL_calm_the_public
+		icon = GFX_POL_calm_the_public
+		x = 13
+		y = 3
+		cost = 5
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
+		prerequisite = { focus = POL_reestablish_a_democratic_system  focus = POL_invite_military_officials  }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
 		}
 	}
 
@@ -490,8 +608,10 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
-		prerequisite = { focus = POL_support_the_centrist_alliance  }
-		mutually_exclusive = { focus = POL_reestablish_a_democratic_system  }
+		ai_will_do = {
+     	base = 10
+ 	 	}
+		prerequisite = { focus = POL_nco_coup  }
 		completion_reward = {
 			hidden_effect = {
 				set_party_name = { 
@@ -499,20 +619,27 @@ focus_tree = {
 					long_name = "Polscy Oficerowie" 
 					name = "Polscy Oficerowie" 
 				}
+            	add_ideas = {
+                	POL_jozef_haller_rob
+                	POL_felicjan_slawoj_skladkowski_im
+                	POL_tadeusz_schaetzel_fm
+                	POL_adam_koc_em
+                	POL_ignacy_matuszewski_dm
+            	}
+				create_country_leader = {
+					name = "Jozef Haller"
+					desc = ""
+					picture = "Jozef_Haller.dds"
+					expire = "1965.1.1"
+					ideology = authoritharian_subtype 
+					traits = { army_veteran }
 				}
+			}
 			set_politics = {
 				ruling_party = authoritharian
 				last_election = "1934.1.1"
 				election_frequency = 72
 				elections_allowed = no
-			}
-			create_country_leader = {
-				name = "Jozef Haller"
-				desc = ""
-				picture = "Jozef_Haller.dds"
-				expire = "1965.1.1"
-				ideology = authoritharian_subtype 
-				traits = { army_veteran }
 			}
 			add_popularity = { ideology = authoritharian  popularity = 0.2 }
 			set_country_flag = pol_politics
@@ -532,6 +659,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_invite_military_officials  }
 		completion_reward = {
 			add_ideas = {
@@ -553,8 +683,10 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_support_the_centrist_alliance  }
-		mutually_exclusive = { focus = POL_invite_military_officials  }
 		completion_reward = {
 			add_popularity = { ideology = social_liberal  popularity = 0.2 }
 			set_politics = {
@@ -564,6 +696,16 @@ focus_tree = {
 				elections_allowed = no
 			}
 			set_country_flag = pol_politics
+			hidden_effect = {
+            add_ideas = {
+                POL_stanislaw_thugutt
+                POL_herman_diamand_im
+                POL_jan_dabski_fm
+                POL_edward_osobka_morawski_em
+                POL_edward_ochab_dm
+            }
+        }
+
 		}
 	}
 
@@ -580,6 +722,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		available = {
 			PRS = { exists = yes }
 		}
@@ -603,6 +748,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_reestablish_a_democratic_system  }
 		completion_reward = {
 			add_popularity = { ideology = authoritharian  popularity = -0.17 }
@@ -622,7 +770,11 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_tighten_the_governments_grip  }
+		prerequisite = { focus = POL_calm_the_public }
 		completion_reward = {
 			add_ideas = { 
 				pol_mil_training
@@ -643,6 +795,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_ignite_the_spirit_of_freedom }
 		prerequisite = { focus = POL_provide_maternity_benefits }
 		completion_reward = {
@@ -665,6 +820,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_enforce_basic_military_training  }
 		prerequisite = { focus = POL_provide_maternity_benefits  }
 		completion_reward = {
@@ -688,6 +846,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_combat_radicalism  focus = POL_demilitarize_the_government  }
 		completion_reward = {
 			add_ideas = {
@@ -709,6 +870,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 5
+ 	 	}
 		prerequisite = { focus = POL_consolidate_power  } 
 		completion_reward = {
 			add_ideas = {
@@ -730,6 +894,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		available = { 
 			has_country_flag = pol_depression_gone
 		}
@@ -737,7 +904,7 @@ focus_tree = {
 			focus = POL_welcome_foreign_immigrants  
 			focus = POL_from_the_ministry_of_public_security  
 		}
-		mutually_exclusive = { focus = POL_hand_in_hand_with_spartacists  focus = POL_the_west_knows_best focus = POL_the_warsaw_pact }
+		mutually_exclusive = { focus = POL_the_legacy_of_pilsuduski focus = POL_hand_in_hand_with_spartacists  focus = POL_the_west_knows_best focus = POL_the_warsaw_pact }
 		completion_reward = {
 			add_ideas = {
 				pol_isolasionism
@@ -758,6 +925,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		available = {
 			AND = {
 				GER = {
@@ -789,6 +959,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 6
+ 	 	}
 		available = { 
 			has_country_flag = pol_depression_gone
 		}
@@ -814,6 +987,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_silent_solitude  }
 		completion_reward = {
 			add_ideas = {
@@ -835,6 +1011,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_the_defense_of_poland  }
 		completion_reward = {
 			add_ideas = {
@@ -856,10 +1035,13 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 6
+ 	 	}
 		prerequisite = { focus = POL_the_death_of_pilsuduski  }
-		mutually_exclusive = { focus = POL_support_the_centrist_alliance  focus = POL_oppose_nationalism  focus = POL_support_the_endecja_movement  focus = POL_embrace_radical_nationalism  focus = POL_restore_the_polish_monarchy  }
+		mutually_exclusive = { focus = POL_nco_coup focus = POL_support_the_centrist_alliance  focus = POL_oppose_nationalism  focus = POL_support_the_endecja_movement  focus = POL_embrace_radical_nationalism  focus = POL_restore_the_polish_monarchy  }
 		completion_reward = {
-			add_political_power = 150
+			add_political_power = 100
 		}
 	}
 
@@ -876,6 +1058,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_strengthen_the_sanation_government  }
 		mutually_exclusive = { focus = POL_support_the_castle focus = POL_the_sanation_right }
 		completion_reward = {
@@ -887,6 +1072,15 @@ focus_tree = {
 				elections_allowed = no
 			}
 			set_country_flag = pol_politics
+			hidden_effect = {
+            add_ideas = {
+                POL_walery_slawek
+                POL_adam_skwarczynski_im
+                POL_tytus_filipowicz_fm
+                POL_leon_kozlowski_em
+                POL_edmund_charaszkiewicz_dm
+            	}
+        	}
 		}
 	}
 
@@ -903,6 +1097,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_strengthen_the_sanation_government  }
 		mutually_exclusive = { focus = POL_the_sanation_left focus = POL_the_sanation_right }
 		completion_reward = {
@@ -914,6 +1111,16 @@ focus_tree = {
 				elections_allowed = no
 			}
 			set_country_flag = pol_politics
+			hidden_effect = {
+            add_ideas = {
+                POL_wincenty_witos
+                POL_tadeusz_holowko_im
+                POL_ignacy_moscicki_fm
+                POL_leon_kozlowski_em
+                POL_edmund_charaszkiewicz_dm
+           	 }
+        	}
+
 		}
 	}
 
@@ -930,6 +1137,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		prerequisite = { focus = POL_strengthen_the_sanation_government  }
 		mutually_exclusive = { focus = POL_the_sanation_left focus = POL_support_the_castle }
 		completion_reward = {
@@ -946,6 +1156,14 @@ focus_tree = {
 				long_name = "Obóz Zjednoczenia Narodowego" 
 				name = "Ozon" 
 			}
+            add_ideas = {
+                POL_edward_rydz_smigly_rob
+                POL_bronislaw_pieracki_im
+                POL_jozef_beck_rob_fm
+                POL_eugeniusz_kwiatkowski_em
+                POL_kazimierz_switalski_dm
+            }
+        
 			}
 			create_country_leader = {
 				name = "Edward Rydz-Śmigły"
@@ -972,6 +1190,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_the_sanation_left  }
 		completion_reward = {
 			add_political_power = 50
@@ -992,8 +1213,12 @@ focus_tree = {
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
+						FOCUS_FILTER_INDUSTRY
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_modus_vivendi  }
 		completion_reward = {
 			add_ideas = {
@@ -1015,6 +1240,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_moderate_socialism  }
 		completion_reward = {
 			add_war_support = 0.05
@@ -1028,14 +1256,17 @@ focus_tree = {
 		id = POL_generously_stimulate_local_businesses
 		icon = GFX_POL_generously_stimulate_local_businesses-445
 		x = 20
-		y = 3
+		y = 4
 		cost = 5
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
+
+						FOCUS_FILTER_INDUSTRY
 					
 		}
-		prerequisite = { focus = POL_support_the_castle  }
+		ai_will_do = {
+     	base = 8
+ 	 	}
+		prerequisite = { focus = POL_banish_radicals  }
 		completion_reward = {
 			10 = { 
 				add_extra_state_shared_building_slots = 2
@@ -1045,6 +1276,28 @@ focus_tree = {
 				   instant_build = yes
 				  }
 			  }
+		}
+	}
+
+	#Banish radicals
+
+	focus = {
+		id = POL_banish_radicals
+		icon = GFX_POL_banish_radicals
+		x = 20
+		y = 3
+		cost = 5
+		search_filters = {
+
+						FOCUS_FILTER_INDUSTRY
+					
+		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
+		prerequisite = { focus = POL_support_the_castle  }
+		completion_reward = {
+
 		}
 	}
 
@@ -1061,6 +1314,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_generously_stimulate_local_businesses  }
 		completion_reward = {
 			add_war_support = 0.1
@@ -1072,15 +1328,18 @@ focus_tree = {
 	focus = {
 		id = POL_the_colonels_government
 		icon = GFX_POL_the_colonels_government-445
-		x = 21
-		y = 4
+		x = 22
+		y = 3
 		cost = 5
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
 					
 		}
-		prerequisite = { focus = POL_military_state  focus = POL_generously_stimulate_local_businesses  }
+		ai_will_do = {
+     	base = 6
+ 	 	}
+		prerequisite = { focus = POL_the_sanation_right }
 		completion_reward = {
 			add_ideas = {
 				pol_colonel_government
@@ -1094,14 +1353,17 @@ focus_tree = {
 		id = POL_military_state
 		icon = GFX_POL_military_state-445
 		x = 22
-		y = 3
+		y = 4
 		cost = 5
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
 					
 		}
-		prerequisite = { focus = POL_the_sanation_right  }
+		ai_will_do = {
+     	base = 6
+ 	 	}
+		prerequisite = { focus = POL_the_colonels_government  }
 		completion_reward = {
 			add_ideas = {
 				pol_military_state
@@ -1122,6 +1384,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 6
+ 	 	}
 		prerequisite = { focus = POL_military_state  }
 		completion_reward = {
 			add_political_power = 50
@@ -1140,8 +1405,12 @@ focus_tree = {
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
+						FOCUS_FILTER_INDUSTRY
 					
 		}
+		ai_will_do = {
+     	base = 6
+ 	 	}
 		prerequisite = { focus = POL_the_national_defense_fund  focus = POL_polish_militarism  }
 		completion_reward = {
 			10 = { 
@@ -1175,6 +1444,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 6
+ 	 	}
 		prerequisite = { focus = POL_national_interest  focus = POL_the_dream_of_greater_poland  }
 		completion_reward = {
 			add_ideas = {
@@ -1196,6 +1468,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 5
+ 	 	}
 		prerequisite = { focus = POL_consolidate_power  focus = POL_advertise_the_cultural_hubs  focus = POL_establish_the_kabaty_woods_facility }
 		completion_reward = {
 			add_war_support = 0.1
@@ -1215,6 +1490,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 5
+ 	 	}
 		prerequisite = { focus = POL_advertise_the_cultural_hubs  focus = POL_establish_the_kabaty_woods_facility focus = POL_consolidate_power  }
 		completion_reward = {
 			add_stability = 0.1
@@ -1234,10 +1512,14 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_the_death_of_pilsuduski  }
-		mutually_exclusive = { focus = POL_embrace_radical_nationalism  focus = POL_strengthen_the_sanation_government  focus = POL_support_the_centrist_alliance  focus = POL_oppose_nationalism  focus = POL_restore_the_polish_monarchy  }
+		mutually_exclusive = { focus = POL_nco_coup focus = POL_embrace_radical_nationalism  focus = POL_strengthen_the_sanation_government  focus = POL_support_the_centrist_alliance  focus = POL_oppose_nationalism  focus = POL_restore_the_polish_monarchy  }
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = 60
+			add_stability = -0.05
 		}
 	}
 
@@ -1251,6 +1533,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		available = {
 			has_country_flag = pol_politics
 		}
@@ -1277,10 +1562,12 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 6
+ 	 	}
 		prerequisite = { focus = POL_support_the_endecja_movement  }
 		completion_reward = {
 			add_popularity = { ideology = reactionary  popularity = 0.2 }
-
 			set_politics = {
 				ruling_party = reactionary
 				last_election = "1934.1.1"
@@ -1288,20 +1575,14 @@ focus_tree = {
 				elections_allowed = no
 			}
 			hidden_effect = {
-			set_party_name = { 
-				ideology = reactionary 
-				long_name = "Endecja" 
-				name = "ND" 
-				set_country_flag = pol_politics
-			}
-			}
-			create_country_leader = {
-				name = "Roman Dmowski"
-				desc = ""
-				picture = "Portrait_Poland_Roman_Dmowski.tga"
-				expire = "1965.1.1"
-				ideology = military_junta 
-				traits = {}
+			set_country_flag = pol_politics
+            add_ideas = {
+                POL_roman_dmowski
+                POL_stanislaw_grabski_im
+                POL_aleksander_skrzynski_fm
+                POL_jerzy_zdziechowski_em
+                POL_wojciech_korfanty_dm
+           	 	}
 			}
 		}
 	}
@@ -1319,6 +1600,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 6
+ 	 	}
 		prerequisite = { focus = POL_replace_the_sanation_ideals  }
 		completion_reward = {
 			add_ideas = {
@@ -1340,6 +1624,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 6
+ 	 	}
 		prerequisite = { focus = POL_polish_nationalism  }
 		completion_reward = {
 			add_ideas = {
@@ -1361,6 +1648,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 6
+ 	 	}
 		prerequisite = { focus = POL_enforce_the_polonization_of_minorities  }
 		completion_reward = {
 			add_ideas = {
@@ -1386,9 +1676,10 @@ focus_tree = {
 					
 		}
 		prerequisite = { focus = POL_the_death_of_pilsuduski  }
-		mutually_exclusive = { focus = POL_oppose_nationalism  focus = POL_support_the_centrist_alliance  focus = POL_strengthen_the_sanation_government  focus = POL_support_the_endecja_movement  focus = POL_restore_the_polish_monarchy  }
+		mutually_exclusive = { focus = POL_nco_coup focus = POL_oppose_nationalism  focus = POL_support_the_centrist_alliance  focus = POL_strengthen_the_sanation_government  focus = POL_support_the_endecja_movement  focus = POL_restore_the_polish_monarchy  }
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = -50
+			add_stability = -0.1
 		}
 	}
 
@@ -1405,17 +1696,41 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_embrace_radical_nationalism  }
 		completion_reward = {
+			hidden_effect = {
+				set_cosmetic_tag = POL_ONR
+				set_country_flag = pol_politics
+				create_country_leader = {
+					name = "Henryk Rossman"
+					desc = ""
+					picture = "Henryk_Rossman.dds"
+					expire = "1965.1.1"
+					ideology = reactionary_subtype 
+					traits = { polish_nationalist }
+				}
+				set_party_name = { 
+					ideology = reactionary 
+					ong_name = "Obóz Zjednoczenia Narodowego" 
+					name = "OZN" 
+					set_country_flag = pol_politics
+				}
+            	add_ideas = {
+                	POL_henryk_rossman
+                	POL_zygmunt_berezowski_im
+                	POL_jan_mosdorf_fm
+               		POL_adam_doboszynski_em
+                	POL_jedrzej_giertych_dm
+           			}
+				}
 			set_politics = {
 				ruling_party = reactionary
 				last_election = "1934.1.1"
 				election_frequency = 72
 				elections_allowed = no
-			}
-			hidden_effect = {
-				set_cosmetic_tag = POL_ONR
-				set_country_flag = pol_politics
 			}
 			add_popularity = { ideology = reactionary  popularity = 0.2 }
 		}
@@ -1434,6 +1749,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_establish_the_onrfalanga  }
 		completion_reward = {
 			custom_effect_tooltip = pol_tt_1
@@ -1453,6 +1771,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		available = { 
 				has_country_flag = pol_depression_gone
 				custom_effect_tooltip = pol_tt_2
@@ -1463,7 +1784,7 @@ focus_tree = {
 		prerequisite = { 
 			focus = POL_the_red_poppy_blossoms  
 		}
-		mutually_exclusive = { focus = POL_the_west_knows_best  }
+		mutually_exclusive = { focus = POL_the_west_knows_best  focus = POL_silent_solitude }
 		completion_reward = {
 			create_faction = "Międzymorze"
 		}
@@ -1482,6 +1803,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 6
+ 	 	}
 		available = { 
 			has_country_flag = pol_depression_gone
 		}
@@ -1511,6 +1835,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_delegation_to_the_soviets  }
 		mutually_exclusive = { focus = POL_invitation_to_warsaw_pact  }
 		completion_reward = {
@@ -1527,6 +1854,9 @@ focus_tree = {
 		y = 9
 		cost = 5
 		bypass = { OR = { ROM = { is_puppet = yes } ROM = { exists = no } } }
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		available = {
 			hidden_trigger = {
 				NOT = {
@@ -1599,6 +1929,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		bypass = { OR = { CZE = { is_puppet = yes } CZE = { exists = no } } }
 		prerequisite = { focus = POL_the_legacy_of_pilsuduski  }
 		completion_reward = {
@@ -1628,6 +1961,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		prerequisite = { focus = POL_renounce_territorial_claims_in_czechia  }
 		completion_reward = {
 			CZE = { country_event = { id = rob_poland.2 days = 3 } }
@@ -1648,6 +1984,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		prerequisite = { focus = POL_the_czechpolish_friendship  }
 		completion_reward = {
 			SLO = { country_event = { id = rob_poland.2 days = 3 } }
@@ -1668,6 +2007,14 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
+		available = {
+			NOT = {
+				LIT = { is_puppet = yes }
+			}
+		}
 		prerequisite = { focus = POL_the_lublin_treaty  }
 		completion_reward = {
 			LIT = { country_event = { id = rob_poland.2 days = 3 } }
@@ -1687,6 +2034,14 @@ focus_tree = {
 			
 						FOCUS_FILTER_POLITICAL
 					
+		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
+		available = {
+			NOT = {
+				LIT = { is_puppet = yes }
+			}
 		}
 		prerequisite = { focus = POL_the_legacy_of_pilsuduski  }
 		completion_reward = {
@@ -1716,6 +2071,14 @@ focus_tree = {
 			
 						FOCUS_FILTER_POLITICAL
 					
+		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
+		available = {
+			NOT = {
+				LIT = { is_puppet = yes }
+			}
 		}
 		prerequisite = { focus = POL_reinvigorate_historic_ties_with_lithuanians  }
 		completion_reward = {
@@ -1748,6 +2111,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 7
+ 	 	}
 		prerequisite = { focus = POL_the_ukrainian_question  }
 		mutually_exclusive = { focus = POL_convince_through_force  }
 		completion_reward = {
@@ -1770,6 +2136,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_expand_the_polishromanian_treaty  }
 		completion_reward = {
 			add_political_power = 25
@@ -1790,6 +2159,9 @@ focus_tree = {
 				SOCIALIST_ALIGNED_GOVERNMENT = yes
 			}
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
@@ -1818,6 +2190,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_the_ukrainian_question  }
 		mutually_exclusive = { focus = POL_land_for_alliance  }
 		completion_reward = {
@@ -1877,6 +2252,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_the_west_knows_best  }
 		mutually_exclusive = { focus = POL_seek_friends_in_usa  focus = POL_seek_friends_in_italy  }
 		completion_reward = {
@@ -1909,6 +2287,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		available = {
 			USA = {
 				exists = yes
@@ -1936,6 +2317,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		available = {
 			ITA = {
 				exists = yes
@@ -1963,6 +2347,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_slovak_admission }
 		prerequisite = { focus = POL_offer_to_lithuania }
 		prerequisite = { focus = POL_land_for_alliance  focus = POL_convince_through_force  }
@@ -1984,6 +2371,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 6
+ 	 	}
 		available = {
 				PRS = { exists = yes }
 		}
@@ -2005,15 +2395,19 @@ focus_tree = {
 		x = 29
 		y = 1
 		cost = 5
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
 					
 		}
 		prerequisite = { focus = POL_the_death_of_pilsuduski  }
-		mutually_exclusive = { focus = POL_oppose_nationalism  focus = POL_strengthen_the_sanation_government  focus = POL_support_the_centrist_alliance  focus = POL_support_the_endecja_movement  focus = POL_embrace_radical_nationalism  }
+		mutually_exclusive = { focus = POL_nco_coup focus = POL_oppose_nationalism  focus = POL_strengthen_the_sanation_government  focus = POL_support_the_centrist_alliance  focus = POL_support_the_endecja_movement  focus = POL_embrace_radical_nationalism  }
 		completion_reward = {
-			add_political_power = 120
+			add_political_power = -60
+			add_stability = -0.05
 		}
 	}
 
@@ -2031,9 +2425,12 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		prerequisite = { focus = POL_the_warsaw_pact  focus = POL_hand_in_hand_with_spartacists  }
 		completion_reward = {
-			CBR = { country_event = { id = rob_poland.3 days = 3 } }
+			CBR = { country_event = { id = rob_poland.20 days = 3 } }
 		}
 	}
 
@@ -2050,16 +2447,12 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_contact_ex_nobility  }
 		prerequisite = { focus = POL_prepare_public  }
 		completion_reward = {
-			add_popularity = { ideology = reactionary  popularity = 0.2 }
-			set_politics = {
-				ruling_party = reactionary
-				last_election = "1934.1.1"
-				election_frequency = 72
-				elections_allowed = no
-			}
 			hidden_effect = {
 			set_party_name = { 
 					ideology = reactionary 
@@ -2068,7 +2461,14 @@ focus_tree = {
 				}
 			set_cosmetic_tag = POL_monarchy
 			set_country_flag = pol_politics
-			}
+			set_country_flag = pol_monarchy_active
+            add_ideas = {
+                POL_fryderyk_krystian
+                POL_leon_aleksander_sapieha_im
+                POL_maurycy_klemens_zamoyski_fm
+                POL_stefan_tyszkiewicz_em
+                POL_adam_tarnowski_dm
+            	}
 			create_country_leader = {
 				name = "Fryderyk Krystian"
 				desc = ""
@@ -2076,6 +2476,14 @@ focus_tree = {
 				expire = "1965.1.1"
 				ideology = reactionary_monarchy 
 				traits = { new_monarch }
+				}
+			}
+			add_popularity = { ideology = reactionary  popularity = 0.2 }
+			set_politics = {
+				ruling_party = reactionary
+				last_election = "1934.1.1"
+				election_frequency = 72
+				elections_allowed = no
 			}
 		}
 	}
@@ -2093,6 +2501,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_restore_the_polish_monarchy  }
 		completion_reward = {
 			add_popularity = { ideology = reactionary  popularity = 0.07 }
@@ -2113,6 +2524,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		completion_reward = {
 			add_war_support = 0.1
 		}
@@ -2131,6 +2545,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_restore_the_polish_monarchy  }
 		completion_reward = {
 			add_popularity = { ideology = reactionary  popularity = 0.12 }
@@ -2152,6 +2569,9 @@ focus_tree = {
 		}
 		prerequisite = { focus = POL_take_the_reigns }
 		prerequisite = { focus = POL_oaths_of_loyalty_to_the_king }
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		completion_reward = {
 			add_political_power = 150
 		}
@@ -2171,6 +2591,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		completion_reward = {
 			add_stability = -0.08
 			add_ideas = {
@@ -2192,6 +2615,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		prerequisite = { focus = POL_develop_economical_ties  }
 		completion_reward = {
 			if = {
@@ -2276,6 +2702,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		available = {
 			USA = {
 				exists = yes
@@ -2300,8 +2729,12 @@ focus_tree = {
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
+						FOCUS_FILTER_INDUSTRY
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_western_technology  }
 		prerequisite = {  focus = POL_begin_the_exports  }
 		completion_reward = {
@@ -2324,6 +2757,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		prerequisite = { focus = POL_use_antigerman_sentiment  }
 		completion_reward = {
 			if = {
@@ -2419,6 +2855,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		available = {
 			OR = {
 				UKR = { exists = yes }
@@ -2456,6 +2895,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		available = {
 			DBR = { exists = yes }
 			DBR =  { is_puppet_of = POL }
@@ -2463,7 +2905,44 @@ focus_tree = {
 		prerequisite = { focus = POL_guard_the_borders  focus = POL_begin_the_exports  }
 		mutually_exclusive = { focus = POL_pull_out_from_belarus  }
 		completion_reward = {
+			hidden_effect = {
+			DBR = {
+			remove_ideas = {
+					belarusian_civil_war
+					DBR_polish_dominance
+				}
+			}
+			}
 			annex_country = { target = DBR transfer_troops = yes }
+		}
+	}
+
+	###  Even friendlier administration
+
+	focus = {
+		id = POL_even_friendlier_administration
+		icon = GFX_POL_even_friendlier_administration
+		x = 12
+		y = 13
+		cost = 5
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
+		prerequisite = { focus = POL_incorporate_the_belarusian_democratic_republic }
+		completion_reward = {
+		    POL = {
+                every_owned_state = {
+                     	limit = { 	 
+                        	is_core_of = DBR
+                    	 }
+                        	add_core_of = POL
+                 }		
+			}
 		}
 	}
 
@@ -2480,6 +2959,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		available = {
 			OR = {
 				BLR = { exists = yes }
@@ -2512,6 +2994,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		available = {
 			GER = {
 				exists = yes
@@ -2544,6 +3029,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_integrate_militias_in_the_army  }
 		completion_reward = {
 			add_ideas = {
@@ -2565,6 +3053,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_guard_the_borders  }
 		mutually_exclusive = { focus = POL_incorporate_the_belarusian_democratic_republic  }
 		available = {
@@ -2581,6 +3072,30 @@ focus_tree = {
 		}
 	}
 
+	#None shall pass
+
+	focus = {
+		id = POL_none_shall_pass
+		icon = GFX_POL_none_shall_pass
+		x = 10
+		y = 13
+		cost = 5
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
+		prerequisite = { focus = POL_pull_out_from_belarus  }
+		completion_reward = {
+			add_ideas = {
+				
+			}
+		}
+	}
+
 	#Western Technology
 
 	focus = {
@@ -2592,8 +3107,12 @@ focus_tree = {
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
+						FOCUS_FILTER_INDUSTRY
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		available = {
 			USA = {
 				exists = yes
@@ -2621,8 +3140,12 @@ focus_tree = {
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
+						FOCUS_FILTER_INDUSTRY
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		available = {
 			USA = {
 				exists = yes
@@ -2654,8 +3177,12 @@ focus_tree = {
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
+						FOCUS_FILTER_INDUSTRY
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		available = {
 			has_country_flag  = pol_friend
 		}
@@ -2724,6 +3251,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		available = {
 			PRS = { exists = yes }
 		}
@@ -2746,6 +3276,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_contact_comrades_in_belaruss  }
 		completion_reward = {
 			if = {
@@ -2773,9 +3306,12 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		prerequisite = { focus = POL_the_warsaw_pact  focus = POL_hand_in_hand_with_spartacists  }
 		completion_reward = {
-			DSU = { country_event = { id = rob_poland.3 days = 3 } }
+			DSU = { country_event = { id = rob_poland.20 days = 3 } }
 		}
 	}
 
@@ -2792,6 +3328,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_contact_comrades_in_ukraine  }
 		completion_reward = {
 			if = {
@@ -2819,6 +3358,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_the_warsaw_pact  }
 		completion_reward = {
 			add_political_power = 25
@@ -2839,6 +3381,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_delegation_to_the_soviets  }
 		mutually_exclusive = { focus = POL_uneasy_interest_in_alliance  }
 		completion_reward = {
@@ -2859,6 +3404,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		available = {
 			CBR = {
 				exists = yes
@@ -2909,6 +3457,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		available = {
 			GER = {
 				exists = yes
@@ -2939,6 +3490,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		available = {
 			GER = {
 				exists = yes
@@ -3004,6 +3558,10 @@ focus_tree = {
 						NOT = { LIT = { is_puppet = yes } }
 						LIT = { exists = yes } 
 					}
+				OR = {
+						NOT = { SAG = { is_puppet = yes } }
+						SAG = { exists = yes } 
+					}
 				}
 			}
 		}
@@ -3012,6 +3570,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_invitation_to_warsaw_pact  focus = POL_uneasy_interest_in_alliance  }
 		completion_reward = {
 			if = {
@@ -3032,7 +3593,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { OR = { LPR = { exists = yes } LPR = { is_puppet_of = POL  } } }
-			create_wargoal = { target = LPR  type = annex_everything }
+			LPR = { country_event = { id = rob_poland.3 days = 3 } }
 			}
 			if = {
 				limit = { OR = { EST = { exists = yes } EST = { is_puppet_of = POL  } } }
@@ -3040,7 +3601,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { OR = { ECA = { exists = yes } ECA = { is_puppet_of = POL  } } }
-			create_wargoal = { target = ECA  type = annex_everything }
+			ECA = { country_event = { id = rob_poland.3 days = 3 } }
 			}
 			if = {
 				limit = { OR = { ELP = { exists = yes } ELP = { is_puppet_of = POL  } } }
@@ -3075,6 +3636,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_secure_baltics  }
 		mutually_exclusive = { focus = POL_cooperate_with_soviets  }
 		completion_reward = {
@@ -3104,6 +3668,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_secure_baltics  }
 		mutually_exclusive = { focus = POL_backstab_soviets  }
 		completion_reward = {
@@ -3125,12 +3692,18 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		available = {
 			GER = {
 				exists = yes
 				SOCIALIST_ALIGNED_GOVERNMENT = yes
 			}
 		}
+		ai_will_do = {
+     	base = 4
+ 	 	}
 		prerequisite = { focus = POL_hand_in_hand_with_spartacists  }
 		completion_reward = {
 			add_ideas = {
@@ -3152,6 +3725,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_economic_pact  }
 		completion_reward = {
 			add_ideas = {
@@ -3173,6 +3749,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_the_three_sister_initiative  focus = POL_german_tanks  }
 		completion_reward = {
 			create_wargoal = { target = PRS  type = annex_everything }
@@ -3192,6 +3771,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		available = {
 			hidden_trigger = {
 				NOT = {
@@ -3250,6 +3832,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_the_polish_cypher_bureau  }
 		completion_reward = {
 			90 = { 
@@ -3281,6 +3866,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_fund_military_projects  }
 		prerequisite = { focus = POL_invest_in_private_enterprises }
 		completion_reward = {
@@ -3299,6 +3887,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_begin_the_cop  }
 		completion_reward = {
 			762 = { 
@@ -3330,6 +3921,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_build_rural_train_stations  }
 		prerequisite = { focus = POL_allocate_more_funds_to_the_university_of_warsaw }
 		completion_reward = {
@@ -3370,6 +3964,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_finish_cop  }
 		completion_reward = {
 			add_ideas = {
@@ -3388,6 +3985,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_boost_factory_production  }
 		completion_reward = {
 			90 = { 
@@ -3427,6 +4027,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_allocate_more_funds_to_the_university_of_warsaw  }
 		prerequisite = { focus = POL_expand_polmin }
 		completion_reward = {
@@ -3450,6 +4053,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_the_bomba_kryptologizcna  }
 		completion_reward = {
 			add_tech_bonus = {
@@ -3471,6 +4077,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_the_four_year_plan  }
 		completion_reward = {
 			10 = {
@@ -3496,6 +4105,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_the_four_year_plan  }
 		completion_reward = {
 			swap_ideas = {
@@ -3515,6 +4127,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_combating_unemployment  }
 		completion_reward = {
 			add_political_power = -75
@@ -3531,6 +4146,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_warsaw_main_railway  }
 		completion_reward = {
 			90 = {
@@ -3576,6 +4194,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_subsidize_new_urban_projects  }
 		completion_reward = {
 			add_tech_bonus = {
@@ -3597,6 +4218,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_combating_unemployment  }
 		completion_reward = {
 			87 = { 
@@ -3628,6 +4252,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 8
+ 	 	}
 		prerequisite = { focus = POL_expand_the_rail_network  }
 		completion_reward = {
 			865 = {
@@ -3683,6 +4310,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_build_rural_train_stations  }
 		prerequisite = { focus = POL_expand_polmin }
 		completion_reward = {
@@ -3705,6 +4335,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_replace_the_gold_standard  }
 		completion_reward = {
 			swap_ideas = {
@@ -3724,6 +4357,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
 		prerequisite = { focus = POL_reintroduce_the_marka  }
 		completion_reward = {
 			swap_ideas = {
@@ -3743,6 +4379,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 100
+ 	 	}
 		prerequisite = { focus = POL_resource_exploitation_programs  }
 		prerequisite = { focus = POL_stabilize_the_currency }
 		completion_reward = {
@@ -3768,6 +4407,9 @@ focus_tree = {
 		available = {
 			date > 1939.01.01
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_manage_construction_projects  }
 		prerequisite = { focus = POL_end_depression_recovery }
 		completion_reward = {
@@ -3844,6 +4486,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_begin_the_15_year_plan  }
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -3968,6 +4613,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_begin_the_15_year_plan  }
 		completion_reward = {
 			add_ideas = { pol_agricultural_advances }
@@ -3984,6 +4632,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_large_scale_infrastructure_upgrades  }
 		prerequisite = { focus = POL_agricultural_advances }
 		completion_reward = {
@@ -4001,6 +4652,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_higher_education_standarts  }
 		completion_reward = {
 			10 = {
@@ -4031,6 +4685,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		available = {
 			has_country_flag = pol_politics
 		}
@@ -4054,6 +4711,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_army_modernization  }
 		completion_reward = {
 			army_experience = 20
@@ -4070,7 +4730,20 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_army_modernization  }
+		available = {
+			AND = {
+				owns_state = 89
+				controls_state = 89
+			}
+			AND = {
+				owns_state = 91
+				controls_state = 91
+			}
+		}
 		completion_reward = { 
 			89 = {
 				if = {
@@ -4119,6 +4792,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_infantry_standardisation  }
 		completion_reward = {
 			army_experience = 5
@@ -4141,6 +4817,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_learn_from_the_great_war  }
 		mutually_exclusive = { focus = POL_artillery_modernization  focus = POL_cavalry_tanks_designs  }
 		completion_reward = {
@@ -4160,6 +4839,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_well_planned_offensives  }
 		completion_reward = {
 			army_experience = 10
@@ -4182,6 +4864,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_study_the_french_general_staff  focus = POL_begin_tank_production  focus = POL_focus_on_firepower  }
 		completion_reward = {
 			add_ideas = {
@@ -4200,6 +4885,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_infantry_standardisation  focus = POL_the_romanian_bridgehead_strategy  }
 		completion_reward = {
 			add_equipment_to_stockpile = {
@@ -4229,6 +4917,27 @@ focus_tree = {
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
+		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
+		available = {
+			AND = {
+				owns_state = 865
+				controls_state = 865
+			}
+			AND = {
+				owns_state = 86
+				controls_state = 86
+			}
+			AND = {
+				owns_state = 801
+				controls_state = 801
+			}
+			AND = {
+				owns_state = 66
+				controls_state = 66
+			}
 		}
 		prerequisite = { focus = POL_the_romanian_bridgehead_strategy  focus = POL_infantry_standardisation  }
 		completion_reward = { 
@@ -4331,6 +5040,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_foreign_tank_pruchases  }
 		mutually_exclusive = { focus = POL_artillery_modernization  focus = POL_well_planned_offensives  }
 		completion_reward = {
@@ -4354,6 +5066,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_cavalry_tanks_designs  }
 		completion_reward = { 
 			90 = { 
@@ -4383,6 +5098,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_study_the_french_general_staff  focus = POL_begin_tank_production  focus = POL_focus_on_firepower  }
 		completion_reward = {
 			add_tech_bonus = {
@@ -4405,6 +5123,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_study_the_french_general_staff  focus = POL_begin_tank_production  focus = POL_focus_on_firepower  }
 		completion_reward ={
 			add_ideas = {
@@ -4423,6 +5144,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_pzl37_los  focus = POL_light_bomber_priority }
 		prerequisite = { focus = POL_continue_fighter_development } 
 		completion_reward = {
@@ -4443,8 +5167,11 @@ focus_tree = {
 		y = 19
 		cost = 5
 		search_filters = {
-			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_artillery_modernization  }
 		completion_reward = {
 			army_experience = 10
@@ -4467,6 +5194,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_fortification_construction  }
 		mutually_exclusive = { focus = POL_cavalry_tanks_designs  focus = POL_well_planned_offensives  }
 		completion_reward = {
@@ -4489,6 +5219,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_from_the_polish_impact_unit  }
 		prerequisite = { focus = POL_mechanization_of_the_army }
 		mutually_exclusive = { focus = POL_rocket_artillery_trials  }
@@ -4512,6 +5245,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_mechanization_of_the_army  }
 		prerequisite = { focus = POL_missile_research }
 		mutually_exclusive = { focus = POL_tank_killers  }
@@ -4535,6 +5271,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_from_the_polish_impact_unit  }
 		prerequisite = { focus = POL_train_new_officers }
 		prerequisite = { focus = POL_mechanization_of_the_army }
@@ -4558,6 +5297,9 @@ focus_tree = {
 		available = {
 			has_country_flag = pol_politics
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		completion_reward = {
 			air_experience = 50
 			add_tech_bonus = {
@@ -4579,6 +5321,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_the_polish_airforce  }
 		bypass = { has_tech = fighter1 }
 		completion_reward = {
@@ -4601,6 +5346,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_pzl_p11c  }
 		bypass = { has_tech = fighter2 }
 		completion_reward = {
@@ -4623,6 +5371,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		bypass = { has_tech = strategic_bomber1 }
 		prerequisite = { focus = POL_the_polish_airforce  }
 		completion_reward = {
@@ -4645,6 +5396,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_pzl23_karas  }
 		bypass = { has_tech = strategic_bomber2 }
 		mutually_exclusive = { focus = POL_light_bomber_priority  }
@@ -4668,6 +5422,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_pzl23_karas  }
 		mutually_exclusive = { focus = POL_pzl37_los  }
 		completion_reward = {
@@ -4690,6 +5447,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_pzl37_los  focus = POL_light_bomber_priority }
 		prerequisite = { focus = POL_continue_fighter_development } 
 		bypass = { has_tech = fighter3 }
@@ -4713,6 +5473,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_oversee_the_baltic_sea }
 		prerequisite = { focus = POL_pzl50_jastrzab  }
 		completion_reward = {
@@ -4736,6 +5499,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_look_in_to_jet_engines  }
 		completion_reward = {
 			add_tech_bonus = {
@@ -4757,6 +5523,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_the_polish_navy  }
 		mutually_exclusive = { focus = POL_adopt_commerce_raiding_tactics  }
 		completion_reward = {
@@ -4779,6 +5548,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_the_polish_navy  }
 		mutually_exclusive = { focus = POL_use_traditional_combat_methods  }
 		completion_reward = {
@@ -4801,6 +5573,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_adopt_commerce_raiding_tactics  }
 		completion_reward = {
 			add_tech_bonus = {
@@ -4822,6 +5597,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_use_traditional_combat_methods  focus = POL_adopt_commerce_raiding_tactics  }
 		completion_reward = {
 			add_tech_bonus = {
@@ -4845,6 +5623,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_use_traditional_combat_methods  }
 		completion_reward = {
 			add_tech_bonus = {
@@ -4866,6 +5647,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_develop_screening_ships  }
 		mutually_exclusive = { focus = POL_dominate_the_baltic  }
 		completion_reward = {
@@ -4890,6 +5674,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_costal_defence  }
 		completion_reward = {
 			add_ideas = {
@@ -4908,6 +5695,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_convoy_targeting  }
 		completion_reward = {
 			add_tech_bonus = {
@@ -4929,6 +5719,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_modern_battleships  }
 		completion_reward = {
 			add_tech_bonus = {
@@ -4950,6 +5743,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_develop_screening_ships  }
 		mutually_exclusive = { focus = POL_costal_defence  }
 		completion_reward = {
@@ -4969,6 +5765,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_modern_battleships  }
 		completion_reward = {
 		add_tech_bonus = {
@@ -4990,6 +5789,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_dominate_the_baltic  }
 		completion_reward = {
 			add_tech_bonus = {
@@ -5011,6 +5813,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_import_submarine_designs  }
 		completion_reward = { 
 			add_ideas = {
@@ -5029,6 +5834,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		ai_will_do = {
+     	base = 2
+ 	 	}
 		prerequisite = { focus = POL_convoy_targeting  }
 		completion_reward = {
 			add_tech_bonus = {
@@ -5050,8 +5858,11 @@ focus_tree = {
 		y = 21
 		cost = 5
 		search_filters = {
-			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_INDUSTRY
 		}
+		ai_will_do = {
+     	base = 3
+ 	 	}
 		prerequisite = { focus = POL_prepare_escorts focus = POL_design_heavier_guns }
 		completion_reward = {
 			add_ideas = {

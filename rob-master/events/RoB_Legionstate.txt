@@ -165,8 +165,14 @@ hidden_effect = {
  remove_unit_leader = 5721
  set_country_flag = LES_survives
  country_event = { id = legion.30 days = 21 }
- country_event = { id = legion.43 days = 95 }
-}
+	 if = {
+		 limit = { NOT = { has_country_flag = poets } }
+		country_event = { id = legion.43 days = 95 }
+ 		}
+	}
+	country_event = { id = legion.57 days = 66 }
+	country_event = { id = legion.61 days = 21 }
+	country_event = { id = legion.63 days = 102 }
 }
 }
 
@@ -449,11 +455,20 @@ is_triggered_only = yes
 
 option = {
  name = legion.17.a
- add_tech_bonus = {
-	name = gwtank 
-	bonus = 1.0
-	uses = 1
-	technology = gwtank 
+  	if = {
+	limit = { NOT = { has_tech = gwtank } }
+		add_tech_bonus = {
+		name = gwtank 
+		bonus = 1.0
+		uses = 1
+		technology = gwtank 
+	 	}
+		add_tech_bonus = {
+		name = lighttank 
+		bonus = 1
+		uses = 1
+		technology = basic_light_tank 
+		}
 	}
  	if = {
 	limit = {
@@ -462,7 +477,7 @@ option = {
 	add_tech_bonus = {
 	name = lighttank 
 	bonus = 1.0
-	uses = 1
+	uses = 2
 	technology = basic_light_tank 
 	}
 	}
@@ -1091,10 +1106,6 @@ country_event = {
 	name = legion.43.b
 	ai_chance = {
 		factor = 1
-		modifier = {
-			factor = 9
-			has_country_flag = poets
-		}
 	}
 		hidden_effect = {
 			LES = { country_event = { id = legion.44 days = 75 } }
@@ -1910,7 +1921,6 @@ country_event = {
 	}
 }
 
-
 |### New Capital
 country_event = { 
 	id = legion.56
@@ -1927,6 +1937,203 @@ country_event = {
 	option = {
 	name = "I would rather not"
 	}
+}
+
+### Arguments factions fluff
+country_event = { 
+	id = legion.57
+	title = legion.57.t
+	desc = legion.57.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	###pagans like it, christians mad
+	option = {
+	 name = legion.57.a
+	 pagan_increase_10 = yes
+	 christian_decrease_10 = yes
+	 hidden_effect = {
+		 country_event = { id = legion.60 days = 66 }
+	 }
+
+	 }
+	 ###christians like it, pagans mad
+	 option = {
+	 name = legion.57.b
+	 christian_increase_10 = yes
+	 pagan_decrease_10 = yes
+	 hidden_effect = {
+		 country_event = { id = legion.60 days = 66 }
+	 }
+
+	 }
+}
+
+### War with soviets fluff event
+country_event = { 
+	id = legion.58
+	title = legion.58.t
+	desc = legion.58.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	###based lives
+	option = {
+	 name = legion.58.a
+	 add_war_support = 0.01
+	 }
+	 ###based dies
+	 option = {
+	 name = legion.58.b
+	 add_war_support = 0.01
+	 }
+}
+
+### Brawl factions fluff
+country_event = { 
+	id = legion.59
+	title = legion.59.t
+	desc = legion.59.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	###punish christian
+	option = {
+	 name = legion.59.a
+	 christian_decrease_10 = yes
+	 }
+	 ###punish pagan
+	 option = {
+	 name = legion.59.b
+	 pagan_decrease_10 = yes
+	 }
+	###punish none
+	 option = {
+	 name = legion.59.c
+	 add_political_power = -75
+	 }
+}
+
+### Preacher factions fluff
+country_event = { 
+	id = legion.60
+	title = legion.60.t
+	desc = legion.60.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	###punish christian, loyal down
+	option = {
+	 name = legion.60.a
+	 christian_decrease_10 = yes
+	 hidden_effect = {
+		 country_event = { id = legion.59 days = 66 }
+	 }
+	 }
+	 ###light punishment, pagans mad
+	 option = {
+	 name = legion.60.b
+	 pagan_decrease_10 = yes
+	 hidden_effect = {
+		 country_event = { id = legion.59 days = 66 }
+	 }
+	 }
+}
+
+### On russians factions fluff
+country_event = { 
+	id = legion.61
+	title = legion.61.t
+	desc = legion.61.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	###russians loyalty down, stability up
+	option = {
+	 name = legion.61.a
+	 rusnat_increase_5 = yes
+	 add_stability = 0.02
+	 hidden_effect = {
+		 country_event = { id = legion.62 days = 55 }
+	 }
+	 }
+	 ###nothing changes
+	 option = {
+	 name = legion.61.b
+	 }
+}
+
+### Arogance factions fluff
+country_event = { 
+	id = legion.62
+	title = legion.62.t
+	desc = legion.62.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	###jguilty, russians mad
+	option = {
+	 name = legion.62.a
+	 rusnat_decrease_10 = yes
+	 }
+	 ###ignore him, stability down
+	 option = {
+	 name = legion.62.b
+	 add_stability = -0.03
+	 }
+}
+
+### Old guard factions fluff
+country_event = { 
+	id = legion.63
+	title = legion.63.t
+	desc = legion.63.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	###lose pp, gain loyalty
+	option = {
+	 name = legion.63.a
+	 add_political_power = -25
+	 returnist_increase_5 = yes
+	 }
+	 ###nothing
+	 option = {
+	 name = legion.63.b
+	 }
+}
+
+### General Suicide factions fluff
+country_event = { 
+	id = legion.64
+	title = legion.64.t
+	desc = legion.64.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	###lose pp, gain loyalty
+	option = {
+	 name = legion.64.a
+	 add_manpower = 1000
+	 }
+	 ###nothing
+	 option = {
+	 name = legion.64.b
+	 add_manpower = 1000
+	 }
+}
+
+### Refugees from legion STATE (banish mechanic)
+country_event = { 
+	id = legion.65
+	title = legion.65.t
+	desc = legion.65.d
+	is_triggered_only = yes
+	
+	option = {
+	 name = legion.65.a
+	 add_manpower = 1000
+	 }
 }
 
  ###temp event for debugging
