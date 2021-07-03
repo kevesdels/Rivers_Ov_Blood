@@ -1,0 +1,65 @@
+
+division_template = {
+	name = "Cukura strēlnieki"				# Infantry Division	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+
+division_template = {
+	name = "Iesauktie"				# Infantry Division	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+
+units = { 
+
+division = { # "I Cukura strēlnieki"
+		name = "I Cukura strēlnieki"
+		location = 13620
+		division_template = "Cukura strēlnieki"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+}
+
+division = { # "II Cukura strēlnieki"
+		name = "II Cukura strēlnieki"
+		location = 11246
+		division_template = "Cukura strēlnieki"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+}
+
+division = { # "III Cukura strēlnieki"
+		name = "III Cukura strēlnieki"
+		location = 13618
+		division_template = "Cukura strēlnieki"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+}
+
+division = { # "Iesauktie"
+		name = "Iesauktie"
+		location = 13620
+		division_template = "Iesauktie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+}
+
+
+}

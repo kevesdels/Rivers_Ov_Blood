@@ -76,7 +76,7 @@ option = {
 ###Lithuanian Arms
 country_event = {
 id = belarusia.4
-title = belarusia.4.t
+title = "Equipment Arrives"
 desc = belarusia.4.d
 fire_only_once = yes
 is_triggered_only = yes
@@ -84,7 +84,7 @@ is_triggered_only = yes
 
 
 option = {
- name = belarusia.4.a
+ name = "A Worthwhile Investment"
  add_equipment_to_stockpile = {
 			type = infantry_equipment
 			amount = 2000
@@ -98,7 +98,7 @@ option = {
 ###Pelekist Visit
 country_event = {
 id = belarusia.5
-title = belarusia.5.t
+title = "Pelekist Visit"
 desc = belarusia.5.d
 fire_only_once = yes
 
@@ -133,7 +133,7 @@ name = belarusia.5.b
 ###Pelekist Coup!
 country_event = {
 id = belarusia.6
-title = belarusia.6.t
+title = "Pelekist Coup!"
 desc = belarusia.6.d
 fire_only_once = yes
 
@@ -169,7 +169,7 @@ add_popularity = { ideology = pelekist popularity =0.2}
 ###Authoritarian Coup!
 country_event = {
 id = belarusia.7
-title = belarusia.7.t
+title = "Authoritarian Coup!"
 desc = belarusia.7.d
 fire_only_once = yes
 
@@ -195,7 +195,7 @@ option = {
 ###Pelekist Visit - DBR
 country_event = {
 id = belarusia.8
-title = belarusia.8.t
+title = "Pelekist Visit"
 desc = belarusia.8.d
 fire_only_once = yes
 is_triggered_only = yes
@@ -224,7 +224,7 @@ option = { ###decline the aid
 ###Republican Raid
 country_event = {
 id = belarusia.9
-title = belarusia.9.t
+title = "The Failure of Bialystok"
 desc = belarusia.9.d
 fire_only_once = yes
 
@@ -233,12 +233,12 @@ is_triggered_only = yes
  mean_time_to_happen = { days = 1 }
  
  option = { ###approach democrats
-  name = belarusia.9.a
+  name = "Approach Democrats"
   DBR = { country_event = { id = belarusia.10 days = 5 } }
  }
  
  option = { ###Turn to Lithuania
-  name = belarusia.9.a
+  name = "Turn to Lithuania"
   LIT = { country_event = { id = lithuania.1 days = 5 } }
  }
  }
@@ -246,13 +246,13 @@ is_triggered_only = yes
 ###Democratcs get the choice
 country_event = {
 id = belarusia.10
-title = belarusia.10.t
+title = "Nationalists Offers Alliance"
 desc = belarusia.10.d
 fire_only_once = yes
 is_triggered_only = yes
 
 option = { ###accept proposal
- name = belarusia.10.a
+ name = "Agree"
  country_event = { id = belarusia.11 days = 10 } 
  hidden_effect = {
   BLR = {
@@ -262,7 +262,7 @@ option = { ###accept proposal
 }
 
 option = { ###Deny proposal
- name = belarusia.10.b
+ name = "Politley Decline"
  BLR = { 
   country_event = { id = belarusia.12 days = 3 } 
   }
@@ -272,7 +272,7 @@ option = { ###Deny proposal
 ###Bialystok - alliance
 country_event = {
 id = belarusia.11
-title = belarusia.11.t
+title = "The Democrats Agree"
 desc = belarusia.11.d
 fire_only_once = yes
 is_triggered_only = yes
@@ -305,14 +305,14 @@ option = {
 ###Democrats deny
 country_event = {
 id = belarusia.12
-title = belarusia.12.t
+title = "Democrats Deny Alliance"
 desc = belarusia.12.d
 fire_only_once = yes
 is_triggered_only = yes
 
 
 option = { ###turn to Lithuania
-name = belarusia.12.a
+name = "Turn to Lithuania"
   set_country_flag = BLR_dbr_refuses }
 }
 
@@ -327,7 +327,7 @@ fire_only_once = yes
 is_triggered_only = yes
 
 option = { ###we shall win alone!
-name = belarusia.13.a
+name = "We shall win alone!"
 add_ideas = {
 BLR_on_our_own
 }
@@ -345,7 +345,7 @@ fire_only_once = yes
 is_triggered_only = yes
 
 option = { 
-name = belarusia.14.a
+name = "Wonderful"
   add_equipment_to_stockpile = {
 			type = infantry_equipment
 			amount = 1000
@@ -362,13 +362,13 @@ name = belarusia.14.a
 ###Victory in border raid 1
 country_event = {
 id = belarusia.15
-title = belarusia.15.t
+title = "Victory in Bialystok"
 desc = belarusia.15.d
 fire_only_once = yes
 is_triggered_only = yes
 
 option = {
-name = belarusia.15.a
+name = "Uraaa!"
 set_country_flag = BLR_border_victory
 add_political_power = 70
 }
@@ -377,13 +377,13 @@ add_political_power = 70
 ###Victory in border raid 2
 country_event = {
 id = belarusia.16
-title = belarusia.16.t
+title = "Baranowize is Ours!"
 desc = belarusia.16.d
 fire_only_once = yes
 is_triggered_only = yes
 
 option = {
-name = belarusia.16.a
+name = "Uraaa!"
 set_country_flag = BLR_border_victory_2
 add_political_power = 100
 }
@@ -398,13 +398,13 @@ fire_only_once = yes
 is_triggered_only = yes
 
 option = { ###Push forwards!
-name = belarusia.17.a
+name = "Push forwards!"
 set_country_flag = BLR_invade_commies
 add_political_power = 70
 }
 
 option = { ###fall back!
-name = belarusia.17.b
+name = "Fall Back!"
 
 add_political_power = -70
 }
@@ -414,19 +414,19 @@ add_political_power = -70
 ###victory in border raid against commies
 country_event = {
 id = belarusia.18
-title = belarusia.18.t
+title = "Homeyl Voblasc Returns to Fatherland"
 desc = belarusia.18.d
 fire_only_once = yes
 is_triggered_only = yes
 
 option = { ###Push forwards!
-name = belarusia.18.a
+name = "Push forwards!"
 set_country_flag = BLR_invade_commies
 add_political_power = 70
 }
 
 option = { ###fall back!
-name = belarusia.18.b
+name = "Fall Back!"
 
 add_political_power = -70
 }
@@ -437,13 +437,13 @@ add_political_power = -70
 ###request soviet support
 country_event = {
 id = belarusia.19
-title = belarusia.19.t
+title = "Request Soviet Support"
 desc = belarusia.19.d
 fire_only_once = yes
 is_triggered_only = yes
 
 option = {
-name = belarusia.18.a
+name = "We Have To..."
  SOV = {
   country_event = { id = belarusia.20 days = 5 }
   }
@@ -454,7 +454,7 @@ name = belarusia.18.a
 country_event = {
 id = belarusia.20
 title = "Belarusian Request"
-desc = belarusia.20.d
+desc = "As the conflict in Belaruss seems to be getting hot, the communist belarussians now come to us, seeking aid against the nationalist government. Should we support these traitors of the soviet cause?"
 fire_only_once = yes
 is_triggered_only = yes
 
@@ -488,7 +488,7 @@ fire_only_once = yes
 is_triggered_only = yes
 
 option = {
-name = belarusia.21.a
+name = "Wonderful"
 add_equipment_to_stockpile = {
 			type = infantry_equipment
 			amount = 5000
@@ -506,7 +506,7 @@ fire_only_once = yes
 is_triggered_only = yes
 
 option = { ###buy ukrainian guns instead
-name = belarusia.22.a
+name = "Buy Ukrainian Guns Instead"
 add_equipment_to_stockpile = {
 			type = infantry_equipment
 			amount = 1500

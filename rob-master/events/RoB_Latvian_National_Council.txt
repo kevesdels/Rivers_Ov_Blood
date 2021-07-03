@@ -1,0 +1,216 @@
+#############################
+###Latvian National Council Events
+#############################
+
+
+add_namespace = lnc
+
+country_event = { 
+ id = lnc.0
+ title = "The National Victory"
+ desc = lnc.0.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  hidden_effect = {
+   country_event = { id = lnc.1 days = 39 }
+  }
+ }
+}
+
+country_event = { 
+ id = lnc.1
+ title = "The Death of Celmins"
+ desc = lnc.1.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  add_stability = -0.15
+  add_popularity = {ideology = pelekist popularity = -0.20}
+  create_country_leader = {
+	name = "National Council"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}
+  hidden_effect = {
+   country_event = { id = lnc.2 days = 10 }
+  }
+ }
+}
+
+country_event = { 
+ id = lnc.2
+ title = "Brastins Assumes Leadership"
+ desc = lnc.2.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+    create_country_leader = {
+	name = "Ernests Brastiņš"
+	desc = ""
+	picture = "Ernests_Brastins.dds"
+	expire = "1965.1.1"
+	ideology = pagan_pelekism
+	traits = {
+		#
+	}
+}
+  hidden_effect = {
+   country_event = { id = lnc.3 days = 5 }
+  }
+ }
+}
+
+country_event = { 
+ id = lnc.3
+ title = "Arājs leaves National Council"
+ desc = lnc.3.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  add_political_power = -100
+  hidden_effect = {
+   country_event = { id = lnc.4 days = 3 }
+  }
+ }
+}
+
+country_event = { 
+ id = lnc.4
+ title = "Cukurs Denouces Brastins"
+ desc = lnc.4.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  add_political_power = -100
+  hidden_effect = {
+   country_event = { id = lnc.5 days = 17 }
+  }
+ }
+}
+
+country_event = { 
+ id = lnc.5
+ title = "Arajs Topples Latgalia governor"
+ desc = lnc.5.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  add_stability = -0.03
+  hidden_effect = {
+   country_event = { id = lnc.6 days = 5 }
+  }
+ }
+}
+
+country_event = { 
+ id = lnc.6
+ title = "Cukurs supportters rally in semigalia and curonia"
+ desc = lnc.6.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  add_stability = -0.03
+  hidden_effect = {
+   country_event = { id = lnc.7 days = 3 }
+  }
+ }
+}
+
+###Arajs officialy rises up
+country_event = { 
+ id = lnc.7
+ title = "Arajs Declares War on Rigan Government"
+ desc = lnc.7.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  LAC = { transfer_state = 880 }
+  LAC = { transfer_state = 1010 }
+  hidden_effect = {
+  190 = { add_core_of = LAC }
+  881 = { add_core_of = LAC }
+  1010 = { add_core_of = LAC }
+  1266 = { add_core_of = LAC }
+  12 = { add_core_of = LAC }
+  880 = { add_core_of = LAC }
+  LAC = { load_oob = "LAC_CW" }
+  country_event = { id = lnc.8 days = 2 }
+  }
+ }
+}
+
+###Cukurs follows the suit
+country_event = { 
+ id = lnc.8
+ title = "Cukurs Declares War on Rigan Government"
+ desc = lnc.8.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  LCC = { transfer_state = 190 }
+  LCC = { transfer_state = 881 }
+  hidden_effect = {
+  190 = { add_core_of = LCC }
+  881 = { add_core_of = LCC }
+  1010 = { add_core_of = LCC }
+  1266 = { add_core_of = LCC }
+  12 = { add_core_of = LCC }
+  880 = { add_core_of = LCC }
+  LCC = { load_oob = "LCC_CW" }
+  country_event = { id = lnc.9 days = 3 }
+  }
+ }
+}
+
+###Cukurs follows the suit
+country_event = { 
+ id = lnc.9
+ title = "The Latvian Civil War"
+ desc = lnc.9.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  hidden_effect = {
+  LNC = { declare_war_on = { target = LAC  type = annex_everything } }
+  LCC = { declare_war_on = { target = LNC  type = annex_everything } }
+  LAC = { declare_war_on = { target = LCC  type = annex_everything } }
+  add_ideas = { LNC_Latvian_cw }
+  }
+  }
+}

@@ -1035,7 +1035,8 @@ country_event = {
  id = ubd.36
  title = "The Civil war is over"
  desc = ubd.36
- 
+ fire_only_once = yes
+
  trigger = {
  OR = { tag = LDF tag = LNC tag = LPR }
  has_full_control_of_state = 1010
@@ -1068,8 +1069,10 @@ country_event = {
       remove_core_of = LNC
       remove_core_of = LDF
     }
+    hidden_effect = {
     1266 = { add_core_of = LAT }
-    ROOT = { set_capital = 1266 }
+    }
+    ROOT = { set_capital = 1266 remove_ideas = { UBD_Latvian_cw } }
   }
 
 
@@ -1089,8 +1092,11 @@ country_event = {
       remove_core_of = LNC
       remove_core_of = LPR
     }
+    hidden_effect = {
     1266 = { add_core_of = LAT }
-    ROOT = { set_capital = 1266 }
+    }
+    ROOT = { set_capital = 1266 remove_ideas = { UBD_Latvian_cw } }
+    hidden_effect = {  country_event = { id = ldf.0 days = 7 } }
   }
 
  if = {
@@ -1109,8 +1115,11 @@ country_event = {
       remove_core_of = LDF
       remove_core_of = LPR
     }
+    hidden_effect = {
     1266 = { add_core_of = LAT }
-    ROOT = { set_capital = 1266 }
+    }
+    ROOT = { set_capital = 1266 remove_ideas = { UBD_Latvian_cw } }
+    hidden_effect = {  country_event = { id = lnc.0 days = 7 } }
   }
 }
 
@@ -1121,7 +1130,8 @@ country_event = {
  id = ubd.37
  title = "The Civil war is over"
  desc = ubd.37
- 
+ fire_only_once = yes
+
  trigger = {
  OR = { tag = ELA tag = ELP tag = ECA }
  has_full_control_of_state = 882
@@ -1279,6 +1289,7 @@ country_event = {
  id = ubd.40
  title = "Foreign land"
  desc = "With war of independence raging on, we have seized lands belonging to our brother nation. We should grant it back to locals, but who deserves it?"
+ fire_only_once = yes
 
  trigger = {
 

@@ -1,0 +1,269 @@
+#############################
+###Latvian Democratic Front Events
+#############################
+
+
+add_namespace = ldf
+
+###bla bla bla lore happy idk foreshadow shit
+country_event = { 
+ id = ldf.0
+ title = "The New Democracy"
+ desc = ldf.0.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  hidden_effect = {
+   country_event = { id = ldf.1 days = 38 }
+  }
+ }
+}
+
+###post civil war elections
+country_event = { 
+ id = ldf.1
+ title = "The First Elections"
+ desc = ldf.1.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ ###kalnins (socdems), socdems remain in power, coup avoided
+ option = {
+  name = ""
+  ai_chance = {
+      factor = 4
+    }
+  add_popularity = {ideology = social_democracy popularity = 0.06 }
+}
+
+ ###ulmanis (conservatives). Ulmanis rises in power, coup will happen
+ option = {
+  name = ""
+    ai_chance = {
+      factor = 6
+    }
+  set_politics = {
+	ruling_party = conservative
+	last_election = "1935.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+add_popularity = {ideology = conservative popularity = 0.06}
+  hidden_effect = {
+   country_event = { id = ldf.2 days = 30 }
+  }
+}
+
+}
+
+####Socdems dont like Ulmanis policies =  failure to from government
+country_event = { 
+ id = ldf.2
+ title = "The Government Fails"
+ desc = ldf.2.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  add_stability = -0.10
+    hidden_effect = {
+   country_event = { id = ldf.3 days = 13 }
+  }
+ }
+}
+
+###Nationpatriots chimp out cuz dumb af socdems!!!
+country_event = { 
+ id = ldf.3
+ title = "Nationalpatriots Occupy Saeima" ###(and other ministries)
+ desc = ldf.3.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+###No option prevents coup
+
+ option = {
+  name = ""
+  add_stability = -0.03
+    hidden_effect = {
+   country_event = { id = ldf.4 days = 2 }
+  }
+ }
+
+ option = {
+  name = ""
+  	add_stability = -0.03
+    hidden_effect = {
+   country_event = { id = ldf.4 days = 2 }
+  }
+ }
+
+}
+
+###nationalpatriots ask ulmanis to become leader of latvia
+country_event = { 
+ id = ldf.4
+ title = "Radikals Invite Ulmanis"
+ desc = ldf.4.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+
+ option = {
+  name = "He wouldn't dare!"
+    hidden_effect = {
+   country_event = { id = ldf.5 days = 3 }
+  }
+ }
+
+}
+
+###Ulmanis accepts invitation, declares himself the protector of latvian people, "temporary" assuming all power
+country_event = { 
+ id = ldf.5
+ title = "The Declaration"
+ desc = ldf.5.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+	add_popularity = {ideology = authoritharian popularity = 0.30}
+  add_war_support = -0.10
+  add_stability = -0.10
+set_politics = {
+	ruling_party = authoritharian
+	last_election = "1935.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Kārlis Ulmanis"
+	desc = ""
+	picture = "Karlis_Ulmanis.dds"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+  hidden_effect = {
+   country_event = { id = ldf.6 days = 3 }
+  }
+ }
+ }
+
+
+###Democrats seething
+country_event = { 
+ id = ldf.6
+ title = "Democrats rally in Courland"
+ desc = ldf.6.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  add_stability = -0.03
+  hidden_effect = {
+   country_event = { id = ldf.7 days = 3 }
+  }
+ }
+}
+
+
+###Ulmanis attempts to imprision political foes
+country_event = { 
+ id = ldf.7
+ title = "Ulmanis orders arrests"
+ desc = ldf.7.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  add_political_power = -150
+  hidden_effect = {
+   country_event = { id = ldf.8 days = 3 }
+  }
+ }
+}
+
+
+###Ulmanis attempts to imprision political foes fails cuz police loyal to socdems
+country_event = { 
+ id = ldf.8
+ title = "Democrats clash with police"
+ desc = ldf.8.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  add_manpower = -67
+  add_stability = -0.07
+  hidden_effect = {
+   country_event = { id = ldf.9 days = 3 }
+  }
+ }
+}
+
+###democrats split
+country_event = { 
+ id = ldf.9
+ title = "Latvian Civil war"
+ desc = ldf.9.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  LDL = { transfer_state = 12 }
+  LDL = { transfer_state = 880 }
+  LDL = { transfer_state = 1010 }
+  hidden_effect = {
+  190 = { add_core_of = LDL }
+  881 = { add_core_of = LDL }
+  1010 = { add_core_of = LDL }
+  1266 = { add_core_of = LDL }
+  12 = { add_core_of = LDL }
+  880 = { add_core_of = LDL }
+  LDL = { load_oob = "LDL_CW" }
+  country_event = { id = lnc.10 days = 3 }
+ }
+ }
+}
+
+###shit starts
+country_event = { 
+ id = ldf.10
+ title = "Latvian Civil war"
+ desc = ldf.10.d
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+  name = ""
+  LDL = { declare_war_on = { target = LDF  type = annex_everything } }
+  hidden_effect = {
+	LDF = { declare_war_on = { target = LDL  type = annex_everything } }
+  }
+  add_ideas = {
+	  LDF_Latvian_cw
+  }
+ }
+}
