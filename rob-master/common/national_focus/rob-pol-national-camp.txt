@@ -11,62 +11,113 @@ focus_tree = {
 	#Embrace Economic Auturky
 	focus = {
 		id = xxx_embrace_economic_auturky
-		icon = GFX_xxx_embrace_economic_auturky-445
+		icon = GFX_xxx_embrace_economic_auturky-40999
 		x = 5
 		y = 5
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		prerequisite = { focus = xxx_embrace_syndicalist_economics  } prerequisite = { focus = xxx_give_jewish_property_to_poles  }
 	}
 
 	#Destruction of The Marshal's Cult
 	focus = {
-		id = xxx_destruction_of_the_marshals_cult
-		icon = GFX_xxx_destruction_of_the_marshals_cult-445
+		id = xxx_destructionofthemarshalscult
+		icon = GFX_xxx_destructionofthemarshalscult-41006
 		x = 1
 		y = 3
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		prerequisite = { focus = xxx_idealization_of_our_heros  }
+		completion_reward = {
+			add_stability = 0.05
+			
+			
+			add_popularity = { 
+			ideology = reactionary
+			popularity = 0.07
+			}
+			
+			
+		}
 	}
 
 	#Give Jewish Property To Poles
 	focus = {
 		id = xxx_give_jewish_property_to_poles
-		icon = GFX_xxx_give_jewish_property_to_poles-445
+		icon = GFX_xxx_give_jewish_property_to_poles-6826
 		x = 5
 		y = 3
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-	}
-
-	#Numerus Nullus
-	focus = {
-		id = xxx_numerus_nullus
-		icon = GFX_xxx_numerus_nullus-445
-		x = 5
-		y = 2
-		cost = 6
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+		prerequisite = { focus = xxx_purging_the_jew  }
+		available = {
+			random_owned_controlled_state ={
+			 limit = {
+			 free_building_slots = {
+			 building = industrial_complex
+			 size > 0
+			 include_locked = yes
+			 }
+			 }
+			 add_extra_state_shared_building_slots = 1
+			 add_building_construction = {
+			 type = industrial_complex
+			 level = 4
+			 instant_build = yes
+			 }
+			 set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+			 }
+			
+			country_event = {
+			days = 1 
+			id = POL_rob-radical-camp.1
+			}
+			
 		}
 	}
 
-	#Rejection_of_capitalism
+	#Purging The Jew
+	focus = {
+		id = xxx_purging_the_jew
+		icon = GFX_xxx_purging_the_jew-6827
+		x = 5
+		y = 2
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = xxx_purging_the_sanitation_government_followers  }
+		available = {
+			add_ideas = POL_Purging_the_Jew
+			
+			
+		}
+	}
+
+	#Rejection of capitalism
 	focus = {
 		id = xxx_rejection_of_capitalism
-		icon = GFX_xxx_rejection_of_capitalism-445
+		icon = GFX_xxx_rejection_of_capitalism-41016
 		x = 3
 		y = 1
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { }
+		prerequisite = { focus = xxx_the_rise_of_the_national_camp  }
+		available = {
+			add_stability = 0.05
+			
+			
+			add_political_power = 150
+			
+		}
 	}
 
 	#The Rise Of The National Camp
@@ -92,69 +143,120 @@ focus_tree = {
 	#Purging The Sanitation Government followers
 	focus = {
 		id = xxx_purging_the_sanitation_government_followers
-		icon = GFX_xxx_purging_the_sanitation_government_followers-445
+		icon = GFX_xxx_purging_the_sanitation_government_followers-40989
 		x = 5
 		y = 1
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		prerequisite = { focus = xxx_the_rise_of_the_national_camp  }
+		completion_reward = {
+			add_stability = 0.03
+			add_popularity = { 
+			ideology = reactionary
+			popularity = 0.4 
+			}
+			
+		}
 	}
 
 	#Empowering The State
 	focus = {
 		id = xxx_empowering_the_state
-		icon = GFX_xxx_empowering_the_state-445
+		icon = GFX_xxx_empowering_the_state-41009
 		x = 1
 		y = 1
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		prerequisite = { focus = xxx_the_rise_of_the_national_camp  }
 		select_effect = {
-			add_stability = 0.05
-			
-			add_political_power = 50
-			
-		}
+add_stability = 0.05
+
+add_political_power = 50
+
 	}
 
 	#Nationalize The Banking sector
 	focus = {
 		id = xxx_nationalize_the_banking_sector
-		icon = GFX_xxx_nationalize_the_banking_sector-445
+		icon = GFX_xxx_nationalize_the_banking_sector-6829
 		x = 3
 		y = 2
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = xxx_rejection_of_capitalism  }
+		completion_reward = {
+			random_owned_controlled_state ={
+			 limit = {
+			 free_building_slots = {
+			 building = industrial_complex
+			 size > 0
+			 include_locked = yes
+			 }
+			 }
+			 add_extra_state_shared_building_slots = 1
+			 add_building_construction = {
+			 type = industrial_complex
+			 level = 4
+			 instant_build = yes
+			 }
+			 set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+			 }
 		}
 	}
 
 	#Nationalization Of Foreign Property
 	focus = {
 		id = xxx_nationalization_of_foreign_property
-		icon = GFX_xxx_nationalization_of_foreign_property-445
+		icon = GFX_xxx_nationalization_of_foreign_property-41017
 		x = 3
 		y = 3
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		prerequisite = { focus = xxx_nationalize_the_banking_sector  }
+		completion_reward = {
+			random_owned_controlled_state ={
+			 limit = {
+			 free_building_slots = {
+			 building = industrial_complex
+			 size > 0
+			 include_locked = yes
+			 }
+			 }
+			 add_extra_state_shared_building_slots = 1
+			 add_building_construction = {
+			 type = industrial_complex
+			 level = 2
+			 instant_build = yes
+			 }
+			 set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+			 }
+			
+		}
 	}
 
 	#Idealization of our heros
 	focus = {
 		id = xxx_idealization_of_our_heros
-		icon = GFX_xxx_idealization_of_our_heros-445
+		icon = GFX_xxx_idealization_of_our_heros-41007
 		x = 1
 		y = 2
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		prerequisite = { focus = xxx_empowering_the_state  }
 		completion_reward = {
-			add_war_support = 5
+			add_war_support = 0.1
+			add_manpower = 50000
+			
 			
 		}
 	}
@@ -162,72 +264,332 @@ focus_tree = {
 	#Mandatory Conscription
 	focus = {
 		id = xxx_mandatory_conscription
-		icon = GFX_xxx_mandatory_conscription-445
+		icon = GFX_xxx_mandatory_conscription-40997
 		x = 2
 		y = 4
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		prerequisite = { focus = xxx_nationalization_of_foreign_property  } prerequisite = { focus = xxx_destructionofthemarshalscult  }
+		available = {
+			add_ideas = POL_mandatory_conscription
+			
+		}
 	}
 
 	#Embrace Syndicalist Economics
 	focus = {
 		id = xxx_embrace_syndicalist_economics
-		icon = GFX_xxx_embrace_syndicalist_economics-445
+		icon = GFX_xxx_embrace_syndicalist_economics-6828
 		x = 4
 		y = 4
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		prerequisite = { focus = xxx_nationalization_of_foreign_property  } prerequisite = { focus = xxx_give_jewish_property_to_poles  }
 	}
 
 	#Merge Worker Unions and Business Conglomerates
 	focus = {
 		id = xxx_merge_worker_unions_and_business_conglomerates
-		icon = GFX_xxx_merge_worker_unions_and_business_conglomerates-445
+		icon = GFX_xxx_merge_worker_unions_and_business_conglomerates-40992
 		x = 3
 		y = 5
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		prerequisite = { focus = xxx_mandatory_conscription  } prerequisite = { focus = xxx_embrace_syndicalist_economics  }
 	}
 
 	#An Armed Nation
 	focus = {
 		id = xxx_an_armed_nation
-		icon = GFX_xxx_an_armed_nation-445
+		icon = GFX_xxx_an_armed_nation-41005
 		x = 1
 		y = 5
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		prerequisite = { focus = xxx_destructionofthemarshalscult  } prerequisite = { focus = xxx_mandatory_conscription  }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			 type = infantry_equipment_0
+			amount = 2000
+			producer = POL
+			}
+			
+			load_oob = POL_onr_para
+			
+		}
 	}
 
 	#Destruction Of Western Materialism
 	focus = {
 		id = xxx_destruction_of_western_materialism
-		icon = GFX_xxx_destruction_of_western_materialism-445
+		icon = GFX_xxx_destruction_of_western_materialism-41010
 		x = 3
 		y = 7
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		prerequisite = { focus = xxx_embrace_economic_auturky  } prerequisite = { focus = xxx_merge_worker_unions_and_business_conglomerates  } prerequisite = { focus = xxx_an_armed_nation  }
 	}
 
 	#A New Poland
 	focus = {
 		id = xxx_a_new_poland
-		icon = GFX_xxx_a_new_poland-445
+		icon = GFX_xxx_a_new_poland-41014
 		x = 3
 		y = 8
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = xxx_destruction_of_western_materialism  }
+		select_effect = {
+add_ideas = POL REBORN
+
+
+}
+	}
+
+	#Invest In The COP
+	focus = {
+		id = xxx_invest_in_the_cop
+		icon = GFX_focus_generic_industry_3
+		x = 5
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = xxx_the_rural_issue  }
+	}
+
+	#Rzeszów Aircraft Plants
+	focus = {
+		id = xxx_rzeszowaircraftplants
+		icon = GFX_focus_chi_flying_tigers
+		x = 7
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = xxx_the_rural_issue  }
+	}
+
+	#Transfer Of Polish Populations
+	focus = {
+		id = xxx_transfer_of_polish_populations
+		icon = GFX_xxx_transfer_of_polish_populations-341
+		x = 9
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = xxx_support_the_military_junta_in_belerus  }
+	}
+
+	#Industrialize Konigsberg
+	focus = {
+		id = xxx_industrialize_konigsberg
+		icon = GFX_xxx_industrialize_konigsberg-290
+		x = 14
+		y = 3
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = xxx_ally_the_national_bolsheviks_in_prussia  }
+	}
+
+	#A Stake In The World
+	focus = {
+		id = xxx_a_stake_in_the_world
+		icon = GFX_focus_BUL_destroy_the_zveno
+		x = 12
+		y = 0
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Support The Military Junta In Belerus
+	focus = {
+		id = xxx_support_the_military_junta_in_belerus
+		icon = GFX_xxx_support_the_military_junta_in_belerus-422
+		x = 10
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = xxx_a_stake_in_the_world  }
+	}
+
+	#Fortify Minsk Area
+	focus = {
+		id = xxx_fortify_minsk_area
+		icon = GFX_goal_generic_construct_military
+		x = 11
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = xxx_support_the_military_junta_in_belerus  }
+	}
+
+	#The Northern Front
+	focus = {
+		id = xxx_the_northern_front
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 14
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = xxx_a_stake_in_the_world  }
+	}
+
+	#Question Of Lithuania
+	focus = {
+		id = xxx_question_of_lithuania
+		icon = GFX_xxx_question_of_lithuania-254
+		x = 10
+		y = 3
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = xxx_fortify_minsk_area  } prerequisite = { focus = xxx_transfer_of_polish_populations  }
+	}
+
+	#Ally The National Bolsheviks In Prussia
+	focus = {
+		id = xxx_ally_the_national_bolsheviks_in_prussia
+		icon = GFX_focus_BUL_cooperate_with_the_zveno
+		x = 14
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = xxx_the_northern_front  }
+	}
+
+	#The Rural Issue
+	focus = {
+		id = xxx_the_rural_issue
+		icon = GFX_xxx_the_rural_issue-445
+		x = 7
+		y = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = xxx_embrace_economic_auturky  }
+	}
+
+	#A New Goal
+	focus = {
+		id = xxx_a_new_goal
+		icon = GFX_focus_generic_treaty
+		x = 12
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = xxx_industrialize_konigsberg  } prerequisite = { focus = xxx_question_of_lithuania  }
+	}
+
+	#Expand Into Ukraine
+	focus = {
+		id = xxx_expand_into_ukraine
+		icon = GFX_focus_GRE_reviving_the_spartan_warrior_spirit
+		x = 12
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = xxx_a_new_goal  }
+	}
+
+	#Destroy The Judeo-Bolshevik Bloc
+	focus = {
+		id = xxx_destroy_the_judeobolshevik_bloc
+		icon = GFX_focus_attack_soviet
+		x = 12
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = xxx_expand_into_ukraine  }
+	}
+
+	#Fund the Huta Stalowa Wola SA
+	focus = {
+		id = xxx_fund_the_huta_stalowa_wola_sa
+		icon = GFX_xxx_fund_the_huta_stalowa_wola_sa-445
+		x = 9
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = xxx_the_rural_issue  }
+	}
+
+	#Hydro Electrical Dams
+	focus = {
+		id = xxx_hydro_electrical_dams
+		icon = GFX_xxx_hydro_electrical_dams-445
+		x = 5
+		y = 8
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = xxx_invest_in_the_cop  }
+	}
+
+	#Erecting Steel Mills
+	focus = {
+		id = xxx_erecting_steel_mills
+		icon = GFX_xxx_erecting_steel_mills-445
+		x = 9
+		y = 8
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+
+	#Aluminum Mills
+	focus = {
+		id = xxx_aluminum_mills
+		icon = GFX_xxx_aluminum_mills-445
+		x = 7
+		y = 8
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+
+	#Synthetic Refinement
+	focus = {
+		id = xxx_synthetic_refinement
+		icon = GFX_xxx_synthetic_refinement-445
+		x = 8
+		y = 9
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+
+	#Poland, an Industrial Nation
+	focus = {
+		id = xxx_polandanindustrialnation
+		icon = GFX_xxx_polandanindustrialnation-445
+		x = 7
+		y = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 

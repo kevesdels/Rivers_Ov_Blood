@@ -1,0 +1,316 @@
+﻿division_template = {
+	name = "Pesadijska Divizija"	# Infantry Division	
+	# Note: infantry divisions were all at low reserve levels even just prior to Axis 
+	#	invasion of 1941
+
+	division_names_group = ZOB_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+		artillery = { x = 0 y = 1 }  
+	}
+}
+	name = "Combat Militia"	# Infantry Division	
+	# Note: infantry divisions were all at low reserve levels even just prior to Axis 
+	#	invasion of 1941
+
+	division_names_group = ZOB_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "Gorska Pesadija"		# Mountain Brigade
+
+	division_names_group = ZOB_MTN_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+	}
+}
+division_template = {
+
+	division_names_group = ZOB_CAV_01
+
+	name = "Konjička Divizija" 			# Cavalry Division
+	# Note: regiments within the brigade were battalion-sized units
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Tenkovski Bataljon" 			# Tank Battalion
+	# Note: 1st Armor Battalion had FT-17s in 1936, 
+	#	2nd battalion formed when R-35s added in 1940
+
+	division_names_group = ZOB_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		infantry = { x = 1 y = 0 }       # added infantry to not make it a death trap
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+	######## LAND UNITS ########
+	###### Vojska Kraljevine Jugoslavije ######
+	division = {
+#		name = "Gardijska Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 11399
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.3
+	}
+	division = {
+#		name = "Gardijska Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 11515
+		division_template = "Combat Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+#		name = "Gardijska Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 11515
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.3
+	}
+	division = {
+		#name = "1. 'Cerska' Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11586
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	division = {
+		name = "1. Bataljon Bornih Kola"
+		location = 9521
+		division_template = "Tenkovski Bataljon"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		force_equipment_variants = { gw_tank_equipment = { owner = "YUG" creator = "FRA" } }
+
+	}
+
+	
+
+	### 5. Armija ###
+	division = {
+		#name = "8. 'Krajinska' Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 13205
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		#name = "9. 'Timocka' Pesadijska Div."  				# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 9412
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		#name = "2. Konjička Divizija"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 6464
+		division_template = "Konjička Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+
+	### 6. Armija ###
+	division = {
+		#name = "3. 'Dunavska' Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 9511
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+
+	}
+
+	#### 1. Grupa Vojska ####
+	
+    #### 2. Grupa Vojska ####
+	### 1. Armija ###
+	division = {
+		#name = "7. 'Potiska' Pesadijska Div."  				# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 11467
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "3. Konjička Divizija"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 479
+		division_template = "Konjička Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+
+	### 2. Armija ###
+	
+	division = {
+		#name = "17. 'Vrbaska' Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 479
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+
+	#### 3. Grupa Vojska ####
+	### 3. Armija ###
+	division = {
+		#name = "13. 'Hercegovacka' Pesadijska Div."  		# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 13
+		}
+		location = 466
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "15. 'Zetska' Pesadijska Div."  				# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 466
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "25. 'Vardarsa' Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = 11411
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+
+	### 3. Teritorijalna Armija ###
+	division = {
+		#name = "5. 'Sumadijska' Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 11399
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "20. 'Bregalnicka' Pesadijska Div."  		# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = 3559
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		#name = "22. 'Ibarska' Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = 11507
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+}  # Neboja if we get font support
+
+
+###### Vazduhoplovstvo Vojske Kraljevine Jugoslavije (VVKJ) ######
+
+### Starting Production ###

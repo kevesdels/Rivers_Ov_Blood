@@ -1,0 +1,78 @@
+add_namespace = POL_rob-radical-camp
+
+#Jewish Revolt
+country_event = {
+	id = POL_rob-radical-camp.1
+	title = POL_rob-radical-camp.1.t
+	desc = POL_rob-radical-camp.1.d
+
+	picture = POL_jewish_revolt-474
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = POL
+POL = { has_completed_focus = xxx_give_jewish_property_to_poles }
+	}
+	mean_time_to_happen = { days =  = 1 }
+	option = {
+		name = POL_rob-radical-camp.1.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		ZOB = { set_state_owner = 67}
+ZOB = { set_state_owner = 863}
+ZOB = { set_state_owner = 92}
+ZOB = { set_state_owner = 1096}
+ZOB = { load_oob = "ZOB_Revolt" }
+POL = { declare_war_on = {
+    target = ZOB
+    type = annex_everything
+} }
+
+		hidden_effect = {
+			PRS = { country_event = {
+    id = POL_rob-radical-camp.2
+    days = 0
+    random =0
+    random_days = 0
+} }
+		}
+	}
+}
+
+#Poland Is In Turmoil
+country_event = {
+	id = POL_rob-radical-camp.2
+	title = POL_rob-radical-camp.2.t
+	desc = POL_rob-radical-camp.2.d
+
+	picture = POL_poland_is_in_turmoil-552
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = POL_rob-radical-camp.2.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = POL_rob-radical-camp.2.b
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		declare_war_on = { 
+target = POL 
+type = take_state_focusgenerator = { 865 98 97 86 801 66 803 802 }}
+
+		hidden_effect = {
+			
+		}
+	}
+}

@@ -1,0 +1,39 @@
+ideas = {
+	country = {
+
+		Radical Camp_pol_mandatory_conscription = {
+			picture = Radical Camp_pol_mandatory_conscription-1084
+			on_add = {
+				recruitable_population = 0.03
+party_popularity_stability_factor = 0.2
+army_org_factor = -0.03
+			}
+		}
+
+		Radical Camp_pol_purging_the_jew = {
+			picture = Radical Camp_pol_purging_the_jew-2148
+			modifier = {
+				weekly_manpower = -600
+ add_stability = -0.05
+			}
+			on_add = {
+				
+
+			}
+		}
+
+		Radical Camp_a_poland_reborn = {
+			picture = Radical Camp_a_poland_reborn-40698
+			modifier = {
+				max_surrender_limit_offset = 0.3
+army_defence_factor = 0.5
+army_morale_factor = 0.3
+
+			}
+			on_remove = {
+				
+
+			}
+		}
+	}
+}

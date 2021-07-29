@@ -1,0 +1,66 @@
+focus_tree = {
+	id = rob-fra-sor
+	continuous_focus_position = { x = 0 y = 1000 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FRA_soreal
+		}
+	}
+	#Victory In The Civil War
+	focus = {
+		id = FRA_soreal_victory_in_the_civil_war
+		icon = GFX_FRA_soreal_victory_in_the_civil_war-445
+		x = 5
+		y = 0
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#The Purging of Marxists
+	focus = {
+		id = FRA_soreal_the_purging_of_marxists
+		icon = GFX_FRA_soreal_the_purging_of_marxists-445
+		x = 4
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Organizing a council
+	focus = {
+		id = FRA_soreal_organizing_a_council
+		icon = GFX_FRA_soreal_organizing_a_council-445
+		x = 6
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Discussing Our Direction
+	focus = {
+		id = FRA_soreal_discussing_our_direction
+		icon = GFX_FRA_soreal_discussing_our_direction-445
+		x = 6
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Purging of Democrats
+	focus = {
+		id = FRA_soreal_purging_of_democrats
+		icon = GFX_FRA_soreal_purging_of_democrats-445
+		x = 0
+		y = 0
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+}

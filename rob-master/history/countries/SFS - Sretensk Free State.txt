@@ -17,12 +17,12 @@ set_popularities = {
 	national_socialist = 0
 	socialist = 0
 	democratic_socialist = 0
-	social_democracy = 0
-	social_liberal = 0
-	conservative = 0
-	authoritharian = 0
-	reactionary = 100
-	pelekist = 0
+	social_democracy = 3
+	social_liberal = 6
+	conservative = 12
+	authoritharian = 18
+	reactionary = 47
+	pelekist = 14
 }
 
 add_ideas = {
@@ -34,9 +34,9 @@ add_ideas = {
 
 
 create_country_leader = {
-	name = "Robert von Kosch"
+	name = "Arthur Nebe"
 	desc = "POLITICS_ROBERT_KOSCH_DESC"
-	picture = "Robert_Kosch.tga"
+	picture = "Arthur_Nebe.tga"
 	expire = "1965.1.1"
 	ideology = military_junta
 	traits = {
@@ -54,4 +54,26 @@ create_corps_commander = {
 	defense_skill = 5
 	planning_skill = 1
 	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Kurt Eggers"
+	picture = "Kurt_Eggers.tga"
+	traits = {trait_reckless politically_connected}
+	skill = 2
+	id = 15
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Karl Maria Vilgut"
+	picture = "Kurt_Eggers.tga"
+	traits = {trait_reckless politically_connected}
+	skill = 2
+	id = 15
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
 }
