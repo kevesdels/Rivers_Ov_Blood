@@ -207,10 +207,99 @@ country_event = {
  option = {
   name = ""
   hidden_effect = {
-  LNC = { declare_war_on = { target = LAC  type = annex_everything } }
-  LCC = { declare_war_on = { target = LNC  type = annex_everything } }
-  LAC = { declare_war_on = { target = LCC  type = annex_everything } }
+  LNC = { declare_war_on = { target = LAC  type = annex_everything } set_country_flag = lnc_civil_War }
+  LCC = { declare_war_on = { target = LNC  type = annex_everything } set_country_flag = lnc_civil_War }
+  LAC = { declare_war_on = { target = LCC  type = annex_everything } set_country_flag = lnc_civil_War }
   add_ideas = { LNC_Latvian_cw }
   }
   }
 }
+
+
+
+####CIVIL WAR CLEAN UP####
+
+##Latvia
+country_event = { 
+  id = lnc.10
+  title = "The Civil war is over"
+  desc = lnc.10
+  fire_only_once = yes
+ 
+  trigger = {
+  OR = { tag = LNC tag = LCC tag = LAC }
+  has_country_flag = lnc_civil_War
+  has_full_control_of_state = 1010
+  has_full_control_of_state = 12
+  has_full_control_of_state = 880
+  has_full_control_of_state = 1266
+  has_full_control_of_state = 881
+  has_full_control_of_state = 190
+  has_war = no
+  }
+ 
+  mean_time_to_happen = { days = 7 }
+ 
+  option = {
+  name = "Victory, but at what cost?"
+ 
+  if = {
+   limit = {
+     tag = LCC
+     }
+     every_owned_state = { 
+       limit = { 
+         OR = {
+           is_core_of = LCC 
+           is_core_of = LNC
+           is_core_of = LAC
+           }
+         }
+       remove_core_of = LNC
+       remove_core_of = LAC
+     }
+     ROOT = { set_capital = 1266 remove_ideas = { LCC_Latvian_cw } }
+     clr_country_flag = lnc_civil_War
+   }
+ 
+ 
+  if = {
+   limit = {
+     tag = LAC
+     }
+     every_owned_state = { 
+       limit = { 
+         OR = {
+          is_core_of = LCC 
+          is_core_of = LNC
+          is_core_of = LAC
+           }
+         }
+         remove_core_of = LCC
+         remove_core_of = LNC
+     }
+     ROOT = { set_capital = 1266 remove_ideas = { LAC_Latvian_cw } }
+     clr_country_flag = lnc_civil_War
+   }
+ 
+  if = {
+   limit = {
+     tag = LNC
+     }
+     every_owned_state = { 
+       limit = { 
+         OR = {
+          is_core_of = LCC 
+          is_core_of = LNC
+          is_core_of = LAC
+           }
+         }
+         remove_core_of = LCC
+         remove_core_of = LAC
+     }
+     ROOT = { set_capital = 1266 remove_ideas = { LNC_Latvian_cw } }
+     clr_country_flag = lnc_civil_War
+   }
+ }
+ 
+ }

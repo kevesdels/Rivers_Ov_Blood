@@ -20,10 +20,11 @@ country_event = {
 
  
  option = {
-  name = "Aha, whatever nerd"
+  name = "Aha"
   add_political_power = 10
   hidden_effect = {
     POL = { country_event = { id = rob_poland.1 days =  21 } }
+    set_variable = { DBR_polish_strenght = 3 }
   }
  }
 }
@@ -871,7 +872,6 @@ country_event = {
   remove_ideas = {
   DBR_polish_dominance
   }
-  POL = { end_puppet = DBR }
   add_political_power = 150
    POL = { country_event = { id = rob_poland.19 days =  3 } }
   }

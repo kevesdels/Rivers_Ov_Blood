@@ -459,6 +459,65 @@ ideas = {
 			}
   
   }
+    sov_faction_economics = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_faction_economics
+	 modifier = {
+         production_speed_buildings_factor = 0.03
+		 consumer_goods_factor = -0.02
+			}
+  
+  }
+    sov_faction_science = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_faction_economics
+	 modifier = {
+ 		research_speed_factor = 0.025
+	}
+  
+  }
+     sov_support_of_commies_abroad = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_faction_economics
+	 modifier = {
+ 		stability_factor = -0.03
+ 		war_support_factor = -0.03
+	}
+  
+  }
+       sov_support_of_commies_abroad_2 = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_faction_economics
+	 modifier = {
+ 		stability_factor = -0.07
+ 		war_support_factor = -0.07
+	}
+  
+  }
     more_export_bukharin = {
   allowed = {
        always = no

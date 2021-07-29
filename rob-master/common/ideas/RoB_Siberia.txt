@@ -288,5 +288,19 @@ ideas = {
 					MONTHLY_POPULATION	= -0.8
 				}
 		}
+
+		rus_decentralised_state = {
+		allowed = {
+		   always = no
+		 }
+		 allowed_civil_war = {
+					always = yes
+				}
+		 removal_cost = -1
+		 picture = rus_decentralised_state
+		 modifier = {
+		 political_power_gain = -1
+				}
+		}
 }
 }

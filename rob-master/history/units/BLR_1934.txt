@@ -36,7 +36,7 @@ regiments = {
 units = {
  division = {
 name = "1.Belarusian Infantry Division"
-location = 6340
+location = 277
 division_template = "Belarusian Infantry Division"
 start_experience_factor = 0.3
 start_equipment_factor = 0.7
@@ -71,18 +71,27 @@ start_equipment_factor = 0.7
 
 }
 
-division = {
-name = "Minsk District"
-location = 11370
-division_template = "Belarusian Nationalist Auxiliaries"
+ division = {
+name = "5.Belarusian Infantry Division"
+location = 6292
+division_template = "Belarusian Infantry Division"
 start_experience_factor = 0.1
 start_equipment_factor = 0.5
 
 }
 
  division = {
-name = "Mogilev District"
-location = 9289
+name = "6.Belarusian Infantry Division"
+location = 215
+division_template = "Belarusian Infantry Division"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+
+division = {
+name = "Minsk District"
+location = 11370
 division_template = "Belarusian Nationalist Auxiliaries"
 start_experience_factor = 0.1
 start_equipment_factor = 0.5
@@ -97,4 +106,15 @@ start_experience_factor = 0.1
 start_equipment_factor = 0.5
 
 }
+
+ division = {
+name = "Vitebsk District"
+location = 11220
+division_template = "Belarusian Nationalist Auxiliaries"
+start_experience_factor = 0.1
+start_equipment_factor = 0.5
+
+}
+
+
 }

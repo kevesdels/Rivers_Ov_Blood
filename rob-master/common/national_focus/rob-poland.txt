@@ -2909,6 +2909,7 @@ focus_tree = {
 			DBR = {
 			remove_ideas = {
 					belarusian_civil_war
+					
 					DBR_polish_dominance
 				}
 			}
@@ -3056,11 +3057,13 @@ focus_tree = {
 		ai_will_do = {
      	base = 2
  	 	}
+		bypass = {
+		DBR = { exists = no }
+		}
 		prerequisite = { focus = POL_guard_the_borders  }
 		mutually_exclusive = { focus = POL_incorporate_the_belarusian_democratic_republic  }
 		available = {
 			DBR = { exists = yes }
-			DBR =  { is_puppet_of = POL }
 		}
 		completion_reward = {
 			DBR = {
@@ -3068,7 +3071,12 @@ focus_tree = {
 					DBR_polish_dominance
 				}
 			}
-			end_puppet = DBR
+			if = {
+				limit = {
+					DBR = { is_puppet_of = POL }
+				}
+				end_puppet = DBR
+			}
 		}
 	}
 

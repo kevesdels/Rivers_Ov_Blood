@@ -2096,7 +2096,7 @@ y = 10
 cost = 5
 available_if_capitulated = yes
 available = {
- date > 1938.1.1
+ has_country_flag = sov_crisis_resolved
 } 
 		completion_reward = {
 			army_experience = 5
@@ -2134,7 +2134,7 @@ add_tech_bonus = {
 shared_focus = { 
 id = SOV_comradesabroad
 icon = GFX_focus_SOV_comrades_abroad
-x = 21
+x = 20
 y = 11
 cost = 5
 available_if_capitulated = yes 
@@ -2155,12 +2155,21 @@ ai_will_do = {
 shared_focus = { 
 id = SOV_siberiancomrades
 icon = GFX_focus_SOV_siberian_comrades
-x = 13
-y = 12
-cost = 5
+x = 16
+y = 11
+cost = 10
+ai_will_do = { 
+	factor = 1
+		}
+bypass = {
+	AND = {
+		OMS = { exists = no }
+		JOB = { exists = no }
+		JSW = { exists = no }
+	}
+}
 available_if_capitulated = yes 
-prerequisite = { focus = SOV_enemiesonallsides } 
-prerequisite = { focus = SOV_comradesabroad } 
+prerequisite = { focus = SOV_lookoutwards } 
 		completion_reward = {
          OMS = {
 		  if = {
@@ -2199,56 +2208,138 @@ ai_will_do = {
 
  } 
 
+#Demand Subservience
+	 shared_focus = {
+		id = SOV_demand_subservience
+		icon = GFX_focus_SOV_demand
+		x = 15
+		y = 12
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { 
+			factor = 1
+			}
+		cost = 2
+		prerequisite = { focus = SOV_siberiancomrades  }
+		mutually_exclusive = { focus = SOV_extend_cooperation  }
+		bypass = {
+			AND = {
+				OMS = { exists = no }
+				JOB = { exists = no }
+				JSW = { exists = no }
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					OMS = { exists = yes }
+				}
+				OMS = { country_event = { id = bolshevik_russia.96 days = 3 } }
+			}
+			if = {
+				limit = {
+					JOB = { exists = yes }
+				}
+				JOB = { country_event = { id = bolshevik_russia.96 days = 3 } }
+			}
+			if = {
+				limit = {
+					JSW = { exists = yes }
+				}
+				JSW = { country_event = { id = bolshevik_russia.96 days = 3 } }
+			}
+			hidden_effect = {
+				set_country_flag = sov_siberians_demand
+			}
+		}
+	}
+
+	#Extend Cooperation
+	shared_focus = {
+		id = SOV_extend_cooperation
+		icon = GFX_focus_SOV_dea_with_sibs
+		x = 17
+		y = 12
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { 
+			factor = 1
+			}
+		cost = 2
+		available = { is_faction_leader = yes } 
+		prerequisite = { focus = SOV_siberiancomrades  }
+		mutually_exclusive = { focus = SOV_demand_subservience  }
+		bypass = {
+			AND = {
+				OMS = { exists = no }
+				JOB = { exists = no }
+				JSW = { exists = no }
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					OMS = { exists = yes }
+				}
+				OMS = { country_event = { id = bolshevik_russia.95 days = 3 } }
+			}
+			if = {
+				limit = {
+					JOB = { exists = yes }
+				}
+				JOB = { country_event = { id = bolshevik_russia.95 days = 3 } }
+			}
+			if = {
+				limit = {
+					JSW = { exists = yes }
+				}
+				JSW = { country_event = { id = bolshevik_russia.95 days = 3 } }
+			}
+			hidden_effect = {
+				set_country_flag = sov_siberians_faction
+			}
+		}
+	}
+
 #Focus for Southern Russian Direction
 shared_focus = { 
 id = SOV_southernrussiandirection
 icon = GFX_focus_SOV_southern_russia
-x = 11
-y = 13
+x = 9
+y = 12
 cost = 5
+bypass = {
+	owns_state = 137  owns_state = 234 owns_state = 986 owns_state = 985 owns_state = 218  owns_state = 245 owns_state = 217 owns_state = 238 owns_state = 237 owns_state = 232 owns_state = 235 owns_state = 987 owns_state = 233 owns_state = 931 owns_state = 932 owns_state = 231 owns_state = 229 owns_state = 230
+   }
 available_if_capitulated = yes 
-prerequisite = { focus = SOV_siberiancomrades } 
+prerequisite = { focus = SOV_enemiesonallsides } 
 		completion_reward = {
-			create_wargoal = {
-			    type = annex_everything
-			    target = CRM
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = CAU
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = CAA
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = CHE
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = MRP
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = DAG
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = GEO
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = AZR
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = ARM
+			custom_effect_tooltip = SOV_southrussiacampaign
+			hidden_effect = {
+				every_country = {
+					limit = { OR = { owns_state = 137  owns_state = 234 owns_state = 986 owns_state = 985 owns_state = 218  owns_state = 245 owns_state = 217 owns_state = 238 owns_state = 237 owns_state = 232 owns_state = 235 owns_state = 987 owns_state = 233 owns_state = 931 owns_state = 932 owns_state = 231 owns_state = 229 owns_state = 230 } }
+					ROOT = { 
+						create_wargoal = {
+							type = annex_everything		
+							target = PREV
+						}			
+					}
+				}
 			}
 		}
-ai_will_do = { 
- factor = 1
- } 
+		ai_will_do = { 
+			factor = 1
+			modifier = {
+			   add = 4
+			   has_war = no
+			 }
+			 modifier = {
+			   add = -1
+			   has_war = yes
+			 }
+			}
 
  } 
 
@@ -2256,23 +2347,38 @@ ai_will_do = {
 shared_focus = { 
 id = SOV_easterneuropeancampaign
 icon = GFX_focus_SOV_eastern_europe
-x = 13
-y = 13
+x = 11
+y = 12
 cost = 5
+bypass = {
+	owns_state = 222 owns_state = 224 owns_state = 220 owns_state = 257 owns_state = 258 owns_state = 260 owns_state = 256  owns_state = 400 owns_state = 397 owns_state = 262 owns_state = 581  owns_state = 398 owns_state = 651 owns_state = 573 owns_state = 249 owns_state = 651 owns_state = 652 owns_state = 251 owns_state = 250 owns_state = 255 owns_state = 239 owns_state = 401 owns_state = 930 owns_state = 265 
+   }
 available_if_capitulated = yes 
-prerequisite = { focus = SOV_siberiancomrades } 
+prerequisite = { focus = SOV_enemiesonallsides } 
 		completion_reward = {
-			create_wargoal = {
-			    type = annex_everything
-			    target = RUS
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = RDR
+			custom_effect_tooltip = SOV_easterneuropecapaign
+			hidden_effect = {
+				every_country = {
+					limit = { OR = { owns_state = 222 owns_state = 224 owns_state = 220 owns_state = 257 owns_state = 258 owns_state = 260 owns_state = 256  owns_state = 400 owns_state = 397 owns_state = 262 owns_state = 581  owns_state = 398 owns_state = 651 owns_state = 573 owns_state = 249 owns_state = 651 owns_state = 652 owns_state = 251 owns_state = 250 owns_state = 255 owns_state = 239 owns_state = 401 owns_state = 930 owns_state = 265 } }
+					ROOT = { 
+						create_wargoal = {
+							type = annex_everything		
+							target = PREV
+						}			
+					}
+				}
 			}
 		}
 ai_will_do = { 
- factor = 1
+ factor = 4
+ modifier = {
+	add = 4
+	has_war = no
+  }
+  modifier = {
+	add = -1
+	has_war = yes
+  }
  } 
 
  } 
@@ -2421,54 +2527,42 @@ completion_reward = {
 shared_focus = { 
 id = SOV_siberiancampaign
 icon = GFX_focus_SOV_siberian_campaing
-x = 13
-y = 14
+x = 11
+y = 13
 cost = 5
+bypass = {
+	owns_state = 572  owns_state = 653 owns_state = 403  owns_state = 1231  owns_state = 571  owns_state = 580  owns_state = 579  owns_state = 516  owns_state = 577  owns_state = 578  owns_state = 570  owns_state = 40  owns_state = 569  owns_state = 654  owns_state = 568  owns_state = 567  owns_state = 576  owns_state = 988  owns_state = 575
+   }
 available_if_capitulated = yes 
-prerequisite = { focus = SOV_southernrussiandirection } 
-prerequisite = { focus = SOV_easterneuropeancampaign } 
 prerequisite = { focus = SOV_centralasiandirection } 
+prerequisite = { focus = SOV_easterneuropeancampaign } 
+prerequisite = { focus = SOV_southernrussiandirection } 
+
 		completion_reward = {
-			create_wargoal = {
-			    type = annex_everything
-			    target = UGC
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = LES
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = AGR
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = OMS
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = TOW
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = BRW
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = KRW
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = BWR
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = JSW
+			custom_effect_tooltip = SOV_siberian_campaign
+			hidden_effect = {
+				every_country = {
+					limit = { OR = { owns_state = 572  owns_state = 653 owns_state = 403  owns_state = 1231  owns_state = 571  owns_state = 580  owns_state = 579  owns_state = 516  owns_state = 577  owns_state = 578  owns_state = 570  owns_state = 40  owns_state = 569  owns_state = 654  owns_state = 568  owns_state = 567  owns_state = 576  owns_state = 988  owns_state = 575 } }
+					ROOT = { 
+						create_wargoal = {
+							type = annex_everything		
+							target = PREV
+						}			
+					}
+				}
 			}
 		}
-ai_will_do = { 
- factor = 1
- } 
+		ai_will_do = { 
+			factor = 1
+			modifier = {
+			   add = 4
+			   has_war = no
+			 }
+			 modifier = {
+			   add = -1
+			   has_war = yes
+			 }
+			}
 
  } 
 
@@ -2476,40 +2570,39 @@ ai_will_do = {
 shared_focus = { 
 id = SOV_centralasiandirection
 icon = GFX_focus_SOV_central_asia
-x = 15
-y = 13
+x = 13
+y = 12
 cost = 5
+bypass = {
+	owns_state = 407  owns_state = 406 owns_state = 402 owns_state = 587 owns_state = 585 owns_state = 404 owns_state = 984 owns_state = 405 owns_state = 586 owns_state = 589 owns_state = 588 owns_state = 732 owns_state = 1217 owns_state = 1218 owns_state = 742 owns_state = 1177 owns_state = 1178 owns_state = 1176 owns_state = 1185 owns_state = 1181 owns_state = 1183 owns_state = 1182 owns_state = 1184 owns_state = 584 owns_state = 1180 owns_state = 1179 owns_state = 1175
+   }
 available_if_capitulated = yes 
-prerequisite = { focus = SOV_siberiancomrades } 
+prerequisite = { focus = SOV_enemiesonallsides } 
 		completion_reward = {
-			create_wargoal = {
-			    type = annex_everything
-			    target = KAZ
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = TMS
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = UZB
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = KYR
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = KHV
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = TRS
+			custom_effect_tooltip = SOV_centralasia_campaign
+			hidden_effect = {
+				every_country = {
+					limit = { OR = { owns_state = 407  owns_state = 406 owns_state = 402 owns_state = 587 owns_state = 585 owns_state = 404 owns_state = 984 owns_state = 405 owns_state = 586 owns_state = 589 owns_state = 588 owns_state = 732 owns_state = 1217 owns_state = 1218 owns_state = 742 owns_state = 1177 owns_state = 1178 owns_state = 1176 owns_state = 1185 owns_state = 1181 owns_state = 1183 owns_state = 1182 owns_state = 1184 owns_state = 584 owns_state = 1180 owns_state = 1179 owns_state = 1175  } }
+					ROOT = { 
+						create_wargoal = {
+							type = annex_everything		
+							target = PREV
+						}			
+					}
+				}
 			}
 		}
-ai_will_do = { 
- factor = 1
- } 
+		ai_will_do = { 
+			factor = 1
+			modifier = {
+			   add = 4
+			   has_war = no
+			 }
+			 modifier = {
+			   add = -1
+			   has_war = yes
+			 }
+			} 
 
  } 
 
@@ -3062,17 +3155,18 @@ add_tech_bonus = {
 shared_focus = { 
 id = SOV_proclaimsovietunion
 icon = GFX_focus_SOV_soviet_union
-x = 16
-y = 16
+x = 14
+y = 15
 cost = 5
 available_if_capitulated = yes 
 prerequisite = { focus = SOV_thefareast } 
-prerequisite = { focus = SOV_socialistinternationale } 
+prerequisite = { focus = SOV_sovietgermanpact } 
 available = {
  has_war = no
  owns_state = 195
  owns_state = 219
  owns_state = 249
+ owns_state = 217
  owns_state = 571
  owns_state = 570
  owns_state = 567
@@ -3080,7 +3174,7 @@ available = {
  
 }
 ai_will_do = { 
- factor = 1
+ factor = 100
  } 
 completion_reward = {
  set_cosmetic_tag = SOV_SOV
@@ -3137,15 +3231,255 @@ completion_reward = {
 }
  } 
 
+ #Eliminate Polish Opposition
+ shared_focus = {
+	id = SOV_eliminate_polish_opposition
+	icon = GFX_focus_SOV_poland
+	x = 18
+	y = 16
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	bypass = {
+		POL = { exists = no }
+	}
+	ai_will_do = { 
+		factor = 1
+		modifier = {
+		   add = 4
+		   has_war = no
+		 }
+		 modifier = {
+		   add = -1
+		   has_war = yes
+		 }
+		}
+	cost = 5
+	prerequisite = { focus = SOV_proclaimsovietunion  }
+	completion_reward = {
+		if = {
+			limit = {
+				POL = { exists = yes }
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = POL
+			}
+		}
+	}
+}
+
+#The Bread Basket of Europe
+shared_focus = {
+	id = SOV_the_bread_basket_of_europe
+	icon = GFX_focus_SOV_ukraine
+	x = 16
+	y = 16
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	bypass = {
+		owns_state = 202  owns_state = 221 owns_state = 200 
+	   }
+	ai_will_do = { 
+		factor = 1
+		modifier = {
+		   add = 4
+		   has_war = no
+		 }
+		 modifier = {
+		   add = -1
+		   has_war = yes
+		 }
+		}
+	cost = 5
+	prerequisite = { focus = SOV_proclaimsovietunion  }
+	completion_reward = {
+		custom_effect_tooltip = SOV_ukrainecampaign
+		hidden_effect = {
+			every_country = {
+				limit = { OR = { owns_state = 196 owns_state = 227 owns_state = 259 owns_state = 926 owns_state = 225 owns_state = 193 owns_state = 203 owns_state = 226 owns_state = 197 owns_state = 1083 owns_state = 93 owns_state = 1084 owns_state = 201 owns_state = 829 owns_state = 192 owns_state = 198 owns_state = 199 owns_state = 202  owns_state = 221 owns_state = 200 } }
+				ROOT = { 
+					create_wargoal = {
+						type = annex_everything		
+						target = PREV
+					}			
+				}
+			}
+		}
+	}
+}
+
+#The Baltic Coast
+shared_focus = {
+	id = SOV_the_baltic_coast
+	icon = GFX_focus_SOV_baltics
+	x = 12
+	y = 16
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	bypass = {
+		owns_state = 784  owns_state = 1266 owns_state = 882 owns_state = 880 owns_state = 189  owns_state = 881 owns_state = 190 owns_state = 1267 owns_state = 13 owns_state = 1268 
+	   }
+	cost = 5
+	ai_will_do = { 
+		factor = 1
+		modifier = {
+		   add = 4
+		   has_war = no
+		 }
+		 modifier = {
+		   add = -1
+		   has_war = yes
+		 }
+		}
+	prerequisite = { focus = SOV_proclaimsovietunion  }
+	completion_reward = {
+		custom_effect_tooltip = SOV_balticcampaign
+		hidden_effect = {
+			every_country = {
+				limit = { OR = { owns_state = 784  owns_state = 1266 owns_state = 882 owns_state = 880 owns_state = 189  owns_state = 881 owns_state = 190 owns_state = 1267 owns_state = 13 owns_state = 1268 } }
+				ROOT = { 
+					create_wargoal = {
+						type = annex_everything		
+						target = PREV
+					}			
+				}
+			}
+		}
+	}
+}
+
+#The Finnish Issue
+shared_focus = {
+	id = SOV_the_finnish_issue
+	icon = GFX_focus_SOV_finland
+	x = 10
+	y = 16
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	cost = 5
+	bypass = {
+		owns_state = 111  owns_state = 213
+	   }
+	ai_will_do = { 
+		factor = 1
+		modifier = {
+		   add = 4
+		   has_war = no
+		 }
+		 modifier = {
+		   add = -1
+		   has_war = yes
+		 }
+		}
+	prerequisite = { focus = SOV_proclaimsovietunion  }
+	completion_reward = {
+		custom_effect_tooltip = SOV_finnishcampaign
+		hidden_effect = {
+			every_country = {
+				limit = { OR = { owns_state = 111  owns_state = 213 } }
+				ROOT = { 
+					create_wargoal = {
+						type = annex_everything		
+						target = PREV
+					}			
+				}
+			}
+		}
+	}
+}
+
+#Liberate Bessarabian Workers
+shared_focus = {
+	id = SOV_liberate_bessarabian_workers
+	icon = GFX_focus_SOV_bessarabia
+	x = 17
+	y = 17
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	cost = 5
+	ai_will_do = { 
+		factor = 1
+		modifier = {
+		   add = 4
+		   has_war = no
+		 }
+		 modifier = {
+		   add = -1
+		   has_war = yes
+		 }
+		}
+	prerequisite = { focus = SOV_eliminate_polish_opposition  focus = SOV_the_bread_basket_of_europe  }
+	completion_reward = {
+		custom_effect_tooltip = SOV_bessarabiancampaign
+		hidden_effect = {
+			every_country = {
+				limit = { OR = { owns_state = 78 owns_state = 766 owns_state = 925 } }
+				ROOT = { 
+					create_wargoal = {
+						type = annex_everything		
+						target = PREV
+					}			
+				}
+			}
+		}
+	}
+}
+
+#The Belorussian Workers
+shared_focus = {
+	id = SOV_the_belorussian_workers
+	icon = GFX_focus_SOV_belarus
+	x = 14
+	y = 16
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	bypass = {
+		owns_state = 94  owns_state = 206 owns_state = 241
+	   }
+	cost = 5
+	ai_will_do = { 
+		factor = 1
+		modifier = {
+		   add = 4
+		   has_war = no
+		 }
+		 modifier = {
+		   add = -1
+		   has_war = yes
+		 }
+		}
+	prerequisite = { focus = SOV_proclaimsovietunion  }
+	completion_reward = {
+		custom_effect_tooltip = SOV_belaruscampaign
+		hidden_effect = {
+			every_country = {
+				limit = { OR = { owns_state = 94  owns_state = 206 owns_state = 241 } }
+				ROOT = { 
+					create_wargoal = {
+						type = annex_everything		
+						target = PREV
+					}			
+				}
+			}
+		}
+	}
+}
+
 #Focus for Socialist Internationale
 shared_focus = { 
 id = SOV_socialistinternationale
 icon = GFX_focus_SOV_socialist_internationale
-x = 19
-y = 13
+x = 20
+y = 12
 cost = 5
 available_if_capitulated = yes 
-prerequisite = { focus = SOV_sovietgermanpact } 
+prerequisite = { focus = SOV_comradesabroad } 
 bypass = {
  is_in_faction = yes
 }
@@ -3167,35 +3501,38 @@ if = {
 shared_focus = { 
 id = SOV_thefareast
 icon = GFX_focus_SOV_far_east
-x = 13
-y = 15
+x = 11
+y = 14
 cost = 5
+bypass = {
+	owns_state = 566  owns_state = 564 owns_state = 1199 owns_state = 1202 owns_state = 1201 owns_state = 1186 owns_state = 1200 owns_state = 329 owns_state = 1227 owns_state = 1198 owns_state = 1220 owns_state = 1230 owns_state = 1224 owns_state = 1197 owns_state = 1225 owns_state = 1226 owns_state = 1199 owns_state = 1221 owns_state = 563 owns_state = 1229 owns_state = 1228 owns_state = 561 owns_state = 657 owns_state = 560 owns_state = 970 owns_state = 565 owns_state = 982 owns_state = 574 owns_state = 644 owns_state = 1187 owns_state = 562 owns_state = 637 owns_state = 1232 owns_state = 1270 owns_state = 970 owns_state = 409 owns_state = 408
+   }
 available_if_capitulated = yes 
 prerequisite = { focus = SOV_siberiancampaign } 
 ai_will_do = { 
- factor = 1
- } 
+	factor = 1
+	modifier = {
+	   add = 4
+	   has_war = no
+	 }
+	 modifier = {
+	   add = -1
+	   has_war = yes
+	 }
+	}
 completion_reward = { 
-create_wargoal = {
-type = annex_everything
-target = WFE
-}
-create_wargoal = {
-type = annex_everything
-target = SFS
-}
-create_wargoal = {
-type = annex_everything
-target = IRK
-}
-create_wargoal = {
-type = annex_everything
-target = JOB
-}
-create_wargoal = {
-type = annex_everything
-target = FER
-}
+	custom_effect_tooltip = SOV_fareastcampaign
+	hidden_effect = {
+		every_country = {
+			limit = { OR = { owns_state = 566  owns_state = 564 owns_state = 1199 owns_state = 1202 owns_state = 1201 owns_state = 1186 owns_state = 1200 owns_state = 329 owns_state = 1227 owns_state = 1198 owns_state = 1220 owns_state = 1230 owns_state = 1224 owns_state = 1197 owns_state = 1225 owns_state = 1226 owns_state = 1199 owns_state = 1221 owns_state = 563 owns_state = 1229 owns_state = 1228 owns_state = 561 owns_state = 657 owns_state = 560 owns_state = 970 owns_state = 565 owns_state = 982 owns_state = 574 owns_state = 644 owns_state = 1187 owns_state = 562 owns_state = 637 owns_state = 1232 owns_state = 1270 owns_state = 970 owns_state = 409 owns_state = 408 } }
+			ROOT = { 
+				create_wargoal = {
+					type = annex_everything		
+					target = PREV
+				}			
+			}
+		}
+	}
 }
 } 
 #Focus for Enemies on All Sides
@@ -3211,7 +3548,7 @@ prerequisite = { focus = SOV_lookoutwards }
 			add_war_support = 0.1
 			}
 ai_will_do = { 
- factor = 1
+ factor = 2
  } 
 } 
  
@@ -3220,24 +3557,19 @@ shared_focus = {
 id = SOV_sovietgermanpact
 icon = GFX_focus_SOV_german_treaty
 x = 19
-y = 12
+y = 13
 cost = 5
 available_if_capitulated = yes 
-prerequisite = { focus = SOV_enemiesonallsides } 
-prerequisite = { focus = SOV_comradesabroad } 
-
+prerequisite = { focus = SOV_socialistinternationale } 
+bypass = {
+	OR = {
+		GER = { exists = no }
+		GER = { SOCIALIST_ALIGNED_GOVERNMENT = no }
+	}
+}
 ai_will_do = { 
  factor = 1
  }
-bypass = {
- GER = {
-  NOT = {
-   has_government = national_socialist
-   has_government = socialist
-   has_government = democratic_socialist
-  }
- }
-} 
  completion_reward = {
   GER = { give_guarantee = SOV }
   SOV = { give_guarantee = GER }
@@ -3249,7 +3581,372 @@ bypass = {
 
  }
 } 
+	#The Little Russia
+	shared_focus = {
+		id = SOV_the_little_russia
+		icon = GFX_focus_SOV_little_russia
+		x = 21
+		y = 13
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			AND = {
+				OR = {
+					DSU = { exists = no }
+					DSU = { SOCIALIST_ALIGNED_GOVERNMENT = no }
+				}
+				OR = {
+					CBR = { exists = no }
+					CBR = { SOCIALIST_ALIGNED_GOVERNMENT = no }
+				}
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+			}
+		cost = 5
+		prerequisite = { focus = SOV_socialistinternationale  }
+		completion_reward = {
+			if = {
+				limit = {
+					DSU = { exists = yes }
+				}
+				DSU = { country_event = { id = bolshevik_russia.99 days = 3 } }
+			}
+			if = {
+				limit = {
+					CBR = { exists = yes }
+				}
+				CBR = { country_event = { id = bolshevik_russia.99 days = 3 } }
+			}
+		}
+	}
 
+	#Socialist Science
+	shared_focus = {
+		id = SOV_socialist_science
+		icon = GFX_focus_SOV_research_pact
+		x = 20
+		y = 14
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		cost = 5
+		bypass = {
+			OR = {
+				is_faction_leader = no
+				num_faction_members < 2
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+			}
+		prerequisite = { focus = SOV_the_little_russia  } prerequisite = { focus = SOV_sovietgermanpact  }
+		completion_reward = {
+			add_ideas = { sov_faction_science }
+			every_country = {
+				limit = {
+					is_in_faction_with = SOV
+				}
+				add_ideas = { sov_faction_science }
+			}
+		}
+	}
+
+	#Comradery pact
+	shared_focus = {
+		id = SOV_comradery_pact
+		icon = GFX_focus_SOV_country_deal
+		x = 20
+		y = 15
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		cost = 5
+		bypass = {
+			OR = {
+				is_faction_leader = no
+				num_faction_members < 2
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+			}
+		prerequisite = { focus = SOV_socialist_science  }
+		completion_reward = {
+			add_ideas = { sov_faction_economics }
+			every_country = {
+				limit = {
+					is_in_faction_with = SOV
+				}
+				add_ideas = { sov_faction_economics }
+			}
+		}
+	}
+	#Prepare the Public
+	shared_focus = {
+		id = SOV_prepare_the_public
+		icon = GFX_focus_SOV_propaganda
+		x = 21
+		y = 17
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { 
+			factor = 1
+			}
+		cost = 5
+		prerequisite = { focus = SOV_the_first_steps  }
+		completion_reward = {
+			add_stability = 0.10
+			add_war_support = 0.10
+		}
+	}
+
+	#The First Steps
+	shared_focus = {
+		id = SOV_the_first_steps
+		icon = GFX_focus_SOV_first_steps
+		x = 20
+		y = 16
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_country_flag = sov_globo_communist
+		   } 
+		cost = 10
+		ai_will_do = { 
+			factor = 2
+			}
+		prerequisite = { focus = SOV_comradery_pact  } prerequisite = { focus = SOV_proclaimsovietunion  }
+		completion_reward = {
+			custom_effect_tooltip = SOV_firststeps
+			hidden_effect = {
+				every_country = {
+					if = {
+						limit = {
+							AND = {
+								OR = {
+									tag = POL
+									tag = GER
+									tag = PRS
+									tag = FRA
+									tag = FRP
+									tag = FRL
+									tag = SPR
+									tag = ENG
+									tag = BRL
+									tag = BRC
+									tag = BRU
+									tag = ITA
+									tag = POL
+									tag = SWE
+									tag = SER
+									tag = BUL
+									tag = GRE
+									tag = CZE
+									tag = SLO
+									tag = HUN
+									tag = CRO
+									tag = ALB
+									tag = BOS
+									tag = RHN
+									tag = HOL
+									tag = WLL
+									tag = FLA
+									tag = ROM
+									tag = DEN
+									tag = NOR
+									}
+								SOCIALIST_ALIGNED_GOVERNMENT = no
+								}
+							}
+							add_ideas = { sov_support_of_commies_abroad }
+						}
+					}
+			}
+		}
+	}
+
+	#Massive Purchases
+	shared_focus = {
+		id = SOV_massive_purchases
+		icon = GFX_focus_SOV_massive_purchases
+		x = 19
+		y = 17
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		ai_will_do = { 
+			factor = 1
+			}
+		cost = 5
+		prerequisite = { focus = SOV_the_first_steps  }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+                type = infantry_equipment_0
+					amount = 40000
+					producer = SOV
+             }
+		}
+	}
+
+	#Begin Insurgencies
+	shared_focus = {
+		id = SOV_begin_insurgencies
+		icon = GFX_focus_SOV_insurgencies
+		x = 20
+		y = 18
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { 
+			factor = 2
+			}
+		prerequisite = { focus = SOV_prepare_the_public  } prerequisite = { focus = SOV_massive_purchases  }
+		completion_reward = {
+			custom_effect_tooltip = SOV_begininsurgencies
+			hidden_effect = {
+				every_country = {
+					if = {
+						limit = {
+							AND = {
+								OR = {
+									tag = POL
+									tag = GER
+									tag = PRS
+									tag = FRA
+									tag = FRP
+									tag = FRL
+									tag = SPR
+									tag = ENG
+									tag = BRL
+									tag = BRC
+									tag = BRU
+									tag = ITA
+									tag = POL
+									tag = SWE
+									tag = SER
+									tag = BUL
+									tag = GRE
+									tag = CZE
+									tag = SLO
+									tag = HUN
+									tag = CRO
+									tag = ALB
+									tag = BOS
+									tag = RHN
+									tag = HOL
+									tag = WLL
+									tag = FLA
+									tag = ROM
+									tag = DEN
+									tag = NOR
+									}
+								SOCIALIST_ALIGNED_GOVERNMENT = no
+								has_idea = { sov_support_of_commies_abroad }
+								}
+							}
+							swap_ideas = {
+								remove_idea = sov_support_of_commies_abroad
+								add_idea = sov_support_of_commies_abroad_2
+							}
+						}
+					}
+			}
+		}
+	}
+
+	#The European Revolution
+	shared_focus = {
+		id = SOV_the_european_revolution
+		icon = GFX_focus_SOV_europe
+		x = 20
+		y = 19
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { 
+			factor = 1
+			modifier = {
+			   add = 4
+			   has_war = no
+			 }
+			 modifier = {
+			   add = -1
+			   has_war = yes
+			 }
+			}
+		prerequisite = { focus = SOV_begin_insurgencies  }
+		completion_reward = {
+			custom_effect_tooltip = SOV_eurorev
+			hidden_effect = {
+				every_country = {
+					if = {
+						limit = {
+							AND = {
+								OR = {
+									tag = POL
+									tag = GER
+									tag = PRS
+									tag = FRA
+									tag = FRP
+									tag = FRL
+									tag = SPR
+									tag = ENG
+									tag = BRL
+									tag = BRC
+									tag = BRU
+									tag = ITA
+									tag = POL
+									tag = SWE
+									tag = SER
+									tag = BUL
+									tag = GRE
+									tag = CZE
+									tag = SLO
+									tag = HUN
+									tag = CRO
+									tag = ALB
+									tag = BOS
+									tag = RHN
+									tag = HOL
+									tag = WLL
+									tag = FLA
+									tag = ROM
+									tag = DEN
+									tag = NOR
+									tag = LIT
+									tag = EST
+									tag = LAT
+									tag = LNC
+									tag = LDF
+									tag = ELP
+									tag = ELA
+									tag = POR
+									tag = MCO
+									tag = ADR
+									tag = VCT
+									tag = LUX
+									tag = SWI
+									}
+								SOCIALIST_ALIGNED_GOVERNMENT = no }
+								}
+						ROOT = { 
+						create_wargoal = {
+							type = annex_everything		
+							target = PREV
+						}			
+					}
+				}
+			}
+			}
+	}
+}
 #Focus for Bolshevik Air Forces
 shared_focus = { 
 id = SOV_bolshevikairforces

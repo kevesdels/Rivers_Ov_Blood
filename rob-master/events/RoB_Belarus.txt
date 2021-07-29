@@ -111,7 +111,7 @@ trigger = {
 mean_time_to_happen = { days = 3 }
 
 option = { ###Accepts the aid
-name = belarusia.5.a
+name = "Welcome Their Aid!"
  add_popularity = { ideology = pelekist popularity = 0.05 }
  set_country_flag = BLR_pelekist_aid
  hidden_effect = {
@@ -121,7 +121,7 @@ name = belarusia.5.a
 }
 
 option = { ###decline the aid
-name = belarusia.5.b
+name = "We Have No Reason to Cooperate"
  add_stability = -0.1
  add_popularity = { ideology = pelekist popularity = -0.05 }
  hidden_effect = { 
@@ -392,7 +392,7 @@ add_political_power = 100
 ###defeat in border raid against commies
 country_event = {
 id = belarusia.17
-title = belarusia.17.t
+title = "Defeat in Homeyl Voblasc"
 desc = belarusia.17.d
 fire_only_once = yes
 is_triggered_only = yes
@@ -433,6 +433,28 @@ add_political_power = -70
 
 }
 
+###Nationalist victory over commies with republicans
+country_event = {
+  id = belarusia.23
+  title = "The Aftermath"
+  desc = belarusia.23.d ###there would be unification talks from democrat and nationalist side after shared victory, but they hate each other too much
+  fire_only_once = yes
+  trigger = {
+    tag = BLR
+    has_country_flag = BLR_dbr_alliance
+    is_in_faction_with = DBR
+    CBR = { exists = no }
+    owns_state = 241 
+  }
+  
+  option = { ###Talks fall aparat
+  name = "The Talks Fall Apart"
+  dismantle_faction = yes
+  clr_country_flag = BLR_dbr_alliance
+  set_country_flag = BLR_alliance_gone
+  }
+  
+  }
 ###COMMUNIST EVENTS
 ###request soviet support
 country_event = {

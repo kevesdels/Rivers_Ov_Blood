@@ -222,6 +222,113 @@ ideas = {
  
  }
  
+ DBR_polish_influence_1 = {
+  picture = DBR_poland_influnce
+
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.03
+				production_factory_max_efficiency_factor = 0.03
+
+				}
+ }
+
+  DBR_polish_influence_2 = {
+  picture = DBR_poland_influnce
+
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.06
+				production_factory_max_efficiency_factor = 0.06
+
+				}
+ }
+
+  DBR_polish_influence_3 = {
+  picture = DBR_poland_influnce
+
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.08
+				production_factory_max_efficiency_factor = 0.08
+				consumer_goods_factor = -0.05
+
+				}
+ }
+
+  DBR_polish_influence_4 = {
+  picture = DBR_poland_influnce
+
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.1
+
+				}
+ }
+
+  DBR_polish_influence_5 = {
+  picture = DBR_poland_influnce
+
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+                consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.08
+				}
+ }
+
+  DBR_polish_influence_6 = {
+  picture = DBR_poland_influnce
+
+ allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 modifier = {
+				stability_factor = 0.12
+				production_factory_max_efficiency_factor = 0.12
+                consumer_goods_factor = -0.12
+				industrial_capacity_factory = 0.12
+
+				}
+ }
+
   belarusian_civil_war = {
   picture = GFX_idea_minority_troubles
  allowed = {
@@ -257,7 +364,7 @@ ideas = {
  }
  
     DBR_polish_dominance = {
-  picture = GFX_idea_DBR_polish_dominance
+  picture = 
  allowed = {
        always = no
      }
@@ -266,9 +373,7 @@ ideas = {
 			}
      removal_cost = -1
 	 modifier = {
-            production_factory_max_efficiency_factor = 0.1
-			stability_factor = 0.07
-            political_power_factor = -0.5
+            political_power_factor = -0.25
 				}
  
  }

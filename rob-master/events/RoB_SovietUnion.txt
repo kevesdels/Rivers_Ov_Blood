@@ -1941,3 +1941,198 @@ add_stability = 0.02
 
 }
 }
+
+country_event = { ###invite siberian niggas
+id = bolshevik_russia.95
+title = "The Bolshevik Offer"
+desc = "Bolsheviks have proposed mutual alliance if we were to become subordinates of theirs"
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Wuhu! Count me in!"
+ai_chance = {
+    base = 5
+
+    modifier = {
+      add = 2
+      has_opinion = {
+        target = SOV
+        value > 50
+      }
+    }
+
+    modifier = {
+      add = 4
+      has_opinion = {
+        target = SOV
+        value > 100
+      }
+    }
+
+    modifier = {
+      add = 6
+      has_opinion = {
+        target = SOV
+        value > 175
+      }
+    }
+
+    modifier = {
+      factor = 4
+      strength_ratio = {
+          tag = FROM
+          ratio < 5
+      }
+    }
+
+    modifier = {
+      factor = 2
+      strength_ratio = {
+          tag = FROM
+          ratio < 3
+      }
+    }
+
+    modifier = {
+      factor = 0.5
+      strength_ratio = {
+          tag = FROM
+          ratio < 2
+      }
+    }
+
+   }
+
+hidden_effect = {
+	SOV = { country_event = { id = bolshevik_russia.97 days = 3 } }
+}
+}
+
+option = {
+name = "No, no, no"
+
+ai_chance = {
+    base  = 7
+
+    modifier = {
+      add = 4
+      has_opinion = {
+        target = SOV
+        value < 50
+      }
+    }
+
+    modifier = {
+      add = 8
+      has_opinion = {
+        target = SOV
+        value < 100
+      }
+    }
+
+    modifier = {
+      add = 12
+      has_opinion = {
+        target = SOV
+        value < 175
+      }
+    }
+   }
+hidden_effect = {
+	SOV = { country_event = { id = bolshevik_russia.98 days = 3 } }
+}
+}
+
+}
+
+country_event = { ###demand siberian niggas
+id = bolshevik_russia.96
+title = "The Bolshevik Demand"
+desc = "The Bolsheviks have demanded that we are to immedialy recognize Moscows government as the only soviet state in Russia. The underlying meaning would be that we are to be integrated in Bolshevik state."
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Wuhu! Count me in!"
+hidden_effect = {
+	SOV = { country_event = { id = bolshevik_russia.97 days = 3 } }
+}
+}
+
+option = {
+name = "No, no, no"
+hidden_effect = {
+	SOV = { country_event = { id = bolshevik_russia.98 days = 3 } }
+}
+}
+
+}
+
+country_event = { ###
+id = bolshevik_russia.97
+title = "The Siberian Comrades Yield"
+desc = "Thankfuly the cold of the Siberia has not damaged their brains, and the cooperation has been secured."
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Wonderful"
+trigger = { has_country_flag = sov_siberians_faction }
+SOV = { add_to_faction = FROM }
+}
+
+option = {
+name = "Wonderful"
+trigger = { has_country_flag = sov_siberians_demand }
+annex_country = {  target = FROM  transfer_troops = yes }
+}
+
+}
+
+country_event = { ###
+id = bolshevik_russia.98
+title = "Cold Silence"
+desc = "No reponse to our words..."
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Then by force they will listen"
+SOV = { create_wargoal = { target = ROOT  type = annex_everything } }
+}
+
+option = {
+name = "Who cares about that?"
+	add_political_power = -10
+
+}
+
+}
+
+country_event = { ###soviets send guns
+id = bolshevik_russia.99
+title = "Soviet Arms"
+desc = "A gift of supplies from comrade to comrade."
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = {
+name = "Ura!"
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+		amount = 10000
+		producer = SOV
+ }
+ add_opinion_modifier = {
+    target = SOV
+    modifier = offered_support
+}
+}
+
+}

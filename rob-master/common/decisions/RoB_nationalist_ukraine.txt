@@ -289,8 +289,7 @@ DSU_retake_ukrainian_lands_1 = {
 	89 = { add_core_of = ROOT }
 	73 = { add_core_of = ROOT }
 	every_country = {
-		limit = { controls_state = 89 }
-		limit = { controls_state = 91 }
+		limit = { OR = { owns_state = 89 owns_state = 91 } }
 		ROOT = { 
 			create_wargoal = {
 				type = annex_everything		

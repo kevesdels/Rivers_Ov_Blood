@@ -46,24 +46,7 @@ set_technology = {
 
 add_opinion_modifier = { target = SOV modifier = embargo }
 
-set_convoys = 10
-
-if = {
-	limit = {
-		has_dlc = "Together for Victory"
-	}
-	set_autonomy = {
-		target = DBR
-		autonomous_state = autonomy_colony
-	}
-	else = {
-		set_autonomy = {
-			target = DBR
-			autonomous_state = autonomy_puppet
-		}
-	}
-}
-
+set_convoys = 20
 
 
 add_ideas = {
