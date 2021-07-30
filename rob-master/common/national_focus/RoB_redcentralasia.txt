@@ -836,6 +836,7 @@ add_ideas = TRS_welfare
 
 	#Focus for The Long Road to Glory
 	focus = {
+		
 		id = TRS_thelongroadtoglory
 		icon = GFX_goal_unknown
 		x = 15
@@ -1090,6 +1091,7 @@ create_wargoal = {
 			factor = 4
 		}
 		completion_reward = {
+			add_manpower = 5000
 		}
 	}
 
@@ -1641,6 +1643,18 @@ KHV = { country_event = {
 		ai_will_do = {
 			factor = 50
 		}
+		completion_reward = {
+
+		 1175 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = industrial_complex
+	    level = 1
+	    instant_build = yes
+          }
+          }
+		}
 	}
 
 	#Focus for A Proper Capital
@@ -1962,7 +1976,30 @@ KHV = { country_event = {
 		prerequisite = { focus = TRS_reininthedeserts }
 		ai_will_do = {
 			factor = 100
-		}
+			}
+		completion_reward = {
+        division_template = {
+        name = "Turkmen Cavalry"
+        regiments = {
+        cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 0 y = 2 }
+        cavalry = { x = 1 y = 0 }
+        cavalry = { x = 1 y = 1 }
+        cavalry = { x = 1 y = 2 }
+    }
+		
+}
+1181 = { create_unit = {
+    division = "name = \"Turkmen Cavalry\" division_template = \"Turkmen Cavalry\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+    owner = TRS
+} }
+584 = { create_unit = {
+    division = "name = \"Turkmen Cavalry\" division_template = \"Turkmen Cavalry\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
+    owner = TRS
+} }
+			}
+		
 	}
 
 	#Focus for Unite The Workers
@@ -1994,6 +2031,29 @@ KHV = { country_event = {
 		ai_will_do = {
 			factor = 100
 		}
+				completion_reward = {
+
+		 1184 = { 
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+ 
+	    type = arms_factory
+	    level = 1
+	    instant_build = yes
+          }
+          }
+		  		 1181 = { 
+          add_extra_state_shared_building_slots = 1
+          add_building_construction = {
+ 
+	    type = arms_factory
+	    level = 1
+	    instant_build = yes
+          }
+          }
+
+		  add_timed_idea = { idea = TRS_industrialization_exhaustion  days = 365 }
+		}
 	}
 
 	#Focus for Secret Deal with Persia
@@ -2022,6 +2082,9 @@ KHV = { country_event = {
 		ai_will_do = {
 			factor = 100
 		}
+		completion_reward = {
+		add_research_slot = 1
+		}
 	}
 
 	#Focus for Purge Reactionary Supporters
@@ -2036,6 +2099,12 @@ KHV = { country_event = {
 		ai_will_do = {
 			factor = 100
 		}
+				completion_reward = {
+		add_popularity = {
+    ideology = reactionary
+    popularity = -0.3
+}
+}
 	}
 
 	#Focus for Jughashvili's Transcapia
@@ -2124,6 +2193,18 @@ KHV = { country_event = {
 		ai_will_do = {
 			factor = 100
 		}
+		completion_reward = {
+
+		 1179 = { 
+          add_extra_state_shared_building_slots = 2
+          add_building_construction = {
+ 
+	    type = arms_factory
+	    level = 1
+	    instant_build = yes
+          }
+          }
+		}
 	}
 
 	#Focus for Improve Research Forces
@@ -2137,6 +2218,9 @@ KHV = { country_event = {
 		prerequisite = { focus = TRS_proclaimthetranscapiansovietrepublic }
 		ai_will_do = {
 			factor = 100
+		}
+				completion_reward = {
+		add_ideas = TRS_mobilized_research_forces
 		}
 	}
 

@@ -361,6 +361,88 @@ ideas = {
       surrender_limit =-0.25
 	}	
    }
+
+  TRS_good_agri = {
+allowed={
+   always = no
+}
+allowed_civil_war = {
+   always = yes
+}
+removal_cost = -1
+modifier = {
+   consumer_goods_factor = -0.05
+}
+  }
+
+  TRS_united_workers = {
+allowed={
+   always = no
+}
+allowed_civil_war = {
+   always = yes
+}
+removal_cost = -1
+modifier = {
+   production_factory_efficiency_gain_factor = 0.1
+   production_lack_of_resource_penalty_factor = -0.2
+}
+  }
+
+    TRS_womenequal = {
+allowed={
+   always = no
+}
+allowed_civil_war = {
+   always = yes
+}
+removal_cost = -1
+modifier = {
+   production_factory_efficiency_gain_factor = 0.05
+   recruitable_population = 0.002
+   training_time_factor = 0.1
+}
+  }
   
+  TRS_industrialization_exhaustion = {
+allowed={
+   always = no
+}
+allowed_civil_war = {
+   always = yes
+}
+removal_cost = -1
+modifier = {
+   production_factory_max_efficiency_factor = -0.2
+}
+  }
+
+  TRS_new_transcapian_economy = {
+allowed={
+   always = no
+}
+allowed_civil_war = {
+   always = yes
+}
+removal_cost = -1
+modifier = {
+   production_speed_buildings_factor = 0.10
+   production_speed_industrial_complex_factor = 0.10
+}
+  }
+
+  TRS_mobilized_research_forces = {
+allowed={
+   always = no
+}
+allowed_civil_war = {
+   always = yes
+}
+removal_cost = -1
+modifier = {
+     research_speed_factor = 0.05
+}
+  }
+
   }
  }
