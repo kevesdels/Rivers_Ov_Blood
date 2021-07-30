@@ -1289,10 +1289,9 @@ country_event = {
  id = ubd.40
  title = "Foreign land"
  desc = "With war of independence raging on, we have seized lands belonging to our brother nation. We should grant it back to locals, but who deserves it?"
- fire_only_once = yes
 
  trigger = {
-
+ 
    ### checks if has land from other civil war niggas (ex: estis have latvian land)
    OR = {
      ###es*onians give land

@@ -50,15 +50,15 @@
 #	new_commander_weight = {} # weight
 #	enable_ability = ability_key
 #}
-leader_traits = {
-
-		christian = { 
-		type = land
-		trait_type = personality_trait
-		new_commander_weigh = {
-			base = 0
-		}
-		modifier = {
+###leader_traits = {
+#
+#		christian = { 
+#		type = land
+#		trait_type = personality_trait
+#		new_commander_weigh = {
+#			base = 0
+#		}
+#		modifier = {
 		}
 
 		custom_effect_tooltip = THIS_OFFICER_IS_A_DEVOUT_CHRISTIAN
@@ -67,7 +67,7 @@ leader_traits = {
 		}
 	}
 
-		pagan = { 
+#		pagan = { 
 		type = land
 		trait_type = personality_trait
 		new_commander_weigh = {
@@ -82,7 +82,7 @@ leader_traits = {
 		}
 	}
 
-		futurist = { 
+#		futurist = { 
 		type = land
 		trait_type = personality_trait
 		new_commander_weigh = {
@@ -97,4 +97,4 @@ leader_traits = {
 		}
 	}
 		
-}
+#}

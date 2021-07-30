@@ -1,0 +1,134 @@
+﻿###########################
+# Peace events Event
+###########################
+
+add_namespace = peaceevent
+
+
+###Send peace to japan
+country_event = {
+  id = peaceevent.0
+  title = "The End of War Draws Near"
+  desc = "The Japanese are crumbling. But their navy remains an issue. We should probably seek a favourable end to the war."
+  fire_only_once = yes
+  trigger = {
+    OR = {
+      tag = FER
+      tag = LES
+      tag = SOV
+    }
+    at_war_with = JAP
+      AND = { JAP = { owns_state = 909 } controls_state = 909 }
+      AND = { JAP = { owns_state = 527 } controls_state = 527 }
+      AND = { JAP = { owns_state = 908 } controls_state = 908 }
+      AND = { JAP = { owns_state = 907 } controls_state = 907 }
+      AND = { JAP = { owns_state = 525 } controls_state = 525 }
+      AND = { JAP = { owns_state = 903 } controls_state = 903 }
+      AND = { JAP = { owns_state = 906 } controls_state = 906 }
+      AND = { JAP = { owns_state = 905 } controls_state = 905 }
+      AND = { JAP = { owns_state = 904 } controls_state = 904 }
+      AND = { JAP = { owns_state = 745 } controls_state = 745 }
+      AND = { JAP = { owns_state = 743 } controls_state = 743 }
+      AND = { JAP = { owns_state = 902 } controls_state = 902 }
+  }
+  mean_time_to_happen = { days = 1 }
+  
+  ###BACK OUT
+  option = {
+    name = "Send Peace Offer"
+    JAP = { country_event = { id = peaceevent.1 days = 3 } }
+    }
+
+  ###Continue
+  option = {
+    ai_chance = { factor = 0 }
+    name = "The Fight Will Continue"
+  add_stability = -0.10
+  add_war_support = -0.10
+  add_political_power = -200
+    }
+  }
+
+###Send peace to japan
+country_event = {
+  id = peaceevent.1
+  title = "Russian Offer"
+  desc = "The enemy has sent us a surprisingly easy peace offer, one that would be hard to refuse in context of our failures."
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  mean_time_to_happen = { days = 1 }
+  
+  ###BACK OUT
+  option = {
+    name = "The War is Lost"
+    FROM = { country_event = { id = peaceevent.2 days = 3 } }
+    }
+
+  ###Continue
+  option = {
+    ai_chance = { factor = 0 }
+    name = "Continue!"
+    set_country_flag = jap_continue_fight
+    FROM = { country_event = { id = peaceevent.2 days = 3 } }
+    }
+  }
+
+###Send peace to japan
+country_event = {
+  id = peaceevent.2
+  title = "The Japanese Response"
+  desc = "...so, which is it? Did they yield?"
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  mean_time_to_happen = { days = 1 }
+  
+  ###Japs want peace
+  option = {
+    name = "Uraa!"
+    trigger = {
+      NOT = { JAP = { has_country_flag = jap_continue_fight } }
+    }
+    if = {
+      limit = {
+        JAP = { owns_state = 1232 }
+      }
+      transfer_state = 1232
+    }
+    if = {
+      limit = {
+        OR = {
+          JVD = { owns_state = 408 }
+          JAP = { owns_state = 408 }
+        }
+      }
+      transfer_state = 408
+    }
+    if = {
+      limit = {
+        OR = {
+          JVD = { owns_state = 409 }
+          JAP = { owns_state = 409 }
+        }
+      }
+      transfer_state = 409
+    }
+    white_peace = JAP
+    if = {
+      limit = {
+        at_war_with = MAN
+      }
+      white_peace = MAN
+    }
+  }
+
+  ###Japs hate peace
+  option = {
+    name = "...no way"
+    trigger = {
+      JAP = { has_country_flag = jap_continue_fight }
+    }
+    add_political_power = -10
+    }
+  }

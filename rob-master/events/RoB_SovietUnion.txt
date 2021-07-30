@@ -1946,7 +1946,6 @@ country_event = { ###invite siberian niggas
 id = bolshevik_russia.95
 title = "The Bolshevik Offer"
 desc = "Bolsheviks have proposed mutual alliance if we were to become subordinates of theirs"
-fire_only_once = yes
 is_triggered_only = yes
 
 
@@ -2014,32 +2013,40 @@ option = {
 name = "No, no, no"
 
 ai_chance = {
-    base  = 7
+  base  = 7
 
-    modifier = {
-      add = 4
-      has_opinion = {
-        target = SOV
-        value < 50
-      }
+  modifier = {
+    add = 2
+    has_opinion = {
+      target = SOV
+      value < -30
     }
+  }
 
-    modifier = {
-      add = 8
-      has_opinion = {
-        target = SOV
-        value < 100
-      }
+  modifier = {
+    add = 4
+    has_opinion = {
+      target = SOV
+      value < -50
     }
+  }
 
-    modifier = {
-      add = 12
-      has_opinion = {
-        target = SOV
-        value < 175
-      }
+  modifier = {
+    add = 8
+    has_opinion = {
+      target = SOV
+      value < -100
     }
-   }
+  }
+
+  modifier = {
+    add = 12
+    has_opinion = {
+      target = SOV
+      value < -175
+    }
+  }
+ }
 hidden_effect = {
 	SOV = { country_event = { id = bolshevik_russia.98 days = 3 } }
 }
@@ -2051,12 +2058,71 @@ country_event = { ###demand siberian niggas
 id = bolshevik_russia.96
 title = "The Bolshevik Demand"
 desc = "The Bolsheviks have demanded that we are to immedialy recognize Moscows government as the only soviet state in Russia. The underlying meaning would be that we are to be integrated in Bolshevik state."
-fire_only_once = yes
 is_triggered_only = yes
 
 
 option = {
 name = "Wuhu! Count me in!"
+ai_chance = {
+  base = 3
+
+  modifier = {
+    add = 2
+    has_opinion = {
+      target = SOV
+      value > 30
+    }
+  }
+
+  modifier = {
+    add = 2
+    has_opinion = {
+      target = SOV
+      value > 50
+    }
+  }
+
+  modifier = {
+    add = 4
+    has_opinion = {
+      target = SOV
+      value > 100
+    }
+  }
+
+  modifier = {
+    add = 6
+    has_opinion = {
+      target = SOV
+      value > 175
+    }
+  }
+
+  modifier = {
+    factor = 4
+    strength_ratio = {
+        tag = FROM
+        ratio < 5
+    }
+  }
+
+  modifier = {
+    factor = 2
+    strength_ratio = {
+        tag = FROM
+        ratio < 3
+    }
+  }
+
+  modifier = {
+    factor = 0.5
+    strength_ratio = {
+        tag = FROM
+        ratio < 2
+    }
+  }
+
+ }
 hidden_effect = {
 	SOV = { country_event = { id = bolshevik_russia.97 days = 3 } }
 }
@@ -2064,6 +2130,41 @@ hidden_effect = {
 
 option = {
 name = "No, no, no"
+ai_chance = {
+  base  = 7
+
+  modifier = {
+    add = 2
+    has_opinion = {
+      target = SOV
+      value < -30
+    }
+  }
+
+  modifier = {
+    add = 4
+    has_opinion = {
+      target = SOV
+      value < -50
+    }
+  }
+
+  modifier = {
+    add = 8
+    has_opinion = {
+      target = SOV
+      value < -100
+    }
+  }
+
+  modifier = {
+    add = 12
+    has_opinion = {
+      target = SOV
+      value < -175
+    }
+  }
+ }
 hidden_effect = {
 	SOV = { country_event = { id = bolshevik_russia.98 days = 3 } }
 }
@@ -2075,7 +2176,6 @@ country_event = { ###
 id = bolshevik_russia.97
 title = "The Siberian Comrades Yield"
 desc = "Thankfuly the cold of the Siberia has not damaged their brains, and the cooperation has been secured."
-fire_only_once = yes
 is_triggered_only = yes
 
 
@@ -2097,13 +2197,12 @@ country_event = { ###
 id = bolshevik_russia.98
 title = "Cold Silence"
 desc = "No reponse to our words..."
-fire_only_once = yes
 is_triggered_only = yes
 
 
 option = {
 name = "Then by force they will listen"
-SOV = { create_wargoal = { target = ROOT  type = annex_everything } }
+SOV = { create_wargoal = { target = FROM  type = annex_everything } }
 }
 
 option = {
@@ -2135,4 +2234,60 @@ add_equipment_to_stockpile = {
 }
 }
 
+}
+
+
+
+country_event = { ###Soviet offer alliance
+id = bolshevik_russia.100
+title = "Alliance?"
+desc = "The Bolsheviks have sent us a telegram from Moscow, the contents of which appear to be benefical. It would seem that they desire to work with us as partners in mutual assistance pact in case of military conflict. Should we respond favourably or not, that is still up to a debate."
+is_triggered_only = yes
+
+
+option = {
+name = "Comrade!"
+hidden_effect = {
+  SOV = { country_event = { id = bolshevik_russia.101 days = 3 } }
+}
+}
+
+option = {
+  name = "We Don't Need Their Help"
+  hidden_effect = {
+    SOV = { country_event = { id = bolshevik_russia.102 days = 3 } }
+  }
+}
+
+  
+}
+
+
+country_event = { ###they accepted alliance
+id = bolshevik_russia.101
+title = "A New Ally"
+desc = "It would seem that the socialist government we wished to cooperate with has accepted our proposal."
+is_triggered_only = yes
+
+
+option = {
+name = "Splendid."
+SOV = { add_to_faction = FROM }
+}
+
+  
+}
+
+country_event = { ###they declined alliance
+id = bolshevik_russia.102
+title = "Alliance dismissed"
+desc = "It would seem that the socialist government we wished to cooperate with has declined our proposal."
+is_triggered_only = yes
+
+option = {
+  name = "Suit yourselfs"
+  add_political_power = -10
+}
+
+  
 }

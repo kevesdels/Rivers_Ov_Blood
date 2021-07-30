@@ -1,0 +1,124 @@
+SOV_diplomacy = {
+
+
+SOV_seek_alliance_with_dsu = {
+cost = 40
+target_trigger = { FROM = {tag = DSU } }
+  fire_only_once = yes
+   	ai_will_do = {
+			base = 200
+			}
+      visible = {
+        DSU = { 
+          exists = yes  
+          SOCIALIST_ALIGNED_GOVERNMENT = yes  
+          NOT = { is_in_faction_with = SOV }
+        }
+      }
+    available = {
+   has_country_flag = SOV_dip_enable
+   DSU = { NOT = { is_in_faction = yes } }
+  }
+  remove_effect = {
+  DSU = { country_event = { id = bolshevik_russia.100 days = 3 } }
+	}
+
+}
+
+SOV_seek_alliance_with_cbr = {
+cost = 40
+target_trigger = { FROM = {tag = CBR } }
+  fire_only_once = yes
+   	ai_will_do = {
+			base = 200
+			}
+      visible = {
+        CBR = { 
+          exists = yes  
+          SOCIALIST_ALIGNED_GOVERNMENT = yes  
+          NOT = { is_in_faction_with = SOV }
+        }
+      }
+    available = {
+   has_country_flag = SOV_dip_enable
+   CBR = { NOT = { is_in_faction = yes } }
+  }
+  remove_effect = {
+  CBR = { country_event = { id = bolshevik_russia.100 days = 3 } }
+	}
+
+}
+
+SOV_seek_alliance_with_lpr = {
+cost = 40
+  fire_only_once = yes
+   	ai_will_do = {
+			base = 200
+			}
+      visible = {
+        LPR = { 
+          exists = yes  
+          SOCIALIST_ALIGNED_GOVERNMENT = yes  
+          NOT = { is_in_faction_with = SOV }
+        }
+      }
+    available = {
+   has_country_flag = SOV_dip_enable
+   LPR = { NOT = { is_in_faction = yes } }
+  }
+  remove_effect = {
+  LPR = { country_event = { id = bolshevik_russia.100 days = 3 } }
+	}
+
+}
+
+SOV_seek_alliance_with_eca = {
+cost = 40
+target_trigger = { FROM = {tag = ECA } }
+  fire_only_once = yes
+   	ai_will_do = {
+			base = 200
+			}
+      visible = {
+        ECA = { 
+          exists = yes  
+          SOCIALIST_ALIGNED_GOVERNMENT = yes  
+          NOT = { is_in_faction_with = SOV }
+        }
+      }
+    available = {
+   has_country_flag = SOV_dip_enable
+   ECA = { NOT = { is_in_faction = yes } }
+  }
+  remove_effect = {
+  ECA = { country_event = { id = bolshevik_russia.100 days = 3 } }
+	}
+
+}
+
+SOV_seek_alliance_with_pol = {
+cost = 40
+target_trigger = { FROM = {tag = POL } }
+  fire_only_once = yes
+   	ai_will_do = {
+			base = 200
+			}
+      visible = {
+        POL = { 
+          exists = yes  
+          SOCIALIST_ALIGNED_GOVERNMENT = yes  
+          NOT = { is_in_faction_with = SOV }
+        }
+      }
+    available = {
+   has_country_flag = SOV_dip_enable
+   POL = { NOT = { is_in_faction = yes } }
+  }
+  remove_effect = {
+  POL = { country_event = { id = bolshevik_russia.100 days = 3 } }
+	}
+
+}
+
+###end of SOV_diplomacy
+}
