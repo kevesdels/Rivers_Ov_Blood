@@ -160,7 +160,94 @@ music = {
 	}	
 }
 
+###PRussia
 
+
+music = {
+	song = "rob_PRS_1" ## German Patriotic Song -  Wir Sind Des Geyers Schwarzer Haufen  (RARE)
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = PRS }
+		}
+		modifier = {
+			factor = 1
+
+			tag = PRS
+		}
+	}	
+}
+
+music = {
+	song = "rob_PRS_2" ## Die Grenzwacht hielt im Osten 
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = PRS }
+		}
+		modifier = {
+			factor = 1
+
+			tag = PRS
+		}
+	}	
+}
+
+music = {
+	song = "rob_PRS_3" ## Nachts steht Hunger starr in unserm Traum 
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = PRS }
+		}
+		modifier = {
+			factor = 1
+
+			tag = PRS
+		}
+	}	
+}
+
+music = {
+	song = "rob_PRS_4" ## Wir wollen unsern alten Kaiser Wilhelm wiederhaben
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = PRS }
+		}
+		modifier = {
+			factor = 2
+			AND = {
+			tag = PRS
+			has_country_flag = kaiser_controls_everything
+			has_war = yes
+			}
+		}
+	}	
+}
+
+music = {
+	song = "rob_PRS_5" ## Trum, trum, terum tum tum
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = PRS }
+		}
+		modifier = {
+			factor = 2
+			AND = {
+			tag = PRS
+			has_country_flag = kaiser_controls_everything
+			has_war = yes
+			}
+		}
+	}	
+}
 
 ###GERMANY
 
@@ -178,6 +265,105 @@ music = {
 
 			tag = GER
 		}
+	}	
+}
+
+music = {
+	song = "rob_GER_2" ## Solidaritätslied 1932 Ernst Busch
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = GER }
+		}
+		modifier = {
+			factor = 1
+
+			tag = GER
+		}
+	}	
+}
+
+music = {
+	song = "rob_GER_3" ## Ernst Busch  Marseillaise  Jugendstrophe
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = GER }
+		}
+		modifier = {
+			factor = 1
+
+			tag = GER
+		}
+	}	
+}
+
+music = {
+	song = "rob_GER_4" ## Ernst Busch  Einkäufe 1919
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = GER }
+		}
+		modifier = {
+			factor = 1
+
+			tag = GER
+		}
+	}	
+}
+
+music = {
+	song = "rob_GER_5" ## Der offene Aufmarsch
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = GER }
+		}
+		modifier = {
+			factor = 1
+
+			tag = GER
+		}
+	}	
+}
+
+music = {
+	song = "rob_GER_6" ## Fahneneid 
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = GER }
+		}
+		modifier = {
+			factor = 1
+
+			tag = GER
+		}
+	}	
+}
+
+music = {
+	song = "rob_GER_7" ## Unsere Panzerdivision - Erich Weinert Ensemble 
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = GER }
+		}
+		modifier = {
+			factor = 2
+			AND = {
+			tag = GER
+			has_war = yes
+			}
+		}
+
 	}	
 }
 
@@ -385,6 +571,142 @@ music = {
 			tag = IRK
 			tag = WFE
 			}
+		}
+	}	
+}
+
+music = {
+	song = "rob_RDR_3" ##  Маршируют полки Marching Regiments 
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = TOW }
+			NOT = { tag = BWR }
+			NOT = { tag = KRW }
+			NOT = { tag = BRW }
+			NOT = { tag = IRK }
+			NOT = { tag = WFE }
+		}
+		modifier = {
+			factor = 1
+
+			OR = {
+			tag = TOW
+			tag = BWR
+			tag = KRW
+			tag = BRW
+			tag = IRK
+			tag = WFE
+			}
+		}
+	}	
+}
+
+music = {
+	song = "rob_ITA_1" ##  La Leggenda Del Piave
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = ITA }
+		}
+		modifier = {
+			factor = 1
+			tag = ITA
+		}
+	}	
+}
+
+music = {
+	song = "rob_POL_1" ##  Hej, sokoły!
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = POL }
+		}
+		modifier = {
+			factor = 1
+			tag = POL
+		}
+	}	
+}
+
+music = {
+	song = "rob_POL_2" ##  Pieśń Obrońców Częstochowy
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = POL }
+		}
+		modifier = {
+			factor = 2
+			AND = {
+			tag = POL
+			has_war = yes
+			}
+		}
+	}	
+}
+
+music = {
+	song = "rob_POL_3" ## Idźmy, bijmy Moskali!
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = POL }
+		}
+		modifier = {
+			factor = 1
+			tag = POL
+		}
+	}	
+}
+
+music = {
+	song = "rob_POL_4" ## Hej panienki posłuchajcie
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = POL }
+		}
+		modifier = {
+			factor = 1
+			tag = POL
+		}
+	}	
+}
+
+music = {
+	song = "rob_POL_5" ## Pieśń Żołnierska - (January uprising song)
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = POL }
+		}
+		modifier = {
+			factor = 1
+			tag = POL
+		}
+	}	
+}
+
+music = {
+	song = "rob_POL_6" ## Nie masz nad żołnierza
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = POL }
+		}
+		modifier = {
+			factor = 1
+			tag = POL
 		}
 	}	
 }
