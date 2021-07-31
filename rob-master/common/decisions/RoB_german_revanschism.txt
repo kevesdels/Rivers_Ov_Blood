@@ -40,6 +40,18 @@ GER_german_expansion = {
     enemy = AUS 
     hostility_reason = asked_to_join
     }
+
+    ###if that fails
+
+    if = {
+      limit = { NOT = { has_war_with = THR } ACM = { has_war_with = THR } }
+      GER = { declare_war_on = { target = THR  type = annex_everything } }
+       } 
+     if = {
+      limit = { NOT = { has_war_with = THR } ACM = { has_war_with = AUS } }
+      GER = { declare_war_on = { target = AUS  type = annex_everything } }
+       }
+
    }
 
     } 
@@ -193,9 +205,21 @@ GER_german_expansion = {
   RHN = { exists = yes }
  }
  available = {
-  FRA = { has_war = yes }
-  RHN = { exists = yes }
-  has_war = no
+   OR = {
+     AND = {
+      owns_state = 42
+      owns_state = 1089
+      owns_state = 792
+      owns_state = 1090
+      owns_state = 1080
+      owns_state = 788
+      owns_state = 51
+      owns_state = 1088
+     }
+     FRA = { has_war = yes }
+     RHN = { exists = yes }
+     has_war = no
+   }
  }
  
  complete_effect = {
@@ -203,7 +227,15 @@ GER_german_expansion = {
     limit = { is_core_of = RHN }
 	add_core_of = GER
    }
-   GER = { declare_war_on = { target = RHN  type = annex_everything } }
+   if = {
+     limit = {
+      RHN = { 
+        exists = yes 
+        NOT = { is_puppet_of = GER }
+      }
+     }
+     GER = { declare_war_on = { target = RHN  type = annex_everything } }
+   }
  }
 
 }
@@ -290,15 +322,30 @@ GER_german_expansion = {
  }
  fire_only_once = yes
  available = {
-   date > 1939.6.1
-   PRS = { exists = no }
-   RHN = { exists = no }
-   FRA = { exists = yes }
-   has_war = no
+   OR = {
+    AND = {
+     owns_state = 814
+     owns_state = 816
+     owns_state = 28
+    }
+    date > 1939.6.1
+    PRS = { exists = no }
+    RHN = { exists = no }
+    FRA = { exists = yes }
+    has_war = no
+  }
   }
   
   complete_effect = {
-     GER = { declare_war_on = { target = FRA type = annex_everything } }
+    if = {
+      limit = {
+        FRA = { 
+         exists = yes 
+         NOT = { is_puppet_of = GER }
+       }
+      }
+      GER = { declare_war_on = { target = FRA type = annex_everything } }
+    }
      814 = { add_core_of = GER }
 	 816 = { add_core_of = GER }
      28 = { add_core_of = GER }
@@ -311,9 +358,22 @@ GER_german_expansion = {
 	base = 2000
  }
  fire_only_once = yes
+ visible = {
+   OR = {
+    FRA = { exists = yes }
+    FRS = { exists = yes }
+    FRR = { exists = yes }
+    FRL = { exists = yes }
+   }
+ }
  available = {
-   GER = { has_war_with = FRA }
-   has_war = no
+   OR = {
+    GER = { has_war_with = FRA }
+    GER = { has_war_with = FRS }
+    GER = { has_war_with = FRR }
+    GER = { has_war_with = FRL }
+   }
+
   }
   
   complete_effect = {
@@ -396,6 +456,16 @@ GER_german_export_revolution = {
     enemy = AUS 
     hostility_reason = asked_to_join
     }
+
+    ###if that fails for some reason
+    if = {
+      limit = { NOT = { has_war_with = THR } ACM = { has_war_with = THR } }
+      GER = { declare_war_on = { target = THR  type = annex_everything } }
+       } 
+     if = {
+      limit = { NOT = { has_war_with = THR } ACM = { has_war_with = AUS } }
+      GER = { declare_war_on = { target = AUS  type = annex_everything } }
+       }
     } 
   if = {
    limit = { AND = { ACM = { exists = no }  THR = { exists = yes } } }
@@ -550,7 +620,7 @@ GER_german_export_revolution = {
    POL = { exists = yes }
    has_war = no
    NOT = {
-    HUN = { SOCIALIST_ALIGNED_GOVERNMENT = yes }
+    POL = { SOCIALIST_ALIGNED_GOVERNMENT = yes }
    }
    custom_trigger_tooltip	= {
    tooltip = "Hungarians have been dealt with"
@@ -576,7 +646,15 @@ GER_german_export_revolution = {
    NOT = {
     PRS = { SOCIALIST_ALIGNED_GOVERNMENT = yes }
    }
-   GER = { is_neighbor_of = PRS }
+   OR = {
+    GER = { is_neighbor_of = PRS }
+    POL = {
+      AND = {
+        is_neighbor_of = PRS
+        is_puppet_of = GER
+      }
+    }
+   }
     }
   complete_effect = {
   GER = { declare_war_on = { target = PRS  type = annex_everything } }

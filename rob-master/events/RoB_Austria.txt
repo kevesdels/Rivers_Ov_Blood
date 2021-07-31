@@ -425,11 +425,12 @@ country_event = {
 ###Do we give up?
 country_event = {
  id = rob_austria.11
- title = rob_austria.11.t
- desc = rob_austria.11.d
+ title = "Is This the End?"
+ desc = ""
  picture = GFX_report_event_generic_read_write
  fire_only_once = yes
 	trigger = {
+	tag = AUS
 	AUS = {
 	controls_state = 1017
 	num_of_controlled_states < 2
@@ -439,7 +440,7 @@ country_event = {
 
 ###We wont give in
 option = {
-		name = rob_austria.11.a
+		name = "We WONT"
 		ai_chance = { factor = 1}
 		hidden_effect = {
 		add_ideas{
@@ -450,7 +451,7 @@ option = {
 
  ###Further conflict is futile
 option = {
-		name = rob_austria.11.b
+		name = "Just shoot me already"
 		hidden_effect = {
 
 	if = {

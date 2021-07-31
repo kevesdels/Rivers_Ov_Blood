@@ -756,10 +756,7 @@
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { 
-			focus = GER_fighterfocus 
-		}
-		prerequisite = { 
-			focus = GER_bomberfocus 
+			focus = GER_fighterfocus  focus = GER_bomberfocus 
 		}
 		ai_will_do = {
 			factor = 1
