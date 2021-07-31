@@ -336,11 +336,16 @@ RUS_russian_reformation = {
  }
  complete_effect = {
   set_cosmetic_tag = ROM_EMP
+  set_capital = 219
       every_state = {
     limit = { 
 	OR = {
 	is_core_of = FIN 
 	is_core_of = EST
+  is_core_of = ECA
+  is_core_of = FNS
+  is_core_of = ELP
+  is_core_of = ELA
     is_core_of = LIT
     is_core_of = UKR 
     is_core_of = DCU
