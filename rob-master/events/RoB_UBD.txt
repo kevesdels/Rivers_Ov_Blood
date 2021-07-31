@@ -466,8 +466,7 @@ country_event = {
 country_event = { 
  id = ubd.20
  title = "Times Are Changing"
- desc = "With the recent disintegration of the United Baltic Duchy, multiple factions now strive for dominance in the area. Influential spokesmen have suggested that intervention is necessary to ensure our interests in the region. Generals agree, suggesting that this is the perfect opportunity to try out new tactics and gain experience in modern warfare. The question is, how will we act?"
-
+ desc = ubd.20.d 
  is_triggered_only = yes
 
  option = {
@@ -516,7 +515,7 @@ country_event = {
 country_event = { 
  id = ubd.21
  title = "Times Are Changing"
- desc = "With the recent disintegration of the United Baltic Duchy, multiple factions now strive for dominance in the area. Influential spokesmen have suggested that intervention is necessary to ensure our interests in the region. Generals agree, suggesting that this is the perfect opportunity to try out new tactics and gain experience in modern warfare. The question is, how will we act?"
+ desc = ubd.20.d 
 
  is_triggered_only = yes
 
@@ -599,7 +598,7 @@ country_event = {
 country_event = { 
  id = ubd.22
  title = "Times Are Changing"
- desc = "With the recent disintegration of the United Baltic Duchy, multiple factions now strive for dominance in the area. Influential spokesmen have suggested that intervention is necessary to ensure our interests in the region. Generals agree, suggesting that this is the perfect opportunity to try out new tactics and gain experience in modern warfare. The question is, how will we act?"
+ desc = ubd.20.d 
 
  is_triggered_only = yes
 
@@ -700,8 +699,7 @@ country_event = {
 country_event = { 
  id = ubd.23
  title = "Times Are Changing"
- desc = "With the recent disintegration of the United Baltic Duchy, multiple factions now strive for dominance in the area. Influential spokesmen have suggested that intervention is necessary to ensure our interests in the region. Generals agree, suggesting that this is the perfect opportunity to try out new tactics and gain experience in modern warfare. The question is, how will we act?"
-
+ desc = ubd.20.d 
  is_triggered_only = yes
 
  option = {
@@ -740,7 +738,7 @@ country_event = {
 country_event = { 
  id = ubd.24
  title = "Times Are Changing"
- desc = "With the recent disintegration of the United Baltic Duchy, multiple factions now strive for dominance in the area. Influential spokesmen have suggested that intervention is necessary to ensure our interests in the region. Generals agree, suggesting that this is the perfect opportunity to try out new tactics and gain experience in modern warfare. The question is, how will we act?"
+ desc = ubd.20.d 
 
  is_triggered_only = yes
 
@@ -805,7 +803,7 @@ option = {
 country_event = { 
  id = ubd.25
  title = "Times Are Changing"
- desc = "With the recent disintegration of the United Baltic Duchy, multiple factions now strive for dominance in the area. Influential spokesmen have suggested that intervention is necessary to ensure our interests in the region. Generals agree, suggesting that this is the perfect opportunity to try out new tactics and gain experience in modern warfare. The question is, how will we act?"
+ desc = ubd.20.d 
 
  is_triggered_only = yes
 
@@ -1334,6 +1332,8 @@ country_event = {
      NOT = { has_country_flag = ubd_i_am_nigger }
   }
 
+ mean_time_to_happen = { days = 1 }
+ 
 ###estonian option
  option = {
  name = "The Reds can be trusted"
