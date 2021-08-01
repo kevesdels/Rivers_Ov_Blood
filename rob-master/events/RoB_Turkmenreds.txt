@@ -454,12 +454,12 @@ ai_chance = { factor = 100}
 end_puppet = KHV
 declare_war_on = {
     target = KHV
-    type = puppet_wargoal_focus
+    type = annex_everything
 }
 }
 }
 
-###An exile from transcapia
+###An exile from transcapia 
 
 country_event = {
 id = turkmenreds.114
@@ -504,7 +504,7 @@ add_manpower = -25
 
 }
 
-###Transcapia offers alliance
+###Transcapia offers alliance (Omsk)
 
 country_event = {
 id = turkmenreds.115
