@@ -179,8 +179,11 @@ GER_german_expansion = {
   NOT = {
    804 = { is_owned_by = GER }
    796 = { is_owned_by = GER }
-   has_war = yes
   }
+  OR = {
+    has_war = no
+    any_country = { AND = { OR = { owns_state = 804 owns_state = 796 } at_war_with = PRS } }
+      }
   DEN = { exists = yes }
  }
  
@@ -189,7 +192,15 @@ GER_german_expansion = {
     add_state_core = 804
     add_state_core = 796
 	}
-   GER = { declare_war_on = { target = DEN  type = annex_everything } }
+  every_country = {
+    limit = {  OR = { controls_state = 796 controls_state = 804 } NOT = { tag = GER is_puppet_of = GER } }
+    GER = { 
+      create_wargoal = {
+        type = annex_everything		
+        target = PREV
+      }			
+    }
+  }
  }
 
 }
@@ -205,37 +216,28 @@ GER_german_expansion = {
   RHN = { exists = yes }
  }
  available = {
-   OR = {
-     AND = {
-      owns_state = 42
-      owns_state = 1089
-      owns_state = 792
-      owns_state = 1090
-      owns_state = 1080
-      owns_state = 788
-      owns_state = 51
-      owns_state = 1088
-     }
      FRA = { has_war = yes }
      RHN = { exists = yes }
-     has_war = no
+     OR = {
+      has_war = no
+      any_country = { AND = { OR = { owns_state = 1089 owns_state = 1090 } at_war_with = PRS } }
+        }
    }
- }
  
  complete_effect = {
    every_state = {
     limit = { is_core_of = RHN }
 	add_core_of = GER
    }
-   if = {
-     limit = {
-      RHN = { 
-        exists = yes 
-        NOT = { is_puppet_of = GER }
-      }
-     }
-     GER = { declare_war_on = { target = RHN  type = annex_everything } }
-   }
+   every_country = {
+    limit = {  OR = { controls_state = 1089 controls_state = 1088 controls_state = 1090 } NOT = { tag = GER is_puppet_of = GER } }
+    GER = { 
+      create_wargoal = {
+        type = annex_everything		
+        target = PREV
+      }			
+    }
+  }
  }
 
 }
@@ -249,11 +251,22 @@ GER_german_expansion = {
  available = {
   date > 1937.1.1
   POL = { exists = yes }
-  has_war = no
+  OR = {
+    has_war = no
+    any_country = { AND = { OR = { owns_state = 865 owns_state = 86 } at_war_with = PRS } }
+      }
  }
  
  complete_effect = {
-     GER = { declare_war_on = { target = POL type = annex_everything } }
+  every_country = {
+    limit = {  OR = { controls_state = 865 controls_state = 86 controls_state = 801 controls_state = 66 controls_state = 803 controls_state = 67 controls_state = 762 } NOT = { tag = GER is_puppet_of = GER } }
+    GER = { 
+      create_wargoal = {
+        type = annex_everything		
+        target = PREV
+      }			
+    }
+  }
      865 = { add_core_of = GER }
      86 = { add_core_of = GER }
      801 = { add_core_of = GER }
@@ -283,11 +296,22 @@ GER_german_expansion = {
    PRS = { exists = yes }
    }
   }
-  has_war = no
+  OR = {
+    has_war = no
+    any_country = { AND = { OR = { owns_state = 763 } at_war_with = PRS } }
+      }
  }
  
  complete_effect = {
-    GER = { declare_war_on = { target = PRS type = annex_everything } }
+  every_country = {
+    limit = {  OR = { controls_state = 763 controls_state = 85 controls_state = 980 controls_state = 5  } NOT = { tag = GER is_puppet_of = GER } }
+    GER = { 
+      create_wargoal = {
+        type = annex_everything		
+        target = PREV
+      }			
+    }
+  }
     every_state = {
     limit = { is_core_of = PRS }
 	add_core_of = GER
@@ -322,30 +346,29 @@ GER_german_expansion = {
  }
  fire_only_once = yes
  available = {
-   OR = {
-    AND = {
-     owns_state = 814
-     owns_state = 816
-     owns_state = 28
-    }
     date > 1939.6.1
     PRS = { exists = no }
     RHN = { exists = no }
-    FRA = { exists = yes }
-    has_war = no
-  }
+    OR = {
+      FRA = { exists = yes }
+    }
+    OR = {
+      has_war = no
+      any_country = { AND = { OR = {  owns_state = 28 owns_state = 814 owns_state = 816 } at_war_with = PRS } }
+        }
   }
   
   complete_effect = {
-    if = {
-      limit = {
-        FRA = { 
-         exists = yes 
-         NOT = { is_puppet_of = GER }
-       }
+
+      every_country = {
+        limit = {  OR = { controls_state = 814 controls_state = 816 controls_state = 28 controls_state = 5  } NOT = { tag = GER is_puppet_of = GER } }
+        GER = { 
+          create_wargoal = {
+            type = annex_everything		
+            target = PREV
+          }			
+        }
       }
-      GER = { declare_war_on = { target = FRA type = annex_everything } }
-    }
      814 = { add_core_of = GER }
 	 816 = { add_core_of = GER }
      28 = { add_core_of = GER }
@@ -414,7 +437,6 @@ GER_german_expansion = {
 
 }
 }
-
 GER_german_export_revolution = {
 
  GER_aus_cw = {
@@ -673,7 +695,15 @@ GER_german_export_revolution = {
    NOT = {
     LIT = { SOCIALIST_ALIGNED_GOVERNMENT = yes }
    }
-   GER = { is_neighbor_of = LIT }
+   OR = {
+    GER = { is_neighbor_of = LIT }
+    POL = {
+      AND = {
+        is_neighbor_of = PRS
+        is_puppet_of = GER
+      }
+    }
+   }
     }
   complete_effect = {
   GER = { declare_war_on = { target = LIT  type = annex_everything } }

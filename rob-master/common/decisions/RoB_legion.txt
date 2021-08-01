@@ -2058,6 +2058,7 @@ LES_destroy_IRK = {
 
 LES_core_mon = {
   visible = {
+    tag = LES
   NOT = {
   has_country_flag = LES_cmf_mon
   }
@@ -2090,6 +2091,7 @@ LES_core_mon = {
  }
 
  LES_cm_mon = {
+  allowed = { tag = LES }   
           available = {  ###Missson ends
               NOT = {
                  controls_state = 564
@@ -2178,9 +2180,8 @@ LES_core_jsw = {
  }
 
  LES_cm_jsw = {
-  visible = {
-    tag = LES
-    }
+
+    allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 988
@@ -2259,9 +2260,7 @@ LES_core_job = {
  }
 
  LES_cm_job = {
-  visible = {
-    tag = LES
-    }
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 1199
@@ -2340,9 +2339,7 @@ LES_core_ugc = {
  }
 
  LES_cm_ugc = {
-  visible = {
-    tag = LES
-    }
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 516
@@ -2411,9 +2408,7 @@ LES_core_oms = {
  }
 
 LES_cm_oms = {
-          visible = {
-          tag = LES
-          }
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 403
@@ -2478,9 +2473,7 @@ LES_core_irk = {
  }
 
  LES_cm_irk = {
-  visible = {
-    tag = LES
-    }
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 566
@@ -2591,9 +2584,7 @@ LES_core_fer = {
  }
 
  LES_cm_fer = {
-  visible = {
-    tag = LES
-    }
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 1187
@@ -2717,9 +2708,7 @@ LES_core_tow = {
  }
 
  LES_cm_tow = {
-  visible = {
-    tag = LES
-    }
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 40
@@ -2820,9 +2809,7 @@ LES_core_sfs = {
  }
 
  LES_cm_sfs = {
-  visible = {
-    tag = LES
-    }
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 1223
@@ -2929,9 +2916,7 @@ LES_core_rdr = {
  }
 
  LES_cm_rdr = {
-  visible = {
-    tag = LES
-    }
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 262
@@ -3097,9 +3082,7 @@ LES_core_sov = {
  }
 
  LES_cm_sov = {
-  visible = {
-    tag = LES
-    }
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 214
@@ -3266,6 +3249,7 @@ LES_core_rus = {
  }
 
  LES_cm_rus = {
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 244 
@@ -3362,6 +3346,7 @@ LES_core_fns = {
  }
 
  LES_cm_fns = {
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 213
@@ -3464,6 +3449,7 @@ LES_core_cau = {
  }
 
  LES_cm_cau = {
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 217
@@ -3547,6 +3533,7 @@ LES_core_crm = {
  }
 
  LES_cm_crm = {
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 137
@@ -5326,9 +5313,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_ukr = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 93
@@ -5452,9 +5437,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_bela = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 94
@@ -5585,9 +5568,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_pol = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 10
@@ -5684,9 +5665,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_slo = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 70
@@ -5767,9 +5746,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_cze = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 9
@@ -5866,9 +5843,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_bul = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 48
@@ -5974,9 +5949,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_rom = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 46
@@ -6105,9 +6078,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_ser = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 45
@@ -6209,9 +6180,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_bos = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 104
@@ -6292,9 +6261,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_cro = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 109
@@ -6366,9 +6333,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_slv = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 834
@@ -6449,9 +6414,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_dal = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 102
@@ -6542,9 +6505,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_scl = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 184
@@ -6631,9 +6592,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_sor = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 62
@@ -6727,9 +6686,7 @@ LES_easterneurope_integration = {
    }
   
   LES_cm_hun = {
-            visible = {
-            tag = LES
-            }
+    allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 44
@@ -6810,9 +6767,7 @@ LES_easterneurope_integration = {
    }
    }
     LES_cm_prs = {
-            visible = {
-            tag = LES
-            }
+      allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 5
@@ -6885,9 +6840,7 @@ LES_easterneurope_integration = {
    }
    }
     LES_cm_lit = {
-            visible = {
-            tag = LES
-            }
+      allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 11
@@ -6976,9 +6929,7 @@ LES_easterneurope_integration = {
    }
    }
     LES_cm_ubd = {
-            visible = {
-            tag = LES
-            }
+      allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 12
@@ -7086,9 +7037,7 @@ LES_easterneurope_integration = {
    }
    }
     LES_cm_fin = {
-            visible = {
-            tag = LES
-            }
+  allowed = { tag = LES }  
             available = {  ###Missson ends
                 NOT = {
                    controls_state = 111
@@ -7375,9 +7324,7 @@ LES_caucasus = {
          }
          }
           LES_cm_cau_mountains= {
-                  visible = {
-                  tag = LES
-                  }
+            allowed = { tag = LES }  
                   available = {  ###Missson ends
                       NOT = {
                          controls_state = 233
@@ -7443,9 +7390,7 @@ LES_caucasus = {
          }
          }
           LES_cm_cau_geo = {
-                  visible = {
-                  tag = LES
-                  }
+            allowed = { tag = LES }  
                   available = {  ###Missson ends
                       NOT = {
                          controls_state = 231
@@ -7502,9 +7447,7 @@ LES_caucasus = {
          }
          }
           LES_cm_cau_azr = {
-                  visible = {
-                  tag = LES
-                  }
+            allowed = { tag = LES }  
                   available = {  ###Missson ends
                       NOT = {
                          controls_state = 229
@@ -7846,6 +7789,7 @@ LES_core_kaz = {
  }
 
  LES_cm_kaz = {
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 588
@@ -7948,9 +7892,7 @@ clr_country_flag = LES_cmf_kaz
              }
              }
               LES_cm_ca_kyr = {
-                      visible = {
-                      tag = LES
-                      }
+                allowed = { tag = LES }  
                       available = {  ###Missson ends
                           NOT = {
                              controls_state = 732
@@ -8012,9 +7954,7 @@ clr_country_flag = LES_cmf_kaz
              }
              }
               LES_cm_ca_UZB = {
-                      visible = {
-                      tag = LES
-                      }
+                allowed = { tag = LES }  
                       available = {  ###Missson ends
                           NOT = {
                              controls_state = 1177
@@ -8071,9 +8011,7 @@ clr_country_flag = LES_cmf_kaz
              }
              }
               LES_cm_ca_khv = {
-                      visible = {
-                      tag = LES
-                      }
+                allowed = { tag = LES }  
                       available = {  ###Missson ends
                           NOT = {
                              controls_state = 1176
@@ -8143,9 +8081,7 @@ clr_country_flag = LES_cmf_kaz
              }
              }
               LES_cm_ca_tms = {
-                      visible = {
-                      tag = LES
-                      }
+                allowed = { tag = LES }  
                       available = {  ###Missson ends
                           NOT = {
                              controls_state = 1175
@@ -8328,9 +8264,7 @@ LES_core_jvd = {
  }
 
  LES_cm_jvd = {
-  visible = {
-    tag = LES
-    }
+  allowed = { tag = LES }  
           available = {  ###Missson ends
               NOT = {
                  controls_state = 408

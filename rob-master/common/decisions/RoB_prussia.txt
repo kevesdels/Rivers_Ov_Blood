@@ -176,7 +176,11 @@ PRS_german_expansion = {
   base = 200
  }
  available = {
-  has_war = no
+   OR = {
+    has_war = no
+    any_country = { AND = { OR = { owns_state = 790 owns_state = 50 } at_war_with = PRS }  NOT = { tag = GER } }
+      }
+      
   NOT = {
   28 = { is_owned_by = PRS }
   }
@@ -205,7 +209,10 @@ PRS_german_expansion = {
   base = 200
  }
  available = {
-  has_war = no
+  OR = {
+    has_war = no
+    any_country = { AND = { owns_state = 1089  at_war_with = PRS }  NOT = { tag = GER } }
+      }
   796 = { is_owned_by = PRS }
   804 = { is_owned_by = PRS }
   NOT = {
@@ -234,7 +241,10 @@ PRS_german_expansion = {
   base = 200
  }
  available = {
-  has_war = no
+  OR = {
+    has_war = no
+    any_country = { AND = { OR = { owns_state = 796 } at_war_with = PRS }  NOT = { tag = GER } }
+      }
   NOT = {
   796 = { is_owned_by = PRS }
   804 = { is_owned_by = PRS }
@@ -263,7 +273,10 @@ PRS_german_expansion = {
   base = 200
  }
  available = {
-  has_war = no
+  OR = {
+    has_war = no
+    any_country = { AND = { OR = { owns_state = 8 } at_war_with = PRS }  NOT = { tag = GER } }
+      }
   NOT = {
   8 = { is_owned_by = PRS }
   }
@@ -291,7 +304,10 @@ PRS_german_expansion = {
   base = 200
  }
  available = {
-  has_war = no
+  OR = {
+    has_war = no
+    any_country = { AND = { OR = { owns_state = 812 } at_war_with = PRS }  NOT = { tag = GER } }
+      }
   NOT = {
   813 = { is_owned_by = PRS }
   812 = { is_owned_by = PRS }
@@ -453,8 +469,11 @@ PRS_retake_belarus = {
  has_cosmetic_tag = PRS_BAL
  NOT = {
   96 = { is_owned_by = PRS } 
-  has_war = yes  
  }
+ OR = {
+  has_war = no
+  any_country = { AND = { OR = { owns_state = 96 } at_war_with = PRS } }
+    }
  }
  
  complete_effect = {
@@ -483,8 +502,11 @@ PRS_retake_western_belarus = {
  NOT = {
   95 = { is_owned_by = PRS } 
   933 = { is_owned_by = PRS }
-  has_war = yes  
  }
+ OR = {
+  has_war = no
+  any_country = { AND = { OR = { owns_state = 95 owns_state = 933 } at_war_with = PRS }  NOT = { tag = GER } }
+    }
  }
   complete_effect = {
  95 = { add_core_of = PRS }
@@ -512,8 +534,11 @@ PRS_retake_polish_lands = {
  has_cosmetic_tag = PRS_BAL
  NOT = {
   97 = { is_owned_by = PRS } 
-  has_war = yes  
  }
+ OR = {
+  has_war = no
+  any_country = { AND = { OR = { owns_state = 97 } at_war_with = PRS }  NOT = { tag = GER } }
+    }
  }
   complete_effect = {
  97 = { add_core_of = PRS }
