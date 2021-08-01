@@ -1088,7 +1088,7 @@ LES_russian_expansion= {
   is_neighbor_of = SOV
   NOT = {
    is_in_faction_with = SOV
-   is_puppet_of = LES
+   SOV = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1127,7 +1127,7 @@ LES_russian_expansion= {
   is_neighbor_of = RUS 
     NOT = {
    is_in_faction_with = RUS
-   is_puppet_of = LES
+   RUS = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1164,7 +1164,7 @@ LES_russian_expansion= {
   is_neighbor_of = RDR 
     NOT = {
    is_in_faction_with = RDR
-   is_puppet_of = LES
+   RDR = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1200,7 +1200,7 @@ LES_destroy_TOW = {
   is_neighbor_of = TOW
     NOT = {
    is_in_faction_with = TOW
-   is_puppet_of = LES
+   TOW = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1248,7 +1248,7 @@ LES_destroy_OMS = {
   is_neighbor_of = OMS
     NOT = {
    is_in_faction_with = OMS
-   is_puppet_of = LES
+   OMS = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1298,7 +1298,7 @@ LES_destroy_BWR = {
   is_neighbor_of = BWR
     NOT = {
    is_in_faction_with = BWR
-   is_puppet_of = LES
+   BWR = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1346,7 +1346,7 @@ LES_destroy_CAU = {
   is_neighbor_of = CAU
     NOT = {
    is_in_faction_with = CAU
-   is_puppet_of = LES
+   CAU = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1394,7 +1394,7 @@ LES_destroy_CAA = {
   is_neighbor_of = CAA
     NOT = {
    is_in_faction_with = CAA
-   is_puppet_of = LES
+   CAA = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1442,7 +1442,7 @@ LES_destroy_CRM = {
   is_neighbor_of = CRM
     NOT = {
    is_in_faction_with = CRM
-   is_puppet_of = LES
+   CRM = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1490,7 +1490,7 @@ LES_destroy_FER = {
   is_neighbor_of = FER
     NOT = {
    is_in_faction_with = FER
-   is_puppet_of = LES
+   FER = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1538,7 +1538,7 @@ LES_destroy_WFE = {
   is_neighbor_of = WFE
     NOT = {
    is_in_faction_with = WFE
-   is_puppet_of = LES
+   WFE = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1587,7 +1587,7 @@ LES_destroy_WFE = {
   is_neighbor_of = JSW
     NOT = {
    is_in_faction_with = JSW
-   is_puppet_of = LES
+   JSW = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1636,7 +1636,7 @@ LES_destroy_WFE = {
   is_neighbor_of = JOB
     NOT = {
    is_in_faction_with = JOB
-   is_puppet_of = LES
+   JOB = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1684,7 +1684,7 @@ LES_destroy_WFE = {
   is_neighbor_of = KRW
     NOT = {
    is_in_faction_with = KRW
-   is_puppet_of = LES
+   KRW = { is_puppet_of = LRS }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1732,7 +1732,7 @@ LES_destroy_WFE = {
   is_neighbor_of = BRW
     NOT = {
    is_in_faction_with = BRW
-   is_puppet_of = LES
+   BRW = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1781,7 +1781,7 @@ LES_destroy_WFE = {
   is_neighbor_of = UGC
     NOT = {
    is_in_faction_with = UGC
-   is_puppet_of = LES
+   UGC = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1829,7 +1829,7 @@ LES_destroy_WFE = {
   is_neighbor_of = MON
     NOT = {
    is_in_faction_with = MON
-   is_puppet_of = LES
+   MON = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1883,7 +1883,7 @@ LES_destroy_IRK = {
   is_neighbor_of = IRK
     NOT = {
    is_in_faction_with = IRK
-   is_puppet_of = LES
+   IRK = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1931,7 +1931,7 @@ LES_destroy_IRK = {
   is_neighbor_of = SFS
     NOT = {
    is_in_faction_with = SFS
-   is_puppet_of = LES
+   SFS = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -1980,7 +1980,7 @@ LES_destroy_IRK = {
   is_neighbor_of = FNS
     NOT = {
    is_in_faction_with = FNS
-   is_puppet_of = LES
+   FNS = { is_puppet_of = LES }
    has_country_flag = LES_justifying
   }
   has_war = no
@@ -2063,7 +2063,6 @@ LES_core_mon = {
   has_country_flag = LES_cmf_mon
   }
   OR = {
-  LES = { owns_state = 564 }
   LES = { owns_state = 1227 }
   LES = { owns_state = 1198 }
   LES = { owns_state = 1220 }
@@ -2071,7 +2070,6 @@ LES_core_mon = {
   }
  }
  available = {
-  LES = { owns_state = 564 }
   LES = { owns_state = 1227 }
   LES = { owns_state = 1198 }
   LES = { owns_state = 1220 }
@@ -2094,7 +2092,6 @@ LES_core_mon = {
   allowed = { tag = LES }   
           available = {  ###Missson ends
               NOT = {
-                 controls_state = 564
                  controls_state = 1227
                  controls_state = 1198
                  controls_state = 1220
@@ -2104,7 +2101,6 @@ LES_core_mon = {
           activation = { ### misson starts
               LES = {
                 has_country_flag = LES_cmf_mon
-                controls_state = 564
                 controls_state = 1227
                 controls_state = 1198
                 controls_state = 1220
@@ -2114,10 +2110,6 @@ LES_core_mon = {
            is_good = yes
            days_mission_timeout = 90 ###days to core
 timeout_effect = { ### cores states
-  564 = {
-    add_core_of = LES
-    remove_core_of = MON
-  }
   1227 = {
     add_core_of = LES
     remove_core_of = MON
@@ -3824,7 +3816,7 @@ LES_easterneurope = {
     is_neighbor_of = UKR
       NOT = {
      is_in_faction_with = UKR
-     is_puppet_of = LES
+     UKR = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -3918,7 +3910,7 @@ LES_easterneurope = {
     is_neighbor_of = CBR
       NOT = {
      is_in_faction_with = CBR
-     is_puppet_of = LES
+     CBR = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -3965,7 +3957,7 @@ LES_easterneurope = {
     is_neighbor_of = DBR
       NOT = {
      is_in_faction_with = DBR
-     is_puppet_of = LES
+     DBR = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4012,7 +4004,7 @@ LES_easterneurope = {
     is_neighbor_of = DSU
       NOT = {
      is_in_faction_with = DSU
-     is_puppet_of = LES
+     DSU = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4060,7 +4052,7 @@ LES_easterneurope = {
       NOT = {
         OR = {
      is_in_faction_with = POL
-     is_puppet_of = LES
+     POL = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
         }
     }
@@ -4108,7 +4100,7 @@ LES_easterneurope = {
     is_neighbor_of = CZE
       NOT = {
      is_in_faction_with = CZE
-     is_puppet_of = LES
+     CZE = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4155,7 +4147,7 @@ LES_easterneurope = {
     is_neighbor_of = SLO
       NOT = {
      is_in_faction_with = SLO
-     is_puppet_of = LES
+     SLO = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4202,7 +4194,7 @@ LES_easterneurope = {
     is_neighbor_of = SLV
       NOT = {
      is_in_faction_with = SLV
-     is_puppet_of = LES
+     SLV = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4249,7 +4241,7 @@ LES_easterneurope = {
     is_neighbor_of = HUN
       NOT = {
      is_in_faction_with = HUN
-     is_puppet_of = LES
+     HUN = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4296,7 +4288,7 @@ LES_easterneurope = {
     is_neighbor_of = ROM
       NOT = {
      is_in_faction_with = ROM
-     is_puppet_of = LES
+     ROM = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4343,7 +4335,7 @@ LES_easterneurope = {
     is_neighbor_of = BUL
       NOT = {
      is_in_faction_with = BUL
-     is_puppet_of = LES
+     BUL = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4391,7 +4383,7 @@ LES_easterneurope = {
     is_neighbor_of = SER
       NOT = {
      is_in_faction_with = SER
-     is_puppet_of = LES
+     SER = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4438,7 +4430,7 @@ LES_easterneurope = {
     is_neighbor_of = CRO
       NOT = {
      is_in_faction_with = CRO
-     is_puppet_of = LES
+     CRO = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4485,7 +4477,7 @@ LES_easterneurope = {
     is_neighbor_of = BOS
       NOT = {
      is_in_faction_with = BOS
-     is_puppet_of = LES
+     BOS = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4532,7 +4524,7 @@ LES_easterneurope = {
     is_neighbor_of = UKR
       NOT = {
      is_in_faction_with = UKR
-     is_puppet_of = LES
+     UKR = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4580,7 +4572,7 @@ LES_easterneurope = {
       NOT = {
         OR = {
      is_in_faction_with = EST
-     is_puppet_of = LES
+     EST = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
       }
     }
@@ -4628,7 +4620,7 @@ LES_easterneurope = {
     is_neighbor_of = ECA
       NOT = {
      is_in_faction_with = ECA
-     is_puppet_of = LES
+     ECA = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4675,7 +4667,7 @@ LES_easterneurope = {
     is_neighbor_of = ELA
       NOT = {
      is_in_faction_with = ELA
-     is_puppet_of = LES
+     ELA = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4722,7 +4714,7 @@ LES_easterneurope = {
     is_neighbor_of = ELP
       NOT = {
      is_in_faction_with = ELP
-     is_puppet_of = LES
+     ELP = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4769,7 +4761,7 @@ LES_easterneurope = {
     is_neighbor_of = LAT
       NOT = {
      is_in_faction_with = LAT
-     is_puppet_of = LES
+     LAT = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4816,7 +4808,7 @@ LES_easterneurope = {
     is_neighbor_of = LPR
       NOT = {
      is_in_faction_with = LPR
-     is_puppet_of = LES
+     LPR = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4863,7 +4855,7 @@ LES_easterneurope = {
     is_neighbor_of = LDF
       NOT = {
      is_in_faction_with = LDF
-     is_puppet_of = LES
+     LDF = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4910,7 +4902,7 @@ LES_easterneurope = {
     is_neighbor_of = LNC
       NOT = {
      is_in_faction_with = LNC
-     is_puppet_of = LES
+     LNC = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -4957,7 +4949,7 @@ LES_easterneurope = {
     is_neighbor_of = LIT
       NOT = {
      is_in_faction_with = LIT
-     is_puppet_of = LES
+     LIT = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -5007,7 +4999,7 @@ LES_easterneurope = {
    available = {
       NOT = {
      is_in_faction_with = ITA
-     is_puppet_of = LES
+     ITA = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -5053,7 +5045,7 @@ LES_easterneurope = {
    available = {
       NOT = {
      is_in_faction_with = PRS
-     is_puppet_of = LES
+     PRS = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -5098,7 +5090,7 @@ LES_easterneurope = {
    available = {
       NOT = {
      is_in_faction_with = GER
-     is_puppet_of = LES
+     GER = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
@@ -5144,7 +5136,7 @@ LES_easterneurope = {
      available = {
         NOT = {
        is_in_faction_with = GRE
-       is_puppet_of = LES
+       GRE = { is_puppet_of = LES }
        has_country_flag = LES_ee_justifying
       }
       has_war = no
@@ -5192,7 +5184,7 @@ LES_easterneurope = {
     is_neighbor_of = FIN
       NOT = {
      is_in_faction_with = FIN
-     is_puppet_of = LES
+     FIN = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
     has_war = no
