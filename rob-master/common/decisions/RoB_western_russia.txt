@@ -63,6 +63,7 @@ RUS_expansion_question = {
     MRP = { exists = no }
    }
   }
+}
  remove_effect = {
    create_wargoal = { type = annex_everything target = RUS }
    every_state = {
@@ -74,7 +75,6 @@ RUS_expansion_question = {
 			base = 200
 			}
  }
-}
 }
 
 RUS_southern_initiative = {
