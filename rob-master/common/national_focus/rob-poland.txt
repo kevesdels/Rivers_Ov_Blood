@@ -1297,7 +1297,10 @@ focus_tree = {
  	 	}
 		prerequisite = { focus = POL_support_the_castle  }
 		completion_reward = {
-
+			add_popularity = { ideology = socialist  popularity = -0.08 }
+			add_popularity = { ideology = reactionary   popularity = -0.08 }
+			add_popularity = { ideology = pelekist   popularity = -0.03 }
+			add_popularity = { ideology = national_socialist    popularity = -0.03 }
 		}
 	}
 

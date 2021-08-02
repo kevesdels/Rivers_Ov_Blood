@@ -71,6 +71,9 @@ country_event = {
   
   option = { ###join
    name = "Agree"
+   trigger = {
+    is_puppet = no
+   }
    ai_chance = {
     base = 5
     modifier = {
@@ -299,6 +302,9 @@ country_event = {
   
   option = {  ###dont
    name = "Refuse"
+   trigger = {
+    is_puppet = no
+   }
      ai_chance = {
     base  = 7
 
@@ -328,6 +334,15 @@ country_event = {
    }
    hidden_effect = { POL = { country_event = { id = rob_poland.17 days = 3 } } }
   }
+
+  option = {  ###dont
+  name = "But we don't have say in this?"
+  trigger = {
+   is_puppet = yes
+  }
+  add_political_power = 10
+}
+
  }
 
 
@@ -437,6 +452,9 @@ country_event = {
   
   option = { ###yeye
    name = "Fine"
+   trigger = {
+    is_puppet = no
+   }
     ai_chance = {
     base = 5
     modifier = {
@@ -531,6 +549,9 @@ country_event = {
   
   option = {  ###fuck off polak
    name = "No way"
+   trigger = {
+    is_puppet = no
+   }
     ai_chance = {
     base = 9
 
@@ -563,6 +584,14 @@ country_event = {
      POL = { country_event = { id = rob_poland.15 days =  3 } }
    }
   }
+
+  option = {  ###dont
+  name = "But we don't have say in this?"
+  trigger = {
+   is_puppet = yes
+  }
+  add_political_power = 10
+}
  }
 
  ###Prussia: demand danzig

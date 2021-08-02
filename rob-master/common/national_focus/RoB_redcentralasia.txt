@@ -7,6 +7,7 @@ focus_tree = {
 			tag = TRS
 		}
 	}
+	continuous_focus_position = { x = 50 y = 2300 }
 	#Focus for Refresh our Command
 	focus = {
 		id = TRS_refreshourcommand
@@ -184,7 +185,7 @@ add_stability = 0.1
 			factor = 10
 		}
 		completion_reward = {
-		set_state_owner = 1183
+		transfer_state = 1183
 		TMS = { country_event = {
     id = turkmenreds.126
 }
@@ -283,7 +284,7 @@ add_stability = 0.1
 			factor = 10
 		}
 		completion_reward = {
-		set_state_owner = 1184
+		transfer_state = 1184
 		TMS = { country_event = {
     id = turkmenreds.127
 }
@@ -310,7 +311,7 @@ add_stability = 0.1
 			factor = 10
 		}
 		completion_reward = {
-		set_state_owner = 1182
+		transfer_state = 1182
 		TMS = { country_event = {
     id = turkmenreds.125
 }

@@ -1144,23 +1144,15 @@ country_event = {
    option = {
    name = "Welcome!"
    if = {
-    limit = { ACM ={ exists = yes } }
-    annex_country = { target = ACM transfer_troops = yes }
+    limit = { FROM ={ exists = yes } }
+    annex_country = { target = FROM transfer_troops = yes }
     every_state = {
-    limit = { is_core_of = ACM }
+    limit = { is_core_of = FROM }
 	add_core_of = GER
 }
-   else = {
-   annex_country = { target = AUS transfer_troops = yes }
-    every_state = {
-    limit = { is_core_of = AUS }
-	add_core_of = GER
-}
-   
    }
    }
  
-  }
  }
  
  ###Austrians refuse
