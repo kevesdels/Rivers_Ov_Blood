@@ -2136,6 +2136,27 @@ country_event = {
 	 }
 }
 
+### Refugees from legion STATE (banish mechanic)
+country_event = { 
+	id = legion.66
+	title = legion.66.t
+	desc = legion.66.d
+	is_triggered_only = yes
+	
+
+	###Gadjagrad
+	option = {
+		name = ""
+	  
+		   }
+
+	###Petrograd
+	option = {
+	 name = ""
+
+	 	}
+}
+
  ###temp event for debugging
  country_event = { 
 	id = legion.100

@@ -1448,6 +1448,16 @@ country_event = {
       } 
       HUN = { drop_cosmetic_tag = yes }
   }
+  hidden_effect = {
+    if = {
+      limit = {
+        has_idea = occupied_country
+      }
+      remove_ideas = {
+        occupied_country
+      }
+    }
+  }
  }
  
  option = {
@@ -1506,6 +1516,16 @@ country_event = {
         }
       } 
       CRO = { drop_cosmetic_tag = yes }
+  }
+  hidden_effect = {
+    if = {
+      limit = {
+        has_idea = crotian_economic_pact
+      }
+      remove_ideas = {
+        crotian_economic_pact
+      }
+    }
   }
  }
  
@@ -1568,6 +1588,16 @@ country_event = {
       } 
       BOS = { drop_cosmetic_tag = yes }
   }  
+  hidden_effect = {
+    if = {
+      limit = {
+        has_idea = bosnian_uprising
+      }
+      remove_ideas = {
+        bosnian_uprising
+      }
+    }
+  }
  }
  
  option = {

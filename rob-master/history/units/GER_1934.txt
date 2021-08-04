@@ -126,7 +126,7 @@ units = {
 		location = 6521
 		division_template = "Rotkorps-Division"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.6
+		start_equipment_factor = 0.3
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}
 	division= {	
@@ -148,7 +148,7 @@ units = {
 		location = 6488
 		division_template = "Rotkorps-Division"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.3
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}
 
@@ -160,7 +160,7 @@ units = {
 		location = 11505
 		division_template = "Rotkorps-Division"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.6
+		start_equipment_factor = 0.4
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}
 
@@ -182,37 +182,6 @@ units = {
 				name_order = 14
 		}
 		location = 514
-		division_template = "Infanterie-Division"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-	}
-	division= {	
-		division_name = {
-				is_name_ordered = yes
-				name_order = 24
-		}
-		location = 514
-		division_template = "Infanterie-Division"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.4
-	}
-	# VIII. Armeekorps
-	division= {	
-		division_name = {
-				is_name_ordered = yes
-				name_order = 8
-		}
-		location = 9496
-		division_template = "Infanterie-Division"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.6
-	}
-	division= {	
-		division_name = {
-				is_name_ordered = yes
-				name_order = 18
-		}
-		location = 9496
 		division_template = "Infanterie-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
@@ -324,16 +293,7 @@ units = {
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
-	division= {	
-		division_name = {
-				is_name_ordered = yes
-				name_order = 17
-		}
-		location = 586
-		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-	}			
+
 	division= {	
 		name = "Gebirgs-Brigade" 
 		location = 692
@@ -345,57 +305,6 @@ units = {
 
 ### Air oob
 air_wings = {
-	### I. Luftkreiskommando -- Konigsberg ###
-
-
-	### II. Luftkreiskommando -- Berlin ###
-	794 = { 
-		# Jagdgeschwader 132 'Richtofen'		
-		fighter_equipment_0 =  {		# Ar 68
-			owner = "GER" 
-			amount = 80
-		}
-		name = "Jagdgeschwader 132"
-		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
-			modifier="fighter_genius"
-			name="Erich"
-			surname="Hartmann"
-			callsign="Bubi"
-			portrait=1 # Pick random index here, or make special GFX_GER_ace_Erich_Hartmann to override.
-		}
-		# Kampfgeschwader 153		
-		tac_bomber_equipment_0 = {		# Do 23
-			owner = "GER" 
-			amount = 80
-		}
-		tac_bomber_equipment_0 = {		# Ju 86
-			owner = "GER" 
-			amount = 40
-			version_name = "Ju 86"
-		}
-		name = "Kampfgeschwader 153"
-		# TODO: REMOVE THIS LATER ???
-		transport_plane_equipment_1 = {
-			owner = "GER" 
-			amount = 4
-		}
-	}
-
-	### III. Luftkreiskommando -- Breslau ###
-	66 = { 
-		# Kampfgeschwader 253 'General Wever'		
-		tac_bomber_equipment_0 = {		# He 45 or Do 23 ?
-			owner = "GER" 
-			amount = 120
-		}
-		name = "Kampfgeschwader 253"
-		# Sturzkampfgeschwader 162		
-		CAS_equipment_1 =  {			# Hs 123
-			owner = "GER" 
-			amount = 80
-		}
-		name = "Sturzkampfgeschwader 162"	
-	}
 
 	### IV. Luftkreiskommando -- Kassel ###
 	57 = { 
@@ -485,16 +394,6 @@ instant_effect = {
 
 	add_equipment_production = {
 		equipment = {
-			type = light_tank_equipment_2
-			creator = "GER" 
-		}
-		requested_factories = 2
-		progress = 0.4
-		efficiency = 50
-	}
-
-	add_equipment_production = {
-		equipment = {
 			type = motorized_equipment_1
 			creator = "GER" 
 		}
@@ -508,28 +407,8 @@ instant_effect = {
 			type = fighter_equipment_1
 			creator = "GER" 
 		}
-		requested_factories = 1
+		requested_factories = 3
 		progress = 0.15
-		efficiency = 50
-	}
-
-	add_equipment_production = {
-		equipment = {
-			type = CAS_equipment_1
-			creator = "GER" 
-		}
-		requested_factories = 1
-		progress = 0.2
-		efficiency = 50
-	}
-
-	add_equipment_production = {
-		equipment = {
-			type = tac_bomber_equipment_1
-			creator = "GER" 
-		}
-		requested_factories = 1
-		progress = 0.1
 		efficiency = 50
 	}
 }

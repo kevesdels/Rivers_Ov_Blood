@@ -108,6 +108,21 @@ take_states = {
 		}
 
 	}
+	###puppet
+	modifier = {
+		factor = 0
+		is_puppet = yes
+		NOT = { 
+			FROM = { 
+				OR = {
+					is_claimed_by = ROOT
+					is_core_of = ROOT
+				}
+			} 
+		}
+
+	}
+	#german 
 	modifier = {
 		factor = 0
 		tag = GER

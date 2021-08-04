@@ -134,3 +134,88 @@ country_event = {
     add_political_power = -10
     }
   }
+
+
+  ###Send peace to USA
+country_event = {
+  id = peaceevent.3
+  title = "The Polish Capitulation"
+  desc = "The Mighty Poland has been defeated and so, the Americans should no longer bother supporting them."
+  fire_only_once = yes
+  trigger = {
+    at_war_with = USA
+    at_war_with = POL
+    POL = { has_capitulated = yes has_defensive_war = yes }
+    ROOT = { surrender_progress < 0.2 }
+  }
+  mean_time_to_happen = { days = 1 }
+  
+  ###BACK OUT
+  option = {
+    name = "Send Peace Offer"
+    USA = { country_event = { id = peaceevent.4 days = 3 } }
+    }
+
+  ###Continue
+  option = {
+    ai_chance = { factor = 0 }
+    name = "The Fight Will Continue"
+  add_stability = -0.10
+  add_war_support = -0.10
+  add_political_power = -200
+    }
+  }
+
+###Send peace to japan
+country_event = {
+  id = peaceevent.4
+  title = "Polands Defeat"
+  desc = "With fall of our ally in eastern europe, we now face the question of how shall we continue the war efforts?"
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  mean_time_to_happen = { days = 1 }
+  
+  ###BACK OUT
+  option = {
+    name = "The War is Lost"
+    FROM = { country_event = { id = peaceevent.5 days = 3 } }
+    }
+
+  ###Continue
+  option = {
+    ai_chance = { factor = 0 }
+    name = "Continue!"
+    set_country_flag = usa_continue_fight
+    FROM = { country_event = { id = peaceevent.5 days = 3 } }
+    }
+  }
+
+###Send peace to japan
+country_event = {
+  id = peaceevent.5
+  title = "The American Response"
+  desc = "...so, which is it? Did they backdown?"
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  mean_time_to_happen = { days = 1 }
+  
+  ###Japs want peace
+  option = {
+    name = "Thank God"
+    trigger = {
+      NOT = { USA = { has_country_flag = usa_continue_fight } }
+    }
+      white_peace = USA
+  }
+
+  ###Japs hate peace
+  option = {
+    name = "...no way"
+    trigger = {
+      JAP = { has_country_flag = usa_continue_fight }
+    }
+    add_political_power = -10
+    }
+  }
