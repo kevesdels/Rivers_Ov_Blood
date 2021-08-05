@@ -3570,6 +3570,16 @@ country_event = {
   
   option = {
    name = "Create a Puppet State"
+   trigger = {
+    NOT = { 
+    tag = SOV 
+    tag = TOW 
+    tag = BWR 
+    tag = IRK 
+    tag = FER 
+    tag = TRS 
+    }
+  }
    puppet = MON
    ai_chance = { factor = 50 }
    every_owned_state = {
@@ -3599,6 +3609,46 @@ country_event = {
   }  
   }
 
+  ###RussIan tag puppet choice 
+  option = {
+    name = "Create a Puppet State"
+    trigger = {
+    tag = SOV 
+    tag = TOW 
+    tag = BWR 
+    tag = IRK 
+    tag = FER 
+    tag = TRS 
+   }
+    puppet = MON
+    ai_chance = { factor = 50 }
+    every_owned_state = {
+      limit = { 
+       NOT = {
+      is_claim_or_core = yes
+      state = 566 state = 564 state = 329 state = 1227 state = 1198 state = 1220
+     }
+        is_core_of = MON
+    }
+    MON = { transfer_state = PREV }
+    
+    }
+     if = { 
+    limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+    MON = {
+    set_cosmetic_tag = Generic_puppet_socialist
+    } 
+   }
+       if = { 
+     limit = { 
+       AND = { 
+           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+           MON = { has_cosmetic_tag = Generic_puppet_socialist } 
+         }
+       } 
+       MON = { drop_cosmetic_tag = yes }
+   }  
+   }
   option = { ###continue occupation
   name = "Continue Military Occupation"
   ai_chance = { factor = 0 }

@@ -2136,25 +2136,35 @@ country_event = {
 	 }
 }
 
-### Refugees from legion STATE (banish mechanic)
+### Legion state owns leningrad
 country_event = { 
 	id = legion.66
 	title = legion.66.t
 	desc = legion.66.d
-	is_triggered_only = yes
+	trigger = {
+		tag = LES
+		owns_state = 195
+	}
 	
 
 	###Gadjagrad
 	option = {
-		name = ""
-	  
-		   }
+		name = "We are making history, I deserve it!"
+		set_province_name = {
+			id = 3151
+			name = "Gadjagrad"
+		}
+	}
 
 	###Petrograd
 	option = {
-	 name = ""
+	 name = "I wouldn't dare!"
+	 set_province_name = {
+		id = 3151
+		name = "Petrograd"
+		}
+	}
 
-	 	}
 }
 
  ###temp event for debugging
