@@ -37,9 +37,9 @@ static const float3 NightAmbientNegZ = float3(0.8, 0.8, 0.8);  // bottom
 // --------------------------------------------------------------
 // ------------------    Specular       -------------------------
 // --------------------------------------------------------------
-static const float SPECULAR_WIDTH 				= 15.0;
-static const float SPECULAR_MULTIPLIER			= 1.0;
-static const float MAP_SPECULAR_WIDTH			= 15.0;
+static const float SPECULAR_WIDTH 				= 25.0;
+static const float SPECULAR_MULTIPLIER			= 2.0;
+static const float MAP_SPECULAR_WIDTH			= 25.0;
 
 // --------------------------------------------------------------
 // ------------------    TERRAIN        -------------------------
@@ -146,8 +146,8 @@ static const float  WATER_HEIGHT_RECP_SQUARED = WATER_HEIGHT_RECP * WATER_HEIGHT
 
 static const float3 FOG_COLOR 					= float3( 0.12, 0.28, 0.7 );
 static const float 	FOG_BEGIN					= 1.0f;
-static const float 	FOG_END 					= 150.0f;
-static const float 	FOG_MAX 					= 0.35f; 
+static const float 	FOG_END 					= 250.0f;
+static const float 	FOG_MAX 					= 0.5f; 
 
 //static const float 	FOG_MAX 					= 500.7f;
 
@@ -180,7 +180,7 @@ static const float  SHADOW_WEIGHT_TREE   		= 0.7f;
 
 
 
-// CAMERA_MIN_HEIGHT = 50.0,					defines.lua   (reload defines)
+// CAMERA_MIN_HEIGHT = 10.0,					defines.lua   (reload defines)
 // CAMERA_MAX_HEIGHT = 3000.0,					defines.lua   (reload defines)
 
 // --------------------------------------------------------------
