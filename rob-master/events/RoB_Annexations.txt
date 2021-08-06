@@ -2975,7 +2975,8 @@ country_event = {
   has_war = no
   EST = { NOT = { is_puppet_of = ROOT } }
   LAT = { NOT = { is_puppet_of = ROOT } }
-  12 = { is_owned_and_controlled_by = ROOT }
+  1267 = { is_owned_and_controlled_by = ROOT }
+  1266 = { is_owned_and_controlled_by = ROOT }
   NOT = {
    tag = LAT
    tag = EST
@@ -3269,7 +3270,7 @@ country_event = {
 }
  }
 
-option = { ###liberate French Socialist Republic
+option = { ###liberate German Socialist Republic
   name = "Liberate German Socialist Republic"
   ai_chance = { factor = 10 }
   trigger = { SOCIALIST_ALIGNED_GOVERNMENT = yes }

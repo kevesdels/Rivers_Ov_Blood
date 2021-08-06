@@ -726,6 +726,7 @@ focus_tree = {
      	base = 4
  	 	}
 		available = {
+			has_war = no
 			PRS = { exists = yes }
 		}
 		prerequisite = { focus = POL_the_intermarium_rising  }
@@ -1863,6 +1864,7 @@ focus_tree = {
      	base = 4
  	 	}
 		available = {
+			has_war = no
 			hidden_trigger = {
 				NOT = {
 					OR = {
@@ -1937,6 +1939,9 @@ focus_tree = {
 		ai_will_do = {
      	base = 3
  	 	}
+		available = {
+			has_war = no
+		}
 		bypass = { OR = { CZE = { is_puppet = yes } CZE = { exists = no } } }
 		prerequisite = { focus = POL_the_legacy_of_pilsuduski  }
 		completion_reward = {
@@ -1960,6 +1965,9 @@ focus_tree = {
 		x = 20
 		y = 10
 		cost = 5
+		available = {
+			has_war = no
+		}
 		bypass = { OR = { CZE = { is_puppet = yes } CZE = { exists = no } } }
 		search_filters = {
 			
@@ -1983,6 +1991,9 @@ focus_tree = {
 		x = 20
 		y = 11
 		cost = 5
+		available = {
+			has_war = no
+		}
 		bypass = { OR = { SLO = { is_puppet = yes } SLO = { exists = no } } }
 		search_filters = {
 			
@@ -2016,6 +2027,7 @@ focus_tree = {
      	base = 4
  	 	}
 		available = {
+			has_war = no
 			NOT = {
 				LIT = { is_puppet = yes }
 			}
@@ -2044,6 +2056,7 @@ focus_tree = {
      	base = 4
  	 	}
 		available = {
+			has_war = no
 			NOT = {
 				LIT = { is_puppet = yes }
 			}
@@ -2081,6 +2094,7 @@ focus_tree = {
      	base = 4
  	 	}
 		available = {
+			has_war = no
 			NOT = {
 				LIT = { is_puppet = yes }
 			}
@@ -2116,6 +2130,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		available = {
+			has_war = no
+		}
 		ai_will_do = {
      	base = 7
  	 	}
@@ -2141,6 +2158,9 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
+		available = {
+			has_war = no
+		}
 		ai_will_do = {
      	base = 3
  	 	}
@@ -2159,6 +2179,7 @@ focus_tree = {
 		y = 13
 		cost = 5
 		available = {
+			has_war = no
 			GER = {
 				exists = yes
 				SOCIALIST_ALIGNED_GOVERNMENT = yes
@@ -2194,6 +2215,9 @@ focus_tree = {
 			
 						FOCUS_FILTER_POLITICAL
 					
+		}
+		available = {
+			has_war = no
 		}
 		ai_will_do = {
      	base = 3
@@ -2380,6 +2404,7 @@ focus_tree = {
      	base = 6
  	 	}
 		available = {
+			has_war = no
 				PRS = { exists = yes }
 		}
 		prerequisite = { focus = POL_the_intermarium_rising  }
@@ -2864,6 +2889,7 @@ focus_tree = {
      	base = 3
  	 	}
 		available = {
+			has_war = no
 			OR = {
 				UKR = { exists = yes }
 				DSU = { exists = yes }
@@ -2969,6 +2995,7 @@ focus_tree = {
      	base = 3
  	 	}
 		available = {
+			has_war = no
 			OR = {
 				BLR = { exists = yes }
 				CBR = { exists = yes }
@@ -3268,6 +3295,7 @@ focus_tree = {
      	base = 3
  	 	}
 		available = {
+			has_war = no
 			PRS = { exists = yes }
 		}
 		prerequisite = { focus = POL_the_polish_golem  }

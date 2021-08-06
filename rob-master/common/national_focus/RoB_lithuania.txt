@@ -3689,7 +3689,7 @@ completion_reward = {
 			focus = LIT_defensivedoctrine 
 		}
 		mutually_exclusive = { 
-			focus = LIT_mobiledoctrineii
+			focus = LIT_mobiledoctrine
 		}
 		mutually_exclusive = { 
 			focus = LIT_trenchwarfare 
@@ -4245,12 +4245,6 @@ add_extra_state_shared_building_slots = 2
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_mobiledoctrine }
-		mutually_exclusive = { 
-			focus = LIT_trenchwarfare 
-		}
-		mutually_exclusive = { 
-			focus = LIT_massartilleryfire 
-		}
 		        completion_reward = {
  add_tech_bonus = {
 	name = mobile_doctrine
@@ -4756,8 +4750,12 @@ add_extra_state_shared_building_slots = 2
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_offensivedoctrine }
-		mutually_exclusive = { focus = LIT_massartilleryfire }
-		mutually_exclusive = { focus = LIT_trenchwarfare }
+		mutually_exclusive = { 
+			focus = LIT_trenchwarfare 
+		}
+		mutually_exclusive = { 
+			focus = LIT_massartilleryfire 
+		}
         completion_reward = {
  add_tech_bonus = {
 	name = mobile_doctrine

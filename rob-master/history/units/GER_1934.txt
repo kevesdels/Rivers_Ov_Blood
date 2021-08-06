@@ -125,8 +125,8 @@ units = {
 		}
 		location = 6521
 		division_template = "Rotkorps-Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}
 	division= {	
@@ -136,31 +136,8 @@ units = {
 		}
 		location = 692
 		division_template = "Rotkorps-Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
-		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
-	}
-	division= {	
-		division_name = {
-				is_name_ordered = yes
-				name_order = 3
-		}
-		location = 6488
-		division_template = "Rotkorps-Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.3
-		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
-	}
-
-	division= {	
-		division_name = {
-				is_name_ordered = yes
-				name_order = 1
-		}
-		location = 11505
-		division_template = "Rotkorps-Division"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.4
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}
 
