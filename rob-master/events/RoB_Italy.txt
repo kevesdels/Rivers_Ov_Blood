@@ -929,3 +929,106 @@ add_popularity = { ideology = democratic_socialist popularity = 0.35 }
 }
 
 }
+
+
+
+country_event = { ### Poland attacked no path to germany
+id = republican_italy.36
+title = "Aiding our ally"
+desc = "With our aly in eastern europe in trouble, the question arises, how should we aid them? While we do not share a border with the Spartakists, there are countries that do. Perhaps should we ask of transit or even alliance from these states?"
+fire_only_once = yes
+trigger = {
+	is_faction_leader = yes
+	at_war_with = GER
+	is_in_faction_with = POL
+	POL = { has_defensive_war_with = GER }
+}
+
+option = { ###Path 1
+name = "Ask the Austrians"
+trigger = {
+	OR = {
+		AUS = { exists = yes has_war = no }
+		THR = { exists = yes has_war = no }
+	}
+}
+add_political_power = -40
+if = {
+	limit = {
+		AUS = { exists = yes has_war = no }
+	}
+	AUS = { country_event = { id = republican_italy.37 days = 2 } }
+}
+if = {
+	limit = {
+		THR = { exists = yes has_war = no }
+	}
+	THR = { country_event = { id = republican_italy.37 days = 2 } }
+}
+
+}
+
+option = { ###Path 2
+name = "Ask the French"
+
+add_political_power = -100
+}
+
+option = { ###No action
+name = "Poles can hold their ground"
+
+}
+
+}
+
+country_event = { ### Poland attacked no path to germany: So you gonna join itallians?
+id = republican_italy.37
+title = "Itallian Offer"
+desc = "With war between Italy and Germany, the Italians seem to want us dragged in to their mess. They have asked for our stance in this conflict, and demand, at the very least, to allow transit through our territories. It is true that alliance with Italians may hold benefit to us, but is it worth the risk?"
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###Ofc
+name = "The Socialists are a threat that must be deal with."
+
+add_political_power = -40
+} 
+
+option = { ###Only mil access
+name = "Allow transit through us, but sit this out."
+
+add_political_power = -100
+}
+
+option = { ###No action
+name = "Politely explain how this is impossible."
+
+}
+
+}
+
+country_event = { ### Poland attacked no path to germany: so do they join?
+id = republican_italy.38
+title = "The Response"
+desc = "The Itallian embassy has received the answer to our calls..."
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###Ofc
+name = "A new ally"
+
+add_political_power = -40
+} 
+
+option = { ###Only mil access
+name = "Free Troop transit"
+
+add_political_power = -100
+}
+
+option = { ###No action
+name = "Failure"
+
+}
+
+}

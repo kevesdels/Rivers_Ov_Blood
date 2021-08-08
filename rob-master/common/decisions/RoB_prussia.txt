@@ -340,7 +340,13 @@ PRS_baltic_ambition = {
  }
  fire_only_once = yes
  available = {
-  date > 1936.1.1
+  OR = {
+    AND = {
+      date > 1936.1.1
+      has_war = no
+    }
+    any_country = { AND = { owns_state = 784  at_war_with = PRS }  NOT = { tag = PRS } }
+      }
    has_country_leader = {
     name = "Vydūnas"
     ruling_only = yes
@@ -370,7 +376,13 @@ LIT = {
  }
  fire_only_once = yes
  available = {
-  date > 1936.1.1
+  OR = {
+    AND = {
+      date > 1936.1.1
+      has_war = no
+    }
+    any_country = { AND = { owns_state = 1266  at_war_with = PRS }  NOT = { tag = PRS } }
+      }
    has_country_leader = {
     name = "Vydūnas"
     ruling_only = yes
@@ -389,49 +401,7 @@ LAT = {
 }
  }
  }
- 
-PRS_proclaim_baltic_unity = {
- cost = 25
-  ai_will_do = {
-  base = 200
- }
- fire_only_once = yes
- available = {
-    has_country_leader = {
-    name = "Vydūnas"
-    ruling_only = yes
-   }
- OR = {
-  AND = {
-   is_in_faction_with = LIT
-   is_in_faction_with = LAT
-  }
-  AND = {
-   has_full_control_of_state = 12
-   has_full_control_of_state = 11
-   has_full_control_of_state = 784
-   has_full_control_of_state = 763
-  }
- }
-}
-complete_effect = {
-  set_cosmetic_tag = PRS_BAL
-  12 = { add_core_of = PRS }
-  190 = {add_core_of = PRS }
-  881 = { add_core_of = PRS }
-  1010 = { add_core_of = PRS }
-  880 = { add_core_of = PRS }
-    every_state = {
-    limit = {  
-	OR = {
-	is_core_of = LIT
-    is_core_of = LAT
-    }	
-}
-	add_core_of = PRS
-}
- }
-}
+
 PRS_join_lith_faction = {
  cost = 25
   ai_will_do = {
@@ -459,6 +429,51 @@ complete_effect = {
 }
 }
 
+PRS_proclaim_baltic_unity = {
+  cost = 25
+   ai_will_do = {
+   base = 200
+  }
+  fire_only_once = yes
+  available = {
+     has_country_leader = {
+     name = "Vydūnas"
+     ruling_only = yes
+    }
+  OR = {
+   AND = {
+    is_in_faction_with = LIT
+    is_in_faction_with = LAT
+   }
+   AND = {
+    has_full_control_of_state = 12
+    has_full_control_of_state = 11
+    has_full_control_of_state = 784
+    has_full_control_of_state = 763
+   }
+  }
+ }
+ complete_effect = {
+   custom_effect_tooltip = PRS_tt_2
+   set_cosmetic_tag = PRS_BAL
+   12 = { add_core_of = PRS }
+   190 = {add_core_of = PRS }
+   881 = { add_core_of = PRS }
+   1010 = { add_core_of = PRS }
+   880 = { add_core_of = PRS }
+     every_state = {
+     limit = {  
+   OR = {
+   is_core_of = LIT
+     is_core_of = LAT
+     }	
+ }
+   add_core_of = PRS
+ }
+
+  }
+ }
+
 PRS_retake_belarus = {
  cost = 25
   ai_will_do = {
@@ -467,8 +482,11 @@ PRS_retake_belarus = {
  fire_only_once = yes
  available = {
  has_cosmetic_tag = PRS_BAL
- NOT = {
-  96 = { is_owned_by = PRS } 
+ OR = {
+  NOT = {
+    96 = { is_owned_by = PRS } 
+   }
+   96 = { is_owned_by = PRS } 
  }
  OR = {
   has_war = no
@@ -478,15 +496,20 @@ PRS_retake_belarus = {
  
  complete_effect = {
  96 = { add_core_of = PRS } 
-  every_country = {
-	limit = { controls_state = 96 }
-	PRS = { 
-		create_wargoal = {
-			type = annex_everything		
-			target = PREV
-		}			
-	}
-}
+ if = {
+   limit = {
+     NOT = { owns_state = 96 }
+   }
+   every_country = {
+    limit = { controls_state = 96 }
+    PRS = { 
+      create_wargoal = {
+        type = annex_everything		
+        target = PREV
+      }			
+    }
+  }
+ }
  }
 
 }
@@ -499,26 +522,35 @@ PRS_retake_western_belarus = {
  fire_only_once = yes
  available = {
  has_cosmetic_tag = PRS_BAL
- NOT = {
-  95 = { is_owned_by = PRS } 
-  933 = { is_owned_by = PRS }
+ OR = {
+  NOT = {
+    95 = { is_owned_by = PRS } 
+    933 = { is_owned_by = PRS }
+   }
+   95 = { is_owned_by = PRS } 
+   933 = { is_owned_by = PRS }
  }
  OR = {
   has_war = no
-  any_country = { AND = { OR = { owns_state = 95 owns_state = 933 } at_war_with = PRS }  NOT = { tag = GER } }
+  any_country = { AND = { OR = { owns_state = 95 owns_state = 933 } at_war_with = PRS }  }
     }
  }
   complete_effect = {
  95 = { add_core_of = PRS }
  933 = { add_core_of = PRS }  
+ if = {
+  limit = {
+    NOT = { owns_state = 95 owns_state = 933 }
+  }
   every_country = {
-	limit = {  OR = { controls_state = 95 controls_state = 933 } }
-	PRS = { 
-		create_wargoal = {
-			type = annex_everything		
-			target = PREV
-		}			
-	}
+   limit = { controls_state = 95 controls_state = 933 }
+   PRS = { 
+     create_wargoal = {
+       type = annex_everything		
+       target = PREV
+     }			
+   }
+ }
 }
  }
 
@@ -532,24 +564,32 @@ PRS_retake_polish_lands = {
  fire_only_once = yes
  available = {
  has_cosmetic_tag = PRS_BAL
- NOT = {
-  97 = { is_owned_by = PRS } 
+ OR = {
+  NOT = {
+    97 = { is_owned_by = PRS } 
+   }
+   97 = { is_owned_by = PRS } 
  }
  OR = {
   has_war = no
-  any_country = { AND = { OR = { owns_state = 97 } at_war_with = PRS }  NOT = { tag = GER } }
+  any_country = { AND = { OR = { owns_state = 97 } at_war_with = PRS } }
     }
  }
   complete_effect = {
  97 = { add_core_of = PRS }
+ if = {
+  limit = {
+    NOT = { owns_state = 97 }
+  }
   every_country = {
-	limit = {  OR = { controls_state = 97 } }
-	PRS = { 
-		create_wargoal = {
-			type = annex_everything		
-			target = PREV
-		}			
-	}
+   limit = { controls_state = 97 }
+   PRS = { 
+     create_wargoal = {
+       type = annex_everything		
+       target = PREV
+     }			
+   }
+ }
 }
  }
 

@@ -136,7 +136,7 @@ country_event = {
   }
 
 
-  ###Send peace to USA
+  ###Poland allied USA, Send peace to USA
 country_event = {
   id = peaceevent.3
   title = "The Polish Capitulation"
@@ -214,20 +214,26 @@ country_event = {
   option = {
     name = "...no way"
     trigger = {
-      JAP = { has_country_flag = usa_continue_fight }
+      USA = { has_country_flag = usa_continue_fight }
     }
     add_political_power = -10
     }
   }
 
-    ###Send peace to french colonies
+    ###Ye are at war with French colonies but france is dead, Send peace to french colonies
 country_event = {
   id = peaceevent.6
   title = "The French Capitulation"
-  desc = "Witht the fall of the French state, we are in a akward state of affairs. The colonies are practicly unreachable, yet they are at war with us. We should attempt some sort of diplomatic move."
+  desc = "Witht the fall of the French state, we are in a akward state of affairs. The colonies are practicly unreachable, yet they are at war with us. We should attempt some sort of diplomatic move to resolve this matter."
   fire_only_once = yes
   trigger = {
-    NOT = { at_war_with = POL }
+    OR = {
+      NOT = { at_war_with = POL }
+      AND = {
+        POL = { has_capitulated = yes }
+        ROOT = { at_war_with = POL }
+      }
+    }
     OR = {
       at_war_with = SYR
       at_war_with = FWA
@@ -307,7 +313,7 @@ country_event = {
   }
 
 
-###Send peace to japan
+###Send peace to French colonies
 country_event = {
   id = peaceevent.8
   title = "The French Colonial Response"
@@ -321,7 +327,7 @@ country_event = {
   option = {
     name = "That saves us trouble"
     trigger = {
-      NOT = { USA = { has_country_flag = fra_colonie_continue_fight } }
+      NOT = { FROM = { has_country_flag = fra_colonie_continue_fight } }
     }
       white_peace = FROM
   }
@@ -335,3 +341,112 @@ country_event = {
     add_political_power = -10
     }
   }
+
+ ###Ye are at war with Poland and it allied Italy, but italy does no border you, Send peace deal to Italy
+ country_event = {
+  id = peaceevent.9
+  title = "The Polish Capitulation"
+  desc = "Witht the fall of the Polish state, we are in a akward state of affairs. The Italy is practicly unreachable, yet they are at war with us. We should attempt some sort of diplomatic move to resolve this matter."
+  fire_only_once = yes
+  trigger = {
+    NOT = {
+      any_neighbor_country = {
+        AND = {
+          NOT = { tag = POL }
+          is_neighbor_of = ROOT
+          is_in_faction_with = ITA
+        }
+      }
+    }
+    at_war_with = ITA
+    at_war_with = POL
+    POL = { has_capitulated = yes }
+    ROOT = { surrender_progress < 0.2 }
+  }
+  mean_time_to_happen = { days = 1 }
+  
+  ###BACK OUT
+  option = {
+    name = "Send Peace Offer"
+    if = {
+      limit = {
+        ITA = { exists = yes at_war_with = ROOT }
+      }
+      ITA = { country_event = { id = peaceevent.10 days = 3 } }
+    }
+    }
+
+  ###Continue
+  option = {
+    ai_chance = { factor = 0 }
+    name = "The Fight Will Continue"
+  add_stability = -0.05
+  add_war_support = -0.05
+  add_political_power = -100
+    }
+  }
+
+
+###Send peace to Italians
+country_event = {
+  id = peaceevent.10
+  title = "The Fall of Poland"
+  desc = "Our shared foe has defeated our ally but is seeking to end the war. Perhaps we should look the other way, and accept it?"
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  mean_time_to_happen = { days = 1 }
+  
+  ###BACK OUT
+  option = {
+    name = "The War is Lost"
+    FROM = { country_event = { id = peaceevent.11 days = 3 } }
+
+    }
+
+  ###Continue
+  option = {
+    ai_chance = { factor = 0 }
+    name = "Continue!"
+    set_country_flag = ita_continue_fight
+    FROM = { country_event = { id = peaceevent.11 days = 3 } }
+    }
+  }
+
+
+###Send peace to Italians
+country_event = {
+  id = peaceevent.11
+  title = "The Italian Response"
+  desc = "...so, which is it? Did they agree?"
+  fire_only_once = yes
+  is_triggered_only = yes
+
+  mean_time_to_happen = { days = 1 }
+  
+  ###Italians want peace
+  option = {
+    name = "Many lives were spared today."
+    trigger = {
+      NOT = { FROM = { has_country_flag = ita_continue_fight } }
+    }
+      white_peace = FROM
+  }
+
+  ###Italians hate peace
+  option = {
+    name = "...no way"
+    trigger = {
+      FROM = { has_country_flag = ita_continue_fight }
+    }
+    add_political_power = -10
+    }
+  }
+
+  
+
+  
+  
+
+  
+  
