@@ -96,15 +96,15 @@ GER_german_expansion = {
  complete_effect = {
   if = {
    limit = { ACM = { exists = yes } }
-   ACM = { country_event =  { id = spartakus_germany.23 days = 3 } }
+   ACM = { country_event = { id = spartakus_germany.23 days = 3 } }
 }  
   if = {
    limit = { THR = { exists = yes } }
-   THR = { country_event =  { id = spartakus_germany.23 days = 3 } }
+   THR = { country_event = { id = spartakus_germany.23 days = 3 } }
 }
   if = {
    limit = { AUS = { exists = yes } }
-   AUS = { country_event =  { id = spartakus_germany.23 days = 3 } }
+   AUS = { country_event = { id = spartakus_germany.23 days = 3 } }
 }      
    }
  }
@@ -538,7 +538,7 @@ GER_german_export_revolution = {
 }
   if = {
    limit = { AUS = { exists = yes } }
-   THR = { country_event =  { id = spartakus_germany.23 days = 3 } }
+   AUS = { country_event =  { id = spartakus_germany.23 days = 3 } }
 }      
    }
 

@@ -140,13 +140,30 @@ country_event = {
 country_event = {
   id = peaceevent.3
   title = "The Polish Capitulation"
-  desc = "The Mighty Poland has been defeated and so, the Americans should no longer bother supporting them."
+  desc = "The Polish military forces have been defeated and so, the Americans should no longer bother supporting them."
   fire_only_once = yes
   trigger = {
     at_war_with = USA
-    at_war_with = POL
-    POL = { has_capitulated = yes has_defensive_war = yes }
-    ROOT = { surrender_progress < 0.2 }
+    USA = { has_country_flag = pol_usa_support }
+    OR = {
+      AND = {
+        POL = { has_capitulated = yes }
+        POL = { at_war_with = ROOT }
+      }
+      AND = {
+        POL = { exists = no }
+        ROOT = {  
+          OR = {
+            owns_state = 10
+            owns_state = 865
+            owns_state = 88
+            owns_state = 92
+            owns_state = 92
+          }
+        }
+      }
+    }
+    ROOT = { surrender_progress < 0.1 }
   }
   mean_time_to_happen = { days = 1 }
   
@@ -208,6 +225,16 @@ country_event = {
       NOT = { USA = { has_country_flag = usa_continue_fight } }
     }
       white_peace = USA
+      hidden_effect = {
+        every_country = {
+          limit = { is_in_faction_with = ROOT }
+          white_peace = FROM
+          }
+        every_country = {
+            limit = { is_in_faction_with = FROM }
+            white_peace = ROOT
+            }
+      }
   }
 
   ###america hate peace
@@ -224,25 +251,37 @@ country_event = {
 country_event = {
   id = peaceevent.6
   title = "The French Capitulation"
-  desc = "Witht the fall of the French state, we are in a akward state of affairs. The colonies are practicly unreachable, yet they are at war with us. We should attempt some sort of diplomatic move to resolve this matter."
+  desc = "With the fall of the French state, we are in a akward state of affairs. The colonies are practicly unreachable, yet they are at war with us. We should attempt some sort of diplomatic move to resolve this matter."
   fire_only_once = yes
   trigger = {
     OR = {
       NOT = { at_war_with = POL }
-      AND = {
-        POL = { has_capitulated = yes }
-        ROOT = { at_war_with = POL }
-      }
+      POL = { has_war_with = ROOT has_capitulated = yes }
     }
     OR = {
-      at_war_with = SYR
-      at_war_with = FWA
-      at_war_with = FEA
-      at_war_with = FIC
+     ROOT = { at_war_with = SYR }
+     ROOT = { at_war_with = FWA }
+     ROOT = { at_war_with = FEA }
+     ROOT = { at_war_with = FIC }
     }
-    at_war_with = FRA
-    FRA = { has_capitulated = yes }
-    ROOT = { surrender_progress < 0.2 }
+    OR = {
+      AND = {
+        FRA = { has_capitulated = yes }
+        FRA = { at_war_with = ROOT }
+      }
+      AND = {
+        FRA = { exists = no }
+        ROOT = {  
+          OR = {
+            owns_state = 16
+            owns_state = 28
+            owns_state = 19
+            owns_state = 14
+          }
+        }
+      }
+    }
+    ROOT = { surrender_progress < 0.1 }
   }
   mean_time_to_happen = { days = 1 }
   
@@ -251,25 +290,29 @@ country_event = {
     name = "Send Peace Offer"
     if = {
       limit = {
-        SYR = { exists = yes at_war_with = ROOT }
+        SYR = { exists = yes }
+        SYR = { has_war_with = ROOT }
       }
       SYR = { country_event = { id = peaceevent.7 days = 3 } }
     }
     if = {
       limit = {
-        FWA = { exists = yes at_war_with = ROOT }
+        FWA = { exists = yes }
+        FWA = { has_war_with = ROOT }
       }
       FWA = { country_event = { id = peaceevent.7 days = 3 } }
     }
     if = {
       limit = {
-        FEA = { exists = yes at_war_with = ROOT }
+        FEA = { exists = yes }
+        FEA = { has_war_with = ROOT }
       }
       FEA = { country_event = { id = peaceevent.7 days = 3 } }
     }
     if = {
       limit = {
-        FIC = { exists = yes at_war_with = ROOT }
+        FIC = { exists = yes }
+        FIC = { has_war_with = ROOT }
       }
       FIC = { country_event = { id = peaceevent.7 days = 3 } }
     }
@@ -286,12 +329,11 @@ country_event = {
   }
 
 
-###Send peace to america
+###Send peace to french colonies
 country_event = {
   id = peaceevent.7
   title = "Mainland Occupied"
   desc = "The Enemy has seized our homeland and is asking as to cease hostilities, so that war can be resolved faster."
-  fire_only_once = yes
   is_triggered_only = yes
 
   mean_time_to_happen = { days = 1 }
@@ -318,7 +360,6 @@ country_event = {
   id = peaceevent.8
   title = "The French Colonial Response"
   desc = "...so, which is it? Did they submit?"
-  fire_only_once = yes
   is_triggered_only = yes
 
   mean_time_to_happen = { days = 1 }
@@ -330,6 +371,16 @@ country_event = {
       NOT = { FROM = { has_country_flag = fra_colonie_continue_fight } }
     }
       white_peace = FROM
+      hidden_effect = {
+        every_country = {
+          limit = { is_in_faction_with = ROOT }
+          white_peace = FROM
+          }
+        every_country = {
+            limit = { is_in_faction_with = FROM }
+            white_peace = ROOT
+            }
+      }
   }
 
   ###COlonie hate peace
@@ -346,7 +397,7 @@ country_event = {
  country_event = {
   id = peaceevent.9
   title = "The Polish Capitulation"
-  desc = "Witht the fall of the Polish state, we are in a akward state of affairs. The Italy is practicly unreachable, yet they are at war with us. We should attempt some sort of diplomatic move to resolve this matter."
+  desc = "With the fall of the Polish state, we are in a akward state of affairs. The Italy is practicly unreachable, yet they are at war with us. We should attempt some sort of diplomatic move to resolve this matter."
   fire_only_once = yes
   trigger = {
     NOT = {
@@ -359,9 +410,26 @@ country_event = {
       }
     }
     at_war_with = ITA
-    at_war_with = POL
-    POL = { has_capitulated = yes }
-    ROOT = { surrender_progress < 0.2 }
+
+    OR = {
+      AND = {
+        POL = { has_capitulated = yes }
+        POL = { at_war_with = ROOT }
+      }
+      AND = {
+        POL = { exists = no }
+        ROOT = {  
+          OR = {
+            owns_state = 10
+            owns_state = 865
+            owns_state = 88
+            owns_state = 92
+            owns_state = 92
+          }
+        }
+      }
+    }
+    ROOT = { surrender_progress < 0.1 }
   }
   mean_time_to_happen = { days = 1 }
   
@@ -431,6 +499,16 @@ country_event = {
       NOT = { FROM = { has_country_flag = ita_continue_fight } }
     }
       white_peace = FROM
+      hidden_effect = {
+        every_country = {
+          limit = { is_in_faction_with = ROOT }
+          white_peace = FROM
+          }
+        every_country = {
+            limit = { is_in_faction_with = FROM }
+            white_peace = ROOT
+            }
+      }
   }
 
   ###Italians hate peace

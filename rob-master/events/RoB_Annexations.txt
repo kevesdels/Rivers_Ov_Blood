@@ -1691,6 +1691,9 @@ country_event = {
   name = "Create a Puppet State"
   puppet = ROM
   ai_chance = { factor = 50 }
+  if = { limit = { owns_state = 154 NOT = { owns_state = 1025 }}
+  ROM = { transfer_state = 154 }
+  }
   every_owned_state = {
     limit = { 
      NOT = {
@@ -2248,7 +2251,10 @@ country_event = {
   has_war = no
   DSU = { NOT = { is_puppet_of = ROOT } }
   UKR = { NOT = { is_puppet_of = ROOT } }
-  202 = { is_owned_and_controlled_by = ROOT }
+  OR = {
+    202 = { is_owned_and_controlled_by = ROOT }
+    221 = { is_owned_and_controlled_by = ROOT }
+  }
   NOT = {
    tag = DSU
    tag = UKR
@@ -2257,6 +2263,78 @@ country_event = {
   }
  }
  
+ option = { ###liberate Ukrainian Socialist Republic
+  name = "Create Puppet State"
+  ai_chance = { factor = 150 }
+  trigger = { SOCIALIST_ALIGNED_GOVERNMENT = yes DSU = { exists = yes } UKR = { exists = no } }
+  puppet = UKR
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 OR = {
+	 is_core_of = DSU
+	 is_core_of = UKR
+	 }
+	}
+	add_core_of = UKR
+	UKR = { transfer_state = PREV }
+}
+if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  UKR = {
+  set_cosmetic_tag = Generic_puppet_socialist
+  } 
+ }  
+    if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          UKR = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      UKR = { drop_cosmetic_tag = yes }
+  }
+ }
+
+
+ option = { ###liberate Ukrainian Republic
+ name = "Create Puppet State"
+ ai_chance = { factor = 150 }
+ trigger = { SOCIALIST_ALIGNED_GOVERNMENT = no DSU = { exists = no } UKR = { exists = yes } }
+ puppet = DSU
+ every_owned_state = {
+   limit = { 
+    NOT = {
+   is_claim_or_core = yes
+  }
+  OR = {
+  is_core_of = UKR
+  is_core_of = DSU
+  }
+ }
+ add_core_of = DSU
+ DSU = { transfer_state = PREV }
+ }
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  DSU = {
+  set_cosmetic_tag = Generic_puppet_socialist
+  } 
+ }  
+    if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          DSU = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      DSU = { drop_cosmetic_tag = yes }
+  }
+}
+
+
  option = { ###liberate Ukrainian Socialist Republic
   name = "Liberate Ukrainian Socialist Republic"
   ai_chance = { factor = 150 }
@@ -2280,7 +2358,7 @@ country_event = {
  option = { ###liberate Ukrainian Republic
   name = "Liberate Ukrainian Republic"
   ai_chance = { factor = 150 }
-  trigger = { SOCIALIST_ALIGNED_GOVERNMENT = no }
+  trigger = { SOCIALIST_ALIGNED_GOVERNMENT = no UKR = { exists = no }}
   puppet = UKR
   every_owned_state = {
     limit = { 
@@ -2294,6 +2372,15 @@ country_event = {
 	}
 	add_core_of = UKR
 	UKR = { transfer_state = PREV }
+  }
+  if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          DSU = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      DSU = { drop_cosmetic_tag = yes }
   }
  }
  

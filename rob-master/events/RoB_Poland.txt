@@ -646,6 +646,7 @@ country_event = {
    ai_chance = {
     factor = 2
    }
+   set_country_flag = pol_usa_support
    give_guarantee = POL
   }
 
@@ -834,7 +835,7 @@ country_event = {
    ai_chance = {
     factor = 1
    }
-   POL = { create_wargoal = { target = ROOT  type = annex_everything } }
+   create_wargoal = { target = FROM  type = annex_everything }
   }
 
   option = { 
@@ -845,7 +846,7 @@ country_event = {
    ai_chance = {
     factor = 100
    }
-    POL = { create_wargoal = { target = PRS  type = annex_everything } }
+    create_wargoal = { target = PRS  type = annex_everything }
   }
  }
 
