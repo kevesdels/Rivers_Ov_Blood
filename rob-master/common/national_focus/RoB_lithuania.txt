@@ -292,13 +292,27 @@ focus_tree = {
 		x = 32
 		y = 7
 		cost = 5
+		bypass = { 
+			OR = {
+					ROOT = { owns_state = 933 owns_state = 95 owns_state = 94 owns_state = 96 owns_state = 207 owns_state = 206 owns_state = 204 owns_state = 194 owns_state = 1082 owns_state = 1081 owns_state = 927 owns_state = 241 }
+					BLR = { is_puppet_of = LIT }
+			}
+			}
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_anewbalticcrusade }
 				completion_reward = {
-		create_wargoal = {
-type = annex_everything
-target = BLR
-	}
+					custom_effect_tooltip = LIT_mironas_belaruscampaign
+					hidden_effect = {
+						every_country = {
+							limit = { NOT = { OR = { tag = LIT is_in_faction_with = LIT } } OR = { owns_state = 933 owns_state = 95 owns_state = 94 owns_state = 96 owns_state = 207 owns_state = 206 owns_state = 204 owns_state = 194 owns_state = 1082 owns_state = 1081 owns_state = 927 owns_state = 241 } }
+							ROOT = { 
+								create_wargoal = {
+									type = annex_everything		
+									target = PREV
+								}			
+							}
+						}
+					}
 	}
 	}
 
@@ -326,17 +340,25 @@ target = BLR
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_legacyofthedneperbalts }
 		bypass = { 
-		 OR = {
-		 BLR = { exists = no }
-		 BLR = { is_puppet_of = LIT }
-		}
-		}
+			OR = {
+					ROOT = { owns_state = 933 owns_state = 95 owns_state = 94 owns_state = 96 owns_state = 207 owns_state = 206 owns_state = 204 owns_state = 194 owns_state = 1082 owns_state = 1081 owns_state = 927 owns_state = 241 }
+					BLR = { is_puppet_of = LIT }
+			}
+			}
 		completion_reward = {
-		create_wargoal = {
-         type = annex_everything
-         target = BLR
-	     }
-	   }
+			custom_effect_tooltip = LIT_visomis_belaruscampaign
+			hidden_effect = {
+				every_country = {
+					limit = { NOT = { OR = { tag = LIT is_in_faction_with = LIT } } OR = { owns_state = 933 owns_state = 95 owns_state = 94 owns_state = 96 owns_state = 207 owns_state = 206 owns_state = 204 owns_state = 194 owns_state = 1082 owns_state = 1081 owns_state = 927 owns_state = 241 } }
+					ROOT = { 
+						create_wargoal = {
+							type = annex_everything		
+							target = PREV
+						}			
+					}
+				}
+			}
+		}
 	}
 
 	#Focus for Form a Dnepr Balt Identity
@@ -699,6 +721,7 @@ add_popularity = {ideology = reactionary popularity =0.10}
 		}
 		LIT = { transfer_state = 96 }
 		}
+		custom_effect_tooltip = lit_tt_8
 		}
 		}
 	
@@ -2689,14 +2712,31 @@ add_building_construction = {
 		x = 19
 		y = 9
 		cost = 5
+		available = {
+			has_war = no
+		}
+		bypass = { 
+			OR = {
+					ROOT = { owns_state = 188 owns_state = 763 }
+					PRS = { is_puppet_of = ROOT }
+			}
+		}
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_prepareforancampaign }
 		completion_reward = {
-				create_wargoal = {
-type = annex_everything
-target = PRS
-}
-}
+			custom_effect_tooltip = LIT_pruscampaign
+			hidden_effect = {
+				every_country = {
+					limit = { NOT = { OR = { tag = LIT is_in_faction_with = LIT } } OR = { owns_state = 188 owns_state = 763 } }
+					ROOT = { 
+						create_wargoal = {
+							type = annex_everything		
+							target = PREV
+						}			
+					}
+				}
+			}
+		}
 	}
 
 	#Focus for Take the Northern Lands
@@ -2706,23 +2746,32 @@ target = PRS
 		x = 15
 		y = 9
 		cost = 5
+		available = {
+			has_war = no
+		}
+		bypass = { 
+			OR = {
+					ROOT = { owns_state = 190  owns_state = 881 owns_state = 1010 owns_state = 1266  owns_state = 12 owns_state = 880 }
+					LAT = { is_puppet_of = ROOT }
+			}
+		}
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_prepareforancampaign }
 		completion_reward = {
-				create_wargoal = {
-type = annex_everything
-target = EST
-}
-if = {
- limit = { LAT = { exists = yes } }
- 
-		create_wargoal = {
-type = annex_everything
-target = LAT
-}
+			custom_effect_tooltip = LIT_lvcampaign
+			hidden_effect = {
+				every_country = {
+					limit = { NOT = { OR = { tag = LIT is_in_faction_with = LIT } } OR = { owns_state = 190 owns_state = 881 owns_state = 1010 owns_state = 1266 owns_state = 12 owns_state = 880 } }
+					ROOT = { 
+						create_wargoal = {
+							type = annex_everything		
+							target = PREV
+						}			
+					}
+				}
+			}
 		}
-		}
-		}
+	}
 
 	#Focus for Invade Belarus
 	focus = {
@@ -2732,12 +2781,29 @@ target = LAT
 		y = 9
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+			has_war = no
+		}
+		bypass = { 
+			OR = {
+					ROOT = { owns_state = 933 owns_state = 95 owns_state = 94 owns_state = 96 owns_state = 207 owns_state = 206 owns_state = 204 owns_state = 194 owns_state = 1082 owns_state = 1081 owns_state = 927 owns_state = 241 }
+					BLR = { is_puppet_of = ROOT }
+			}
+		}
 		prerequisite = { focus = LIT_prepareforancampaign }
 		completion_reward = {
-				create_wargoal = {
-type = annex_everything
-target = BLR
-		}
+			custom_effect_tooltip = LIT_belaruscampaign
+			hidden_effect = {
+				every_country = {
+					limit = { NOT = { OR = { tag = LIT is_in_faction_with = LIT } } OR = { owns_state = 933 owns_state = 95 owns_state = 94 owns_state = 96 owns_state = 207 owns_state = 206 owns_state = 204 owns_state = 194 owns_state = 1082 owns_state = 1081 owns_state = 927 owns_state = 241 } }
+					ROOT = { 
+						create_wargoal = {
+							type = annex_everything		
+							target = PREV
+						}			
+					}
+				}
+			}
 	}
 	}
 
@@ -2952,12 +3018,48 @@ completion_reward = {
 		x = 15
 		y = 3
 		cost = 5
+		bypass = { 
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+			OR = {
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+		}
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_allowparamilitariesforallies }
 		completion_reward = {
-		add_ideas = {
-		war_economy
-		extensive_conscription
+		 if = {
+			 limit = {
+				 NOT = { 
+					OR = {
+						has_idea = extensive_conscription
+						has_idea = service_by_requirement
+						has_idea = all_adults_serve
+						has_idea = scraping_the_barrel
+					}
+				 }
+			 }
+			 add_ideas = {
+				extensive_conscription
+				}
+		 }
+		 if = {
+			limit = {
+				NOT = { 
+					OR = {
+						has_idea = war_economy
+						has_idea = tot_economic_mobilisation
+					}
+				}
+			}
+			add_ideas = {
+				war_economy
+			   }
 		}
 		}
 	}
@@ -3269,6 +3371,7 @@ completion_reward = {
 		}
 		LIT = { transfer_state = 96 }
 		}
+		custom_effect_tooltip = lit_tt_8
 	}
 	}
 
@@ -3304,15 +3407,15 @@ completion_reward = {
 		prerequisite = { focus = LIT_thepresidentwholivesasapeasant }
 		 completion_reward = {
 784 = {
-                add_extra_state_shared_building_slots = 4
+                add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 }

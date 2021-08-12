@@ -1,6 +1,12 @@
 LIT_lith_raids = {
 
  LIT_raid_ubd_ammo = {
+   visible = {
+     EST = { exists = yes }
+     NOT = {
+      EST = { has_cosmetic_tag = EST_liberated }  
+     }
+   }
   available = { 
   has_war = no
   controls_state = 189
@@ -40,6 +46,12 @@ LIT_lith_raids = {
   
 
  LIT_raid_ubd_banks = {
+  visible = {
+    EST = { exists = yes }
+    NOT = {
+     EST = { has_cosmetic_tag = EST_liberated }  
+    }
+  }
   available = { 
   has_war = no
   controls_state = 189
@@ -80,6 +92,12 @@ LIT_lith_raids = {
   
 
   LIT_raid_ubd_admin_buildings = {
+    visible = {
+      EST = { exists = yes }
+      NOT = {
+       EST = { has_cosmetic_tag = EST_liberated }  
+      }
+    }
   available = { 
   has_war = no
   controls_state = 11
@@ -119,6 +137,9 @@ LIT_lith_raids = {
   
   
  LIT_raid_blr_ammo = {
+  visible = {
+    BLR = { exists = yes }
+  }
   available = { 
   has_war = no
   controls_state = 784
@@ -158,6 +179,9 @@ LIT_lith_raids = {
   
 
  LIT_raid_blr_banks = {
+  visible = {
+    BLR = { exists = yes }
+  }
   available = { 
   has_war = no
   controls_state = 784
@@ -198,6 +222,9 @@ LIT_lith_raids = {
   
 
   LIT_raid_blr_admin_buildings = {
+    visible = {
+      BLR = { exists = yes }
+    }
   available = { 
   has_war = no
   controls_state = 784
@@ -237,6 +264,9 @@ LIT_lith_raids = {
   
   
  LIT_raid_prs_ammo = {
+  visible = {
+    PRS = { exists = yes }
+  }
   available = { 
   has_war = no
   controls_state = 189
@@ -278,6 +308,9 @@ LIT_lith_raids = {
   
 
  LIT_raid_prs_banks = {
+  visible = {
+    PRS = { exists = yes }
+  }
   available = { 
   has_war = no
   controls_state = 189
@@ -320,6 +353,9 @@ LIT_lith_raids = {
   
 
   LIT_raid_prs_admin_buildings = {
+    visible = {
+      PRS = { exists = yes }
+    }
   available = { 
   has_war = no
   controls_state = 879

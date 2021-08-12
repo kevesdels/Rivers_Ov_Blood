@@ -19,6 +19,14 @@ focus_tree = {
 		available = {
 		 has_government = conservative
 		}
+		bypass = { 
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+		}
 		prerequisite = { focus = PRS_dnvpvictory }
 		ai_will_do = {
 			factor = 1
@@ -1178,6 +1186,12 @@ focus_tree = {
 		y = 3
 		cost = 5
 		available_if_capitulated = yes
+		bypass = { 
+			OR = {
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+		}
 		prerequisite = { 
 			focus = PRS_subjugatebourgeosie 
 		}
@@ -1238,6 +1252,14 @@ focus_tree = {
 		x = 16
 		y = 4
 		cost = 5
+		bypass = { 
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+		}
 		available_if_capitulated = yes
 		prerequisite = { focus = PRS_militarizeindustry }
 		ai_will_do = {
@@ -2015,6 +2037,14 @@ focus_tree = {
 		x = 49
 		y = 2
 		cost = 5
+		bypass = { 
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+		}
 		available_if_capitulated = yes
 		prerequisite = { focus = PRS_armyprimacy }
 		ai_will_do = {
@@ -2346,6 +2376,14 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = PRS_thearmyofkaiser }
+		bypass = { 
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -4147,6 +4185,12 @@ add_building_construction = {
 		y = 3
 		cost = 5
 		available_if_capitulated = yes
+		bypass = { 
+			OR = {
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+		}
 		prerequisite = { 
 			focus = PRS_partlynationalizetheindustry 
 		}
@@ -4485,6 +4529,12 @@ add_building_construction = {
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = PRS_focuswest }
+		bypass = { 
+			OR = {
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+		}
 		ai_will_do = {
 			factor = 1
 		}

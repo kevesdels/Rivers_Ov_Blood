@@ -361,6 +361,14 @@
 		x = 2
 		y = 16
 		cost = 5
+		bypass = { 
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+		}
 		available_if_capitulated = yes
 		prerequisite = { focus = GER_massassaulttactics }
 		ai_will_do = {
@@ -2172,6 +2180,12 @@ random_owned_controlled_state = {
 		y = 15
 		cost = 5
 		available_if_capitulated = yes
+		bypass = { 
+			OR = {
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+		}
 		prerequisite = { 
 			focus = GER_autarky 
 		}

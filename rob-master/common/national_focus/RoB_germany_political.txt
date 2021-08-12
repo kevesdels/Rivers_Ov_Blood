@@ -738,8 +738,13 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = GER_modernizeequipment }
-		bypass = {
-		 has_idea = extensive_conscription
+		bypass = { 
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
 		}
 		ai_will_do = {
 			factor = 100
