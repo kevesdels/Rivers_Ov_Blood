@@ -1,0 +1,40 @@
+﻿capital = 1276
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1931.12.19"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 17
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 8
+	authoritharian = 0
+	reactionary = 75
+	pelekist = 0
+}
+
+create_country_leader = {
+	
+	name = "Fu Zuoyi"
+	picture = ""
+	expire = "1965.1.1"
+	ideology = reactionary_subtype
+	traits = {
+
+	}
+}

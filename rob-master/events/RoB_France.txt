@@ -753,7 +753,7 @@ trigger = {
  FRA = { end_puppet = FWA }
  FRA = { end_puppet = FEA }
  FRA = { end_puppet = FIC }
- hidden_effect = {`
+ hidden_effect = {
     every_state = {
     limit = { 
 	 is_core_of = FRA 

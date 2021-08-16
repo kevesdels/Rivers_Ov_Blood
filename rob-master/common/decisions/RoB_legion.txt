@@ -3585,6 +3585,7 @@ LES_easterneurope = {
       NOT = {
          tag = BLR
          is_puppet_of = LES
+         is_in_faction_with = BLR
        }
        BLR = {
         exists = yes
@@ -3629,6 +3630,7 @@ LES_easterneurope = {
       NOT = {
          tag = POL
          is_puppet_of = LES
+         is_in_faction_with = POL
        }
        POL = {
         exists = yes
@@ -3673,6 +3675,7 @@ LES_easterneurope = {
       NOT = {
          tag = UKR
          is_puppet_of = LES
+         is_in_faction_with = UKR
        }
        UKR = {
         exists = yes
@@ -3717,6 +3720,7 @@ LES_easterneurope = {
       NOT = {
          tag = CRO
          is_puppet_of = LES
+         is_in_faction_with = CRO
        }
        CRO = {
         exists = yes
@@ -3761,6 +3765,7 @@ LES_easterneurope = {
       NOT = {
          tag = SLV
          is_puppet_of = LES
+         is_in_faction_with = SLV
        }
        SLV = {
         exists = yes
@@ -3810,10 +3815,16 @@ LES_easterneurope = {
        UKR = {
         exists = yes
        }
-       is_neighbor_of = UKR
    }
    available = {
-    is_neighbor_of = UKR
+    OR = {
+      is_neighbor_of = UKR
+      UKR = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = UKR
      UKR = { is_puppet_of = LES }
@@ -3857,10 +3868,16 @@ LES_easterneurope = {
        BLR = {
         exists = yes
        }
-       is_neighbor_of = BLR
    }
    available = {
-    is_neighbor_of = BLR
+    OR = {
+      is_neighbor_of = BLR
+      BLR = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = BLR
      is_puppet_of = LES
@@ -3904,10 +3921,16 @@ LES_easterneurope = {
        CBR = {
         exists = yes
        }
-       is_neighbor_of = CBR
    }
    available = {
-    is_neighbor_of = CBR
+    OR = {
+      is_neighbor_of = CBR
+      CBR = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = CBR
      CBR = { is_puppet_of = LES }
@@ -3951,10 +3974,16 @@ LES_easterneurope = {
        DBR = {
         exists = yes
        }
-       is_neighbor_of = DBR
    }
    available = {
-    is_neighbor_of = DBR
+    OR = {
+      is_neighbor_of = DBR
+      DSU = {
+        any_neighbor_country = {
+        is_in_faction_with = DBR
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = DBR
      DBR = { is_puppet_of = LES }
@@ -3998,10 +4027,17 @@ LES_easterneurope = {
        DSU = {
         exists = yes
        }
-       is_neighbor_of = DSU
+       
    }
    available = {
-    is_neighbor_of = DSU
+    OR = {
+      is_neighbor_of = DSU
+      DSU = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = DSU
      DSU = { is_puppet_of = LES }
@@ -4045,10 +4081,16 @@ LES_easterneurope = {
        POL = {
         exists = yes
        }
-       is_neighbor_of = POL
    }
    available = {
-    is_neighbor_of = POL
+     OR = {
+      is_neighbor_of = POL
+      POL = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
         OR = {
      is_in_faction_with = POL
@@ -4094,10 +4136,16 @@ LES_easterneurope = {
        CZE = {
         exists = yes
        }
-       is_neighbor_of = CZE
    }
    available = {
-    is_neighbor_of = CZE
+    OR = {
+      is_neighbor_of = CZE
+      CZE = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = CZE
      CZE = { is_puppet_of = LES }
@@ -4141,10 +4189,16 @@ LES_easterneurope = {
        SLO = {
         exists = yes
        }
-       is_neighbor_of = SLO
    }
    available = {
-    is_neighbor_of = SLO
+    OR = {
+      is_neighbor_of = SLO
+      SLO = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = SLO
      SLO = { is_puppet_of = LES }
@@ -4188,10 +4242,16 @@ LES_easterneurope = {
        SLV = {
         exists = yes
        }
-       is_neighbor_of = SLV
    }
    available = {
-    is_neighbor_of = SLV
+    OR = {
+      is_neighbor_of = SLV
+      SLV = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = SLV
      SLV = { is_puppet_of = LES }
@@ -4235,10 +4295,16 @@ LES_easterneurope = {
        HUN = {
         exists = yes
        }
-       is_neighbor_of = HUN
    }
    available = {
-    is_neighbor_of = HUN
+    OR = {
+      is_neighbor_of = HUN
+      HUN = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = HUN
      HUN = { is_puppet_of = LES }
@@ -4282,10 +4348,16 @@ LES_easterneurope = {
        ROM = {
         exists = yes
        }
-       is_neighbor_of = ROM
    }
    available = {
-    is_neighbor_of = ROM
+    OR = {
+      is_neighbor_of = ROM
+      ROM = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = ROM
      ROM = { is_puppet_of = LES }
@@ -4329,10 +4401,16 @@ LES_easterneurope = {
        BUL = {
         exists = yes
        }
-       is_neighbor_of = BUL
    }
    available = {
-    is_neighbor_of = BUL
+    OR = {
+      is_neighbor_of = BUL
+      BUL = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = BUL
      BUL = { is_puppet_of = LES }
@@ -4377,10 +4455,16 @@ LES_easterneurope = {
        SER = {
         exists = yes
        }
-       is_neighbor_of = SER
    }
    available = {
-    is_neighbor_of = SER
+    OR = {
+      is_neighbor_of = SER
+      SER = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = SER
      SER = { is_puppet_of = LES }
@@ -4424,10 +4508,16 @@ LES_easterneurope = {
        CRO = {
         exists = yes
        }
-       is_neighbor_of = CRO
    }
    available = {
-    is_neighbor_of = CRO
+    OR = {
+      is_neighbor_of = CRO
+      CRO = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = CRO
      CRO = { is_puppet_of = LES }
@@ -4471,10 +4561,16 @@ LES_easterneurope = {
        BOS = {
         exists = yes
        }
-       is_neighbor_of = BOS
    }
    available = {
-    is_neighbor_of = BOS
+    OR = {
+      is_neighbor_of = BOS
+      BOS = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = BOS
      BOS = { is_puppet_of = LES }
@@ -4518,10 +4614,16 @@ LES_easterneurope = {
        UKR = {
         exists = yes
        }
-       is_neighbor_of = UKR
    }
    available = {
-    is_neighbor_of = UKR
+    OR = {
+      is_neighbor_of = UKR
+      UKR = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = UKR
      UKR = { is_puppet_of = LES }
@@ -4565,10 +4667,16 @@ LES_easterneurope = {
        EST = {
         exists = yes
        }
-       is_neighbor_of = EST
    }
    available = {
-    is_neighbor_of = EST
+    OR = {
+      is_neighbor_of = EST
+      EST = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
         OR = {
      is_in_faction_with = EST
@@ -4614,10 +4722,16 @@ LES_easterneurope = {
        ECA = {
         exists = yes
        }
-       is_neighbor_of = ECA
    }
    available = {
-    is_neighbor_of = ECA
+    OR = {
+      is_neighbor_of = ECA
+      ECA = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = ECA
      ECA = { is_puppet_of = LES }
@@ -4661,10 +4775,16 @@ LES_easterneurope = {
        ELA = {
         exists = yes
        }
-       is_neighbor_of = ELA
    }
    available = {
-    is_neighbor_of = ELA
+    OR = {
+      is_neighbor_of = ELA
+      ELA = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = ELA
      ELA = { is_puppet_of = LES }
@@ -4708,10 +4828,16 @@ LES_easterneurope = {
        ELP = {
         exists = yes
        }
-       is_neighbor_of = ELP
    }
    available = {
-    is_neighbor_of = ELP
+    OR = {
+      is_neighbor_of = ELP
+      ELP = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = ELP
      ELP = { is_puppet_of = LES }
@@ -4752,13 +4878,19 @@ LES_easterneurope = {
          tag = LAT
          LAT = { is_puppet_of = LES }
        }
-       ELP = {
+       LAT = {
         exists = yes
        }
-       is_neighbor_of = LAT
    }
    available = {
-    is_neighbor_of = LAT
+    OR = {
+      is_neighbor_of = LAT
+      LAT = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = LAT
      LAT = { is_puppet_of = LES }
@@ -4799,13 +4931,19 @@ LES_easterneurope = {
          tag = LPR
          LPR = { is_puppet_of = LES }
        }
-       ELP = {
+       LPR = {
         exists = yes
        }
-       is_neighbor_of = LPR
    }
    available = {
-    is_neighbor_of = LPR
+    OR = {
+      is_neighbor_of = LPR
+      LPR = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = LPR
      LPR = { is_puppet_of = LES }
@@ -4846,13 +4984,19 @@ LES_easterneurope = {
          tag = LDF
          LDF = { is_puppet_of = LES }
        }
-       ELP = {
+       LDF = {
         exists = yes
        }
-       is_neighbor_of = LDF
    }
    available = {
-    is_neighbor_of = LDF
+    OR = {
+      is_neighbor_of = LDF
+      LDF = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = LDF
      LDF = { is_puppet_of = LES }
@@ -4896,10 +5040,16 @@ LES_easterneurope = {
        LNC = {
         exists = yes
        }
-       is_neighbor_of = LNC
    }
    available = {
-    is_neighbor_of = LNC
+    OR = {
+      is_neighbor_of = LNC
+      LNC = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = LNC
      LNC = { is_puppet_of = LES }
@@ -4943,10 +5093,16 @@ LES_easterneurope = {
        LIT = {
         exists = yes
        }
-       is_neighbor_of = LIT
    }
    available = {
-    is_neighbor_of = LIT
+    OR = {
+      is_neighbor_of = LIT
+      LIT = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = LIT
      LIT = { is_puppet_of = LES }
@@ -5002,6 +5158,14 @@ LES_easterneurope = {
      ITA = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
+    OR = {
+      is_neighbor_of = ITA
+      ITA = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
     has_war = no
    }
    ai_will_do = {
@@ -5048,6 +5212,14 @@ LES_easterneurope = {
      PRS = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
+    OR = {
+      is_neighbor_of = PRS
+      PRS = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
     has_war = no
    }
    ai_will_do = {
@@ -5094,6 +5266,14 @@ LES_easterneurope = {
      has_country_flag = LES_ee_justifying
     }
     has_war = no
+    OR = {
+      is_neighbor_of = GER
+      GER = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
    }
    ai_will_do = {
     base = 8
@@ -5121,7 +5301,7 @@ LES_easterneurope = {
    }
    }
 
-    ### WHO EVER OWNS THRACE AND MACEDONIA
+    ### WHO EVER OWNS THRACE AND MACEDONIA (needs to made like that)
     les_ee_gre = {
       target_trigger = { FROM = {tag = GRE } }
       visible = {
@@ -5139,6 +5319,14 @@ LES_easterneurope = {
        GRE = { is_puppet_of = LES }
        has_country_flag = LES_ee_justifying
       }
+      OR = {
+        is_neighbor_of = GRE
+        GRE = {
+          any_neighbor_country = {
+          is_in_faction_with = LES
+          }
+        }
+       }
       has_war = no
      }
      ai_will_do = {
@@ -5178,7 +5366,6 @@ LES_easterneurope = {
        FIN = {
         exists = yes
        }
-       is_neighbor_of = FIN
    }
    available = {
     is_neighbor_of = FIN
@@ -5187,6 +5374,14 @@ LES_easterneurope = {
      FIN = { is_puppet_of = LES }
      has_country_flag = LES_ee_justifying
     }
+    OR = {
+      is_neighbor_of = FIN
+      FIN = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
     has_war = no
    }
    ai_will_do = {
@@ -7091,13 +7286,19 @@ LES_caucasus = {
         GEO = {
          exists = yes
         }
-        is_neighbor_of = GEO
     }
     available = {
       GEO = {
          exists = yes
         }
-     is_neighbor_of = GEO
+        OR = {
+          is_neighbor_of = GEO
+          GEO = {
+            any_neighbor_country = {
+            is_in_faction_with = LES
+            }
+          }
+         }
      NOT = {
       is_in_faction_with = GEO
       is_puppet_of = LES
@@ -7130,13 +7331,19 @@ LES_caucasus = {
           AZR = {
            exists = yes
           }
-          is_neighbor_of = AZR
       }
       available = {
         AZR = {
            exists = yes
           }
-       is_neighbor_of = AZR
+          OR = {
+            is_neighbor_of = AZR
+            AZR = {
+              any_neighbor_country = {
+              is_in_faction_with = LES
+              }
+            }
+           }
        NOT = {
         is_in_faction_with = AZR
         is_puppet_of = LES
@@ -7170,13 +7377,19 @@ LES_caucasus = {
             DAG = {
              exists = yes
             }
-            is_neighbor_of = DAG
         }
         available = {
           DAG = {
              exists = yes
             }
-         is_neighbor_of = DAG
+            OR = {
+              is_neighbor_of = DAG
+              DAG = {
+                any_neighbor_country = {
+                is_in_faction_with = LES
+                }
+              }
+             }
          NOT = {
           is_in_faction_with = AZR
           is_puppet_of = LES
@@ -7209,13 +7422,19 @@ LES_caucasus = {
             CHE = {
              exists = yes
             }
-            is_neighbor_of = CHE
         }
         available = {
           CHE = {
              exists = yes
             }
-         is_neighbor_of = CHE
+            OR = {
+              is_neighbor_of = CHE
+              CHE = {
+                any_neighbor_country = {
+                is_in_faction_with = LES
+                }
+              }
+             }
          NOT = {
           is_in_faction_with = CHE
           is_puppet_of = LES
@@ -7248,13 +7467,19 @@ LES_caucasus = {
             CHE = {
              exists = yes
             }
-            is_neighbor_of = MRP
         }
         available = {
           MRP = {
              exists = yes
             }
-         is_neighbor_of = MRP
+            OR = {
+              is_neighbor_of = MRP
+              MRP = {
+                any_neighbor_country = {
+                is_in_faction_with = LES
+                }
+              }
+             }
          NOT = {
           is_in_faction_with = MRP
           is_puppet_of = LES
@@ -7482,13 +7707,19 @@ LES_central_asia ={
         KAZ = {
          exists = yes
         }
-        is_neighbor_of = KAZ
     }
     available = {
       KAZ = {
          exists = yes
         }
-     is_neighbor_of = KAZ
+        OR = {
+          is_neighbor_of = KAZ
+          KAZ = {
+            any_neighbor_country = {
+            is_in_faction_with = LES
+            }
+          }
+         }
      NOT = {
       is_in_faction_with = KAZ
       is_puppet_of = LES
@@ -7521,13 +7752,19 @@ LES_central_asia ={
         KZR = {
          exists = yes
         }
-        is_neighbor_of = KZR
     }
     available = {
       KZR = {
          exists = yes
         }
-     is_neighbor_of = KZR
+        OR = {
+          is_neighbor_of = KZR
+          KZR = {
+            any_neighbor_country = {
+            is_in_faction_with = LES
+            }
+          }
+         }
      NOT = {
       is_in_faction_with = KZR
       is_puppet_of = LES
@@ -7560,13 +7797,19 @@ LES_central_asia ={
         UZB = {
          exists = yes
         }
-        is_neighbor_of = UZB
     }
     available = {
       UZB = {
          exists = yes
         }
-     is_neighbor_of = UZB
+        OR = {
+          is_neighbor_of = UZB
+          UZB = {
+            any_neighbor_country = {
+            is_in_faction_with = LES
+            }
+          }
+         }
      NOT = {
       is_in_faction_with = UZB
       is_puppet_of = LES
@@ -7599,13 +7842,19 @@ LES_central_asia ={
           KHV = {
            exists = yes
           }
-          is_neighbor_of = KHV
       }
       available = {
         KHV = {
            exists = yes
           }
-       is_neighbor_of = KHV
+          OR = {
+            is_neighbor_of = KHV
+            KHV = {
+              any_neighbor_country = {
+              is_in_faction_with = LES
+              }
+            }
+           }
        NOT = {
         is_in_faction_with = KHV
         is_puppet_of = LES
@@ -7638,13 +7887,19 @@ LES_central_asia ={
             KYR = {
              exists = yes
             }
-            is_neighbor_of = KYR
         }
         available = {
           KYR = {
              exists = yes
             }
-         is_neighbor_of = KYR
+            OR = {
+              is_neighbor_of = KYR
+              KYR = {
+                any_neighbor_country = {
+                is_in_faction_with = LES
+                }
+              }
+             }
          NOT = {
           is_in_faction_with = KYR
           is_puppet_of = LES
@@ -7677,13 +7932,19 @@ LES_central_asia ={
               TMS = {
                exists = yes
               }
-              is_neighbor_of = TMS
           }
           available = {
             TMS = {
                exists = yes
               }
-           is_neighbor_of = TMS
+              OR = {
+                is_neighbor_of = TMS
+                TMS = {
+                  any_neighbor_country = {
+                  is_in_faction_with = LES
+                  }
+                }
+               }
            NOT = {
             is_in_faction_with = TMS
             is_puppet_of = LES
@@ -7716,13 +7977,19 @@ LES_central_asia ={
                 TRS = {
                  exists = yes
                 }
-                is_neighbor_of = TRS
             }
             available = {
               TRS = {
                  exists = yes
                 }
-             is_neighbor_of = TRS
+                OR = {
+                  is_neighbor_of = TRS
+                  TRS = {
+                    any_neighbor_country = {
+                    is_in_faction_with = LES
+                    }
+                  }
+                 }
              NOT = {
               is_in_faction_with = TRS
               is_puppet_of = LES
@@ -8131,11 +8398,17 @@ LES_far_east = {
        JVD = {
         exists = yes
        }
-       is_neighbor_of = JVD
   
    }
    available = {
-    is_neighbor_of = JVD
+    OR = {
+      is_neighbor_of = JVD
+      JVD = {
+        any_neighbor_country = {
+        is_in_faction_with = LES
+        }
+      }
+     }
       NOT = {
      is_in_faction_with = JVD
      is_puppet_of = LES
