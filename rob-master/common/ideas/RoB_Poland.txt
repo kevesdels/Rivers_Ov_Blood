@@ -313,8 +313,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-			industrial_capacity_factory = 0.1
-			production_factory_max_efficiency_factor = 0.07
+			industrial_capacity_factory = 0.07
+			production_factory_max_efficiency_factor = 0.03
 			}
 		}
 
@@ -494,7 +494,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-			political_power_gain = 0.25
+			political_power_gain = -0.25
 			stability_factor = 0.05
 			war_support_factor = 0.05
 			}
@@ -569,7 +569,7 @@ ideas = {
 
 			modifier = {
 			stability_factor = 0.05
-			trade_opinion_factor = 0.50
+			trade_opinion_factor = 0.25
 			}
 		}
 
@@ -961,6 +961,39 @@ ideas = {
 
 			modifier = {
 			research_speed_factor = 0.05
+			}
+		}
+		pol_soc_martyrs = {
+			picture = GFX_idea_pol_soc_martyrs
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			max_surrender_limit_offset = 0.50
+			}
+		}
+		pol_nationalism_supressed = {
+			picture = GFX_idea_pol_soc_martyrs
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				pelekist_drift = -0.05
+				reactionary_drift = -0.05
 			}
 		}
 	}

@@ -12,9 +12,11 @@
 		infantry = { x = 2 y = 0 }
 		infantry = { x = 2 y = 1 }
 		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
 	}
 	support = {
         recon = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
 	}
 }
 division_template = {
@@ -31,9 +33,11 @@ division_template = {
 		mountaineers = { x = 2 y = 0 }	
 		mountaineers = { x = 2 y = 1 }	
 		mountaineers = { x = 2 y = 2 }	
+		mountaineers = { x = 2 y = 3 }	
 	}
 	support = {
         recon = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
 	}
 }
 division_template = {
@@ -44,6 +48,9 @@ division_template = {
 		cavalry = { x = 0 y = 0 }
 		cavalry = { x = 0 y = 1 }
 		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
 	}
 	support = {
 		recon = { x = 0 y = 0 }     
@@ -62,7 +69,7 @@ units = {
 		location = 389
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1
 
 	}
 	division= {	# "16 Dywizja Piechoty"
@@ -73,7 +80,7 @@ units = {
 		location = 9263
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1
 
 	}
 
@@ -86,7 +93,7 @@ units = {
 		location = 6558
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1
 
 	}
 	division= {	# "17 Dywizja Piechoty"
@@ -97,7 +104,7 @@ units = {
 		location = 11232
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.8
 
 	}
 	division= {	# "25 Dywizja Piechoty"
@@ -108,7 +115,7 @@ units = {
 		location = 3381
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.7
 
 	}
 	division= {	# "Podolska B.K."
@@ -120,7 +127,7 @@ units = {
 		division_template = "Brygada Kawalerii" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "POL" } }
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.6
 
 	}
 	division= {	# "Wielkopolska B.K."
@@ -132,7 +139,7 @@ units = {
 		division_template = "Brygada Kawalerii" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "POL" } }
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.6
 
 	}
 
@@ -145,7 +152,7 @@ units = {
 		location = 9508
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.8
 
 	}
 	division= {	# "7 Dywizja Piechoty"
@@ -156,7 +163,7 @@ units = {
 		location = 9508
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.8
 
 	}
 	division= {	# "10 Dywizja Piechoty"
@@ -167,7 +174,7 @@ units = {
 		location = 9508
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.8
 
 	}
 	division= {	# "Kresowa B.K."
@@ -179,7 +186,7 @@ units = {
 		division_template = "Brygada Kawalerii" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "POL" } }
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.7
 
 	}
 	division= {	# "Wolynska B.K."
@@ -191,7 +198,7 @@ units = {
 		division_template = "Brygada Kawalerii" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "POL" } }
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.7
 
 	}
 
@@ -204,7 +211,7 @@ units = {
 		location = 9427
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.9
 
 	}
 	division= {	# "21 Dywizja Piechoty Górskiej"
@@ -238,7 +245,7 @@ units = {
 		division_template = "Brygada Kawalerii" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "POL" } }
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.6
 
 	}
 
@@ -262,7 +269,7 @@ units = {
 		location = 3544
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1
 
 	}
 	division= {	# "28 Dywizja Piechoty"
@@ -285,7 +292,7 @@ units = {
 		division_template = "Brygada Kawalerii" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "POL" } }
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1
 
 	}
 	division= {	# "Mazowiecka B.K."
@@ -297,7 +304,7 @@ units = {
 		division_template = "Brygada Kawalerii" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "POL" } }
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.5
 
 	}
 
@@ -433,18 +440,18 @@ air_wings = {
 	10 = { 
 		fighter_equipment_0 =  {
 			owner = "POL" 
-			amount = 108
+			amount = 100
 		}
 		
 	}
 	86 = { 
 		fighter_equipment_0 =  {
 			owner = "POL" 
-			amount = 54
+			amount = 100
 		}
 		CAS_equipment_1 =  {
 			owner = "POL" 
-			amount = 22
+			amount = 100
 		}
 	}
 }
@@ -462,6 +469,17 @@ instant_effect = {
 		progress = 0.20
 		efficiency = 100
 	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 2
+		progress = 0.2
+		efficiency = 100
+	}
+
 	add_equipment_production = {
 		equipment = {
 			type = support_equipment_1

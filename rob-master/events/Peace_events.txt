@@ -19,19 +19,19 @@ country_event = {
       tag = BWR
       tag = TOW
     }
-    at_war_with = JAP
-      AND = { JAP = { owns_state = 909 } controls_state = 909 }
-      AND = { JAP = { owns_state = 527 } controls_state = 527 }
-      AND = { JAP = { owns_state = 908 } controls_state = 908 }
-      AND = { JAP = { owns_state = 907 } controls_state = 907 }
-      AND = { JAP = { owns_state = 525 } controls_state = 525 }
-      AND = { JAP = { owns_state = 903 } controls_state = 903 }
-      AND = { JAP = { owns_state = 906 } controls_state = 906 }
-      AND = { JAP = { owns_state = 905 } controls_state = 905 }
-      AND = { JAP = { owns_state = 904 } controls_state = 904 }
-      AND = { JAP = { owns_state = 745 } controls_state = 745 }
-      AND = { JAP = { owns_state = 743 } controls_state = 743 }
-      AND = { JAP = { owns_state = 902 } controls_state = 902 }
+    ROOT = { at_war_with = JAP }
+      AND = { JAP = { owns_state = 909 } ROOT = { controls_state = 909 } }
+      AND = { JAP = { owns_state = 527 } ROOT = { controls_state = 527 } }
+      AND = { JAP = { owns_state = 908 } ROOT = { controls_state = 908 } }
+      AND = { JAP = { owns_state = 907 } ROOT = { controls_state = 907 } }
+      AND = { JAP = { owns_state = 525 } ROOT = { controls_state = 525 } }
+      AND = { JAP = { owns_state = 903 } ROOT = { controls_state = 903 } }
+      AND = { JAP = { owns_state = 906 } ROOT = { controls_state = 906 } }
+      AND = { JAP = { owns_state = 905 } ROOT = { controls_state = 905 } }
+      AND = { JAP = { owns_state = 904 } ROOT = { controls_state = 904 } }
+      AND = { JAP = { owns_state = 745 } ROOT = { controls_state = 745 } }
+      AND = { JAP = { owns_state = 743 } ROOT = { controls_state = 743 } }
+      AND = { JAP = { owns_state = 902 } ROOT = { controls_state = 902 } }
   }
   mean_time_to_happen = { days = 1 }
   
@@ -143,7 +143,7 @@ country_event = {
   desc = "The Polish military forces have been defeated and so, the Americans should no longer bother supporting them."
   fire_only_once = yes
   trigger = {
-    at_war_with = USA
+    ROOT = { at_war_with = USA }
     USA = { has_country_flag = pol_usa_support }
     OR = {
       AND = {
@@ -409,7 +409,7 @@ country_event = {
         }
       }
     }
-    at_war_with = ITA
+    ROOT = { at_war_with = ITA }
 
     OR = {
       AND = {

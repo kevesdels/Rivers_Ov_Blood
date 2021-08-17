@@ -75,7 +75,7 @@ focus_tree = {
 		id = POL_restore_the_polishlithuanian_commonwealth
 		icon = GFX_POL_restore_the_polishlithuanian_commonwealth
 		x = 29
-		y = 7
+		y = 8
 		cost = 5
 		search_filters = {
 			
@@ -126,12 +126,13 @@ focus_tree = {
 		}
 	}
 
+
 	#Defend the Proletariat
 
 	focus = {
 		id = POL_defend_the_proletariat
 		icon = GFX_POL_defend_the_proletariat
-		x = 6
+		x = 5
 		y = 5
 		cost = 5
 		search_filters = {
@@ -143,7 +144,7 @@ focus_tree = {
 		ai_will_do = {
      	base = 8
  	 	}
-		prerequisite = { focus = POL_empower_the_trade_unions  }
+		prerequisite = { focus = POL_socialist_identity  }
 		completion_reward = {
 			add_ideas  = {
 				pol_proletarian_culture
@@ -156,7 +157,7 @@ focus_tree = {
 	focus = {
 		id = POL_reform_the_economy
 		icon = GFX_POL_reform_the_economy
-		x = 8
+		x = 7
 		y = 4
 		cost = 5
 		search_filters = {
@@ -200,7 +201,7 @@ focus_tree = {
 	focus = {
 		id = POL_oppose_nationalism
 		icon = GFX_POL_oppose_nationalism
-		x = 8
+		x = 6
 		y = 1
 		cost = 5
 		search_filters = {
@@ -314,7 +315,7 @@ focus_tree = {
 	focus = {
 		id = POL_the_polish_socialist_party
 		icon = GFX_POL_the_polish_socialist_party
-		x = 7
+		x = 5
 		y = 2
 		cost = 5
 		search_filters = {
@@ -325,6 +326,7 @@ focus_tree = {
 		ai_will_do = {
      	base = 3
  	 	}
+		  mutually_exclusive = { focus = POL_bolshevist_takeover  }
 		prerequisite = { focus = POL_oppose_nationalism  }
 		completion_reward = {
 		set_politics = {
@@ -354,8 +356,8 @@ focus_tree = {
 	focus = {
 		id = POL_bolshevist_takeover
 		icon = GFX_POL_bolshevist_takeover
-		x = 6
-		y = 3
+		x = 7
+		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 0
@@ -365,8 +367,8 @@ focus_tree = {
 						FOCUS_FILTER_POLITICAL
 					
 		}
-		prerequisite = { focus = POL_the_polish_socialist_party  }
-		mutually_exclusive = { focus = POL_provide_for_the_people  }
+		prerequisite = { focus = POL_oppose_nationalism  }
+		mutually_exclusive = { focus = POL_the_polish_socialist_party  }
 		completion_reward = {
 			custom_effect_tooltip = pol_tt_1
 		}
@@ -377,7 +379,7 @@ focus_tree = {
 	focus = {
 		id = POL_provide_for_the_people
 		icon = GFX_POL_provide_for_the_people
-		x = 8
+		x = 5
 		y = 3
 		cost = 5
 		search_filters = {
@@ -389,7 +391,6 @@ focus_tree = {
      	base = 10
  	 	}
 		prerequisite = { focus = POL_the_polish_socialist_party  }
-		mutually_exclusive = { focus = POL_bolshevist_takeover  }
 		completion_reward = {
 			add_popularity = { ideology = national_socialist   popularity = -0.12 }
 			add_popularity = { ideology = authoritharian   popularity = -0.04 }
@@ -400,12 +401,37 @@ focus_tree = {
 		}
 	}
 
+	
+	#Socialist identity
+
+	focus = {
+		id = POL_socialist_identity
+		icon = GFX_POL_socialist_identity
+		x = 5
+		y = 4
+		cost = 5
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
+		prerequisite = { focus = POL_provide_for_the_people  }
+		completion_reward = {
+			add_ideas = {
+				pol_nationalism_supressed
+			}
+		}
+	}
+
 	#Empower the Trade Unions
 
 	focus = {
 		id = POL_empower_the_trade_unions
 		icon = GFX_POL_empower_the_trade_unions
-		x = 6
+		x = 3
 		y = 4
 		cost = 5
 		search_filters = {
@@ -421,18 +447,65 @@ focus_tree = {
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 0.5
-				uses = 1
+				uses = 2
 				category = industry
 			}
 		}
 	}
+
+	
+	#Gunns for party members
+
+	focus = {
+		id = POL_guns_for_party_members
+		icon = GFX_POL_guns_for_party_members
+		x = 3
+		y = 5
+		cost = 5
+		search_filters = {
+			
+						FOCUS_FILTER_POLITICAL
+					
+		}
+		ai_will_do = {
+     	base = 10
+ 	 	}
+		prerequisite = { focus = POL_empower_the_trade_unions  }
+		completion_reward = {
+		add_war_support = 0.1
+		}
+	}
+
+		#Idolize Martyrs
+
+		focus = {
+			id = POL_idolize_martyrs
+			icon = GFX_POL_idolize_martyrs
+			x = 3
+			y = 6
+			cost = 5
+			search_filters = {
+				
+							FOCUS_FILTER_POLITICAL
+						
+			}
+			ai_will_do = {
+			 base = 10
+			  }
+			prerequisite = { focus = POL_guns_for_party_members  }
+			completion_reward = {
+				add_ideas = {
+					pol_soc_martyrs
+				}
+			}
+		}
 
 	#Revise Leninist Theories
 
 	focus = {
 		id = POL_revise_leninist_theories
 		icon = GFX_POL_revise_leninist_theories
-		x = 6
+		x = 5
 		y = 6
 		cost = 5
 		search_filters = {
@@ -455,7 +528,7 @@ focus_tree = {
 	focus = {
 		id = POL_proclaim_the_socialist_republic
 		icon = GFX_POL_proclaim_the_socialist_republic
-		x = 8
+		x = 7
 		y = 5
 		cost = 5
 		search_filters = {
@@ -479,7 +552,7 @@ focus_tree = {
 	focus = {
 		id = POL_secularise_the_state
 		icon = GFX_POL_secularise_the_state
-		x = 8
+		x = 7
 		y = 6
 		cost = 5
 		search_filters = {
@@ -491,7 +564,6 @@ focus_tree = {
      	base = 8
  	 	}
 		prerequisite = { focus = POL_proclaim_the_socialist_republic }
-		prerequisite = { focus = POL_defend_the_proletariat  }
 		completion_reward = {
 			add_ideas = { 
 				pol_secularization
@@ -504,7 +576,7 @@ focus_tree = {
 	focus = {
 		id = POL_from_the_ministry_of_public_security
 		icon = GFX_POL_from_the_ministry_of_public_security
-		x = 7
+		x = 5
 		y = 7
 		cost = 5
 		search_filters = {
@@ -516,6 +588,8 @@ focus_tree = {
      	base = 8
  	 	}
 		prerequisite = { focus = POL_secularise_the_state  }
+		prerequisite = { focus = POL_revise_leninist_theories  }
+		prerequisite = { focus = POL_idolize_martyrs  }
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.1
@@ -3328,7 +3402,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { BLR = { exists = yes } }
-				create_wargoal = { target = DBR  type = liberate_wargoal }
+				create_wargoal = { target = BLR  type = liberate_wargoal }
 			}
 		}
 	}
@@ -3376,11 +3450,11 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { UKR = { exists = yes } }
-				create_wargoal = { target = DBR  type = liberate_wargoal }
+				create_wargoal = { target = UKR  type = liberate_wargoal }
 			}
 			if = {
 				limit = { FTT = { exists = yes } }
-				create_wargoal = { target = DBR  type = liberate_wargoal }
+				create_wargoal = { target = FTT  type = liberate_wargoal }
 			}
 		}
 	}
@@ -4441,7 +4515,7 @@ focus_tree = {
 		icon = GFX_POL_begin_the_15_year_plan
 		x = 38
 		y = 7
-		cost = 5
+		cost = 10
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -4523,7 +4597,7 @@ focus_tree = {
 		icon = GFX_POL_large_scale_infrastructure_upgrades
 		x = 37
 		y = 8
-		cost = 5
+		cost = 10
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -4650,7 +4724,7 @@ focus_tree = {
 		icon = GFX_POL_agricultural_advances
 		x = 39
 		y = 8
-		cost = 5
+		cost = 10
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -4669,7 +4743,7 @@ focus_tree = {
 		icon = GFX_POL_higher_education_standarts
 		x = 38
 		y = 9
-		cost = 5
+		cost = 10
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
@@ -4689,7 +4763,7 @@ focus_tree = {
 		icon = GFX_POL_commercial_hub_expansion
 		x = 38
 		y = 10
-		cost = 5
+		cost = 10
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
