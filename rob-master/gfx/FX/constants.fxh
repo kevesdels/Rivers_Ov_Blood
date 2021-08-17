@@ -37,9 +37,9 @@ static const float3 NightAmbientNegZ = float3(0.8, 0.8, 0.8);  // bottom
 // --------------------------------------------------------------
 // ------------------    Specular       -------------------------
 // --------------------------------------------------------------
-static const float SPECULAR_WIDTH 				= 25.0;
-static const float SPECULAR_MULTIPLIER			= 2.0;
-static const float MAP_SPECULAR_WIDTH			= 25.0;
+static const float SPECULAR_WIDTH 				= 15.0;
+static const float SPECULAR_MULTIPLIER			= 1.0;
+static const float MAP_SPECULAR_WIDTH			= 15.0;
 
 // --------------------------------------------------------------
 // ------------------    TERRAIN        -------------------------
@@ -194,7 +194,7 @@ static const float GB_THRESHOLD = 0.05f; // interpolation time
 static const float GB_THRESHOLD2 = 0.25f; // interpolation time
 //static const float3 GB_OUTLINE_COLOR = float3( 0.0f, 0.0f, 0.0f );
 static const float GB_OUTLINE_CUTOFF_SEA = 0.990f; // Magic number to balance cutoff on edges without neighbor (over Sea)
-static const float GB_OPACITY_NEAR = 0.5f; // Transparency when camera is near
+static const float GB_OPACITY_NEAR = 0.7f; // Transparency when camera is near
 static const float GB_OPACITY_FAR = 0.85f;  // Transparency when camera is far
 static const float BORDER_NIGHT_DESATURATION_MAX = 0.2f; // how much border colors can get desaturated at night. 1.0f is full grey
 static const float BORDER_FOW_REMOVAL_FACTOR = .5f; // How much of the FOW that is removed from the borders. 1.0f is no FOW
