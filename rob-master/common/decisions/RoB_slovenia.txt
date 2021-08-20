@@ -33,6 +33,9 @@ SLV_recruit_in_maribor = {
 ###if we take all our shit
 SLV_peace = {
 	fire_only_once = yes
+	visibile = {
+		not = { has_country_flag = slv_p_aus}
+	}
   	available = {
     not = { has_country_flag = slv_p_aus}
     OR = {
@@ -89,6 +92,9 @@ SLV_peace = {
 }
 ###if Austrian republic dies
 SLV_peace_2 = {
+	visibile = {
+		not = { has_country_flag = slv_p_aus}
+	}
 	fire_only_once = yes
   	available = {
     not = { has_country_flag = slv_p_aus}

@@ -53,7 +53,7 @@ units = {
 		location = 6287  # Copenhagen
 		division_template = "Infanteri Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.8
 
 	}
 	division = { # "2. Sjællandske Division"
@@ -64,9 +64,19 @@ units = {
 		location = 3325  # Odense
 		division_template = "Infanteri Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.8
 
 	}
+
+	division = { # "3. Sjællandske Division"
+		name = "3. Sjællandske Division"
+		location = 3325  # Odense
+		division_template = "Infanteri Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}
+
 	division = { # "1. Jyske Division"
 		division_name = {
 				is_name_ordered = yes
@@ -75,7 +85,7 @@ units = {
 		location = 394  # Aalborg
 		division_template = "Infanteri Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.8
 
 	}
 	division = { 
@@ -83,7 +93,7 @@ units = {
 		location = 11251  # Sonderborg
 		division_template = "Binær Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.8
 
 	}
 

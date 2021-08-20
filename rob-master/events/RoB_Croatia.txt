@@ -24,6 +24,8 @@ mean_time_to_happen = { days = 2 }
 
 option = { ###Declare war on Serbia
 name = croatia.1.a
+create_faction = "Neretva Alliance"
+add_to_faction = BOS
 declare_war_on = { type = annex_everything target = SER }
 ai_chance = {
 			factor = 200
