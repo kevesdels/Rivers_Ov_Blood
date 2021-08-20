@@ -351,7 +351,7 @@ deutsche_volksarmee_ds = {
  
  }
  GER_nazbol_agriculture = {
- picture = GFX_idea_rampant_corruption
+ picture = GFX_idea_GER_nazbol_agriculture
  allowed = {
        always = no
      }
@@ -366,7 +366,7 @@ deutsche_volksarmee_ds = {
  
  }
  GER_nazbol_decentralization = {
- picture = GFX_idea_rampant_corruption
+ picture = GFX_idea_GER_nazbol_decentralization
  allowed = {
        always = no
      }
@@ -381,7 +381,7 @@ deutsche_volksarmee_ds = {
  
  }
  GER_nazbol_resources = {
- picture = GFX_idea_rampant_corruption
+ picture = GFX_idea_GER_nazbol_resources
  allowed = {
        always = no
      }
@@ -396,7 +396,7 @@ deutsche_volksarmee_ds = {
  
  }
  GER_nazbol_autarky = {
- picture = GFX_idea_rampant_corruption
+ picture = GFX_idea_GER_nazbol_autarky
  allowed = {
        always = no
      }
@@ -412,7 +412,7 @@ deutsche_volksarmee_ds = {
  
  }
  GER_nazbol_rebuilding = {
- picture = GFX_idea_rampant_corruption
+ picture = GFX_idea_GER_nazbol_rebuilding
  allowed = {
        always = no
      }
@@ -423,11 +423,26 @@ deutsche_volksarmee_ds = {
 		modifier = {
 		industry_repair_factor = 0.1
 		production_speed_buildings_factor = 0.15
+
+	}	
+ } 
+
+ GER_rural_education = {
+	picture = GFX_idea_GER_rural_education
+	allowed = {
+		  always = no
+		}
+		allowed_civil_war = {
+				   always = yes
+			   }
+			   removal_cost = -1
+		   modifier = {
+			research_speed_factor = 0.025
+   }
 }	
- 
- }
+
  GER_lux_industry = {
- picture = GFX_idea_rampant_corruption
+ picture = GFX_idea_GER_lux_industry
  allowed = {
        always = no
      }
@@ -442,7 +457,7 @@ deutsche_volksarmee_ds = {
  
  }
  GER_ds_cities = {
- picture = GFX_idea_rampant_corruption
+ picture = GFX_idea_GER_ds_cities
  allowed = {
        always = no
      }
@@ -457,7 +472,7 @@ deutsche_volksarmee_ds = {
  
  }
  GER_ds_worker_corparatives = {
- picture = GFX_idea_rampant_corruption
+ picture = GFX_idea_GER_ds_worker_corparatives
  allowed = {
        always = no
      }
@@ -472,7 +487,7 @@ deutsche_volksarmee_ds = {
  
  }
  GER_ds_volkslufhansa = {
- picture = GFX_idea_rampant_corruption
+ picture = GFX_idea_GER_ds_volkslufhansa
  allowed = {
        always = no
      }
