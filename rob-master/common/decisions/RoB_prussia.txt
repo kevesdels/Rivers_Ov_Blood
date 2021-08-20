@@ -381,24 +381,28 @@ LIT = {
       date > 1936.1.1
       has_war = no
     }
-    any_country = { AND = { owns_state = 1266  at_war_with = PRS }  NOT = { tag = PRS } }
+    any_country = { AND = { OR = { controls_state = 1266 controls_state = 190 controls_state = 881 controls_state = 1010 controls_state = 880 controls_state = 12 }  at_war_with = PRS }  NOT = { tag = PRS } }
       }
    has_country_leader = {
     name = "Vydūnas"
     ruling_only = yes
    }
-LAT = {
-   NOT = { 
-	exists = yes
-   }
- }
 }   
   complete_effect = {
-  PRS = { declare_war_on = { target = EST type = annex_everything } }
+    every_country = {
+      limit = {  OR = { controls_state = 1266 controls_state = 190 controls_state = 881 controls_state = 1010 controls_state = 880 controls_state = 12 } NOT = { tag = PRS is_puppet_of = PRS } }
+      PRS = { 
+        create_wargoal = {
+          type = annex_everything		
+          target = PREV
+        }			
+      }
+    }
     every_state = {
     limit = { is_core_of = LAT }
 	add_core_of = PRS
 }
+ 1266 = { add_core_of = PRS }
  }
  }
 

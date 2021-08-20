@@ -134,6 +134,7 @@ GER_german_expansion = {
     add_state_core = 69
     add_state_core = 886
     add_state_core = 887
+    add_state_core = 888
     add_state_core = 69
     add_state_core = 74
     }
@@ -259,7 +260,7 @@ GER_german_expansion = {
  
  complete_effect = {
   every_country = {
-    limit = {  OR = { controls_state = 865 controls_state = 86 controls_state = 801 controls_state = 66 controls_state = 803 controls_state = 67 controls_state = 762 } NOT = { tag = GER is_puppet_of = GER } }
+    limit = {  OR = { controls_state = 865 controls_state = 86 controls_state = 802 controls_state = 801 controls_state = 66 controls_state = 803 controls_state = 67 controls_state = 762 } NOT = { tag = GER is_puppet_of = GER } }
     GER = { 
       create_wargoal = {
         type = annex_everything		
@@ -273,6 +274,7 @@ GER_german_expansion = {
      66 = { add_core_of = GER }
      803 = { add_core_of = GER }
      67 = { add_core_of = GER }
+     802 = { add_core_of = GER }
      762 = { add_core_of = GER }
    
  }
@@ -757,13 +759,32 @@ GER_german_export_revolution = {
     }
  fire_only_once = yes
  available = {
-   date > 1939.1.1
-   RHN = { exists = yes }
-   has_war = no
+   OR = {
+     AND = {
+      date > 1939.1.1
+      RHN = { exists = yes }
+      has_war = no
+     }
+     AND = {
+      RHN = { exists = yes }
+      has_war_with = FRA
+     }
+   }
   }
   
   complete_effect = {
-    FRA = { country_event = { id = spartakus_germany.29 days = 2 } } 
+    if = {
+      limit = {
+        has_war_with = FRA
+      }
+      GER = { declare_war_on = { target = RHN  type = annex_everything } }
+    }
+    if = {
+      limit = {
+        NOT = { has_war_with = FRA }
+      }
+      FRA = { country_event = { id = spartakus_germany.29 days = 2 } }
+    } 
  }
  }
  
@@ -776,8 +797,13 @@ GER_german_export_revolution = {
  fire_only_once = yes
  
  available = {
-  date > 1939.6.1
-  has_war = no
+   OR = {
+     AND = {
+      date > 1939.6.1
+      has_war = no
+     }
+    has_war_with = FRA
+   }
   custom_trigger_tooltip	= {
    tooltip = "Danish straits have been secured"
    OR = {
