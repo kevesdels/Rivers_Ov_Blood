@@ -1,0 +1,44 @@
+﻿###########################
+# City Fall Event
+###########################
+
+add_namespace = rob_cityfall
+
+
+###Fall of Konings
+###country_event = {
+  id = rob_cityfall.0
+  title = rob_cityfall.0.t
+  desc = rob_cityfall.0.d
+  fire_only_once = yes
+  trigger = {
+
+  }
+  mean_time_to_happen = { days = 1 }
+  
+  ###Okei
+  option = {
+    name = rob_cityfall.0.a
+
+    }
+  }
+
+###Fall of Moscow
+###country_event = {
+  id = rob_cityfall.1
+  title = rob_cityfall.1.t
+  desc = rob_cityfall.1.d
+  fire_only_once = yes
+  trigger = {
+
+  }
+  mean_time_to_happen = { days = 1 }
+  
+  ###Okei
+  option = {
+    name = rob_cityfall.1.a
+
+    }
+  }
+
+  

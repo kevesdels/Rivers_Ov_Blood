@@ -1,6 +1,6 @@
 focus_tree = {
 	id = rob-pol-national-camp
-	continuous_focus_position = { x = 0 y = 1000 } 
+	continuous_focus_position = { x = 0 y = 1500 } 
 	country = {
 		factor = 0
 		modifier = {
@@ -34,22 +34,7 @@ focus_tree = {
 		prerequisite = { focus = xxx_idealization_of_our_heros  }
 		completion_reward = {
 			add_stability = 0.05
-
-			
-
-			
-
-			add_popularity = { 
-
-			ideology = reactionary
-
-			popularity = 0.07
-
-			}
-
-			
-
-			
+			add_popularity = { ideology = reactionary	popularity = 0.07 }
 		}
 	}
 
@@ -64,50 +49,24 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = xxx_purging_the_jew  }
-		available = {
+		completion_reward = {
 			random_owned_controlled_state ={
-
 			 limit = {
-
 			 free_building_slots = {
-
 			 building = industrial_complex
-
 			 size > 0
-
 			 include_locked = yes
-
 			 }
-
 			 }
-
-			 add_extra_state_shared_building_slots = 1
-
+			 add_extra_state_shared_building_slots = 4
 			 add_building_construction = {
-
 			 type = industrial_complex
-
 			 level = 4
-
 			 instant_build = yes
-
 			 }
-
 			 set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
-
 			 }
-
-			
-
-			country_event = {
-
-			days = 1 
-
-			id = POL_rob-radical-camp.1
-
-			}
-
-			
+			country_event = { days = 1 id = POL_rob_radical_camp.1 }
 		}
 	}
 
@@ -122,12 +81,8 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = xxx_purging_the_sanitation_government_followers  }
-		available = {
+		completion_reward = {
 			add_ideas = POL_Purging_the_Jew
-
-			
-
-			
 		}
 	}
 
@@ -142,16 +97,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = xxx_the_rise_of_the_national_camp  }
-		available = {
+		completion_reward = {
 			add_stability = 0.05
-
-			
-
-			
-
 			add_political_power = 150
-
-			
 		}
 	}
 
@@ -164,19 +112,13 @@ focus_tree = {
 		cost = 7
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
-		}
-		bypass = {
+		}	
+		completion_reward = {
 			add_political_power = 50
-
-			add_popularity = { 
-
-			ideology = reactionary
-
-			popularity = 0.07 
+			add_popularity = { ideology = reactionary popularity = 0.07 }
+			remove_ideas = {
 
 			}
-
-			
 		}
 	}
 
@@ -193,16 +135,7 @@ focus_tree = {
 		prerequisite = { focus = xxx_the_rise_of_the_national_camp  }
 		completion_reward = {
 			add_stability = 0.03
-
-			add_popularity = { 
-
-			ideology = reactionary
-
-			popularity = 0.4 
-
-			}
-
-			
+			add_popularity = { ideology = reactionary popularity = 0.4 }	
 		}
 	}
 
@@ -217,11 +150,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = xxx_the_rise_of_the_national_camp  }
-		select_effect = {
-add_stability = 0.05
-
-add_political_power = 50
-
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
 	}
 }
 
@@ -238,35 +169,20 @@ add_political_power = 50
 		prerequisite = { focus = xxx_rejection_of_capitalism  }
 		completion_reward = {
 			random_owned_controlled_state ={
-
 			 limit = {
-
 			 free_building_slots = {
-
 			 building = industrial_complex
-
 			 size > 0
-
 			 include_locked = yes
-
 			 }
-
 			 }
-
-			 add_extra_state_shared_building_slots = 1
-
+			 add_extra_state_shared_building_slots = 4
 			 add_building_construction = {
-
 			 type = industrial_complex
-
 			 level = 4
-
 			 instant_build = yes
-
 			 }
-
 			 set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
-
 			 }
 		}
 	}
@@ -284,38 +200,21 @@ add_political_power = 50
 		prerequisite = { focus = xxx_nationalize_the_banking_sector  }
 		completion_reward = {
 			random_owned_controlled_state ={
-
 			 limit = {
-
 			 free_building_slots = {
-
 			 building = industrial_complex
-
 			 size > 0
-
 			 include_locked = yes
-
 			 }
-
 			 }
-
-			 add_extra_state_shared_building_slots = 1
-
+			 add_extra_state_shared_building_slots = 2
 			 add_building_construction = {
-
 			 type = industrial_complex
-
 			 level = 2
-
 			 instant_build = yes
-
 			 }
-
 			 set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
-
 			 }
-
-			
 		}
 	}
 
@@ -332,12 +231,7 @@ add_political_power = 50
 		prerequisite = { focus = xxx_empowering_the_state  }
 		completion_reward = {
 			add_war_support = 0.1
-
 			add_manpower = 50000
-
-			
-
-			
 		}
 	}
 
@@ -352,10 +246,8 @@ add_political_power = 50
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = xxx_nationalization_of_foreign_property  } prerequisite = { focus = xxx_destructionofthemarshalscult  }
-		available = {
+		completion_reward = {
 			add_ideas = POL_mandatory_conscription
-
-			
 		}
 	}
 
@@ -398,20 +290,11 @@ add_political_power = 50
 		prerequisite = { focus = xxx_destructionofthemarshalscult  } prerequisite = { focus = xxx_mandatory_conscription  }
 		completion_reward = {
 			add_equipment_to_stockpile = {
-
 			 type = infantry_equipment_0
-
 			amount = 2000
-
 			producer = POL
-
 			}
-
-			
-
 			load_oob = POL_onr_para
-
-			
 		}
 	}
 
@@ -439,11 +322,9 @@ add_political_power = 50
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = xxx_destruction_of_western_materialism  }
-		select_effect = {
-add_ideas = POL REBORN
-
-
-}
+		completion_reward = {
+		add_ideas = POL_REBORN
+		}
 	}
 
 	#Invest In The COP
