@@ -1,0 +1,633 @@
+add_namespace = falange
+
+#Dealing with the Socialists
+country_event = {
+	id = falange.1
+	title = falange.1.t
+	desc = falange.1.d
+
+	picture = dealing_with_the_socialists-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_the_socialists
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.1.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_stability = 0.10
+add_political_power = -65
+add_war_support = -0.03
+
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = falange.1.b
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = falange.1.c
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_manpower = -500
+add_stability = 0.02
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Dealing with the Republicans
+country_event = {
+	id = falange.2
+	title = falange.2.t
+	desc = falange.2.d
+
+	picture = dealing_with_the_republicans-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_the_republicans
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.2.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_political_power = 15
+
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = falange.2.b
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_manpower = -100
+add_war_support = -0.05
+add_stability = 0.05
+
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = falange.2.c
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_manpower = -8000
+add_war_support = -0.05
+add_stability = 0.20
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Dealing with the Nationalist
+country_event = {
+	id = falange.3
+	title = falange.3.t
+	desc = falange.3.d
+
+	picture = dealing_with_the_nationalist-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_the_nationalists
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.3.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_stability = 0.05
+add_war_support = 0.15
+add_political_power = -50
+
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = falange.3.b
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_manpower = -750
+add_stability = 0.05
+
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = falange.3.c
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Dealing with the Anarchists
+country_event = {
+	id = falange.4
+	title = falange.4.t
+	desc = falange.4.d
+
+	picture = dealing_with_the_anarchists-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_the_anarchists
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.4.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_manpower = -5000
+add_stability = 0.05
+add_war_support = 0.05
+add_political_power = 25
+
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = falange.4.b
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+add_war_support = -0.05
+
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = falange.4.c
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_political_power = -150
+add_stability = 0.15
+add_war_support = 0.15
+add_manpower = 5000
+
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Dealing with the Carlists
+country_event = {
+	id = falange.5
+	title = falange.5.t
+	desc = falange.5.d
+
+	picture = dealing_with_the_carlists-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_the_carlists
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.5.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_political_power = -50
+add_stability = 0.05
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = falange.5.b
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_manpower = -1000
+add_stability = 0.10
+add_war_support = -0.02
+
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = falange.5.c
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_stability = 0.05
+add_war_support = 0.05
+add_political_power = -50
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Destroying the Pelekists
+country_event = {
+	id = falange.6
+	title = falange.6.t
+	desc = falange.6.d
+
+	picture = rhIPvgZA-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_destroying_the_pelekists
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.6.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_stability = 0.25
+add_war_support = 0.25
+add_political_power = 150
+add_manpower = 3500
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Our Statement to the World
+country_event = {
+	id = falange.7
+	title = falange.7.t
+	desc = falange.7.d
+
+	picture = our_statement_to_the_world-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_spain_on_the_world_stage_once_more
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.7.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The Cities
+country_event = {
+	id = falange.8
+	title = falange.8.t
+	desc = falange.8.d
+
+	picture = the_cities-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_status_of_the_cities
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.8.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The Countryside
+country_event = {
+	id = falange.9
+	title = falange.9.t
+	desc = falange.9.d
+
+	picture = the_countryside-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_status_of_the_countryside
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.9.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The Coasts
+country_event = {
+	id = falange.10
+	title = falange.10.t
+	desc = falange.10.d
+
+	picture = the_coasts-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_status_of_the_coastal_regions
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.10.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The Islands
+country_event = {
+	id = falange.11
+	title = falange.11.t
+	desc = falange.11.d
+
+	picture = the_islands-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_status_of_the_islands
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.11.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The Mountains
+country_event = {
+	id = falange.12
+	title = falange.12.t
+	desc = falange.12.d
+
+	picture = the_mountains-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_status_of_the_mountainous_regions
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.12.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Our Dream
+country_event = {
+	id = falange.13
+	title = falange.13.t
+	desc = falange.13.d
+
+	picture = our_dream-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_cara_al_sol
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.13.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Spain asks for Morocco
+country_event = {
+	id = falange.14
+	title = falange.14.t
+	desc = falange.14.d
+
+	picture = spain_asks_for_morocco-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		SPR = has_completed_focus = SPR_our_rightfull_piece_of_morocco
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.14.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 5 }
+		
+		SPR = {
+		set_state_owner = 290
+		set_state_owner = 699
+
+		}
+		
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = falange.14.b
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_political_power = -25
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Spain want to join our Alliance
+country_event = {
+	id = falange.15
+	title = falange.15.t
+	desc = falange.15.d
+
+	picture = spain_want_to_join_our_alliance-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_the_berlin_alliance
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = falange.15.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 2 }
+		add_to_faction = SPR
+
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = falange.15.b
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The Falange reigns Supreme
+news_event = {
+	id = falange.16
+	title = falange.16.t
+	desc = falange.16.d
+
+	picture = the_falange_reign_supreme-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_a_new_spain
+	}
+
+	}
+	mean_time_to_happen = { days = 1 }
+	timeout_days = 14
+	major = yes
+	option = {
+		name = falange.16.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
