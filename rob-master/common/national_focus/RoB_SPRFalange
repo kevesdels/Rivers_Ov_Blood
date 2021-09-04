@@ -1,0 +1,3115 @@
+focus_tree = {
+	id = spr_fal
+	continuous_focus_position = { x = 0 y = 1000 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SPR
+		}
+	}
+	#Light Bombers
+	focus = {
+		id = SPR_light_bombers
+		icon = GFX_SPR_light_bombers-445
+		x = 75
+		y = 5
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_bombers_models  }
+		mutually_exclusive = { focus = SPR_heavy_bombers  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 2 
+
+			uses = 1 
+
+			category = cas_bomber 
+
+			}
+
+			
+		}
+	}
+
+	#Heavy Bombers
+	focus = {
+		id = SPR_heavy_bombers
+		icon = GFX_SPR_heavy_bombers-445
+		x = 77
+		y = 5
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_bombers_models  }
+		mutually_exclusive = { focus = SPR_light_bombers  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 2 
+
+			uses = 1 
+
+			category =  tactical_bomber
+
+			}
+
+			
+
+			add_tech_bonus = {
+
+			bonus = 2 
+
+			uses = 1 
+
+			category = cat_strategic_bomber 
+
+			}
+
+			
+		}
+	}
+
+	#Jet Engines and Rocket Technologies
+	focus = {
+		id = SPR_jet_engines_and_rocket_technologies
+		icon = GFX_SPR_jet_engines_and_rocket_technologies-445
+		x = 72
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_strategic_destruction  focus = SPR_battlefield_support  focus = SPR_operational_integrity  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 1 
+
+			category = rocketry 
+
+			}
+
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 1 
+
+			category = jet_technology
+
+			}
+
+			
+		}
+	}
+
+	#Mass Assault
+	focus = {
+		id = SPR_mass_assault
+		icon = GFX_SPR_mass_assault-445
+		x = 56
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_improved_status_of_the_armed_forces  }
+		mutually_exclusive = { focus = SPR_mobile_warfare  } mutually_exclusive = { focus = SPR_superior_firepower  } mutually_exclusive = { focus = SPR_trench_warfare  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 2 
+
+			category = cat_mass_assault
+
+			}
+
+			
+		}
+	}
+
+	#Trench Warfare
+	focus = {
+		id = SPR_trench_warfare
+		icon = GFX_SPR_trench_warfare-445
+		x = 54
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_improved_status_of_the_armed_forces  }
+		mutually_exclusive = { focus = SPR_mobile_warfare  } mutually_exclusive = { focus = SPR_superior_firepower  } mutually_exclusive = { focus = SPR_mass_assault  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1
+
+			uses = 2 
+
+			category = cat_trench_warfare
+
+			}
+
+			
+		}
+	}
+
+	#Our Lost Lands
+	focus = {
+		id = SPR_our_lost_lands
+		icon = GFX_SPR_our_lost_lands-445
+		x = 11
+		y = 2
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_stabilizing_spain  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+
+			
+		}
+	}
+
+	#New War Industries
+	focus = {
+		id = SPR_new_war_industries
+		icon = GFX_SPR_new_war_industries-445
+		x = 19
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_arribaespana  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+
+							add_extra_state_shared_building_slots = 1
+
+							add_building_construction = {
+
+							    type = arms_factory
+
+							    level = 1
+
+							    instant_build = yes
+
+							}
+
+						}
+		}
+	}
+
+	#Arriba Espana!
+	focus = {
+		id = SPR_arribaespana
+		icon = GFX_SPR_arribaespana-445
+		x = 15
+		y = 0
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { factor = 1 }
+		available = {
+			has_government = national_socialist
+
+			
+		}
+		completion_reward = {
+			add_political_power = 10
+
+			
+		}
+	}
+
+	#Stabilizing Spain
+	focus = {
+		id = SPR_stabilizing_spain
+		icon = GFX_SPR_stabilizing_spain-445
+		x = 11
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_arribaespana  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+
+			
+		}
+	}
+
+	#Autonomy for the Syndicates
+	focus = {
+		id = SPR_autonomy_for_the_syndicates
+		icon = GFX_SPR_autonomy_for_the_syndicates-445
+		x = 13
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_arribaespana  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.05
+
+			
+		}
+	}
+
+	#Cara Al Sol
+	focus = {
+		id = SPR_cara_al_sol
+		icon = GFX_SPR_cara_al_sol-445
+		x = 15
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_absolute_control_over_spain  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = {
+
+			days = 3
+
+			id = falange.13
+
+			}
+
+			
+		}
+	}
+
+	#Matters of the Economy
+	focus = {
+		id = SPR_matters_of_the_economy
+		icon = GFX_SPR_matters_of_the_economy-445
+		x = 25
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { factor = 1 }
+		available = {
+			has_completed_focus = SPR_cara_al_sol
+
+			
+		}
+		completion_reward = {
+			add_political_power = 10
+
+			
+		}
+	}
+
+	#A Syndicalist Economy
+	focus = {
+		id = SPR_a_syndicalist_economy
+		icon = GFX_SPR_a_syndicalist_economy-445
+		x = 23
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_matters_of_the_economy  }
+		mutually_exclusive = { focus = SPR_a_mutualist_economy  } mutually_exclusive = { focus = SPR_a_corporativist_economy  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_a_syndicalist_economy
+
+			
+		}
+	}
+
+	#The Anarchists
+	focus = {
+		id = SPR_the_anarchists
+		icon = GFX_SPR_the_anarchists-445
+		x = 32
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_war_within  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = {
+
+			days = 3 
+
+			id = falange.4 
+
+			}
+
+			
+		}
+	}
+
+	#The Carlists
+	focus = {
+		id = SPR_the_carlists
+		icon = GFX_SPR_the_carlists-445
+		x = 34
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_war_within  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = {
+
+			days = 3 
+
+			id = falange.5 
+
+			}
+
+			
+		}
+	}
+
+	#Destroying the Pelekists
+	focus = {
+		id = SPR_destroying_the_pelekists
+		icon = GFX_SPR_destroying_the_pelekists-445
+		x = 33
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_socialists  } prerequisite = { focus = SPR_the_republicans  } prerequisite = { focus = SPR_the_nationalists  } prerequisite = { focus = SPR_the_anarchists  } prerequisite = { focus = SPR_the_carlists  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = {
+
+			days = 3 
+
+			id = falange.6 
+
+			}
+
+			
+		}
+	}
+
+	#The Falange Rules Supreme
+	focus = {
+		id = SPR_the_falange_rules_supreme
+		icon = GFX_SPR_the_falange_rules_supreme-445
+		x = 33
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_destroying_the_pelekists  }
+		completion_reward = {
+			add_popularity = { 
+
+			ideology = national_socialist 
+
+			popularity = 0.10 
+
+			}
+
+			
+
+			remove_ideas = SPR_political_chaos
+
+			
+		}
+	}
+
+	#Helping the Common Man
+	focus = {
+		id = SPR_helping_the_common_man
+		icon = GFX_SPR_helping_the_common_man-445
+		x = 25
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_antitrust_laws  focus = SPR_market_socialism_with_spanish_characteristics  focus = SPR_buyspanishproducts  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+
+			
+		}
+	}
+
+	#A Mutualist Economy
+	focus = {
+		id = SPR_a_mutualist_economy
+		icon = GFX_SPR_a_mutualist_economy-445
+		x = 25
+		y = 2
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_matters_of_the_economy  }
+		mutually_exclusive = { focus = SPR_a_syndicalist_economy  } mutually_exclusive = { focus = SPR_a_corporativist_economy  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_a_mutualist_economy
+
+			
+		}
+	}
+
+	#A Corporativist Economy
+	focus = {
+		id = SPR_a_corporativist_economy
+		icon = GFX_SPR_a_corporativist_economy-445
+		x = 27
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_matters_of_the_economy  }
+		mutually_exclusive = { focus = SPR_a_syndicalist_economy  } mutually_exclusive = { focus = SPR_a_mutualist_economy  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_a_corporativist_economy
+
+			
+
+			
+		}
+	}
+
+	#Violent Industrialization
+	focus = {
+		id = SPR_violent_industrialization
+		icon = GFX_SPR_violent_industrialization-445
+		x = 21
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_a_syndicalist_economy  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_violent_industrialization
+
+			
+		}
+	}
+
+	#Workers' Rights
+	focus = {
+		id = SPR_workersrights
+		icon = GFX_SPR_workersrights-445
+		x = 23
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_a_syndicalist_economy  focus = SPR_a_mutualist_economy  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 20
+
+			
+		}
+	}
+
+	#Embrace Distributism
+	focus = {
+		id = SPR_embrace_distributism
+		icon = GFX_SPR_embrace_distributism-445
+		x = 25
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_a_mutualist_economy  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_embrace_distributism
+
+			
+		}
+	}
+
+	#A Talk with the Industrials
+	focus = {
+		id = SPR_a_talk_with_the_industrials
+		icon = GFX_SPR_a_talk_with_the_industrials-445
+		x = 27
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_a_corporativist_economy  focus = SPR_a_mutualist_economy  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.10
+
+			add_stability = 0.10
+
+			
+		}
+	}
+
+	#Autarky
+	focus = {
+		id = SPR_autarky
+		icon = GFX_SPR_autarky-445
+		x = 29
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_a_corporativist_economy  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_autarky
+
+			
+		}
+	}
+
+	#End of the Economic Crisis
+	focus = {
+		id = SPR_end_of_the_economic_crisis
+		icon = GFX_SPR_end_of_the_economic_crisis-445
+		x = 25
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_helping_the_common_man  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			remove_ideas = SPR_economic_crisis
+
+			
+		}
+	}
+
+	#Market Socialism with Spanish Characteristics
+	focus = {
+		id = SPR_market_socialism_with_spanish_characteristics
+		icon = GFX_SPR_market_socialism_with_spanish_characteristics-445
+		x = 25
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_workersrights  } prerequisite = { focus = SPR_embrace_distributism  } prerequisite = { focus = SPR_a_talk_with_the_industrials  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+
+			add_stability = 0.05
+
+			add_war_support = 0.05
+
+			
+		}
+	}
+
+	#Buy Spanish Products!
+	focus = {
+		id = SPR_buyspanishproducts
+		icon = GFX_SPR_buyspanishproducts-445
+		x = 29
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_a_talk_with_the_industrials  } prerequisite = { focus = SPR_autarky  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+
+			add_stability = 0.05
+
+			add_war_support = 0.05
+
+			
+		}
+	}
+
+	#A Welfare State
+	focus = {
+		id = SPR_a_welfare_state
+		icon = GFX_SPR_a_welfare_state-445
+		x = 25
+		y = 10
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_end_of_the_economic_crisis  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_a_welfare_state
+
+			
+		}
+	}
+
+	#The War Within
+	focus = {
+		id = SPR_the_war_within
+		icon = GFX_SPR_the_war_within-445
+		x = 33
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { factor = 1 }
+		available = {
+			has_completed_focus = SPR_cara_al_sol
+
+			
+		}
+		completion_reward = {
+			add_political_power = 10
+
+			
+		}
+	}
+
+	#The Socialists
+	focus = {
+		id = SPR_the_socialists
+		icon = GFX_SPR_the_socialists-445
+		x = 31
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_war_within  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = {
+
+			days = 3 
+
+			id = falange.1 
+
+			}
+
+			
+		}
+	}
+
+	#The Republicans
+	focus = {
+		id = SPR_the_republicans
+		icon = GFX_SPR_the_republicans-445
+		x = 33
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_war_within  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = {
+
+			days = 3 
+
+			id = falange.2 
+
+			}
+
+			
+		}
+	}
+
+	#The Nationalists
+	focus = {
+		id = SPR_the_nationalists
+		icon = GFX_SPR_the_nationalists-445
+		x = 35
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_war_within  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = {
+
+			days = 3 
+
+			id = falange.3 
+
+			}
+
+			
+		}
+	}
+
+	#Power to the Blueshirts
+	focus = {
+		id = SPR_power_to_the_blueshirts
+		icon = GFX_SPR_power_to_the_blueshirts-445
+		x = 15
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_arribaespana  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_manpower = 5000
+
+			
+		}
+	}
+
+	#Investment from Germany
+	focus = {
+		id = SPR_investment_from_germany
+		icon = GFX_SPR_investment_from_germany-445
+		x = 17
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_arribaespana  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_offsite_building = {
+
+			type = industrial_complex 
+
+			level = 1 
+
+			}
+
+			
+		}
+	}
+
+	#A Deal with the Corporates
+	focus = {
+		id = SPR_a_deal_with_the_corporates
+		icon = GFX_SPR_a_deal_with_the_corporates-445
+		x = 13
+		y = 2
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_autonomy_for_the_syndicates  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.05
+
+			
+		}
+	}
+
+	#A Gun in Every Hand
+	focus = {
+		id = SPR_a_gun_in_every_hand
+		icon = GFX_SPR_a_gun_in_every_hand-445
+		x = 15
+		y = 2
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_power_to_the_blueshirts  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+
+			type = infantry_equipment_0 
+
+			amount = 650
+
+			producer = SPR 
+
+			}
+
+			
+		}
+	}
+
+	#Closer Ties with Berlin
+	focus = {
+		id = SPR_closer_ties_with_berlin
+		icon = GFX_SPR_closer_ties_with_berlin-445
+		x = 17
+		y = 2
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_investment_from_germany  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			diplomatic_relation = { 
+
+			country = GER 
+
+			relation = non_aggression_pact 
+
+			}
+
+			
+		}
+	}
+
+	#Using the Money of the Church
+	focus = {
+		id = SPR_using_the_money_of_the_church
+		icon = GFX_SPR_using_the_money_of_the_church-445
+		x = 19
+		y = 2
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_new_war_industries  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 15
+
+			
+		}
+	}
+
+	#Formalizing the 27 Points of Falangism
+	focus = {
+		id = SPR_formalizing_the_27_points_of_falangism
+		icon = GFX_SPR_formalizing_the_27_points_of_falangism-445
+		x = 15
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_our_lost_lands  } prerequisite = { focus = SPR_a_deal_with_the_corporates  } prerequisite = { focus = SPR_a_gun_in_every_hand  } prerequisite = { focus = SPR_closer_ties_with_berlin  } prerequisite = { focus = SPR_using_the_money_of_the_church  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 50
+
+			add_stability = 0.05
+
+			add_war_support = 0.05
+
+			
+		}
+	}
+
+	#Absolute Control Over Spain
+	focus = {
+		id = SPR_absolute_control_over_spain
+		icon = GFX_SPR_absolute_control_over_spain-445
+		x = 15
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_formalizing_the_27_points_of_falangism  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_popularity = { 
+
+			ideology = national_socialist 
+
+			popularity = 0.10 
+
+			}
+
+			
+		}
+	}
+
+	#Anti-Trust Laws
+	focus = {
+		id = SPR_antitrust_laws
+		icon = GFX_SPR_antitrust_laws-445
+		x = 21
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_workersrights  } prerequisite = { focus = SPR_violent_industrialization  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 25
+
+			add_stability = 0.05
+
+			add_war_support = 0.05
+
+			
+		}
+	}
+
+	#Spain on the World Stage Once More
+	focus = {
+		id = SPR_spain_on_the_world_stage_once_more
+		icon = GFX_SPR_spain_on_the_world_stage_once_more-445
+		x = 33
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_falange_rules_supreme  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = {
+
+			days = 3 
+
+			id = falange.7 
+
+			}
+
+			
+		}
+	}
+
+	#End the Portuguese Misery
+	focus = {
+		id = SPR_end_the_portuguese_misery
+		icon = GFX_SPR_end_the_portuguese_misery-445
+		x = 33
+		y = 8
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_spain_on_the_world_stage_once_more  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			create_wargoal = { 
+
+			type = annex_everything 
+
+			target = POR
+
+			}
+		}
+		will_lead_to_war_with = POR
+	}
+
+	#Control over Gibraltar
+	focus = {
+		id = SPR_control_over_gibraltar
+		icon = GFX_SPR_control_over_gibraltar-445
+		x = 32
+		y = 9
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_end_the_portuguese_misery  }
+		ai_will_do = { factor = 1 }
+		available = {
+			118 = is_controlled_by = SPR
+
+			
+		}
+		completion_reward = {
+			add_ideas = SPR_control_over_gibraltar
+
+			
+
+			
+		}
+	}
+
+	#Our Rightful Piece of Morocco
+	focus = {
+		id = SPR_our_rightful_piece_of_morocco
+		icon = GFX_SPR_our_rightful_piece_of_morocco-445
+		x = 34
+		y = 9
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_end_the_portuguese_misery  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			ITA = {
+
+			country_event = {
+
+			days = 3 
+
+			id = falange.14
+
+			}
+
+			}
+		}
+	}
+
+	#The Berlin Alliance
+	focus = {
+		id = SPR_the_berlin_alliance
+		icon = GFX_SPR_the_berlin_alliance-445
+		x = 31
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_end_the_portuguese_misery  }
+		mutually_exclusive = { focus = SPR_we_are_alone  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+		
+			GER = {
+
+			country_event = {
+
+			days = 3 
+
+			id = falange.15
+
+			}
+
+			}
+		}
+	}
+
+	#We Are Alone
+	focus = {
+		id = SPR_we_are_alone
+		icon = GFX_SPR_we_are_alone-445
+		x = 35
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_end_the_portuguese_misery  }
+		mutually_exclusive = { focus = SPR_the_berlin_alliance  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_stability = 0.10
+
+			add_war_support = 0.10
+		}
+	}
+
+	#The New State
+	focus = {
+		id = SPR_the_new_state
+		icon = GFX_SPR_the_new_state-445
+		x = 33
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_berlin_alliance  focus = SPR_we_are_alone  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_the_new_state
+
+			
+
+			
+		}
+	}
+
+	#Our Final Test
+	focus = {
+		id = SPR_our_final_test
+		icon = GFX_SPR_our_final_test-445
+		x = 33
+		y = 12
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_new_state  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_war_support = 0.10
+
+			add_ideas = SPR_our_final_test
+
+			
+		}
+	}
+
+	#Beheaded the Gallic Rooster
+	focus = {
+		id = SPR_beheaded_the_gallic_rooster
+		icon = GFX_SPR_beheaded_the_gallic_rooster-445
+		x = 33
+		y = 13
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_our_final_test  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			create_wargoal = { 
+
+			type = annex_everything 
+
+			target = FRA
+
+			}
+		}
+		will_lead_to_war_with = FRA
+	}
+
+	#Destiny Still Arrives
+	focus = {
+		id = SPR_destiny_still_arrives
+		icon = GFX_SPR_destiny_still_arrives-445
+		x = 33
+		y = 15
+		cost = 15
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_beheaded_the_gallic_rooster  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 150
+
+			add_stability = 0.35
+
+			add_war_support = 0.35
+
+			add_research_slot = 1
+
+			add_manpower = 25000
+
+			add_popularity = { 
+
+			ideology = national_socialist 
+
+			popularity = 0.3 
+
+			}
+		}
+	}
+
+	#The Challenge of National Development
+	focus = {
+		id = SPR_the_challenge_of_national_development
+		icon = GFX_SPR_the_challenge_of_national_development-445
+		x = 42
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { factor = 1 }
+		available = {
+			has_completed_focus = SPR_cara_al_sol
+
+			
+		}
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 2 
+
+			category = industry
+
+			}
+
+			
+
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 1 
+
+			category = electronics
+
+			}
+
+			
+		}
+	}
+
+	#Status of the Cities
+	focus = {
+		id = SPR_status_of_the_cities
+		icon = GFX_SPR_status_of_the_cities-445
+		x = 42
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_challenge_of_national_development  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = {
+
+			days = 3 
+
+			id = falange.8
+
+			}
+
+			
+		}
+	}
+
+	#Status of the Countryside
+	focus = {
+		id = SPR_status_of_the_countryside
+		icon = GFX_SPR_status_of_the_countryside-445
+		x = 40
+		y = 2
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_challenge_of_national_development  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = {
+
+			days = 3
+
+			id = falange.9 
+
+			}
+
+			
+		}
+	}
+
+	#Status of the Coastal Regions
+	focus = {
+		id = SPR_status_of_the_coastal_regions
+		icon = GFX_SPR_status_of_the_coastal_regions-445
+		x = 44
+		y = 2
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_challenge_of_national_development  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = {
+
+			days = 3 
+
+			id = falange.10 
+
+			}
+
+			
+		}
+	}
+
+	#Status of the Islands
+	focus = {
+		id = SPR_status_of_the_islands
+		icon = GFX_SPR_status_of_the_islands-445
+		x = 38
+		y = 3
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_challenge_of_national_development  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = {
+
+			days = 3 
+
+			id = falange.11 
+
+			}
+
+			
+		}
+	}
+
+	#Status of the Mountainous Regions
+	focus = {
+		id = SPR_status_of_the_mountainous_regions
+		icon = GFX_SPR_status_of_the_mountainous_regions-445
+		x = 46
+		y = 3
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_challenge_of_national_development  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			country_event = {
+
+			days = 3 
+
+			id = falange.12
+
+			}
+
+			
+		}
+	}
+
+	#Connecting our Great State
+	focus = {
+		id = SPR_connecting_our_great_state
+		icon = GFX_SPR_connecting_our_great_state-445
+		x = 42
+		y = 4
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_status_of_the_cities  } prerequisite = { focus = SPR_status_of_the_countryside  } prerequisite = { focus = SPR_status_of_the_coastal_regions  } prerequisite = { focus = SPR_status_of_the_islands  } prerequisite = { focus = SPR_status_of_the_mountainous_regions  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			every_state = {
+
+							add_building_construction = {
+
+							    type = infrastructure
+
+							    level = 1
+
+							    instant_build = yes
+
+							}
+
+						}
+
+			add_ideas = SPR_connecting_our_great_state
+
+			
+		}
+	}
+
+	#New Electronical Materials
+	focus = {
+		id = SPR_new_electronical_materials
+		icon = GFX_SPR_new_electronical_materials-445
+		x = 38
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_connecting_our_great_state  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1
+
+			uses = 2 
+
+			category = electronics
+
+			}
+
+			
+
+			add_ideas = SPR_new_electronical_materials
+
+			
+		}
+	}
+
+	#Agricultural Development
+	focus = {
+		id = SPR_agricultural_development
+		icon = GFX_SPR_agricultural_development-445
+		x = 40
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_connecting_our_great_state  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+
+							add_extra_state_shared_building_slots = 1
+
+							add_building_construction = {
+
+							    type = industrial_complex
+
+							    level = 1
+
+							    instant_build = yes
+
+			}
+
+			}
+
+			
+
+			random_owned_controlled_state = {
+
+							add_extra_state_shared_building_slots = 1
+
+							add_building_construction = {
+
+							    type = industrial_complex
+
+							    level = 1
+
+							    instant_build = yes
+
+			}
+
+			}
+
+			
+
+			
+		}
+	}
+
+	#Develop the Tertiary Sector
+	focus = {
+		id = SPR_develop_the_tertiary_sector
+		icon = GFX_SPR_develop_the_tertiary_sector-445
+		x = 42
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_connecting_our_great_state  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_develop_the_tertiary_sector
+
+			
+		}
+	}
+
+	#Prospect of New Resources
+	focus = {
+		id = SPR_prospect_of_new_resources
+		icon = GFX_SPR_prospect_of_new_resources-445
+		x = 44
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_connecting_our_great_state  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 2 
+
+			category = synth_resources
+
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 2 
+
+			technology = excavation1
+
+			technology = excavation2
+
+			technology = excavation3
+
+			technology = excavation4
+
+			technology = excavation5
+
+			}
+
+			}
+
+			random_owned_controlled_state = {
+
+							add_extra_state_shared_building_slots = 1
+
+							add_building_construction = {
+
+							    type = fuel_silo
+
+							    level = 1
+
+							    instant_build = yes
+
+							}
+
+						}
+
+			random_owned_controlled_state = {
+
+							add_extra_state_shared_building_slots = 1
+
+							add_building_construction = {
+
+							    type = synthetic_refinery
+
+							    level = 1
+
+							    instant_build = yes
+
+							}
+
+						}
+		}
+	}
+
+	#New Industrial Expansion
+	focus = {
+		id = SPR_new_industrial_expansion
+		icon = GFX_SPR_new_industrial_expansion-445
+		x = 46
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_connecting_our_great_state  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+
+							add_extra_state_shared_building_slots = 2
+
+							add_building_construction = {
+
+							    type = industrial_complex
+
+							    level = 2
+
+							    instant_build = yes
+
+							}
+
+						}
+
+			random_owned_controlled_state = {
+
+							add_extra_state_shared_building_slots = 2
+
+							add_building_construction = {
+
+							    type = arms_factory
+
+							    level = 2
+
+							    instant_build = yes
+
+							}
+
+						}
+
+			random_owned_controlled_state = {
+
+							add_extra_state_shared_building_slots = 1
+
+							add_building_construction = {
+
+							    type = industrial_complex
+
+							    level = 1
+
+							    instant_build = yes
+
+							}
+
+						}
+
+			random_owned_controlled_state = {
+
+							add_extra_state_shared_building_slots = 1
+
+							add_building_construction = {
+
+							    type = dockyard
+
+							    level = 1
+
+							    instant_build = yes
+
+							}
+
+						}
+		}
+	}
+
+	#Radio Technology
+	focus = {
+		id = SPR_radio_technology
+		icon = GFX_SPR_radio_technology-445
+		x = 37
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_new_electronical_materials  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 2 
+
+			category = radar_tech 
+
+			}
+
+			
+		}
+	}
+
+	#Farm Modernization
+	focus = {
+		id = SPR_farm_modernization
+		icon = GFX_SPR_farm_modernization-445
+		x = 39
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_agricultural_development  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_farm_modernization
+
+			
+		}
+	}
+
+	#The Shining Pearl of the Mediterranean
+	focus = {
+		id = SPR_the_shining_pearl_of_the_mediterranean
+		icon = GFX_SPR_the_shining_pearl_of_the_mediterranean-445
+		x = 42
+		y = 9
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_develop_the_tertiary_sector  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_the_shining_pearl_of_the_mediterranean
+
+			
+		}
+	}
+
+	#Mining Expansion
+	focus = {
+		id = SPR_mining_expansion
+		icon = GFX_SPR_mining_expansion-445
+		x = 45
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_prospect_of_new_resources  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_resource = { 
+
+			type = steel 
+
+			amount = 8 
+
+			state = 173 
+
+			}
+
+			add_resource = { 
+
+			type = aluminium
+
+			amount = 4 
+
+			state = 41
+
+			}
+
+			
+		}
+	}
+
+	#The Four Year Plan
+	focus = {
+		id = SPR_the_four_year_plan
+		icon = GFX_SPR_the_four_year_plan-445
+		x = 47
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_new_industrial_expansion  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_the_four_year_plan
+
+			
+		}
+	}
+
+	#A New Spain
+	focus = {
+		id = SPR_a_new_spain
+		icon = GFX_SPR_a_new_spain-445
+		x = 42
+		y = 12
+		cost = 14
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_radio_technology  } prerequisite = { focus = SPR_farm_modernization  } prerequisite = { focus = SPR_the_shining_pearl_of_the_mediterranean  } prerequisite = { focus = SPR_mining_expansion  } prerequisite = { focus = SPR_the_four_year_plan  }
+		ai_will_do = { factor = 1 }
+		available = {
+			has_completed_focus = SPR_a_welfare_state
+
+			has_completed_focus = SPR_destiny_still_arrives
+
+			has_completed_focus = SPR_new_military_schools
+
+			has_completed_focus = SPR_our_own_aircraft_carriers
+
+			has_completed_focus = SPR_nuclear_power
+
+			
+		}
+		completion_reward = {
+			country_event = {
+
+			days = 2
+
+			id = falange.16
+
+			}
+
+			
+		}
+	}
+
+	#The Spanish Army
+	focus = {
+		id = SPR_the_spanish_army
+		icon = GFX_SPR_the_spanish_army-445
+		x = 53
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { factor = 1 }
+		available = {
+			has_completed_focus = SPR_cara_al_sol
+
+			
+		}
+		completion_reward = {
+			army_experience = 50
+
+			
+		}
+	}
+
+	#The Blue Militia
+	focus = {
+		id = SPR_the_blue_militia
+		icon = GFX_SPR_the_blue_militia-445
+		x = 51
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_spanish_army  }
+		mutually_exclusive = { focus = SPR_the_red_brown_army  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_the_blue_militia
+
+			
+		}
+	}
+
+	#The Red Brown Army
+	focus = {
+		id = SPR_the_red_brown_army
+		icon = GFX_SPR_the_red_brown_army-445
+		x = 55
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_spanish_army  }
+		mutually_exclusive = { focus = SPR_the_blue_militia  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_ideas = SPR_the_red_brown_army
+
+			
+		}
+	}
+
+	#New Elite Unites
+	focus = {
+		id = SPR_new_elite_unites
+		icon = GFX_SPR_new_elite_unites-445
+		x = 53
+		y = 3
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_spanish_army  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 3
+
+			technology = paratroopers
+
+							technology = paratroopers2
+
+							technology = marines
+
+							technology = marines2
+
+							technology = tech_mountaineers
+
+							technology = tech_mountaineers2
+
+			}
+
+			
+		}
+	}
+
+	#Better Guns
+	focus = {
+		id = SPR_better_guns
+		icon = GFX_SPR_better_guns-445
+		x = 51
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_blue_militia  focus = SPR_the_red_brown_army  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 2 
+
+			category = infantry_weapons
+
+			}
+
+			
+		}
+	}
+
+	#New Artillery Pieces
+	focus = {
+		id = SPR_new_artillery_pieces
+		icon = GFX_SPR_new_artillery_pieces-445
+		x = 55
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_blue_militia  focus = SPR_the_red_brown_army  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 1 
+
+			category = artillery 
+
+			}
+
+			
+		}
+	}
+
+	#Foreign Tank Blueprints
+	focus = {
+		id = SPR_foreign_tank_blueprints
+		icon = GFX_SPR_foreign_tank_blueprints-445
+		x = 50
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_better_guns  focus = SPR_new_artillery_pieces  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 2
+
+			category = armor
+
+			}
+
+			
+		}
+	}
+
+	#Modern Logistical Supports
+	focus = {
+		id = SPR_modern_logistical_supports
+		icon = GFX_SPR_modern_logistical_supports-445
+		x = 56
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_better_guns  focus = SPR_new_artillery_pieces  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 2
+
+			category = support_tech 
+
+			}
+
+			
+		}
+	}
+
+	#Motorization and Mechanization Effort
+	focus = {
+		id = SPR_motorization_and_mechanization_effort
+		icon = GFX_SPR_motorization_and_mechanization_effort-445
+		x = 52
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_better_guns  } prerequisite = { focus = SPR_foreign_tank_blueprints  focus = SPR_new_artillery_pieces  } prerequisite = { focus = SPR_foreign_tank_blueprints  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 2
+
+			category = motorized_equipment
+
+			}
+
+			
+		}
+	}
+
+	#Anti-Air and Anti-Tank Models
+	focus = {
+		id = SPR_antiair_and_antitank_models
+		icon = GFX_SPR_antiair_and_antitank_models-445
+		x = 54
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_better_guns  } prerequisite = { focus = SPR_modern_logistical_supports  focus = SPR_new_artillery_pieces  } prerequisite = { focus = SPR_modern_logistical_supports  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 2 
+
+			category = cat_anti_tank 
+
+			}
+
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 2 
+
+			category = cat_antiair 
+
+			}
+		}
+	}
+
+	#General Modernization
+	focus = {
+		id = SPR_general_modernization
+		icon = GFX_SPR_general_modernization-445
+		x = 53
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_improved_status_of_the_armed_forces  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			remove_ideas = SPR_weak_army
+
+			
+		}
+	}
+
+	#Mobile Warfare
+	focus = {
+		id = SPR_mobile_warfare
+		icon = GFX_SPR_mobile_warfare-445
+		x = 50
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_improved_status_of_the_armed_forces  }
+		mutually_exclusive = { focus = SPR_superior_firepower  } mutually_exclusive = { focus = SPR_trench_warfare  } mutually_exclusive = { focus = SPR_mass_assault  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 2 
+
+			category = cat_mobile_warfare
+
+			}
+
+			
+		}
+	}
+
+	#The Spanish Navy
+	focus = {
+		id = SPR_the_spanish_navy
+		icon = GFX_SPR_the_spanish_navy-445
+		x = 62
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { factor = 1 }
+		available = {
+			has_completed_focus = SPR_cara_al_sol
+
+			
+		}
+		completion_reward = {
+			navy_experience = 50
+
+			
+		}
+	}
+
+	#Superior Firepower
+	focus = {
+		id = SPR_superior_firepower
+		icon = GFX_SPR_superior_firepower-445
+		x = 52
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_improved_status_of_the_armed_forces  }
+		mutually_exclusive = { focus = SPR_mobile_warfare  } mutually_exclusive = { focus = SPR_trench_warfare  } mutually_exclusive = { focus = SPR_mass_assault  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 2 
+
+			category = cat_superior_firepower
+
+			}
+
+			
+		}
+	}
+
+	#Improved Status of the Armed Forces
+	focus = {
+		id = SPR_improved_status_of_the_armed_forces
+		icon = GFX_SPR_improved_status_of_the_armed_forces-445
+		x = 53
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_better_guns  } prerequisite = { focus = SPR_new_artillery_pieces  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+
+			type = infantry_equipment_1
+
+			amount = 1000 
+
+			producer = SPR 
+
+			}
+
+			add_equipment_to_stockpile = {
+
+			type = support_equipment_1 
+
+			amount = 500 
+
+			producer = SPR 
+
+			}
+
+			add_equipment_to_stockpile = {
+
+			type = artillery_equipment_1 
+
+			amount = 250 
+
+			producer = SPR 
+
+			}
+		}
+	}
+
+	#The Guardians of the Mediterranean
+	focus = {
+		id = SPR_the_guardians_of_the_mediterranean
+		icon = GFX_SPR_the_guardians_of_the_mediterranean-445
+		x = 60
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_spanish_navy  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+
+							add_extra_state_shared_building_slots = 2
+
+							add_building_construction = {
+
+							    type = dockyard
+
+							    level = 2
+
+							    instant_build = yes
+
+							}
+
+						}
+
+			random_owned_controlled_state = {
+
+							add_extra_state_shared_building_slots = 1
+
+							add_building_construction = {
+
+							    type = dockyard
+
+							    level = 1
+
+							    instant_build = yes
+
+							}
+
+						}
+		}
+	}
+
+	#New Submarines
+	focus = {
+		id = SPR_new_submarines
+		icon = GFX_SPR_new_submarines-445
+		x = 62
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_spanish_navy  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1
+
+			uses = 2 
+
+			category = ss_tech 
+
+			}
+
+			
+		}
+	}
+
+	#Our Gateway to the Atlantic
+	focus = {
+		id = SPR_our_gateway_to_the_atlantic
+		icon = GFX_SPR_our_gateway_to_the_atlantic-445
+		x = 64
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_spanish_navy  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+
+							add_extra_state_shared_building_slots = 2
+
+							add_building_construction = {
+
+							    type = dockyard
+
+							    level = 2
+
+							    instant_build = yes
+
+							}
+
+						}
+		}
+	}
+
+	#Destroyer Armada
+	focus = {
+		id = SPR_destroyer_armada
+		icon = GFX_SPR_destroyer_armada-445
+		x = 60
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_guardians_of_the_mediterranean  focus = SPR_our_gateway_to_the_atlantic  }
+		mutually_exclusive = { focus = SPR_renewal_of_heavy_ships  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 2 
+
+			category = dd_tech 
+
+			}
+		}
+	}
+
+	#Renewal of Heavy Ships
+	focus = {
+		id = SPR_renewal_of_heavy_ships
+		icon = GFX_SPR_renewal_of_heavy_ships-445
+		x = 64
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_guardians_of_the_mediterranean  focus = SPR_our_gateway_to_the_atlantic  }
+		mutually_exclusive = { focus = SPR_destroyer_armada  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 1 
+
+			category = bb_tech 
+
+			}
+
+			
+
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 1 
+
+			category = bc_tech 
+
+			}
+
+			
+		}
+	}
+
+	#Transport Ships
+	focus = {
+		id = SPR_transport_ships
+		icon = GFX_SPR_transport_ships-445
+		x = 62
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_cruisers_effort  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 3 
+
+			uses = 1 
+
+			category = tp_tech 
+
+			}
+
+			
+		}
+	}
+
+	#Fleet in Being
+	focus = {
+		id = SPR_fleet_in_being
+		icon = GFX_SPR_fleet_in_being-445
+		x = 60
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_transport_ships  }
+		mutually_exclusive = { focus = SPR_trade_interdiction  } mutually_exclusive = { focus = SPR_base_strike  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 2 
+
+			category = fleet_in_being_tree
+
+			}
+
+			
+		}
+	}
+
+	#Trade Interdiction
+	focus = {
+		id = SPR_trade_interdiction
+		icon = GFX_SPR_trade_interdiction-445
+		x = 62
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_transport_ships  }
+		mutually_exclusive = { focus = SPR_fleet_in_being  } mutually_exclusive = { focus = SPR_base_strike  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 2 
+
+			category = trade_interdiction_tree 
+
+			}
+
+			
+		}
+	}
+
+	#Base Strike
+	focus = {
+		id = SPR_base_strike
+		icon = GFX_SPR_base_strike-445
+		x = 64
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_transport_ships  }
+		mutually_exclusive = { focus = SPR_fleet_in_being  } mutually_exclusive = { focus = SPR_trade_interdiction  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1
+
+			uses = 2 
+
+			category = cat_base_strike
+
+			}
+
+			
+		}
+	}
+
+	#A Merchant Navy
+	focus = {
+		id = SPR_a_merchant_navy
+		icon = GFX_SPR_a_merchant_navy-445
+		x = 62
+		y = 9
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_fleet_in_being  focus = SPR_trade_interdiction  focus = SPR_base_strike  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+
+			type = convoy_1 
+
+			amount = 500
+
+			producer = SPR 
+
+			}
+
+			
+		}
+	}
+
+	#Our Own Aircraft Carriers
+	focus = {
+		id = SPR_our_own_aircraft_carriers
+		icon = GFX_SPR_our_own_aircraft_carriers-445
+		x = 62
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_a_merchant_navy  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 2 
+
+			category = cv_tech 
+
+			}
+
+			
+		}
+	}
+
+	#The Spanish Air Force
+	focus = {
+		id = SPR_the_spanish_air_force
+		icon = GFX_SPR_the_spanish_air_force-445
+		x = 72
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		ai_will_do = { factor = 1 }
+		available = {
+			has_completed_focus = SPR_cara_al_sol
+
+			
+		}
+		completion_reward = {
+			air_experience = 50
+
+			
+		}
+	}
+
+	#Improving our Airfields
+	focus = {
+		id = SPR_improving_our_airfields
+		icon = GFX_SPR_improving_our_airfields-445
+		x = 70
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_spanish_air_force  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+
+			add_building_construction = {
+
+								type = air_base
+
+								level = 3
+
+								instant_build = yes
+
+							}
+
+			}
+
+			random_owned_controlled_state = {
+
+			add_building_construction = {
+
+								type = air_base
+
+								level = 3
+
+								instant_build = yes
+
+							}
+
+			}
+		}
+	}
+
+	#New Pilot Schools
+	focus = {
+		id = SPR_new_pilot_schools
+		icon = GFX_SPR_new_pilot_schools-445
+		x = 72
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_spanish_air_force  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+
+							add_extra_state_shared_building_slots = 1
+
+							add_building_construction = {
+
+							    type = arms_factory
+
+							    level = 1
+
+							    instant_build = yes
+
+							}
+
+						}
+		}
+	}
+
+	#Battlefield Support
+	focus = {
+		id = SPR_battlefield_support
+		icon = GFX_SPR_battlefield_support-445
+		x = 72
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_new_pilot_schools  }
+		mutually_exclusive = { focus = SPR_strategic_destruction  } mutually_exclusive = { focus = SPR_operational_integrity  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 2 
+
+			category = battlefield_support_tree 
+
+			}
+
+			
+		}
+	}
+
+	#Buy Foreign Airplanes
+	focus = {
+		id = SPR_buy_foreign_airplanes
+		icon = GFX_SPR_buy_foreign_airplanes-445
+		x = 74
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_the_spanish_air_force  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+
+			type = fighter_equipment_0
+
+			amount = 250 
+
+			producer = SPR 
+
+			}
+
+			
+
+			add_equipment_to_stockpile = {
+
+			type =  tac_bomber_equipment_0
+
+			amount = 150 
+
+			producer = SPR 
+
+			}
+
+			
+		}
+	}
+
+	#Fighters Models
+	focus = {
+		id = SPR_fighters_models
+		icon = GFX_SPR_fighters_models-445
+		x = 68
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_new_pilot_schools  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 1 
+
+			category = light_fighter 
+
+			}
+
+			
+
+			add_tech_bonus = {
+
+			 bonus = 0.5 
+
+			uses = 1 
+
+			category = cat_heavy_fighter 
+
+			}
+
+			
+		}
+	}
+
+	#Bombers Models
+	focus = {
+		id = SPR_bombers_models
+		icon = GFX_SPR_bombers_models-445
+		x = 76
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_new_pilot_schools  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 1 
+
+			category = tactical_bomber
+
+			}
+
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 1 
+
+			category = cas_bomber
+
+			}
+		}
+	}
+
+	#Light Fighters
+	focus = {
+		id = SPR_light_fighters
+		icon = GFX_SPR_light_fighters-445
+		x = 67
+		y = 5
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_fighters_models  }
+		mutually_exclusive = { focus = SPR_heavy_fighters  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {bonus = 2 
+
+			uses = 1 
+
+			category = light_fighter
+
+			}
+
+			
+		}
+	}
+
+	#Heavy Fighters
+	focus = {
+		id = SPR_heavy_fighters
+		icon = GFX_SPR_heavy_fighters-445
+		x = 69
+		y = 5
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_fighters_models  }
+		mutually_exclusive = { focus = SPR_light_fighters  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 2 
+
+			category = cat_heavy_fighter
+
+			}
+
+			
+		}
+	}
+
+	#Strategic Destruction
+	focus = {
+		id = SPR_strategic_destruction
+		icon = GFX_SPR_strategic_destruction-445
+		x = 70
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_new_pilot_schools  }
+		mutually_exclusive = { focus = SPR_battlefield_support  } mutually_exclusive = { focus = SPR_operational_integrity  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 2 
+
+			category = strategic_destruction_tree
+
+			}
+
+			
+		}
+	}
+
+	#Operational Integrity
+	focus = {
+		id = SPR_operational_integrity
+		icon = GFX_SPR_operational_integrity-445
+		x = 74
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_new_pilot_schools  }
+		mutually_exclusive = { focus = SPR_strategic_destruction  } mutually_exclusive = { focus = SPR_battlefield_support  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1
+
+			uses = 2 
+
+			category = operational_integrity_tree 
+
+			}
+
+			
+		}
+	}
+
+	#Nuclear Power
+	focus = {
+		id = SPR_nuclear_power
+		icon = GFX_SPR_nuclear_power-445
+		x = 72
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_jet_engines_and_rocket_technologies  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 1 
+
+			category = nuclear
+
+			}
+
+			
+		}
+	}
+
+	#Cruisers Effort
+	focus = {
+		id = SPR_cruisers_effort
+		icon = GFX_SPR_cruisers_effort-445
+		x = 62
+		y = 3
+		cost = 6
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_new_submarines  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 1 
+
+			category = cl_tech 
+
+			}
+
+			add_tech_bonus = {
+
+			bonus = 0.5 
+
+			uses = 1 
+
+			category = ca_tech 
+
+			}
+
+			
+		}
+	}
+
+	#Defending the Sea from the Sky
+	focus = {
+		id = SPR_defending_the_sea_from_the_sky
+		icon = GFX_SPR_defending_the_sea_from_the_sky-445
+		x = 67
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_improving_our_airfields  } prerequisite = { focus = SPR_our_gateway_to_the_atlantic  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 1 
+
+			category = naval_bomber 
+
+			}
+
+			
+		}
+	}
+
+	#New Military Schools
+	focus = {
+		id = SPR_new_military_schools
+		icon = GFX_SPR_new_military_schools-445
+		x = 53
+		y = 11
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SPR_general_modernization  }
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 2 
+
+			category = land_doctrine 
+
+			}
+
+			
+
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 1 
+
+			category = infantry_weapons
+
+			}
+
+			
+
+			add_tech_bonus = {
+
+			bonus = 1 
+
+			uses = 1 
+
+			category = artillery 
+
+			}
+
+			add_tech_bonus = {
+
+			bonus = 1
+
+			uses = 1 
+
+			category = armor
+
+			}
+
+			
+		}
+	}
+
+}
