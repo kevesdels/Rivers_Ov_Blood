@@ -378,3 +378,478 @@ IF = { limit = { POR = { owns_state = 705 } } transfer_state = 705 }
 		}
   }
   }
+
+
+	#####NatSyn
+
+  #Dealing with the Socialists
+country_event = {
+	id = rob_spain.11
+	title = rob_spain.11.t
+	desc = rob_spain.11.d
+
+	picture = dealing_with_the_socialists-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_the_socialists
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.11.a
+		ai_chance = { factor = 1 }
+
+		add_stability = 0.10
+		add_political_power = -65
+		add_war_support = -0.03
+	}
+	option = {
+		name = rob_spain.11.b
+		ai_chance = { factor = 1 }
+
+		add_political_power = 10
+	}
+	option = {
+		name = rob_spain.11.c
+		ai_chance = { factor = 1 }
+
+		add_manpower = -500
+   		add_stability = 0.02
+	}
+}
+
+#Dealing with the Republicans
+country_event = {
+	id = rob_spain.12
+	title = rob_spain.12.t
+	desc = rob_spain.12.d
+
+	picture = dealing_with_the_republicans-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_the_republicans
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.12.a
+		ai_chance = { factor = 1 }
+
+		add_political_power = 15
+	}
+	option = {
+		name = rob_spain.12.b
+		ai_chance = { factor = 1 }
+
+		add_manpower = -100
+		add_war_support = -0.05
+		add_stability = 0.05
+	}
+	option = {
+		name = rob_spain.12.c
+		ai_chance = { factor = 1 }
+
+		add_manpower = -8000
+		add_war_support = -0.05
+		add_stability = 0.20
+	}
+}
+
+#Dealing with the Nationalist
+country_event = {
+	id = rob_spain.13
+	title = rob_spain.13.t
+	desc = rob_spain.13.d
+
+	picture = dealing_with_the_nationalist-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_the_nationalists
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.13.a
+
+		ai_chance = { factor = 1 }
+		add_stability = 0.05
+		add_war_support = 0.15
+		add_political_power = -50
+
+	}
+	option = {
+		name = rob_spain.13.b
+
+		ai_chance = { factor = 1 }
+		add_manpower = -750
+		add_stability = 0.05
+
+	}
+	option = {
+		name = rob_spain.13.c
+		ai_chance = { factor = 1 }
+		add_political_power = 10
+
+	}
+}
+
+#Dealing with the Anarchists
+country_event = {
+	id = rob_spain.14
+	title = rob_spain.14.t
+	desc = rob_spain.14.d
+
+	picture = dealing_with_the_anarchists-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_the_anarchists
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.14.a
+
+		ai_chance = { factor = 1 }
+		add_manpower = -5000
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 25
+	}
+	option = {
+		name = rob_spain.14.b
+		ai_chance = { factor = 1 }
+
+		add_political_power = 50
+		add_war_support = -0.05
+
+	}
+	option = {
+		name = rob_spain.14.c
+		ai_chance = { factor = 1 }
+
+		add_political_power = -150
+		add_stability = 0.15
+		add_war_support = 0.15
+		add_manpower = 5000
+
+	}
+}
+
+#Dealing with the Carlists
+country_event = {
+	id = rob_spain.15
+	title = rob_spain.15.t
+	desc = rob_spain.15.d
+
+	picture = dealing_with_the_carlists-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_the_carlists
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.15.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+
+		add_political_power = -50
+		add_stability = 0.05
+	}
+	option = {
+		name = rob_spain.15.b
+		ai_chance = { factor = 1 }
+
+		add_manpower = -1000
+		add_stability = 0.10
+		add_war_support = -0.02
+
+	}
+	option = {
+		name = rob_spain.15.c
+		ai_chance = { factor = 1 }
+
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = -50
+
+	}
+}
+
+#Destroying the Pelekists
+country_event = {
+	id = rob_spain.16
+	title = rob_spain.16.t
+	desc = rob_spain.16.d
+
+	picture = rhIPvgZA-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_destroying_the_pelekists
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.16.a
+		ai_chance = { factor = 1 }
+		add_stability = 0.25
+	add_war_support = 0.25
+	add_political_power = 150
+	add_manpower = 3500
+
+	}
+}
+
+#Our Statement to the World
+country_event = {
+	id = rob_spain.17
+	title = rob_spain.17.t
+	desc = rob_spain.17.d
+
+	picture = our_statement_to_the_world-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_spain_on_the_world_stage_once_more
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.17.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+#The Cities
+country_event = {
+	id = rob_spain.18
+	title = rob_spain.18.t
+	desc = rob_spain.18.d
+
+	picture = the_cities-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_status_of_the_cities
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.18.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+#The Countryside
+country_event = {
+	id = rob_spain.19
+	title = rob_spain.19.t
+	desc = rob_spain.19.d
+
+	picture = the_countryside-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_status_of_the_countryside
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.19.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+#The Coasts
+country_event = {
+	id = rob_spain.20
+	title = rob_spain.20.t
+	desc = rob_spain.20.d
+
+	picture = the_coasts-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_status_of_the_coastal_regions
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.20.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+#The Islands
+country_event = {
+	id = rob_spain.21
+	title = rob_spain.21.t
+	desc = rob_spain.21.d
+
+	picture = the_islands-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_status_of_the_islands
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.21.a
+		ai_chance = { factor = 1 }
+
+	}
+}
+
+#The Mountains
+country_event = {
+	id = rob_spain.22
+	title = rob_spain.22.t
+	desc = rob_spain.22.d
+
+	picture = the_mountains-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_status_of_the_mountainous_regions
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.22.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+#Our Dream
+country_event = {
+	id = rob_spain.23
+	title = rob_spain.23.t
+	desc = rob_spain.23.d
+
+	picture = our_dream-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_cara_al_sol
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.23.a
+		ai_chance = { factor = 1 }
+
+		add_political_power = 10
+	}
+}
+
+#Spain asks for Morocco
+country_event = {
+	id = rob_spain.24
+	title = rob_spain.24.t
+	desc = rob_spain.24.d
+
+	picture = spain_asks_for_morocco-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		SPR = has_completed_focus = SPR_our_rightfull_piece_of_morocco
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.24.a
+		ai_chance = { factor = 5 }
+		
+		SPR = {
+		set_state_owner = 290
+		set_state_owner = 699
+
+		}
+		
+	}
+	option = {
+		name = rob_spain.24.b
+		ai_chance = { factor = 1 }
+
+		add_political_power = -25
+	}
+}
+
+#Spain want to join our Alliance
+country_event = {
+	id = rob_spain.25
+	title = rob_spain.25.t
+	desc = rob_spain.25.d
+
+	picture = spain_want_to_join_our_alliance-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_the_berlin_alliance
+
+	}
+	mean_time_to_happen = { days = 3 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.25.a
+		ai_chance = { factor = 2 }
+
+		add_to_faction = SPR
+	}
+	option = {
+		name = rob_spain.25.b
+		ai_chance = { factor = 1 }
+		
+	}
+}
+
+#The Falange reigns Supreme
+news_event = {
+	id = rob_spain.26
+	title = rob_spain.26.t
+	desc = rob_spain.26.d
+
+	picture = the_falange_reign_supreme-1
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = SPR_a_new_spain
+	}
+
+	}
+	mean_time_to_happen = { days = 1 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.26.a
+
+		ai_chance = { factor = 1 }
+		
+	}
+}
