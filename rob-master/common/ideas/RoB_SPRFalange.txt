@@ -219,10 +219,9 @@ ideas = {
 				production_lack_of_resource_penalty_factor = 0.10
 				local_resources_factor = 0.20
 				war_support_factor = 0.10
-				production_speed_industrial_complex_factor = 0.15
-				production_speed_arms_factory_factor = 0.15
-				consumer_goods_factor = -0.15
-				war_support_factor = -0.10
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				consumer_goods_factor = -0.10
 				stability_factor = -0.10
 			}
 
@@ -271,7 +270,7 @@ ideas = {
 			modifier = {
 				non_core_manpower = 0.35
 				compliance_gain = 0.005
-				fascism_drift = 0.01
+				pelekist_drift = 0.01
 			}	
 			
 		}
@@ -315,7 +314,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.05
 				recruitable_population_factor = 0.10
 				
 			}
@@ -379,13 +378,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.10
-				industrial_capacity_factory = 0.10
-				industrial_capacity_dockyard = 0.10
-				production_factory_max_efficiency_factor = 0.10
-				production_factory_efficiency_gain_factor = 0.10
-				political_power_factor = -0.10
-				local_building_slots_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = -0.25
+				local_building_slots_factor = 0.10
 			}
 		
 		}
