@@ -1,0 +1,2844 @@
+focus_tree = {
+	id = france
+	continuous_focus_position = { x = 0 y = 1000 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+	#Armée de Terre
+	focus = {
+		id = FRA_armeedeterre
+		icon = GFX_FRA_armeedeterre-445
+		x = 16
+		y = 14
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_french_military  }
+	}
+
+	#A Motorised Army
+	focus = {
+		id = FRA_a_motorised_army
+		icon = GFX_FRA_a_motorised_army-445
+		x = 18
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_national_conscription_law  }
+	}
+
+	#Found the École militaire interarmes
+	focus = {
+		id = FRA_foundtheecolemilitaireinterarmes
+		icon = GFX_FRA_foundtheecolemilitaireinterarmes-445
+		x = 14
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_military_production_quotas  }
+	}
+
+	#Grande Batterie
+	focus = {
+		id = FRA_grande_batterie
+		icon = GFX_FRA_grande_batterie-445
+		x = 16
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_throwshellsnotmen  }
+	}
+
+	#Mountain Guns
+	focus = {
+		id = FRA_mountain_guns
+		icon = GFX_FRA_mountain_guns-445
+		x = 16
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_grande_batterie  }
+	}
+
+	#A Reformed Army
+	focus = {
+		id = FRA_a_reformed_army
+		icon = GFX_FRA_a_reformed_army-445
+		x = 16
+		y = 20
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_complete_the_magionot_line  focus = FRA_abandon_a_defensive_doctrine  }
+	}
+
+	#Complete the Magionot Line
+	focus = {
+		id = FRA_complete_the_magionot_line
+		icon = GFX_FRA_complete_the_magionot_line-445
+		x = 17
+		y = 19
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_char_de_rupture  focus = FRA_expand_border_forts  focus = FRA_mountain_guns  }
+		mutually_exclusive = { focus = FRA_abandon_a_defensive_doctrine  }
+	}
+
+	#Focus On Firepower
+	focus = {
+		id = FRA_focus_on_firepower
+		icon = GFX_FRA_focus_on_firepower-445
+		x = 16
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_armeedeterre  }
+		mutually_exclusive = { focus = FRA_legacy_of_the_great_war  focus = FRA_a_new_doctrine  }
+	}
+
+	#National Conscription Law
+	focus = {
+		id = FRA_national_conscription_law
+		icon = GFX_FRA_national_conscription_law-445
+		x = 18
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = FRA_focus_on_firepower  focus = FRA_legacy_of_the_great_war  }
+	}
+
+	#The French Military
+	focus = {
+		id = FRA_the_french_military
+		icon = GFX_FRA_the_french_military-445
+		x = 25
+		y = 13
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#A New Doctrine
+	focus = {
+		id = FRA_a_new_doctrine
+		icon = GFX_FRA_a_new_doctrine-445
+		x = 12
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_armeedeterre  }
+		mutually_exclusive = { focus = FRA_focus_on_firepower  focus = FRA_legacy_of_the_great_war  }
+	}
+
+	#Throw Shells, Not Men
+	focus = {
+		id = FRA_throwshellsnotmen
+		icon = GFX_FRA_throwshellsnotmen-445
+		x = 16
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_focus_on_firepower  }
+	}
+
+	#Military Production Quotas
+	focus = {
+		id = FRA_military_production_quotas
+		icon = GFX_FRA_military_production_quotas-445
+		x = 14
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_focus_on_firepower  focus = FRA_a_new_doctrine  }
+	}
+
+	#Expand Border Forts
+	focus = {
+		id = FRA_expand_border_forts
+		icon = GFX_FRA_expand_border_forts-445
+		x = 20
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_focus_on_defence  }
+	}
+
+	#Focus On Defence
+	focus = {
+		id = FRA_focus_on_defence
+		icon = GFX_FRA_focus_on_defence-445
+		x = 20
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_war_of_planning  }
+	}
+
+	#Legacy Of the Great War
+	focus = {
+		id = FRA_legacy_of_the_great_war
+		icon = GFX_FRA_legacy_of_the_great_war-445
+		x = 20
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_armeedeterre  }
+		mutually_exclusive = { focus = FRA_focus_on_firepower  focus = FRA_a_new_doctrine  }
+	}
+
+	#The S35
+	focus = {
+		id = FRA_the_s35
+		icon = GFX_FRA_the_s35-445
+		x = 12
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_maneuver_warfare  }
+	}
+
+	#Char de Rupture
+	focus = {
+		id = FRA_char_de_rupture
+		icon = GFX_FRA_char_de_rupture-445
+		x = 12
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_s35  }
+	}
+
+	#Maneuver Warfare
+	focus = {
+		id = FRA_maneuver_warfare
+		icon = GFX_FRA_maneuver_warfare-445
+		x = 12
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_a_new_doctrine  }
+	}
+
+	#Abandon a Defensive Doctrine
+	focus = {
+		id = FRA_abandon_a_defensive_doctrine
+		icon = GFX_FRA_abandon_a_defensive_doctrine-445
+		x = 15
+		y = 19
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_char_de_rupture  focus = FRA_expand_border_forts  focus = FRA_mountain_guns  }
+		mutually_exclusive = { focus = FRA_complete_the_magionot_line  }
+	}
+
+	#War of Planning
+	focus = {
+		id = FRA_war_of_planning
+		icon = GFX_FRA_war_of_planning-445
+		x = 20
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_legacy_of_the_great_war  }
+	}
+
+	#Restructured Communes
+	focus = {
+		id = FRA_restructured_communes
+		icon = GFX_FRA_restructured_communes-445
+		x = 9
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = FRA_revenge_for_the_bloody_week  }
+	}
+
+	#Reconcile the Population
+	focus = {
+		id = FRA_reconcile_the_population
+		icon = GFX_FRA_reconcile_the_population-445
+		x = 13
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_progressivist_assembly  }
+	}
+
+	#Progressivist Assembly
+	focus = {
+		id = FRA_progressivist_assembly
+		icon = GFX_FRA_progressivist_assembly-445
+		x = 13
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_first_national_assembly  }
+	}
+
+	#The State of France
+	focus = {
+		id = FRA_the_state_of_france
+		icon = GFX_FRA_the_state_of_france-445
+		x = 23
+		y = 0
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Remember 1871
+	focus = {
+		id = FRA_remember_1871
+		icon = GFX_FRA_remember_1871-445
+		x = 11
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_state_of_france  }
+	}
+
+	#The Republic Endures
+	focus = {
+		id = FRA_the_republic_endures
+		icon = GFX_FRA_the_republic_endures-445
+		x = 18
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_state_of_france  }
+	}
+
+	#The Lion Roars
+	focus = {
+		id = FRA_the_lion_roars
+		icon = GFX_FRA_the_lion_roars-445
+		x = 34
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_state_of_france  }
+	}
+
+	#The First United Congress
+	focus = {
+		id = FRA_the_first_united_congress
+		icon = GFX_FRA_the_first_united_congress-445
+		x = 49
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_second_reign_of_terror  }
+	}
+
+	#Begin the Myth
+	focus = {
+		id = FRA_begin_the_myth
+		icon = GFX_FRA_begin_the_myth-445
+		x = 4
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_state_of_france  }
+	}
+
+	#Democratic Socialism
+	focus = {
+		id = FRA_democratic_socialism
+		icon = GFX_FRA_democratic_socialism-445
+		x = 12
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_remember_1871  }
+		mutually_exclusive = { focus = FRA_rule_with_an_iron_first  }
+	}
+
+	#Revenge for the Bloody Week
+	focus = {
+		id = FRA_revenge_for_the_bloody_week
+		icon = GFX_FRA_revenge_for_the_bloody_week-445
+		x = 9
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_rule_with_an_iron_first  }
+	}
+
+	#Rule with an Iron First
+	focus = {
+		id = FRA_rule_with_an_iron_first
+		icon = GFX_FRA_rule_with_an_iron_first-445
+		x = 10
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_remember_1871  }
+		mutually_exclusive = { focus = FRA_democratic_socialism  }
+	}
+
+	#Constitutional Conversion
+	focus = {
+		id = FRA_constitutional_conversion
+		icon = GFX_FRA_constitutional_conversion-445
+		x = 11
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_rule_with_an_iron_first  } prerequisite = { focus = FRA_democratic_socialism  }
+	}
+
+	#The First National Assembly
+	focus = {
+		id = FRA_the_first_national_assembly
+		icon = GFX_FRA_the_first_national_assembly-445
+		x = 13
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_democratic_socialism  }
+	}
+
+	#Economic Transition
+	focus = {
+		id = FRA_economic_transition
+		icon = GFX_FRA_economic_transition-445
+		x = 11
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_constitutional_conversion  }
+	}
+
+	#Collectivised  Industry
+	focus = {
+		id = FRA_collectivisedindustry
+		icon = GFX_FRA_collectivisedindustry-445
+		x = 9
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_restructured_communes  }
+	}
+
+	#A Direct Democracy
+	focus = {
+		id = FRA_a_direct_democracy
+		icon = GFX_FRA_a_direct_democracy-445
+		x = 12
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_reconcile_the_population  } prerequisite = { focus = FRA_economic_transition  }
+	}
+
+	#Empower the Garde Nationale
+	focus = {
+		id = FRA_empower_the_garde_nationale
+		icon = GFX_FRA_empower_the_garde_nationale-445
+		x = 10
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_collectivisedindustry  } prerequisite = { focus = FRA_economic_transition  }
+	}
+
+	#A Reoriented Economy
+	focus = {
+		id = FRA_a_reoriented_economy
+		icon = GFX_FRA_a_reoriented_economy-445
+		x = 8
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_collectivisedindustry  }
+	}
+
+	#Liberté
+	focus = {
+		id = FRA_liberte
+		icon = GFX_FRA_liberte-445
+		x = 9
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_a_reoriented_economy  } prerequisite = { focus = FRA_empower_the_garde_nationale  }
+		mutually_exclusive = { focus = FRA_solidarite  } mutually_exclusive = { focus = FRA_egalite  }
+	}
+
+	#Egalité
+	focus = {
+		id = FRA_egalite
+		icon = GFX_FRA_egalite-445
+		x = 11
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_a_direct_democracy  focus = FRA_empower_the_garde_nationale  }
+		mutually_exclusive = { focus = FRA_solidarite  } mutually_exclusive = { focus = FRA_liberte  }
+	}
+
+	#Solidarité
+	focus = {
+		id = FRA_solidarite
+		icon = GFX_FRA_solidarite-445
+		x = 13
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_a_direct_democracy  }
+		mutually_exclusive = { focus = FRA_egalite  } mutually_exclusive = { focus = FRA_liberte  }
+	}
+
+	#Legacy of Marx and Engels
+	focus = {
+		id = FRA_legacy_of_marx_and_engels
+		icon = GFX_FRA_legacy_of_marx_and_engels-445
+		x = 11
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_liberte  focus = FRA_egalite  focus = FRA_solidarite  }
+	}
+
+	#The Right and Centre
+	focus = {
+		id = FRA_the_right_and_centre
+		icon = GFX_FRA_the_right_and_centre-445
+		x = 19
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_republic_endures  }
+	}
+
+	#The Popular Front
+	focus = {
+		id = FRA_the_popular_front
+		icon = GFX_FRA_the_popular_front-445
+		x = 17
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_republic_endures  }
+	}
+
+	#Franc Devaluation
+	focus = {
+		id = FRA_franc_devaluation
+		icon = GFX_FRA_franc_devaluation-445
+		x = 18
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_popular_front  focus = FRA_the_right_and_centre  }
+	}
+
+	#The Matignon Agreements
+	focus = {
+		id = FRA_the_matignon_agreements
+		icon = GFX_FRA_the_matignon_agreements-445
+		x = 16
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_popular_front  }
+	}
+
+	#Liberalise the Economy
+	focus = {
+		id = FRA_liberalise_the_economy
+		icon = GFX_FRA_liberalise_the_economy-445
+		x = 20
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_right_and_centre  }
+	}
+
+	#An Economic Miracle
+	focus = {
+		id = FRA_an_economic_miracle
+		icon = GFX_FRA_an_economic_miracle-445
+		x = 18
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_franc_devaluation  }
+	}
+
+	#Improved Welfare System
+	focus = {
+		id = FRA_improved_welfare_system
+		icon = GFX_FRA_improved_welfare_system-445
+		x = 16
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_matignon_agreements  }
+	}
+
+	#Support From Colonies
+	focus = {
+		id = FRA_support_from_colonies
+		icon = GFX_FRA_support_from_colonies-445
+		x = 20
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_liberalise_the_economy  }
+	}
+
+	#The Fourth Republic
+	focus = {
+		id = FRA_the_fourth_republic
+		icon = GFX_FRA_the_fourth_republic-445
+		x = 20
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_support_from_colonies  }
+	}
+
+	#A Colonel's Government
+	focus = {
+		id = FRA_acolonelsgovernment
+		icon = GFX_FRA_acolonelsgovernment-445
+		x = 23
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_force_a_coallition  } prerequisite = { focus = FRA_deal_with_opposition  }
+	}
+
+	#Corporatism
+	focus = {
+		id = FRA_corporatism
+		icon = GFX_FRA_corporatism-445
+		x = 23
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_acolonelsgovernment  }
+	}
+
+	#Expand the Croix-de-Feu
+	focus = {
+		id = FRA_expand_the_croixdefeu
+		icon = GFX_FRA_expand_the_croixdefeu-445
+		x = 23
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_corporatism  }
+	}
+
+	#Cult of Personality
+	focus = {
+		id = FRA_cult_of_personality
+		icon = GFX_FRA_cult_of_personality-445
+		x = 23
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_expand_the_croixdefeu  } prerequisite = { focus = FRA_lessons_of_civil_war  }
+	}
+
+	#Expanded Labour Laws
+	focus = {
+		id = FRA_expanded_labour_laws
+		icon = GFX_FRA_expanded_labour_laws-445
+		x = 16
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_continue_the_popular_front  focus = FRA_end_the_popular_front  }
+	}
+
+	#Continue the Popular Front
+	focus = {
+		id = FRA_continue_the_popular_front
+		icon = GFX_FRA_continue_the_popular_front-445
+		x = 17
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_improved_welfare_system  }
+	}
+
+	#End the Popular Front
+	focus = {
+		id = FRA_end_the_popular_front
+		icon = GFX_FRA_end_the_popular_front-445
+		x = 15
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_improved_welfare_system  }
+	}
+
+	#A Leading Nation
+	focus = {
+		id = FRA_a_leading_nation
+		icon = GFX_FRA_a_leading_nation-445
+		x = 21
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_fourth_republic  }
+		mutually_exclusive = { focus = FRA_renew_ties_with_britain  }
+	}
+
+	#Opposition to Germany
+	focus = {
+		id = FRA_opposition_to_germany
+		icon = GFX_FRA_opposition_to_germany-445
+		x = 19
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_renew_ties_with_britain  focus = FRA_a_leading_nation  }
+	}
+
+	#Up With Marianne
+	focus = {
+		id = FRA_up_with_marianne
+		icon = GFX_FRA_up_with_marianne-445
+		x = 18
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_opposition_to_germany  focus = FRA_detene_with_the_spartakists  }
+	}
+
+	#Force a Coallition
+	focus = {
+		id = FRA_force_a_coallition
+		icon = GFX_FRA_force_a_coallition-445
+		x = 23
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_liberalise_the_economy  focus = FRA_an_officer  }
+	}
+
+	#Detene with the Spartakists
+	focus = {
+		id = FRA_detene_with_the_spartakists
+		icon = GFX_FRA_detene_with_the_spartakists-445
+		x = 17
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_expanded_labour_laws  }
+		mutually_exclusive = { focus = FRA_opposition_to_germany  }
+	}
+
+	#Renew Ties with Britain
+	focus = {
+		id = FRA_renew_ties_with_britain
+		icon = GFX_FRA_renew_ties_with_britain-445
+		x = 19
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_fourth_republic  }
+		mutually_exclusive = { focus = FRA_a_leading_nation  }
+	}
+
+	#Deal with Opposition
+	focus = {
+		id = FRA_deal_with_opposition
+		icon = GFX_FRA_deal_with_opposition-445
+		x = 25
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_an_officer  }
+	}
+
+	#The Marshall's Succesor
+	focus = {
+		id = FRA_themarshallssuccesor
+		icon = GFX_FRA_themarshallssuccesor-445
+		x = 29
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_lion_roars  }
+	}
+
+	#An Officer
+	focus = {
+		id = FRA_an_officer
+		icon = GFX_FRA_an_officer-445
+		x = 27
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_themarshallssuccesor  }
+	}
+
+	#Restore Order
+	focus = {
+		id = FRA_restore_order
+		icon = GFX_FRA_restore_order-445
+		x = 27
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_an_officer  }
+	}
+
+	#A New Cabinet
+	focus = {
+		id = FRA_a_new_cabinet
+		icon = GFX_FRA_a_new_cabinet-445
+		x = 27
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_restore_order  } prerequisite = { focus = FRA_deal_with_opposition  }
+	}
+
+	#The Institut de France
+	focus = {
+		id = FRA_the_institut_de_france
+		icon = GFX_FRA_the_institut_de_france-445
+		x = 25
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_acolonelsgovernment  focus = FRA_a_new_cabinet  }
+	}
+
+	#National Labour Camps
+	focus = {
+		id = FRA_national_labour_camps
+		icon = GFX_FRA_national_labour_camps-445
+		x = 27
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_a_new_cabinet  }
+	}
+
+	#Integrate La Cagoule
+	focus = {
+		id = FRA_integrate_la_cagoule
+		icon = GFX_FRA_integrate_la_cagoule-445
+		x = 27
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_national_labour_camps  }
+	}
+
+	#Lessons of Civil War
+	focus = {
+		id = FRA_lessons_of_civil_war
+		icon = GFX_FRA_lessons_of_civil_war-445
+		x = 25
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_institut_de_france  }
+	}
+
+	#The Military Knows Best
+	focus = {
+		id = FRA_the_military_knows_best
+		icon = GFX_FRA_the_military_knows_best-445
+		x = 27
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_integrate_la_cagoule  } prerequisite = { focus = FRA_lessons_of_civil_war  }
+	}
+
+	#The Admiral
+	focus = {
+		id = FRA_the_admiral
+		icon = GFX_FRA_the_admiral-445
+		x = 31
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_themarshallssuccesor  }
+	}
+
+	#The Revolution Nationale
+	focus = {
+		id = FRA_the_revolution_nationale
+		icon = GFX_FRA_the_revolution_nationale-445
+		x = 31
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_admiral  }
+	}
+
+	#Naval Heritage
+	focus = {
+		id = FRA_naval_heritage
+		icon = GFX_FRA_naval_heritage-445
+		x = 30
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_revolution_nationale  }
+	}
+
+	#Travall
+	focus = {
+		id = FRA_travall
+		icon = GFX_FRA_travall-445
+		x = 29
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_naval_heritage  } prerequisite = { focus = FRA_the_milice  }
+	}
+
+	#Patrie
+	focus = {
+		id = FRA_patrie
+		icon = GFX_FRA_patrie-445
+		x = 31
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_naval_heritage  } prerequisite = { focus = FRA_the_milice  }
+	}
+
+	#Familie
+	focus = {
+		id = FRA_familie
+		icon = GFX_FRA_familie-445
+		x = 33
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_naval_heritage  } prerequisite = { focus = FRA_the_milice  }
+	}
+
+	#A Nation Born Again
+	focus = {
+		id = FRA_a_nation_born_again
+		icon = GFX_FRA_a_nation_born_again-445
+		x = 31
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_travall  } prerequisite = { focus = FRA_patrie  } prerequisite = { focus = FRA_familie  }
+	}
+
+	#Legacy of the Empire
+	focus = {
+		id = FRA_legacy_of_the_empire
+		icon = GFX_FRA_legacy_of_the_empire-445
+		x = 31
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_a_nation_born_again  }
+	}
+
+	#The Milice
+	focus = {
+		id = FRA_the_milice
+		icon = GFX_FRA_the_milice-445
+		x = 32
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_revolution_nationale  }
+	}
+
+	#Embrace Royalism
+	focus = {
+		id = FRA_embrace_royalism
+		icon = GFX_FRA_embrace_royalism-445
+		x = 38
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_lion_roars  }
+	}
+
+	#Curb Republicanism
+	focus = {
+		id = FRA_curb_republicanism
+		icon = GFX_FRA_curb_republicanism-445
+		x = 37
+		y = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_embrace_royalism  }
+	}
+
+	#A Grand Coronation
+	focus = {
+		id = FRA_a_grand_coronation
+		icon = GFX_FRA_a_grand_coronation-445
+		x = 38
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_curb_republicanism  } prerequisite = { focus = FRA_the_cercle_proudhon  }
+	}
+
+	#France Indivisible
+	focus = {
+		id = FRA_france_indivisible
+		icon = GFX_FRA_france_indivisible-445
+		x = 25
+		y = 9
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_legacy_of_marx_and_engels  focus = FRA_up_with_marianne  focus = FRA_cult_of_personality  focus = FRA_the_military_knows_best  focus = FRA_legacy_of_the_empire  focus = FRA_the_king_of_the_french  }
+	}
+
+	#Looking Outwards
+	focus = {
+		id = FRA_looking_outwards
+		icon = GFX_FRA_looking_outwards-445
+		x = 25
+		y = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_france_indivisible  }
+	}
+
+	#Our European Commtments
+	focus = {
+		id = FRA_our_european_commtments
+		icon = GFX_FRA_our_european_commtments-445
+		x = 27
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_france_indivisible  }
+	}
+
+	#The Question of Loyality
+	focus = {
+		id = FRA_the_question_of_loyality
+		icon = GFX_FRA_the_question_of_loyality-445
+		x = 23
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_france_indivisible  }
+	}
+
+	#Deal With Our Enemies
+	focus = {
+		id = FRA_deal_with_our_enemies
+		icon = GFX_FRA_deal_with_our_enemies-445
+		x = 25
+		y = 11
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_looking_outwards  } prerequisite = { focus = FRA_our_european_commtments  } prerequisite = { focus = FRA_the_question_of_loyality  }
+	}
+
+	#Worker-owned Factories
+	focus = {
+		id = FRA_workerowned_factories
+		icon = GFX_FRA_workerowned_factories-445
+		x = 2
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_anticapitalism  }
+	}
+
+	#Corporatism
+	focus = {
+		id = FRA_corporatism
+		icon = GFX_FRA_corporatism-445
+		x = 36
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_national_integralism  }
+	}
+
+	#The King of the French
+	focus = {
+		id = FRA_the_king_of_the_french
+		icon = GFX_FRA_the_king_of_the_french-445
+		x = 38
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_restoring_our_former_glory  } prerequisite = { focus = FRA_the_spiritual_mindset  } prerequisite = { focus = FRA_the_camelots_du_roi  }
+	}
+
+	#Diarchy With Church
+	focus = {
+		id = FRA_diarchy_with_church
+		icon = GFX_FRA_diarchy_with_church-445
+		x = 40
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_a_grand_coronation  }
+	}
+
+	#The Spiritual Mindset
+	focus = {
+		id = FRA_the_spiritual_mindset
+		icon = GFX_FRA_the_spiritual_mindset-445
+		x = 40
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_squash_the_heretics  }
+	}
+
+	#National Integralism
+	focus = {
+		id = FRA_national_integralism
+		icon = GFX_FRA_national_integralism-445
+		x = 36
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_a_grand_coronation  }
+	}
+
+	#The Cercle Proudhon
+	focus = {
+		id = FRA_the_cercle_proudhon
+		icon = GFX_FRA_the_cercle_proudhon-445
+		x = 39
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_embrace_royalism  }
+	}
+
+	#The Trifunctional Hierarchy
+	focus = {
+		id = FRA_the_trifunctional_hierarchy
+		icon = GFX_FRA_the_trifunctional_hierarchy-445
+		x = 53
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_dumezil_is_always_right  } prerequisite = { focus = FRA_the_senate_of_franks  } prerequisite = { focus = FRA_the_great_temple_of_taranis  } prerequisite = { focus = FRA_bread_and_circuses  }
+	}
+
+	#Return of Patriarchal Society
+	focus = {
+		id = FRA_return_of_patriarchal_society
+		icon = GFX_FRA_return_of_patriarchal_society-445
+		x = 56
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_reverse_the_tides  }
+	}
+
+	#Practical Forest Farming
+	focus = {
+		id = FRA_practical_forest_farming
+		icon = GFX_FRA_practical_forest_farming-445
+		x = 50
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_agricultural_strengthening  }
+	}
+
+	#Squash the Heretics
+	focus = {
+		id = FRA_squash_the_heretics
+		icon = GFX_FRA_squash_the_heretics-445
+		x = 40
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_diarchy_with_church  }
+	}
+
+	#The Natural Hierarchy
+	focus = {
+		id = FRA_the_natural_hierarchy
+		icon = GFX_FRA_the_natural_hierarchy-445
+		x = 42
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_trade_corpus_system  }
+	}
+
+	#Agricultural Strengthening
+	focus = {
+		id = FRA_agricultural_strengthening
+		icon = GFX_FRA_agricultural_strengthening-445
+		x = 50
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_augustus_of_franks  }
+	}
+
+	#Augustus of Franks
+	focus = {
+		id = FRA_augustus_of_franks
+		icon = GFX_FRA_augustus_of_franks-445
+		x = 53
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_first_united_congress  }
+	}
+
+	#The Second Reign Of Terror
+	focus = {
+		id = FRA_the_second_reign_of_terror
+		icon = GFX_FRA_the_second_reign_of_terror-445
+		x = 49
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_state_of_france  }
+	}
+
+	#The Camelots du Roi
+	focus = {
+		id = FRA_the_camelots_du_roi
+		icon = GFX_FRA_the_camelots_du_roi-445
+		x = 36
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_corporatism  }
+	}
+
+	#Platonic Influence
+	focus = {
+		id = FRA_platonic_influence
+		icon = GFX_FRA_platonic_influence-445
+		x = 38
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_a_grand_coronation  }
+	}
+
+	#Folkish Revival
+	focus = {
+		id = FRA_folkish_revival
+		icon = GFX_FRA_folkish_revival-445
+		x = 38
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_platonic_influence  }
+	}
+
+	#Restoring Our Former Glory
+	focus = {
+		id = FRA_restoring_our_former_glory
+		icon = GFX_FRA_restoring_our_former_glory-445
+		x = 38
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_folkish_revival  }
+	}
+
+	#National Patriotism
+	focus = {
+		id = FRA_national_patriotism
+		icon = GFX_FRA_national_patriotism-445
+		x = 42
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_discredit_romanticism  }
+	}
+
+	#Crown The King
+	focus = {
+		id = FRA_crown_the_king
+		icon = GFX_FRA_crown_the_king-445
+		x = 46
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_execute_the_liberal  }
+	}
+
+	#The Great Rebuilding of France
+	focus = {
+		id = FRA_the_great_rebuilding_of_france
+		icon = GFX_FRA_the_great_rebuilding_of_france-445
+		x = 52
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_new_architecture  }
+	}
+
+	#Dumezil is Always Right
+	focus = {
+		id = FRA_dumezil_is_always_right
+		icon = GFX_FRA_dumezil_is_always_right-445
+		x = 54
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_great_scholar  }
+	}
+
+	#New Architecture
+	focus = {
+		id = FRA_new_architecture
+		icon = GFX_FRA_new_architecture-445
+		x = 52
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_augustus_of_franks  }
+	}
+
+	#Burn Liberal Symbolic
+	focus = {
+		id = FRA_burn_liberal_symbolic
+		icon = GFX_FRA_burn_liberal_symbolic-445
+		x = 4
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_beat_the_academics  }
+	}
+
+	#The Upcoming Golden Age
+	focus = {
+		id = FRA_the_upcoming_golden_age
+		icon = GFX_FRA_the_upcoming_golden_age-445
+		x = 54
+		y = 11
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_indoeuropean_brotherhood  } prerequisite = { focus = FRA_aid_foreign_pelekists  }
+	}
+
+	#The Great Scholar
+	focus = {
+		id = FRA_the_great_scholar
+		icon = GFX_FRA_the_great_scholar-445
+		x = 54
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_obligatory_mythology_courses  }
+	}
+
+	#Coax the Church
+	focus = {
+		id = FRA_coax_the_church
+		icon = GFX_FRA_coax_the_church-445
+		x = 52
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_great_rebuilding_of_france  }
+	}
+
+	#Generous Student Subsidies
+	focus = {
+		id = FRA_generous_student_subsidies
+		icon = GFX_FRA_generous_student_subsidies-445
+		x = 54
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_augustus_of_franks  }
+	}
+
+	#Obligatory Mythology Courses
+	focus = {
+		id = FRA_obligatory_mythology_courses
+		icon = GFX_FRA_obligatory_mythology_courses-445
+		x = 54
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_generous_student_subsidies  }
+	}
+
+	#The Senate of Franks
+	focus = {
+		id = FRA_the_senate_of_franks
+		icon = GFX_FRA_the_senate_of_franks-445
+		x = 56
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_limit_voting_rights  }
+	}
+
+	#Reverse the Tides
+	focus = {
+		id = FRA_reverse_the_tides
+		icon = GFX_FRA_reverse_the_tides-445
+		x = 56
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_augustus_of_franks  }
+	}
+
+	#Limit Voting Rights
+	focus = {
+		id = FRA_limit_voting_rights
+		icon = GFX_FRA_limit_voting_rights-445
+		x = 56
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_return_of_patriarchal_society  }
+	}
+
+	#Honor the Worker
+	focus = {
+		id = FRA_honor_the_worker
+		icon = GFX_FRA_honor_the_worker-445
+		x = 50
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_practical_forest_farming  }
+	}
+
+	#Aid Foreign Pelekists
+	focus = {
+		id = FRA_aid_foreign_pelekists
+		icon = GFX_FRA_aid_foreign_pelekists-445
+		x = 55
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_found_the_european_league  }
+	}
+
+	#Bread and Circuses
+	focus = {
+		id = FRA_bread_and_circuses
+		icon = GFX_FRA_bread_and_circuses-445
+		x = 50
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_honor_the_worker  }
+	}
+
+	#Indo-European Brotherhood
+	focus = {
+		id = FRA_indoeuropean_brotherhood
+		icon = GFX_FRA_indoeuropean_brotherhood-445
+		x = 53
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_found_the_european_league  }
+	}
+
+	#The Great Temple of Taranis
+	focus = {
+		id = FRA_the_great_temple_of_taranis
+		icon = GFX_FRA_the_great_temple_of_taranis-445
+		x = 52
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_coax_the_church  }
+	}
+
+	#Found the European League
+	focus = {
+		id = FRA_found_the_european_league
+		icon = GFX_FRA_found_the_european_league-445
+		x = 53
+		y = 9
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_trifunctional_hierarchy  }
+	}
+
+	#The Pelekist Eagle
+	focus = {
+		id = FRA_the_pelekist_eagle
+		icon = GFX_FRA_the_pelekist_eagle-445
+		x = 53
+		y = 12
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_europe__a_nation  } prerequisite = { focus = FRA_the_upcoming_golden_age  }
+	}
+
+	#Europe - A Nation
+	focus = {
+		id = FRA_europe__a_nation
+		icon = GFX_FRA_europe__a_nation-445
+		x = 52
+		y = 11
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_indoeuropean_brotherhood  } prerequisite = { focus = FRA_expansionist_policy  }
+	}
+
+	#Expansionist Policy
+	focus = {
+		id = FRA_expansionist_policy
+		icon = GFX_FRA_expansionist_policy-445
+		x = 51
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_found_the_european_league  }
+	}
+
+	#Dissolve the Parlament
+	focus = {
+		id = FRA_dissolve_the_parlament
+		icon = GFX_FRA_dissolve_the_parlament-445
+		x = 46
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_elevate_the_church  }
+	}
+
+	#Break The Nationalist Dogma
+	focus = {
+		id = FRA_break_the_nationalist_dogma
+		icon = GFX_FRA_break_the_nationalist_dogma-445
+		x = 48
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_begin_the_reversal_of_1871  }
+	}
+
+	#Ministry Of Societal Virtuosity
+	focus = {
+		id = FRA_ministry_of_societal_virtuosity
+		icon = GFX_FRA_ministry_of_societal_virtuosity-445
+		x = 44
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_vatican_hegemony  }
+	}
+
+	#Begin the Reversal of 1871
+	focus = {
+		id = FRA_begin_the_reversal_of_1871
+		icon = GFX_FRA_begin_the_reversal_of_1871-445
+		x = 45
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_first_united_congress  }
+	}
+
+	#Love Thy Family
+	focus = {
+		id = FRA_love_thy_family
+		icon = GFX_FRA_love_thy_family-445
+		x = 44
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_ministry_of_societal_virtuosity  }
+	}
+
+	#Elevate the Church
+	focus = {
+		id = FRA_elevate_the_church
+		icon = GFX_FRA_elevate_the_church-445
+		x = 46
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_crown_the_king  }
+	}
+
+	#Discredit Romanticism
+	focus = {
+		id = FRA_discredit_romanticism
+		icon = GFX_FRA_discredit_romanticism-445
+		x = 42
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_begin_the_reversal_of_1871  }
+	}
+
+	#Expel the Métèques
+	focus = {
+		id = FRA_expelthemeteques
+		icon = GFX_FRA_expelthemeteques-445
+		x = 44
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_begin_the_reversal_of_1871  }
+	}
+
+	#Execute the Liberal
+	focus = {
+		id = FRA_execute_the_liberal
+		icon = GFX_FRA_execute_the_liberal-445
+		x = 46
+		y = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_begin_the_reversal_of_1871  }
+	}
+
+	#Federal Monarchy
+	focus = {
+		id = FRA_federal_monarchy
+		icon = GFX_FRA_federal_monarchy-445
+		x = 45
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_andincolonies  } prerequisite = { focus = FRA_dissolve_the_parlament  } prerequisite = { focus = FRA_love_thy_family  } prerequisite = { focus = FRA_the_natural_hierarchy  }
+	}
+
+	#Decentralised Assemblies In France...
+	focus = {
+		id = FRA_decentralisedassembliesinfrance
+		icon = GFX_FRA_decentralisedassembliesinfrance-445
+		x = 48
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_stop_minority_integration  }
+	}
+
+	#The French France
+	focus = {
+		id = FRA_the_french_france
+		icon = GFX_FRA_the_french_france-445
+		x = 45
+		y = 11
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_revenge_for_the_fallen  } prerequisite = { focus = FRA_demand_quebec  } prerequisite = { focus = FRA_wallonian_french  }
+	}
+
+	#Stop Minority Integration
+	focus = {
+		id = FRA_stop_minority_integration
+		icon = GFX_FRA_stop_minority_integration-445
+		x = 48
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_break_the_nationalist_dogma  }
+	}
+
+	#...And In Colonies...
+	focus = {
+		id = FRA_andincolonies
+		icon = GFX_FRA_andincolonies-445
+		x = 48
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_decentralisedassembliesinfrance  }
+	}
+
+	#Vatican Hegemony
+	focus = {
+		id = FRA_vatican_hegemony
+		icon = GFX_FRA_vatican_hegemony-445
+		x = 44
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_expelthemeteques  }
+	}
+
+	#Trade Corpus System
+	focus = {
+		id = FRA_trade_corpus_system
+		icon = GFX_FRA_trade_corpus_system-445
+		x = 42
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_national_patriotism  }
+	}
+
+	#The French Interests
+	focus = {
+		id = FRA_the_french_interests
+		icon = GFX_FRA_the_french_interests-445
+		x = 45
+		y = 9
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_federal_monarchy  }
+	}
+
+	#Demand Quebec
+	focus = {
+		id = FRA_demand_quebec
+		icon = GFX_FRA_demand_quebec-445
+		x = 47
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_french_interests  }
+	}
+
+	#Wallonian French
+	focus = {
+		id = FRA_wallonian_french
+		icon = GFX_FRA_wallonian_french-445
+		x = 43
+		y = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_french_interests  }
+	}
+
+	#Revenge For the Fallen
+	focus = {
+		id = FRA_revenge_for_the_fallen
+		icon = GFX_FRA_revenge_for_the_fallen-445
+		x = 45
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_french_interests  }
+	}
+
+	#The Labor Aristocrat
+	focus = {
+		id = FRA_the_labor_aristocrat
+		icon = GFX_FRA_the_labor_aristocrat-445
+		x = 2
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_enrich_the_countryside  }
+	}
+
+	#Obliterate Decadence
+	focus = {
+		id = FRA_obliterate_decadence
+		icon = GFX_FRA_obliterate_decadence-445
+		x = 6
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_revitalization_of_the_bourgeois  }
+	}
+
+	#Hang the Republicans
+	focus = {
+		id = FRA_hang_the_republicans
+		icon = GFX_FRA_hang_the_republicans-445
+		x = 4
+		y = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_begin_the_myth  }
+	}
+
+	#Nationalize the Bourgeois
+	focus = {
+		id = FRA_nationalize_the_bourgeois
+		icon = GFX_FRA_nationalize_the_bourgeois-445
+		x = 6
+		y = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_redistribute_excess_capital  }
+	}
+
+	#Revitalization of the Bourgeois
+	focus = {
+		id = FRA_revitalization_of_the_bourgeois
+		icon = GFX_FRA_revitalization_of_the_bourgeois-445
+		x = 6
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_begin_the_myth  }
+	}
+
+	#The New Bourgeois
+	focus = {
+		id = FRA_the_new_bourgeois
+		icon = GFX_FRA_the_new_bourgeois-445
+		x = 6
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_joy_of_duty  }
+	}
+
+	#Redistribute Excess Capital
+	focus = {
+		id = FRA_redistribute_excess_capital
+		icon = GFX_FRA_redistribute_excess_capital-445
+		x = 6
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_obliterate_decadence  }
+	}
+
+	#Beat the Academics
+	focus = {
+		id = FRA_beat_the_academics
+		icon = GFX_FRA_beat_the_academics-445
+		x = 4
+		y = 3
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_hang_the_republicans  }
+	}
+
+	#The Death of Enlightenment
+	focus = {
+		id = FRA_the_death_of_enlightenment
+		icon = GFX_FRA_the_death_of_enlightenment-445
+		x = 4
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_exile_of_parasites  }
+	}
+
+	#Freedom Through Conflict
+	focus = {
+		id = FRA_freedom_through_conflict
+		icon = GFX_FRA_freedom_through_conflict-445
+		x = 5
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_spread_the_revolution  }
+	}
+
+	#Syndicalist Technocracy
+	focus = {
+		id = FRA_syndicalist_technocracy
+		icon = GFX_FRA_syndicalist_technocracy-445
+		x = 2
+		y = 7
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_labor_aristocrat  }
+	}
+
+	#Exile of Parasites
+	focus = {
+		id = FRA_exile_of_parasites
+		icon = GFX_FRA_exile_of_parasites-445
+		x = 4
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_dissolve_the_parliament  }
+	}
+
+	#The Joy of Duty
+	focus = {
+		id = FRA_the_joy_of_duty
+		icon = GFX_FRA_the_joy_of_duty-445
+		x = 6
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_nationalize_the_bourgeois  }
+	}
+
+	#Anti-Capitalism
+	focus = {
+		id = FRA_anticapitalism
+		icon = GFX_FRA_anticapitalism-445
+		x = 2
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_begin_the_myth  }
+	}
+
+	#Enrich the Countryside
+	focus = {
+		id = FRA_enrich_the_countryside
+		icon = GFX_FRA_enrich_the_countryside-445
+		x = 2
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_proletarian_nationalism  }
+	}
+
+	#Dissolve the Parliament
+	focus = {
+		id = FRA_dissolve_the_parliament
+		icon = GFX_FRA_dissolve_the_parliament-445
+		x = 4
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_burn_liberal_symbolic  }
+	}
+
+	#Proletarian Nationalism
+	focus = {
+		id = FRA_proletarian_nationalism
+		icon = GFX_FRA_proletarian_nationalism-445
+		x = 2
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_workerowned_factories  }
+	}
+
+	#An Avant-Garde France
+	focus = {
+		id = FRA_an_avantgarde_france
+		icon = GFX_FRA_an_avantgarde_france-445
+		x = 4
+		y = 11
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_freedom_through_conflict  } prerequisite = { focus = FRA_the_communard_legion  }
+	}
+
+	#Spread the Revolution
+	focus = {
+		id = FRA_spread_the_revolution
+		icon = GFX_FRA_spread_the_revolution-445
+		x = 4
+		y = 9
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_heroic_proletariat  }
+	}
+
+	#The Heroic Proletariat
+	focus = {
+		id = FRA_the_heroic_proletariat
+		icon = GFX_FRA_the_heroic_proletariat-445
+		x = 4
+		y = 8
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_death_of_enlightenment  } prerequisite = { focus = FRA_the_new_bourgeois  } prerequisite = { focus = FRA_syndicalist_technocracy  }
+	}
+
+	#The Communard Legion
+	focus = {
+		id = FRA_the_communard_legion
+		icon = GFX_FRA_the_communard_legion-445
+		x = 3
+		y = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_spread_the_revolution  }
+	}
+
+	#Convoy Escorts
+	focus = {
+		id = FRA_convoy_escorts
+		icon = GFX_FRA_convoy_escorts-445
+		x = 37
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_wage_undersea_warfare  focus = FRA_rebuild_the_surface_fleet  }
+	}
+
+	#Wage Undersea Warfare
+	focus = {
+		id = FRA_wage_undersea_warfare
+		icon = GFX_FRA_wage_undersea_warfare-445
+		x = 39
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_marine_nationale  }
+		mutually_exclusive = { focus = FRA_rebuild_the_surface_fleet  }
+	}
+
+	#Continue Carrier Programms
+	focus = {
+		id = FRA_continue_carrier_programms
+		icon = GFX_FRA_continue_carrier_programms-445
+		x = 31
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_rebuild_the_surface_fleet  }
+		mutually_exclusive = { focus = FRA_traditional_roles  }
+	}
+
+	#Traditional Roles
+	focus = {
+		id = FRA_traditional_roles
+		icon = GFX_FRA_traditional_roles-445
+		x = 35
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_rebuild_the_surface_fleet  }
+		mutually_exclusive = { focus = FRA_continue_carrier_programms  }
+	}
+
+	#Grand Forces Coordination
+	focus = {
+		id = FRA_grand_forces_coordination
+		icon = GFX_FRA_grand_forces_coordination-445
+		x = 23
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_ground_support  }
+	}
+
+	#Flexible Bombers
+	focus = {
+		id = FRA_flexible_bombers
+		icon = GFX_FRA_flexible_bombers-445
+		x = 23
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_grand_forces_coordination  }
+	}
+
+	#Aerial Destruction
+	focus = {
+		id = FRA_aerial_destruction
+		icon = GFX_FRA_aerial_destruction-445
+		x = 22
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_flexible_bombers  }
+	}
+
+	#Light Bombers
+	focus = {
+		id = FRA_light_bombers
+		icon = GFX_FRA_light_bombers-445
+		x = 24
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_flexible_bombers  } prerequisite = { focus = FRA_improved_production_methods  }
+		mutually_exclusive = { focus = FRA_coordinated_bombings  }
+	}
+
+	#Airbase Construction
+	focus = {
+		id = FRA_airbase_construction
+		icon = GFX_FRA_airbase_construction-445
+		x = 25
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_ground_support  focus = FRA_air_dominance  }
+	}
+
+	#Improved Production Methods
+	focus = {
+		id = FRA_improved_production_methods
+		icon = GFX_FRA_improved_production_methods-445
+		x = 25
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_airbase_construction  }
+	}
+
+	#Fighther Interception
+	focus = {
+		id = FRA_fighther_interception
+		icon = GFX_FRA_fighther_interception-445
+		x = 27
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_air_dominance  }
+	}
+
+	#Multi-Engine Fighters
+	focus = {
+		id = FRA_multiengine_fighters
+		icon = GFX_FRA_multiengine_fighters-445
+		x = 27
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_fighther_interception  }
+	}
+
+	#Coordinated Bombings
+	focus = {
+		id = FRA_coordinated_bombings
+		icon = GFX_FRA_coordinated_bombings-445
+		x = 26
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_improved_production_methods  } prerequisite = { focus = FRA_multiengine_fighters  }
+		mutually_exclusive = { focus = FRA_light_bombers  }
+	}
+
+	#Rule the Skies
+	focus = {
+		id = FRA_rule_the_skies
+		icon = GFX_FRA_rule_the_skies-445
+		x = 25
+		y = 19
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_coordinated_bombings  }
+	}
+
+	#Marine Nationale
+	focus = {
+		id = FRA_marine_nationale
+		icon = GFX_FRA_marine_nationale-445
+		x = 36
+		y = 14
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_the_french_military  }
+	}
+
+	#Rebuild the Surface Fleet
+	focus = {
+		id = FRA_rebuild_the_surface_fleet
+		icon = GFX_FRA_rebuild_the_surface_fleet-445
+		x = 33
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_marine_nationale  }
+		mutually_exclusive = { focus = FRA_wage_undersea_warfare  }
+	}
+
+	#Armée de l'Air
+	focus = {
+		id = FRA_armeedelair
+		icon = GFX_FRA_armeedelair-445
+		x = 25
+		y = 14
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_the_french_military  }
+	}
+
+	#Ground Support
+	focus = {
+		id = FRA_ground_support
+		icon = GFX_FRA_ground_support-445
+		x = 23
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_armeedelair  }
+		mutually_exclusive = { focus = FRA_air_dominance  }
+	}
+
+	#Air Dominance
+	focus = {
+		id = FRA_air_dominance
+		icon = GFX_FRA_air_dominance-445
+		x = 27
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_armeedelair  }
+		mutually_exclusive = { focus = FRA_ground_support  }
+	}
+
+	#Improved Screening Ships
+	focus = {
+		id = FRA_improved_screening_ships
+		icon = GFX_FRA_improved_screening_ships-445
+		x = 37
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_convoy_escorts  }
+	}
+
+	#Update the Battlefleet
+	focus = {
+		id = FRA_update_the_battlefleet
+		icon = GFX_FRA_update_the_battlefleet-445
+		x = 35
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_traditional_roles  }
+	}
+
+	#Finish the Joffre
+	focus = {
+		id = FRA_finish_the_joffre
+		icon = GFX_FRA_finish_the_joffre-445
+		x = 31
+		y = 17
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_continue_carrier_programms  }
+	}
+
+	#Submarine Forces
+	focus = {
+		id = FRA_submarine_forces
+		icon = GFX_FRA_submarine_forces-445
+		x = 39
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_wage_undersea_warfare  }
+	}
+
+	#Naval Mine Ships
+	focus = {
+		id = FRA_naval_mine_ships
+		icon = GFX_FRA_naval_mine_ships-445
+		x = 41
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_wage_undersea_warfare  }
+	}
+
+	#Convoy Hunters
+	focus = {
+		id = FRA_convoy_hunters
+		icon = GFX_FRA_convoy_hunters-445
+		x = 39
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = FRA_submarine_forces  }
+	}
+
+	#Update Naval Bases
+	focus = {
+		id = FRA_update_naval_bases
+		icon = GFX_FRA_update_naval_bases-445
+		x = 36
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_update_the_battlefleet  focus = FRA_convoy_hunters  focus = FRA_finish_the_joffre  focus = FRA_improved_screening_ships  }
+	}
+
+	#Civil War Victory
+	focus = {
+		id = FRA_civil_war_victory
+		icon = GFX_FRA_civil_war_victory-445
+		x = 49
+		y = 13
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+
+	#Repair the Civilian Economy
+	focus = {
+		id = FRA_repair_the_civilian_economy
+		icon = GFX_FRA_repair_the_civilian_economy-445
+		x = 45
+		y = 14
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_civil_war_victory  }
+	}
+
+	#Rebuillding the Roads
+	focus = {
+		id = FRA_rebuillding_the_roads
+		icon = GFX_FRA_rebuillding_the_roads-445
+		x = 47
+		y = 14
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_civil_war_victory  }
+	}
+
+	#Aid Local Entrepreneurs
+	focus = {
+		id = FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_aid_local_entrepreneurs-445
+		x = 47
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_rebuillding_the_roads  }
+	}
+
+	#Restart Civil Services
+	focus = {
+		id = FRA_restart_civil_services
+		icon = GFX_FRA_restart_civil_services-445
+		x = 45
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_repair_the_civilian_economy  }
+	}
+
+	#Laissez-Faire
+	focus = {
+		id = FRA_laissezfaire
+		icon = GFX_FRA_laissezfaire-445
+		x = 44
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_aid_local_entrepreneurs  } prerequisite = { focus = FRA_restart_civil_services  }
+		mutually_exclusive = { focus = FRA_drigisme  } mutually_exclusive = { focus = FRA_market_regulation  }
+	}
+
+	#Drigisme
+	focus = {
+		id = FRA_drigisme
+		icon = GFX_FRA_drigisme-445
+		x = 46
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_aid_local_entrepreneurs  } prerequisite = { focus = FRA_restart_civil_services  }
+		mutually_exclusive = { focus = FRA_market_regulation  } mutually_exclusive = { focus = FRA_laissezfaire  }
+	}
+
+	#Market Regulation
+	focus = {
+		id = FRA_market_regulation
+		icon = GFX_FRA_market_regulation-445
+		x = 48
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_aid_local_entrepreneurs  } prerequisite = { focus = FRA_restart_civil_services  }
+		mutually_exclusive = { focus = FRA_drigisme  } mutually_exclusive = { focus = FRA_laissezfaire  }
+	}
+
+	#A Revitalized Economy
+	focus = {
+		id = FRA_a_revitalized_economy
+		icon = GFX_FRA_a_revitalized_economy-445
+		x = 45
+		y = 17
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_drigisme  focus = FRA_laissezfaire  focus = FRA_market_regulation  }
+	}
+
+	#Global pre-Eminence
+	focus = {
+		id = FRA_global_preeminence
+		icon = GFX_FRA_global_preeminence-445
+		x = 47
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_drigisme  focus = FRA_laissezfaire  focus = FRA_market_regulation  }
+	}
+
+	#Regional Reconstruction Program
+	focus = {
+		id = FRA_regional_reconstruction_program
+		icon = GFX_FRA_regional_reconstruction_program-445
+		x = 51
+		y = 14
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_civil_war_victory  }
+	}
+
+	#Vichy and Centre-Val de Loire
+	focus = {
+		id = FRA_vichy_and_centreval_de_loire
+		icon = GFX_FRA_vichy_and_centreval_de_loire-445
+		x = 50
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_regional_reconstruction_program  }
+	}
+
+	#Occitanie
+	focus = {
+		id = FRA_occitanie
+		icon = GFX_FRA_occitanie-445
+		x = 52
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_regional_reconstruction_program  }
+	}
+
+	#The Alps to Strasbourg
+	focus = {
+		id = FRA_the_alps_to_strasbourg
+		icon = GFX_FRA_the_alps_to_strasbourg-445
+		x = 52
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_occitanie  }
+	}
+
+	#Dunkerque to Bretagne
+	focus = {
+		id = FRA_dunkerque_to_bretagne
+		icon = GFX_FRA_dunkerque_to_bretagne-445
+		x = 50
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = FRA_vichy_and_centreval_de_loire  }
+	}
+
+	#Rebuilding Paris
+	focus = {
+		id = FRA_rebuilding_paris
+		icon = GFX_FRA_rebuilding_paris-445
+		x = 51
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = FRA_the_alps_to_strasbourg  } prerequisite = { focus = FRA_dunkerque_to_bretagne  }
+	}
+
+}
