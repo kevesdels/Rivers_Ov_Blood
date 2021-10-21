@@ -1,4 +1,4 @@
-﻿capital = 608
+﻿capital = 597
 
 oob = ""
 
@@ -31,23 +31,12 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Zhang Zongchang"
+	name = "Date Junnosuke"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_warlord1.dds"
+	picture = "Date_Junnosuke.dds"
 	expire = "1965.1.1"
 	ideology = authoritharian_subtype
 	traits = {
 		#
 	}
-}
-
-create_corps_commander = {
-	name = "Wu Huawen"
-	portrait_path = "Wu_Huawen.dds"
-	traits = { trait_mountaineer hill_fighter }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 4
 }

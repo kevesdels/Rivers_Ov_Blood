@@ -1,11 +1,14 @@
 focus_tree = {
 	id = france
-	continuous_focus_position = { x = 0 y = 1000 } 
+	continuous_focus_position = { x = 0 y = 2000 } 
 	country = {
 		factor = 0
 		modifier = {
 			add = 10
-			tag = FRA
+			OR = {
+				tag = FRA
+				tag = FRP
+			}
 		}
 	}
 	#Armée de Terre
@@ -19,6 +22,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_french_military  }
+		completion_reward = {
+			army_experience = 20
+		}
 	}
 
 	#A Motorised Army
@@ -32,6 +38,15 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_national_conscription_law  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1.0
+				uses = 2
+				category = motorized_equipment
+				category = cat_mechanized_equipment
+			}
+		}
 	}
 
 	#Found the École militaire interarmes
@@ -45,6 +60,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_military_production_quotas  }
+		completion_reward = {
+			add_ideas = {
+				fra_ecole_mi
+			}
+		}
+		
 	}
 
 	#Grande Batterie
@@ -58,6 +79,17 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_throwshellsnotmen  }
+		completion_reward = {
+			add_ideas = {
+				fra_grandbat
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = cat_superior_firepower
+			}
+		}
 	}
 
 	#Mountain Guns
@@ -71,6 +103,11 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_grande_batterie  }
+		completion_reward = {
+			add_ideas = {
+				fra_mountgun
+			}
+		}
 	}
 
 	#A Reformed Army
@@ -84,6 +121,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_complete_the_magionot_line  focus = FRA_abandon_a_defensive_doctrine  }
+		completion_reward = {
+			remove_ideas = {
+				fra_struggling_army
+			}
+		}
 	}
 
 	#Complete the Magionot Line
@@ -98,6 +140,12 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_char_de_rupture  focus = FRA_expand_border_forts  focus = FRA_mountain_guns  }
 		mutually_exclusive = { focus = FRA_abandon_a_defensive_doctrine  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fra_constructing_mag_line
+				add_idea = fra_constructing_mag_line_2
+			}
+		}
 	}
 
 	#Focus On Firepower
@@ -112,6 +160,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_armeedeterre  }
 		mutually_exclusive = { focus = FRA_legacy_of_the_great_war  focus = FRA_a_new_doctrine  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
 	}
 
 	#National Conscription Law
@@ -121,10 +177,23 @@ focus_tree = {
 		x = 18
 		y = 16
 		cost = 5
+		bypass = { 
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+		}
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
 		prerequisite = { focus = FRA_focus_on_firepower  focus = FRA_legacy_of_the_great_war  }
+		completion_reward = {
+			add_ideas = {
+			 extensive_conscription
+			}
+			}
 	}
 
 	#The French Military
@@ -136,6 +205,12 @@ focus_tree = {
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_country_flag = fra_cw_over
+		}
+		completion_reward = {
+		add_political_power = -50
 		}
 	}
 
@@ -151,6 +226,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_armeedeterre  }
 		mutually_exclusive = { focus = FRA_focus_on_firepower  focus = FRA_legacy_of_the_great_war  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_mobile_warfare
+			 }  
+		}
 	}
 
 	#Throw Shells, Not Men
@@ -164,6 +247,14 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_focus_on_firepower  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+		}
 	}
 
 	#Military Production Quotas
@@ -177,6 +268,16 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_focus_on_firepower  focus = FRA_a_new_doctrine  }
+		completion_reward = { 
+			random_owned_controlled_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				  type = arms_factory
+				   level = 2
+				   instant_build = yes
+				  }
+			  }
+		}
 	}
 
 	#Expand Border Forts
@@ -189,7 +290,80 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available = {
+			AND = {
+				owns_state = 816
+				controls_state = 816
+			}
+			AND = {
+				owns_state = 815
+				controls_state = 815
+			}
+			AND = {
+				owns_state = 29
+				controls_state = 29
+			}
+		}
 		prerequisite = { focus = FRA_focus_on_defence  }
+		completion_reward = {
+			816 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+								add_building_construction = {
+									type = bunker
+									level = 2
+									province = 5291
+									instant_build = yes
+								}
+								add_building_construction = {
+									type = bunker
+									level = 2
+									province = 3560
+									instant_build = yes
+								}
+						}
+					}
+			815 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+								add_building_construction = {
+									type = bunker
+									level = 2
+									province = 9472
+									instant_build = yes
+								}
+								add_building_construction = {
+									type = bunker
+									level = 2
+									province = 3447
+									instant_build = yes
+								}
+						}
+					}
+			29 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+								add_building_construction = {
+									type = bunker
+									level = 2
+									province = 11606
+									instant_build = yes
+								}
+								add_building_construction = {
+									type = bunker
+									level = 2
+									province = 11483
+									instant_build = yes
+								}
+								add_building_construction = {
+									type = bunker
+									level = 2
+									province = 575
+									instant_build = yes
+								}
+						}
+					}
+		}
 	}
 
 	#Focus On Defence
@@ -203,6 +377,17 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_war_of_planning  }
+		completion_reward = {
+			add_ideas = {
+				fra_focus_def
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+		}
 	}
 
 	#Legacy Of the Great War
@@ -217,6 +402,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_armeedeterre  }
 		mutually_exclusive = { focus = FRA_focus_on_firepower  focus = FRA_a_new_doctrine  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
 	}
 
 	#The S35
@@ -230,6 +423,14 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_maneuver_warfare  }
+		completion_reward = { 
+		    add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_medium_armor
+			}
+		}
 	}
 
 	#Char de Rupture
@@ -243,6 +444,14 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_s35  }
+		completion_reward = { 
+		    add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_heavy_armor
+			}
+		}
 	}
 
 	#Maneuver Warfare
@@ -256,6 +465,17 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_a_new_doctrine  }
+		completion_reward = {
+			add_ideas = {
+				fra_maneuver_war
+			}
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1.0
+				uses = 1
+				category = cat_mobile_warfare
+			 }
+		}
 	}
 
 	#Abandon a Defensive Doctrine
@@ -270,6 +490,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_char_de_rupture  focus = FRA_expand_border_forts  focus = FRA_mountain_guns  }
 		mutually_exclusive = { focus = FRA_complete_the_magionot_line  }
+		completion_reward = {
+			remove_ideas = {
+				fra_constructing_mag_line
+			}
+			add_ideas = {
+				fra_atk
+			}
+		}
 	}
 
 	#War of Planning
@@ -283,12 +511,17 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_legacy_of_the_great_war  }
+		completion_reward = {
+			add_ideas = {
+				fra_war_planners
+			}
+		}
 	}
 
 	#Restructured Communes
 	focus = {
 		id = FRA_restructured_communes
-		icon = GFX_FRA_restructured_communes-445
+		icon = GFX_FRA_restructured_communes
 		x = 9
 		y = 4
 		cost = 5
@@ -296,12 +529,15 @@ focus_tree = {
 			FOCUS_FILTER_STABILITY
 		}
 		prerequisite = { focus = FRA_revenge_for_the_bloody_week  }
+		completion_reward = {
+			add_stability = 0.10
+		}
 	}
 
 	#Reconcile the Population
 	focus = {
 		id = FRA_reconcile_the_population
-		icon = GFX_FRA_reconcile_the_population-445
+		icon = GFX_FRA_reconcile_the_population
 		x = 13
 		y = 5
 		cost = 5
@@ -309,18 +545,25 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_progressivist_assembly  }
+		completion_reward = {
+			add_popularity = { ideology = social_democracy  popularity = 0.11 }
+		}
 	}
 
 	#Progressivist Assembly
 	focus = {
 		id = FRA_progressivist_assembly
-		icon = GFX_FRA_progressivist_assembly-445
+		icon = GFX_FRA_progressivist_assembly
 		x = 13
 		y = 4
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_first_national_assembly  }
+		completion_reward = {
+			add_research_slot = 1
+		}
 	}
 
 	#The State of France
@@ -338,14 +581,21 @@ focus_tree = {
 	#Remember 1871
 	focus = {
 		id = FRA_remember_1871
-		icon = GFX_FRA_remember_1871-445
+		icon = GFX_FRA_remember_1871
 		x = 11
 		y = 1
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available = {
+			has_country_flag = fra_cw_comm_win
+		}
 		prerequisite = { focus = FRA_the_state_of_france  }
+		completion_reward = {
+			add_political_power = 120
+			###event
+		}
 	}
 
 	#The Republic Endures
@@ -358,7 +608,17 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available = {
+			has_country_flag = fra_cw_rep_win
+		}
 		prerequisite = { focus = FRA_the_state_of_france  }
+		completion_reward = {
+			add_political_power = 120
+			###event about wtf the centrists decide to support
+			add_ideas = {
+				fra_dem_badtimes ####something about industry being very fucking neglected
+			}
+		}
 	}
 
 	#The Lion Roars
@@ -367,11 +627,21 @@ focus_tree = {
 		icon = GFX_FRA_the_lion_roars-445
 		x = 34
 		y = 1
-		cost = 5
+		cost = 1
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available = {
+			has_country_flag = fra_cw_mil_win
+		}
 		prerequisite = { focus = FRA_the_state_of_france  }
+		completion_reward = {
+			add_political_power = 120
+			###event
+			add_idea = {
+				fra_react_
+			}
+		}
 	}
 
 	#The First United Congress
@@ -385,6 +655,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_second_reign_of_terror  }
+		completion_reward = {
+			###event
+		}
 	}
 
 	#Begin the Myth
@@ -397,13 +670,20 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available = {
+			has_country_flag = fra_cw_sorel_win
+		}
 		prerequisite = { focus = FRA_the_state_of_france  }
+		completion_reward = {
+			add_political_power = 120
+			###event
+		}
 	}
 
 	#Democratic Socialism
 	focus = {
 		id = FRA_democratic_socialism
-		icon = GFX_FRA_democratic_socialism-445
+		icon = GFX_FRA_democratic_socialism
 		x = 12
 		y = 2
 		cost = 5
@@ -412,12 +692,15 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_remember_1871  }
 		mutually_exclusive = { focus = FRA_rule_with_an_iron_first  }
+		completion_reward = {
+			
+		}
 	}
 
 	#Revenge for the Bloody Week
 	focus = {
 		id = FRA_revenge_for_the_bloody_week
-		icon = GFX_FRA_revenge_for_the_bloody_week-445
+		icon = GFX_FRA_revenge_for_the_bloody_week
 		x = 9
 		y = 3
 		cost = 5
@@ -425,12 +708,18 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_rule_with_an_iron_first  }
+		completion_reward = {
+			add_popularity = { ideology = conservative  popularity = -0.12 }
+			add_popularity = { ideology = reactionary  popularity = -0.1 }
+			add_popularity = { ideology = pelekist  popularity = -0.09 }
+			###event
+		}
 	}
 
 	#Rule with an Iron First
 	focus = {
 		id = FRA_rule_with_an_iron_first
-		icon = GFX_FRA_rule_with_an_iron_first-445
+		icon = GFX_FRA_rule_with_an_iron_first
 		x = 10
 		y = 2
 		cost = 5
@@ -439,12 +728,15 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_remember_1871  }
 		mutually_exclusive = { focus = FRA_democratic_socialism  }
+		completion_reward = {
+
+		}
 	}
 
 	#Constitutional Conversion
 	focus = {
 		id = FRA_constitutional_conversion
-		icon = GFX_FRA_constitutional_conversion-445
+		icon = GFX_FRA_constitutional_conversion
 		x = 11
 		y = 3
 		cost = 5
@@ -452,12 +744,18 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_rule_with_an_iron_first  } prerequisite = { focus = FRA_democratic_socialism  }
+		completion_reward = {
+			###event
+			add_ideas = {
+				fra_com_soc_const
+			}
+		}
 	}
 
 	#The First National Assembly
 	focus = {
 		id = FRA_the_first_national_assembly
-		icon = GFX_FRA_the_first_national_assembly-445
+		icon = GFX_FRA_the_first_national_assembly
 		x = 13
 		y = 3
 		cost = 5
@@ -465,24 +763,34 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_democratic_socialism  }
+		completion_reward = {
+			###event
+		}
 	}
 
 	#Economic Transition
 	focus = {
 		id = FRA_economic_transition
-		icon = GFX_FRA_economic_transition-445
+		icon = GFX_FRA_economic_transition
 		x = 11
 		y = 5
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_constitutional_conversion  }
+		completion_reward = {
+			add_timed_idea = {
+				idea = fra_com_eco_transition
+				days = 365
+			}
+		}
 	}
 
 	#Collectivised  Industry
 	focus = {
 		id = FRA_collectivisedindustry
-		icon = GFX_FRA_collectivisedindustry-445
+		icon = GFX_FRA_collectivisedindustry
 		x = 9
 		y = 5
 		cost = 5
@@ -490,12 +798,17 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_restructured_communes  }
+		completion_reward = {
+			add_ideas = {
+				fra_com_collect_indus
+			}
+		}
 	}
 
 	#A Direct Democracy
 	focus = {
 		id = FRA_a_direct_democracy
-		icon = GFX_FRA_a_direct_democracy-445
+		icon = GFX_FRA_a_direct_democracy
 		x = 12
 		y = 6
 		cost = 5
@@ -503,12 +816,16 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_reconcile_the_population  } prerequisite = { focus = FRA_economic_transition  }
+		completion_reward = {
+			###popularities 
+			add_stability = 0.1
+		}
 	}
 
 	#Empower the Garde Nationale
 	focus = {
 		id = FRA_empower_the_garde_nationale
-		icon = GFX_FRA_empower_the_garde_nationale-445
+		icon = GFX_FRA_empower_the_garde_nationale
 		x = 10
 		y = 6
 		cost = 5
@@ -516,12 +833,17 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_collectivisedindustry  } prerequisite = { focus = FRA_economic_transition  }
+		completion_reward = {
+			add_ideas = {
+				fra_garde_nationale
+			}
+		}
 	}
 
 	#A Reoriented Economy
 	focus = {
 		id = FRA_a_reoriented_economy
-		icon = GFX_FRA_a_reoriented_economy-445
+		icon = GFX_FRA_a_reoriented_economy
 		x = 8
 		y = 6
 		cost = 5
@@ -529,12 +851,15 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_collectivisedindustry  }
+		completion_reward = {
+			add_research_slot = 1
+		}
 	}
 
 	#Liberté
 	focus = {
 		id = FRA_liberte
-		icon = GFX_FRA_liberte-445
+		icon = GFX_FRA_liberte
 		x = 9
 		y = 7
 		cost = 5
@@ -543,12 +868,17 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_a_reoriented_economy  } prerequisite = { focus = FRA_empower_the_garde_nationale  }
 		mutually_exclusive = { focus = FRA_solidarite  } mutually_exclusive = { focus = FRA_egalite  }
+		completion_reward = {
+			add_ideas = {
+				fra_liber
+			}
+		}
 	}
 
 	#Egalité
 	focus = {
 		id = FRA_egalite
-		icon = GFX_FRA_egalite-445
+		icon = GFX_FRA_egalite
 		x = 11
 		y = 7
 		cost = 5
@@ -557,12 +887,17 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_a_direct_democracy  focus = FRA_empower_the_garde_nationale  }
 		mutually_exclusive = { focus = FRA_solidarite  } mutually_exclusive = { focus = FRA_liberte  }
+		completion_reward = {
+			add_ideas = {
+				fra_egal
+			}
+		}
 	}
 
 	#Solidarité
 	focus = {
 		id = FRA_solidarite
-		icon = GFX_FRA_solidarite-445
+		icon = GFX_FRA_solidarite
 		x = 13
 		y = 7
 		cost = 5
@@ -571,12 +906,17 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_a_direct_democracy  }
 		mutually_exclusive = { focus = FRA_egalite  } mutually_exclusive = { focus = FRA_liberte  }
+		completion_reward = {
+			add_ideas = {
+				fra_soilid
+			}
+		}
 	}
 
 	#Legacy of Marx and Engels
 	focus = {
 		id = FRA_legacy_of_marx_and_engels
-		icon = GFX_FRA_legacy_of_marx_and_engels-445
+		icon = GFX_FRA_legacy_of_marx_and_engels
 		x = 11
 		y = 8
 		cost = 5
@@ -584,6 +924,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_liberte  focus = FRA_egalite  focus = FRA_solidarite  }
+		completion_reward = {
+			add_ideas = {
+				fra_legacy_marx_engels
+			}
+		}
 	}
 
 	#The Right and Centre
@@ -597,6 +942,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_republic_endures  }
+		completion_reward = {
+			###leader change
+		}
 	}
 
 	#The Popular Front
@@ -610,6 +958,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_republic_endures  }
+		completion_reward = {
+			###leader change
+		}
 	}
 
 	#Franc Devaluation
@@ -623,6 +974,13 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_popular_front  focus = FRA_the_right_and_centre  }
+		completion_reward = {
+			add_political_power = -70
+			swap_ideas = {
+				remove_idea = fra_sor_new_bour
+				add_idea = fra_sor_new_bour_2
+			}
+		}
 	}
 
 	#The Matignon Agreements
@@ -636,6 +994,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_popular_front  }
+		completion_reward = {
+			add_ideas = {
+				fra_dem_socialists_appeased
+			}
+		}
 	}
 
 	#Liberalise the Economy
@@ -649,6 +1012,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_right_and_centre  }
+		completion_reward = {
+			###event mild liberalization cuz scared from past, opens some stock markets to international investers, industry, agricultural, consturction
+			add_ideas = {
+				fra_dem_eco_lib
+			}
+		}
 	}
 
 	#An Economic Miracle
@@ -662,6 +1031,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_franc_devaluation  }
+		completion_reward = {
+			remove_ideas = {
+				fra_dem_badtimes_2 ####The currency reforms had ensured that money was once more scarce, and the relaxation of price controls created incentives for production, sales and earning this money.
+			}
+		}
 	}
 
 	#Improved Welfare System
@@ -675,6 +1049,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_matignon_agreements  }
+		completion_reward = {
+			##event about fucking over middle class by redistributing land to poor 		
+		}
 	}
 
 	#Support From Colonies
@@ -688,6 +1065,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_liberalise_the_economy  }
+		completion_reward = {
+			###cuz they dont change stuff around in colonies
+			add_stability = 0.05
+			add_research_slot = 1
+		}
 	}
 
 	#The Fourth Republic
@@ -696,10 +1078,16 @@ focus_tree = {
 		icon = GFX_FRA_the_fourth_republic-445
 		x = 20
 		y = 5
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_support_from_colonies  }
+		completion_reward = {
+			###event
+			add_stability = 0.10
+			add_war_support = 0.10
+		}
 	}
 
 	#A Colonel's Government
@@ -713,20 +1101,13 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_force_a_coallition  } prerequisite = { focus = FRA_deal_with_opposition  }
+		completion_reward = {
+			add_ideas = {
+				fra_mil_col_gov
+			}
+		}
 	}
 
-	#Corporatism
-	focus = {
-		id = FRA_corporatism
-		icon = GFX_FRA_corporatism-445
-		x = 23
-		y = 6
-		cost = 5
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-		prerequisite = { focus = FRA_acolonelsgovernment  }
-	}
 
 	#Expand the Croix-de-Feu
 	focus = {
@@ -738,9 +1119,33 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = FRA_corporatism  }
+		prerequisite = { focus = FRA_hunt_the_corrupt  }
+		prerequisite = { focus = FRA_the_institut_de_france  }
+		completion_reward = {
+			add_ideas = {
+				fra_mil_croix
+			}
+			###algerian puppet
+		}
 	}
 
+		#Hunt the Corrupt
+		focus = {
+			id = FRA_hunt_the_corrupt
+			icon = GFX_FRA_expand_the_croixdefeu
+			x = 23
+			y = 6
+			cost = 5
+			search_filters = {
+				FOCUS_FILTER_POLITICAL
+			}
+			prerequisite = { focus = FRA_acolonelsgovernment  }
+			completion_reward = {
+				add_ideas = {
+					fra_mil_hunt
+				}
+			}
+		}
 	#Cult of Personality
 	focus = {
 		id = FRA_cult_of_personality
@@ -752,20 +1157,48 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_expand_the_croixdefeu  } prerequisite = { focus = FRA_lessons_of_civil_war  }
+		completion_reward = {
+			add_ideas = {
+				fra_mil_Cult_o_Persona
+			}
+		}
 	}
 
 	#Expanded Labour Laws
 	focus = {
 		id = FRA_expanded_labour_laws
 		icon = GFX_FRA_expanded_labour_laws-445
-		x = 16
+		x = 17
 		y = 6
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = FRA_continue_the_popular_front  focus = FRA_end_the_popular_front  }
+		prerequisite = { focus = FRA_continue_the_popular_front }
+		completion_reward = {
+			add_ideas = {
+				fra_dem_labour_laws
+			}
+		}
 	}
+
+		#Limit the church
+		focus = {
+			id = FRA_limit_the_church
+			icon = GFX_FRA_expanded_labour_laws-445
+			x = 15
+			y = 6
+			cost = 5
+			search_filters = {
+				FOCUS_FILTER_POLITICAL
+			}
+			prerequisite = { focus = FRA_end_the_popular_front  }
+			completion_reward = {
+				add_ideas = {
+				     fra_dem_limit_church
+				}
+			}
+		}
 
 	#Continue the Popular Front
 	focus = {
@@ -777,7 +1210,11 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		mutually_exclusive = { focus = FRA_end_the_popular_front  }
 		prerequisite = { focus = FRA_improved_welfare_system  }
+		completion_reward = {
+			add_stability = 0.1
+		}
 	}
 
 	#End the Popular Front
@@ -790,7 +1227,11 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		mutually_exclusive = { focus = FRA_continue_the_popular_front  }
 		prerequisite = { focus = FRA_improved_welfare_system  }
+		completion_reward = {
+			###event about socdems fucking over centrists and 
+		}
 	}
 
 	#A Leading Nation
@@ -805,6 +1246,10 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_fourth_republic  }
 		mutually_exclusive = { focus = FRA_renew_ties_with_britain  }
+		completion_reward = {
+			###check for later
+	        ###custom tool tip
+		}
 	}
 
 	#Opposition to Germany
@@ -818,6 +1263,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_renew_ties_with_britain  focus = FRA_a_leading_nation  }
+		completion_reward = {
+			###probably little entente shit
+		}
 	}
 
 	#Up With Marianne
@@ -831,6 +1279,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_opposition_to_germany  focus = FRA_detene_with_the_spartakists  }
+		completion_reward = {
+			add_ideas = {
+				fra_marianne
+			}
+		}
 	}
 
 	#Force a Coallition
@@ -843,7 +1296,10 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = FRA_liberalise_the_economy  focus = FRA_an_officer  }
+		prerequisite = { focus = FRA_an_officer  }
+		completion_reward = {
+			#### Francois de la Rocque ###event
+		}
 	}
 
 	#Detene with the Spartakists
@@ -856,8 +1312,13 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = FRA_expanded_labour_laws  }
+		prerequisite = { focus = FRA_expanded_labour_laws  focus = FRA_limit_the_church }
 		mutually_exclusive = { focus = FRA_opposition_to_germany  }
+		completion_reward = {
+			### something about relations
+			### event about giving land to germany to btfo it (compromoise)
+			add_research_slot = 1
+		}
 	}
 
 	#Renew Ties with Britain
@@ -872,6 +1333,9 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_fourth_republic  }
 		mutually_exclusive = { focus = FRA_a_leading_nation  }
+		completion_reward = {
+			####event to Brits if they dems/react
+		}
 	}
 
 	#Deal with Opposition
@@ -885,32 +1349,47 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_an_officer  }
+		completion_reward = {
+			add_ideas = {
+				fra_mil_oppos
+			}
+		}
 	}
 
 	#The Marshall's Succesor
 	focus = {
 		id = FRA_themarshallssuccesor
 		icon = GFX_FRA_themarshallssuccesor-445
-		x = 29
+		x = 28
 		y = 2
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		mutually_exclusive = { focus = FRA_embrace_royalism  }
 		prerequisite = { focus = FRA_the_lion_roars  }
+		completion_reward = {
+			###event
+		}
 	}
 
 	#An Officer
 	focus = {
 		id = FRA_an_officer
 		icon = GFX_FRA_an_officer-445
-		x = 27
+		x = 25
 		y = 3
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available = {
+			has_country_flag = fra_officer_route
+		}
 		prerequisite = { focus = FRA_themarshallssuccesor  }
+		completion_reward = {
+			###event
+		}
 	}
 
 	#Restore Order
@@ -924,6 +1403,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_an_officer  }
+		completion_reward = {
+			####Louis Franchet D'Esperey ###event
+		}
 	}
 
 	#A New Cabinet
@@ -937,6 +1419,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_restore_order  } prerequisite = { focus = FRA_deal_with_opposition  }
+		completion_reward = {
+			add_ideas = {
+				fra_mil_new_cab
+			}
+		}
 	}
 
 	#The Institut de France
@@ -950,6 +1437,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_acolonelsgovernment  focus = FRA_a_new_cabinet  }
+		completion_reward = {
+			add_research_slot = 1
+		}
 	}
 
 	#National Labour Camps
@@ -963,6 +1453,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_a_new_cabinet  }
+		completion_reward = {
+			add_ideas = {
+				fra_mil_lab_cmp
+			}
+		}
 	}
 
 	#Integrate La Cagoule
@@ -976,6 +1471,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_national_labour_camps  }
+		prerequisite = { focus = FRA_the_institut_de_france }
+		completion_reward = {
+			add_ideas = {
+				fra_mil_cagoule
+			}
+		}
 	}
 
 	#Lessons of Civil War
@@ -988,7 +1489,10 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = FRA_the_institut_de_france  }
+		prerequisite = { focus = FRA_the_institut_de_france  focus = FRA_national_labour_camps }
+		completion_reward = {
+			###gives trait to leader
+		}
 	}
 
 	#The Military Knows Best
@@ -1002,6 +1506,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_integrate_la_cagoule  } prerequisite = { focus = FRA_lessons_of_civil_war  }
+		completion_reward = {
+			add_ideas = {
+				fra_mil_miltary
+			}
+		}
 	}
 
 	#The Admiral
@@ -1014,7 +1523,13 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available = {
+			has_country_flag = fra_admiral_route
+		}
 		prerequisite = { focus = FRA_themarshallssuccesor  }
+		completion_reward = {
+			###event ( François Darlan )
+		}
 	}
 
 	#The Revolution Nationale
@@ -1028,6 +1543,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_admiral  }
+		completion_reward = {
+			###event
+		}
 	}
 
 	#Naval Heritage
@@ -1041,9 +1559,14 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_revolution_nationale  }
+		completion_reward = {
+			add_ideas = {
+				fra_dar_naval_heritage
+			}
+		}
 	}
 
-	#Travall
+	#Travail ###Work
 	focus = {
 		id = FRA_travall
 		icon = GFX_FRA_travall-445
@@ -1054,9 +1577,14 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_naval_heritage  } prerequisite = { focus = FRA_the_milice  }
+		completion_reward = {
+			add_ideas = {
+				fra_dar_travall
+			}
+		}
 	}
 
-	#Patrie
+	#Patrie ###fatherland
 	focus = {
 		id = FRA_patrie
 		icon = GFX_FRA_patrie-445
@@ -1067,6 +1595,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_naval_heritage  } prerequisite = { focus = FRA_the_milice  }
+		completion_reward = {
+			add_ideas = {
+				fra_dar_patrie
+			}
+		}
 	}
 
 	#Familie
@@ -1080,6 +1613,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_naval_heritage  } prerequisite = { focus = FRA_the_milice  }
+		completion_reward = {
+			add_ideas = {
+				fra_dar_familie
+			}
+		}
 	}
 
 	#A Nation Born Again
@@ -1093,6 +1631,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_travall  } prerequisite = { focus = FRA_patrie  } prerequisite = { focus = FRA_familie  }
+		completion_reward = {
+			add_war_support = 0.10
+			add_stability = 0.10
+			add_research_slot = 1
+		}
 	}
 
 	#Legacy of the Empire
@@ -1106,6 +1649,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_a_nation_born_again  }
+		completion_reward = {
+			add_ideas = {
+				fra_legacy_of_empire
+			}
+		}
 	}
 
 	#The Milice
@@ -1119,6 +1667,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_revolution_nationale  }
+		completion_reward = {
+			add_ideas = {
+				fra_dar_mill
+			}
+		}
 	}
 
 	#Embrace Royalism
@@ -1131,7 +1684,13 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		mutually_exclusive = { focus = FRA_themarshallssuccesor  }
 		prerequisite = { focus = FRA_the_lion_roars  }
+		completion_reward = {
+			add_ideas = {
+				fra_mon_start
+			}
+		}
 	}
 
 	#Curb Republicanism
@@ -1140,10 +1699,16 @@ focus_tree = {
 		icon = GFX_FRA_curb_republicanism-445
 		x = 37
 		y = 3
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_embrace_royalism  }
+		completion_reward = {
+			add_popularity = { ideology = conservative   popularity = -0.04 }
+			add_popularity = { ideology = social_liberal   popularity = -0.07 }
+			add_popularity = { ideology = social_democracy   popularity = -0.04 }
+		}
 	}
 
 	#A Grand Coronation
@@ -1157,6 +1722,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_curb_republicanism  } prerequisite = { focus = FRA_the_cercle_proudhon  }
+		completion_reward = {
+			###event
+		}
 	}
 
 	#France Indivisible
@@ -1170,6 +1738,10 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_legacy_of_marx_and_engels  focus = FRA_up_with_marianne  focus = FRA_cult_of_personality  focus = FRA_the_military_knows_best  focus = FRA_legacy_of_the_empire  focus = FRA_the_king_of_the_french  }
+		completion_reward = {
+			add_stability = 0.1 
+			add_war_support = 0.1
+		}
 	}
 
 	#Looking Outwards
@@ -1178,6 +1750,7 @@ focus_tree = {
 		icon = GFX_FRA_looking_outwards-445
 		x = 25
 		y = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1216,6 +1789,7 @@ focus_tree = {
 		icon = GFX_FRA_deal_with_our_enemies-445
 		x = 25
 		y = 11
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1233,6 +1807,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_anticapitalism  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fra_sor_anti_cap
+				add_idea = fra_sor_anti_cap_2
+			}
+		}
 	}
 
 	#Corporatism
@@ -1246,6 +1826,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_national_integralism  }
+		completion_reward = {
+			add_ideas = {
+				fra_king_coporatism
+			}
+		}
 	}
 
 	#The King of the French
@@ -1259,6 +1844,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_restoring_our_former_glory  } prerequisite = { focus = FRA_the_spiritual_mindset  } prerequisite = { focus = FRA_the_camelots_du_roi  }
+		completion_reward = {
+			add_ideas = {
+				fra_king_of_french
+			}
+		}
 	}
 
 	#Diarchy With Church
@@ -1272,6 +1862,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_a_grand_coronation  }
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			###event
+		}
 	}
 
 	#The Spiritual Mindset
@@ -1285,6 +1880,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_squash_the_heretics  }
+		completion_reward = {
+			add_ideas = {
+				fra_king_rel_wv
+			}
+		}
 	}
 
 	#National Integralism
@@ -1293,10 +1893,15 @@ focus_tree = {
 		icon = GFX_FRA_national_integralism-445
 		x = 36
 		y = 5
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_a_grand_coronation  }
+		completion_reward = {
+			add_popularity = { ideology = pelekist  popularity = 0.16 }
+			###event
+		}
 	}
 
 	#The Cercle Proudhon
@@ -1310,6 +1915,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_embrace_royalism  }
+		completion_reward = {
+			add_ideas = {
+				fra_king_cercle_proudhon
+			}
+		}
 	}
 
 	#The Trifunctional Hierarchy
@@ -1323,6 +1933,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_dumezil_is_always_right  } prerequisite = { focus = FRA_the_senate_of_franks  } prerequisite = { focus = FRA_the_great_temple_of_taranis  } prerequisite = { focus = FRA_bread_and_circuses  }
+		completion_reward = {
+			add_ideas = {
+				fra_dum_trifunct
+			}
+		}
 	}
 
 	#Return of Patriarchal Society
@@ -1336,6 +1951,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_reverse_the_tides  }
+		completion_reward = {
+			add_ideas = {
+				fra_dum_patr_soc
+			}	
+		}
 	}
 
 	#Practical Forest Farming
@@ -1344,10 +1964,17 @@ focus_tree = {
 		icon = GFX_FRA_practical_forest_farming-445
 		x = 50
 		y = 5
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_agricultural_strengthening  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fra_dum_economy
+				add_idea = fra_dum_economy_2
+			}
+		}
 	}
 
 	#Squash the Heretics
@@ -1361,6 +1988,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_diarchy_with_church  }
+		completion_reward = {
+			### event that church goes for non catholics
+		}
 	}
 
 	#The Natural Hierarchy
@@ -1374,6 +2004,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_trade_corpus_system  }
+		completion_reward = {
+			add_ideas = {
+				fra_maur_hierarchy
+			}
+		}
 	}
 
 	#Agricultural Strengthening
@@ -1387,6 +2022,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_augustus_of_franks  }
+		completion_reward = {
+			add_ideas = {
+				fra_dum_economy
+			}
+		}
 	}
 
 	#Augustus of Franks
@@ -1400,19 +2040,32 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_first_united_congress  }
+		available = {
+			has_country_flag = fra_dumezil_route
+		}
+		completion_reward = {
+			###event
+		}
 	}
 
 	#The Second Reign Of Terror
 	focus = {
 		id = FRA_the_second_reign_of_terror
-		icon = GFX_FRA_the_second_reign_of_terror-445
+		icon = GFX_FRA_the_second_reign_of_terror
 		x = 49
 		y = 1
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available = {
+			has_country_flag = fra_cw_plk_win
+		}
 		prerequisite = { focus = FRA_the_state_of_france  }
+		completion_reward = {
+			add_political_power = 120
+			###event
+		}
 	}
 
 	#The Camelots du Roi
@@ -1426,6 +2079,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_corporatism  }
+		completion_reward = {
+			add_ideas = {
+				fra_cam_du_roi
+			}
+		}
 	}
 
 	#Platonic Influence
@@ -1439,6 +2097,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_a_grand_coronation  }
+		completion_reward = {
+			add_research_slot = 1
+		}
 	}
 
 	#Folkish Revival
@@ -1452,6 +2113,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_platonic_influence  }
+		completion_reward = {
+			add_ideas = {
+				fra_king_trad
+			}
+		}
 	}
 
 	#Restoring Our Former Glory
@@ -1465,6 +2131,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_folkish_revival  }
+		completion_reward = {
+			###event about grandiose parade and national and monarchist symbolism being put up everywhere nazi style
+		}
 	}
 
 	#National Patriotism
@@ -1478,6 +2147,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_discredit_romanticism  }
+		completion_reward = {
+			add_ideas = {
+				fra_maur_nat_pat
+			}
+		}
 	}
 
 	#Crown The King
@@ -1491,6 +2165,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_execute_the_liberal  }
+		completion_reward = {
+			###event
+		}
 	}
 
 	#The Great Rebuilding of France
@@ -1504,6 +2181,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_new_architecture  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fra_dum_arch
+				add_idea = fra_dum_arch_2
+			}
+		}
 	}
 
 	#Dumezil is Always Right
@@ -1512,10 +2195,18 @@ focus_tree = {
 		icon = GFX_FRA_dumezil_is_always_right-445
 		x = 54
 		y = 7
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_great_scholar  }
+		completion_reward = {
+			###event
+			swap_ideas = {
+				remove_idea = fra_dum_persona_cult
+				add_idea = fra_dum_persona_cult_2
+			}
+		}
 	}
 
 	#New Architecture
@@ -1529,6 +2220,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_augustus_of_franks  }
+		completion_reward = {
+			###event?
+			add_ideas = {
+				fra_dum_arch
+			}
+		}
 	}
 
 	#Burn Liberal Symbolic
@@ -1542,6 +2239,10 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_beat_the_academics  }
+		completion_reward = {
+			###popularity
+			add_popularity = { ideology = social_liberal  popularity = -0.2 }
+		}
 	}
 
 	#The Upcoming Golden Age
@@ -1555,6 +2256,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_indoeuropean_brotherhood  } prerequisite = { focus = FRA_aid_foreign_pelekists  }
+		completion_reward = {
+			
+		}
 	}
 
 	#The Great Scholar
@@ -1568,6 +2272,13 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_obligatory_mythology_courses  }
+		completion_reward = {
+			add_research_slot = 1
+			###event
+			add_ideas = {
+				fra_dum_persona_cult
+			}
+		}
 	}
 
 	#Coax the Church
@@ -1581,6 +2292,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_great_rebuilding_of_france  }
+		completion_reward = {
+			###event
+		}
 	}
 
 	#Generous Student Subsidies
@@ -1594,6 +2308,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_augustus_of_franks  }
+		completion_reward = {
+			add_ideas = {
+				fra_dum_research_shit
+			}
+		}
 	}
 
 	#Obligatory Mythology Courses
@@ -1602,10 +2321,17 @@ focus_tree = {
 		icon = GFX_FRA_obligatory_mythology_courses-445
 		x = 54
 		y = 5
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_generous_student_subsidies  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fra_dum_research_shit
+				add_idea = fra_dum_research_shit_2
+			}
+		}
 	}
 
 	#The Senate of Franks
@@ -1619,6 +2345,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_limit_voting_rights  }
+		completion_reward = {
+			
+		}
 	}
 
 	#Reverse the Tides
@@ -1632,6 +2361,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_augustus_of_franks  }
+		completion_reward = {
+			
+		}
 	}
 
 	#Limit Voting Rights
@@ -1645,6 +2377,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_return_of_patriarchal_society  }
+		completion_reward = {
+			add_ideas = {
+				fra_dum_vot_right_gone
+			}	
+		}
 	}
 
 	#Honor the Worker
@@ -1658,6 +2395,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_practical_forest_farming  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fra_dum_economy_2
+				add_idea = fra_dum_economy_3
+			}
+		}
 	}
 
 	#Aid Foreign Pelekists
@@ -1671,6 +2414,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_found_the_european_league  }
+		completion_reward = {
+			
+		}
 	}
 
 	#Bread and Circuses
@@ -1684,6 +2430,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_honor_the_worker  }
+		completion_reward = {
+			add_ideas = {
+				fra_dum_bread_circus
+			}
+		}
 	}
 
 	#Indo-European Brotherhood
@@ -1697,6 +2448,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_found_the_european_league  }
+		completion_reward = {
+			
+		}
 	}
 
 	#The Great Temple of Taranis
@@ -1710,6 +2464,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_coax_the_church  }
+		completion_reward = {
+			
+		}
 	}
 
 	#Found the European League
@@ -1723,6 +2480,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_trifunctional_hierarchy  }
+		completion_reward = {
+			
+		}
 	}
 
 	#The Pelekist Eagle
@@ -1736,6 +2496,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_europe__a_nation  } prerequisite = { focus = FRA_the_upcoming_golden_age  }
+		completion_reward = {
+			
+		}
 	}
 
 	#Europe - A Nation
@@ -1749,6 +2512,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_indoeuropean_brotherhood  } prerequisite = { focus = FRA_expansionist_policy  }
+		completion_reward = {
+			
+		}
 	}
 
 	#Expansionist Policy
@@ -1762,6 +2528,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_found_the_european_league  }
+		completion_reward = {
+			
+		}
 	}
 
 	#Dissolve the Parlament
@@ -1770,10 +2539,14 @@ focus_tree = {
 		icon = GFX_FRA_dissolve_the_parlament-445
 		x = 46
 		y = 7
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_elevate_the_church  }
+		completion_reward = {
+			### event
+		}
 	}
 
 	#Break The Nationalist Dogma
@@ -1787,6 +2560,10 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_begin_the_reversal_of_1871  }
+		completion_reward = {
+			add_popularity = { ideology = conservative   popularity = -0.15 }
+			add_popularity = { ideology = reactionary   popularity = -0.05 }
+		}
 	}
 
 	#Ministry Of Societal Virtuosity
@@ -1800,6 +2577,10 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_vatican_hegemony  }
+		completion_reward = {
+			#event
+			add_research_slot = 1
+		}
 	}
 
 	#Begin the Reversal of 1871
@@ -1812,7 +2593,13 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available = {
+			has_country_flag = fra_maurras_route
+		}
 		prerequisite = { focus = FRA_the_first_united_congress  }
+		completion_reward = {
+			###event
+		}
 	}
 
 	#Love Thy Family
@@ -1821,10 +2608,17 @@ focus_tree = {
 		icon = GFX_FRA_love_thy_family-445
 		x = 44
 		y = 7
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_ministry_of_societal_virtuosity  }
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = {
+				fra_maur_love_fam
+			}
+		}
 	}
 
 	#Elevate the Church
@@ -1838,6 +2632,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_crown_the_king  }
+		completion_reward = {
+			###event
+		}
 	}
 
 	#Discredit Romanticism
@@ -1846,10 +2643,15 @@ focus_tree = {
 		icon = GFX_FRA_discredit_romanticism-445
 		x = 42
 		y = 4
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_begin_the_reversal_of_1871  }
+		completion_reward  = {
+			add_popularity = { ideology = conservative   popularity = -0.05 }
+			add_popularity = { ideology = reactionary   popularity = -0.15 }
+		}
 	}
 
 	#Expel the Métèques
@@ -1858,10 +2660,14 @@ focus_tree = {
 		icon = GFX_FRA_expelthemeteques-445
 		x = 44
 		y = 4
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_begin_the_reversal_of_1871  }
+		completion_reward = {
+			###event
+		}
 	}
 
 	#Execute the Liberal
@@ -1870,10 +2676,15 @@ focus_tree = {
 		icon = GFX_FRA_execute_the_liberal-445
 		x = 46
 		y = 4
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_begin_the_reversal_of_1871  }
+		completion_reward = {
+			add_popularity = { ideology = social_liberal  popularity = -0.12 }
+			add_popularity = { ideology = social_democracy  popularity = -0.07 }
+		}
 	}
 
 	#Federal Monarchy
@@ -1887,6 +2698,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_andincolonies  } prerequisite = { focus = FRA_dissolve_the_parlament  } prerequisite = { focus = FRA_love_thy_family  } prerequisite = { focus = FRA_the_natural_hierarchy  }
+		completion_reward = {
+			add_ideas = {
+				fra_maur_fed_monarc
+			}
+		}
 	}
 
 	#Decentralised Assemblies In France...
@@ -1900,6 +2716,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_stop_minority_integration  }
+		completion_reward = {
+			add_ideas = {
+				fra_maur_regionalism
+			}
+		}
 	}
 
 	#The French France
@@ -1913,6 +2734,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_revenge_for_the_fallen  } prerequisite = { focus = FRA_demand_quebec  } prerequisite = { focus = FRA_wallonian_french  }
+		completion_reward = {
+			
+		}
 	}
 
 	#Stop Minority Integration
@@ -1926,6 +2750,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_break_the_nationalist_dogma  }
+		completion_reward = {
+			add_stability = -0.03
+			add_ideas = {
+				fra_maur_uniform_ethnic
+			}
+		}
 	}
 
 	#...And In Colonies...
@@ -1939,6 +2769,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_decentralisedassembliesinfrance  }
+		completion_reward = {
+			###event and decolonization of africa
+		}
 	}
 
 	#Vatican Hegemony
@@ -1952,6 +2785,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_expelthemeteques  }
+		completion_reward = {
+			###event 
+		}
 	}
 
 	#Trade Corpus System
@@ -1965,6 +2801,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_national_patriotism  }
+		completion_reward = {
+			add_ideas = {
+				fra_maur_trade_corp
+			}
+		}
 	}
 
 	#The French Interests
@@ -1978,6 +2819,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_federal_monarchy  }
+		completion_reward = {
+			
+		}
 	}
 
 	#Demand Quebec
@@ -1991,6 +2835,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_french_interests  }
+		completion_reward = {
+			
+		}
 	}
 
 	#Wallonian French
@@ -1999,10 +2846,14 @@ focus_tree = {
 		icon = GFX_FRA_wallonian_french-445
 		x = 43
 		y = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_french_interests  }
+		completion_reward = {
+			
+		}
 	}
 
 	#Revenge For the Fallen
@@ -2016,6 +2867,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_french_interests  }
+		completion_reward = {
+			
+		}
 	}
 
 	#The Labor Aristocrat
@@ -2029,6 +2883,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_enrich_the_countryside  }
+		completion_reward = {
+			add_research_slot = 1
+		}
 	}
 
 	#Obliterate Decadence
@@ -2042,6 +2899,13 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_revitalization_of_the_bourgeois  }
+		completion_reward = {
+			###event
+			swap_ideas = {
+				remove_idea = fra_sor_new_bour
+				add_idea = fra_sor_new_bour_2
+			}
+		}
 	}
 
 	#Hang the Republicans
@@ -2050,10 +2914,15 @@ focus_tree = {
 		icon = GFX_FRA_hang_the_republicans-445
 		x = 4
 		y = 2
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_begin_the_myth  }
+		completion_reward = {
+			###popularity
+			add_popularity = { ideology = conservative   popularity = -0.2 }
+		}
 	}
 
 	#Nationalize the Bourgeois
@@ -2062,10 +2931,17 @@ focus_tree = {
 		icon = GFX_FRA_nationalize_the_bourgeois-445
 		x = 6
 		y = 5
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_redistribute_excess_capital  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fra_sor_new_bour_3
+				add_idea = fra_sor_new_bour_4
+			}
+		}
 	}
 
 	#Revitalization of the Bourgeois
@@ -2079,6 +2955,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_begin_the_myth  }
+		completion_reward = {
+			###event (gives blank idea)
+			add_ideas = {
+				fra_sor_new_bour
+			}
+		}
 	}
 
 	#The New Bourgeois
@@ -2092,6 +2974,13 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_joy_of_duty  }
+		completion_reward = {
+			###event
+			swap_ideas = {
+				remove_idea = fra_sor_new_bour_5
+				add_idea = fra_sor_new_bour_6
+			}
+		}
 	}
 
 	#Redistribute Excess Capital
@@ -2105,6 +2994,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_obliterate_decadence  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fra_sor_new_bour_2
+				add_idea = fra_sor_new_bour_3
+			}
+		}
 	}
 
 	#Beat the Academics
@@ -2118,6 +3013,10 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_hang_the_republicans  }
+		completion_reward = {
+			add_popularity = { ideology = social_democracy  popularity = -0.2 }
+			
+		}
 	}
 
 	#The Death of Enlightenment
@@ -2126,10 +3025,17 @@ focus_tree = {
 		icon = GFX_FRA_the_death_of_enlightenment-445
 		x = 4
 		y = 7
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_exile_of_parasites  }
+		completion_reward =  {
+			###event 
+			add_ideas = {
+				fra_sor_DoE
+			}
+		}
 	}
 
 	#Freedom Through Conflict
@@ -2143,6 +3049,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_spread_the_revolution  }
+		completion_reward =  {
+			###event 
+			add_ideas = {
+				fra_sor_DoE
+			}
+		}
 	}
 
 	#Syndicalist Technocracy
@@ -2156,6 +3068,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_labor_aristocrat  }
+		completion_reward = {
+			add_ideas = {
+				fra_sor_synd_tech
+			}
+		}
 	}
 
 	#Exile of Parasites
@@ -2169,6 +3086,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_dissolve_the_parliament  }
+		completion_reward = {
+			###event
+		}
 	}
 
 	#The Joy of Duty
@@ -2182,6 +3102,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_nationalize_the_bourgeois  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fra_sor_new_bour_4
+				add_idea = fra_sor_new_bour_5
+			}
+		}
 	}
 
 	#Anti-Capitalism
@@ -2195,6 +3121,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_begin_the_myth  }
+		completion_reward = {
+			add_ideas = {
+				fra_sor_anti_cap
+			}
+		}
 	}
 
 	#Enrich the Countryside
@@ -2208,6 +3139,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_proletarian_nationalism  }
+		completion_reward = {
+			add_ideas = {
+				fra_sor_country_side
+			}
+		}
 	}
 
 	#Dissolve the Parliament
@@ -2221,6 +3157,10 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_burn_liberal_symbolic  }
+		completion_reward = {
+			add_stability = 0.10
+			#event
+		}
 	}
 
 	#Proletarian Nationalism
@@ -2234,6 +3174,11 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_workerowned_factories  }
+		completion_reward = {
+			add_ideas = {
+				fra_sor_prot_nation
+			}
+		}
 	}
 
 	#An Avant-Garde France
@@ -2260,6 +3205,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_heroic_proletariat  }
+		completion_reward = {
+
+		}
 	}
 
 	#The Heroic Proletariat
@@ -2273,6 +3221,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_death_of_enlightenment  } prerequisite = { focus = FRA_the_new_bourgeois  } prerequisite = { focus = FRA_syndicalist_technocracy  }
+		completion_reward = {
+			###event
+		}
 	}
 
 	#The Communard Legion
@@ -2281,10 +3232,12 @@ focus_tree = {
 		icon = GFX_FRA_the_communard_legion-445
 		x = 3
 		y = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_spread_the_revolution  }
+
 	}
 
 	#Convoy Escorts
@@ -2298,6 +3251,14 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_wage_undersea_warfare  focus = FRA_rebuild_the_surface_fleet  }
+		completion_reward = {
+			add_tech_bonus = {
+			 name = naval_bonus
+			 bonus = 0.75
+			 uses = 2
+			 category = dd_tech
+			  }    
+		   }
 	}
 
 	#Wage Undersea Warfare
@@ -2312,6 +3273,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_marine_nationale  }
 		mutually_exclusive = { focus = FRA_rebuild_the_surface_fleet  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_trade_interdiction
+			}
+		}
 	}
 
 	#Continue Carrier Programms
@@ -2326,6 +3295,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_rebuild_the_surface_fleet  }
 		mutually_exclusive = { focus = FRA_traditional_roles  }
+		completion_reward = {
+			add_tech_bonus = {
+			 name = naval_bonus
+			 bonus = 1.0
+			 uses = 2
+			 category = cv_tech
+			  }	
+		   }
 	}
 
 	#Traditional Roles
@@ -2340,6 +3317,16 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_rebuild_the_surface_fleet  }
 		mutually_exclusive = { focus = FRA_continue_carrier_programms  }
+		completion_reward = {
+			add_tech_bonus = {
+			 name = naval_bonus
+			 bonus = 1.0
+			 uses = 2
+			 category = dd_tech
+			 category = cl_tech
+			 category = bc_tech
+			  }	
+		}
 	}
 
 	#Grand Forces Coordination
@@ -2353,6 +3340,11 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_ground_support  }
+		completion_reward = {
+			add_ideas = {
+				fra_air_coordinate
+			}
+		}
 	}
 
 	#Flexible Bombers
@@ -2366,6 +3358,15 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_grand_forces_coordination  }
+		bypass = { has_tech = CAS2 }
+		completion_reward = {
+			add_tech_bonus = {
+			   name = cas_bonus
+			   bonus = 1.0
+			   uses = 1
+			   technology = CAS2
+		   }
+		}
 	}
 
 	#Aerial Destruction
@@ -2379,6 +3380,11 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_flexible_bombers  }
+		completion_reward = {
+			add_ideas = {
+				fra_air_big_dmg
+			}
+		}
 	}
 
 	#Light Bombers
@@ -2393,6 +3399,15 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_flexible_bombers  } prerequisite = { focus = FRA_improved_production_methods  }
 		mutually_exclusive = { focus = FRA_coordinated_bombings  }
+		bypass = { has_tech = tactical_bomber2 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				technology = tactical_bomber2
+			}
+		}
 	}
 
 	#Airbase Construction
@@ -2406,6 +3421,66 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_ground_support  focus = FRA_air_dominance  }
+		completion_reward = {
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 2
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 2
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = ROB_aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 2
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = ROB_aviation_effort_AB }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 2
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+				ROOT = { set_country_flag = ROB_aviation_effort_AB }
+			}
+		}
 	}
 
 	#Improved Production Methods
@@ -2419,6 +3494,11 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_airbase_construction  }
+		completion_reward = {
+			add_ideas = {
+				fra_air_spam
+			}
+		}
 	}
 
 	#Fighther Interception
@@ -2432,6 +3512,16 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_air_dominance  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 2
+				technology = antiair1
+				technology = antiair2
+				technology = antiair3
+			}
+		}
 	}
 
 	#Multi-Engine Fighters
@@ -2445,6 +3535,15 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_fighther_interception  }
+		bypass = { has_tech = fighter2 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				technology = fighter2
+			}
+		}
 	}
 
 	#Coordinated Bombings
@@ -2459,6 +3558,15 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_improved_production_methods  } prerequisite = { focus = FRA_multiengine_fighters  }
 		mutually_exclusive = { focus = FRA_light_bombers  }
+		bypass = { has_tech = strategic_bomber2 }
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				technology = strategic_bomber2
+			}
+		}
 	}
 
 	#Rule the Skies
@@ -2471,7 +3579,12 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = FRA_coordinated_bombings  }
+		prerequisite = { focus = FRA_coordinated_bombings focus = FRA_light_bombers }
+		completion_reward = {
+			add_ideas = {
+				fra_air_epic
+			}
+		}
 	}
 
 	#Marine Nationale
@@ -2485,6 +3598,9 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_the_french_military  }
+		completion_reward = {
+			navy_experience = 20
+		}
 	}
 
 	#Rebuild the Surface Fleet
@@ -2499,6 +3615,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_marine_nationale  }
 		mutually_exclusive = { focus = FRA_wage_undersea_warfare  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
 	}
 
 	#Armée de l'Air
@@ -2512,6 +3636,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_the_french_military  }
+		completion_reward = {
+			air_experience = 20
+		}
 	}
 
 	#Ground Support
@@ -2526,6 +3653,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_armeedelair  }
 		mutually_exclusive = { focus = FRA_air_dominance  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_battlefield_support
+			}
+		}
 	}
 
 	#Air Dominance
@@ -2540,6 +3675,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_armeedelair  }
 		mutually_exclusive = { focus = FRA_ground_support  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = doctrine_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_operational_integrity
+			}
+		}
 	}
 
 	#Improved Screening Ships
@@ -2553,6 +3696,15 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_convoy_escorts  }
+		completion_reward = {
+			add_tech_bonus = {
+			 name = naval_bonus
+			 bonus = 0.75
+			 uses = 2
+			 category = cl_tech
+			 category = ca_tech
+			  }    
+		   }
 	}
 
 	#Update the Battlefleet
@@ -2566,6 +3718,14 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_traditional_roles  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_bonus
+				bonus = 1
+				uses = 2
+				category = bb_tech
+			}
+		}
 	}
 
 	#Finish the Joffre
@@ -2574,10 +3734,14 @@ focus_tree = {
 		icon = GFX_FRA_finish_the_joffre-445
 		x = 31
 		y = 17
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_continue_carrier_programms  }
+		completion_reward = {
+			###spawns in aircraft carrier
+		}
 	}
 
 	#Submarine Forces
@@ -2591,6 +3755,14 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_wage_undersea_warfare  }
+		completion_reward = {
+			add_tech_bonus = {
+			 name = naval_bonus
+			 bonus = 1.0
+			 uses = 2
+			 category = ss_tech
+			  }    
+		   }
 	}
 
 	#Naval Mine Ships
@@ -2604,6 +3776,22 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_wage_undersea_warfare  }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = naval_bonus
+					bonus = 1.0
+					uses = 2
+					category = naval_mines
+					 }  
+				else = {
+					navy_experience = 100
+				}
+			}
+		}
 	}
 
 	#Convoy Hunters
@@ -2617,6 +3805,11 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = FRA_submarine_forces  }
+		completion_reward = {
+			add_ideas = {
+				fra_convoy_hunters
+			}
+		}
 	}
 
 	#Update Naval Bases
@@ -2630,6 +3823,24 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_update_the_battlefleet  focus = FRA_convoy_hunters  focus = FRA_finish_the_joffre  focus = FRA_improved_screening_ships  }
+		completion_reward = {
+			14 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			19 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
 	}
 
 	#Civil War Victory
@@ -2641,6 +3852,12 @@ focus_tree = {
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
+		}
+		available = {
+			has_country_flag = fra_cw_over
+		}
+		completion_reward = {
+			
 		}
 	}
 
@@ -2655,6 +3872,12 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_civil_war_victory  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fra_eco_disaster
+				add_idea = fra_eco_disaster_2
+			}
+		}
 	}
 
 	#Rebuillding the Roads
@@ -2668,6 +3891,170 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_civil_war_victory  }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 
 	#Aid Local Entrepreneurs
@@ -2681,6 +4068,68 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_rebuillding_the_roads  }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 	}
 
 	#Restart Civil Services
@@ -2694,6 +4143,12 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_repair_the_civilian_economy  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = fra_eco_disaster_2
+				add_idea = fra_eco_disaster_3
+			}
+		}
 	}
 
 	#Laissez-Faire
@@ -2708,6 +4163,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_aid_local_entrepreneurs  } prerequisite = { focus = FRA_restart_civil_services  }
 		mutually_exclusive = { focus = FRA_drigisme  } mutually_exclusive = { focus = FRA_market_regulation  }
+		completion_reward = {
+			add_ideas = {
+				fra_laissezfaire
+			}
+		}
 	}
 
 	#Drigisme
@@ -2722,6 +4182,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_aid_local_entrepreneurs  } prerequisite = { focus = FRA_restart_civil_services  }
 		mutually_exclusive = { focus = FRA_market_regulation  } mutually_exclusive = { focus = FRA_laissezfaire  }
+		completion_reward = {
+			add_ideas = {
+				fra_drigisme
+			}
+		}
 	}
 
 	#Market Regulation
@@ -2736,6 +4201,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_aid_local_entrepreneurs  } prerequisite = { focus = FRA_restart_civil_services  }
 		mutually_exclusive = { focus = FRA_drigisme  } mutually_exclusive = { focus = FRA_laissezfaire  }
+		completion_reward = {
+			add_ideas = {
+				fra_market_regulation
+			}
+		}
 	}
 
 	#A Revitalized Economy
@@ -2748,6 +4218,11 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_drigisme  focus = FRA_laissezfaire  focus = FRA_market_regulation  }
+		completion_reward = {
+			remove_ideas = {
+				fra_eco_disaster_3
+			}
+		}
 	}
 
 	#Global pre-Eminence
@@ -2761,6 +4236,11 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_drigisme  focus = FRA_laissezfaire  focus = FRA_market_regulation  }
+		completion_reward = {
+			add_ideas = {
+				fra_global_powerhouse
+			}
+		}
 	}
 
 	#Regional Reconstruction Program
@@ -2774,6 +4254,12 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_civil_war_victory  }
+		completion_reward = {
+			add_timed_idea = {
+				idea = fra_reconstruction
+				days = 180
+			}
+		}
 	}
 
 	#Vichy and Centre-Val de Loire
@@ -2787,6 +4273,41 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_regional_reconstruction_program  }
+		completion_reward = {
+			add_political_power = -35
+			26 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				   level = 1
+				   instant_build = yes
+				  }
+			  }
+			  25 = { 
+				  add_extra_state_shared_building_slots = 1
+				  add_building_construction = {
+					type = industrial_complex
+					 level = 1
+					 instant_build = yes
+					}
+				}
+				33 = { 
+				  add_extra_state_shared_building_slots = 1
+				  add_building_construction = {
+					type = arms_factory
+					 level = 1
+					 instant_build = yes
+					}
+				}
+				819 = { 
+				  add_extra_state_shared_building_slots = 1
+				  add_building_construction = {
+					type = industrial_complex
+					 level = 1
+					 instant_build = yes
+					}
+				}
+		}
 	}
 
 	#Occitanie
@@ -2800,6 +4321,41 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_regional_reconstruction_program  }
+		completion_reward = {
+			add_political_power = -35
+			31 = { 
+	  		add_extra_state_shared_building_slots = 1
+	  		add_building_construction = {
+				type = arms_factory
+	 			level = 1
+	 			instant_build = yes
+				}
+			}
+			19 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = industrial_complex
+				   level = 1
+				   instant_build = yes
+				  }
+			  }
+			  22 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				   level = 1
+				   instant_build = yes
+				  }
+			  }
+			  21 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = industrial_complex
+				   level = 1
+				   instant_build = yes
+				  }
+			  }
+		}
 	}
 
 	#The Alps to Strasbourg
@@ -2813,6 +4369,41 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_occitanie  }
+		completion_reward = {
+			add_political_power = -35
+			20 = { 
+	  		add_extra_state_shared_building_slots = 1
+	  		add_building_construction = {
+				type = industrial_complex
+	 			level = 1
+	 			instant_build = yes
+				}
+			}
+			32 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				   level = 1
+				   instant_build = yes
+				  }
+			  }
+			  17 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = industrial_complex
+				   level = 1
+				   instant_build = yes
+				  }
+			  }
+			  28 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				   level = 1
+				   instant_build = yes
+				  }
+			  }
+		}
 	}
 
 	#Dunkerque to Bretagne
@@ -2826,6 +4417,41 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_vichy_and_centreval_de_loire  }
+		completion_reward = {
+			add_political_power = -35
+			14 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				   level = 1
+				   instant_build = yes
+				  }
+			  }
+			  15 = { 
+				  add_extra_state_shared_building_slots = 1
+				  add_building_construction = {
+					type = industrial_complex
+					 level = 1
+					 instant_build = yes
+					}
+				}
+				818 = { 
+				  add_extra_state_shared_building_slots = 1
+				  add_building_construction = {
+					type = arms_factory
+					 level = 1
+					 instant_build = yes
+					}
+				}
+				29 = { 
+				  add_extra_state_shared_building_slots = 1
+				  add_building_construction = {
+					type = industrial_complex
+					 level = 1
+					 instant_build = yes
+					}
+				}
+		}
 	}
 
 	#Rebuilding Paris
@@ -2839,6 +4465,17 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = FRA_the_alps_to_strasbourg  } prerequisite = { focus = FRA_dunkerque_to_bretagne  }
+		completion_reward = {
+			add_political_power = -35
+			16 = { 
+	  		add_extra_state_shared_building_slots = 4
+	  		add_building_construction = {
+				type = industrial_complex
+	 			level = 4
+	 			instant_build = yes
+				}
+			}
+		}
 	}
 
 }

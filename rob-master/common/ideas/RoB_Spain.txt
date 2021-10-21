@@ -1,0 +1,552 @@
+ideas = {
+
+	country = {
+	
+		SPR_economic_crisis = {
+		
+		picture = #no money
+		
+		allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+						
+			modifier = {
+				political_power_cost = 1
+				consumer_goods_factor = 0.30
+				production_speed_buildings_factor = -0.50
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				stability_factor = -0.50
+			}
+		
+		}
+		
+		SPR_weak_army = {
+		
+		picture = #weak broken
+		
+		allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = -0.10
+				army_defence_factor = -0.10
+				army_speed_factor = -0.10
+				recruitable_population_factor = -0.10
+				army_org_factor = -0.05
+			}
+		
+		}
+	
+		SPR_political_chaos = {
+			
+		picture = #help	
+			
+		allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.20
+				war_support_factor = -0.20
+				political_power_gain = -0.20
+				consumer_goods_factor = 0.05
+				
+			}
+		
+		}
+		
+		SPR_a_syndicalist_economy = {
+		
+		picture = #flame
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+		
+			}
+			
+		}
+		
+		SPR_a_mutualist_economy = {
+		
+		picture = #orange
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.05
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		
+		}
+		
+		SPR_a_corporativist_economy = {
+		
+		picture = #eagle
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+				modifier = {
+					consumer_goods_factor = -0.05
+					roduction_factory_efficiency_gain_factor = 0.05
+					production_speed_arms_factory_factor = 0.10
+	
+				
+			}
+		
+		}
+	
+		SPR_violent_industrialization = {
+		
+		picture = #industry
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.20
+				production_speed_arms_factory_factor = 0.20
+				production_speed_dockyard_factor = 0.20
+				war_support_factor = -0.20
+				political_power_gain = -0.25
+				consumer_goods_factor = 0.10
+				stability_factor = -0.20
+			}
+		
+		
+		}
+	
+		SPR_embrace_distributism = {
+	
+		picture = #dog
+	
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				political_power_factor = -0.10
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				
+			}
+	
+		}
+	
+		SPR_autarky = {
+	
+		picture = #closed
+	
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.10
+				local_resources_factor = 0.10
+				production_speed_industrial_complex_factor = 0.20
+				production_speed_arms_factory_factor = 0.05
+				consumer_goods_factor = 0.05
+				stability_factor = -0.20
+				war_support_factor = -0.20
+			}
+
+		}
+	
+		SPR_a_welfare_state = {
+		
+		picture = #hand
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = 0.05
+				
+			}
+		
+		}
+	
+		#the national syndicalist iberian union focus#
+	
+		SPR_the_new_state = { 
+		
+		picture = #acab
+	
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				non_core_manpower = 0.30
+			}	
+			
+		}
+	
+		SPR_our_final_test = {
+		
+		picture = #bunker
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_bunker_factor = 0.50
+				production_speed_coastal_bunker_factor = 0.50
+				production_speed_anti_air_building_factor = 0.50
+				army_core_defence_factor = 0.05
+				
+			}
+		
+		}
+	
+		SPR_farm_modernization = {
+		
+		picture = #grain
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				recruitable_population_factor = 0.02
+				
+			}
+	
+		}
+	
+		SPR_develop_the_tertiary_sector = {
+		
+		picture = #beach
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				
+			}
+			
+		}
+
+		SPR_connecting_our_great_state = {
+		
+		picture = #rail
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+			
+			}
+			
+		}
+
+		SPR_the_four_year_plan = {
+		
+		picture = #four
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = -0.25
+				local_building_slots_factor = 0.10
+			}
+		
+		}
+		
+		SPR_the_shining_pearl_of_the_mediterranean = {
+		
+		picture = #pearl
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.10
+				stability_factor = 0.10
+				conscription_factor = 0.2
+				experience_gain_navy = 0.05
+				surrender_limit = 0.15
+			}
+		
+		}
+		
+		SPR_new_electronical_materials = {
+		
+		picture = #computer
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.10
+
+			}
+			
+		}
+		
+		SPR_the_blue_militia = {
+		
+		picture = #militia
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				army_org_regain = -0.20
+				training_time_factor = -0.10
+				army_morale_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+			
+		}
+		
+		SPR_the_red_brown_army = {
+		
+		picture = #army
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+				army_speed_factor = 0.05
+				army_org_factor = 0.05
+				supply_consumption_factor = -0.2
+				
+			}
+		
+		}
+		
+		SPR_control_over_gibraltar = {
+		
+		picture = #rock
+		
+		allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.02
+				war_support_factor = 0.02
+				political_power_factor = 0.10
+				consumer_goods_factor = -0.05
+			}
+		
+		}
+		
+		SPR_agriculture = {
+		
+		picture = # grain
+		
+		allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+					
+				monthly_population = 0.1
+				consumer_goods_factor = -0.05
+			}
+		
+		
+		}
+		
+		SPR_african_compliance = {
+		
+		picture = # grain
+		
+		allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+					
+				compliance_gain = 0.010
+				non_core_manpower = 0.05
+			}
+		
+		}
+		
+	}
+
+}

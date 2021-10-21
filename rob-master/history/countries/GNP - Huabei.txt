@@ -1,0 +1,53 @@
+﻿capital = 608
+
+oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_war_support = 0.1
+set_convoys = 10
+
+
+set_popularities = {
+	national_socialist = 5
+	socialist = 10
+	democratic_socialist = 5
+	social_democracy = 0
+	social_liberal = 0
+	conservative = 6
+	authoritharian = 54
+	reactionary = 16
+	pelekist = 4
+}
+
+set_politics = {
+	ruling_party = authoritharian
+	last_election = "1932.2.14"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Zhang Zongchang"
+	desc = ""
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_warlord1.dds"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Wu Huawen"
+	portrait_path = "Wu_Huawen.dds"
+	traits = { trait_mountaineer hill_fighter }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
