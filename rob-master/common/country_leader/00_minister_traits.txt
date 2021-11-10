@@ -70,6 +70,13 @@ hog_vanguardist_socialist = {
  random = no 
 }
 
+hog_pacifist = {
+	war_support_factor = -0.05
+	stability_factor = 0.07
+
+ random = no 
+}
+
 hog_staunch_democrat = {
  conscription_factor = 0.02
  stability_factor = 0.05
@@ -91,6 +98,13 @@ hog_pelekist = {
  random = no 
 }
 
+hog_schoolar = {
+ research_speed_factor = 0.025
+ stability_factor = 0.05
+
+ random = no 
+}
+
 hog_incompetant_leader = {
  political_power_factor = -0.05
  stability_factor = 0.01
@@ -100,8 +114,8 @@ hog_incompetant_leader = {
 
 hog_monarch = {
  political_power_factor = 0.05
- stability_factor = 0.01
- war_support_factor = 0.01
+ stability_factor = 0.03
+ war_support_factor = 0.03
  
  random = no 
 }

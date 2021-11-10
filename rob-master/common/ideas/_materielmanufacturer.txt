@@ -174,5 +174,56 @@ ideas = {
 	army_artillery_defence_factor = 0.05
    }
    }
+
+   ###France
+
+   somua = {
+      allowed = {
+OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+      }
+      research_bonus = {
+         motorized_equipment = 0.15
+      }
+      traits = { motorized_equipment_manufacturer }
+
+   }
+   
+   mas = {     
+      allowed = {
+OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+      }    
+      research_bonus = {
+         infantry_weapons = 0.15
+      }
+      traits = { infantry_equipment_manufacturer }
+   }
+
+   schneider = {
+      allowed = {
+OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+      }		
+      research_bonus = {
+         artillery = 0.15
+      }
+      traits = { artillery_manufacturer }
+   }
   }
  }

@@ -1,6 +1,7 @@
 capital = 16
 
 oob = "FRA_1936"
+country_lock_all_division_template = yes
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "FRA_1936_naval_mtg"
@@ -9,7 +10,7 @@ if = {
 	}
 }
 
-set_research_slots = 3
+set_research_slots = 4
 set_stability = 0.5
 set_war_support = 0.15
 

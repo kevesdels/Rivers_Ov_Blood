@@ -1,9 +1,162 @@
+FRA_civil_war_decisons = {
+
+######## Militas ########
+
+FRA_pelekist_militas = { #when you take Marseille
+	fire_only_once = yes
+	visible = {
+		tag = FRP
+	}
+	available = {
+		has_country_flag = FRA_civil_war
+		controls_state = 21
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  days_remove = 3
+	  remove_effect = {
+		load_oob = "FRP_civil_war_milita"
+	  }
+  }
+  
+  FRA_pelekist_militas_2 = { #when you take bordeaux
+	fire_only_once = yes
+	visible = {
+		tag = FRP
+	}
+	available = {
+		has_country_flag = FRA_civil_war
+		controls_state = 19
+	  }
+	  ai_will_do = {
+		  base = 100
+	  }
+	  days_remove = 3
+	  remove_effect = {
+		load_oob = "FRP_civil_war_milita_2"
+	  }
+  }
+
+  FRA_democrat_militas = { #when you take La rochelle
+	fire_only_once = yes
+	visible = {
+		tag = FRL
+	}
+	  available = {
+		  has_country_flag = FRA_civil_war
+		  controls_state = 1283
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		days_remove = 3
+		remove_effect = {
+			load_oob = "FRL_civil_war_milita"
+		}
+  }
+  
+  FRA_democrat_militas_2 = { #when you take Orleans
+	fire_only_once = yes
+	visible = {
+		tag = FRL
+	}
+	  available = {
+		  has_country_flag = FRA_civil_war
+		  controls_state = 24
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		days_remove = 3
+		remove_effect = {
+			load_oob = "FRL_civil_war_milita_2"
+		}
+  }
+
+  FRA_socialist_militas = { ####when you take la rochelle
+	fire_only_once = yes
+	visible = {
+		tag = FRS
+	}
+	  available = {
+		  has_country_flag = FRA_civil_war
+		  controls_state = 1283
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		days_remove = 3
+		remove_effect = {
+			load_oob = "FRS_civil_war_milita"
+		}
+  }
+
+  FRA_socialist_militas_2 = {####when you take Montpellier
+	fire_only_once = yes
+	visible = {
+		tag = FRS
+	}
+	available = {
+		has_country_flag = FRA_civil_war
+		controls_state = 22
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  days_remove = 3
+	  remove_effect = {
+		load_oob = "FRS_civil_war_milita_2"
+	  }
+}
+	
+  FRA_sorelist_militas = {  ####when you take Vichy
+	fire_only_once = yes
+	visible = {
+		tag = FRR
+	}
+	  available = {
+		  has_country_flag = FRA_civil_war
+		  controls_state = 26
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		days_remove = 3
+		remove_effect = {
+			load_oob = "FRR_civil_war_milita"
+		}
+  }
+
+  FRA_sorelist_militas_2 = {  ####when you take Touluse
+	fire_only_once = yes
+	visible = {
+		tag = FRR
+	}
+	available = {
+		has_country_flag = FRA_civil_war
+		controls_state = 31
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  days_remove = 1
+	  remove_effect = {
+		load_oob = "FRR_civil_war_milita_2"
+	  }
+}
+
+###end of civil war decisions
+}
+
+
 fra_post_civil_war = {
 
 
 FRA_reenstablish_lordship_over_syr = {
   fire_only_once = yes
   available = {
+	  has_country_flag = fra_colonies_submit
 	SYR = { 
 		exists = yes 
 		is_puppet = no
@@ -23,6 +176,7 @@ FRA_reenstablish_lordship_over_syr = {
 FRA_assist_syr = {
 	fire_only_once = yes
   	available = {
+		has_country_flag = fra_colonies_submit
 	OR = {
   		SYR = { has_war_with = HJZ }
 		SYR = { has_war_with = TUR }
@@ -75,6 +229,7 @@ FRA_assist_syr = {
 FRA_reenstablish_lordship_over_FEA = {
 	fire_only_once = yes
 	available = {
+		has_country_flag = fra_colonies_submit
 	  FEA = { 
 		  exists = yes 
 		  is_puppet = no
@@ -113,6 +268,7 @@ FRA_reenstablish_lordship_over_FEA = {
   FRA_reenstablish_lordship_over_FIC = {
 	fire_only_once = yes
 	available = {
+		has_country_flag = fra_colonies_submit
 		FIC = { 
 		  exists = yes 
 		  is_puppet = no

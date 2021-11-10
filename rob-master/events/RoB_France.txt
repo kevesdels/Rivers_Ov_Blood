@@ -11,6 +11,7 @@ id = rob_france.1
 title = rob_france.1.t
 desc = rob_france.1.d
 fire_only_once = yes
+picture = GFX_picture_FRA_state_ov_france
 
 trigger = {
 tag = FRA
@@ -30,6 +31,8 @@ country_event = {
 id = rob_france.2
 title = rob_france.2.t
 desc = rob_france.2.d
+picture = GFX_picture_FRA_republic_senate
+
 fire_only_once = yes
 is_triggered_only = yes
 
@@ -46,30 +49,22 @@ add_political_power = 120
 ai_chance = { factor = 7 }
 hidden_effect = { country_event = { id = rob_france.5 days = 20 } }
 }
-
 }
 
-###March on Paris
+###Pelekists March on Paris!
 country_event = {
 id = rob_france.3
 title = rob_france.3.t
 desc = rob_france.3.d
 fire_only_once = yes
 is_triggered_only = yes
-
+#picture = GFX_picture_FRA_1934_protests
 
 option = { ###Military sides with republic
 name = rob_france.3.b
 ai_chance = { factor = 6 }
-add_popularity = { ideology = pelekist popularity = -0.1 } 
-add_popularity = { ideology = authoritharian popularity = 0.3 } 
-add_political_power =100
-set_politics = {
-ruling_party = authoritharian
-elections_allowed = no
-}
-set_country_flag = FRA_pelekists_crushed
-country_event = { id = rob_france.4 days = 25 } 
+add_political_power = 100
+country_event = { id = rob_france.4 days = 3 } 
 }
 }
 
@@ -80,6 +75,7 @@ title = rob_france.4.t
 desc = rob_france.4.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_red_friday
 
 option = {
 name = rob_france.4.a
@@ -87,7 +83,8 @@ add_political_power = 50
 add_popularity = { ideology = pelekist popularity = -0.1 } 
 add_popularity = { ideology = socialist popularity = -0.1 }
 add_popularity = { ideology = national_socialist popularity = -0.1 }  
-set_country_flag = FRA_radicals_dead
+set_country_flag = FRA_pelekists_dead
+set_country_flag = FRA_sor_status_quo
 }
 }
 
@@ -98,6 +95,7 @@ title = rob_france.5.t
 desc = rob_france.5.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_rainy_day
 
 option = { ###Meeting succesful
 name = rob_france.5.a
@@ -120,6 +118,7 @@ title = rob_france.6.t
 desc = rob_france.6.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_opera
 
 option = { ###they work hand in hand
 name = rob_france.6.a
@@ -145,43 +144,40 @@ id = rob_france.7
 title = rob_france.7.t
 desc = rob_france.7.d
 fire_only_once = yes
+picture = GFX_picture_FRA_1934_protests
 
 trigger = {
 tag = FRA
 date > 1934.4.1
-NOT ={ 
-has_country_flag = FRA_radicals_dead
-has_country_flag = FRA_pelekist_victory
-}
 }
 
 mean_time_to_happen = { days = 2 }
 
-option = { ###blame pelekists
+option = { ###authorities
 name = rob_france.7.a
 ai_chance = { factor = 5 }
-add_popularity = { ideology = pelekist popularity = -0.03 }
-add_political_power = -100
-add_stability = -0.04 
-hidden_effect = { country_event = { id = rob_france.8 days = 20 } }
+add_political_power = -50
+add_stability = -0.02 
+hidden_effect = { country_event = { id = rob_france.8 days = 10 } }
 }
 option = { ###blame socialists
 name = rob_france.7.b
 ai_chance = { factor = 5 }
-add_popularity = { ideology = socialist popularity = -0.03 } 
-add_political_power = -100
+add_popularity = { ideology = social_liberal popularity = -0.01 } 
+add_political_power = -80
 add_stability = -0.04 
-hidden_effect = { country_event = { id = rob_france.8 days = 20 } }
+hidden_effect = { country_event = { id = rob_france.8 days = 10 } }
 }
 }
 
-###shit fucks up part 1
+###shit fucks up part 1:Socialism on the Rise
 country_event = {
 id = rob_france.8
 title = rob_france.8.t
 desc = rob_france.8.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_soc_on_rise
 
 option = { ###punish sorelians
 name = rob_france.8.a
@@ -189,7 +185,7 @@ ai_chance = { factor = 5 }
 add_popularity = { ideology = national_socialist popularity = -0.02 } 
 add_political_power = -20
 add_stability = -0.02
-hidden_effect = { country_event = { id = rob_france.9 days = 20 }
+hidden_effect = { country_event = { id = rob_france.10 days = 20 }
 }
 }
 option = { ###dont punish them
@@ -198,18 +194,22 @@ ai_chance = { factor = 5 }
 add_popularity = { ideology = national_socialist popularity = 0.02 } 
 add_political_power = -30
 add_stability = -0.01 
-hidden_effect = { country_event = { id = rob_france.9 days = 20 }
+hidden_effect = { country_event = { id = rob_france.10 days = 20 }
 }
 }
 }
 
-###shit fucks up part 2
+###shit fucks up part 2: Notre-Dame Burns
 country_event = {
 id = rob_france.9
 title = rob_france.9.t
 desc = rob_france.9.d
 fire_only_once = yes
-is_triggered_only = yes
+trigger = {
+	tag = FRA
+	date > 1934.4.27
+}
+picture = GFX_picture_FRA_notredame
 
 option = { ###punish pelekists
 name = rob_france.9.a
@@ -217,7 +217,6 @@ ai_chance = { factor = 5 }
 add_popularity = { ideology = pelekist popularity = -0.04 } 
 add_political_power = -40
 add_stability = -0.04
-hidden_effect = { country_event = { id = rob_france.11 days = 20 }
 }
 }
 option = { ###dont punish them
@@ -226,9 +225,39 @@ ai_chance = { factor = 5 }
 add_popularity = { ideology = pelekist popularity = 0.04 } 
 add_political_power = -40
 add_stability = -0.04 
-hidden_effect = { country_event = { id = rob_france.11 days = 20 }
 }
 }
+}
+
+###shit fucks up part 3: Riots calm down
+country_event = {
+	id = rob_france.10
+	title = rob_france.10.t
+	desc = rob_france.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_picture_FRA_republic_senate
+	
+	option = { ###punish pelekists&nationalists
+	name = rob_france.10.a
+	ai_chance = { factor = 5 }
+	add_popularity = { ideology = pelekist popularity = -0.02 } 
+	add_popularity = { ideology = reactionary popularity = -0.02 } 
+	add_political_power = -20
+	add_stability = -0.02
+	hidden_effect = { country_event = { id = rob_france.11 days = 7 }
+	}
+	}
+	option = { ###punish sorelians&socialists
+	name = rob_france.10.b
+	ai_chance = { factor = 5 }
+	add_popularity = { ideology = national_socialist popularity = -0.02 } 
+	add_popularity = { ideology = socialist popularity = -0.02 } 
+	add_political_power = -20
+	add_stability = -0.02 
+	hidden_effect = { country_event = { id = rob_france.11 days = 7 }
+	}
+	}
 }
 
 ###shit fucks up part 4 - pelekist march
@@ -238,6 +267,7 @@ title = rob_france.11.t
 desc = rob_france.11.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_pelekist_march
 
 option = { ###punish pelekists
 name = rob_france.11.a
@@ -245,25 +275,26 @@ ai_chance = { factor = 5 }
 add_popularity = { ideology = pelekist popularity = -0.04 } 
 add_political_power = -80
 add_stability = -0.08
-hidden_effect = { country_event = { id = rob_france.12 days = 20 }
+hidden_effect = { country_event = { id = rob_france.12 days = 7 }
 }
 }
 option = { ###dont punish them
 name = rob_france.11.b
 ai_chance = { factor = 5 }
 add_popularity = { ideology = pelekist popularity = 0.04 } 
-hidden_effect = { country_event = { id = rob_france.12 days = 20 }
+hidden_effect = { country_event = { id = rob_france.12 days = 7 }
 }
 }
 }
 
-###shit fucks up part 5 - socialist march
+###shit fucks up part 5 - Socialist Strike
 country_event = {
 id = rob_france.12
 title = rob_france.12.t
 desc = rob_france.12.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_socialist_protest
 
 option = { ###punish socialsits
 name = rob_france.12.a
@@ -271,14 +302,14 @@ ai_chance = { factor = 5 }
 add_popularity = { ideology = socialist popularity = -0.04 } 
 add_political_power = -90
 add_stability = -0.09
-hidden_effect = { country_event = { id = rob_france.13 days = 20 }
+hidden_effect = { country_event = { id = rob_france.13 days = 7 }
 }
 }
 option = { ###dont punish them
 name = rob_france.12.b
 ai_chance = { factor = 5 }
 add_popularity = { ideology = socialist popularity = 0.04 } 
-hidden_effect = { country_event = { id = rob_france.13 days = 20 }
+hidden_effect = { country_event = { id = rob_france.13 days = 7 }
 }
 }
 }
@@ -290,6 +321,7 @@ title = rob_france.13.t
 desc = rob_france.13.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_unemployment
 
 option = { ###radicals gain ground
 name = rob_france.13.a
@@ -299,36 +331,38 @@ add_popularity = { ideology = national_socialist popularity = 0.02 }
 add_popularity = { ideology = socialist popularity = 0.02 } 
 add_political_power = -80
 add_stability = -0.08
-hidden_effect = { country_event = { id = rob_france.14 days = 20 }
+hidden_effect = { country_event = { id = rob_france.14 days = 15 }
 }
 }
 }
 
-###shit fucks up part 7 - liberals try their capitalist autism
+###shit fucks up part 7 - liberals try their capitalist autism (Economic Act 154)
 country_event = {
 id = rob_france.14
 title = rob_france.14.t
 desc = rob_france.14.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_republic_senate
 
 option = { ###what will happen?
 name = rob_france.14.a
 add_popularity = { ideology = social_liberal popularity = 0.04 } 
 add_political_power = 10
 add_stability = 0.01
-hidden_effect = { country_event = { id = rob_france.15 days = 30 }
+hidden_effect = { country_event = { id = rob_france.15 days = 20 }
 }
 }
 }
 
-###shit fucks up part 8 - everything gets even more fucked lmao
+###shit fucks up part 8 - everything gets even more fucked lmao (Economic Reforms Fail!)
 country_event = {
 id = rob_france.15
 title = rob_france.15.t
 desc = rob_france.15.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_eco_disaster
 
 option = { ###oh fuck oh shit
 name = rob_france.15.a
@@ -337,25 +371,26 @@ add_popularity = { ideology = national_socialist popularity = 0.02 }
 add_popularity = { ideology = socialist popularity = 0.02 } 
 add_political_power = -150
 add_stability = -0.1
-hidden_effect = { country_event = { id = rob_france.16 days = 30 }
+hidden_effect = { country_event = { id = rob_france.16 days = 7 }
 }
 }
 }
 
-###shit fucks up part 9 - pelekist paramilitaries
+###shit fucks up part 9 - Gold Shirts on the Move
 country_event = {
 id = rob_france.16
 title = rob_france.16.t
 desc = rob_france.16.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_hit
 
 option = { ###oh fuck oh shit
 name = rob_france.16.a
 add_popularity = { ideology = pelekist popularity = 0.04 } 
 add_political_power = -100
 add_stability = -0.05
-hidden_effect = { country_event = { id = rob_france.17 days = 30 }
+hidden_effect = { country_event = { id = rob_france.17 days = 7 }
 set_country_flag = FRA_pelekist_paramilitaries
 }
 }
@@ -368,13 +403,14 @@ title = rob_france.17.t
 desc = rob_france.17.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_soc_brigades
 
 option = { ###oh fuck oh shit
 name = rob_france.17.a
 add_popularity = { ideology = socialist popularity = 0.04 } 
 add_political_power = -100
 add_stability = -0.05
-hidden_effect = { country_event = { id = rob_france.18 days = 30 }
+hidden_effect = { country_event = { id = rob_france.18 days = 7 }
 set_country_flag = FRA_socialist_paramilitaries
 }
 }
@@ -387,13 +423,14 @@ title = rob_france.18.t
 desc = rob_france.18.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_countryside
 
 option = { ###oh fuck oh shit
 name = rob_france.18.a
 add_popularity = { ideology = national_socialist popularity = 0.02 } 
 add_political_power = -120
 add_stability = -0.05
-hidden_effect = { country_event = { id = rob_france.19 days = 30 }
+hidden_effect = { country_event = { id = rob_france.19 days = 7 }
 set_country_flag = FRA_sorelian_paramilitaries
 }
 }
@@ -406,6 +443,7 @@ title = rob_france.19.t
 desc = rob_france.19.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_senate_bombed
 
 option = { ###OH FUCK OH SHIT
 name = rob_france.19.a
@@ -422,10 +460,10 @@ id = rob_france.20
 title = rob_france.20.t
 desc = rob_france.20.d
 fire_only_once = yes
+picture = GFX_picture_FRA_march
 
 trigger = {
 tag = FRA
-date > 1935.5.20
 has_country_flag = FRA_pelekist_paramilitaries
 has_country_flag = FRA_socialist_paramilitaries
 has_country_flag = FRA_sorelian_paramilitaries
@@ -434,36 +472,12 @@ has_country_flag = FRA_total_chaos
 
 mean_time_to_happen = { days = 1 }
 
-option = { ###De Gaulle takes over
-name = rob_france.20.a
-ai_chance = { factor = 4 }
-add_political_power = 100
-set_politics = {
-ruling_party = authoritharian
-elections_allowed = no 
-}
-create_country_leader = {
-	name = "Charles de Gaulle"
-	desc = ""
-	picture = "Charles_de_gualle.tga"
-	expire = "1953.3.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
- 
-}
-add_popularity = { ideology = authoritharian popularity = 0.2 }
-add_stability = 0.15
-set_country_flag = FRA_gaulle_dictatorship
-}
-
 option = { ###Petain takes over
-name = rob_france.20.b
+name = rob_france.20.a
 ai_chance = { factor = 6 }
 add_political_power = 100
 set_politics = {
-ruling_party = reactionary
+ruling_party = authoritharian
 elections_allowed = no 
 }
 create_country_leader = {
@@ -471,16 +485,49 @@ create_country_leader = {
 	desc = ""
 	picture = "Portrait_FRA_philippe_petain_politician.tga"
 	expire = "1953.3.1"
-	ideology = military_junta
+	ideology = authoritharian_subtype
 	traits = {
 		#
 	}
   
 }
-add_popularity = { ideology = reactionary popularity = 0.2 }
-add_stability = 0.15
+add_popularity = { ideology = authoritharian popularity = 0.2 }
+add_stability = 0.3
+add_war_support = 0.3
 set_country_flag = FRA_petain_dictatorship
+remove_ideas = {
+	fra_unstable_gov
 }
+}
+
+option = { ###De Gaulle takes over
+name = rob_france.20.b
+ai_chance = { factor = 4 }
+add_political_power = 100
+set_politics = {
+ruling_party = reactionary
+elections_allowed = no 
+}
+create_country_leader = {
+	name = "Charles de Gaulle"
+	desc = ""
+	picture = "Charles_de_gualle.tga"
+	expire = "1953.3.1"
+	ideology = military_junta
+	traits = {
+		#
+	}
+ 
+}
+add_popularity = { ideology = reactionary popularity = 0.2 }
+add_stability = 0.3
+add_war_support = 0.3
+set_country_flag = FRA_gaulle_dictatorship
+remove_ideas = {
+	fra_unstable_gov
+}
+}
+
 }
 
 ###################
@@ -493,6 +540,7 @@ id = rob_france.21
 title = rob_france.21.t
 desc = rob_france.21.d
 fire_only_once = yes
+picture = GFX_picture_FRA_millita
 
 trigger = {
  OR = {
@@ -500,7 +548,6 @@ trigger = {
    has_country_flag = FRA_petain_dictatorship
  }
  tag = FRA
- date > 1935.6.10
 }
 
 option = { ###play as socialists
@@ -508,21 +555,32 @@ name = rob_france.21.a
 FRS = { change_tag_from = FRA }
 hidden_effect = {
 FRS = { transfer_state = 16 }
-FRS = { transfer_state = 14 }
+FRS = { transfer_state = 1279 }
+FRS = { transfer_state = 785 }
+FRS = { transfer_state = 29 }
+FRS = { transfer_state = 1284 }
+FRS = { transfer_state = 1278 }
+FRS = { transfer_state = 1281 }
 FRS = { transfer_state = 19 }
 FRS = { transfer_state = 15 }
 FRS = { transfer_state = 818 }
 FRS = { transfer_state = 1014 }
 FRS = { transfer_state = 28 }
-16 = { add_core_of = FRS }
-14 = { add_core_of = FRS }
-19 = { add_core_of = FRS }
-15 = { add_core_of = FRS }
-818 = { add_core_of = FRS }
-1014 = { add_core_of = FRS }
-28 = { add_core_of = FRS }
 country_event = { id = rob_france.22 days = 2 }
+FRA = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRS
+		}
 }
+FRS = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRS
+		}
+}
+}
+
 }
 
 option = { ###stand by republic
@@ -530,20 +588,30 @@ name = rob_france.21.b
 add_political_power = 100
 hidden_effect = {
 FRS = { transfer_state = 16 }
-FRS = { transfer_state = 14 }
+FRS = { transfer_state = 1279 }
+FRS = { transfer_state = 785 }
+FRS = { transfer_state = 29 }
+FRS = { transfer_state = 1284 }
+FRS = { transfer_state = 1278 }
+FRS = { transfer_state = 1281 }
 FRS = { transfer_state = 19 }
 FRS = { transfer_state = 15 }
 FRS = { transfer_state = 818 }
 FRS = { transfer_state = 1014 }
 FRS = { transfer_state = 28 }
-16 = { add_core_of = FRS }
-14 = { add_core_of = FRS }
-19 = { add_core_of = FRS }
-15 = { add_core_of = FRS }
-818 = { add_core_of = FRS }
-1014 = { add_core_of = FRS }
-28 = { add_core_of = FRS }
 country_event = { id = rob_france.22 days = 2 }
+FRA = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRS
+		}
+}
+FRS = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRS
+		}
+}
 }
 }
 }
@@ -555,7 +623,7 @@ title = rob_france.22.t
 desc = rob_france.22.d
 fire_only_once = yes
 is_triggered_only = yes
-
+picture = GFX_picture_FRA_doriot
 
 option = { ###play as pelekists
 name = rob_france.22.a
@@ -567,13 +635,23 @@ FRP = { transfer_state = 1008 }
 FRP = { transfer_state = 30 }
 FRP = { transfer_state = 1009 }
 FRP = { transfer_state = 20 }
-23 = { add_core_of = FRP }
-1007 = { add_core_of = FRP }
-1008 = { add_core_of = FRP }
-30 = { add_core_of = FRP }
-1009 = { add_core_of = FRP }
-20 = { add_core_of = FRP }
+FRP = { transfer_state = 14 }
+FRP = { transfer_state = 1286 }
+FRP = { transfer_state = 1283 }
+FRP = { transfer_state = 1282 }
 country_event = { id = rob_france.23 days = 2 }
+FRA = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRP
+		}
+}
+FRP = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRP
+		}
+}
 }
 }
 
@@ -586,13 +664,23 @@ FRP = { transfer_state = 1007 }
 FRP = { transfer_state = 1008 }
 FRP = { transfer_state = 30 }
 FRP = { transfer_state = 1009 }
+FRP = { transfer_state = 14 }
 FRP = { transfer_state = 20 }
-23 = { add_core_of = FRP }
-1007 = { add_core_of = FRP }
-1008 = { add_core_of = FRP }
-30 = { add_core_of = FRP }
-1009 = { add_core_of = FRP }
-20 = { add_core_of = FRP }
+FRP = { transfer_state = 1286 }
+FRP = { transfer_state = 1283 }
+FRP = { transfer_state = 1282 }
+FRA = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRP
+		}
+}
+FRP = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRP
+		}
+}
 country_event = { id = rob_france.23 days = 2 }
 }
 }
@@ -606,7 +694,7 @@ title = rob_france.23.t
 desc = rob_france.23.d
 fire_only_once = yes
 is_triggered_only = yes
-
+picture = GFX_picture_FRA_deat_speech
 
 option = { ###play as sorelians
 name = rob_france.23.a
@@ -615,18 +703,21 @@ hidden_effect = {
 FRR = { transfer_state = 819 }
 FRR = { transfer_state = 24 }
 FRR = { transfer_state = 33 }
-819 = { add_core_of = FRR }
-24 = { add_core_of = FRR }
-33 = { add_core_of = FRR }
-if = {
-  limit = { 
-  has_country_flag = FRA_petain_dictatorship
-  }
-  country_event = { id = rob_france.24 days = 2 }
-  else = {
-    country_event = { id = rob_france.25 days = 2 }
-   }
+FRR = { transfer_state = 1287 }
+FRR = { transfer_state = 1288 }
+FRA = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRR
+		}
 }
+FRR = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRR
+		}
+}
+country_event = { id = rob_france.24 days = 2 }
 }
 }
 option = { ###stand by republic
@@ -636,18 +727,21 @@ hidden_effect = {
 FRR = { transfer_state = 819 }
 FRR = { transfer_state = 24 }
 FRR = { transfer_state = 33 }
-819 = { add_core_of = FRR }
-24 = { add_core_of = FRR }
-33 = { add_core_of = FRR }
-if = {
-  limit = { 
-  has_country_flag = FRA_petain_dictatorship
-  }
-  country_event = { id = rob_france.24 days = 2 }
-   else = {
-    country_event = { id = rob_france.25 days = 2 }
-   }
+FRR = { transfer_state = 1287 }
+FRR = { transfer_state = 1288 }
+FRA = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRR
+		}
 }
+FRR = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRR
+		}
+}
+country_event = { id = rob_france.24 days = 2 }
 }
 }
 }
@@ -659,6 +753,7 @@ title = rob_france.24.t
 desc = rob_france.24.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_republic_senate
 
 option = { ###play liberals
 name = rob_france.24.a
@@ -668,10 +763,22 @@ FRL = { transfer_state = 25 }
 FRL = { transfer_state = 26 }
 FRL = { transfer_state = 22 }
 FRL = { transfer_state = 21 }
-25 = { add_core_of = FRL }
-26 = { add_core_of = FRL }
-21 = { add_core_of = FRL }
-22 = { add_core_of = FRL }
+FRL = { transfer_state = 1285 }
+FRL = { transfer_state = 820 }
+FRL = { transfer_state = 31 }
+FRL = { transfer_state = 1289 }
+FRA = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRL
+		}
+}
+FRL = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRL
+		}
+}
 country_event = { id = rob_france.25 days = 2 }
 }
 }
@@ -683,10 +790,22 @@ FRL = { transfer_state = 25 }
 FRL = { transfer_state = 26 }
 FRL = { transfer_state = 22 }
 FRL = { transfer_state = 21 }
-25 = { add_core_of = FRL }
-26 = { add_core_of = FRL }
-21 = { add_core_of = FRL }
-22 = { add_core_of = FRL }
+FRL = { transfer_state = 1285 }
+FRL = { transfer_state = 820 }
+FRL = { transfer_state = 31 }
+FRL = { transfer_state = 1289 }
+FRA = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRL
+		}
+}
+FRL = {
+	every_state = {
+		limit = { is_core_of = FRA }
+		add_core_of = FRL
+		}
+}
 country_event = { id = rob_france.25 days = 2 }
 }
 }
@@ -699,8 +818,10 @@ title = rob_france.25.t
 desc = rob_france.25.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_grave
 
 
+#####Pelekist&Sorelian Alliance
 option = {
 name = rob_france.25.a
 set_country_flag = FRA_civil_war
@@ -710,7 +831,29 @@ trigger = {
  }
  hidden_effect = {
 	SYR = { country_event = { id = syrialeb.1 days = 21 } }
+	FRA = { country_event = { id = rob_france.86 days = 1 }  }
+	FRL = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRR = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRP = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRS = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	random_list = {
+		20 = {
+			FRL = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+			FRR = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+			FRP = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+			FRS = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+
+		}
 	}
+}
  FRA = { 
   add_stability = 0.1
   add_war_support = 0.1
@@ -723,17 +866,6 @@ trigger = {
  FRA = { end_puppet = FEA }
  FRA = { end_puppet = FIC }
  hidden_effect = {
-    every_state = {
-    limit = { 
-	 is_core_of = FRA 
-    OR = {
-	is_core_of = FRS
-	is_core_of = FRR
-	is_core_of = FRP
-	}
-	}
-	remove_core_of = FRA
-}
  news_event = { id = news_event.3 days = 1 }
  FRL = { load_oob = FRL_civil_war }
  FRR = { load_oob = FRR_civil_war }
@@ -774,9 +906,12 @@ trigger = {
  }
  }
 }
+
+#####Communist&Sorelian Alliance
 option = {
 name = rob_france.25.a
 set_country_flag = FRA_civil_war
+country_lock_all_division_template = no
  FRA = { 
   add_stability = 0.1
   add_war_support = 0.1
@@ -786,6 +921,28 @@ set_country_flag = FRA_civil_war
  }
  hidden_effect = {
 	SYR = { country_event = { id = syrialeb.1 days = 21 } }
+	FRA = { country_event = { id = rob_france.86 days = 1 }  }
+	FRL = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRR = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRP = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRS = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	random_list = {
+		20 = {
+			FRL = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+			FRR = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+			FRP = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+			FRS = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+
+		}
+	}
 	}
  FRA = { end_puppet = SYR }
  FRA = { end_puppet = FWA }
@@ -796,17 +953,6 @@ trigger = {
  has_country_flag = FRA_socialists_united
  }
  hidden_effect = {
-     every_state = {
-    limit = { 
-	 is_core_of = FRA 
-    OR = {
-	is_core_of = FRS
-	is_core_of = FRR
-	is_core_of = FRP
-	}
-	}
-	remove_core_of = FRA
-}
  news_event = { id = news_event.3 days = 1 }
  FRL = { load_oob = FRL_civil_war }
  FRR = { load_oob = FRR_civil_war }
@@ -848,207 +994,35 @@ trigger = {
  }
 }
 
+#####No allies
 option = {
 name = rob_france.25.a
-set_country_flag = FRA_civil_war
+country_lock_all_division_template = no
 hidden_effect = {
 	SYR = { country_event = { id = syrialeb.1 days = 21 } }
-	}
- FRA = { 
-  add_stability = 0.1
-  add_war_support = 0.1
-  add_ideas = {
-	fra_civil_war
-  }
- }
- FRA = { end_puppet = SYR }
- FRA = { end_puppet = FWA }
- FRA = { end_puppet = FEA }
- FRA = { end_puppet = FIC }
-trigger = {
-NOT = {
- country_exists = FRL
- }
- has_country_flag = FRA_socialists_united
- }
- hidden_effect = {
-     every_state = {
-    limit = { 
-	 is_core_of = FRA 
-    OR = {
-	is_core_of = FRS
-	is_core_of = FRR
-	is_core_of = FRP
-	}
-	}
-	remove_core_of = FRA
-}
- news_event = { id = news_event.3 days = 1 }
- FRR = { load_oob = FRR_civil_war }
- FRP = { load_oob = FRP_civil_war }
- FRS = { load_oob = FRS_civil_war }
- declare_war_on = { type = annex_everything target = FRS }
- declare_war_on = { type = annex_everything target = FRP }
- 
- FRR = {  declare_war_on = { type = annex_everything target = FRA } }
+	FRA = { country_event = { id = rob_france.86 days = 1 }  }
+	FRL = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRR = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRP = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRS = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	random_list = {
+		20 = {
+			FRL = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+			FRR = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+			FRP = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+			FRS = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
 
- FRS = {
- declare_war_on = { type = annex_everything target = FRP }
- create_faction = FRA_socialist_france
- add_to_faction = FRR
- add_ideas = {
-	fra_civil_war
-  }
- }
- FRR = {
-	 add_ideas = {
-	fra_civil_war
-  } 
- }
- FRP = {
- declare_war_on = { type = annex_everything target = FRR }
- add_ideas = {
-	fra_civil_war
-  }
- }
- }
+		}
+	}
 }
-option = {
-name = rob_france.25.a
-set_country_flag = FRA_civil_war
-hidden_effect = {
-	SYR = { country_event = { id = syrialeb.1 days = 21 } }
-	}
- FRA = { 
-  add_stability = 0.1
-  add_war_support = 0.1
-  add_ideas = {
-	fra_civil_war
-  }
- }
- FRA = { end_puppet = SYR }
- FRA = { end_puppet = FWA }
- FRA = { end_puppet = FEA }
- FRA = { end_puppet = FIC }
-trigger = {
-NOT = {
- country_exists = FRL
- }
- has_country_flag = FRA_pelekist_sorelian_alliance
- }
- hidden_effect = {
-     every_state = {
-    limit = { 
-	 is_core_of = FRA 
-    OR = {
-	is_core_of = FRS
-	is_core_of = FRR
-	is_core_of = FRP
-	}
-	}
-	remove_core_of = FRA
-}
- news_event = { id = news_event.3 days = 1 }
- FRR = { load_oob = FRR_civil_war }
- FRP = { load_oob = FRP_civil_war }
- FRS = { load_oob = FRS_civil_war }
- declare_war_on = { type = annex_everything target = FRS }
- declare_war_on = { type = annex_everything target = FRP }
- 
- FRR = {  declare_war_on = { type = annex_everything target = FRA } }
-
- FRS = {
- declare_war_on = { type = annex_everything target = FRP }
- declare_war_on = { type = annex_everything target = FRR }
- add_ideas = {
-	fra_civil_war
-  }
- }
- FRR = {
-	add_ideas = {
-		fra_civil_war
-	  } 
- }
- FRP = {
- create_faction = FRA_national_france
- add_to_faction = FRR
- add_ideas = {
-	fra_civil_war
-  }
- }
- }
-}
-
-option = {
-name = rob_france.25.a
-set_country_flag = FRA_civil_war
-hidden_effect = {
-	SYR = { country_event = { id = syrialeb.1 days = 21 } }
-	}
- FRA = { 
-  add_stability = 0.1
-  add_war_support = 0.1
-  add_ideas = {
-	fra_civil_war
-  }
- }
- FRA = { end_puppet = SYR }
- FRA = { end_puppet = FWA }
- FRA = { end_puppet = FEA }
- FRA = { end_puppet = FIC }
-trigger = {
-NOT = {
- country_exists = FRL
- }
- has_country_flag = FRA_sor_status_quo
- }
- hidden_effect = {
-     every_state = {
-    limit = { 
-	 is_core_of = FRA 
-    OR = {
-	is_core_of = FRS
-	is_core_of = FRR
-	is_core_of = FRP
-	}
-	}
-	remove_core_of = FRA
-}
- news_event = { id = news_event.3 days = 1 }
- FRR = { load_oob = FRR_civil_war }
- FRP = { load_oob = FRP_civil_war }
- FRS = { load_oob = FRS_civil_war }
- declare_war_on = { type = annex_everything target = FRS }
- declare_war_on = { type = annex_everything target = FRP }
- 
- FRR = {  declare_war_on = { type = annex_everything target = FRA } }
-
- FRS = {
- declare_war_on = { type = annex_everything target = FRP }
- declare_war_on = { type = annex_everything target = FRR }
- add_ideas = {
-	fra_civil_war
-  }
- }
- FRR = {
-	add_ideas = {
-		fra_civil_war
-	  }
- }
- FRP = {
- declare_war_on = { type = annex_everything target = FRR }
- add_ideas = {
-	fra_civil_war
-  }
- }
- }
-}
-
-option = {
-name = rob_france.25.a
-hidden_effect = {
-	SYR = { country_event = { id = syrialeb.1 days = 21 } }
-	}
 set_country_flag = FRA_civil_war
  FRA = { 
   add_stability = 0.1
@@ -1066,17 +1040,6 @@ trigger = {
  has_country_flag = FRA_sor_status_quo
  }
  hidden_effect = {
-     every_state = {
-    limit = { 
-	 is_core_of = FRA 
-    OR = {
-	is_core_of = FRS
-	is_core_of = FRR
-	is_core_of = FRP
-	}
-	}
-	remove_core_of = FRA
-}
  news_event = { id = news_event.3 days = 1 }
  FRL = { load_oob = FRL_civil_war }
  FRR = { load_oob = FRR_civil_war }
@@ -1120,7 +1083,7 @@ trigger = {
 }
 
 
-###After civil war
+###After civil war if there is alliance(pelekists&sorelists)
 country_event = {
 id = rob_france.26
 title = rob_france.26.t
@@ -1136,24 +1099,22 @@ trigger = {
  FRR = {
   exists = yes
   has_war = no
-  NOT = {
   is_in_faction_with = FRP
  }
  }
-}
 
-mean_time_to_happen = { days = 1 }
 
 option = { ###destroy sorelians
 name = rob_france.26.a
 FRP = {
- declare_war_on = { type = annex_everything target = FRR }
- }
+remove_from_faction = FRR
+declare_war_on = { type = annex_everything target = FRR }
+ 	}
 }
 
 }
 
-country_event = {
+country_event = {## After civil war if there is alliance(communists&sorelists)
 id = rob_france.27
 title = rob_france.27.t
 desc = rob_france.27.d
@@ -1168,9 +1129,7 @@ trigger = {
  FRR = {
   exists = yes
   has_war = no
-  NOT ={
   is_in_faction_with = FRS
- }
  }
 }
 
@@ -1179,11 +1138,14 @@ mean_time_to_happen = { days = 1 }
 option = { ###destroy sorelians
 name = rob_france.26.a
 FRS = {
+ remove_from_faction = FRR
  declare_war_on = { type = annex_everything target = FRR }
  }
 }
 
 }
+
+###Intervention shenanigens
 
 country_event = { ###germany invades Austria
 id = rob_france.28
@@ -1193,7 +1155,6 @@ fire_only_once = yes
 
 trigger = {
  OR = {
- tag = FRS
  tag = FRA
  tag = FRR
  tag = FRL
@@ -1236,7 +1197,6 @@ fire_only_once = yes
 
 trigger = {
  OR = {
- tag = FRS
  tag = FRA
  tag = FRR
  tag = FRL
@@ -1277,7 +1237,6 @@ fire_only_once = yes
 
 trigger = {
  OR = {
- tag = FRS
  tag = FRA
  tag = FRR
  tag = FRL
@@ -1317,7 +1276,6 @@ fire_only_once = yes
 
 trigger = {
  OR = {
- tag = FRS
  tag = FRA
  tag = FRR
  tag = FRL
@@ -1358,7 +1316,6 @@ fire_only_once = yes
 
 trigger = {
  OR = {
- tag = FRS
  tag = FRA
  tag = FRR
  tag = FRL
@@ -1419,5 +1376,1795 @@ add_stability =-0.5
 
 }
 
+####Civil war vict0ry events
 
+country_event = { ###Sorelists win CW
+id = rob_france.34
+title = rob_france.34.t
+desc = rob_france.34.d
+fire_only_once = yes
+picture = GFX_picture_FRA_sor_cw_win 
+trigger = {
+	tag = FRR
+	has_war = no
+	FRA = { exists = no }
+	FRP = { exists = no }
+	FRL = { exists = no }
+	FRS = { exists = no }
+}
+
+option = { 
+name = rob_france.34.a
+add_stability = 0.10
+set_country_flag = fra_cw_over
+set_country_flag = fra_cw_sorel_win
+}
+
+}
+
+country_event = { ###Communists win Cw
+id = rob_france.35
+title = rob_france.35.t
+desc = rob_france.35.d
+fire_only_once = yes
+picture = GFX_picture_FRA_com_cw_win 
+trigger = {
+	tag = FRS
+	has_war = no
+	FRA = { exists = no }
+	FRP = { exists = no }
+	FRL = { exists = no }
+	FRR = { exists = no }
+}
+
+option = { 
+name = rob_france.35.a
+add_stability = 0.10
+set_country_flag = fra_cw_over
+set_country_flag = fra_cw_comm_win
+}
+
+}
+
+country_event = { ###Demon-rats win Cw
+id = rob_france.37
+title = rob_france.37.t
+desc = rob_france.37.d
+fire_only_once = yes
+picture = GFX_picture_FRA_rep_cw_win 
+trigger = {
+	tag = FRL
+	has_war = no
+	FRA = { exists = no }
+	FRP = { exists = no }
+	FRS = { exists = no }
+	FRR = { exists = no }
+}
+
+option = { 
+name = rob_france.37.a
+add_stability = 0.10
+set_country_flag = fra_cw_over
+set_country_flag = fra_cw_rep_win
+}
+
+}
+
+country_event = { ###Military junta Petain wins cw
+id = rob_france.40
+title = rob_france.40.t
+desc = rob_france.40.d
+fire_only_once = yes
+picture = GFX_picture_FRA_junta_cw_win 
+trigger = {
+	tag = FRA
+	has_war = no
+	FRS = { exists = no }
+	FRP = { exists = no }
+	FRL = { exists = no }
+	FRR = { exists = no }
+	has_country_flag = FRA_civil_war
+}
+
+option = { 
+name = rob_france.40.a
+add_stability = 0.10
+set_country_flag = fra_cw_over
+set_country_flag = fra_cw_mil_win
+}
+
+}
+
+country_event = { ###Military junta De gaulle wins cw
+id = rob_france.41
+title = rob_france.41.t
+desc = rob_france.41.d
+fire_only_once = yes
+picture = GFX_picture_FRA_de_gaulle_win 
+trigger = {
+	tag = FRA
+	has_war = no
+	FRS = { exists = no }
+	FRP = { exists = no }
+	FRL = { exists = no }
+	FRR = { exists = no }
+	has_country_flag = FRA_civil_war
+}
+
+option = { 
+name = rob_france.41.a
+add_stability = 0.10
+set_country_flag = fra_cw_over
+set_country_flag = fra_cw_mil_win
+}
+
+}
+
+country_event = { ###Pelekists win cw 
+id = rob_france.48
+title = rob_france.48.t
+desc = rob_france.48.d
+fire_only_once = yes
+picture = GFX_picture_FRA_pelekists_cw_win 
+trigger = {
+	tag = FRP
+	has_war = no
+	FRA = { exists = no }
+	FRS = { exists = no }
+	FRL = { exists = no }
+	FRR = { exists = no }
+}
+
+option = { 
+name = rob_france.48.a
+add_stability = 0.10
+set_country_flag = fra_cw_over
+set_country_flag = fra_cw_plk_win
+}
+
+}	
+
+
+###Comumunist events
+
+
+
+country_event = { ###Communists: Demsoc
+id = rob_france.36
+title = rob_france.36.t
+desc = rob_france.36.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.36.a
+set_politics = {
+	ruling_party = democratic_socialist 
+	elections_allowed = no 
+	}
+	create_country_leader = {
+	  name = ""
+	  desc = ""
+	  picture = ""
+	  expire = "1953.3.1"
+	  ideology = democratic_socialist_subtype
+	  traits = {
+		#
+	  }
+	 
+	}
+	add_popularity = { ideology = democratic_socialist popularity = 0.2 }
+}
+
+}
+
+
+
+country_event = { ###Communists: Socialists reformists
+id = rob_france.52
+title = rob_france.52.t
+desc = rob_france.52.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.52.a
+
+	add_popularity = { ideology = socialist popularity = 0.2 }
+}
+
+}
+
+country_event = { ###Socialists: Remember the 1871 
+id = rob_france.53
+title = rob_france.53.t
+desc = rob_france.53.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.53.a
+
+}
+
+}
+
+country_event = { ###Communists: revenge for bloody week
+id = rob_france.54
+title = rob_france.54.t
+desc = rob_france.54.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.54.a
+
+}
+
+}
+
+country_event = { ###Socdems: National assembly
+id = rob_france.55
+title = rob_france.55.t
+desc = rob_france.55.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.55.a
+
+}
+
+}
+
+country_event = { ###Socialists: Edit the Constitution
+id = rob_france.56
+title = rob_france.56.t
+desc = rob_france.56.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.56.a
+
+}
+
+}
+
+###Democrat events
+
+country_event = { ###Demo-rats: who does centrists support?
+id = rob_france.51
+title = rob_france.51.t
+desc = rob_france.51.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###socdems
+name = rob_france.51.a
+set_politics = {
+	ruling_party = social_democracy
+	elections_allowed = no 
+	}
+	create_country_leader = {
+	  name = ""
+	  desc = ""
+	  picture = ""
+	  expire = "1953.3.1"
+	  ideology = social_democracy_subtype
+	  traits = {
+		#
+	  }
+	 
+	}
+	add_popularity = { ideology = social_democracy popularity = 0.2 }
+}
+
+option = {  ##conservatives
+	name = rob_france.51.b
+	set_politics = {
+		ruling_party = conservative
+		elections_allowed = no 
+		}
+		create_country_leader = {
+		  name = ""
+		  desc = ""
+		  picture = ""
+		  expire = "1953.3.1"
+		  ideology = conservative_subtype
+		  traits = {
+			#
+		  }
+		 
+		}
+		add_popularity = { ideology = conservative popularity = 0.2 }
+	}
+
+}
+
+country_event = { ###Demo-rats: Proclamation of the forth republic
+id = rob_france.57
+title = rob_france.57.t
+desc = rob_france.57.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.57.a
+
+}
+
+}
+
+country_event = { ###Demo-rats: Proclamation of the forth republic
+id = rob_france.58
+title = rob_france.58.t
+desc = rob_france.58.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.58.a
+
+}
+
+}
+
+country_event = { ###Demo-rats: Britain, tf you do
+id = rob_france.59
+title = rob_france.59.t
+desc = rob_france.59.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###sure
+name = rob_france.59.a
+	FRA = { 
+		set_country_flag = FRA_Brits_accept
+		country_event = { id = rob_france.60 days = 3 }
+	}
+}
+
+option = { ###screw france
+	name = rob_france.59.b
+	FRA = { 
+		set_country_flag = FRA_Brits_decline
+		country_event = { id = rob_france.60 days = 3 }
+	}
+	}
+
+}
+
+country_event = { ###Demo-rats: Britains answer
+id = rob_france.60
+title = rob_france.60.t
+desc = rob_france.60.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+	name = rob_france.60.a
+	trigger = {
+		has_country_flag = FRA_Brits_accept
+	}
+
+}
+
+option = { 
+	name = rob_france.60.b
+	trigger = {
+		has_country_flag = FRA_Brits_decline
+	}
+}
+
+}
+
+country_event = { #socdems fuck over middleclass
+id = rob_france.38
+title = rob_france.38.t
+desc = rob_france.38.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.38.a
+set_politics = {
+	ruling_party = conservative
+	elections_allowed = no 
+	}
+	create_country_leader = {
+	  name = ""
+	  desc = ""
+	  picture = ""
+	  expire = "1953.3.1"
+	  ideology = conservative_subtype
+	  traits = {
+		#
+	  }
+	 
+	}
+	add_popularity = { ideology = conservative popularity = 0.2 }
+}
+
+}
+
+country_event = {  #socdems fucking over centrists by ending popular front
+id = rob_france.39
+title = rob_france.39.t
+desc = rob_france.39.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.39.a
+set_politics = {
+	ruling_party = conservative
+	elections_allowed = no 
+	}
+	create_country_leader = {
+	  name = ""
+	  desc = ""
+	  picture = ""
+	  expire = "1953.3.1"
+	  ideology = conservative_subtype
+	  traits = {
+		#
+	  }
+	 
+	}
+	add_popularity = { ideology = conservative popularity = 0.2 }
+}
+
+}
+
+
+###junta
+
+country_event = { ###Military junta Petain: Petain retires
+id = rob_france.42
+title = rob_france.42.t
+desc = rob_france.42.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.42.a
+set_politics = {
+	ruling_party = reactionary
+	elections_allowed = no 
+	}
+	create_country_leader = {
+	  name = "Militar Junta"
+	  desc = ""
+	  picture = ""
+	  expire = "1953.3.1"
+	  ideology = military_junta
+	  traits = {
+		#
+	  }
+	 
+	}
+}
+
+}
+
+country_event = { ###Military junta Petain: Admiral
+id = rob_france.43
+title = rob_france.43.t
+desc = rob_france.43.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_FRA_darlan_succeeds_petain 
+
+option = { 
+name = rob_france.43.a
+set_politics = {
+	ruling_party = reactionary
+	elections_allowed = no 
+	}
+	create_country_leader = {
+	  name = "François Darlan"
+	  desc = ""
+	  picture = "Francois_Darlan.dds"
+	  expire = "1953.3.1"
+	  ideology = military_junta
+	  traits = {
+		#
+	  }
+	 
+	}
+
+}
+
+}
+
+country_event = { ###Military junta Petain: Officer
+id = rob_france.44
+title = rob_france.44.t
+desc = rob_france.44.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.44.a
+
+}
+
+}
+
+country_event = { ###Military junta Petain: Louis Franchet D'Esperey
+id = rob_france.45
+title = rob_france.45.t
+desc = rob_france.45.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_FRA_desperey_after_petain 
+
+option = { 
+name = rob_france.45.a
+set_politics = {
+	ruling_party = reactionary
+	elections_allowed = no 
+	}
+	create_country_leader = {
+	  name = "Louis Franchet D'Esperey"
+	  desc = ""
+	  picture = "Louis_Franchet_Desperey.dds"
+	  expire = "1953.3.1"
+	  ideology = military_junta
+	  traits = {
+		#
+	  }
+	 
+	}
+}
+
+}
+
+country_event = { ###Military junta Petain: Francois de la Rocque
+id = rob_france.46
+title = rob_france.46.t
+desc = rob_france.46.d
+fire_only_once = yes
+is_triggered_only = yes
+picture = GFX_picture_FRA_delarocque_after_petain 
+
+option = { 
+name = rob_france.46.a
+set_politics = {
+	ruling_party = authoritharian
+	elections_allowed = no 
+	}
+	create_country_leader = {
+	  name = "Francois de la Rocque"
+	  desc = ""
+	  picture = "Francois_de_la_Rocque.dds"
+	  expire = "1953.3.1"
+	  ideology = authoritharian_subtype
+	  traits = {
+		#
+	  }
+	 
+	}
+	add_popularity = { ideology = authoritharian popularity = 0.2 }
+}
+
+}
+
+country_event = { ###Military junta De gaulle: Coronation
+id = rob_france.47
+title = rob_france.47.t
+desc = rob_france.47.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {  #Jean III
+name = rob_france.47.a
+ai_chance = {
+	factor = 100
+}
+	create_country_leader = {
+	  name = "Jean III"
+	  desc = ""
+	  picture = "Jean_III.dds"
+	  expire = "1953.3.1"
+	  ideology = reactionary_monarchy
+	  traits = {
+		#
+	  }
+	 
+	}
+	add_popularity = { ideology = reactionary popularity = 0.2 }
+}
+
+option = { #Henry VI
+	name = rob_france.47.a
+	ai_chance = {
+		factor = 0
+	}
+	create_country_leader = {
+		name = "Henry VI"
+		desc = ""
+		picture = "Henri_Count_of_Paris.dds"
+		expire = "1953.3.1"
+		ideology = reactionary_monarchy
+		traits = {
+		  #
+		}
+	   
+	  }
+	  add_popularity = { ideology = reactionary popularity = 0.2 }
+}
+
+}
+
+country_event = { ###Military junta Admiral : Revolution Nationale
+id = rob_france.61
+title = rob_france.61.t
+desc = rob_france.61.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.61.a
+add_political_power = 100
+}
+
+}
+
+country_event = { ###Military junta Francois : released algeria
+id = rob_france.62
+title = "The Algerian Europeans"
+desc = rob_france.62.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+	name = "Their autonomy is assured"
+	trigger = {
+		any_owned_state = {
+			is_core_of = ALG
+		}
+	}
+	if = { limit = { owns_state = 458 } ALG = { transfer_state = 458 } }
+	if = { limit = { owns_state = 459 } ALG = { transfer_state = 459 } }
+	if = { limit = { owns_state = 460 } ALG = { transfer_state = 460 } }
+	if = { limit = { owns_state = 513 } ALG = { transfer_state = 513 } }
+	if = { limit = { owns_state = 514 } ALG = { transfer_state = 514 } }
+	if = { limit = { owns_state = 665 } ALG = { transfer_state = 665 } }
+	ALG = {
+		set_cosmetic_tag = FRA_ALG
+		create_country_leader = {
+			name = "Someone"
+			desc = ""
+			picture = ".dds"
+			expire = "1965.1.1"
+			ideology = authoritharian_subtype
+			traits = {
+				#
+				}
+			}
+		}
+		FRA = { puppet = ALG }
+	}
+
+	option = { 
+		name = "They can oversee all of North Africa"
+		trigger = {
+			any_owned_state = {
+				is_core_of = ALG
+			}
+			any_owned_state = {
+				is_core_of = MOR
+			}
+		}
+		if = { limit = { owns_state = 290 } ALG = { transfer_state = 290 } }
+		if = { limit = { owns_state = 458 } ALG = { transfer_state = 458 } }
+		if = { limit = { owns_state = 459 } ALG = { transfer_state = 459 } }
+		if = { limit = { owns_state = 460 } ALG = { transfer_state = 460 } }
+		if = { limit = { owns_state = 461 } ALG = { transfer_state = 461 } }
+		if = { limit = { owns_state = 462 } ALG = { transfer_state = 462 } }
+		if = { limit = { owns_state = 513 } ALG = { transfer_state = 513 } }
+		if = { limit = { owns_state = 514 } ALG = { transfer_state = 514 } }
+		if = { limit = { owns_state = 665 } ALG = { transfer_state = 665 } }
+		if = { limit = { owns_state = 783 } ALG = { transfer_state = 783 } }
+		ALG = {
+			set_cosmetic_tag = FRA_ALG
+			create_country_leader = {
+				name = "Someone"
+				desc = ""
+				picture = ".dds"
+				expire = "1965.1.1"
+				ideology = authoritharian_subtype
+				traits = {
+					#
+					}
+				}
+			}
+			FRA = { puppet = ALG }
+		}
+}
+
+### Monarchy
+
+country_event = { ###National Integralism
+id = rob_france.63
+title = rob_france.63.t
+desc = rob_france.63.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.63.a
+
+}
+
+}
+
+country_event = { ###Restoring Our Former Glory
+id = rob_france.64
+title = rob_france.64.t
+desc = rob_france.64.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.64.a
+
+}
+
+}
+
+country_event = { ###Diarchy With Church
+id = rob_france.65
+title = rob_france.65.t
+desc = rob_france.65.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.65.a
+
+}
+
+}
+
+
+country_event = { ###Squash the Heretics
+id = rob_france.66
+title = rob_france.66.t
+desc = rob_france.66.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.66.a
+
+}
+
+}
+
+### Pelekists
+
+country_event = { ###Pelekists second reign of terror
+id = rob_france.49
+title = rob_france.49.t
+desc = rob_france.49.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.49.a
+add_stability = -0.07
+}
+
+}	
+
+country_event = { ###Pelekists united congress
+id = rob_france.50
+title = rob_france.50.t
+desc = rob_france.50.d
+fire_only_once = yes
+is_triggered_only = yes
+
+####Dumezil
+option = { 
+name = rob_france.50.a
+
+}
+
+####Maurras
+option = { 
+	name = rob_france.50.a
+	
+}
+
+}	
+
+country_event = { ###Dumezil is always right
+id = rob_france.67
+title = rob_france.67.t
+desc = rob_france.67.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.67.a
+add_stability = 0.1
+}
+
+}
+
+country_event = { ###Vatican Hegemony
+id = rob_france.68
+title = rob_france.68.t
+desc = rob_france.68.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.68.a
+add_stability = 0.02
+add_war_support = 0.04
+}
+
+}
+
+country_event = { ###Ministry Of Societal Virtuosity
+id = rob_france.69
+title = rob_france.69.t
+desc = rob_france.69.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.69.a
+add_stability = 0.03
+}
+
+}
+
+country_event = { ###New Internationale
+id = rob_france.70
+title = rob_france.70.t
+desc = rob_france.70.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.70.a
+add_political_power = 50
+}
+
+}
+
+country_event = { ###Taranis
+id = rob_france.71
+title = rob_france.71.t
+desc = rob_france.71.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.71.a
+add_political_power = 20
+
+}
+
+}
+
+country_event = { ###Coax the church
+id = rob_france.72
+title = rob_france.72.t
+desc = rob_france.72.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.72.a
+add_political_power = 20
+
+}
+
+}
+
+country_event = { ###The Métèques part 1
+id = rob_france.73
+title = rob_france.73.t
+desc = rob_france.73.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.73.a
+add_political_power = -50
+hidden_effect = {
+	country_event = { id = rob_france.74 days =  90 }
+}
+}
+
+}
+
+country_event = { ###The Métèques part 2
+id = rob_france.74
+title = rob_france.74.t
+desc = rob_france.74.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.74.a
+add_political_power = -50
+}
+
+}
+
+country_event = { ###The Great Schoolar
+id = rob_france.75
+title = rob_france.75.t
+desc = rob_france.75.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.75.a
+add_political_power = -50
+}
+
+}
+
+country_event = { ##Dumezils France
+id = rob_france.76
+title = rob_france.76.t
+desc = rob_france.76.d
+fire_only_once = yes
+trigger = {
+	has_completed_focus = FRA_bread_and_circuses	
+	has_completed_focus = FRA_the_great_temple_of_taranis	
+	has_completed_focus = FRA_dumezil_is_always_right	
+	has_completed_focus = FRA_the_senate_of_franks			
+}
+
+option = { 
+name = rob_france.76.a
+add_political_power = 150
+}
+
+}
+
+country_event = { ###Maurras crowns the king
+id = rob_france.77
+title = rob_france.77.t
+desc = rob_france.77.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {  #Jean III
+name = rob_france.77.a
+ai_chance = {
+	factor = 100
+}
+	create_country_leader = {
+	  name = "Jean III"
+	  desc = ""
+	  picture = "Jean_III.dds"
+	  expire = "1953.3.1"
+	  ideology = reactionary_monarchy
+	  traits = {
+		#
+	  }
+	 
+	}
+	add_popularity = { ideology = reactionary popularity = 0.2 }
+}
+
+option = { #Henry VI
+	name = rob_france.77.a
+	ai_chance = {
+		factor = 0
+	}
+	create_country_leader = {
+		name = "Henry VI"
+		desc = ""
+		picture = "Henri_Count_of_Paris.dds"
+		expire = "1953.3.1"
+		ideology = reactionary_monarchy
+		traits = {
+		  #
+		}
+	   
+	  }
+	  add_popularity = { ideology = reactionary popularity = 0.2 }
+}
+
+}
+
+country_event = { ###Free the colonies
+id = rob_france.78
+title = rob_france.78.t
+desc = rob_france.78.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { #release colonies
+name = rob_france.78.a
+hidden_effect = {
+	if = { limit = { owns_state = 290 } FNA = { transfer_state = 290 } }
+	if = { limit = { owns_state = 458 } FNA = { transfer_state = 458 } }
+	if = { limit = { owns_state = 459 } FNA = { transfer_state = 459 } }
+	if = { limit = { owns_state = 460 } FNA = { transfer_state = 460 } }
+	if = { limit = { owns_state = 461 } FNA = { transfer_state = 461 } }
+	if = { limit = { owns_state = 462 } FNA = { transfer_state = 462 } }
+	if = { limit = { owns_state = 513 } FNA = { transfer_state = 513 } }
+	if = { limit = { owns_state = 514 } FNA = { transfer_state = 514 } }
+	if = { limit = { owns_state = 665 } FNA = { transfer_state = 665 } }
+	if = { limit = { owns_state = 783 } FNA = { transfer_state = 783 } }
+	458 = { add_core_of = FNA }
+	459 = { add_core_of = FNA }
+	460 = { add_core_of = FNA }
+	461 = { add_core_of = FNA }
+	462 = { add_core_of = FNA }
+	513 = { add_core_of = FNA }
+	514 = { add_core_of = FNA }
+	665 = { add_core_of = FNA }
+	783 = { add_core_of = FNA }
+	if = {
+		limit = {
+			FNA = { exists = yes }
+		}
+		FRA = { puppet = FNA }
+	}
+	set_cosmetic_tag = FRA_FNA
+	if = { limit = { owns_state = 543 } MAD = { transfer_state = 543 } MAD = { set_cosmetic_tag = FRA_FMA } FRA = { puppet = MAD } }
+	if = { limit = { owns_state = 320 } FID = { transfer_state = 320 } FID = { set_cosmetic_tag = FRA_FID } FRA = { puppet = FID } }
+	320 = { add_core_of = FID }
+	if = { limit = { owns_state = 268 } FSO = { transfer_state = 268 } FSO = { set_cosmetic_tag = FRA_FSO } FRA = { puppet = FSO } }
+	268 = { add_core_of = FSO }
+	if = { limit = { owns_state = 310 } FGU = { transfer_state = 310 } FGU = { set_cosmetic_tag = FRA_FGU } FRA = { puppet = FGU } }
+	310 = { add_core_of = FGU }
+	if = { limit = { owns_state = 694 } FAN = { transfer_state = 694 } FAN = { set_cosmetic_tag = FRA_FGU } FRA = { puppet = FAN } }
+	694 = { add_core_of = FAN }
+	if = { limit = { owns_state = 635 } FPN = { transfer_state = 635 } }
+	if = { limit = { owns_state = 635 } FPN = { transfer_state = 635 } }
+	if = { limit = { owns_state = 635 } FPN = { transfer_state = 635 } }
+	635 = { add_core_of = FPN }
+	641 = { add_core_of = FPN }
+	734 = { add_core_of = FPN }
+	FPN = { set_cosmetic_tag = FRA_FPN }
+	if = {
+		limit = {
+			FPN = { exists = yes }
+		}
+		FRA = { puppet = FPN }
+	}
+	}
+}
+
+option = { #dont
+name = rob_france.78.b
+add_political_power = -150
+}
+
+}
+
+country_event = { ###France Above All
+id = rob_france.79
+title = rob_france.79.t
+desc = rob_france.79.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.70.a
+add_political_power = 30
+add_war_support = 0.05
+}
+
+}
+
+country_event = { ### Disolve the Parliment
+id = rob_france.80
+title = rob_france.80.t
+desc = rob_france.80.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.80.a
+add_political_power = 50
+}
+
+}
+
+country_event = { ### Disolve the Parliment
+id = rob_france.81
+title = rob_france.81.t
+desc = rob_france.81.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.81.a
+add_political_power = -50
+}
+
+}
+
+
+country_event = { ### Guns for civil war factions
+id = rob_france.82
+title = rob_france.82.t
+desc = rob_france.82.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.82.a
+	add_equipment_to_stockpile = {
+	type = infantry_equipment
+	amount = 2500
+	producer = FRA
+	 }
+}
+
+}
+
+country_event = { ### Conditional troops for CW faction (from junta)
+id = rob_france.83
+title = rob_france.83.t
+desc = rob_france.83.d
+is_triggered_only = yes
+
+option = { ###republicans get loads of units
+name = rob_france.83.a
+trigger = {
+	tag = FRL
+	FRA = { has_country_flag = FRA_gaulle_dictatorship }
+}
+ai_chance = {
+	factor = 100
+}
+hidden_effect = {
+	FRA = {
+		delete_unit_template_and_units = {
+			division_template = "Division d'Infanterie II"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Division Légère Mécanique II"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Division Coloniale II"
+		}
+	}
+	load_oob = "FRA_junta_flipflop"
+}
+}
+
+option = { ###socialists get units ( delete infantrie iii )
+name = rob_france.83.a
+trigger = {
+	tag = FRS
+	FRA = { has_country_flag = FRA_socialists_united }
+}
+ai_chance = {
+	factor = 100
+}
+hidden_effect = {
+	FRA = {
+		delete_unit_template_and_units = {
+			division_template = "Division d'Infanterie III"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Division Légère Mécanique III"
+		}
+	}
+	load_oob = "FRA_junta_flipflop_Socialists"
+}
+}
+
+option = { ###sorelists get units ( delete infantrie iii )
+name = rob_france.83.a
+trigger = {
+	tag = FRR
+	FRA = { has_country_flag = FRA_socialists_united }
+}
+ai_chance = {
+	factor = 100
+}
+hidden_effect = {
+	FRA = {
+		delete_unit_template_and_units = {
+			division_template = "Division d'Infanterie III"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Division Légère Mécanique III"
+		}
+	}
+	load_oob = "FRA_junta_flipflop_Sorelists"
+}
+}
+
+option = { ###Pelekists get units
+name = rob_france.83.a
+trigger = {
+	tag = FRP
+	FRA = { NOT = { has_country_flag = FRA_pelekists_dead } }
+}
+ai_chance = {
+	factor = 100
+}
+hidden_effect = {
+	FRA = {
+		delete_unit_template_and_units = {
+			division_template = "Division d'Infanterie III"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Division Légère Mécanique III"
+		}
+	}
+	load_oob = "FRA_junta_flipflop_Pelekists"
+}
+}
+
+option = { ###in case of nothing
+name = "More foes..."
+}
+
+}
+
+
+country_event = { ### Random faction gets units
+id = rob_france.84
+title = rob_france.84.t
+desc = rob_france.84.d
+fire_only_once = yes
+is_triggered_only = yes
+
+
+option = { ###pelekists get units
+name = rob_france.84.b
+trigger = {
+	tag = FRP
+}
+hidden_effect = {
+	load_oob = "FRA_junta_flipflop_2_Pelekists"
+}
+}
+
+option = { ###lberals get units
+name = rob_france.84.b
+trigger = {
+	tag = FRL
+}
+hidden_effect = {
+	load_oob = "FRA_junta_flipflop_2_Liberals"
+}
+}
+
+option = { ###sorelists get units
+name = rob_france.84.b
+trigger = {
+	tag = FRR
+}
+hidden_effect = {
+	load_oob = "FRA_junta_flipflop_2_Sorelists"
+}
+}
+
+option = { ###sorelists get units
+name = rob_france.84.b
+trigger = {
+	tag = FRS
+}
+hidden_effect = {
+	load_oob = "FRA_junta_flipflop_2_Socialists"
+}
+}
+
+}
+
+
+###country_event = { ### Player or random faction gets buff
+#id = rob_france.85
+#title = "Hi"
+#desc = "This is Dev to the Player. The Civil War can drag on, and since I dont have lots of time to balance everything just right, I made small buff that would be added to random Ai to speed it up. If you want to have it be given to yourself or disable it, go ahead."
+#fire_only_once = yes
+#is_triggered_only = yes
+
+
+#option = { ###Random
+#name = "Randomize"
+#ai_chance = { factor = 1000 }
+#country_lock_all_division_template = no
+#random_list = {
+	#20 = {
+		#FRL = { 
+		#	swap_ideas = {
+		#		add_idea = fra_civil_war_buff
+		#		remove_idea = fra_civil_war
+		#	}
+		# }
+	#}
+	#20 = {
+		#FRR = { 
+			#swap_ideas = {
+			#	add_idea = fra_civil_war_buff
+			#	remove_idea = fra_civil_war
+			#}
+		#}
+	#}
+	#20 = {
+		#FRP = { 
+			#swap_ideas = {
+			#	add_idea = fra_civil_war_buff
+			#	remove_idea = fra_civil_war
+			#}
+		#}
+	#}
+	#20 = {
+		#FRS = {
+			#swap_ideas = {
+				#add_idea = fra_civil_war_buff
+				#remove_idea = fra_civil_war
+			#}
+		# }
+	#}
+	#20 = {
+		#FRA = {
+			#swap_ideas = {
+				#add_idea = fra_civil_war_buff
+				#remove_idea = fra_civil_war
+			#}
+		# }
+	#}
+#}
+#}
+
+#option = { ###Player
+#name = "Give it to me"
+#trigger = {
+#is_ai = no
+#}
+#swap_ideas = {
+	#add_idea = fra_civil_war_buff
+	#remove_idea = fra_civil_war
+#}
+#country_lock_all_division_template = no
+#}
+
+#option = { ###No one
+#name = "Buffs are lame"
+#trigger = {
+	#is_ai = no
+#}
+#country_lock_all_division_template = no
+#}
+
+#}
+
+
+country_event = { ### Guns for Junta
+id = rob_france.86
+title = rob_france.86.t
+desc = rob_france.86.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.86.a
+	add_equipment_to_stockpile = {
+	type = infantry_equipment
+	amount = 7500
+	producer = FRA
+	 }
+}
+
+}
+
+
+####debug events
+
+
+country_event = {
+id = rob_france.1000
+title = "Release Colonial tags"
+desc = "Do it"
+is_triggered_only = yes
+
+option = { 
+	name = "Yes sir!"
+
+	FSO = {
+		transfer_state = 268
+		268 = { add_core_of = FSO }
+		set_cosmetic_tag = FRA_FSO
+	}
+	FPN = {
+		transfer_state = 635
+		transfer_state = 641
+		transfer_state = 734
+		635 = { add_core_of = FPN }
+		641 = { add_core_of = FPN }
+		734 = { add_core_of = FPN }
+		set_cosmetic_tag = FRA_FPN
+	}
+	FGU = {
+		transfer_state = 310
+		310 = { add_core_of = FGU }
+		set_cosmetic_tag = FRA_FGU
+	}
+	FAN = {
+		transfer_state = 694
+		694 = { add_core_of = FAN }
+		set_cosmetic_tag = FRA_FAN
+	}
+	FID = {
+		transfer_state = 320
+		320 = { add_core_of = FID }
+		set_cosmetic_tag = FRA_FID
+	}
+	FNA = {
+		transfer_state = 458
+		transfer_state = 459
+		transfer_state = 460
+		transfer_state = 461
+		transfer_state = 462
+		transfer_state = 513
+		transfer_state = 514
+		transfer_state = 665
+		transfer_state = 783
+		458 = { add_core_of = FNA }
+		459 = { add_core_of = FNA }
+		460 = { add_core_of = FNA }
+		461 = { add_core_of = FNA }
+		462 = { add_core_of = FNA }
+		513 = { add_core_of = FNA }
+		514 = { add_core_of = FNA }
+		665 = { add_core_of = FNA }
+		783 = { add_core_of = FNA }
+		set_cosmetic_tag = FRA_FNA
+	}
+	MAD = {
+		transfer_state = 543
+		set_cosmetic_tag = FRA_FMA
+	}
+}
+
+option = { 
+	name = "Only French Algeris"
+	ALG = {
+		transfer_state = 458
+		transfer_state = 459
+		transfer_state = 460
+		transfer_state = 513
+		transfer_state = 514
+		transfer_state = 665
+		set_cosmetic_tag = FRA_ALG
+		create_country_leader = {
+			name = "Someone"
+			desc = ""
+			picture = ".dds"
+			expire = "1965.1.1"
+			ideology = authoritharian_subtype
+			traits = {
+				#
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = rob_france.1001
+	title = "Choose alliance"
+	desc = "Do it"
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Pelekists&Sorelists"
+		set_country_flag = FRA_pelekist_sorelian_alliance
+	}
+
+	option = { 
+		name = "Commies&Sorelists"
+		set_country_flag = FRA_socialists_united
+	}
+
+	option = { 
+		name = "No alliance"
+		set_country_flag = FRA_sor_status_quo
+	}
+}
+
+
+
+country_event = {
+	id = rob_france.1002
+	title = "Start the Civil war"
+	desc = "Do it"
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Yes sir!"
+		FRA = {
+			every_state = {
+			   limit = { is_core_of = FRA }
+			   add_core_of = FRS
+			   add_core_of = FRP
+			   add_core_of = FRR
+			   add_core_of = FRL
+			   }
+		 }
+		FRS = { transfer_state = 16 }
+		FRS = { transfer_state = 19 }
+		FRS = { transfer_state = 15 }
+		FRS = { transfer_state = 818 }
+		FRS = { transfer_state = 1014 }
+		FRS = { transfer_state = 28 }
+		FRS = { transfer_state = 1278 }
+		FRS = { transfer_state = 1281 }
+		FRS = { transfer_state = 1284 }
+		FRS = { transfer_state = 785 }
+		FRS = { transfer_state = 1279 }
+		FRS = { transfer_state = 29 }
+		FRP = { transfer_state = 14 }
+		FRP = { transfer_state = 23 }
+		FRP = { transfer_state = 1007 }
+		FRP = { transfer_state = 1008 }
+		FRP = { transfer_state = 1283 }
+		FRP = { transfer_state = 1282 }
+		FRP = { transfer_state = 1286 }
+		FRP = { transfer_state = 30 }
+		FRP = { transfer_state = 1009 }
+		FRP = { transfer_state = 20 }
+		FRR = { transfer_state = 819 }
+		FRR = { transfer_state = 24 }
+		FRR = { transfer_state = 1287 }
+		FRR = { transfer_state = 1288 }
+		FRR = { transfer_state = 33 }
+		FRL = { transfer_state = 31 }
+		FRL = { transfer_state = 25 }
+		FRL = { transfer_state = 1289 }
+		FRL = { transfer_state = 1285 }
+		FRL = { transfer_state = 820 }
+		FRL = { transfer_state = 26 }
+		FRL = { transfer_state = 22 }
+		FRL = { transfer_state = 21 }
+		if = {
+			limit = {
+				has_country_flag = FRA_pelekist_sorelian_alliance
+			}
+			set_country_flag = FRA_civil_war
+			hidden_effect = {
+				SYR = { country_event = { id = syrialeb.1 days = 21 } }
+				}
+			 FRA = { 
+			  add_stability = 0.1
+			  add_war_support = 0.1
+			  add_ideas = {
+				fra_civil_war
+			  }
+			 }
+			 FRA = { end_puppet = SYR }
+			 FRA = { end_puppet = FWA }
+			 FRA = { end_puppet = FEA }
+			 FRA = { end_puppet = FIC }
+			 hidden_effect = {
+			 news_event = { id = news_event.3 days = 1 }
+			 FRL = { load_oob = FRL_civil_war }
+			 FRR = { load_oob = FRR_civil_war }
+			 FRP = { load_oob = FRP_civil_war }
+			 FRS = { load_oob = FRS_civil_war }
+			 declare_war_on = { type = annex_everything target = FRL }
+			 declare_war_on = { type = annex_everything target = FRS }
+			 declare_war_on = { type = annex_everything target = FRP }
+			 
+			 FRR = {  declare_war_on = { type = annex_everything target = FRA } }
+			
+			 FRL = {
+			 declare_war_on = { type = annex_everything target = FRS }
+			 declare_war_on = { type = annex_everything target = FRR }
+			 declare_war_on = { type = annex_everything target = FRP }
+			 add_ideas = {
+				fra_civil_war
+			  }
+			 }
+			 FRS = {
+			 declare_war_on = { type = annex_everything target = FRR }
+			 declare_war_on = { type = annex_everything target = FRP }
+			 add_ideas = {
+				fra_civil_war
+			  }
+			 }
+			 FRR = {
+				add_ideas = {
+				fra_civil_war
+				} 
+			 }
+			 FRP = {
+			 create_faction = FRA_national_france
+			 add_to_faction = FRR
+			 add_ideas = {
+				fra_civil_war
+			  }
+			 }
+			 }			
+		}
+		if = {
+			limit = {
+				has_country_flag = FRA_socialists_united
+			}
+			set_country_flag = FRA_civil_war
+			FRA = { 
+				add_stability = 0.1
+				add_war_support = 0.1
+				add_ideas = {
+				  fra_civil_war
+				}
+			   }
+			   hidden_effect = {
+				  SYR = { country_event = { id = syrialeb.1 days = 21 } }
+				  }
+			   FRA = { end_puppet = SYR }
+			   FRA = { end_puppet = FWA }
+			   FRA = { end_puppet = FEA }
+			   FRA = { end_puppet = FIC }
+			   hidden_effect = {
+			   news_event = { id = news_event.3 days = 1 }
+			   FRL = { load_oob = FRL_civil_war }
+			   FRR = { load_oob = FRR_civil_war }
+			   FRP = { load_oob = FRP_civil_war }
+			   FRS = { load_oob = FRS_civil_war }
+			   declare_war_on = { type = annex_everything target = FRL }
+			   declare_war_on = { type = annex_everything target = FRS }
+			   declare_war_on = { type = annex_everything target = FRP }
+			  
+			   FRR = {  declare_war_on = { type = annex_everything target = FRA } }
+			  
+			   FRL = {
+			   declare_war_on = { type = annex_everything target = FRS }
+			   declare_war_on = { type = annex_everything target = FRR }
+			   declare_war_on = { type = annex_everything target = FRP }
+			   add_ideas = {
+				  fra_civil_war
+				}
+			   }
+			   FRS = {
+			   declare_war_on = { type = annex_everything target = FRP }
+			   create_faction = FRA_socialist_france
+			   add_to_faction = FRR
+			   add_ideas = {
+				  fra_civil_war
+				}
+			   }
+			   FRR = {
+				  add_ideas = {
+					  fra_civil_war
+					}
+			   }
+			   FRP = {
+			   declare_war_on = { type = annex_everything target = FRR }
+			   add_ideas = {
+				  fra_civil_war
+				}
+			   }
+			}
+		}
+			if = {
+				limit = {
+					has_country_flag = FRA_sor_status_quo
+				}
+				hidden_effect = {
+					SYR = { country_event = { id = syrialeb.1 days = 21 } }
+					}
+				set_country_flag = FRA_civil_war
+				 FRA = { 
+				  add_stability = 0.1
+				  add_war_support = 0.1
+				  add_ideas = {
+					fra_civil_war
+				  }
+				 }
+				 FRA = { end_puppet = SYR }
+				 FRA = { end_puppet = FWA }
+				 FRA = { end_puppet = FEA }
+				 FRA = { end_puppet = FIC }
+				 hidden_effect = {
+				 news_event = { id = news_event.3 days = 1 }
+				 FRL = { load_oob = FRL_civil_war }
+				 FRR = { load_oob = FRR_civil_war }
+				 FRP = { load_oob = FRP_civil_war }
+				 FRS = { load_oob = FRS_civil_war }
+				 hidden_effect = {
+					FRA = { country_event = { id = rob_france.86 days = 1 }  
+					FRL = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+					FRR = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+					FRP = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+					FRS = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+				 }
+				 declare_war_on = { type = annex_everything target = FRL }
+				 declare_war_on = { type = annex_everything target = FRS }
+				 declare_war_on = { type = annex_everything target = FRP }
+				 
+				 FRR = {  declare_war_on = { type = annex_everything target = FRA } }
+				
+				 FRL = {
+				 declare_war_on = { type = annex_everything target = FRS }
+				 declare_war_on = { type = annex_everything target = FRR }
+				 declare_war_on = { type = annex_everything target = FRP }
+				 add_ideas = {
+					fra_civil_war
+				  }
+				 }
+				 FRS = {
+				 declare_war_on = { type = annex_everything target = FRP }
+				 declare_war_on = { type = annex_everything target = FRR }
+				 add_ideas = {
+					fra_civil_war
+				  }
+				 }
+				 FRR = {
+					add_ideas = {
+						fra_civil_war
+					  }
+				 }
+				 FRP = {
+				 declare_war_on = { type = annex_everything target = FRR }
+				 add_ideas = {
+					fra_civil_war
+				  }
+				 }
+				 }
+			}
+		}
+	}
+
+	country_event = { ### test for unlock
+	id = rob_france.1003
+	title = "Lock/Unlock troops"
+	desc = "Do it"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+	name = "Lock'em"
+	country_lock_all_division_template = yes
+	}
+	
+	option = { 
+	name = "Unlock'em"
+	country_lock_all_division_template = no
+	}
+	}
+
+	country_event = { ### test for unlock
+	id = rob_france.1004
+	title = "Try out random list"
+	desc = "Do it"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+	name = "Yes Sir!"
+	random_list = {
+		20 = {
+			FRL = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+			FRR = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+			FRP = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+			FRS = { country_event = { id = rob_france.84 days = 5 } }
+		}
+		20 = {
+			
+		}
+	}
+}
+	}
+	
+	}
 

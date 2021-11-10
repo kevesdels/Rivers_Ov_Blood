@@ -101,5 +101,71 @@ ideas = {
 	navy_screen_defence_factor = 0.1
    }
   }
+
+  ###France
+
+  fcm = {			
+    allowed = {
+OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+    } 
+    research_bonus = {
+        naval_equipment = 0.15
+    }
+    traits = { mediterranean_naval_manufacturer }
+}
+aeb = {
+    picture = FRA_aeb		
+    allowed = {
+OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+    }         
+    research_bonus = {
+        naval_equipment = 0.15
+    }
+    traits = { convoy_escort_naval_manufacturer }
+}
+acl = {
+    picture = FRA_acl	
+    allowed = {
+OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+    }      
+    research_bonus = {
+        naval_equipment = 0.15
+    }
+    traits = { atlantic_fleet_naval_manufacturer }
+}
+acf = {
+    picture = FRA_acf			
+    allowed = {
+OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+    }
+    research_bonus = {
+        naval_equipment = 0.15
+    }
+    traits = { raiding_fleet_naval_manufacturer }
+}
  }
 }

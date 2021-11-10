@@ -173,5 +173,196 @@ ideas = {
 	air_paradrop_defence_factor = 0.1
    }
   }
+
+
+  ###France
+
+
+  ###Junta
+  charles_de_gaulle = { ####mobile warfare
+   ledger = army
+   allowed = {
+      original_tag = FRA
+   }
+   cost = 200
+   available = { has_tech = mobile_warfare }
+   research_bonus = { cat_mobile_warfare = 0.10 }
+   modifier = {
+    army_armor_attack_factor = 0.05
+	army_armor_defence_factor = 0.05
+	motorized_attack_factor = 0.05
+	motorized_defence_factor = 0.05
+   }
+   ai_will_do = {
+      factor = 1
+   }
+
+}
+
+   FRA_philippe_petain = { ###grande plan
+   ledger = army
+   cost = 200
+   allowed = { original_tag = FRA }
+   available = { has_tech = trench_warfare }
+   picture = FRA_Philippe_Petain
+   research_bonus = { cat_grand_battle_plan = 0.10 }
+   modifier = {
+	army_infantry_attack_factor = 0.1
+	army_infantry_defence_factor = 0.1
+   }
+   ai_will_do = {
+      factor = 1
+   }
+}
+
+
+
+####Republicans
+FRA_alphonse_juin = { ####generic
+   ledger = army
+   allowed = {
+      original_tag = FRL
+   }
+   cost = 200
+   picture = FRA_Alphonse_Juin
+   research_bonus = {
+      land_doctrine = 0.10
+   }
+   modifier = {
+      army_infantry_attack_factor = 0.05
+      army_infantry_defence_factor = 0.05
+      }
+   ai_will_do = {
+      factor = 1
+   }
+
+}
+
+
+FRA_philippe_leclerc = { ####mobile doctrine
+   ledger = army
+   allowed = {
+      original_tag = FRL
+   }
+   cost = 200
+   available = { has_tech = mobile_warfare }
+   picture = FRA_Philippe_Leclerc_de_Hautecloque
+   research_bonus = { cat_mobile_warfare = 0.10 }
+   modifier = {
+    army_armor_attack_factor = 0.05
+	army_armor_defence_factor = 0.05
+	motorized_attack_factor = 0.05
+	motorized_defence_factor = 0.05
+   }
+   ai_will_do = {
+      factor = 1
+   }
+
+}
+
+####Pelekists
+
+FRA_joseph_darnand = { ####generic
+   ledger = army
+   allowed = {
+      original_tag = FRP
+   }
+   cost = 200
+   picture = FRA_Joseph_Darnand
+   research_bonus = {
+      land_doctrine = 0.10
+   }
+   modifier = {
+      army_infantry_attack_factor = 0.05
+      army_infantry_defence_factor = 0.05
+      }
+   ai_will_do = {
+      factor = 1
+   }
+
+}
+
+###Communists
+
+FRA_maurice_gamelin = { ####grande battleplan
+   ledger = army
+   cost = 200
+   picture = FRA_Maurice_Gamelin
+   allowed = {
+      original_tag = FRS
+   }
+   available = { has_tech = trench_warfare }
+   research_bonus = { cat_grand_battle_plan = 0.10 }
+   modifier = {
+	army_infantry_attack_factor = 0.1
+	army_infantry_defence_factor = 0.1
+   }
+   ai_will_do = {
+      factor = 1
+   }
+
+}
+
+FRA_jean_blanchard = { ####generic
+   ledger = army
+   allowed = {
+      original_tag = FRS
+   }
+   cost = 200
+   picture = FRA_jean_blanchard
+   research_bonus = {
+      land_doctrine = 0.10
+   }
+   modifier = {
+      army_infantry_attack_factor = 0.05
+      army_infantry_defence_factor = 0.05
+      }
+   ai_will_do = {
+      factor = 1
+   }
+
+}
+
+###Sorelists
+
+FRA_georges_catroux = { ####grande battleplan
+   ledger = army
+   cost = 200
+   picture = FRA_Georges_Catroux
+   allowed = {
+      original_tag = FRR
+   }
+   available = { has_tech = trench_warfare }
+   research_bonus = { cat_grand_battle_plan = 0.10 }
+   modifier = {
+	army_infantry_attack_factor = 0.1
+	army_infantry_defence_factor = 0.1
+   }
+   ai_will_do = {
+      factor = 1
+   }
+
+}
+
+FRA_gaston_billote = { ####generic
+   ledger = army
+   allowed = {
+      original_tag = FRR
+   }
+   picture = FRA_Gaston_Billote
+   cost = 200
+   research_bonus = {
+      land_doctrine = 0.10
+   }
+   modifier = {
+      army_infantry_attack_factor = 0.05
+      army_infantry_defence_factor = 0.05
+      }
+   ai_will_do = {
+      factor = 1
+   }
+
+}
+
   }
  }

@@ -1,6 +1,9 @@
 capital = 16
 
-set_research_slots = 3
+set_research_slots = 4
+set_country_flag = FRA_civil_war
+set_war_support = 0.4
+set_stability = 0.4
 
 set_technology = {
 	infantry_weapons = 1
@@ -28,6 +31,10 @@ if = {
 }
 add_ideas = {
 	limited_conscription
+	fra_eco_disaster
+	fra_pol_violence
+	fra_struggling_army
+	fra_constructing_mag_line
 }
 set_politics = {
 	ruling_party = socialist
@@ -56,4 +63,136 @@ create_country_leader = {
 	traits = {
 		#
 	}
+}
+
+create_field_marshal = {
+	name = "Maurice Gamelin"
+	picture = "Maurice_Gamelin.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Ernest-Émile Petit"
+	picture = "Ernest_Emile_Petit.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Georges Maurice Jean Blanchard"
+	picture = "Georges_Maurice_Jean_Blanchard.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Henri-Rol Tanguy"
+	picture = ""
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Pierre Brossolette"
+	picture = "Pierre_Brossolette.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "André Marty"
+	picture = "Andre_Marty.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Jacques Sadoul"
+	picture = "Jacques_Sadoul.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Pierre Georges"
+	picture = "Pierre_Georges.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Albert Ouzoulias"
+	picture = "Albert_Ouzoulias.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Georges Guingouin"
+	picture = "Georges_Guingouin.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_navy_leader = {
+	name = "Raoul Castex"
+	picture = "Raoul_Castex.dds"
+	traits = { }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "Henri Romans-Petit"
+	picture = "Henri_romans_petit.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
 }

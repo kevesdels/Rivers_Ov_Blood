@@ -8,13 +8,16 @@ focus_tree = {
 			OR = {
 				tag = FRA
 				tag = FRP
+				tag = FRS
+				tag = FRR
+				tag = FRL
 			}
 		}
 	}
 	#Armée de Terre
 	focus = {
 		id = FRA_armeedeterre
-		icon = GFX_FRA_armeedeterre-445
+		icon = GFX_FRA_armeedeterre
 		x = 16
 		y = 14
 		cost = 5
@@ -30,7 +33,7 @@ focus_tree = {
 	#A Motorised Army
 	focus = {
 		id = FRA_a_motorised_army
-		icon = GFX_FRA_a_motorised_army-445
+		icon = GFX_FRA_a_motorised_army
 		x = 18
 		y = 17
 		cost = 5
@@ -52,7 +55,7 @@ focus_tree = {
 	#Found the École militaire interarmes
 	focus = {
 		id = FRA_foundtheecolemilitaireinterarmes
-		icon = GFX_FRA_foundtheecolemilitaireinterarmes-445
+		icon = GFX_FRA_foundtheecolemilitaireinterarmes
 		x = 14
 		y = 17
 		cost = 5
@@ -71,7 +74,7 @@ focus_tree = {
 	#Grande Batterie
 	focus = {
 		id = FRA_grande_batterie
-		icon = GFX_FRA_grande_batterie-445
+		icon = GFX_FRA_grande_batterie
 		x = 16
 		y = 17
 		cost = 5
@@ -95,7 +98,7 @@ focus_tree = {
 	#Mountain Guns
 	focus = {
 		id = FRA_mountain_guns
-		icon = GFX_FRA_mountain_guns-445
+		icon = GFX_FRA_mountain_guns
 		x = 16
 		y = 18
 		cost = 5
@@ -113,7 +116,7 @@ focus_tree = {
 	#A Reformed Army
 	focus = {
 		id = FRA_a_reformed_army
-		icon = GFX_FRA_a_reformed_army-445
+		icon = GFX_FRA_a_reformed_army
 		x = 16
 		y = 20
 		cost = 5
@@ -131,7 +134,7 @@ focus_tree = {
 	#Complete the Magionot Line
 	focus = {
 		id = FRA_complete_the_magionot_line
-		icon = GFX_FRA_complete_the_magionot_line-445
+		icon = GFX_FRA_complete_the_magionot_line
 		x = 17
 		y = 19
 		cost = 5
@@ -151,12 +154,15 @@ focus_tree = {
 	#Focus On Firepower
 	focus = {
 		id = FRA_focus_on_firepower
-		icon = GFX_FRA_focus_on_firepower-445
+		icon = GFX_FRA_focus_on_firepower
 		x = 16
 		y = 15
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			
 		}
 		prerequisite = { focus = FRA_armeedeterre  }
 		mutually_exclusive = { focus = FRA_legacy_of_the_great_war  focus = FRA_a_new_doctrine  }
@@ -173,7 +179,7 @@ focus_tree = {
 	#National Conscription Law
 	focus = {
 		id = FRA_national_conscription_law
-		icon = GFX_FRA_national_conscription_law-445
+		icon = GFX_FRA_national_conscription_law
 		x = 18
 		y = 16
 		cost = 5
@@ -199,7 +205,7 @@ focus_tree = {
 	#The French Military
 	focus = {
 		id = FRA_the_french_military
-		icon = GFX_FRA_the_french_military-445
+		icon = GFX_FRA_the_french_military
 		x = 25
 		y = 13
 		cost = 5
@@ -217,12 +223,15 @@ focus_tree = {
 	#A New Doctrine
 	focus = {
 		id = FRA_a_new_doctrine
-		icon = GFX_FRA_a_new_doctrine-445
+		icon = GFX_FRA_a_new_doctrine
 		x = 12
 		y = 15
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			
 		}
 		prerequisite = { focus = FRA_armeedeterre  }
 		mutually_exclusive = { focus = FRA_focus_on_firepower  focus = FRA_legacy_of_the_great_war  }
@@ -239,7 +248,7 @@ focus_tree = {
 	#Throw Shells, Not Men
 	focus = {
 		id = FRA_throwshellsnotmen
-		icon = GFX_FRA_throwshellsnotmen-445
+		icon = GFX_FRA_throwshellsnotmen
 		x = 16
 		y = 16
 		cost = 5
@@ -260,7 +269,7 @@ focus_tree = {
 	#Military Production Quotas
 	focus = {
 		id = FRA_military_production_quotas
-		icon = GFX_FRA_military_production_quotas-445
+		icon = GFX_FRA_military_production_quotas
 		x = 14
 		y = 16
 		cost = 5
@@ -283,7 +292,7 @@ focus_tree = {
 	#Expand Border Forts
 	focus = {
 		id = FRA_expand_border_forts
-		icon = GFX_FRA_expand_border_forts-445
+		icon = GFX_FRA_expand_border_forts
 		x = 20
 		y = 18
 		cost = 5
@@ -369,7 +378,7 @@ focus_tree = {
 	#Focus On Defence
 	focus = {
 		id = FRA_focus_on_defence
-		icon = GFX_FRA_focus_on_defence-445
+		icon = GFX_FRA_focus_on_defence
 		x = 20
 		y = 17
 		cost = 5
@@ -393,12 +402,15 @@ focus_tree = {
 	#Legacy Of the Great War
 	focus = {
 		id = FRA_legacy_of_the_great_war
-		icon = GFX_FRA_legacy_of_the_great_war-445
+		icon = GFX_FRA_legacy_of_the_great_war
 		x = 20
 		y = 15
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			
 		}
 		prerequisite = { focus = FRA_armeedeterre  }
 		mutually_exclusive = { focus = FRA_focus_on_firepower  focus = FRA_a_new_doctrine  }
@@ -415,7 +427,7 @@ focus_tree = {
 	#The S35
 	focus = {
 		id = FRA_the_s35
-		icon = GFX_FRA_the_s35-445
+		icon = GFX_FRA_the_s35
 		x = 12
 		y = 17
 		cost = 5
@@ -436,7 +448,7 @@ focus_tree = {
 	#Char de Rupture
 	focus = {
 		id = FRA_char_de_rupture
-		icon = GFX_FRA_char_de_rupture-445
+		icon = GFX_FRA_char_de_rupture
 		x = 12
 		y = 18
 		cost = 5
@@ -457,7 +469,7 @@ focus_tree = {
 	#Maneuver Warfare
 	focus = {
 		id = FRA_maneuver_warfare
-		icon = GFX_FRA_maneuver_warfare-445
+		icon = GFX_FRA_maneuver_warfare
 		x = 12
 		y = 16
 		cost = 5
@@ -481,7 +493,7 @@ focus_tree = {
 	#Abandon a Defensive Doctrine
 	focus = {
 		id = FRA_abandon_a_defensive_doctrine
-		icon = GFX_FRA_abandon_a_defensive_doctrine-445
+		icon = GFX_FRA_abandon_a_defensive_doctrine
 		x = 15
 		y = 19
 		cost = 5
@@ -503,7 +515,7 @@ focus_tree = {
 	#War of Planning
 	focus = {
 		id = FRA_war_of_planning
-		icon = GFX_FRA_war_of_planning-445
+		icon = GFX_FRA_war_of_planning
 		x = 20
 		y = 16
 		cost = 5
@@ -546,7 +558,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_progressivist_assembly  }
 		completion_reward = {
-			add_popularity = { ideology = social_democracy  popularity = 0.11 }
+			add_popularity = { ideology = democratic_socialist  popularity = 0.11 }
 		}
 	}
 
@@ -569,7 +581,7 @@ focus_tree = {
 	#The State of France
 	focus = {
 		id = FRA_the_state_of_france
-		icon = GFX_FRA_the_state_of_france-445
+		icon = GFX_FRA_the_state_of_france
 		x = 23
 		y = 0
 		cost = 5
@@ -594,14 +606,14 @@ focus_tree = {
 		prerequisite = { focus = FRA_the_state_of_france  }
 		completion_reward = {
 			add_political_power = 120
-			###event
+			country_event = { id = rob_france.53 days = 1 }
 		}
 	}
 
 	#The Republic Endures
 	focus = {
 		id = FRA_the_republic_endures
-		icon = GFX_FRA_the_republic_endures-445
+		icon = GFX_FRA_the_republic_endures
 		x = 18
 		y = 1
 		cost = 5
@@ -614,7 +626,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_the_state_of_france  }
 		completion_reward = {
 			add_political_power = 120
-			###event about wtf the centrists decide to support
+			country_event = { id = rob_france.51 days = 1 }
 			add_ideas = {
 				fra_dem_badtimes ####something about industry being very fucking neglected
 			}
@@ -624,10 +636,10 @@ focus_tree = {
 	#The Lion Roars
 	focus = {
 		id = FRA_the_lion_roars
-		icon = GFX_FRA_the_lion_roars-445
+		icon = GFX_FRA_the_lion_roars
 		x = 34
 		y = 1
-		cost = 1
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -637,17 +649,13 @@ focus_tree = {
 		prerequisite = { focus = FRA_the_state_of_france  }
 		completion_reward = {
 			add_political_power = 120
-			###event
-			add_idea = {
-				fra_react_
-			}
 		}
 	}
 
 	#The First United Congress
 	focus = {
 		id = FRA_the_first_united_congress
-		icon = GFX_FRA_the_first_united_congress-445
+		icon = GFX_FRA_the_first_united_congress
 		x = 49
 		y = 2
 		cost = 5
@@ -656,14 +664,17 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_second_reign_of_terror  }
 		completion_reward = {
-			###event
+			country_event = { id = rob_france.50 days = 1 }
+			hidden_effect = {
+				country_event = { id = rob_france.70 days = 47 }
+			}
 		}
 	}
 
 	#Begin the Myth
 	focus = {
 		id = FRA_begin_the_myth
-		icon = GFX_FRA_begin_the_myth-445
+		icon = GFX_FRA_begin_the_myth
 		x = 4
 		y = 1
 		cost = 5
@@ -677,6 +688,9 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 120
 			###event
+			#add_ideas = {
+			#	fra_pol_violence_2
+			#}
 		}
 	}
 
@@ -693,7 +707,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_remember_1871  }
 		mutually_exclusive = { focus = FRA_rule_with_an_iron_first  }
 		completion_reward = {
-			
+			country_event = { id = rob_france.36 days = 1 }
 		}
 	}
 
@@ -712,7 +726,7 @@ focus_tree = {
 			add_popularity = { ideology = conservative  popularity = -0.12 }
 			add_popularity = { ideology = reactionary  popularity = -0.1 }
 			add_popularity = { ideology = pelekist  popularity = -0.09 }
-			###event
+			country_event = { id = rob_france.54 days = 1 }
 		}
 	}
 
@@ -729,7 +743,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_remember_1871  }
 		mutually_exclusive = { focus = FRA_democratic_socialism  }
 		completion_reward = {
-
+			country_event = { id = rob_france.52 days = 1 }
 		}
 	}
 
@@ -745,7 +759,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_rule_with_an_iron_first  } prerequisite = { focus = FRA_democratic_socialism  }
 		completion_reward = {
-			###event
+			country_event = { id = rob_france.56 days = 1 }
 			add_ideas = {
 				fra_com_soc_const
 			}
@@ -764,7 +778,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_democratic_socialism  }
 		completion_reward = {
-			###event
+			country_event = { id = rob_france.55 days = 1 }
 		}
 	}
 
@@ -817,7 +831,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_reconcile_the_population  } prerequisite = { focus = FRA_economic_transition  }
 		completion_reward = {
-			###popularities 
+			add_popularity = { ideology = democratic_socialism  popularity = 0.2 }
 			add_stability = 0.1
 		}
 	}
@@ -934,7 +948,7 @@ focus_tree = {
 	#The Right and Centre
 	focus = {
 		id = FRA_the_right_and_centre
-		icon = GFX_FRA_the_right_and_centre-445
+		icon = GFX_FRA_the_right_and_centre
 		x = 19
 		y = 2
 		cost = 5
@@ -950,7 +964,7 @@ focus_tree = {
 	#The Popular Front
 	focus = {
 		id = FRA_the_popular_front
-		icon = GFX_FRA_the_popular_front-445
+		icon = GFX_FRA_the_popular_front
 		x = 17
 		y = 2
 		cost = 5
@@ -966,7 +980,7 @@ focus_tree = {
 	#Franc Devaluation
 	focus = {
 		id = FRA_franc_devaluation
-		icon = GFX_FRA_franc_devaluation-445
+		icon = GFX_FRA_franc_devaluation
 		x = 18
 		y = 3
 		cost = 5
@@ -986,7 +1000,7 @@ focus_tree = {
 	#The Matignon Agreements
 	focus = {
 		id = FRA_the_matignon_agreements
-		icon = GFX_FRA_the_matignon_agreements-445
+		icon = GFX_FRA_the_matignon_agreements
 		x = 16
 		y = 3
 		cost = 5
@@ -1004,7 +1018,7 @@ focus_tree = {
 	#Liberalise the Economy
 	focus = {
 		id = FRA_liberalise_the_economy
-		icon = GFX_FRA_liberalise_the_economy-445
+		icon = GFX_FRA_liberalise_the_economy
 		x = 20
 		y = 3
 		cost = 5
@@ -1014,6 +1028,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_the_right_and_centre  }
 		completion_reward = {
 			###event mild liberalization cuz scared from past, opens some stock markets to international investers, industry, agricultural, consturction
+			country_event = { id = rob_france.57 days = 1 }
 			add_ideas = {
 				fra_dem_eco_lib
 			}
@@ -1023,7 +1038,7 @@ focus_tree = {
 	#An Economic Miracle
 	focus = {
 		id = FRA_an_economic_miracle
-		icon = GFX_FRA_an_economic_miracle-445
+		icon = GFX_FRA_an_economic_miracle
 		x = 18
 		y = 4
 		cost = 5
@@ -1041,7 +1056,7 @@ focus_tree = {
 	#Improved Welfare System
 	focus = {
 		id = FRA_improved_welfare_system
-		icon = GFX_FRA_improved_welfare_system-445
+		icon = GFX_FRA_improved_welfare_system
 		x = 16
 		y = 4
 		cost = 5
@@ -1050,14 +1065,15 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_matignon_agreements  }
 		completion_reward = {
-			##event about fucking over middle class by redistributing land to poor 		
+			##event about fucking over middle class by redistributing land to poor 	
+			country_event = { id = rob_france.38 days =  1 }	
 		}
 	}
 
 	#Support From Colonies
 	focus = {
 		id = FRA_support_from_colonies
-		icon = GFX_FRA_support_from_colonies-445
+		icon = GFX_FRA_support_from_colonies
 		x = 20
 		y = 4
 		cost = 5
@@ -1075,7 +1091,7 @@ focus_tree = {
 	#The Fourth Republic
 	focus = {
 		id = FRA_the_fourth_republic
-		icon = GFX_FRA_the_fourth_republic-445
+		icon = GFX_FRA_the_fourth_republic
 		x = 20
 		y = 5
 		cost = 5
@@ -1084,7 +1100,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_support_from_colonies  }
 		completion_reward = {
-			###event
+			country_event = { id = rob_france.58 days = 1 }
 			add_stability = 0.10
 			add_war_support = 0.10
 		}
@@ -1093,7 +1109,7 @@ focus_tree = {
 	#A Colonel's Government
 	focus = {
 		id = FRA_acolonelsgovernment
-		icon = GFX_FRA_acolonelsgovernment-445
+		icon = GFX_FRA_acolonelsgovernment
 		x = 23
 		y = 5
 		cost = 5
@@ -1105,6 +1121,9 @@ focus_tree = {
 			add_ideas = {
 				fra_mil_col_gov
 			}
+			remove_ideas = {
+				fra_pol_violence
+			}
 		}
 	}
 
@@ -1112,7 +1131,7 @@ focus_tree = {
 	#Expand the Croix-de-Feu
 	focus = {
 		id = FRA_expand_the_croixdefeu
-		icon = GFX_FRA_expand_the_croixdefeu-445
+		icon = GFX_FRA_expand_the_croixdefeu
 		x = 23
 		y = 7
 		cost = 5
@@ -1125,6 +1144,7 @@ focus_tree = {
 			add_ideas = {
 				fra_mil_croix
 			}
+			country_event = { id = rob_france.62 days =  1 }
 			###algerian puppet
 		}
 	}
@@ -1149,7 +1169,7 @@ focus_tree = {
 	#Cult of Personality
 	focus = {
 		id = FRA_cult_of_personality
-		icon = GFX_FRA_cult_of_personality-445
+		icon = GFX_FRA_cult_of_personality
 		x = 23
 		y = 8
 		cost = 5
@@ -1167,7 +1187,7 @@ focus_tree = {
 	#Expanded Labour Laws
 	focus = {
 		id = FRA_expanded_labour_laws
-		icon = GFX_FRA_expanded_labour_laws-445
+		icon = GFX_FRA_expanded_labour_laws
 		x = 17
 		y = 6
 		cost = 5
@@ -1185,7 +1205,7 @@ focus_tree = {
 		#Limit the church
 		focus = {
 			id = FRA_limit_the_church
-			icon = GFX_FRA_expanded_labour_laws-445
+			icon = GFX_FRA_expanded_labour_laws
 			x = 15
 			y = 6
 			cost = 5
@@ -1203,7 +1223,7 @@ focus_tree = {
 	#Continue the Popular Front
 	focus = {
 		id = FRA_continue_the_popular_front
-		icon = GFX_FRA_continue_the_popular_front-445
+		icon = GFX_FRA_continue_the_popular_front
 		x = 17
 		y = 5
 		cost = 5
@@ -1220,7 +1240,7 @@ focus_tree = {
 	#End the Popular Front
 	focus = {
 		id = FRA_end_the_popular_front
-		icon = GFX_FRA_end_the_popular_front-445
+		icon = GFX_FRA_end_the_popular_front
 		x = 15
 		y = 5
 		cost = 5
@@ -1231,13 +1251,14 @@ focus_tree = {
 		prerequisite = { focus = FRA_improved_welfare_system  }
 		completion_reward = {
 			###event about socdems fucking over centrists and 
+			country_event = { id = rob_france.39 days =  1 }	
 		}
 	}
 
 	#A Leading Nation
 	focus = {
 		id = FRA_a_leading_nation
-		icon = GFX_FRA_a_leading_nation-445
+		icon = GFX_FRA_a_leading_nation
 		x = 21
 		y = 6
 		cost = 5
@@ -1255,7 +1276,7 @@ focus_tree = {
 	#Opposition to Germany
 	focus = {
 		id = FRA_opposition_to_germany
-		icon = GFX_FRA_opposition_to_germany-445
+		icon = GFX_FRA_opposition_to_germany
 		x = 19
 		y = 7
 		cost = 5
@@ -1271,7 +1292,7 @@ focus_tree = {
 	#Up With Marianne
 	focus = {
 		id = FRA_up_with_marianne
-		icon = GFX_FRA_up_with_marianne-445
+		icon = GFX_FRA_up_with_marianne
 		x = 18
 		y = 8
 		cost = 5
@@ -1289,7 +1310,7 @@ focus_tree = {
 	#Force a Coallition
 	focus = {
 		id = FRA_force_a_coallition
-		icon = GFX_FRA_force_a_coallition-445
+		icon = GFX_FRA_force_a_coallition
 		x = 23
 		y = 4
 		cost = 5
@@ -1298,14 +1319,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_an_officer  }
 		completion_reward = {
-			#### Francois de la Rocque ###event
+			country_event = { id = rob_france.46 days = 1 }
 		}
 	}
 
 	#Detene with the Spartakists
 	focus = {
 		id = FRA_detene_with_the_spartakists
-		icon = GFX_FRA_detene_with_the_spartakists-445
+		icon = GFX_FRA_detene_with_the_spartakists
 		x = 17
 		y = 7
 		cost = 5
@@ -1324,7 +1345,7 @@ focus_tree = {
 	#Renew Ties with Britain
 	focus = {
 		id = FRA_renew_ties_with_britain
-		icon = GFX_FRA_renew_ties_with_britain-445
+		icon = GFX_FRA_renew_ties_with_britain
 		x = 19
 		y = 6
 		cost = 5
@@ -1335,18 +1356,27 @@ focus_tree = {
 		mutually_exclusive = { focus = FRA_a_leading_nation  }
 		completion_reward = {
 			####event to Brits if they dems/react
+			if = {
+				limit = {
+
+				}
+				country_event = { id = rob_france.59 days = 3 }
+			}
 		}
 	}
 
 	#Deal with Opposition
 	focus = {
 		id = FRA_deal_with_opposition
-		icon = GFX_FRA_deal_with_opposition-445
+		icon = GFX_FRA_deal_with_opposition
 		x = 25
 		y = 4
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			
 		}
 		prerequisite = { focus = FRA_an_officer  }
 		completion_reward = {
@@ -1359,24 +1389,26 @@ focus_tree = {
 	#The Marshall's Succesor
 	focus = {
 		id = FRA_themarshallssuccesor
-		icon = GFX_FRA_themarshallssuccesor-445
+		icon = GFX_FRA_themarshallssuccesor
 		x = 28
 		y = 2
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		mutually_exclusive = { focus = FRA_embrace_royalism  }
+		available = {
+			has_country_flag = FRA_petain_dictatorship
+		}
 		prerequisite = { focus = FRA_the_lion_roars  }
 		completion_reward = {
-			###event
+			country_event = { id = rob_france.42 days =  1 }
 		}
 	}
 
 	#An Officer
 	focus = {
 		id = FRA_an_officer
-		icon = GFX_FRA_an_officer-445
+		icon = GFX_FRA_an_officer
 		x = 25
 		y = 3
 		cost = 5
@@ -1388,14 +1420,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_themarshallssuccesor  }
 		completion_reward = {
-			###event
+			country_event = { id = rob_france.44 days =  1 }
 		}
 	}
 
 	#Restore Order
 	focus = {
 		id = FRA_restore_order
-		icon = GFX_FRA_restore_order-445
+		icon = GFX_FRA_restore_order
 		x = 27
 		y = 4
 		cost = 5
@@ -1404,14 +1436,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_an_officer  }
 		completion_reward = {
-			####Louis Franchet D'Esperey ###event
+			country_event = { id = rob_france.45 days = 1 }
 		}
 	}
 
 	#A New Cabinet
 	focus = {
 		id = FRA_a_new_cabinet
-		icon = GFX_FRA_a_new_cabinet-445
+		icon = GFX_FRA_a_new_cabinet
 		x = 27
 		y = 5
 		cost = 5
@@ -1429,7 +1461,7 @@ focus_tree = {
 	#The Institut de France
 	focus = {
 		id = FRA_the_institut_de_france
-		icon = GFX_FRA_the_institut_de_france-445
+		icon = GFX_FRA_the_institut_de_france
 		x = 25
 		y = 6
 		cost = 5
@@ -1445,7 +1477,7 @@ focus_tree = {
 	#National Labour Camps
 	focus = {
 		id = FRA_national_labour_camps
-		icon = GFX_FRA_national_labour_camps-445
+		icon = GFX_FRA_national_labour_camps
 		x = 27
 		y = 6
 		cost = 5
@@ -1457,13 +1489,16 @@ focus_tree = {
 			add_ideas = {
 				fra_mil_lab_cmp
 			}
+			remove_ideas = {
+				fra_pol_violence
+			}
 		}
 	}
 
 	#Integrate La Cagoule
 	focus = {
 		id = FRA_integrate_la_cagoule
-		icon = GFX_FRA_integrate_la_cagoule-445
+		icon = GFX_FRA_integrate_la_cagoule
 		x = 27
 		y = 7
 		cost = 5
@@ -1482,7 +1517,7 @@ focus_tree = {
 	#Lessons of Civil War
 	focus = {
 		id = FRA_lessons_of_civil_war
-		icon = GFX_FRA_lessons_of_civil_war-445
+		icon = GFX_FRA_lessons_of_civil_war
 		x = 25
 		y = 7
 		cost = 5
@@ -1498,7 +1533,7 @@ focus_tree = {
 	#The Military Knows Best
 	focus = {
 		id = FRA_the_military_knows_best
-		icon = GFX_FRA_the_military_knows_best-445
+		icon = GFX_FRA_the_military_knows_best
 		x = 27
 		y = 8
 		cost = 5
@@ -1516,7 +1551,7 @@ focus_tree = {
 	#The Admiral
 	focus = {
 		id = FRA_the_admiral
-		icon = GFX_FRA_the_admiral-445
+		icon = GFX_FRA_The_Admiral
 		x = 31
 		y = 3
 		cost = 5
@@ -1528,14 +1563,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_themarshallssuccesor  }
 		completion_reward = {
-			###event ( François Darlan )
+			country_event = { id = rob_france.43 days =  1 }
 		}
 	}
 
 	#The Revolution Nationale
 	focus = {
 		id = FRA_the_revolution_nationale
-		icon = GFX_FRA_the_revolution_nationale-445
+		icon = GFX_FRA_The_Revolution_Nationale
 		x = 31
 		y = 4
 		cost = 5
@@ -1544,14 +1579,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_admiral  }
 		completion_reward = {
-			###event
+			country_event = { id = rob_france.61 days =  1 }
 		}
 	}
 
 	#Naval Heritage
 	focus = {
 		id = FRA_naval_heritage
-		icon = GFX_FRA_naval_heritage-445
+		icon = GFX_FRA_Naval_heritage
 		x = 30
 		y = 5
 		cost = 5
@@ -1569,7 +1604,7 @@ focus_tree = {
 	#Travail ###Work
 	focus = {
 		id = FRA_travall
-		icon = GFX_FRA_travall-445
+		icon = GFX_FRA_Travail
 		x = 29
 		y = 6
 		cost = 5
@@ -1587,7 +1622,7 @@ focus_tree = {
 	#Patrie ###fatherland
 	focus = {
 		id = FRA_patrie
-		icon = GFX_FRA_patrie-445
+		icon = GFX_FRA_Patrie
 		x = 31
 		y = 6
 		cost = 5
@@ -1605,7 +1640,7 @@ focus_tree = {
 	#Familie
 	focus = {
 		id = FRA_familie
-		icon = GFX_FRA_familie-445
+		icon = GFX_FRA_Familie
 		x = 33
 		y = 6
 		cost = 5
@@ -1623,7 +1658,7 @@ focus_tree = {
 	#A Nation Born Again
 	focus = {
 		id = FRA_a_nation_born_again
-		icon = GFX_FRA_a_nation_born_again-445
+		icon = GFX_FRA_A_nation_born_again
 		x = 31
 		y = 7
 		cost = 5
@@ -1641,7 +1676,7 @@ focus_tree = {
 	#Legacy of the Empire
 	focus = {
 		id = FRA_legacy_of_the_empire
-		icon = GFX_FRA_legacy_of_the_empire-445
+		icon = GFX_FRA_Legacy_of_the_empire
 		x = 31
 		y = 8
 		cost = 5
@@ -1659,7 +1694,7 @@ focus_tree = {
 	#The Milice
 	focus = {
 		id = FRA_the_milice
-		icon = GFX_FRA_the_milice-445
+		icon = GFX_FRA_The_milice
 		x = 32
 		y = 5
 		cost = 5
@@ -1671,20 +1706,25 @@ focus_tree = {
 			add_ideas = {
 				fra_dar_mill
 			}
+			remove_ideas = {
+				fra_pol_violence
+			}
 		}
 	}
 
 	#Embrace Royalism
 	focus = {
 		id = FRA_embrace_royalism
-		icon = GFX_FRA_embrace_royalism-445
+		icon = GFX_FRA_embrace_royalism
 		x = 38
 		y = 2
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		mutually_exclusive = { focus = FRA_themarshallssuccesor  }
+		available = {
+		 has_country_flag = FRA_gaulle_dictatorship
+		}	
 		prerequisite = { focus = FRA_the_lion_roars  }
 		completion_reward = {
 			add_ideas = {
@@ -1696,7 +1736,7 @@ focus_tree = {
 	#Curb Republicanism
 	focus = {
 		id = FRA_curb_republicanism
-		icon = GFX_FRA_curb_republicanism-445
+		icon = GFX_FRA_curb_republicanism
 		x = 37
 		y = 3
 		cost = 5
@@ -1708,13 +1748,16 @@ focus_tree = {
 			add_popularity = { ideology = conservative   popularity = -0.04 }
 			add_popularity = { ideology = social_liberal   popularity = -0.07 }
 			add_popularity = { ideology = social_democracy   popularity = -0.04 }
+			remove_ideas = {
+				fra_pol_violence
+			}
 		}
 	}
 
 	#A Grand Coronation
 	focus = {
 		id = FRA_a_grand_coronation
-		icon = GFX_FRA_a_grand_coronation-445
+		icon = GFX_FRA_a_grand_coronation
 		x = 38
 		y = 4
 		cost = 5
@@ -1723,17 +1766,17 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_curb_republicanism  } prerequisite = { focus = FRA_the_cercle_proudhon  }
 		completion_reward = {
-			###event
+			country_event = { id = rob_france.47 days =  1 }
 		}
 	}
 
 	#France Indivisible
 	focus = {
 		id = FRA_france_indivisible
-		icon = GFX_FRA_france_indivisible-445
+		icon = GFX_FRA_france_indivisible
 		x = 25
 		y = 9
-		cost = 5
+		cost = 1
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
@@ -1747,7 +1790,7 @@ focus_tree = {
 	#Looking Outwards
 	focus = {
 		id = FRA_looking_outwards
-		icon = GFX_FRA_looking_outwards-445
+		icon = GFX_FRA_looking_outwards
 		x = 25
 		y = 10
 		cost = 5
@@ -1760,7 +1803,7 @@ focus_tree = {
 	#Our European Commtments
 	focus = {
 		id = FRA_our_european_commtments
-		icon = GFX_FRA_our_european_commtments-445
+		icon = GFX_FRA_our_european_commtments
 		x = 27
 		y = 10
 		cost = 5
@@ -1773,7 +1816,7 @@ focus_tree = {
 	#The Question of Loyality
 	focus = {
 		id = FRA_the_question_of_loyality
-		icon = GFX_FRA_the_question_of_loyality-445
+		icon = GFX_FRA_the_question_of_loyality
 		x = 23
 		y = 10
 		cost = 5
@@ -1786,7 +1829,7 @@ focus_tree = {
 	#Deal With Our Enemies
 	focus = {
 		id = FRA_deal_with_our_enemies
-		icon = GFX_FRA_deal_with_our_enemies-445
+		icon = GFX_FRA_deal_with_our_enemies
 		x = 25
 		y = 11
 		cost = 5
@@ -1799,7 +1842,7 @@ focus_tree = {
 	#Worker-owned Factories
 	focus = {
 		id = FRA_workerowned_factories
-		icon = GFX_FRA_workerowned_factories-445
+		icon = GFX_FRA_workerowned_factories
 		x = 2
 		y = 3
 		cost = 5
@@ -1818,7 +1861,7 @@ focus_tree = {
 	#Corporatism
 	focus = {
 		id = FRA_corporatism
-		icon = GFX_FRA_corporatism-445
+		icon = GFX_FRA_corporatism
 		x = 36
 		y = 6
 		cost = 5
@@ -1836,7 +1879,7 @@ focus_tree = {
 	#The King of the French
 	focus = {
 		id = FRA_the_king_of_the_french
-		icon = GFX_FRA_the_king_of_the_french-445
+		icon = GFX_FRA_the_king_of_the_french
 		x = 38
 		y = 8
 		cost = 5
@@ -1854,7 +1897,7 @@ focus_tree = {
 	#Diarchy With Church
 	focus = {
 		id = FRA_diarchy_with_church
-		icon = GFX_FRA_diarchy_with_church-445
+		icon = GFX_FRA_diarchy_with_church
 		x = 40
 		y = 5
 		cost = 5
@@ -1865,14 +1908,16 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.1
-			###event
+			hidden_effect = {
+				country_event = { id = rob_france.65 days =  3 }
+			}
 		}
 	}
 
 	#The Spiritual Mindset
 	focus = {
 		id = FRA_the_spiritual_mindset
-		icon = GFX_FRA_the_spiritual_mindset-445
+		icon = GFX_FRA_the_spiritual_mindset
 		x = 40
 		y = 7
 		cost = 5
@@ -1890,7 +1935,7 @@ focus_tree = {
 	#National Integralism
 	focus = {
 		id = FRA_national_integralism
-		icon = GFX_FRA_national_integralism-445
+		icon = GFX_FRA_national_integralism
 		x = 36
 		y = 5
 		cost = 5
@@ -1900,14 +1945,14 @@ focus_tree = {
 		prerequisite = { focus = FRA_a_grand_coronation  }
 		completion_reward = {
 			add_popularity = { ideology = pelekist  popularity = 0.16 }
-			###event
+			country_event = { id = rob_france.63 days =  1 }
 		}
 	}
 
 	#The Cercle Proudhon
 	focus = {
 		id = FRA_the_cercle_proudhon
-		icon = GFX_FRA_the_cercle_proudhon-445
+		icon = GFX_FRA_the_cercle_proudhon
 		x = 39
 		y = 3
 		cost = 5
@@ -1925,7 +1970,7 @@ focus_tree = {
 	#The Trifunctional Hierarchy
 	focus = {
 		id = FRA_the_trifunctional_hierarchy
-		icon = GFX_FRA_the_trifunctional_hierarchy-445
+		icon = GFX_FRA_the_trifunctional_hierarchy
 		x = 53
 		y = 8
 		cost = 5
@@ -1937,13 +1982,16 @@ focus_tree = {
 			add_ideas = {
 				fra_dum_trifunct
 			}
+			remove_ideas = {
+				fra_pol_violence
+			}
 		}
 	}
 
 	#Return of Patriarchal Society
 	focus = {
 		id = FRA_return_of_patriarchal_society
-		icon = GFX_FRA_return_of_patriarchal_society-445
+		icon = GFX_FRA_return_of_patriarchal_society
 		x = 56
 		y = 5
 		cost = 5
@@ -1961,7 +2009,7 @@ focus_tree = {
 	#Practical Forest Farming
 	focus = {
 		id = FRA_practical_forest_farming
-		icon = GFX_FRA_practical_forest_farming-445
+		icon = GFX_FRA_practical_forest_farming
 		x = 50
 		y = 5
 		cost = 5
@@ -1980,7 +2028,7 @@ focus_tree = {
 	#Squash the Heretics
 	focus = {
 		id = FRA_squash_the_heretics
-		icon = GFX_FRA_squash_the_heretics-445
+		icon = GFX_FRA_squash_the_heretics
 		x = 40
 		y = 6
 		cost = 5
@@ -1990,13 +2038,14 @@ focus_tree = {
 		prerequisite = { focus = FRA_diarchy_with_church  }
 		completion_reward = {
 			### event that church goes for non catholics
+			country_event = { id = rob_france.66 days =  1 }
 		}
 	}
 
 	#The Natural Hierarchy
 	focus = {
 		id = FRA_the_natural_hierarchy
-		icon = GFX_FRA_the_natural_hierarchy-445
+		icon = GFX_FRA_the_natural_hierarchy
 		x = 42
 		y = 7
 		cost = 5
@@ -2014,7 +2063,7 @@ focus_tree = {
 	#Agricultural Strengthening
 	focus = {
 		id = FRA_agricultural_strengthening
-		icon = GFX_FRA_agricultural_strengthening-445
+		icon = GFX_FRA_agricultural_strengthening
 		x = 50
 		y = 4
 		cost = 5
@@ -2032,7 +2081,7 @@ focus_tree = {
 	#Augustus of Franks
 	focus = {
 		id = FRA_augustus_of_franks
-		icon = GFX_FRA_augustus_of_franks-445
+		icon = GFX_FRA_augustus_of_franks
 		x = 53
 		y = 3
 		cost = 5
@@ -2064,14 +2113,14 @@ focus_tree = {
 		prerequisite = { focus = FRA_the_state_of_france  }
 		completion_reward = {
 			add_political_power = 120
-			###event
+			country_event = { id = rob_france.49 days = 1 }
 		}
 	}
 
 	#The Camelots du Roi
 	focus = {
 		id = FRA_the_camelots_du_roi
-		icon = GFX_FRA_the_camelots_du_roi-445
+		icon = GFX_FRA_the_camelots_du_roi
 		x = 36
 		y = 7
 		cost = 5
@@ -2089,7 +2138,7 @@ focus_tree = {
 	#Platonic Influence
 	focus = {
 		id = FRA_platonic_influence
-		icon = GFX_FRA_platonic_influence-445
+		icon = GFX_FRA_platonic_influence
 		x = 38
 		y = 5
 		cost = 5
@@ -2105,7 +2154,7 @@ focus_tree = {
 	#Folkish Revival
 	focus = {
 		id = FRA_folkish_revival
-		icon = GFX_FRA_folkish_revival-445
+		icon = GFX_FRA_folkish_revival
 		x = 38
 		y = 6
 		cost = 5
@@ -2123,7 +2172,7 @@ focus_tree = {
 	#Restoring Our Former Glory
 	focus = {
 		id = FRA_restoring_our_former_glory
-		icon = GFX_FRA_restoring_our_former_glory-445
+		icon = GFX_FRA_restoring_our_former_glory
 		x = 38
 		y = 7
 		cost = 5
@@ -2133,13 +2182,14 @@ focus_tree = {
 		prerequisite = { focus = FRA_folkish_revival  }
 		completion_reward = {
 			###event about grandiose parade and national and monarchist symbolism being put up everywhere nazi style
+			country_event = { id = rob_france.64 days =  1 }
 		}
 	}
 
 	#National Patriotism
 	focus = {
 		id = FRA_national_patriotism
-		icon = GFX_FRA_national_patriotism-445
+		icon = GFX_FRA_national_patriotism
 		x = 42
 		y = 5
 		cost = 5
@@ -2157,7 +2207,7 @@ focus_tree = {
 	#Crown The King
 	focus = {
 		id = FRA_crown_the_king
-		icon = GFX_FRA_crown_the_king-445
+		icon = GFX_FRA_crown_the_king
 		x = 46
 		y = 5
 		cost = 5
@@ -2166,14 +2216,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_execute_the_liberal  }
 		completion_reward = {
-			###event
+			country_event = { id = rob_france.77 days =  3 }
 		}
 	}
 
 	#The Great Rebuilding of France
 	focus = {
 		id = FRA_the_great_rebuilding_of_france
-		icon = GFX_FRA_the_great_rebuilding_of_france-445
+		icon = GFX_FRA_the_great_rebuilding_of_france
 		x = 52
 		y = 5
 		cost = 5
@@ -2182,6 +2232,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_new_architecture  }
 		completion_reward = {
+			add_political_power = -65
 			swap_ideas = {
 				remove_idea = fra_dum_arch
 				add_idea = fra_dum_arch_2
@@ -2192,7 +2243,7 @@ focus_tree = {
 	#Dumezil is Always Right
 	focus = {
 		id = FRA_dumezil_is_always_right
-		icon = GFX_FRA_dumezil_is_always_right-445
+		icon = GFX_FRA_dumezil_is_always_right
 		x = 54
 		y = 7
 		cost = 5
@@ -2201,7 +2252,9 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_great_scholar  }
 		completion_reward = {
-			###event
+			hidden_effect = {
+				country_event = { id = rob_france.67 days =  3 }
+			}
 			swap_ideas = {
 				remove_idea = fra_dum_persona_cult
 				add_idea = fra_dum_persona_cult_2
@@ -2212,7 +2265,7 @@ focus_tree = {
 	#New Architecture
 	focus = {
 		id = FRA_new_architecture
-		icon = GFX_FRA_new_architecture-445
+		icon = GFX_FRA_new_architecture
 		x = 52
 		y = 4
 		cost = 5
@@ -2231,7 +2284,7 @@ focus_tree = {
 	#Burn Liberal Symbolic
 	focus = {
 		id = FRA_burn_liberal_symbolic
-		icon = GFX_FRA_burn_liberal_symbolic-445
+		icon = GFX_FRA_burn_liberal_symbolic
 		x = 4
 		y = 4
 		cost = 5
@@ -2240,7 +2293,6 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_beat_the_academics  }
 		completion_reward = {
-			###popularity
 			add_popularity = { ideology = social_liberal  popularity = -0.2 }
 		}
 	}
@@ -2248,7 +2300,7 @@ focus_tree = {
 	#The Upcoming Golden Age
 	focus = {
 		id = FRA_the_upcoming_golden_age
-		icon = GFX_FRA_the_upcoming_golden_age-445
+		icon = GFX_FRA_the_upcoming_golden_age
 		x = 54
 		y = 11
 		cost = 5
@@ -2264,7 +2316,7 @@ focus_tree = {
 	#The Great Scholar
 	focus = {
 		id = FRA_the_great_scholar
-		icon = GFX_FRA_the_great_scholar-445
+		icon = GFX_FRA_the_great_scholar
 		x = 54
 		y = 6
 		cost = 5
@@ -2274,9 +2326,11 @@ focus_tree = {
 		prerequisite = { focus = FRA_obligatory_mythology_courses  }
 		completion_reward = {
 			add_research_slot = 1
-			###event
 			add_ideas = {
 				fra_dum_persona_cult
+			}
+			hidden_effect = {
+				country_event = { id = rob_france.75 days = 3 }
 			}
 		}
 	}
@@ -2284,7 +2338,7 @@ focus_tree = {
 	#Coax the Church
 	focus = {
 		id = FRA_coax_the_church
-		icon = GFX_FRA_coax_the_church-445
+		icon = GFX_FRA_coax_the_church
 		x = 52
 		y = 6
 		cost = 5
@@ -2293,14 +2347,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_great_rebuilding_of_france  }
 		completion_reward = {
-			###event
+			country_event = { id = rob_france.72 days =  3 }
 		}
 	}
 
 	#Generous Student Subsidies
 	focus = {
 		id = FRA_generous_student_subsidies
-		icon = GFX_FRA_generous_student_subsidies-445
+		icon = GFX_FRA_generous_student_subsidies
 		x = 54
 		y = 4
 		cost = 5
@@ -2318,7 +2372,7 @@ focus_tree = {
 	#Obligatory Mythology Courses
 	focus = {
 		id = FRA_obligatory_mythology_courses
-		icon = GFX_FRA_obligatory_mythology_courses-445
+		icon = GFX_FRA_obligatory_mythology_courses
 		x = 54
 		y = 5
 		cost = 5
@@ -2337,7 +2391,7 @@ focus_tree = {
 	#The Senate of Franks
 	focus = {
 		id = FRA_the_senate_of_franks
-		icon = GFX_FRA_the_senate_of_franks-445
+		icon = GFX_FRA_the_senate_of_franks
 		x = 56
 		y = 7
 		cost = 5
@@ -2353,7 +2407,7 @@ focus_tree = {
 	#Reverse the Tides
 	focus = {
 		id = FRA_reverse_the_tides
-		icon = GFX_FRA_reverse_the_tides-445
+		icon = GFX_FRA_reverse_the_tides
 		x = 56
 		y = 4
 		cost = 5
@@ -2369,7 +2423,7 @@ focus_tree = {
 	#Limit Voting Rights
 	focus = {
 		id = FRA_limit_voting_rights
-		icon = GFX_FRA_limit_voting_rights-445
+		icon = GFX_FRA_limit_voting_rights
 		x = 56
 		y = 6
 		cost = 5
@@ -2387,7 +2441,7 @@ focus_tree = {
 	#Honor the Worker
 	focus = {
 		id = FRA_honor_the_worker
-		icon = GFX_FRA_honor_the_worker-445
+		icon = GFX_FRA_honor_the_worker
 		x = 50
 		y = 6
 		cost = 5
@@ -2406,7 +2460,7 @@ focus_tree = {
 	#Aid Foreign Pelekists
 	focus = {
 		id = FRA_aid_foreign_pelekists
-		icon = GFX_FRA_aid_foreign_pelekists-445
+		icon = GFX_FRA_aid_foreign_pelekists
 		x = 55
 		y = 10
 		cost = 5
@@ -2422,7 +2476,7 @@ focus_tree = {
 	#Bread and Circuses
 	focus = {
 		id = FRA_bread_and_circuses
-		icon = GFX_FRA_bread_and_circuses-445
+		icon = GFX_FRA_bread_and_circuses
 		x = 50
 		y = 7
 		cost = 5
@@ -2440,7 +2494,7 @@ focus_tree = {
 	#Indo-European Brotherhood
 	focus = {
 		id = FRA_indoeuropean_brotherhood
-		icon = GFX_FRA_indoeuropean_brotherhood-445
+		icon = GFX_FRA_indoeuropean_brotherhood
 		x = 53
 		y = 10
 		cost = 5
@@ -2456,7 +2510,7 @@ focus_tree = {
 	#The Great Temple of Taranis
 	focus = {
 		id = FRA_the_great_temple_of_taranis
-		icon = GFX_FRA_the_great_temple_of_taranis-445
+		icon = GFX_FRA_the_great_temple_of_taranis
 		x = 52
 		y = 7
 		cost = 5
@@ -2465,14 +2519,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_coax_the_church  }
 		completion_reward = {
-			
+			country_event = { id = rob_france.71 days = 1 }
 		}
 	}
 
 	#Found the European League
 	focus = {
 		id = FRA_found_the_european_league
-		icon = GFX_FRA_found_the_european_league-445
+		icon = GFX_FRA_found_the_european_league
 		x = 53
 		y = 9
 		cost = 5
@@ -2488,7 +2542,7 @@ focus_tree = {
 	#The Pelekist Eagle
 	focus = {
 		id = FRA_the_pelekist_eagle
-		icon = GFX_FRA_the_pelekist_eagle-445
+		icon = GFX_FRA_the_pelekist_eagle
 		x = 53
 		y = 12
 		cost = 5
@@ -2504,7 +2558,7 @@ focus_tree = {
 	#Europe - A Nation
 	focus = {
 		id = FRA_europe__a_nation
-		icon = GFX_FRA_europe__a_nation-445
+		icon = GFX_FRA_europe__a_nation
 		x = 52
 		y = 11
 		cost = 5
@@ -2520,7 +2574,7 @@ focus_tree = {
 	#Expansionist Policy
 	focus = {
 		id = FRA_expansionist_policy
-		icon = GFX_FRA_expansionist_policy-445
+		icon = GFX_FRA_expansionist_policy
 		x = 51
 		y = 10
 		cost = 5
@@ -2536,7 +2590,7 @@ focus_tree = {
 	#Dissolve the Parlament
 	focus = {
 		id = FRA_dissolve_the_parlament
-		icon = GFX_FRA_dissolve_the_parlament-445
+		icon = GFX_FRA_dissolve_the_parlament
 		x = 46
 		y = 7
 		cost = 5
@@ -2545,14 +2599,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_elevate_the_church  }
 		completion_reward = {
-			### event
+			country_event = { id = rob_france.80 days =  3 }
 		}
 	}
 
 	#Break The Nationalist Dogma
 	focus = {
 		id = FRA_break_the_nationalist_dogma
-		icon = GFX_FRA_break_the_nationalist_dogma-445
+		icon = GFX_FRA_break_the_nationalist_dogma
 		x = 48
 		y = 4
 		cost = 5
@@ -2569,7 +2623,7 @@ focus_tree = {
 	#Ministry Of Societal Virtuosity
 	focus = {
 		id = FRA_ministry_of_societal_virtuosity
-		icon = GFX_FRA_ministry_of_societal_virtuosity-445
+		icon = GFX_FRA_ministry_of_societal_virtuosity
 		x = 44
 		y = 6
 		cost = 5
@@ -2578,7 +2632,9 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_vatican_hegemony  }
 		completion_reward = {
-			#event
+			hidden_effect = {
+				country_event = { id = rob_france.69 days = 3 }
+			}
 			add_research_slot = 1
 		}
 	}
@@ -2586,7 +2642,7 @@ focus_tree = {
 	#Begin the Reversal of 1871
 	focus = {
 		id = FRA_begin_the_reversal_of_1871
-		icon = GFX_FRA_begin_the_reversal_of_1871-445
+		icon = GFX_FRA_begin_the_reversal_of_1871
 		x = 45
 		y = 3
 		cost = 5
@@ -2605,7 +2661,7 @@ focus_tree = {
 	#Love Thy Family
 	focus = {
 		id = FRA_love_thy_family
-		icon = GFX_FRA_love_thy_family-445
+		icon = GFX_FRA_love_thy_family
 		x = 44
 		y = 7
 		cost = 5
@@ -2624,7 +2680,7 @@ focus_tree = {
 	#Elevate the Church
 	focus = {
 		id = FRA_elevate_the_church
-		icon = GFX_FRA_elevate_the_church-445
+		icon = GFX_FRA_elevate_the_church
 		x = 46
 		y = 6
 		cost = 5
@@ -2634,13 +2690,14 @@ focus_tree = {
 		prerequisite = { focus = FRA_crown_the_king  }
 		completion_reward = {
 			###event
+			country_event = { id = rob_france.79 days =  3 }
 		}
 	}
 
 	#Discredit Romanticism
 	focus = {
 		id = FRA_discredit_romanticism
-		icon = GFX_FRA_discredit_romanticism-445
+		icon = GFX_FRA_discredit_romanticism
 		x = 42
 		y = 4
 		cost = 5
@@ -2657,7 +2714,7 @@ focus_tree = {
 	#Expel the Métèques
 	focus = {
 		id = FRA_expelthemeteques
-		icon = GFX_FRA_expelthemeteques-445
+		icon = GFX_FRA_expelthemeteques
 		x = 44
 		y = 4
 		cost = 5
@@ -2666,14 +2723,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_begin_the_reversal_of_1871  }
 		completion_reward = {
-			###event
+			country_event = { id = rob_france.73 days =  1 }
 		}
 	}
 
 	#Execute the Liberal
 	focus = {
 		id = FRA_execute_the_liberal
-		icon = GFX_FRA_execute_the_liberal-445
+		icon = GFX_FRA_execute_the_liberal
 		x = 46
 		y = 4
 		cost = 5
@@ -2690,7 +2747,7 @@ focus_tree = {
 	#Federal Monarchy
 	focus = {
 		id = FRA_federal_monarchy
-		icon = GFX_FRA_federal_monarchy-445
+		icon = GFX_FRA_federal_monarchy
 		x = 45
 		y = 8
 		cost = 5
@@ -2702,13 +2759,16 @@ focus_tree = {
 			add_ideas = {
 				fra_maur_fed_monarc
 			}
+			remove_ideas = {
+				fra_pol_violence
+			}
 		}
 	}
 
 	#Decentralised Assemblies In France...
 	focus = {
 		id = FRA_decentralisedassembliesinfrance
-		icon = GFX_FRA_decentralisedassembliesinfrance-445
+		icon = GFX_FRA_decentralisedassembliesinfrance
 		x = 48
 		y = 6
 		cost = 5
@@ -2726,7 +2786,7 @@ focus_tree = {
 	#The French France
 	focus = {
 		id = FRA_the_french_france
-		icon = GFX_FRA_the_french_france-445
+		icon = GFX_FRA_the_french_france
 		x = 45
 		y = 11
 		cost = 5
@@ -2742,7 +2802,7 @@ focus_tree = {
 	#Stop Minority Integration
 	focus = {
 		id = FRA_stop_minority_integration
-		icon = GFX_FRA_stop_minority_integration-445
+		icon = GFX_FRA_stop_minority_integration
 		x = 48
 		y = 5
 		cost = 5
@@ -2761,7 +2821,7 @@ focus_tree = {
 	#...And In Colonies...
 	focus = {
 		id = FRA_andincolonies
-		icon = GFX_FRA_andincolonies-445
+		icon = GFX_FRA_andincolonies
 		x = 48
 		y = 7
 		cost = 5
@@ -2770,14 +2830,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_decentralisedassembliesinfrance  }
 		completion_reward = {
-			###event and decolonization of africa
+			country_event = { id = rob_france.78 days =  3 }
 		}
 	}
 
 	#Vatican Hegemony
 	focus = {
 		id = FRA_vatican_hegemony
-		icon = GFX_FRA_vatican_hegemony-445
+		icon = GFX_FRA_vatican_hegemony
 		x = 44
 		y = 5
 		cost = 5
@@ -2786,14 +2846,14 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_expelthemeteques  }
 		completion_reward = {
-			###event 
+			country_event = { id = rob_france.68 days =  1 }
 		}
 	}
 
 	#Trade Corpus System
 	focus = {
 		id = FRA_trade_corpus_system
-		icon = GFX_FRA_trade_corpus_system-445
+		icon = GFX_FRA_trade_corpus_system
 		x = 42
 		y = 6
 		cost = 5
@@ -2811,7 +2871,7 @@ focus_tree = {
 	#The French Interests
 	focus = {
 		id = FRA_the_french_interests
-		icon = GFX_FRA_the_french_interests-445
+		icon = GFX_FRA_the_french_interests
 		x = 45
 		y = 9
 		cost = 5
@@ -2827,7 +2887,7 @@ focus_tree = {
 	#Demand Quebec
 	focus = {
 		id = FRA_demand_quebec
-		icon = GFX_FRA_demand_quebec-445
+		icon = GFX_FRA_demand_quebec
 		x = 47
 		y = 10
 		cost = 5
@@ -2843,7 +2903,7 @@ focus_tree = {
 	#Wallonian French
 	focus = {
 		id = FRA_wallonian_french
-		icon = GFX_FRA_wallonian_french-445
+		icon = GFX_FRA_wallonian_french
 		x = 43
 		y = 10
 		cost = 5
@@ -2859,7 +2919,7 @@ focus_tree = {
 	#Revenge For the Fallen
 	focus = {
 		id = FRA_revenge_for_the_fallen
-		icon = GFX_FRA_revenge_for_the_fallen-445
+		icon = GFX_FRA_revenge_for_the_fallen
 		x = 45
 		y = 10
 		cost = 5
@@ -2875,7 +2935,7 @@ focus_tree = {
 	#The Labor Aristocrat
 	focus = {
 		id = FRA_the_labor_aristocrat
-		icon = GFX_FRA_the_labor_aristocrat-445
+		icon = GFX_FRA_the_labor_aristocrat
 		x = 2
 		y = 6
 		cost = 5
@@ -2891,7 +2951,7 @@ focus_tree = {
 	#Obliterate Decadence
 	focus = {
 		id = FRA_obliterate_decadence
-		icon = GFX_FRA_obliterate_decadence-445
+		icon = GFX_FRA_obliterate_decadence
 		x = 6
 		y = 3
 		cost = 5
@@ -2911,7 +2971,7 @@ focus_tree = {
 	#Hang the Republicans
 	focus = {
 		id = FRA_hang_the_republicans
-		icon = GFX_FRA_hang_the_republicans-445
+		icon = GFX_FRA_hang_the_republicans
 		x = 4
 		y = 2
 		cost = 5
@@ -2928,7 +2988,7 @@ focus_tree = {
 	#Nationalize the Bourgeois
 	focus = {
 		id = FRA_nationalize_the_bourgeois
-		icon = GFX_FRA_nationalize_the_bourgeois-445
+		icon = GFX_FRA_nationalize_the_bourgeois
 		x = 6
 		y = 5
 		cost = 5
@@ -2947,7 +3007,7 @@ focus_tree = {
 	#Revitalization of the Bourgeois
 	focus = {
 		id = FRA_revitalization_of_the_bourgeois
-		icon = GFX_FRA_revitalization_of_the_bourgeois-445
+		icon = GFX_FRA_revitalization_of_the_bourgeois
 		x = 6
 		y = 2
 		cost = 5
@@ -2966,7 +3026,7 @@ focus_tree = {
 	#The New Bourgeois
 	focus = {
 		id = FRA_the_new_bourgeois
-		icon = GFX_FRA_the_new_bourgeois-445
+		icon = GFX_FRA_the_new_bourgeois
 		x = 6
 		y = 7
 		cost = 5
@@ -2986,7 +3046,7 @@ focus_tree = {
 	#Redistribute Excess Capital
 	focus = {
 		id = FRA_redistribute_excess_capital
-		icon = GFX_FRA_redistribute_excess_capital-445
+		icon = GFX_FRA_redistribute_excess_capital
 		x = 6
 		y = 4
 		cost = 5
@@ -3005,7 +3065,7 @@ focus_tree = {
 	#Beat the Academics
 	focus = {
 		id = FRA_beat_the_academics
-		icon = GFX_FRA_beat_the_academics-445
+		icon = GFX_FRA_beat_the_academics
 		x = 4
 		y = 3
 		cost = 5
@@ -3022,7 +3082,7 @@ focus_tree = {
 	#The Death of Enlightenment
 	focus = {
 		id = FRA_the_death_of_enlightenment
-		icon = GFX_FRA_the_death_of_enlightenment-445
+		icon = GFX_FRA_the_death_of_enlightenment
 		x = 4
 		y = 7
 		cost = 5
@@ -3041,9 +3101,9 @@ focus_tree = {
 	#Freedom Through Conflict
 	focus = {
 		id = FRA_freedom_through_conflict
-		icon = GFX_FRA_freedom_through_conflict-445
-		x = 5
-		y = 10
+		icon = GFX_FRA_freedom_through_conflict
+		x = 6
+		y = 11
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -3060,7 +3120,7 @@ focus_tree = {
 	#Syndicalist Technocracy
 	focus = {
 		id = FRA_syndicalist_technocracy
-		icon = GFX_FRA_syndicalist_technocracy-445
+		icon = GFX_FRA_syndicalist_technocracy
 		x = 2
 		y = 7
 		cost = 5
@@ -3078,7 +3138,7 @@ focus_tree = {
 	#Exile of Parasites
 	focus = {
 		id = FRA_exile_of_parasites
-		icon = GFX_FRA_exile_of_parasites-445
+		icon = GFX_FRA_exile_of_parasites
 		x = 4
 		y = 6
 		cost = 5
@@ -3094,7 +3154,7 @@ focus_tree = {
 	#The Joy of Duty
 	focus = {
 		id = FRA_the_joy_of_duty
-		icon = GFX_FRA_the_joy_of_duty-445
+		icon = GFX_FRA_the_joy_of_duty
 		x = 6
 		y = 6
 		cost = 5
@@ -3113,7 +3173,7 @@ focus_tree = {
 	#Anti-Capitalism
 	focus = {
 		id = FRA_anticapitalism
-		icon = GFX_FRA_anticapitalism-445
+		icon = GFX_FRA_anticapitalism
 		x = 2
 		y = 2
 		cost = 5
@@ -3131,7 +3191,7 @@ focus_tree = {
 	#Enrich the Countryside
 	focus = {
 		id = FRA_enrich_the_countryside
-		icon = GFX_FRA_enrich_the_countryside-445
+		icon = GFX_FRA_enrich_the_countryside
 		x = 2
 		y = 5
 		cost = 5
@@ -3149,7 +3209,7 @@ focus_tree = {
 	#Dissolve the Parliament
 	focus = {
 		id = FRA_dissolve_the_parliament
-		icon = GFX_FRA_dissolve_the_parliament-445
+		icon = GFX_FRA_dissolve_the_parliament
 		x = 4
 		y = 5
 		cost = 5
@@ -3166,7 +3226,7 @@ focus_tree = {
 	#Proletarian Nationalism
 	focus = {
 		id = FRA_proletarian_nationalism
-		icon = GFX_FRA_proletarian_nationalism-445
+		icon = GFX_FRA_proletarian_nationalism
 		x = 2
 		y = 4
 		cost = 5
@@ -3184,9 +3244,9 @@ focus_tree = {
 	#An Avant-Garde France
 	focus = {
 		id = FRA_an_avantgarde_france
-		icon = GFX_FRA_an_avantgarde_france-445
+		icon = GFX_FRA_an_avantgarde_france
 		x = 4
-		y = 11
+		y = 12
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -3197,9 +3257,9 @@ focus_tree = {
 	#Spread the Revolution
 	focus = {
 		id = FRA_spread_the_revolution
-		icon = GFX_FRA_spread_the_revolution-445
+		icon = GFX_FRA_spread_the_revolution
 		x = 4
-		y = 9
+		y = 10
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -3213,7 +3273,7 @@ focus_tree = {
 	#The Heroic Proletariat
 	focus = {
 		id = FRA_the_heroic_proletariat
-		icon = GFX_FRA_the_heroic_proletariat-445
+		icon = GFX_FRA_the_heroic_proletariat
 		x = 4
 		y = 8
 		cost = 5
@@ -3229,9 +3289,9 @@ focus_tree = {
 	#The Communard Legion
 	focus = {
 		id = FRA_the_communard_legion
-		icon = GFX_FRA_the_communard_legion-445
-		x = 3
-		y = 10
+		icon = GFX_FRA_the_communard_legion
+		x = 2
+		y = 11
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -3243,7 +3303,7 @@ focus_tree = {
 	#Convoy Escorts
 	focus = {
 		id = FRA_convoy_escorts
-		icon = GFX_FRA_convoy_escorts-445
+		icon = GFX_FRA_convoy_escorts
 		x = 37
 		y = 16
 		cost = 5
@@ -3264,7 +3324,7 @@ focus_tree = {
 	#Wage Undersea Warfare
 	focus = {
 		id = FRA_wage_undersea_warfare
-		icon = GFX_FRA_wage_undersea_warfare-445
+		icon = GFX_FRA_wage_undersea_warfare
 		x = 39
 		y = 15
 		cost = 5
@@ -3286,7 +3346,7 @@ focus_tree = {
 	#Continue Carrier Programms
 	focus = {
 		id = FRA_continue_carrier_programms
-		icon = GFX_FRA_continue_carrier_programms-445
+		icon = GFX_FRA_continue_carrier_programms
 		x = 31
 		y = 16
 		cost = 5
@@ -3308,7 +3368,7 @@ focus_tree = {
 	#Traditional Roles
 	focus = {
 		id = FRA_traditional_roles
-		icon = GFX_FRA_traditional_roles-445
+		icon = GFX_FRA_traditional_roles
 		x = 35
 		y = 16
 		cost = 5
@@ -3332,7 +3392,7 @@ focus_tree = {
 	#Grand Forces Coordination
 	focus = {
 		id = FRA_grand_forces_coordination
-		icon = GFX_FRA_grand_forces_coordination-445
+		icon = GFX_FRA_grand_forces_coordination
 		x = 23
 		y = 16
 		cost = 5
@@ -3350,7 +3410,7 @@ focus_tree = {
 	#Flexible Bombers
 	focus = {
 		id = FRA_flexible_bombers
-		icon = GFX_FRA_flexible_bombers-445
+		icon = GFX_FRA_flexible_bombers
 		x = 23
 		y = 17
 		cost = 5
@@ -3372,7 +3432,7 @@ focus_tree = {
 	#Aerial Destruction
 	focus = {
 		id = FRA_aerial_destruction
-		icon = GFX_FRA_aerial_destruction-445
+		icon = GFX_FRA_aerial_destruction
 		x = 22
 		y = 18
 		cost = 5
@@ -3390,7 +3450,7 @@ focus_tree = {
 	#Light Bombers
 	focus = {
 		id = FRA_light_bombers
-		icon = GFX_FRA_light_bombers-445
+		icon = GFX_FRA_light_bombers
 		x = 24
 		y = 18
 		cost = 5
@@ -3413,7 +3473,7 @@ focus_tree = {
 	#Airbase Construction
 	focus = {
 		id = FRA_airbase_construction
-		icon = GFX_FRA_airbase_construction-445
+		icon = GFX_FRA_airbase_construction
 		x = 25
 		y = 16
 		cost = 5
@@ -3486,7 +3546,7 @@ focus_tree = {
 	#Improved Production Methods
 	focus = {
 		id = FRA_improved_production_methods
-		icon = GFX_FRA_improved_production_methods-445
+		icon = GFX_FRA_improved_production_methods
 		x = 25
 		y = 17
 		cost = 5
@@ -3504,7 +3564,7 @@ focus_tree = {
 	#Fighther Interception
 	focus = {
 		id = FRA_fighther_interception
-		icon = GFX_FRA_fighther_interception-445
+		icon = GFX_FRA_fighther_interception
 		x = 27
 		y = 16
 		cost = 5
@@ -3527,7 +3587,7 @@ focus_tree = {
 	#Multi-Engine Fighters
 	focus = {
 		id = FRA_multiengine_fighters
-		icon = GFX_FRA_multiengine_fighters-445
+		icon = GFX_FRA_multiengine_fighters
 		x = 27
 		y = 17
 		cost = 5
@@ -3549,7 +3609,7 @@ focus_tree = {
 	#Coordinated Bombings
 	focus = {
 		id = FRA_coordinated_bombings
-		icon = GFX_FRA_coordinated_bombings-445
+		icon = GFX_FRA_coordinated_bombings
 		x = 26
 		y = 18
 		cost = 5
@@ -3572,7 +3632,7 @@ focus_tree = {
 	#Rule the Skies
 	focus = {
 		id = FRA_rule_the_skies
-		icon = GFX_FRA_rule_the_skies-445
+		icon = GFX_FRA_rule_the_skies
 		x = 25
 		y = 19
 		cost = 5
@@ -3590,7 +3650,7 @@ focus_tree = {
 	#Marine Nationale
 	focus = {
 		id = FRA_marine_nationale
-		icon = GFX_FRA_marine_nationale-445
+		icon = GFX_FRA_marine_nationale
 		x = 36
 		y = 14
 		cost = 5
@@ -3606,7 +3666,7 @@ focus_tree = {
 	#Rebuild the Surface Fleet
 	focus = {
 		id = FRA_rebuild_the_surface_fleet
-		icon = GFX_FRA_rebuild_the_surface_fleet-445
+		icon = GFX_FRA_rebuild_the_surface_fleet
 		x = 33
 		y = 15
 		cost = 5
@@ -3628,7 +3688,7 @@ focus_tree = {
 	#Armée de l'Air
 	focus = {
 		id = FRA_armeedelair
-		icon = GFX_FRA_armeedelair-445
+		icon = GFX_FRA_armeedelair
 		x = 25
 		y = 14
 		cost = 5
@@ -3644,7 +3704,7 @@ focus_tree = {
 	#Ground Support
 	focus = {
 		id = FRA_ground_support
-		icon = GFX_FRA_ground_support-445
+		icon = GFX_FRA_ground_support
 		x = 23
 		y = 15
 		cost = 5
@@ -3666,7 +3726,7 @@ focus_tree = {
 	#Air Dominance
 	focus = {
 		id = FRA_air_dominance
-		icon = GFX_FRA_air_dominance-445
+		icon = GFX_FRA_air_dominance
 		x = 27
 		y = 15
 		cost = 5
@@ -3688,7 +3748,7 @@ focus_tree = {
 	#Improved Screening Ships
 	focus = {
 		id = FRA_improved_screening_ships
-		icon = GFX_FRA_improved_screening_ships-445
+		icon = GFX_FRA_improved_screening_ships
 		x = 37
 		y = 17
 		cost = 5
@@ -3710,7 +3770,7 @@ focus_tree = {
 	#Update the Battlefleet
 	focus = {
 		id = FRA_update_the_battlefleet
-		icon = GFX_FRA_update_the_battlefleet-445
+		icon = GFX_FRA_update_the_battlefleet
 		x = 35
 		y = 17
 		cost = 5
@@ -3731,7 +3791,7 @@ focus_tree = {
 	#Finish the Joffre
 	focus = {
 		id = FRA_finish_the_joffre
-		icon = GFX_FRA_finish_the_joffre-445
+		icon = GFX_FRA_finish_the_joffre
 		x = 31
 		y = 17
 		cost = 5
@@ -3747,7 +3807,7 @@ focus_tree = {
 	#Submarine Forces
 	focus = {
 		id = FRA_submarine_forces
-		icon = GFX_FRA_submarine_forces-445
+		icon = GFX_FRA_submarine_forces
 		x = 39
 		y = 16
 		cost = 5
@@ -3768,7 +3828,7 @@ focus_tree = {
 	#Naval Mine Ships
 	focus = {
 		id = FRA_naval_mine_ships
-		icon = GFX_FRA_naval_mine_ships-445
+		icon = GFX_FRA_naval_mine_ships
 		x = 41
 		y = 16
 		cost = 5
@@ -3797,7 +3857,7 @@ focus_tree = {
 	#Convoy Hunters
 	focus = {
 		id = FRA_convoy_hunters
-		icon = GFX_FRA_convoy_hunters-445
+		icon = GFX_FRA_convoy_hunters
 		x = 39
 		y = 17
 		cost = 5
@@ -3815,7 +3875,7 @@ focus_tree = {
 	#Update Naval Bases
 	focus = {
 		id = FRA_update_naval_bases
-		icon = GFX_FRA_update_naval_bases-445
+		icon = GFX_FRA_update_naval_bases
 		x = 36
 		y = 18
 		cost = 5
@@ -3846,7 +3906,7 @@ focus_tree = {
 	#Civil War Victory
 	focus = {
 		id = FRA_civil_war_victory
-		icon = GFX_FRA_civil_war_victory-445
+		icon = GFX_FRA_civil_war_victory
 		x = 49
 		y = 13
 		cost = 5
@@ -3864,7 +3924,7 @@ focus_tree = {
 	#Repair the Civilian Economy
 	focus = {
 		id = FRA_repair_the_civilian_economy
-		icon = GFX_FRA_repair_the_civilian_economy-445
+		icon = GFX_FRA_repair_the_civilian_economy
 		x = 45
 		y = 14
 		cost = 5
@@ -3883,7 +3943,7 @@ focus_tree = {
 	#Rebuillding the Roads
 	focus = {
 		id = FRA_rebuillding_the_roads
-		icon = GFX_FRA_rebuillding_the_roads-445
+		icon = GFX_FRA_rebuillding_the_roads
 		x = 47
 		y = 14
 		cost = 5
@@ -4060,7 +4120,7 @@ focus_tree = {
 	#Aid Local Entrepreneurs
 	focus = {
 		id = FRA_aid_local_entrepreneurs
-		icon = GFX_FRA_aid_local_entrepreneurs-445
+		icon = GFX_FRA_aid_local_entrepreneurs
 		x = 47
 		y = 15
 		cost = 5
@@ -4135,7 +4195,7 @@ focus_tree = {
 	#Restart Civil Services
 	focus = {
 		id = FRA_restart_civil_services
-		icon = GFX_FRA_restart_civil_services-445
+		icon = GFX_FRA_restart_civil_services
 		x = 45
 		y = 15
 		cost = 5
@@ -4154,7 +4214,7 @@ focus_tree = {
 	#Laissez-Faire
 	focus = {
 		id = FRA_laissezfaire
-		icon = GFX_FRA_laissezfaire-445
+		icon = GFX_FRA_laissezfaire
 		x = 44
 		y = 16
 		cost = 5
@@ -4173,7 +4233,7 @@ focus_tree = {
 	#Drigisme
 	focus = {
 		id = FRA_drigisme
-		icon = GFX_FRA_drigisme-445
+		icon = GFX_FRA_drigisme
 		x = 46
 		y = 16
 		cost = 5
@@ -4192,7 +4252,7 @@ focus_tree = {
 	#Market Regulation
 	focus = {
 		id = FRA_market_regulation
-		icon = GFX_FRA_market_regulation-445
+		icon = GFX_FRA_market_regulation
 		x = 48
 		y = 16
 		cost = 5
@@ -4211,7 +4271,7 @@ focus_tree = {
 	#A Revitalized Economy
 	focus = {
 		id = FRA_a_revitalized_economy
-		icon = GFX_FRA_a_revitalized_economy-445
+		icon = GFX_FRA_a_revitalized_economy
 		x = 45
 		y = 17
 		search_filters = {
@@ -4228,7 +4288,7 @@ focus_tree = {
 	#Global pre-Eminence
 	focus = {
 		id = FRA_global_preeminence
-		icon = GFX_FRA_global_preeminence-445
+		icon = GFX_FRA_global_preeminence
 		x = 47
 		y = 17
 		cost = 5
@@ -4246,7 +4306,7 @@ focus_tree = {
 	#Regional Reconstruction Program
 	focus = {
 		id = FRA_regional_reconstruction_program
-		icon = GFX_FRA_regional_reconstruction_program-445
+		icon = GFX_FRA_regional_reconstruction_program
 		x = 51
 		y = 14
 		cost = 5
@@ -4265,7 +4325,7 @@ focus_tree = {
 	#Vichy and Centre-Val de Loire
 	focus = {
 		id = FRA_vichy_and_centreval_de_loire
-		icon = GFX_FRA_vichy_and_centreval_de_loire-445
+		icon = GFX_FRA_vichy_and_centreval_de_loire
 		x = 50
 		y = 15
 		cost = 5
@@ -4279,7 +4339,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 				  type = arms_factory
-				   level = 1
+				   level = 2
 				   instant_build = yes
 				  }
 			  }
@@ -4287,7 +4347,7 @@ focus_tree = {
 				  add_extra_state_shared_building_slots = 1
 				  add_building_construction = {
 					type = industrial_complex
-					 level = 1
+					 level = 2
 					 instant_build = yes
 					}
 				}
@@ -4313,7 +4373,7 @@ focus_tree = {
 	#Occitanie
 	focus = {
 		id = FRA_occitanie
-		icon = GFX_FRA_occitanie-445
+		icon = GFX_FRA_occitanie
 		x = 52
 		y = 15
 		cost = 5
@@ -4327,7 +4387,7 @@ focus_tree = {
 	  		add_extra_state_shared_building_slots = 1
 	  		add_building_construction = {
 				type = arms_factory
-	 			level = 1
+	 			level = 2
 	 			instant_build = yes
 				}
 			}
@@ -4335,7 +4395,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 				  type = industrial_complex
-				   level = 1
+				   level = 2
 				   instant_build = yes
 				  }
 			  }
@@ -4361,7 +4421,7 @@ focus_tree = {
 	#The Alps to Strasbourg
 	focus = {
 		id = FRA_the_alps_to_strasbourg
-		icon = GFX_FRA_the_alps_to_strasbourg-445
+		icon = GFX_FRA_the_alps_to_strasbourg
 		x = 52
 		y = 16
 		cost = 5
@@ -4375,7 +4435,7 @@ focus_tree = {
 	  		add_extra_state_shared_building_slots = 1
 	  		add_building_construction = {
 				type = industrial_complex
-	 			level = 1
+	 			level = 2
 	 			instant_build = yes
 				}
 			}
@@ -4383,7 +4443,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 				  type = arms_factory
-				   level = 1
+				   level = 2
 				   instant_build = yes
 				  }
 			  }
@@ -4409,7 +4469,7 @@ focus_tree = {
 	#Dunkerque to Bretagne
 	focus = {
 		id = FRA_dunkerque_to_bretagne
-		icon = GFX_FRA_dunkerque_to_bretagne-445
+		icon = GFX_FRA_dunkerque_to_bretagne
 		x = 50
 		y = 16
 		cost = 5
@@ -4423,7 +4483,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 				  type = arms_factory
-				   level = 1
+				   level = 2
 				   instant_build = yes
 				  }
 			  }
@@ -4431,7 +4491,7 @@ focus_tree = {
 				  add_extra_state_shared_building_slots = 1
 				  add_building_construction = {
 					type = industrial_complex
-					 level = 1
+					 level = 2
 					 instant_build = yes
 					}
 				}
@@ -4457,7 +4517,7 @@ focus_tree = {
 	#Rebuilding Paris
 	focus = {
 		id = FRA_rebuilding_paris
-		icon = GFX_FRA_rebuilding_paris-445
+		icon = GFX_FRA_rebuilding_paris
 		x = 51
 		y = 17
 		cost = 5
@@ -4471,7 +4531,7 @@ focus_tree = {
 	  		add_extra_state_shared_building_slots = 4
 	  		add_building_construction = {
 				type = industrial_complex
-	 			level = 4
+	 			level = 6
 	 			instant_build = yes
 				}
 			}

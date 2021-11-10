@@ -194,6 +194,69 @@ ideas = {
     air_close_air_support_attack_factor = 0.04
 	air_close_air_support_defence_factor = 0.04
     }
-   }   
+   }
+   
+   ####France
+
+   morane_saulnier = {
+    allowed = {
+or = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+    }
+    research_bonus = {
+      air_equipment = 0.1
+    }
+    traits = { light_aircraft_manufacturer }
+  }
+  bloch = {       
+    allowed = {
+or = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+    }   
+    research_bonus = {
+      air_equipment = 0.1
+    }
+    traits = { medium_aircraft_manufacturer }
+  }
+  amiot = {     
+    allowed = {
+or = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+    }
+    research_bonus = {
+      air_equipment = 0.1
+    }
+    traits = { heavy_aircraft_manufacturer }
+  }
+  levasseur = {       
+    allowed = {
+or = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+    }
+    research_bonus = {
+      air_equipment = 0.1
+    }
+    traits = { naval_aircraft_manufacturer }
+  }
   }
  }

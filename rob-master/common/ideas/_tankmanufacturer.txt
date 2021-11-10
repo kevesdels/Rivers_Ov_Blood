@@ -143,5 +143,84 @@ ideas = {
 	army_armor_speed_factor = 0.07
    }
   }  
+
+  ###France
+  renault_fra = {
+    picture = renault
+    available = {
+        has_completed_focus = FRA_a_new_doctrine
+    }
+    allowed = {
+OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+    }
+    research_bonus = {
+        armor = 0.15
+    }
+    traits = { heavy_tank_manufacturer }
+}
+
+FRA_AMX = {
+
+    picture = generic_tank_manufacturer_2
+
+    available = {
+        has_completed_focus = FRA_a_reformed_army        
+    }
+    allowed = {
+OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+    }
+    research_bonus = {
+        armor = 0.15
+    }
+    traits = { fast_tank_manufacturer }
+}
+FRA_hotchkiss = {
+    picture = generic_tank_manufacturer_3
+    allowed = {
+OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+    }
+    research_bonus = {
+        armor = 0.15
+    }
+    traits = { infantry_tank_manufacturer }
+}
+
+FRA_APX = {
+    picture = FRA_atelier_puteaux
+    available = {
+        has_completed_focus = FRA_a_reformed_army
+    }  
+    allowed = {
+OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+    }  
+    research_bonus = {
+        armor = 0.15
+    }
+    traits = { medium_tank_manufacturer }
+}
  }
  }

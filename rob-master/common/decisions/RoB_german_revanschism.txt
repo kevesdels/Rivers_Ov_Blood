@@ -25,7 +25,8 @@ GER_german_expansion = {
    tooltip = "Austrians Are Still Busy"
    }
    }
-  complete_effect = {
+   days_remove = 10
+  remove_effect = {
   if = {
    limit = { ACM = { exists = yes } }
    GER = { 
@@ -93,7 +94,8 @@ GER_german_expansion = {
    }
   }
  }
- complete_effect = {
+ days_remove = 10
+ remove_effect = {
   if = {
    limit = { ACM = { exists = yes } }
    ACM = { country_event = { id = spartakus_germany.23 days = 3 } }
@@ -128,7 +130,8 @@ GER_german_expansion = {
    74 = { is_owned_by = GER }
   }
  }
- complete_effect = {
+ days_remove = 10
+ remove_effect = {
   CZE = { country_event =  { id = spartakus_germany.27 days = 3 } }
    GER = { 
     add_state_core = 69
@@ -163,7 +166,8 @@ GER_german_expansion = {
     }
    } 
   }
- complete_effect = {
+  days_remove = 10
+  remove_effect = {
   CZE = { country_event =  { id = spartakus_germany.28 days = 3 } }
 
   }
@@ -188,7 +192,8 @@ GER_german_expansion = {
   DEN = { exists = yes }
  }
  
- complete_effect = {
+ days_remove = 10
+ remove_effect = {
   GER = { 
     add_state_core = 804
     add_state_core = 796
@@ -225,7 +230,8 @@ GER_german_expansion = {
         }
    }
  
- complete_effect = {
+    days_remove = 10
+  remove_effect = {
    every_state = {
     limit = { is_core_of = RHN }
 	add_core_of = GER
@@ -258,7 +264,8 @@ GER_german_expansion = {
       }
  }
  
- complete_effect = {
+    days_remove = 10
+  remove_effect = {
   every_country = {
     limit = {  OR = { controls_state = 865 controls_state = 86 controls_state = 802 controls_state = 801 controls_state = 66 controls_state = 803 controls_state = 67 controls_state = 762 } NOT = { tag = GER is_puppet_of = GER } }
     GER = { 
@@ -304,7 +311,8 @@ GER_german_expansion = {
       }
  }
  
- complete_effect = {
+   days_remove = 10
+  remove_effect = {
   every_country = {
     limit = {  OR = { controls_state = 763 controls_state = 85 controls_state = 980 controls_state = 5  } NOT = { tag = GER is_puppet_of = GER } }
     GER = { 
@@ -336,7 +344,8 @@ GER_german_expansion = {
    has_war = no
   }
   
-  complete_effect = {
+    days_remove = 10
+  remove_effect = {
     FRA = { country_event = { id = spartakus_germany.29 days = 2 } } 
  }
  }
@@ -360,7 +369,8 @@ GER_german_expansion = {
         }
   }
   
-  complete_effect = {
+    days_remove = 10
+  remove_effect = {
 
       every_country = {
         limit = {  OR = { controls_state = 814 controls_state = 816 controls_state = 28 controls_state = 5  } NOT = { tag = GER is_puppet_of = GER } }
@@ -401,7 +411,8 @@ GER_german_expansion = {
 
   }
   
-  complete_effect = {
+    days_remove = 10
+  remove_effect = {
    every_country = {
 	limit = { NOT = { OR = { tag = FRA tag = GER } } NOT = { is_in_faction_with = GER } controls_state = 813 }
 	ROOT = { 
@@ -466,7 +477,8 @@ GER_german_export_revolution = {
    tooltip = "Austrians Are Still Busy"
    }
    }
-  complete_effect = {
+    days_remove = 10
+  remove_effect = {
   if = {
    limit = { ACM = { exists = yes } }
    GER = { add_to_faction = ACM }
@@ -529,7 +541,8 @@ GER_german_export_revolution = {
    }
   }
  }
- complete_effect = {
+   days_remove = 10
+  remove_effect = {
   if = {
    limit = { ACM = { exists = yes } }
    ACM = { country_event =  { id = spartakus_germany.23 days = 3 } }
@@ -572,7 +585,8 @@ GER_german_export_revolution = {
      }
     }
    }
-  complete_effect = {
+    days_remove = 10
+  remove_effect = {
   GER = { declare_war_on = { target = CZE  type = annex_everything } }
    }
   }
@@ -600,7 +614,8 @@ GER_german_export_revolution = {
      }
     }
    }
-  complete_effect = {
+    days_remove = 10
+  remove_effect = {
   GER = { declare_war_on = { target = SLO  type = annex_everything } }
    }
   }
@@ -627,7 +642,8 @@ GER_german_export_revolution = {
     }
    }
    }
-  complete_effect = {
+    days_remove = 10
+  remove_effect = {
   GER = { declare_war_on = { target = HUN  type = annex_everything } }
    }
 
@@ -653,7 +669,8 @@ GER_german_export_revolution = {
     }
    }
    }
-  complete_effect = {
+    days_remove = 10
+  remove_effect = {
   GER = { declare_war_on = { target = POL  type = annex_everything } }
    }
  }
@@ -680,7 +697,8 @@ GER_german_export_revolution = {
     }
    }
     }
-  complete_effect = {
+    days_remove = 10
+  remove_effect = {
   GER = { declare_war_on = { target = PRS  type = annex_everything } }
    }
  }
@@ -707,7 +725,8 @@ GER_german_export_revolution = {
     }
    }
     }
-  complete_effect = {
+    days_remove = 10
+  remove_effect = {
   GER = { declare_war_on = { target = LIT  type = annex_everything } }
    }
  }
@@ -730,7 +749,8 @@ GER_german_export_revolution = {
    AUS = { is_puppet_of = GER }
     }
   }	
-  complete_effect = {
+    days_remove = 10
+  remove_effect = {
   GER = { declare_war_on = { target = ITA  type = annex_everything } }
    }
  }
@@ -747,7 +767,8 @@ GER_german_export_revolution = {
   DEN = { exists = yes }
  }
  
- complete_effect = {
+   days_remove = 10
+  remove_effect = {
    GER = { declare_war_on = { target = DEN  type = annex_everything } }
  }
 
@@ -772,7 +793,8 @@ GER_german_export_revolution = {
    }
   }
   
-  complete_effect = {
+    days_remove = 10
+  remove_effect = {
     if = {
       limit = {
         has_war_with = FRA
@@ -817,7 +839,8 @@ GER_german_export_revolution = {
    } 
  }
  
- complete_effect = {
+   days_remove = 10
+  remove_effect = {
  custom_effect_tooltip = GER_diplo_tt_1
  if = {
   limit = { WLL = { exists = yes } WLL = { NOT = { is_in_faction_with = GER } }  }

@@ -605,6 +605,301 @@ ideas = {
     }   
    }
 
+   ####France
+   FRA_Dumezil = {
+      allowed = {              OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+        original_tag = FRS
+        original_tag = FRR
+        original_tag = FRL
+        original_tag = FRP }
+      picture = FRA_Dumezil
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+      has_government = pelekist
+      }
+      }
+      
+      traits = {
+      pelekist_min
+      goverment_head
+      hog_schoolar
+       }   
+      }
+   FRA_Charles_Maurras = {
+      allowed = {              OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+        original_tag = FRS
+        original_tag = FRR
+        original_tag = FRL
+        original_tag = FRP }
+      picture = FRA_Charles_Maurras
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+      has_government = pelekist
+      }
+      }
+      
+      traits = {
+      pelekist_min
+      goverment_head
+      hog_pelekist
+       }   
+      }
+   FRA_D_Esperey = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_D_Esperey
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+      ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+      }
+      }
+      
+      traits = {
+      authoritharian_min
+      goverment_head
+      hog_old_guard
+       }   
+      }
+   FRA_Charles_de_Gaulle = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Charles_de_Gaulle
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+      ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+      }
+      }
+      
+      traits = {
+      reactionary_min
+      goverment_head
+      hog_reactionary
+       }   
+      }
+   FRA_Darlan = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Darlan
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+      ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+      }
+      }
+      
+      traits = {
+      authoritharian_min
+      goverment_head
+      hog_war_hero
+       }   
+      }
+   FRA_Pierre_Laval = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Pierre_Laval
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+      ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+      }
+      }
+      
+      traits = {
+      authoritharian_min
+      goverment_head
+      hog_pacifist
+       }   
+      }
+   FRA_Paul_Ramadier = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Pierre_Laval
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+      SOCIALIST_ALIGNED_GOVERNMENT = yes 
+      }
+      }
+      
+      traits = {
+      democratic_socialist_min
+      goverment_head
+      hog_industrialist
+       }   
+      }
+   FRA_Marcel_Deat = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Marcel_Deat
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       has_government = national_socialist
+      }
+      }
+      
+      traits = {
+      national_socialist_min
+      goverment_head
+      hog_vanguardist_socialist
+       }   
+      }
+   FRA_Jacques_Duclos = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Jacques_Duclos
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       SOCIALIST_ALIGNED_GOVERNMENT = yes 
+      }
+      }
+      
+      traits = {
+      socialist_min
+      goverment_head
+      hog_socialist_revolutionary
+       }   
+      }
+   FRA_Leon_Blum = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Jacques_Duclos
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+      }
+      }
+      
+      traits = {
+      social_democracy_min
+      goverment_head
+      hog_industrialist
+       }   
+      }
+   FRA_Edouard_Daladier = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Jacques_Duclos
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+      }
+      }
+      
+      traits = {
+      social_democracy_min
+      goverment_head
+      hog_pacifist
+       }   
+      }
+   FRA_Gaston_Doumerge = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Jacques_Duclos
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+      }
+      }
+      
+      traits = {
+      conservative_min
+      goverment_head
+      hog_incompetant_leader
+       }   
+      }
+   FRA_Albert_Lebrun = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Jacques_Duclos
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       DEMOCRATIC_ALIGNED_GOVERNMENT = yes 
+      }
+      }
+      
+      traits = {
+      conservative_min
+      goverment_head
+      hog_incompetant_leader
+       }   
+      }
   }
  interior_minister = {
  
@@ -1218,7 +1513,206 @@ ideas = {
     im_aristocrat
     }   
    }
+
+   ###France 
+   FRA_Maurice_Pujo = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Maurice_Pujo
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
    
+   traits = {
+    reactionary_min
+    interior_minister
+    im_xenophone
+    }   
+   }
+   FRA_Pierre_Etienne_Flandin = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Pierre_Etienne_Flandin
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    interior_minister
+    im_administrator
+    }   
+   }
+   FRA_Marie_Eugene_Debeney = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Marie_Eugene_Debeney
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    interior_minister
+    im_militarist
+    }   
+   }
+   FRA_Henri_Massis = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Henri_Massis
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    interior_minister
+    im_administrator
+    }   
+   }
+   FRA_Georges_Mandel = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Georges_Mandel
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    social_democracy_min
+    interior_minister
+    im_efficent_planner
+    }   
+   }
+   FRA_Paul_Baudoin = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Paul_Baudoin
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    conservative_min
+    interior_minister
+    im_administrator
+    }   
+   }
+   FRA_Benoit_Frachon = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Benoit_Frachon
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    interior_minister
+    im_union_background
+    }   
+   }
+   FRA_Xavier_Vallat = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Xavier_Vallat
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = pelekist
+	}
+	}
+   
+   traits = {
+   pelekist_min
+   interior_minister
+   im_harsh_tyrannt
+    }   
+   }
+   FRA_Edouard_Berth = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Edouard_Berth
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = national_socialist
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    interior_minister
+    im_modernizer
+    }   
+   }
   }
   
   foreign_head = {
@@ -1832,6 +2326,205 @@ ideas = {
     }   
    }
 
+   ###France
+   FRA_Edmond_Michelet = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Edmond_Michelet
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+      }
+      }
+      
+      traits = {
+       reactionary_min
+       foreign_head
+       fm_isolationism
+       }   
+      }
+   FRA_Andre_Francois_Poncet = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Andre_Francois_Poncet
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+      }
+      }
+      
+      traits = {
+       authoritharian_min
+       foreign_head
+       fm_realpolitik
+       }   
+      }
+   FRA_Eugene_Deloncle = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Eugene_Deloncle
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+      }
+      }
+      
+      traits = {
+       authoritharian_min
+       foreign_head
+       fm_revolutionary
+       }   
+      }
+   FRA_Louis_Marin = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Louis_Marin
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+      }
+      }
+      
+      traits = {
+       social_democracy_min
+       foreign_head
+       fm_neutral_bystander
+       }   
+      }
+   FRA_Jean_Fabry = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Jean_Fabry
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+      }
+      }
+      
+      traits = {
+       conservative_min
+       foreign_head
+       fm_isolationism
+       }   
+      }
+   FRA_Faure_Sebastien = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Faure_Sebastien
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       SOCIALIST_ALIGNED_GOVERNMENT = yes
+      }
+      }
+      
+      traits = {
+       democratic_socialist_min
+       foreign_head
+       fm_neutral_bystander
+       }   
+      }
+   FRA_Pierre_Frank = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Pierre_Frank
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       SOCIALIST_ALIGNED_GOVERNMENT = yes
+      }
+      }
+      
+      traits = {
+       socialist_min
+       foreign_head
+       fm_militant_socialist
+       }   
+      }
+   FRA_Hubert_Lagardelle = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Hubert_Lagardelle
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       has_government = national_socialist
+      }
+      }
+      
+      traits = {
+       national_socialist_min
+       foreign_head
+       fm_revolutionary
+       }   
+      }
+   FRA_Jacques_Doriot = {
+      allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+      picture = FRA_Jacques_Doriot
+      available = { 
+      custom_trigger_tooltip = { 
+       tooltip = minister_available 
+       has_government = pelekist
+      }
+      }
+      
+      traits = {
+       pelekist_min
+       foreign_head
+       fm_revolutionary
+       }   
+      }
  }
  
  economy_head = {
@@ -2381,6 +3074,205 @@ ideas = {
     }   
    }
 
+   ###France
+   FRA_Louis_Renault = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Louis_Renault
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    economy_head
+    em_militant_planner
+    }   
+   }
+   FRA_Georges_Lamirand = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Georges_Lamirand
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    economy_head
+    em_autarchist
+    }   
+   }
+   FRA_Eugene_Schueller = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Eugene_Schueller
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    economy_head
+    em_laissez_faire
+    }   
+   }
+   FRA_Francois_Coty = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Francois_Coty
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    economy_head
+    em_laissez_faire
+    }   
+   }
+   FRA_Raoul_Dautry = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Raoul_Dautry
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    social_democracy_min
+    economy_head
+    em_market_socialist
+    }   
+   }
+   FRA_Louis_Germain_Martin = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Louis_Germain_Martin
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    conservative_min
+    economy_head
+    em_central_planner
+    }   
+   }
+   FRA_Camille_Chautemps = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Camille_Chautemps
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    economy_head
+    em_welfare_supporter
+    }   
+   }
+   FRA_Marceau_Pivert = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Marceau_Pivert
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    socialist_min
+    economy_head
+    em_union_man
+    }   
+   }
+   FRA_Georges_Valois = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Georges_Valois
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = national_socialist
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    economy_head
+    em_pelekist_economist
+    }   
+   }
   }
   
   defense_minister = {
@@ -2969,7 +3861,191 @@ ideas = {
     dm_militarist
     }   
    }
+   
+   ####France
+   FRA_Eugene_Bridoux = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Eugene_Bridoux
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    defense_minister
+    dm_carrer_general
+    }   
+   }
 
+   FRA_Henri_Dentz = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Henri_Dentz
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    reactionary_min
+    defense_minister
+    dm_experienced_soldier
+    }   
+   }
+
+   FRA_Bernard_Serrigny = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Bernard_Serrigny
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    authoritharian_min
+    defense_minister
+    dm_elitist
+    }   
+   }
+
+   FRA_Louis_Maurin = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Louis_Maurin
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    conservative_min
+    defense_minister
+    dm_militarist
+    }   
+   }
+   FRA_Andre_Marty = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Andre_Marty
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    democratic_socialist_min
+    defense_minister
+    dm_mass_conscription_supporter
+    }   
+   }
+   FRA_Maurice_Gamelin = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Maurice_Gamelin
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    SOCIALIST_ALIGNED_GOVERNMENT = yes
+	}
+	}
+   
+   traits = {
+    socialist_min
+    defense_minister
+    dm_elitist
+    }   
+   }
+   FRA_Georges_Catroux = {
+   allowed = {      OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+} }
+   picture = FRA_Georges_Catroux
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = national_socialist
+	}
+	}
+   
+   traits = {
+    national_socialist_min
+    defense_minister
+    dm_experienced_soldier
+    }   
+   }
+   FRA_Joseph_Darnand = {
+   allowed = {              OR = {
+      original_tag = FRA
+      original_tag = FRS
+      original_tag = FRR
+      original_tag = FRL
+      original_tag = FRP
+}
+        original_tag = FRS
+        original_tag = FRR
+        original_tag = FRL
+        original_tag = FRP }
+   picture = FRA_Joseph_Darnand
+   available = { 
+   custom_trigger_tooltip = { 
+    tooltip = minister_available 
+    has_government = pelekist
+	}
+	}
+   
+   traits = {
+    pelekist_min
+    defense_minister
+    dm_experienced_soldier
+    }   
+   }
   }
  }
  

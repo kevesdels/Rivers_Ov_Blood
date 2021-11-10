@@ -112,5 +112,23 @@ ideas = {
     production_speed_buildings_factor = 0.08
    }
   }
+
+  ###France
+
+  famh = {			
+    allowed = {
+        OR = {
+            original_tag = FRA
+            original_tag = FRS
+            original_tag = FRR
+            original_tag = FRL
+            original_tag = FRP
+      }
+    }      
+    research_bonus = {
+        industry = 0.15
+    }
+    traits = { industrial_concern }
+}
   }
  } 

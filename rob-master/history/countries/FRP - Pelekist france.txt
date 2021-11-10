@@ -1,6 +1,9 @@
-capital = 23
+capital = 1283
 
-set_research_slots = 3
+set_research_slots = 4
+set_country_flag = FRA_civil_war
+set_war_support = 0.4
+set_stability = 0.4
 
 set_technology = {
 	infantry_weapons = 1
@@ -28,6 +31,10 @@ if = {
 }
 add_ideas = {
 	limited_conscription
+	fra_eco_disaster
+	fra_pol_violence
+	fra_struggling_army
+	fra_constructing_mag_line
 }
 set_politics = {
 	ruling_party = pelekist
@@ -56,4 +63,125 @@ create_country_leader = {
 	traits = {
 		#
 	}
+}
+
+create_field_marshal = {
+	name = "Charles Noguès"
+	picture = "Charles_Nogues.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Jean Charles Romatet"
+	picture = "Jean_Charles_Romatet.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Edgard Puaud"
+	picture = "Edgard_Puaud.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Raoul Dagostini "
+	picture = "Raoul_Dagostini.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Paul Marie Gamory-Dubourdeau"
+	picture = ""
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Joseph Darnand"
+	picture = ""
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Marc Augier"
+	picture = ""
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_navy_leader = {
+name = "Jean de Laborde"
+picture = "Jean_de_Laborde.dds"
+traits = { }
+skill = 4
+attack_skill = 4
+defense_skill = 4
+maneuvering_skill = 4
+coordination_skill = 4
+}
+
+create_navy_leader = {
+name = "Rene Emile Godfroy"
+picture = "Rene_Emile_Godfroy.dds"
+traits = { }
+skill = 4
+attack_skill = 4
+defense_skill = 4
+maneuvering_skill = 4
+coordination_skill = 4
+}
+
+create_navy_leader = {
+name = "Jean-Pierre Esteva"
+picture = "Jean_Pierre_Esteva.dds"
+traits = { }
+skill = 4
+attack_skill = 4
+defense_skill = 4
+maneuvering_skill = 4
+coordination_skill = 4
+}
+
+create_navy_leader = {
+name = "Gabriel Auphan"
+picture = "Gabriel_Auphan.dds"
+traits = { }
+skill = 4
+attack_skill = 4
+defense_skill = 4
+maneuvering_skill = 4
+coordination_skill = 4
 }

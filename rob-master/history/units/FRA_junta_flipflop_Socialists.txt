@@ -1,0 +1,63 @@
+##### Division Templates #####
+
+division_template = {
+	name = "Division d'Infanterie III"		
+	division_names_group = FRA_INF_01
+	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. de Forteresse
+	# Difference is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+	}
+}
+
+division_template = {
+	name = "Division Légère Mécanique III" 	# Brigade de Chars de Combat, independent armor brigades of 2x Rgts., 2 Bns. each
+	division_names_group = FRA_ARM_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }		# Bn. of Hotchkiss, then Souma (Med.) tanks
+		light_armor = { x = 0 y = 1 }		# Bn. of Hotchkiss tanks
+		motorized = { x = 1 y = 0 }			# Brigade of 2x Rgts., 2 Bns. each (later 1 Rgt. of 3x Bns.)
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 42 ACs + motorcycles
+	}
+}
+
+##### OOB #####
+units = {
+	##### Northern France Region #####
+	# VIe Corps d'Armée (Région Militaire in 1936) -- Metz
+			division= {	# "42ème Division d'Infanterie"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 11506
+		division_template = "Division d'Infanterie III" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+			division= {	# "42ème Division d'Infanterie"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 11506
+		division_template = "Division d'Infanterie III" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+}
+###################
