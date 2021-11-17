@@ -755,10 +755,87 @@ fra_post_civil_war = {
 			}
 			has_war = no
 			has_country_flag = FRA_civil_war
+			has_country_flag = FRA_aaaaaaaaa
 		}
 		priority = {
 		base = 120
 		}
+}
+
+FRR_diplo = {
+	icon = GFX_decision_category_generic
+	visible = {
+		OR = {
+			tag = FRR
+		}
+	}
+	priority = {
+		base = 120
+		}
+}
+FRR_war = {
+	icon = GFX_decision_category_military_operation	
+	picture = GFX_decision_germany_partisansxczsc
+		visible = {
+			OR = {
+				AND = {
+					tag = FRA
+					NOT = { has_country_flag = FRA_civil_war }
+				}
+				tag = FRR
+			}
+		}
+		priority = {
+		base = 120
+		}
+}
+
+
+FRS_minigame_wallonia = {
+	icon = GFX_decision_category_generic
+	visible = {
+		has_country_flag = FRS_minigame_enable
+		NOT = { 
+			OR = {
+				FRS = { has_country_flag = FRS_minig_end }
+				GER = { has_country_flag = FRS_minig_end }
+			}
+		}
+	}
+	priority = {
+		base = 120
+		}
+
+}
+
+FRS_diplomacy = {
+	icon = GFX_decision_category_generic
+	visible = {
+		OR = {
+			tag = FRS
+		}
+	}
+	priority = {
+		base = 120
+		}
+}
+
+FRS_post_minigame_wars = {
+	icon = GFX_decision_category_military_operation	
+	picture = GFX_decision_germany_partisansxczsc
+		visible = {
+			OR = {
+				AND = {
+					tag = FRA
+					NOT = { has_country_flag = FRA_civil_war }
+				}
+				tag = FRS
+			}
+		}
+		priority = {
+		base = 120
+		}
+
 }
 
 POL_belorussian_question = {

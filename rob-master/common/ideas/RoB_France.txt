@@ -54,6 +54,21 @@ picture = GFX_idea_overextendadsf
    }
 }
 
+fra_pol_violence_2 = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    stability_factor = -0.1
+   }
+}
+
 fra_struggling_army = {
  
   allowed = {
@@ -733,6 +748,8 @@ picture = GFX_idea_overextendadsf
     social_liberal_drift = -0.02
     conservative_drift = -0.02
     reactionary_drift = -0.02
+    army_attack_factor = 0.1
+    army_defence_factor = 0.1
    }
 }
 
@@ -815,6 +832,22 @@ picture = GFX_idea_overextendadsf
    }
 }
 
+fra_sor_freedom_violence = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    land_reinforce_rate = 0.05
+    army_attack_factor = 0.05
+    army_defence_factor = 0.05
+   }
+}
 
 ###  Democrats
 fra_dem_socialists_appeased = {
@@ -1646,6 +1679,53 @@ picture = GFX_idea_overextendadsf
    }
 }
 
+####Mini game Socialists
+
+frs_minig_polsup = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    political_power_gain = -0.5
+   }
+}
+
+frs_minig_industry = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    consumer_goods_factor = 0.05
+   }
+}
+
+frs_minig_industry_wll = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    consumer_goods_factor = -0.15
+   }
+}
+
 ###end of country
   }
 	#### Junta
@@ -1831,6 +1911,7 @@ high_command = {
     ledger = air
     allowed = { original_tag = FRL }	
     available = { has_completed_focus = FRA_armeedelair }
+    picture = FRA_Jean_Francois_Jannekeyn
     traits = { air_tactical_bombing_2 }
     ai_will_do = {
       factor = 1

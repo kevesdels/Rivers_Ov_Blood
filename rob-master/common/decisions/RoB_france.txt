@@ -156,7 +156,7 @@ fra_post_civil_war = {
 FRA_reenstablish_lordship_over_syr = {
   fire_only_once = yes
   available = {
-	  has_country_flag = fra_colonies_submit
+	  has_country_flag = fra_cw_over
 	SYR = { 
 		exists = yes 
 		is_puppet = no
@@ -176,7 +176,7 @@ FRA_reenstablish_lordship_over_syr = {
 FRA_assist_syr = {
 	fire_only_once = yes
   	available = {
-		has_country_flag = fra_colonies_submit
+		has_country_flag = fra_cw_over
 	OR = {
   		SYR = { has_war_with = HJZ }
 		SYR = { has_war_with = TUR }
@@ -229,7 +229,7 @@ FRA_assist_syr = {
 FRA_reenstablish_lordship_over_FEA = {
 	fire_only_once = yes
 	available = {
-		has_country_flag = fra_colonies_submit
+		has_country_flag = fra_cw_over
 	  FEA = { 
 		  exists = yes 
 		  is_puppet = no
@@ -249,6 +249,7 @@ FRA_reenstablish_lordship_over_FEA = {
   FRA_reenstablish_lordship_over_FWA = {
 	fire_only_once = yes
 	available = {
+		has_country_flag = fra_cw_over
 	  FWA = { 
 		  exists = yes 
 		  is_puppet = no
@@ -268,7 +269,7 @@ FRA_reenstablish_lordship_over_FEA = {
   FRA_reenstablish_lordship_over_FIC = {
 	fire_only_once = yes
 	available = {
-		has_country_flag = fra_colonies_submit
+		has_country_flag = fra_cw_over
 		FIC = { 
 		  exists = yes 
 		  is_puppet = no
@@ -285,4 +286,1864 @@ FRA_reenstablish_lordship_over_FEA = {
 	  }
   }
 ###end of fra_post_civil_war
+}
+
+FRR_diplo = {
+
+	FRR_alliance_with_germans = {
+		fire_only_once = yes
+		available = {
+			GER = { has_government = national_socialist is_puppet = no } 
+			
+		  }
+		  ai_will_do = {
+			  base = 1000
+		  }
+		  days_remove = 1
+		  remove_effect = {
+			  GER = { country_event = { id = rob_france.94 days = 3 } }
+		  }
+	  }
+}
+
+FRR_war = {
+
+  FRR_german_revolution = {
+   cost = 30
+   ai_will_do = {
+	base = 2000
+    }
+   fire_only_once = yes
+   available = {
+	has_country_flag = FRR_war_enable
+   OR = {
+	AND = {
+		GER = { exists = yes }
+		NOT = { GER = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+	}
+	AND = {
+		RHN = { exists = yes }
+		NOT = { RHN = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+	}
+	AND = {
+		BAV = { exists = yes }
+		NOT = { BAV = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+	}
+	AND = {
+		BDB = { exists = yes }
+		NOT = { BDB = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+	}
+   }
+   has_war = no
+   }
+    days_remove = 10
+  remove_effect = {
+	  if = {
+		  limit = {
+			GER = { exists = yes }
+			NOT = { GER = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+		  }
+		  FRR = { declare_war_on = { target = GER  type = annex_everything } }
+	  }
+	  if = {
+		limit = {
+			RHN = { exists = yes }
+			NOT = { RHN = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+		}
+		FRR = { declare_war_on = { target = RHN  type = annex_everything } }
+	}
+	  if = {
+		limit = {
+			BAV = { exists = yes }
+			NOT = { BAV = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+		}
+		FRR = { declare_war_on = { target = BAV type = annex_everything } }
+	}
+	if = {
+		limit = {
+			BDB = { exists = yes }
+			NOT = { BDB = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+		}
+		FRR = { declare_war_on = { target = BDB type = annex_everything } }
+	}
+   }
+  }
+
+  FRR_benelux_revolution = {
+	cost = 30
+	ai_will_do = {
+	 base = 2000
+	 }
+	fire_only_once = yes
+	available = {
+		has_country_flag = FRR_war_enable
+	OR = {
+	 AND = {
+		 WLL = { exists = yes }
+		 NOT = { WLL = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+	 }
+	 AND = {
+		 LUX = { exists = yes }
+		 NOT = { LUX = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+	 }
+	 AND = {
+		 FLA = { exists = yes }
+		 NOT = { FLA = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+	 }
+	 AND = {
+		 HOL = { exists = yes }
+		 NOT = { HOL = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+	 }
+	}
+	has_war = no
+	}
+	 days_remove = 10
+   remove_effect = {
+	   if = {
+		   limit = {
+			WLL = { exists = yes }
+			NOT = { WLL = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+		   }
+		   FRR = { declare_war_on = { target = WLL  type = annex_everything } }
+	   }
+	   if = {
+		 limit = {
+			LUX = { exists = yes }
+			NOT = { LUX = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+		 }
+		 FRR = { declare_war_on = { target = LUX  type = annex_everything } }
+	 }
+	   if = {
+		 limit = {
+			FLA = { exists = yes }
+			NOT = { FLA = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+		 }
+		 FRR = { declare_war_on = { target = FLA type = annex_everything } }
+	 }
+	 if = {
+		 limit = {
+			HOL = { exists = yes }
+			NOT = { HOL = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+		 }
+		 FRR = { declare_war_on = { target = HOL type = annex_everything } }
+	 }
+	}
+   }
+
+   FRR_austrian_revolution = {
+	cost = 30
+	ai_will_do = {
+	 base = 2000
+	 }
+	fire_only_once = yes
+	available = {
+		has_country_flag = FRR_war_enable
+		custom_trigger_tooltip	= {
+			tooltip = "Germans have been dealt with"
+			OR = {
+				GER = { is_puppet_of = FRR }
+				AUS = { is_neighbor_of = FRR }
+				ACM = { is_neighbor_of = FRR }
+				THR = { is_neighbor_of = FRR }
+			 }
+			}
+	OR = {
+	 AND = {
+		 AUS = { exists = yes }
+		 NOT = { AUS = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+	 }
+	 AND = {
+		ACM = { exists = yes }
+		NOT = { ACM = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+	 }
+	 AND = {
+		THR = { exists = yes }
+		NOT = { THR = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+	 }
+	}
+	has_war = no
+	}
+	 days_remove = 10
+   remove_effect = {
+	   if = {
+		   limit = {
+			AUS = { exists = yes }
+			NOT = { AUS = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+		   }
+		   FRR = { declare_war_on = { target = AUS  type = annex_everything } }
+	   }
+	   if = {
+		 limit = {
+			ACM = { exists = yes }
+			NOT = { ACM = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+		 }
+		 FRR = { declare_war_on = { target = ACM  type = annex_everything } }
+	 }
+	   if = {
+		 limit = {
+			THR = { exists = yes }
+			NOT = { THR = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+		 }
+		 FRR = { declare_war_on = { target = THR type = annex_everything } }
+	 }
+	}
+   }
+ 
+ FRR_czech_revolution = {
+	cost = 30
+	ai_will_do = {
+	 base = 2000
+	 }
+	fire_only_once = yes
+	available = {
+	has_country_flag = FRR_war_enable
+	CZE = { exists = yes }
+	has_war = no
+	NOT = { CZE = { has_government = national_socialist is_in_faction_with = FRR } }
+	custom_trigger_tooltip	= {
+	tooltip = "Germans have been dealt with"
+	OR = {
+		GER = { is_puppet_of = FRR }
+		CZE = { is_neighbor_of = FRR }
+	 }
+	}
+	}
+	 days_remove = 10
+   remove_effect = {
+	FRR = { declare_war_on = { target = CZE  type = annex_everything } }
+	}
+ 
+  }
+
+  FRR_polish_revolution = {
+	cost = 30
+	ai_will_do = {
+	 base = 2000
+	 }
+	fire_only_once = yes
+	available = {
+	 has_country_flag = FRR_war_enable
+	POL = { exists = yes }
+	has_war = no
+	NOT = { POL = { has_government = national_socialist is_in_faction_with = FRR } }
+	custom_trigger_tooltip	= {
+	tooltip = "Germans have been dealt with"
+	OR = {
+		GER = { is_puppet_of = FRR }
+		POL = { is_neighbor_of = FRR }
+	 }
+	}
+	}
+	 days_remove = 10
+   remove_effect = {
+	 FRR = { declare_war_on = { target = POL  type = annex_everything } }
+	}
+ 
+  }
+   FRR_slovak_revolution = {
+	cost = 30
+	ai_will_do = {
+	 base = 2000
+	 }
+	fire_only_once = yes
+	available = {
+	has_country_flag = FRR_war_enable
+	SLO = { exists = yes }
+	has_war = no
+	NOT = { SLO = { has_government = national_socialist is_in_faction_with = FRR } }
+	custom_trigger_tooltip	= {
+	tooltip = "Polish have been dealt with"
+	OR = {
+		POL = { is_puppet_of = FRR }
+		SLO = { is_neighbor_of = FRR }
+	 }
+	}
+	}
+	 days_remove = 10
+   remove_effect = {
+	FRR = { declare_war_on = { target = SLO  type = annex_everything } }
+	}
+ 
+  }
+
+  FRR_prussian_revolution = {
+	cost = 30
+	ai_will_do = {
+	 base = 2000
+	 }
+	fire_only_once = yes
+	available = {
+	has_country_flag = FRR_war_enable
+	PRS = { exists = yes }
+	has_war = no
+	NOT = { PRS = { has_government = national_socialist is_in_faction_with = FRR } }
+	custom_trigger_tooltip	= {
+	tooltip = "Polish have been dealt with"
+	OR = {
+		POL = { is_puppet_of = FRR }
+		PRS = { is_neighbor_of = FRR }
+	 }
+	}
+	}
+	 days_remove = 10
+   remove_effect = {
+	FRR = { declare_war_on = { target = PRS  type = annex_everything } }
+	}
+ 
+  }
+
+  FRR_italian_revolution = {
+	cost = 30
+	ai_will_do = {
+	 base = 500
+	 }
+	fire_only_once = yes
+	available = {
+	has_country_flag = FRR_war_enable
+	ITA = { exists = yes }
+	has_war = no
+	NOT = { ITA = { has_government = national_socialist is_in_faction_with = FRR } }
+	}
+	 days_remove = 10
+   remove_effect = {
+	FRR = { declare_war_on = { target = ITA  type = annex_everything } }
+	}
+ 
+  }
+
+  FRR_spanish_revolution = {
+	cost = 30
+	ai_will_do = {
+	 base = 1000
+	 }
+	fire_only_once = yes
+	available = {
+	has_country_flag = FRR_war_enable
+	OR = {
+		SPR = { exists = yes NOT = { is_in_faction_with = FRR } }
+		CAT = { exists = yes NOT = { is_in_faction_with = FRR } }
+		BSQ = { exists = yes NOT = { is_in_faction_with = FRR } }
+	}
+	has_war = no
+	}
+	 days_remove = 10
+   remove_effect = {
+	   if = {
+		   limit = {
+			SPR = { exists = yes }
+		   }
+		   FRR = { declare_war_on = { target = SPR  type = annex_everything } }
+	   }
+	   if = {
+		 limit = {
+			CAT = { exists = yes }
+		 }
+		 FRR = { declare_war_on = { target = CAT  type = annex_everything } }
+	 }
+	   if = {
+		 limit = {
+			BSQ = { exists = yes }
+		 }
+		 FRR = { declare_war_on = { target = BSQ type = annex_everything } }
+	 }
+	}
+   }
+
+
+  FRR_portugal_revolution = {
+	cost = 30
+	ai_will_do = {
+	 base = 2000
+	 }
+	fire_only_once = yes
+	available = {
+	has_country_flag = FRR_war_enable
+	POR = { exists = yes }
+	has_war = no
+	NOT = { POR = { has_government = national_socialist is_in_faction_with = FRR } }
+	custom_trigger_tooltip	= {
+	tooltip = "Spanish have been dealt with"
+	OR = {
+		SPR = { is_puppet_of = FRR }
+		POR = { is_neighbor_of = FRR }
+	 }
+	}
+	}
+	 days_remove = 10
+   remove_effect = {
+	FRR = { declare_war_on = { target = POR  type = annex_everything } }
+	}
+ 
+  }
+
+  FRR_swiz_revolution = {
+	cost = 30
+	ai_will_do = {
+	 base = 2000
+	 }
+	fire_only_once = yes
+	available = {
+	has_country_flag = FRR_war_enable
+	POR = { exists = yes }
+	has_war = no
+	NOT = { SWI = { has_government = national_socialist is_in_faction_with = FRR } }
+	custom_trigger_tooltip	= {
+	tooltip = "The Swiz are cut off"
+	OR = {
+		AND = {
+			has_country_flag = frr_war_with_germany
+			has_country_flag = frr_war_with_italy
+			SWI = { is_neighbor_of = FRR }
+		}
+		AND = {
+			GER = { is_puppet_of = FRR }
+			ITA = { is_puppet_of = FRR }
+		}
+	 }
+	}
+	}
+	 days_remove = 10
+   remove_effect = {
+	FRR = { declare_war_on = { target = SWI  type = annex_everything } }
+	}
+ 
+  }
+
+}
+
+FRS_minigame_wallonia = {
+
+	FRS_minig_espionage = {
+	available = {
+		if = {
+			limit = {
+				tag = FRA
+			}
+			NOT = { has_country_flag = FRS_minig_esp_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_esp_taken } }
+			has_political_power > 60
+		}
+		if = {
+			limit = {
+				tag = FRS
+			}
+			NOT = { has_country_flag = FRS_minig_esp_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_esp_taken } }
+			has_political_power > 60
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			NOT = { has_country_flag = FRS_minig_esp_taken }
+			NOT = { FRS = { has_country_flag = FRS_minig_esp_taken } }
+			NOT = { FRA = { has_country_flag = FRS_minig_esp_taken } }
+			has_political_power > 60
+		}
+	  }
+		  ai_will_do = {
+			  base = 1000
+		  }
+		  days_remove = 30
+		  complete_effect = {
+			if = {
+				limit = {
+					tag =  FRA
+				}
+				set_country_flag = FRS_minig_esp_taken
+				add_political_power = -60
+		  }
+			if = {
+				limit = {
+					tag =  GER
+				}
+				set_country_flag = FRS_minig_esp_taken
+				add_political_power = -60
+		  }
+			if = {
+				limit = {
+					tag =  FRS
+				}
+				set_country_flag = FRS_minig_esp_taken
+				add_political_power = -60
+		  }
+		  }
+		  remove_effect = {
+			clr_country_flag = FRS_minig_esp_taken 
+			if = {
+				limit = {
+					tag = FRA
+				}
+				random_list = {
+					40 = {
+						custom_effect_tooltip = FRS_minig_influence_increase
+						add_to_variable = { var = FRS_walonia_french value = 1 }
+						GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }	
+					}
+	
+					20 = {
+						custom_effect_tooltip = FRS_minig_rival_influence_increase
+						add_to_variable = { var = FRS_walonia_germans value = 1 }
+						GER = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+					}
+					40 = {
+						custom_effect_tooltip = "nothing happening"
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = GER
+				}
+				random_list = {
+					40 = {
+						custom_effect_tooltip = FRS_minig_influence_increase
+						add_to_variable = { var = FRS_walonia_germans value = 1 }
+						FRS = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+					}
+					20 = {
+						custom_effect_tooltip = FRS_minig_rival_influence_increase
+						add_to_variable = { var = FRS_walonia_french value = 1 }
+						GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }	
+					}
+					40 = {
+						custom_effect_tooltip = "nothing happening"
+					}
+				}
+			}
+	
+			if = {
+				limit = {
+					tag = FRS
+				}
+				random_list = {
+					40 = {
+						custom_effect_tooltip = FRS_minig_influence_increase
+						add_to_variable = { var = FRS_walonia_french value = 1 }
+						GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }
+					}
+					20 = {
+						custom_effect_tooltip = FRS_minig_rival_influence_increase
+						add_to_variable = { var = FRS_walonia_germans value = 1 }
+						GER = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+					}
+					40 = {
+						custom_effect_tooltip = "nothing happening"
+					}
+				}
+			}
+		}
+	}
+FRS_minig_infilitrate = {
+	fire_only_once = yes
+	available = {
+		if = {
+			limit = {
+				tag = FRA
+			}
+			NOT = { has_country_flag = FRS_minig_infiltrate_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_infiltrate_taken } }
+			has_political_power > 100
+		}
+		if = {
+			limit = {
+				tag = FRS
+			}
+			NOT = { has_country_flag = FRS_minig_infiltrate_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_infiltrate_taken } }
+			has_political_power > 100
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			NOT = { has_country_flag = FRS_minig_infiltrate_taken }
+			NOT = { FRS = { has_country_flag = FRS_minig_infiltrate_taken } }
+			NOT = { FRA = { has_country_flag = FRS_minig_infiltrate_taken } }
+			has_political_power > 100
+		}
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  days_remove = 60
+	  complete_effect = {
+		if = {
+			limit = {
+				tag =  FRA
+			}
+			set_country_flag = FRS_minig_infiltrate_taken
+			add_political_power = -100
+	  }
+		if = {
+			limit = {
+				tag =  GER
+			}
+			set_country_flag = FRS_minig_infiltrate_taken
+			add_political_power = -100
+	  }
+		if = {
+			limit = {
+				tag =  FRS
+			}
+			set_country_flag = FRS_minig_infiltrate_taken
+			add_political_power = -100
+	  }
+	  }
+	  remove_effect = {
+		clr_country_flag = FRS_minig_infiltrate_taken 
+		if = {
+			limit = {
+				tag = FRA
+			}
+			random_list = {
+				60 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }	
+				}
+
+				30 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_increase
+					add_to_variable = { var = FRS_walonia_germans value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+				}
+				10 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			random_list = {
+				60 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_germans value = 1 }
+					FRS = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+				}
+				30 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }	
+				}
+				10 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				tag = FRS
+			}
+			random_list = {
+				60 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }
+				}
+				30 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_increase
+					add_to_variable = { var = FRS_walonia_germans value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+				}
+				10 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+	  }
+}
+FRS_minig_bribe = {
+	available = {
+		if = {
+			limit = {
+				tag = FRA
+			}
+			NOT = { has_country_flag = FRS_minig_bribe_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_bribe_taken } }
+			has_political_power > 30
+		}
+		if = {
+			limit = {
+				tag = FRS
+			}
+			NOT = { has_country_flag = FRS_minig_bribe_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_bribe_taken } }
+			has_political_power > 30
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			NOT = { has_country_flag = FRS_minig_bribe_taken }
+			NOT = { FRS = { has_country_flag = FRS_minig_bribe_taken } }
+			NOT = { FRA = { has_country_flag = FRS_minig_bribe_taken } }
+			has_political_power > 30
+
+		}
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  days_remove = 30
+	  complete_effect = {
+		if = {
+			limit = {
+				tag =  FRA
+			}
+			set_country_flag = FRS_minig_bribe_taken
+			add_political_power = -30
+	  }
+		if = {
+			limit = {
+				tag =  GER
+			}
+			set_country_flag = FRS_minig_bribe_taken
+			add_political_power = -30
+	  }
+		if = {
+			limit = {
+				tag =  FRS
+			}
+			set_country_flag = FRS_minig_bribe_taken
+			add_political_power = -30
+	  }
+	  }
+	  remove_effect = {
+		clr_country_flag = FRS_minig_bribe_taken 
+		if = {
+			limit = {
+				tag = FRA
+			}
+			random_list = {
+				35 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }	
+				}
+
+				20 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_increase
+					add_to_variable = { var = FRS_walonia_germans value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+				}
+				45 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			random_list = {
+				35 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_germans value = 1 }
+					FRS = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+				}
+				20 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }	
+				}
+				45 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				tag = FRS
+			}
+			random_list = {
+				35 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }
+				}
+				20 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_increase
+					add_to_variable = { var = FRS_walonia_germans value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+				}
+				45 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+	  }
+}
+
+FRS_minig_investment = {
+	available = {
+		if = {
+			limit = {
+				tag = FRA
+			}
+			NOT = { has_country_flag = FRS_minig_invest_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_invest_taken } }
+		}
+		if = {
+			limit = {
+				tag = FRS
+			}
+			NOT = { has_country_flag = FRS_minig_invest_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_invest_taken } }
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			NOT = { has_country_flag = FRS_minig_invest_taken }
+			NOT = { FRS = { has_country_flag = FRS_minig_invest_taken } }
+			NOT = { FRA = { has_country_flag = FRS_minig_invest_taken } }
+		}
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  days_remove = 60
+	  complete_effect = {
+		if = {
+			limit = {
+				tag =  FRA
+			}
+			set_country_flag = FRS_minig_invest_taken
+			add_ideas = {
+				frs_minig_industry
+			}
+			WLL = {
+				add_ideas = {
+					frs_minig_industry_wll
+				}
+			 }
+	  }
+		if = {
+			limit = {
+				tag =  GER
+			}
+			set_country_flag = FRS_minig_invest_taken
+			add_ideas = {
+				frs_minig_industry
+			}
+			WLL = {
+				add_ideas = {
+					frs_minig_industry_wll
+				}
+			 }
+	  }
+		if = {
+			limit = {
+				tag =  FRS
+			}
+			set_country_flag = FRS_minig_invest_taken
+			add_ideas = {
+				frs_minig_industry
+			}
+			WLL = {
+				add_ideas = {
+					frs_minig_industry_wll
+				}
+			 }
+
+	  }
+	}
+	  remove_effect = {
+		clr_country_flag = FRS_minig_invest_taken
+		remove_ideas = {
+			frs_minig_industry
+		}
+		WLL = {
+			remove_ideas = {
+				frs_minig_industry_wll
+			}
+		 }
+		if = {
+			limit = {
+				tag = FRA
+			}
+			random_list = {
+				60 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }	
+				}
+
+				40 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			random_list = {
+				60 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_germans value = 1 }
+					FRS = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+				}
+
+				40 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				tag = FRS
+			}
+			random_list = {
+				60 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }
+				}
+
+				40 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+  	}
+}
+
+FRS_minig_army_attache = {
+	available = {
+		if = {
+			limit = {
+				tag = FRA
+			}
+			NOT = { has_country_flag = FRS_minig_army_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_army_taken } }
+			command_power > 50
+		}
+		if = {
+			limit = {
+				tag = FRS
+			}
+			NOT = { has_country_flag = FRS_minig_army_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_army_taken } }
+			command_power > 50
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			NOT = { has_country_flag = FRS_minig_army_taken }
+			NOT = { FRS = { has_country_flag = FRS_minig_army_taken } }
+			NOT = { FRA = { has_country_flag = FRS_minig_army_taken } }
+			command_power > 50
+		}
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  days_remove = 60
+	  complete_effect = {
+		if = {
+			limit = {
+				tag =  FRA
+			}
+			set_country_flag = FRS_minig_army_taken
+			add_command_power = -50
+	  }
+		if = {
+			limit = {
+				tag =  GER
+			}
+			set_country_flag = FRS_minig_army_taken
+			add_command_power = -50
+	  }
+		if = {
+			limit = {
+				tag =  FRS
+			}
+			set_country_flag = FRS_minig_army_taken
+			add_command_power = -50
+	  }
+	  } 
+	  remove_effect = {
+		clr_country_flag = FRS_minig_army_taken
+		if = {
+			limit = {
+				tag = FRA
+			}
+			random_list = {
+				30 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }	
+				}
+
+				70 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			random_list = {
+				30 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_germans value = 1 }
+					FRS = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+				}
+
+				70 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				tag = FRS
+			}
+			random_list = {
+				30 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }
+				}
+
+				70 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+  }
+}
+
+FRS_minig_political_support = {
+	fire_only_once = yes
+	available = {
+		if = {
+			limit = {
+				tag = FRA
+			}
+			NOT = { has_country_flag = FRS_minig_pol_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_pol_taken } }
+		}
+		if = {
+			limit = {
+				tag = FRS
+			}
+			NOT = { has_country_flag = FRS_minig_pol_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_pol_taken } }
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			NOT = { has_country_flag = FRS_minig_pol_taken }
+			NOT = { FRS = { has_country_flag = FRS_minig_pol_taken } }
+			NOT = { FRA = { has_country_flag = FRS_minig_pol_taken } }
+		}
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  days_remove = 35
+	  complete_effect = {
+		if = {
+			limit = {
+				tag =  FRA
+			}
+			set_country_flag = FRS_minig_pol_taken
+			add_ideas = {
+				frs_minig_polsup
+			}
+	  }
+		if = {
+			limit = {
+				tag =  GER
+			}
+			set_country_flag = FRS_minig_pol_taken
+			add_ideas = {
+				frs_minig_polsup
+			}
+	  }
+		if = {
+			limit = {
+				tag =  FRS
+			}
+			set_country_flag = FRS_minig_pol_taken
+			add_ideas = {
+				frs_minig_polsup
+			}
+
+	  }
+	}
+	  remove_effect = {
+		clr_country_flag = FRS_minig_pol_taken
+		remove_ideas = {
+			frs_minig_polsup
+		}
+		if = {
+			limit = {
+				tag = FRA
+			}
+			random_list = {
+				50 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }	
+				}
+
+				50 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			random_list = {
+				50 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_germans value = 1 }
+					FRS = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+				}
+
+				50 = {
+					custom_effect_tooltip = "Nothing Happens"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				tag = FRS
+			}
+			random_list = {
+				50 = {
+					custom_effect_tooltip = FRS_minig_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_french value = 1 } }
+				}
+
+				50 = {
+					custom_effect_tooltip = "Nothing Happens"
+				}
+			}
+		}
+  	}
+}
+
+FRS_minig_make_threats = {
+	fire_only_once = yes
+	available = {
+		if = {
+			limit = {
+				tag = FRA
+			}
+			NOT = { has_country_flag = FRS_minig_threats_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_threats_taken } }
+		}
+		if = {
+			limit = {
+				tag = FRS
+			}
+			NOT = { has_country_flag = FRS_minig_threats_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_threats_taken } }
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			NOT = { has_country_flag = FRS_minig_threats_taken }
+			NOT = { FRS = { has_country_flag = FRS_minig_threats_taken } }
+			NOT = { FRA = { has_country_flag = FRS_minig_threats_taken } }
+		}
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  days_remove = 40
+	  complete_effect = {
+		if = {
+			limit = {
+				tag =  FRA
+			}
+			set_country_flag = FRS_minig_threats_taken
+	  }
+		if = {
+			limit = {
+				tag =  GER
+			}
+			set_country_flag = FRS_minig_threats_taken
+	  }
+		if = {
+			limit = {
+				tag =  FRS
+			}
+			set_country_flag = FRS_minig_threats_taken
+	  }
+	  }
+	  remove_effect = {
+		clr_country_flag = FRS_minig_threats_taken 
+		if = {
+			limit = {
+				tag = FRA
+			}
+			random_list = {
+				50 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_decrease
+					add_to_variable = { var = FRS_walonia_germans value = -1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = -1 } }	
+				}
+
+				30 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_increase
+					add_to_variable = { var = FRS_walonia_germans value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+				}
+				20 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = FRS
+			}
+			random_list = {
+				50 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_decrease
+					add_to_variable = { var = FRS_walonia_germans value = -1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = -1 } }	
+				}
+
+				30 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_increase
+					add_to_variable = { var = FRS_walonia_germans value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+				}
+				20 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				tag = GER
+			}
+			random_list = {
+				50 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_decrease
+					add_to_variable = { var = FRS_walonia_french value = -1 }
+					FRS = {  add_to_variable = { var = FRS_walonia_french value = -1 } }
+				}
+				30 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					FRS = {  add_to_variable = { var = FRS_walonia_french value = 1 } }	
+				}
+				20 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+	  }
+}
+
+
+FRS_minig_trade_restrictions = {
+	fire_only_once = yes
+	available = {
+		if = {
+			limit = {
+				tag = FRA
+			}
+			NOT = { has_country_flag = FRS_minig_trade_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_trade_taken } }
+			has_political_power > 50
+		}
+		if = {
+			limit = {
+				tag = FRS
+			}
+			NOT = { has_country_flag = FRS_minig_trade_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_trade_taken } }
+			has_political_power > 50
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			NOT = { has_country_flag = FRS_minig_trade_taken }
+			NOT = { FRS = { has_country_flag = FRS_minig_trade_taken } }
+			NOT = { FRA = { has_country_flag = FRS_minig_trade_taken } }
+			has_political_power > 50
+		}
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  days_remove = 35
+	  complete_effect = {
+		if = {
+			limit = {
+				tag =  FRA
+			}
+			set_country_flag = FRS_minig_trade_taken
+			add_political_power = -50
+	  }
+		if = {
+			limit = {
+				tag =  GER
+			}
+			set_country_flag = FRS_minig_trade_taken
+			add_political_power = -50
+	  }
+		if = {
+			limit = {
+				tag =  FRS
+			}
+			set_country_flag = FRS_minig_trade_taken
+			add_political_power = -50
+	  }
+	  }
+	  remove_effect = {
+		clr_country_flag = FRS_minig_trade_taken 
+		if = {
+			limit = {
+				tag = FRA
+			}
+			random_list = {
+				30 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_decrease
+					add_to_variable = { var = FRS_walonia_germans value = -1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = -1 } }	
+				}
+				70 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = FRS
+			}
+			random_list = {
+				30 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_decrease
+					add_to_variable = { var = FRS_walonia_germans value = -1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = -1 } }	
+				}
+				70 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				tag = GER
+			}
+			random_list = {
+				30 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_decrease
+					add_to_variable = { var = FRS_walonia_french value = -1 }
+					FRS = {  add_to_variable = { var = FRS_walonia_french value = -1 } }
+				}
+				70 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+	  }
+}
+
+FRS_minig_make_threats = {
+	fire_only_once = yes
+	available = {
+		if = {
+			limit = {
+				tag = FRA
+			}
+			NOT = { has_country_flag = FRS_minig_threats_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_threats_taken } }
+		}
+		if = {
+			limit = {
+				tag = FRS
+			}
+			NOT = { has_country_flag = FRS_minig_threats_taken }
+			NOT = { GER = { has_country_flag = FRS_minig_threats_taken } }
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			NOT = { has_country_flag = FRS_minig_threats_taken }
+			NOT = { FRS = { has_country_flag = FRS_minig_threats_taken } }
+			NOT = { FRA = { has_country_flag = FRS_minig_threats_taken } }
+		}
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  days_remove = 40
+	  complete_effect = {
+		if = {
+			limit = {
+				tag =  FRA
+			}
+			set_country_flag = FRS_minig_threats_taken
+	  }
+		if = {
+			limit = {
+				tag =  GER
+			}
+			set_country_flag = FRS_minig_threats_taken
+	  }
+		if = {
+			limit = {
+				tag =  FRS
+			}
+			set_country_flag = FRS_minig_threats_taken
+	  }
+	  }
+	  remove_effect = {
+		clr_country_flag = FRS_minig_threats_taken 
+		if = {
+			limit = {
+				tag = FRA
+			}
+			random_list = {
+				50 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_decrease
+					add_to_variable = { var = FRS_walonia_germans value = -1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = -1 } }	
+				}
+
+				30 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_increase
+					add_to_variable = { var = FRS_walonia_germans value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+				}
+				20 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = FRS
+			}
+			random_list = {
+				50 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_decrease
+					add_to_variable = { var = FRS_walonia_germans value = -1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = -1 } }	
+				}
+
+				30 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_increase
+					add_to_variable = { var = FRS_walonia_germans value = 1 }
+					GER = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
+				}
+				20 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				tag = GER
+			}
+			random_list = {
+				50 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_decrease
+					add_to_variable = { var = FRS_walonia_french value = -1 }
+					FRS = {  add_to_variable = { var = FRS_walonia_french value = -1 } }
+				}
+				30 = {
+					custom_effect_tooltip = FRS_minig_rival_influence_increase
+					add_to_variable = { var = FRS_walonia_french value = 1 }
+					FRS = {  add_to_variable = { var = FRS_walonia_french value = 1 } }	
+				}
+				20 = {
+					custom_effect_tooltip = "nothing happening"
+				}
+			}
+		}
+	  }
+}
+
+
+FRS_minig_win = {
+	fire_only_once = yes
+	available = {
+		if = {
+			limit = {
+				tag = FRS
+			}
+			check_variable = { var = FRS_walonia_french value = 10  compare = greater_than_or_equals }
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			check_variable = { var = FRS_walonia_germans value = 10  compare = greater_than_or_equals }
+		}
+		if = {
+			limit = {
+				tag = FRA
+			}
+			check_variable = { var = FRS_walonia_french value = 10  compare = greater_than_or_equals }
+		}
+	  }
+	  ai_will_do = {
+		  base = 1000
+	  }
+	  complete_effect = {
+		custom_effect_tooltip = frs_minig_win
+		if = {
+			limit = {
+				tag = FRS
+			}
+			FRS = {  country_event = { id = rob_france.99 days = 3 } }
+		}
+		if = {
+			limit = {
+				tag = GER
+			}
+			FRS = {  country_event = { id = rob_france.99 days = 3 } }
+		}
+	  }
+}
+FRS_minig_countdown = {
+	icon = GFX_decision_revolt
+	 ai_will_do = {
+	   base = 0
+	 }
+   available = {
+   hidden_trigger = {
+	 NOT = { has_country_flag = FRS_minigame_enable }
+	 }
+	}
+   activation = {
+   hidden_trigger = {
+   has_country_flag = FRS_minigame_enable
+   }
+	}
+	days_mission_timeout = 280
+ 
+	 	timeout_effect = {
+ 
+	   	custom_effect_tooltip = frs_minig_countdown_end
+	  	 	hidden_effect = {
+
+				###If the Value is higher for Frnace
+				if = {
+					limit = {
+						FRS = {
+							check_variable = { var = FRS_walonia_french value = FRS_walonia_germans compare = greater_than }
+						}
+					}
+					FRS = {  country_event = { id = rob_france.98 days = 3 } }
+				}
+				###If the Value is higher for Germany
+				if = {
+					limit = {
+						FRS = {
+							check_variable = { var = FRS_walonia_germans value = FRS_walonia_french compare = greater_than }
+						}
+					}
+					GER = {  country_event = { id = rob_france.98 days = 3 } }
+				}
+
+				###If the Value is equal = Germans get it
+				if = {
+					limit = {
+						FRS = {
+							check_variable = { var = FRS_walonia_french value = FRS_walonia_germans compare = equals }
+						}
+					}
+					GER = {  country_event = { id = rob_france.99 days = 3 } }
+				}
+	   		}
+	   }
+   }
+
+
+}
+
+FRS_diplomacy = {
+	FRS_alliance_with_italians = {
+		fire_only_once = yes
+		available = {
+			ITA = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_puppet = no exists = yes } 
+			has_country_flag = FRS_enable_diplo
+			
+		  }
+		  ai_will_do = {
+			  base = 1000
+		  }
+		  days_remove = 1
+		  remove_effect = {
+			ITA = { country_event = { id = rob_france.100 days = 3 } }
+		  }
+	  }
+	  FRS_alliance_with_spain = {
+		fire_only_once = yes
+		available = {
+			SPR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_puppet = no exists = yes } 
+			has_country_flag = FRS_enable_diplo
+		  }
+		  ai_will_do = {
+			  base = 1000
+		  }
+		  days_remove = 1
+		  remove_effect = {
+			SPR = { country_event = { id = rob_france.100 days = 3 } }
+		  }
+	  }
+	  FRS_alliance_with_uk = {
+		fire_only_once = yes
+		available = {
+			BLF = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_puppet = no exists = yes } 
+			has_country_flag = FRS_enable_diplo
+		  }
+		  ai_will_do = {
+			  base = 1000
+		  }
+		  days_remove = 1
+		  remove_effect = {
+			BLF = { country_event = { id = rob_france.100 days = 3 } }
+		  }
+	  }
+}
+
+FRS_post_minigame_wars = {
+
+	FRS_secure_benelux = {
+		cost = 30
+		ai_will_do = {
+		 base = 2000
+		 }
+		fire_only_once = yes
+		available = {
+		has_country_flag = FRS_war_enable
+		has_country_flag = FRS_minig_end
+		OR = {
+			AND = {
+				LUX = { exists = yes }
+				NOT = { LUX = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+			}
+			AND = {
+				FLA = { exists = yes }
+				NOT = { FLA = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+			}
+			AND = {
+				HOL = { exists = yes }
+				NOT = { HOL = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+			}
+		   }
+		   has_war = no
+		}
+		days_remove = 10
+		remove_effect = {
+			if = {
+			  limit = {
+				 LUX = { exists = yes }
+				 NOT = { LUX = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+			  }
+			  FRS = { declare_war_on = { target = LUX  type = annex_everything } }
+		  }
+			if = {
+			  limit = {
+				 FLA = { exists = yes }
+				 NOT = { FLA = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+			  }
+			  FRS = { declare_war_on = { target = FLA type = annex_everything } }
+		  }
+		  if = {
+			  limit = {
+				 HOL = { exists = yes }
+				 NOT = { HOL = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+			  }
+			  FRS = { declare_war_on = { target = HOL type = annex_everything } }
+		  }
+		 }
+	}
+
+	FRS_secure_spain = {
+		cost = 30
+		ai_will_do = {
+		 base = 2000
+		 }
+		fire_only_once = yes
+		available = {
+		 has_country_flag = FRS_war_enable
+		SPR = { exists = yes }
+		OR = {
+			BSQ = { exists = no }
+			CAT = { exists = no }
+		}
+		has_war = no
+		NOT = { SPR = { is_in_faction_with = FRS } }
+		}
+		 days_remove = 10
+	   remove_effect = {
+		 FRR = { declare_war_on = { target = SPR  type = annex_everything } }
+		}
+	 
+	  }
+
+	FRS_secure_italy = {
+		cost = 30
+		ai_will_do = {
+		 base = 2000
+		 }
+		fire_only_once = yes
+		available = {
+		has_country_flag = FRS_war_enable
+		ITA = { exists = yes }
+		has_war = no
+		NOT = { ITA = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } }
+		}
+		 days_remove = 10
+	   remove_effect = {
+		FRS = { declare_war_on = { target = ITA  type = annex_everything } }
+		}
+	 
+	  }
+
+	FRS_secure_germany = {
+		cost = 30
+		ai_will_do = {
+		 base = 2000
+		 }
+		fire_only_once = yes
+		available = {
+			has_country_flag = FRS_war_enable
+			OR = {
+				AND = {
+					GER = { exists = yes }
+					NOT = { GER = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				}
+				AND = {
+					BAV = { exists = yes }
+					NOT = { BAV = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				}
+				AND = {
+					BDB = { exists = yes }
+					NOT = { BDB = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				}				
+				AND = {
+					RHN = { exists = yes }
+					NOT = { RHN = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				}
+			   }
+			   has_war = no
+			}
+			days_remove = 10
+			remove_effect = {
+				if = {
+				  limit = {
+					 GER = { exists = yes }
+					 NOT = { GER = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+					}
+				  FRS = { declare_war_on = { target = GER  type = annex_everything } }
+			  }
+				if = {
+				  limit = {
+					 BAV = { exists = yes }
+					 NOT = { BAV = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				  }
+				  FRS = { declare_war_on = { target = BAV type = annex_everything } }
+			  }
+			  if = {
+				  limit = {
+					 BDB = { exists = yes }
+					 NOT = { BDB = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				  }
+				  FRS = { declare_war_on = { target = BDB type = annex_everything } }
+			  }
+			  if = {
+				limit = {
+				   RHN = { exists = yes }
+				   NOT = { RHN = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				}
+				FRS = { declare_war_on = { target = RHN type = annex_everything } }
+			}
+		}
+	}
+
+	FRS_secure_uk = {
+		cost = 30
+		ai_will_do = {
+		 base = 2000
+		 }
+		fire_only_once = yes
+		available = {
+			has_country_flag = FRS_war_enable
+			OR = {
+				AND = {
+					ENG = { exists = yes }
+					NOT = { ENG = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				}
+				AND = {
+					BRL = { exists = yes }
+					NOT = { BRL = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				}
+				AND = {
+					BRC = { exists = yes }
+					NOT = { BRC = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				}				
+				AND = {
+					BRU = { exists = yes }
+					NOT = { BRU = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				}
+			   }
+			   has_war = no
+			}
+			days_remove = 10
+			remove_effect = {
+				if = {
+				  limit = {
+					 ENG = { exists = yes }
+					 NOT = { ENG = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+					}
+				  FRS = { declare_war_on = { target = ENG  type = annex_everything } }
+			  }
+				if = {
+				  limit = {
+					 BRL = { exists = yes }
+					 NOT = { BRL = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				  }
+				  FRS = { declare_war_on = { target = BRL type = annex_everything } }
+			  }
+			  if = {
+				  limit = {
+					 BRC = { exists = yes }
+					 NOT = { BRC = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				  }
+				  FRS = { declare_war_on = { target = BRC type = annex_everything } }
+			  }
+			  if = {
+				limit = {
+				   BRU = { exists = yes }
+				   NOT = { BRU = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+				}
+				FRS = { declare_war_on = { target = BRU type = annex_everything } }
+			}
+		}
+	}
 }

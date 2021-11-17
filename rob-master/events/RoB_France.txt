@@ -1398,6 +1398,7 @@ name = rob_france.34.a
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_sorel_win
+set_cosmetic_tag = FRS_victory
 }
 
 }
@@ -1422,6 +1423,7 @@ name = rob_france.35.a
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_comm_win
+set_country_flag = frs_minigame_trigger
 }
 
 }
@@ -1887,7 +1889,12 @@ is_triggered_only = yes
 
 option = { 
 name = rob_france.44.a
+set_country_flag = FRA_de_la_rocque_route
+}
 
+option = { 
+name = rob_france.44.b
+set_country_flag = FRA_d_espery_route
 }
 
 }
@@ -2761,6 +2768,516 @@ name = rob_france.86.a
 
 }
 
+country_event = { ### New mythos sorelists
+id = rob_france.87
+title = rob_france.87.t
+desc = rob_france.87.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.87.a
+add_manpower = -3
+}
+
+option = { 
+name = rob_france.87.b
+}
+
+}
+
+country_event = { ### revitalization of bourgies follow up,also HH
+id = rob_france.88
+title = rob_france.88.t
+desc = rob_france.88.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.88.a
+add_manpower = -300
+}
+
+option = { 
+name = rob_france.88.b
+}
+
+}
+
+country_event = { ### nationalize the bourgeois follow uo
+id = rob_france.89
+title = rob_france.89.t
+desc = rob_france.89.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.89.a
+add_political_power = 20
+}
+
+option = { 
+name = rob_france.89.b
+}
+
+}
+
+country_event = { ### The New Bourgeois
+id = rob_france.90
+title = rob_france.90.t
+desc = rob_france.90.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.90.a
+}
+
+option = { 
+name = rob_france.90.b
+}
+
+}
+
+country_event = { ### Dissolution of parlament
+id = rob_france.91
+title = rob_france.91.t
+desc = rob_france.91.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.91.a
+
+}
+
+option = { 
+name = rob_france.91.b
+
+}
+
+}
+
+country_event = { ### Exile of parasites
+id = rob_france.92
+title = rob_france.92.t
+desc = rob_france.92.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.92.a
+
+}
+
+option = { 
+name = rob_france.92.b
+
+}
+
+}
+
+country_event = { ### The Heroic Proleteriat
+id = rob_france.93
+title = rob_france.93.t
+desc = rob_france.93.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { 
+name = rob_france.93.a
+add_war_support = 0.15
+add_stability = 0.15
+}
+
+}
+
+
+country_event = { ### Sorelists ask to be ally of nazbol germany
+id = rob_france.94
+title = "France Desires Cooperation"
+desc = "French Diplomat has let us know that the French government is seeking considerable deepening of our relationship. Should Germany allow such a development?"
+fire_only_once = yes
+is_triggered_only = yes
+
+option = { ###Fine, join faction
+name = "Why yes!"
+ai_chance = { factor = 8 }
+GER = { add_to_faction = FRR }
+FRR = { set_country_flag = FRR_ger_accept }
+FRR = { country_event = { id = rob_france.95 days = 3 } }
+}
+
+option = { ###Give us saarland, then sure
+trigger = {
+	OR = {
+		FRR = { owns_state = 789 }
+		FRR = { owns_state = 981 }
+	}
+}
+name = "Fine. But first, they must return our lands"
+ai_chance = { factor = 2 }
+FRR = { set_country_flag = FRR_ger_demand }
+FRR = { country_event = { id = rob_france.95 days = 3 } }
+}
+
+option = { ###No way
+name = "No way"
+ai_chance = { factor = 0 }
+FRR = { set_country_flag = FRR_ger_decline }
+FRR = { country_event = { id = rob_france.95 days = 3 } }
+}
+
+}
+
+
+country_event = { ### Germans answer to sorelist proposal
+id = rob_france.95
+title = "The German Response"
+desc = "So, what was their reponse?"
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = "The Germans Agree"
+trigger = {
+	has_country_flag = FRR_ger_accept
+}
+add_political_power = 50
+}
+
+option = { ###No way
+name = "Unfortunate..."
+trigger = {
+	has_country_flag = FRR_ger_decline
+	}
+	add_political_power = -20
+}
+
+option = { ###Have the Land
+trigger = {
+has_country_flag = FRR_ger_demand
+}
+name = "Land For Alliance"
+ai_chance = { factor = 1 }
+custom_effect_tooltip = "We will have to transfer German Majority territories"
+custom_effect_tooltip = "Alsace is safe"
+add_political_power = -30
+hidden_effect = {
+GER = { country_event = { id = rob_france.96 days = 3 } set_country_flag = FRR_land_agree }
+}
+}
+
+option = { ###Fuck off
+trigger = {
+has_country_flag = FRR_ger_demand
+}
+ai_chance = { factor = 0 }
+name = "Call the Deal Off"
+GER = { country_event = { id = rob_france.96 days = 3 }  set_country_flag = FRR_land_refuse }
+}
+
+}
+
+country_event = { ### Sorelian answer to German counter response
+id = rob_france.96
+title = "The French Response"
+desc = "So, what was their decision?"
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = "The French Agreed"
+trigger = {
+	has_country_flag = FRR_land_agree
+	}
+transfer_state = 981
+transfer_state = 789
+981 = { remove_core_of = FRR }
+789 = { remove_core_of = FRR }
+GER = { add_to_faction = FRR }
+}
+
+option = { ###No way
+name = "Unfortunete..."
+trigger = {
+	has_country_flag = FRR_land_refuse
+	}
+add_political_power = -20
+}
+
+}
+
+country_event = { ### Sets Up Mini Game for France
+id = rob_france.97
+title = "Wallonia"
+desc = "Now that the threat of French republic is gone, the Wallonians are rethinking their alliance with Germany. This is our opportunity to snatch them from German hands"
+fire_only_once = yes
+trigger = {
+	tag = FRS
+	exists = yes
+	has_country_flag = frs_minigame_trigger
+	has_completed_focus = FRA_legacy_of_marx_and_engels
+	NOT = { is_in_faction_with = GER }
+	WLL = {
+		exists = yes
+		is_puppet_of = GER
+		SOCIALIST_ALIGNED_GOVERNMENT = yes
+	}
+}
+
+option = {
+name = "Wallonians will follow us"
+custom_effect_tooltip = FRS_minigame_enable_1
+set_country_flag = FRS_minigame_enable
+set_variable = { 
+	var = FRS_walonia_french
+	value = 2 
+  }
+  set_variable = { 
+	var = FRS_walonia_germans
+	value = 3
+  }
+  GER = {
+	set_country_flag = FRS_minigame_enable
+	country_event = { id = rob_france.103 days = 1 }
+	set_variable = { 
+		var = FRS_walonia_french
+		value = 2 
+	  }
+	  set_variable = { 
+		var = FRS_walonia_germans
+		value = 3
+	  }
+  }
+}
+
+}
+
+country_event = { ### Minigame causes one side to go for war 
+title = "Clash Over Wallonia"
+desc = "The Situation in Wallonia has edged relationship between Germany and France"
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = "The Germans will yield"
+trigger = {
+	tag = FRS
+}
+custom_effect_tooltip = FRS_minigame_enable_1
+set_country_flag = FRS_minig_end
+GER = { remove_from_faction = WLL }
+add_to_faction = WLL
+declare_war_on = { type = annex_everything target = GER }
+}
+
+option = {
+name = "The French will yield"
+trigger = {
+	tag = GER
+}
+custom_effect_tooltip = FRS_minigame_enable_1
+set_country_flag = FRS_minig_end
+declare_war_on = { type = annex_everything target = FRS }
+}
+
+}
+
+
+country_event = { ### Total domination in minigame
+id = rob_france.99
+title = "Wallonia Aligned"
+desc = "The Wallonians have decided to be part of our sphere."
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = "Wallonians follow us!"
+set_country_flag = FRS_minig_end
+if = {
+	limit = {
+		tag = FRS
+	}
+	GER = { remove_from_faction = WLL }
+	add_to_faction = WLL
+	}
+}
+
+}
+
+country_event = { ### General French alliance event
+id = rob_france.100
+title = "France Desires Cooperation"
+desc = "French Diplomat has let us know that the French government is seeking considerable deepening of our relationship. Should we allow such a development?"
+is_triggered_only = yes
+
+option = { ###join
+name = "Agree"
+trigger = {
+ is_puppet = no
+}
+ai_chance = {
+ base = 5
+ modifier = {
+   factor = 5
+   AND = {
+	 ROOT = {
+	   SOCIALIST_ALIGNED_GOVERNMENT = yes
+	 }
+	 FRS = {
+		SOCIALIST_ALIGNED_GOVERNMENT = yes
+	 }
+   }
+ }
+
+ modifier = {
+   add = 2
+   has_opinion = {
+	 target = FRS
+	 value > 50
+   }
+ }
+
+ modifier = {
+   add = 4
+   has_opinion = {
+	 target = FRS
+	 value > 100
+   }
+ }
+
+ modifier = {
+   add = 6
+   has_opinion = {
+	 target = FRS
+	 value > 175
+   }
+ }
+
+ modifier = {
+   factor = 4
+   strength_ratio = {
+	   tag = FROM
+	   ratio < 5
+   }
+ }
+
+ modifier = {
+   factor = 2
+   strength_ratio = {
+	   tag = FROM
+	   ratio < 3
+   }
+ }
+
+ modifier = {
+   factor = 0.5
+   strength_ratio = {
+	   tag = FROM
+	   ratio < 2
+   }
+ }
+
+}
+hidden_effect = {
+ FRS = { country_event = { id = rob_france.101 days = 3 } }
+}
+}
+
+option = {  ###dont
+name = "Refuse"
+  ai_chance = {
+ base  = 6
+
+ modifier = {
+   add = 4
+   has_opinion = {
+	 target = FRS
+	 value < 50
+   }
+ }
+
+ modifier = {
+   add = 8
+   has_opinion = {
+	 target = FRS
+	 value < 100
+   }
+ }
+
+ modifier = {
+   add = 12
+   has_opinion = {
+	 target = FRS
+	 value < 175
+   }
+ }
+}
+custom_effect_tooltip = "Refusal Might Spark War"
+ hidden_effect = {
+   POL = { country_event = { id = rob_france.102 days = 3 } }
+ }
+}
+
+}
+
+###Invitation to Frances Block: agreed
+country_event = {
+	id = rob_france.101 
+	title = "Success"
+	desc = "Our diplomatic play has resulted in our block growing larger."
+	is_triggered_only = yes
+	
+	
+	option = { 
+	 name = "Excellent"
+	 ai_chance = {
+	  factor = 100
+	 }
+	 FRS = { add_to_faction = FROM }
+	}
+  
+   }
+  
+  
+  ###Invitation to Intermarium: refusal
+  country_event = {
+	id = rob_france.102
+	title = "Failure"
+	desc = "Our diplomatic play has not resulted in expansion of our block."
+	is_triggered_only = yes
+	
+	
+	option = { 
+	 name = "Too bad"
+	 ai_chance = {
+	  factor = 2
+	 }
+	}
+  
+	option = { 
+	name = "You dare?"
+	 ai_chance = {
+	  factor = 1
+	 }
+	 create_wargoal = { target = FROM  type = annex_everything }
+	}
+  }
+
+country_event = { ### Tells Germany that Walonia Mini Game starts
+id = rob_france.103
+title = "Meddling in Wallonia"
+desc = "The French have begun to test our hold over Wallonian government."
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+name = "Wallonians will follow us"
+custom_effect_tooltip = FRS_minigame_enable_1
+}
+
+}
 
 ####debug events
 

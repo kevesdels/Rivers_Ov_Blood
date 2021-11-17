@@ -138,7 +138,6 @@ country_event = {
       is_core_of = SWI
 	}
 	SWI = { transfer_state = PREV }
-	
   }
    if = { 
   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
@@ -165,7 +164,41 @@ country_event = {
   add_war_support =-0.03
   add_political_power =-30
  }
- 
+
+ option = {
+  name = "Annex East, Puppet the Rest"
+  trigger = { tag = FRR 892 = { is_owned_and_controlled_by = FRR } }
+  ai_chance = { factor = 2000  }
+  892 = { add_core_of = FRR }
+  puppet = SWI
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = SWI
+	}
+	SWI = { transfer_state = PREV }
+	
+  }
+  FRR = {  transfer_state = 892 }
+   if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  SWI = {
+  set_cosmetic_tag = Generic_puppet_socialist
+  } 
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          SWI = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      SWI = { drop_cosmetic_tag = yes }
+  } 
+  }
+
  option = {
   name = "Split Switzerland"
   ai_chance = { factor = 150 }
@@ -733,6 +766,13 @@ country_event = {
  }
  
  option = {
+  name = "Annex Luxembourg"
+  trigger = { tag = FRR 8 = { is_owned_and_controlled_by = FRR } }
+  ai_chance = { factor = 2000  }
+  8 = { add_core_of = FRR }
+  }
+
+ option = {
   name = "Continue Military Occupation"
   ai_chance = { factor = 0 modifier = { factor = 2000 tag = GER has_government = national_socialist } }
   set_country_flag = annex_lux
@@ -804,6 +844,14 @@ country_event = {
   } 
  }
   }
+
+  option = {
+    name = "Annex Wallonia "
+    trigger = { tag = FRR 34 = { is_owned_and_controlled_by = FRR } 813 = { is_owned_and_controlled_by = FRR } }
+    ai_chance = { factor = 2000  }
+    34 = { add_core_of = FRR }
+    813 = { add_core_of = FRR }
+    }
 
  option = {
   name = "Create Flanders-Wallonia"

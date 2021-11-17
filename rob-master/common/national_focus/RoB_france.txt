@@ -687,10 +687,9 @@ focus_tree = {
 		prerequisite = { focus = FRA_the_state_of_france  }
 		completion_reward = {
 			add_political_power = 120
-			###event
-			#add_ideas = {
-			#	fra_pol_violence_2
-			#}
+			hidden_effect = {
+				country_event = { id = rob_france.87 days = 1 }
+			}
 		}
 	}
 
@@ -726,7 +725,9 @@ focus_tree = {
 			add_popularity = { ideology = conservative  popularity = -0.12 }
 			add_popularity = { ideology = reactionary  popularity = -0.1 }
 			add_popularity = { ideology = pelekist  popularity = -0.09 }
-			country_event = { id = rob_france.54 days = 1 }
+			hidden_effect = {
+				country_event = { id = rob_france.54 days = 1 }
+			}
 		}
 	}
 
@@ -759,7 +760,9 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_rule_with_an_iron_first  } prerequisite = { focus = FRA_democratic_socialism  }
 		completion_reward = {
-			country_event = { id = rob_france.56 days = 1 }
+			hidden_effect = {
+				country_event = { id = rob_france.56 days = 1 }
+			}
 			add_ideas = {
 				fra_com_soc_const
 			}
@@ -831,7 +834,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_reconcile_the_population  } prerequisite = { focus = FRA_economic_transition  }
 		completion_reward = {
-			add_popularity = { ideology = democratic_socialism  popularity = 0.2 }
+			add_popularity = { ideology = democratic_socialist  popularity = 0.2 }
 			add_stability = 0.1
 		}
 	}
@@ -942,6 +945,7 @@ focus_tree = {
 			add_ideas = {
 				fra_legacy_marx_engels
 			}
+			custom_effect_tooltip = FRS_minigame_req
 		}
 	}
 
@@ -1318,6 +1322,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_an_officer  }
+		available = {
+			has_country_flag = FRA_de_la_rocque_route
+		}
 		completion_reward = {
 			country_event = { id = rob_france.46 days = 1 }
 		}
@@ -1435,6 +1442,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_an_officer  }
+		available = {
+			has_country_flag = FRA_d_espery_route
+		}
 		completion_reward = {
 			country_event = { id = rob_france.45 days = 1 }
 		}
@@ -1798,6 +1808,15 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_france_indivisible  }
+		completion_reward = {
+			if = {
+				limit = {
+					tag = FRS
+				}
+				custom_effect_tooltip = FRS_diplo_enable_tooltip
+				set_country_flag = FRS_enable_diplo
+			}
+		}
 	}
 
 	#Our European Commtments
@@ -1811,6 +1830,15 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_france_indivisible  }
+		completion_reward = {
+			if = {
+				limit = {
+					tag = FRS
+				}
+				custom_effect_tooltip = FRS_war_enable_tooltip
+				set_country_flag = FRS_war_enable
+			}
+		}
 	}
 
 	#The Question of Loyality
@@ -2960,7 +2988,6 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_revitalization_of_the_bourgeois  }
 		completion_reward = {
-			###event
 			swap_ideas = {
 				remove_idea = fra_sor_new_bour
 				add_idea = fra_sor_new_bour_2
@@ -2980,7 +3007,6 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_begin_the_myth  }
 		completion_reward = {
-			###popularity
 			add_popularity = { ideology = conservative   popularity = -0.2 }
 		}
 	}
@@ -3001,6 +3027,9 @@ focus_tree = {
 				remove_idea = fra_sor_new_bour_3
 				add_idea = fra_sor_new_bour_4
 			}
+			hidden_effect = {
+				country_event = { id = rob_france.89 days = 1 }
+			}
 		}
 	}
 
@@ -3016,9 +3045,12 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_begin_the_myth  }
 		completion_reward = {
-			###event (gives blank idea)
-			add_ideas = {
-				fra_sor_new_bour
+			swap_ideas = {
+				remove_idea = fra_pol_violence
+				add_idea = fra_pol_violence_2
+				}
+			hidden_effect = {
+				country_event = { id = rob_france.88 days = 1 }
 			}
 		}
 	}
@@ -3035,10 +3067,12 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_joy_of_duty  }
 		completion_reward = {
-			###event
 			swap_ideas = {
 				remove_idea = fra_sor_new_bour_5
 				add_idea = fra_sor_new_bour_6
+			}
+			hidden_effect = {
+				country_event = { id = rob_france.90 days = 1 }
 			}
 		}
 	}
@@ -3091,7 +3125,6 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_exile_of_parasites  }
 		completion_reward =  {
-			###event 
 			add_ideas = {
 				fra_sor_DoE
 			}
@@ -3110,9 +3143,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_spread_the_revolution  }
 		completion_reward =  {
-			###event 
 			add_ideas = {
-				fra_sor_DoE
+				fra_sor_freedom_violence
 			}
 		}
 	}
@@ -3147,7 +3179,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_dissolve_the_parliament  }
 		completion_reward = {
-			###event
+			add_stability = -0.04
+			add_war_support = 0.09
+			hidden_effect = {
+				country_event = { id = rob_france.92 days = 1 }
+			}
 		}
 	}
 
@@ -3219,7 +3255,9 @@ focus_tree = {
 		prerequisite = { focus = FRA_burn_liberal_symbolic  }
 		completion_reward = {
 			add_stability = 0.10
-			#event
+			hidden_effect = {
+				country_event = { id = rob_france.91 days = 1 }
+			}
 		}
 	}
 
@@ -3252,6 +3290,10 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_freedom_through_conflict  } prerequisite = { focus = FRA_the_communard_legion  }
+		completion_reward = {
+			add_political_power = 250
+			add_stability = 0.1
+		}
 	}
 
 	#Spread the Revolution
@@ -3266,7 +3308,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_heroic_proletariat  }
 		completion_reward = {
-
+			custom_effect_tooltip = FRR_war_enable_tooltip
+			set_country_flag = FRR_war_enable
 		}
 	}
 
@@ -3282,7 +3325,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_death_of_enlightenment  } prerequisite = { focus = FRA_the_new_bourgeois  } prerequisite = { focus = FRA_syndicalist_technocracy  }
 		completion_reward = {
-			###event
+			country_event = { id = rob_france.93 days = 1 }
 		}
 	}
 
@@ -3297,7 +3340,10 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = FRA_spread_the_revolution  }
-
+		completion_reward = {
+			custom_effect_tooltip = "Will be implemented later, for now, have some manpower"
+			add_manpower = 100000
+		}
 	}
 
 	#Convoy Escorts
