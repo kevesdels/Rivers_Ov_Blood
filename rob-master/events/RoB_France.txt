@@ -487,7 +487,7 @@ create_country_leader = {
 	expire = "1953.3.1"
 	ideology = authoritharian_subtype
 	traits = {
-		#
+		the_old_marshal
 	}
   
 }
@@ -511,11 +511,11 @@ elections_allowed = no
 create_country_leader = {
 	name = "Charles de Gaulle"
 	desc = ""
-	picture = "Charles_de_gualle.tga"
+	picture = "Charles_de_Gaulle.dds"
 	expire = "1953.3.1"
 	ideology = military_junta
 	traits = {
-		#
+		the_rooster
 	}
  
 }
@@ -554,6 +554,13 @@ option = { ###play as socialists
 name = rob_france.21.a
 FRS = { change_tag_from = FRA }
 hidden_effect = {
+FRS = {
+	complete_national_focus = FRA_the_state_of_france 
+	complete_national_focus = FRA_the_french_military 
+	complete_national_focus = FRA_armeedeterre 
+	complete_national_focus = FRA_armeedelair 
+	complete_national_focus = FRA_marine_nationale
+}
 FRS = { transfer_state = 16 }
 FRS = { transfer_state = 1279 }
 FRS = { transfer_state = 785 }
@@ -587,6 +594,13 @@ option = { ###stand by republic
 name = rob_france.21.b
 add_political_power = 100
 hidden_effect = {
+FRS = {
+	complete_national_focus = FRA_the_state_of_france 
+	complete_national_focus = FRA_the_french_military 
+	complete_national_focus = FRA_armeedeterre 
+	complete_national_focus = FRA_armeedelair 
+	complete_national_focus = FRA_marine_nationale
+}
 FRS = { transfer_state = 16 }
 FRS = { transfer_state = 1279 }
 FRS = { transfer_state = 785 }
@@ -629,6 +643,13 @@ option = { ###play as pelekists
 name = rob_france.22.a
 FRP = { change_tag_from = FRA }
 hidden_effect = {
+FRP = {
+	complete_national_focus = FRA_the_state_of_france 
+	complete_national_focus = FRA_the_french_military 
+	complete_national_focus = FRA_armeedeterre 
+	complete_national_focus = FRA_armeedelair 
+	complete_national_focus = FRA_marine_nationale
+}
 FRP = { transfer_state = 23 }
 FRP = { transfer_state = 1007 }
 FRP = { transfer_state = 1008 }
@@ -659,6 +680,13 @@ option = { ###stand by the republic
 name = rob_france.22.b
 add_political_power = 100
 hidden_effect = {
+FRP = {
+	complete_national_focus = FRA_the_state_of_france 
+	complete_national_focus = FRA_the_french_military 
+	complete_national_focus = FRA_armeedeterre 
+	complete_national_focus = FRA_armeedelair 
+	complete_national_focus = FRA_marine_nationale
+}
 FRP = { transfer_state = 23 }
 FRP = { transfer_state = 1007 }
 FRP = { transfer_state = 1008 }
@@ -698,8 +726,15 @@ picture = GFX_picture_FRA_deat_speech
 
 option = { ###play as sorelians
 name = rob_france.23.a
-FRR = { change_tag_from = FRA }
+FRR = { change_tag_from = FRA  }
 hidden_effect = {
+FRR = {
+	complete_national_focus = FRA_the_state_of_france 
+	complete_national_focus = FRA_the_french_military 
+	complete_national_focus = FRA_armeedeterre 
+	complete_national_focus = FRA_armeedelair 
+	complete_national_focus = FRA_marine_nationale
+}
 FRR = { transfer_state = 819 }
 FRR = { transfer_state = 24 }
 FRR = { transfer_state = 33 }
@@ -724,6 +759,13 @@ option = { ###stand by republic
 name = rob_france.23.b
 add_political_power = 100
 hidden_effect = {
+FRR = {
+	complete_national_focus = FRA_the_state_of_france 
+	complete_national_focus = FRA_the_french_military 
+	complete_national_focus = FRA_armeedeterre 
+	complete_national_focus = FRA_armeedelair 
+	complete_national_focus = FRA_marine_nationale
+}
 FRR = { transfer_state = 819 }
 FRR = { transfer_state = 24 }
 FRR = { transfer_state = 33 }
@@ -759,6 +801,13 @@ option = { ###play liberals
 name = rob_france.24.a
 FRL = { change_tag_from = FRA }
 hidden_effect = {
+FRL = {
+	complete_national_focus = FRA_the_state_of_france 
+	complete_national_focus = FRA_the_french_military 
+	complete_national_focus = FRA_armeedeterre 
+	complete_national_focus = FRA_armeedelair 
+	complete_national_focus = FRA_marine_nationale
+}
 FRL = { transfer_state = 25 }
 FRL = { transfer_state = 26 }
 FRL = { transfer_state = 22 }
@@ -786,6 +835,13 @@ option = { ###stand by military france
 name = rob_france.24.b
 add_political_power = 100
 hidden_effect = {
+FRL = {
+	complete_national_focus = FRA_the_state_of_france 
+	complete_national_focus = FRA_the_french_military 
+	complete_national_focus = FRA_armeedeterre 
+	complete_national_focus = FRA_armeedelair 
+	complete_national_focus = FRA_marine_nationale
+}
 FRL = { transfer_state = 25 }
 FRL = { transfer_state = 26 }
 FRL = { transfer_state = 22 }
@@ -1612,7 +1668,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
-		#
+		general_secretary
 	}
 }
 	add_popularity = { ideology = socialist popularity = 0.2 }
@@ -2013,7 +2069,7 @@ set_politics = {
 	  expire = "1953.3.1"
 	  ideology = authoritharian_subtype
 	  traits = {
-		#
+		the_colonel_2
 	  }
 	 
 	}
@@ -2041,7 +2097,7 @@ ai_chance = {
 	  expire = "1953.3.1"
 	  ideology = reactionary_monarchy
 	  traits = {
-		#
+		duke_of_orleans
 	  }
 	 
 	}
@@ -2060,7 +2116,7 @@ option = { #Henry VI
 		expire = "1953.3.1"
 		ideology = reactionary_monarchy
 		traits = {
-		  #
+			count_of_paris
 		}
 	   
 	  }
@@ -2265,7 +2321,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = christian_pelekism
 	traits = {
-		#
+		true_nationalist
 		}
 	}
 }
@@ -3384,7 +3440,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = social_democracy_subtype
 	traits = {
-		#
+		discipline_of_jaures
 	}
 }
 
@@ -3452,7 +3508,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = conservative_subtype
 	traits = {
-		#
+		engineer
 	}
 }
 }

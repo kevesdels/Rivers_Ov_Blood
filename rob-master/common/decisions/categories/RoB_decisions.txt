@@ -5,6 +5,7 @@ LIT_lith_raids = {
     tag = LIT
           }
 	available = {
+	 NOT = { is_puppet = yes }
 	 NOT = {
 	  has_government = democratic_socialist
 	  has_government = social_democracy
@@ -57,6 +58,7 @@ GER_german_export_revolution = {
 		  }
 	available = {
 	tag = GER
+	NOT = { is_puppet = yes }
 	has_country_flag = GER_expansion_LUX_DS
 	OR = {
 	has_government = socialist
@@ -70,6 +72,7 @@ GER_german_expansion = {
 	available = {
     tag = GER
 	has_country_flag = GER_expansion
+	NOT = { is_puppet = yes }
     }
 	priority = {
      base = 100
@@ -98,12 +101,14 @@ SPR_spanish_revanschism = {
   picture = GFX_decision_cat_picture_concessions_to_the_trade_unions
 	visible = {
     tag = SPR
-	OR = {
-	has_government = national_socialist
-	has_government = pelekist
- 	}
-	
-          }
+		OR = {
+			has_government = national_socialist
+			has_government = pelekist
+ 		}
+	}
+	available = {
+		NOT = { is_puppet = yes }
+	}
 		  priority = {
 		  base = 10
 		  }
@@ -156,6 +161,9 @@ PRS_foreign_policy = {
     tag = PRS
 	NOT = { has_country_flag = vyddunas_victory }
           }
+	available = {
+		NOT = { is_puppet = yes }
+	}
 		  priority = {
 		  base = 10
 		  }
@@ -166,6 +174,9 @@ PRS_baltic_ambition = {
     tag = PRS
 	has_country_flag = vyddunas_victory
           }
+	available = {
+		NOT = { is_puppet = yes }
+	}
 		  priority = {
 		  base = 10
 		  }
@@ -175,7 +186,10 @@ PRS_german_expansion = {
 	visible = {
     tag = PRS
 	NOT = { has_country_flag = vyddunas_victory }
-          }
+    }
+	available = {
+		NOT = { is_puppet = yes }
+	}
 		  priority = {
 		  base = 10
 		  }
@@ -185,6 +199,9 @@ BLR_raids = {
   picture = GFX_decision_germany_partisans
 	visible = {
     tag = BLR
+	}
+	available = {
+		NOT = { is_puppet = yes }
 	}
 		  priority = {
 		  base = 100
@@ -196,6 +213,9 @@ DSU_ukrainian_ambition = {
   picture = GFX_decision_germany_partisans
 	visible = {
     tag = DSU
+	}
+	available = {
+		NOT = { is_puppet = yes }
 	}
 		  priority = {
 		  base = 100
@@ -211,7 +231,7 @@ DSU_allies = {
     tag = DSU
 	}
 	allowed = {
-	
+		NOT = { is_puppet = yes }
 	}
 		  priority = {
 		  base = 90
@@ -225,6 +245,9 @@ UKR_ukrainian_ambition = {
   picture = GFX_decision_germany_partisans
 	visible = {
     tag = UKR
+	}
+	available = {
+		NOT = { is_puppet = yes }
 	}
 		  priority = {
 		  base = 100
@@ -514,6 +537,7 @@ LES_russian_expansion = {
 	}
 	available = {
 	tag = LES
+	NOT = { is_puppet = yes }
 	LES = {
 	has_full_control_of_state = 572
 	hidden_trigger = { has_country_flag = triumph }}
@@ -533,6 +557,7 @@ LES_easterneurope = {
 	   has_country_flag = les_russia_secured
 	  }
 	  available = {
+		NOT = { is_puppet = yes }
 	  hidden_trigger = { has_country_flag = les_russia_secured }
 	  }
 			priority = {
@@ -550,6 +575,7 @@ LES_caucasus = {
 	   has_country_flag = les_russia_secured
 	  }
 	  available = {
+	  NOT = { is_puppet = yes }
 	  hidden_trigger = { has_country_flag = les_russia_secured }
 	  }
 			priority = {
@@ -565,6 +591,7 @@ LES_caucasus = {
 	   has_country_flag = les_russia_secured
 	  }
 	  available = {
+		NOT = { is_puppet = yes }
 	  hidden_trigger = { has_country_flag = les_russia_secured }
 	  }
 			priority = {
@@ -580,6 +607,7 @@ LES_caucasus = {
 	   has_country_flag = les_russia_secured
 	  }
 	  available = {
+		NOT = { is_puppet = yes }
 	  hidden_trigger = { has_country_flag = les_russia_secured }
 	  }
 			priority = {
@@ -769,6 +797,9 @@ FRR_diplo = {
 			tag = FRR
 		}
 	}
+	available = {
+		NOT = { is_puppet = yes }
+	}
 	priority = {
 		base = 120
 		}
@@ -784,6 +815,9 @@ FRR_war = {
 				}
 				tag = FRR
 			}
+		}
+		available = {
+			NOT = { is_puppet = yes }
 		}
 		priority = {
 		base = 120
@@ -815,6 +849,9 @@ FRS_diplomacy = {
 			tag = FRS
 		}
 	}
+	available = {
+		NOT = { is_puppet = yes }
+	}
 	priority = {
 		base = 120
 		}
@@ -831,6 +868,9 @@ FRS_post_minigame_wars = {
 				}
 				tag = FRS
 			}
+		}
+		available = {
+			NOT = { is_puppet = yes }
 		}
 		priority = {
 		base = 120

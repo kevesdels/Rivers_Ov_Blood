@@ -770,6 +770,7 @@ country_event = {
   trigger = { tag = FRR 8 = { is_owned_and_controlled_by = FRR } }
   ai_chance = { factor = 2000  }
   8 = { add_core_of = FRR }
+  set_country_flag = annex_lux
   }
 
  option = {
@@ -846,11 +847,12 @@ country_event = {
   }
 
   option = {
-    name = "Annex Wallonia "
+    name = "Annex Wallonia"
     trigger = { tag = FRR 34 = { is_owned_and_controlled_by = FRR } 813 = { is_owned_and_controlled_by = FRR } }
     ai_chance = { factor = 2000  }
     34 = { add_core_of = FRR }
     813 = { add_core_of = FRR }
+    set_country_flag = annex_lux
     }
 
  option = {

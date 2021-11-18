@@ -483,6 +483,8 @@ picture = GFX_idea_overextendadsf
   modifier = {
     repair_speed_industrial_complex_factor = 0.5
     repair_speed_arms_factory_factor = 0.5
+    repair_speed_infrastructure_factor = 0.5
+    production_speed_buildings_factor = 0.25
    }
 }
 
@@ -1087,43 +1089,6 @@ picture = GFX_idea_overextendadsf
    }
 }
 
-fra_mil_miltary = {
- 
-  allowed = {
-    always = yes
-  }
-allowed_civil_war = {
-     always = yes
-   }
-  removal_cost = -1
-picture = GFX_idea_overextendadsf
-  modifier = {
-    planning_speed = 0.15
-    max_planning = 0.1
-    political_power_gain = -0.25
-    war_support_factor = 0.1
-   }
-}
-
-fra_mil_Cult_o_Persona = {
- 
-  allowed = {
-    always = yes
-  }
-allowed_civil_war = {
-     always = yes
-   }
-  removal_cost = -1
-picture = GFX_idea_overextendadsf
-  modifier = {
-    political_power_gain = 0.25
-    army_morale_factor = 0.1
-    stability_factor = 0.1
-    production_speed_buildings_factor = 0.1
-   }
-}
-
-
 ### Admiral
 
 fra_dar_naval_heritage = {
@@ -1189,23 +1154,6 @@ picture = GFX_idea_overextendadsf
   modifier = {
     monthly_population = 0.40
     dig_in_speed_factor = 0.33
-   }
-}
-
-fra_legacy_of_empire = {
- 
-  allowed = {
-    always = yes
-  }
-allowed_civil_war = {
-     always = yes
-   }
-  removal_cost = -1
-picture = GFX_idea_overextendadsf
-  modifier = {
-    justify_war_goal_time = -0.50
-    command_power_gain = 0.25
-    surrender_limit = 0.1
    }
 }
 

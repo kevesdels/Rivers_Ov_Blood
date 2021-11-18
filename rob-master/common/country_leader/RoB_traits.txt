@@ -20,6 +20,30 @@ leader_traits = {
 		}
 	}
 
+	cult_of_personality = {
+		random = no
+
+		stability_weekly = 0.005
+		political_power_gain = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	marshal_of_france = {
+		random = no
+
+		war_support_factor = 0.1
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		experience_gain_army = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	devoted_socialist = {
 		random = no
 
@@ -50,10 +74,113 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	the_old_marshal = {
+		random = no
+		war_support_factor  = 0.05
+		max_dig_in_factor = 0.02
+		army_defence_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_admiral = {
+		random = no
+		experience_gain_navy = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	general_secretary = {
+		random = no
+		production_speed_buildings_factor = 0.05
+		industrial_capacity_factory = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	true_nationalist = {
+		random = no
+		war_support_factor = 0.1
+		stability_factor = -0.05
+		political_power_gain = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	spirit_of_the_napoleon = {
+		random = no
+		army_org_factor	= 0.08
+		army_attack_factor = 0.1
+		land_reinforce_rate = 0.05
+		recruitable_population_factor = 0.01
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_rooster = {
+		random = no
+		war_support_factor  = 0.05
+		land_reinforce_rate = 0.02
+		army_attack_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	discipline_of_jaures = {
+		random = no
+		stability_factor = 0.1
+		war_support_factor = 0.1
+		political_power_gain = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	count_of_paris = {
+		random = no
+		global_building_slots_factor = 0.05
+		political_power_gain = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	duke_of_orleans = {
+		random = no
+		political_power_gain = 0.15
+		reactionary_drift = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	king_of_french= {
+		random = no
+		consumer_goods_factor = -0.05
+		stability_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	the_colonel = {
 		random = no
 		army_morale_factor = 0.05
 		army_defence_factor = 0.08
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_colonel_2 = {
+		random = no
+		war_support_factor = 0.05
+		army_chief_cost_factor = -0.15
+		navy_chief_cost_factor = -0.15
+		air_chief_cost_factor = -0.15
+		high_command_cost_factor = -0.15
 
 		ai_will_do = {
 			factor = 1
@@ -67,5 +194,15 @@ leader_traits = {
 		ai_will_do = {
 			factor = 1
 		}
+	}
+	engineer = {
+		random = no
+		research_speed_factor = 0.05
+		industrial_capacity_factory = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+
 	}
 }

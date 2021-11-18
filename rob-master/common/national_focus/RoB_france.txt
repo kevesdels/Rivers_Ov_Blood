@@ -162,7 +162,7 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		available = {
-			
+			has_country_flag = fra_cw_over
 		}
 		prerequisite = { focus = FRA_armeedeterre  }
 		mutually_exclusive = { focus = FRA_legacy_of_the_great_war  focus = FRA_a_new_doctrine  }
@@ -212,9 +212,6 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		available = {
-			has_country_flag = fra_cw_over
-		}
 		completion_reward = {
 		add_political_power = -50
 		}
@@ -231,7 +228,7 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		available = {
-			
+			has_country_flag = fra_cw_over
 		}
 		prerequisite = { focus = FRA_armeedeterre  }
 		mutually_exclusive = { focus = FRA_focus_on_firepower  focus = FRA_legacy_of_the_great_war  }
@@ -410,7 +407,7 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		available = {
-			
+			has_country_flag = fra_cw_over
 		}
 		prerequisite = { focus = FRA_armeedeterre  }
 		mutually_exclusive = { focus = FRA_focus_on_firepower  focus = FRA_a_new_doctrine  }
@@ -1182,9 +1179,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_expand_the_croixdefeu  } prerequisite = { focus = FRA_lessons_of_civil_war  }
 		completion_reward = {
-			add_ideas = {
-				fra_mil_Cult_o_Persona
-			}
+			add_country_leader_trait = cult_of_personality 
 		}
 	}
 
@@ -1536,7 +1531,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_institut_de_france  focus = FRA_national_labour_camps }
 		completion_reward = {
-			###gives trait to leader
+			add_country_leader_trait = army_veteran
 		}
 	}
 
@@ -1552,9 +1547,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_integrate_la_cagoule  } prerequisite = { focus = FRA_lessons_of_civil_war  }
 		completion_reward = {
-			add_ideas = {
-				fra_mil_miltary
-			}
+			add_country_leader_trait = marshal_of_france 
 		}
 	}
 
@@ -1695,9 +1688,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_a_nation_born_again  }
 		completion_reward = {
-			add_ideas = {
-				fra_legacy_of_empire
-			}
+			add_country_leader_trait = spirit_of_the_napoleon
 		}
 	}
 
@@ -1924,9 +1915,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_restoring_our_former_glory  } prerequisite = { focus = FRA_the_spiritual_mindset  } prerequisite = { focus = FRA_the_camelots_du_roi  }
 		completion_reward = {
-			add_ideas = {
-				fra_king_of_french
-			}
+			add_country_leader_trait = king_of_french
 		}
 	}
 
@@ -2217,7 +2206,6 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_folkish_revival  }
 		completion_reward = {
-			###event about grandiose parade and national and monarchist symbolism being put up everywhere nazi style
 			country_event = { id = rob_france.64 days =  1 }
 		}
 	}
@@ -3385,6 +3373,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
+		available = {
+			has_country_flag = fra_cw_over
+		}
 		prerequisite = { focus = FRA_marine_nationale  }
 		mutually_exclusive = { focus = FRA_rebuild_the_surface_fleet  }
 		completion_reward = {
@@ -3727,6 +3718,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available = {
+			has_country_flag = fra_cw_over
+		}
 		prerequisite = { focus = FRA_marine_nationale  }
 		mutually_exclusive = { focus = FRA_wage_undersea_warfare  }
 		completion_reward = {
@@ -3765,6 +3759,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available = {
+			has_country_flag = fra_cw_over
+		}
 		prerequisite = { focus = FRA_armeedelair  }
 		mutually_exclusive = { focus = FRA_air_dominance  }
 		completion_reward = {
@@ -3786,6 +3783,9 @@ focus_tree = {
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
+		}
+		available = {
+			has_country_flag = fra_cw_over
 		}
 		prerequisite = { focus = FRA_armeedelair  }
 		mutually_exclusive = { focus = FRA_ground_support  }
