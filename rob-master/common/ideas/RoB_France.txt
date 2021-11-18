@@ -1726,6 +1726,25 @@ picture = GFX_idea_overextendadsf
    }
 }
 
+
+fra_slay_the_evil = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    army_attack_factor = 0.1
+    army_defence_factor = 0.1
+    conscription = 0.015
+   }
+}
+
+
 ###end of country
   }
 	#### Junta
