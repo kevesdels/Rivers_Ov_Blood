@@ -261,11 +261,13 @@ country_event = {
   FRR = { NOT = { is_puppet_of = ROOT } }
   FRL = { NOT = { is_puppet_of = ROOT } }
   FRS = { NOT = { is_puppet_of = ROOT } }
+  FRP = { NOT = { is_puppet_of = ROOT } }
   16 = { is_owned_and_controlled_by = ROOT }
   NOT = {
    tag = FRA
    tag = FRR
    tag = FRL
+   tag = FRP
    tag = FRS
    has_country_flag = annex_fra
   }

@@ -901,10 +901,8 @@ trigger = {
  }
  hidden_effect = {
 	FRA = {
-		transfer_units_fraction= {
+		transfer_navy = {
 			target = FWA
-			size = 0.5
-			navy_ratio = 1.0
 		}
 	 }
 	SYR = { country_event = { id = syrialeb.1 days = 21 } }
@@ -998,10 +996,8 @@ country_lock_all_division_template = no
  }
  hidden_effect = {
 	FRA = {
-		transfer_units_fraction= {
+		transfer_navy = {
 			target = FWA
-			size = 0.5
-			navy_ratio = 1.0
 		}
 	 }
 	SYR = { country_event = { id = syrialeb.1 days = 21 } }
@@ -1084,10 +1080,8 @@ name = rob_france.25.a
 country_lock_all_division_template = no
 hidden_effect = {
 	FRA = {
-		transfer_units_fraction= {
+		transfer_navy = {
 			target = FWA
-			size = 0.5
-			navy_ratio = 1.0
 		}
 	 }
 	SYR = { country_event = { id = syrialeb.1 days = 21 } }
@@ -1490,6 +1484,7 @@ add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_sorel_win
 set_cosmetic_tag = FRS_victory 
+set_capital = 16
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1518,6 +1513,7 @@ add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_comm_win
 set_country_flag = frs_minigame_trigger
+set_capital = 16
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1545,6 +1541,7 @@ name = rob_france.37.a
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_rep_win
+set_capital = 16
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1573,6 +1570,7 @@ name = rob_france.40.a
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_mil_win
+set_capital = 16
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1601,6 +1599,7 @@ name = rob_france.41.a
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_mil_win
+set_capital = 16
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1628,6 +1627,7 @@ name = rob_france.48.a
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_plk_win
+set_capital = 16
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -2137,9 +2137,6 @@ ai_chance = {
 	 
 	}
 	add_popularity = { ideology = reactionary popularity = 0.2 }
-	add_ideas = {
-		FRA_Charles_de_Gaulle
-	}
 }
 
 option = { #Henry VI
@@ -2159,9 +2156,6 @@ option = { #Henry VI
 	   
 	  }
 	  add_popularity = { ideology = reactionary popularity = 0.2 }
-	  add_ideas = {
-		FRA_Charles_de_Gaulle
-	}
 }
 
 }
@@ -3313,7 +3307,7 @@ ai_chance = {
 	 ROOT = {
 	   SOCIALIST_ALIGNED_GOVERNMENT = yes
 	 }
-	 FRS = {
+	 FROM = {
 		SOCIALIST_ALIGNED_GOVERNMENT = yes
 	 }
    }
@@ -3322,7 +3316,7 @@ ai_chance = {
  modifier = {
    add = 2
    has_opinion = {
-	 target = FRS
+	 target = FROM
 	 value > 50
    }
  }
@@ -3330,7 +3324,7 @@ ai_chance = {
  modifier = {
    add = 4
    has_opinion = {
-	 target = FRS
+	 target = FROM
 	 value > 100
    }
  }
@@ -3338,7 +3332,7 @@ ai_chance = {
  modifier = {
    add = 6
    has_opinion = {
-	 target = FRS
+	 target = FROM
 	 value > 175
    }
  }
@@ -3369,7 +3363,7 @@ ai_chance = {
 
 }
 hidden_effect = {
- FRS = { country_event = { id = rob_france.101 days = 3 } }
+ FROM = { country_event = { id = rob_france.101 days = 3 } }
 }
 }
 
@@ -3381,7 +3375,7 @@ name = "Refuse"
  modifier = {
    add = 4
    has_opinion = {
-	 target = FRS
+	 target = FROM
 	 value < 50
    }
  }
@@ -3389,7 +3383,7 @@ name = "Refuse"
  modifier = {
    add = 8
    has_opinion = {
-	 target = FRS
+	 target = FROM
 	 value < 100
    }
  }
@@ -3397,14 +3391,14 @@ name = "Refuse"
  modifier = {
    add = 12
    has_opinion = {
-	 target = FRS
+	 target = FROM
 	 value < 175
    }
  }
 }
 custom_effect_tooltip = "Refusal Might Spark War"
  hidden_effect = {
-   FRS = { country_event = { id = rob_france.102 days = 3 } }
+   FROM = { country_event = { id = rob_france.102 days = 3 } }
  }
 }
 
@@ -3423,7 +3417,7 @@ country_event = {
 	 ai_chance = {
 	  factor = 100
 	 }
-	 FRS = { add_to_faction = FROM }
+	 ROOT = { add_to_faction = FROM }
 	}
   
    }
@@ -3604,12 +3598,10 @@ option = {
 name = rob_france.106.a
 add_political_power = -10
 FWA = {
-	transfer_units_fraction= {
-		target = ROOT
-		size = 0.5
-		navy_ratio = 1.0
+	transfer_navy = {
+		target = FRA
 	}
-}
+ }
 
 if = {
 	limit = {
@@ -3639,12 +3631,10 @@ option = {
 name = rob_france.106.b
 add_stability = -0.01
 FWA = {
-	transfer_units_fraction= {
-		target = ROOT
-		size = 0.5
-		navy_ratio = 1.0
+	transfer_navy = {
+		target = FRA
 	}
-}
+ }
 if = {
 	limit = {
 		NOT = { OR = { has_country_flag = FRA_petain_dictatorship has_country_flag = FRA_gaulle_dictatorship } }
@@ -4317,7 +4307,7 @@ option = {
 	ai_chance = {
 		factor = 5
 	}
-	country_event = { id = rob_france.110 days = 3 }
+	FRP = { country_event = { id = rob_france.110 days = 3 } }
 }
 
 option = {
@@ -4325,7 +4315,7 @@ option = {
 	ai_chance = {
 		factor = 5
 	}
-	country_event = { id = rob_france.109 days = 3 }
+	FRP = { country_event = { id = rob_france.109 days = 3 } }
 	}
 }
 
@@ -4385,7 +4375,7 @@ option = {
 	ai_chance = {
 		factor = 1
 	}
-	country_event = { id = rob_france.112 days = 3 }
+	FRP = { country_event = { id = rob_france.112 days = 3 } }
 }
 
 option = {
@@ -4393,7 +4383,7 @@ option = {
 	ai_chance = {
 		factor = 9
 	}
-	country_event = { id = rob_france.113 days = 3 }
+	FRP = { country_event = { id = rob_france.113 days = 3 } }
 	}
 }
 
@@ -4406,7 +4396,8 @@ is_triggered_only = yes
 
 option = {
 	name = "Good"
-
+	annex_country = { target = LUX transfer_troops = yes }
+	8 = { add_core_of = FRP }
 	}
 }
 
@@ -4502,7 +4493,7 @@ ai_chance = {
 	 ROOT = {
 	   SOCIALIST_ALIGNED_GOVERNMENT = yes
 	 }
-	 FRP = {
+	 FROM = {
 		SOCIALIST_ALIGNED_GOVERNMENT = yes
 	 }
    }
@@ -4511,7 +4502,7 @@ ai_chance = {
  modifier = {
    add = 2
    has_opinion = {
-	 target = FRP
+	 target = FROM
 	 value > 50
    }
  }
@@ -4519,7 +4510,7 @@ ai_chance = {
  modifier = {
    add = 4
    has_opinion = {
-	 target = FRP
+	 target = FROM
 	 value > 100
    }
  }
@@ -4527,7 +4518,7 @@ ai_chance = {
  modifier = {
    add = 6
    has_opinion = {
-	 target = FRP
+	 target = FROM
 	 value > 175
    }
  }
@@ -4558,7 +4549,7 @@ ai_chance = {
 
 }
 hidden_effect = {
- FRP = { country_event = { id = rob_france.118 days = 3 } }
+	FROM = { country_event = { id = rob_france.118 days = 3 } }
 }
 }
 
@@ -4570,7 +4561,7 @@ name = "Refuse"
  modifier = {
    add = 4
    has_opinion = {
-	 target = FRP
+	 target = FROM
 	 value < 50
    }
  }
@@ -4578,7 +4569,7 @@ name = "Refuse"
  modifier = {
    add = 8
    has_opinion = {
-	 target = FRP
+	 target = FROM
 	 value < 100
    }
  }
@@ -4586,13 +4577,13 @@ name = "Refuse"
  modifier = {
    add = 12
    has_opinion = {
-	 target = FRP
+	 target = FROM
 	 value < 175
    }
  }
 }
  hidden_effect = {
-   FRP = { country_event = { id = rob_france.119 days = 3 } }
+	FROM = { country_event = { id = rob_france.119 days = 3 } }
  }
 }
 
@@ -4611,7 +4602,7 @@ country_event = {
 	 ai_chance = {
 	  factor = 100
 	 }
-	 FRP = { add_to_faction = FROM }
+	 ROOT = { add_to_faction = FROM }
 	}
   
    }
@@ -4850,10 +4841,8 @@ country_event = {
 	option = { 
 		name = "Yes sir!"
 		FRA = {
-			transfer_units_fraction= {
+			transfer_navy = {
 				target = FWA
-				size = 0.5
-				navy_ratio = 1.0
 			}
 		 }
 		FRA = {
@@ -5145,11 +5134,11 @@ country_event = {
 	
 	option = { 
 		name = "Yes Sir!"
-		transfer_units_fraction= {
-			target = FWA
-			size = 0.5
-			navy_ratio = 1.0
-		}
+		FRA = {
+			transfer_navy = {
+				target = FWA
+			}
+		 }
 	}
 
 }

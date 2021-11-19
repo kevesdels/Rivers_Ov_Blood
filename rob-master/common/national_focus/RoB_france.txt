@@ -603,7 +603,10 @@ focus_tree = {
 		prerequisite = { focus = FRA_the_state_of_france  }
 		completion_reward = {
 			add_political_power = 120
+		hidden_effect = {
 			country_event = { id = rob_france.53 days = 1 }
+		}
+
 		}
 	}
 
@@ -1122,9 +1125,6 @@ focus_tree = {
 			add_ideas = {
 				fra_mil_col_gov
 			}
-			remove_ideas = {
-				fra_pol_violence
-			}
 		}
 	}
 
@@ -1165,6 +1165,10 @@ focus_tree = {
 				add_ideas = {
 					fra_mil_hunt
 				}
+				remove_ideas = {
+					fra_pol_violence
+				}
+				
 			}
 		}
 	#Cult of Personality
@@ -1806,6 +1810,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = FRS_diplo_enable_tooltip
 				set_country_flag = FRS_enable_diplo
+				create_faction = "European Proleteriat"
 			}
 		}
 	}
@@ -2911,6 +2916,7 @@ focus_tree = {
 			custom_effect_tooltip = FRP_diplo_enable_tooltip
 			set_country_flag = FRP_war_enable
 			set_country_flag = FRP_diplo_enable
+			create_faction = "Catholic League"
 		}
 	}
 
@@ -3313,6 +3319,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FRR_war_enable_tooltip
 			set_country_flag = FRR_war_enable
+			create_faction = "Sorellian Internationle"
 		}
 	}
 

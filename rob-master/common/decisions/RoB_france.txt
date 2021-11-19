@@ -765,9 +765,13 @@ FRP_war = {
 		available = {
 		has_country_flag = FRP_war_enable
 		has_war = no
+		NOT = { WLL = { is_in_faction_with = GER } }
 		}
 		days_remove = 10
 	    remove_effect = {
+			34 = { add_core_of = FRP }
+			813 = { add_core_of = FRP }
+			812	 = { add_core_of = FRP }
 			FRP = { declare_war_on = { target = WLL  type = annex_everything } }
 		}
 	 
@@ -793,9 +797,37 @@ FRP_war = {
 		}
 		days_remove = 10
 	    remove_effect = {
+			custom_effect_tooltip = FRP_hol_useful
+			if = {
+				limit = {
+					HOL = { is_in_faction_with = FRP }
+				}
+				42 = { add_claim_by = FRP }
+				1089 = { add_claim_by = FRP }
+				792 = { add_claim_by = FRP }
+				51 = { add_claim_by = HOL }
+				979 = { add_claim_by = HOL }
+				1088 = { add_claim_by = HOL }
+			}
+			if = {
+				limit = {
+					NOT = { HOL = { is_in_faction_with = FRP } }
+				}
+				42 = { add_claim_by = FRP }
+				792 = { add_claim_by = FRP }
+				1089 = { add_claim_by = FRP }
+			}
 			if = {
 				limit = {
 					GER = { exists = yes NOT = { OR = { is_puppet_of = FRP is_in_faction_with = FRP } } }
+				}
+				if = {
+					limit = {
+						WLL = { is_in_faction_with = GER }
+					}
+					34 = { add_core_of = FRP }
+					813 = { add_core_of = FRP }
+					812	 = { add_core_of = FRP }
 				}
 				FRP = { declare_war_on = { target = GER  type = annex_everything } }
 			}
@@ -2342,15 +2374,21 @@ FRS_post_minigame_wars = {
 		has_country_flag = FRS_minig_end
 		OR = {
 			AND = {
-				LUX = { exists = yes }
+				hidden_effect = {
+					LUX = { exists = yes }
+				}
 				NOT = { LUX = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
 			}
 			AND = {
-				FLA = { exists = yes }
+				hidden_effect = {
+					FLA = { exists = yes }
+				}
 				NOT = { FLA = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
 			}
 			AND = {
-				HOL = { exists = yes }
+				hidden_effect = {
+					HOL = { exists = yes }
+				}
 				NOT = { HOL = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
 			}
 		   }
@@ -2434,19 +2472,27 @@ FRS_post_minigame_wars = {
 			has_country_flag = FRS_war_enable
 			OR = {
 				AND = {
-					GER = { exists = yes }
+					hidden_effect = {
+						GER = { exists = yes }
+					}
 					NOT = { GER = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
 				}
 				AND = {
-					BAV = { exists = yes }
+					hidden_effect = {
+						BAV = { exists = yes }
+					}
 					NOT = { BAV = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
 				}
 				AND = {
-					BDB = { exists = yes }
+					hidden_effect = {
+						BDB = { exists = yes }
+					}
 					NOT = { BDB = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
 				}				
 				AND = {
-					RHN = { exists = yes }
+					hidden_effect = {
+						RHN = { exists = yes }
+					}
 					NOT = { RHN = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
 				}
 			   }
