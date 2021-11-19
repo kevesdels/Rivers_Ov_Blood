@@ -804,6 +804,39 @@ FRR_diplo = {
 		base = 120
 		}
 }
+FRP_diplo = {
+	icon = GFX_decision_category_generic
+	visible = {
+		OR = {
+			tag = FRP
+		}
+	}
+	available = {
+		NOT = { is_puppet = yes }
+	}
+	priority = {
+		base = 120
+		}
+}
+FRP_war = {
+	icon = GFX_decision_category_military_operation	
+	picture = GFX_decision_germany_partisansxczsc
+		visible = {
+			OR = {
+				AND = {
+					tag = FRA
+					NOT = { has_country_flag = FRA_civil_war }
+				}
+				tag = FRP
+			}
+		}
+		available = {
+			NOT = { is_puppet = yes }
+		}
+		priority = {
+		base = 120
+		}	
+}
 FRR_war = {
 	icon = GFX_decision_category_military_operation	
 	picture = GFX_decision_germany_partisansxczsc

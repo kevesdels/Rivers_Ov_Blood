@@ -754,7 +754,7 @@ ideas = {
       original_tag = FRL
       original_tag = FRP
 } }
-      picture = FRA_Pierre_Laval
+      picture = FRA_Paul_Ramadier
       available = { 
       custom_trigger_tooltip = { 
        tooltip = minister_available 
@@ -791,13 +791,15 @@ ideas = {
        }   
       }
    FRA_Jacques_Duclos = {
-      allowed = {      OR = {
-      original_tag = FRA
-      original_tag = FRS
-      original_tag = FRR
-      original_tag = FRL
-      original_tag = FRP
-} }
+      allowed = {     
+      OR = {
+         original_tag = FRA
+         original_tag = FRS
+         original_tag = FRR
+         original_tag = FRL
+         original_tag = FRP
+         } 
+      }
       picture = FRA_Jacques_Duclos
       available = { 
       custom_trigger_tooltip = { 
@@ -820,7 +822,7 @@ ideas = {
       original_tag = FRL
       original_tag = FRP
 } }
-      picture = FRA_Jacques_Duclos
+      picture = FRA_Leon_Blum
       available = { 
       custom_trigger_tooltip = { 
        tooltip = minister_available 
@@ -842,7 +844,7 @@ ideas = {
       original_tag = FRL
       original_tag = FRP
 } }
-      picture = FRA_Jacques_Duclos
+      picture = FRA_Edouard_Daladier
       available = { 
       custom_trigger_tooltip = { 
        tooltip = minister_available 
@@ -864,7 +866,7 @@ ideas = {
       original_tag = FRL
       original_tag = FRP
 } }
-      picture = FRA_Jacques_Duclos
+      picture = FRA_Gaston_Doumerge
       available = { 
       custom_trigger_tooltip = { 
        tooltip = minister_available 
@@ -886,7 +888,7 @@ ideas = {
       original_tag = FRL
       original_tag = FRP
 } }
-      picture = FRA_Jacques_Duclos
+      picture = FRA_Albert_Lebrun
       available = { 
       custom_trigger_tooltip = { 
        tooltip = minister_available 
@@ -2350,13 +2352,15 @@ ideas = {
        }   
       }
    FRA_Andre_Francois_Poncet = {
-      allowed = {      OR = {
-      original_tag = FRA
-      original_tag = FRS
-      original_tag = FRR
-      original_tag = FRL
-      original_tag = FRP
-} }
+      allowed = {      
+      OR = {
+         original_tag = FRA
+         original_tag = FRS
+         original_tag = FRR
+         original_tag = FRL
+         original_tag = FRP
+       } 
+      }
       picture = FRA_Andre_Francois_Poncet
       available = { 
       custom_trigger_tooltip = { 
@@ -4021,17 +4025,15 @@ ideas = {
     }   
    }
    FRA_Joseph_Darnand = {
-   allowed = {              OR = {
+   allowed = {              
+      OR = {
       original_tag = FRA
       original_tag = FRS
       original_tag = FRR
       original_tag = FRL
       original_tag = FRP
-}
-        original_tag = FRS
-        original_tag = FRR
-        original_tag = FRL
-        original_tag = FRP }
+   }
+ }
    picture = FRA_Joseph_Darnand
    available = { 
    custom_trigger_tooltip = { 

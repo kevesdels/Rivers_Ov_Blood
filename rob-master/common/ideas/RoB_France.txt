@@ -1120,7 +1120,6 @@ allowed_civil_war = {
 picture = GFX_idea_overextendadsf
   modifier = {
     army_morale_factor = 0.25
-    army_attack_factor = 0.1
     army_defence_factor = 0.1
    }
 }
@@ -1292,6 +1291,24 @@ picture = GFX_idea_overextendadsf
 
 
 ### Mauras
+
+fra_maur_above_all = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    conscription = 0.01
+    army_attack_factor = 0.10
+    army_defence_factor = 0.10
+   }
+}
+
 fra_maur_nat_pat = {
  
   allowed = {
@@ -1909,7 +1926,7 @@ army_chief = {
       factor = 1
     }
   }
-  FRA_andre_marty = {
+  FRA_andre_marty_2 = {
     allowed = { original_tag = FRS }
     available = { has_completed_focus = FRA_armeedeterre }
     picture = FRA_Andre_Marty
@@ -1985,7 +2002,7 @@ army_chief = {
       factor = 1
     }
   }
-  FRA_joseph_darnand  = {
+  FRA_joseph_darnand_2  = {
     allowed = { original_tag = FRP }
     available = { has_completed_focus = FRA_armeedeterre }
     picture = FRA_Joseph_Darnand

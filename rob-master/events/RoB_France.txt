@@ -498,6 +498,13 @@ set_country_flag = FRA_petain_dictatorship
 remove_ideas = {
 	fra_unstable_gov
 }
+add_ideas = {
+	FRA_Pierre_Laval
+	FRA_Marie_Eugene_Debeney
+	FRA_Andre_Francois_Poncet
+	FRA_Louis_Renault
+	FRA_Eugene_Bridoux
+}
 }
 
 option = { ###De Gaulle takes over
@@ -525,6 +532,13 @@ add_war_support = 0.3
 set_country_flag = FRA_gaulle_dictatorship
 remove_ideas = {
 	fra_unstable_gov
+}
+add_ideas = {
+	FRA_Charles_de_Gaulle
+	FRA_Maurice_Pujo
+	FRA_Edmond_Michelet
+	FRA_Georges_Lamirand
+	FRA_Henri_Dentz
 }
 }
 
@@ -1672,6 +1686,13 @@ create_country_leader = {
 	}
 }
 	add_popularity = { ideology = socialist popularity = 0.2 }
+	add_ideas = {
+		FRA_Jacques_Duclos
+		FRA_Benoit_Frachon
+		FRA_Pierre_Frank
+		FRA_Marceau_Pivert
+		FRA_Maurice_Gamelin
+	}
 }
 
 }
@@ -2044,6 +2065,13 @@ set_politics = {
 	  }
 	 
 	}
+	add_ideas = {
+		FRA_D_Esperey
+		FRA_Pierre_Etienne_Flandin
+		FRA_Eugene_Deloncle
+		FRA_Francois_Coty
+		FRA_Henri_Dentz
+	}
 }
 
 }
@@ -2074,6 +2102,13 @@ set_politics = {
 	 
 	}
 	add_popularity = { ideology = authoritharian popularity = 0.2 }
+	add_ideas = {
+		FRA_Pierre_Laval
+		FRA_Pierre_Etienne_Flandin
+		FRA_Andre_Francois_Poncet
+		FRA_Eugene_Schueller
+		FRA_Bernard_Serrigny
+	}
 }
 
 }
@@ -2102,6 +2137,9 @@ ai_chance = {
 	 
 	}
 	add_popularity = { ideology = reactionary popularity = 0.2 }
+	add_ideas = {
+		FRA_Charles_de_Gaulle
+	}
 }
 
 option = { #Henry VI
@@ -2121,6 +2159,9 @@ option = { #Henry VI
 	   
 	  }
 	  add_popularity = { ideology = reactionary popularity = 0.2 }
+	  add_ideas = {
+		FRA_Charles_de_Gaulle
+	}
 }
 
 }
@@ -2307,6 +2348,13 @@ create_country_leader = {
 	traits = {
 		#
 		}
+	}
+	add_ideas = {
+		FRA_Dumezil
+		FRA_Xavier_Vallat
+		FRA_Jacques_Doriot
+		FRA_Georges_Lamirand
+		FRA_Joseph_Darnand
 	}
 }
 
@@ -3356,7 +3404,7 @@ name = "Refuse"
 }
 custom_effect_tooltip = "Refusal Might Spark War"
  hidden_effect = {
-   POL = { country_event = { id = rob_france.102 days = 3 } }
+   FRS = { country_event = { id = rob_france.102 days = 3 } }
  }
 }
 
@@ -3436,12 +3484,19 @@ set_politics = {
 create_country_leader = {
 	name = "Leon Blum"
 	desc = "POLITICS_KONSTANTIN_PATS_DESC"
-	picture = "Jacques_Duclos.dds"
+	picture = "Portrait_FRA_Leon_Blum.tga"
 	expire = "1965.1.1"
 	ideology = social_democracy_subtype
 	traits = {
 		discipline_of_jaures
 	}
+}
+add_ideas = {
+	FRA_Leon_Blum
+	FRA_Georges_Mandel
+	FRA_Louis_Marin
+	FRA_Raoul_Dautry
+	FRA_Louis_Maurin
 }
 
 }
@@ -3456,12 +3511,20 @@ set_politics = {
 create_country_leader = {
 	name = "Édouard Daladier"
 	desc = "POLITICS_KONSTANTIN_PATS_DESC"
-	picture = "Jacques_Duclos.dds"
+	picture = "Edouard_Daladier.dds"
 	expire = "1965.1.1"
 	ideology = social_democracy_subtype
 	traits = {
 		#
 	}
+}
+
+add_ideas = {
+	FRA_Edouard_Daladier
+	FRA_Georges_Mandel
+	FRA_Louis_Marin
+	FRA_Raoul_Dautry
+	FRA_Louis_Maurin
 }
 
 }
@@ -3492,6 +3555,13 @@ create_country_leader = {
 		#
 	}
 }
+add_ideas = {
+	FRA_Gaston_Doumerge
+	FRA_Paul_Baudoin
+	FRA_Jean_Fabry
+	FRA_Louis_Germain_Martin
+	FRA_Louis_Maurin
+}
 }
 
 option = {
@@ -3510,6 +3580,13 @@ create_country_leader = {
 	traits = {
 		engineer
 	}
+}
+add_ideas = {
+	FRA_Albert_Lebrun
+	FRA_Paul_Baudoin
+	FRA_Jean_Fabry
+	FRA_Louis_Germain_Martin
+	FRA_Louis_Maurin
 }
 }
 
@@ -3547,6 +3624,13 @@ if = {
 		defense_skill = 3
 		maneuvering_skill = 3
 		coordination_skill = 3
+	}
+	add_ideas = {
+		FRA_Darlan
+		FRA_Henri_Massis
+		FRA_Eugene_Deloncle
+		FRA_Francois_Coty
+		FRA_Eugene_Bridoux
 	}
 }
 }
@@ -4216,10 +4300,431 @@ if = {###Paris 50p
 		}
 	set_country_flag = fra_cw_prov_11506
 }
-###end of the option
+###end of the options
 }
 
 }
+
+country_event = { ### Demand For Swiz to give over land
+id = rob_france.108
+title = "French Demand"
+desc = "The French are demanding that we cede the administrive control of Romandie to them, an unacceptable demand."
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = "Fuck off"
+	ai_chance = {
+		factor = 5
+	}
+	country_event = { id = rob_france.110 days = 3 }
+}
+
+option = {
+	name = "But we can not resist...."
+	ai_chance = {
+		factor = 5
+	}
+	country_event = { id = rob_france.109 days = 3 }
+	}
+}
+
+
+country_event = { ### Swiz Comply
+id = rob_france.109
+title = "Swiz Response"
+desc = "Swizerland has complied, handing over Romandie without bloodshed"
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = "Good"
+	transfer_state = 892
+	892 = { add_core_of = FRP }
+}
+
+}
+
+
+country_event = { ### Swiz Refuse
+id = rob_france.110
+title = "Swiz Response"
+desc = "Swizerland has rejected our demand, now manning most of their troops on the French border"
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = "If you insist on war, you got one"
+	ai_chance = {
+		factor = 9
+	}
+	892 = { add_core_of = FRP }
+	FRP = { declare_war_on = { target = SWI  type = annex_everything } }
+}
+
+option = {
+	name = "Shame..."
+	ai_chance = {
+		factor = 1
+	}
+	add_political_power = -100
+	add_stability = -0.10
+}
+
+}
+
+country_event = { ### Demand For Lux
+id = rob_france.111
+title = "French Offer Protection"
+desc = "The French Government has exclaimed that Luxembourg will not survive the threats that it now faces it demands that Luxembourg relinquish its sovereignty in favour of France."
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = "Fuck off"
+	ai_chance = {
+		factor = 1
+	}
+	country_event = { id = rob_france.112 days = 3 }
+}
+
+option = {
+	name = "But we can not resist...."
+	ai_chance = {
+		factor = 9
+	}
+	country_event = { id = rob_france.113 days = 3 }
+	}
+}
+
+country_event = { ### Lux agrees
+id = rob_france.112
+title = "Luxembourgs Response"
+desc = "The Luxembourgian government has complied to our demands"
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = "Good"
+
+	}
+}
+
+country_event = { ### Lux refuses
+id = rob_france.113
+title = "Luxembourgs Response"
+desc = "The Luxembourgian government has refused to submit to our demands"
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = "They are in no position to refuse"
+	8 = { add_core_of = FRP }
+	FRP = { declare_war_on = { target = LUX  type = annex_everything } }
+}
+
+option = {
+	name = "So be it"
+	add_political_power = -50
+	add_stability = -0.03
+	}
+}
+
+country_event = { ### BOMB HAITI: preparation 
+id = rob_france.114
+title = "Preparing Revenge"
+desc = "The French Government has gained permission to use airstrips in Dominican Republic, in preparation for classified military operation over Haiti."
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = "The time is coming"
+	hidden_effect = {
+		country_event = { id = rob_france.115 days = 21 }
+	}
+	}
+}
+
+country_event = { ### BOMB HAITI: set off 
+id = rob_france.115
+title = rob_france.115.t
+desc = rob_france.115.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = rob_france.115.a
+	hidden_effect = {
+		country_event = { id = rob_france.116 days = 45 }
+	}
+	}
+}
+
+
+country_event = { ### BOMB HAITI: Bomb bomb obm
+id = rob_france.116
+title = rob_france.116.t
+desc = rob_france.116.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = rob_france.116.a
+	add_stability = 0.01
+	HAI = {
+		318 = { 
+			add_manpower = -47314 
+			remove_building = {
+				type = industrial_complex
+				level = 2
+			}
+		}
+	}
+	}
+}
+
+country_event = { ### General French alliance event
+id = rob_france.117
+title = "France Desires Cooperation"
+desc = "French Diplomat has let us know that the French government is seeking considerable deepening of our relationship. Should we allow such a development?"
+is_triggered_only = yes
+
+option = { ###join
+name = "Agree"
+trigger = {
+ is_puppet = no
+}
+ai_chance = {
+ base = 5
+ modifier = {
+   factor = 5
+   AND = {
+	 ROOT = {
+	   SOCIALIST_ALIGNED_GOVERNMENT = yes
+	 }
+	 FRP = {
+		SOCIALIST_ALIGNED_GOVERNMENT = yes
+	 }
+   }
+ }
+
+ modifier = {
+   add = 2
+   has_opinion = {
+	 target = FRP
+	 value > 50
+   }
+ }
+
+ modifier = {
+   add = 4
+   has_opinion = {
+	 target = FRP
+	 value > 100
+   }
+ }
+
+ modifier = {
+   add = 6
+   has_opinion = {
+	 target = FRP
+	 value > 175
+   }
+ }
+
+ modifier = {
+   factor = 4
+   strength_ratio = {
+	   tag = FROM
+	   ratio < 5
+   }
+ }
+
+ modifier = {
+   factor = 2
+   strength_ratio = {
+	   tag = FROM
+	   ratio < 3
+   }
+ }
+
+ modifier = {
+   factor = 0.5
+   strength_ratio = {
+	   tag = FROM
+	   ratio < 2
+   }
+ }
+
+}
+hidden_effect = {
+ FRP = { country_event = { id = rob_france.118 days = 3 } }
+}
+}
+
+option = {  ###dont
+name = "Refuse"
+  ai_chance = {
+ base  = 6
+
+ modifier = {
+   add = 4
+   has_opinion = {
+	 target = FRP
+	 value < 50
+   }
+ }
+
+ modifier = {
+   add = 8
+   has_opinion = {
+	 target = FRP
+	 value < 100
+   }
+ }
+
+ modifier = {
+   add = 12
+   has_opinion = {
+	 target = FRP
+	 value < 175
+   }
+ }
+}
+ hidden_effect = {
+   FRP = { country_event = { id = rob_france.119 days = 3 } }
+ }
+}
+
+}
+
+###Invitation to Frances Block: agreed
+country_event = {
+	id = rob_france.118
+	title = "Success"
+	desc = "Our diplomatic play has resulted in our faction growing larger."
+	is_triggered_only = yes
+	
+	
+	option = { 
+	 name = "Excellent"
+	 ai_chance = {
+	  factor = 100
+	 }
+	 FRP = { add_to_faction = FROM }
+	}
+  
+   }
+  
+  
+  ###Invitation to Intermarium: refusal
+  country_event = {
+	id = rob_france.119
+	title = "Failure"
+	desc = "Our diplomatic play has not resulted in expansion of our faction."
+	is_triggered_only = yes
+	
+	
+	option = { 
+	 name = "Too bad"
+	 ai_chance = {
+	  factor = 2
+	 }
+	}
+  
+  }
+
+    ###
+	country_event = {
+		id = rob_france.120
+		title = ""
+		desc = ""
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = ""
+		 ai_chance = {
+		  factor = 2
+		 }
+		}
+	  
+	  }
+
+
+   ###Canada Receives demand for quebec
+   country_event = {
+	id = rob_france.121
+	title = rob_france.121.t
+	desc = rob_france.121.d
+	is_triggered_only = yes
+	
+	
+	option = { 
+	 name = rob_france.121.a
+	 ai_chance = {
+	  factor = 2
+	 }
+	 FRP = { set_country_flag = frp_canada_disagrees }
+	 FRP = { country_event = { id = rob_france.121 days = 3 } }
+	}
+
+	option = { 
+		name = rob_france.121.b
+		ai_chance = {
+		 factor = 8
+		}
+		FRP = { set_country_flag = frp_canada_agrees }
+		FRP = { country_event = { id = rob_france.121 days = 3 } }
+	   }
+  }
+
+     ###Canada Receives demand for quebec
+	 country_event = {
+		id = rob_france.122
+		title = rob_france.122.t
+		desc = rob_france.122.d
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = rob_france.122.a
+		 trigger = {
+			 has_country_flag = frp_canada_agrees
+		 }
+		 transfer_state = 466
+		 transfer_state = 468
+		 transfer_state = 842
+		 466 = { add_core_of = FRP }
+		 468 = { add_core_of = FRP }
+		 842 = { add_core_of = FRP }
+		}
+	
+		option = { 
+			name = rob_france.122.b
+			trigger = {
+				has_country_flag = frp_canada_disagrees
+			}
+			ai_chance = {
+				factor = 3
+			   }
+			   466 = { add_core_of = FRP }
+			   468 = { add_core_of = FRP }
+			   842 = { add_core_of = FRP }
+			   FRP = { declare_war_on = { target = CAN  type = annex_everything } }
+		}
+		option = { 
+			name = rob_france.122.c
+			trigger = {
+				has_country_flag = frp_canada_disagrees
+			}
+			ai_chance = {
+				factor = 7
+			   }
+			add_stability = -0.1
+			add_political_power = -150
+		}
+	  }
 ####debug events
 
 

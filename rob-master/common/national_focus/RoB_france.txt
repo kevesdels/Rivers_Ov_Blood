@@ -2118,7 +2118,7 @@ focus_tree = {
 			has_country_flag = fra_dumezil_route
 		}
 		completion_reward = {
-			###event
+			add_political_power = 120
 		}
 	}
 
@@ -2137,7 +2137,6 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_state_of_france  }
 		completion_reward = {
-			add_political_power = 120
 			country_event = { id = rob_france.49 days = 1 }
 		}
 	}
@@ -2678,7 +2677,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_first_united_congress  }
 		completion_reward = {
-			###event
+			add_political_power = 120
 		}
 	}
 
@@ -2714,6 +2713,9 @@ focus_tree = {
 		prerequisite = { focus = FRA_crown_the_king  }
 		completion_reward = {
 			###event
+			add_ideas = {
+				fra_maur_above_all
+			}
 			country_event = { id = rob_france.79 days =  3 }
 		}
 	}
@@ -2819,7 +2821,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_revenge_for_the_fallen  } prerequisite = { focus = FRA_demand_quebec  } prerequisite = { focus = FRA_wallonian_french  }
 		completion_reward = {
-			
+			add_political_power = 250
+			add_stability = 0.1
 		}
 	}
 
@@ -2904,7 +2907,10 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_federal_monarchy  }
 		completion_reward = {
-			
+			custom_effect_tooltip = FRP_war_enable_tooltip
+			custom_effect_tooltip = FRP_diplo_enable_tooltip
+			set_country_flag = FRP_war_enable
+			set_country_flag = FRP_diplo_enable
 		}
 	}
 
@@ -2920,7 +2926,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_french_interests  }
 		completion_reward = {
-			
+			CAN = { country_event = { id = rob_france.121 days = 3 }  }
 		}
 	}
 
@@ -2936,7 +2942,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_french_interests  }
 		completion_reward = {
-			
+			custom_effect_tooltip = "Will be implemented later, for now, have some manpower"
+			add_manpower = 100000
 		}
 	}
 
@@ -2952,7 +2959,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_french_interests  }
 		completion_reward = {
-			
+			country_event = { id = rob_france.114 days = 3 } 
 		}
 	}
 
