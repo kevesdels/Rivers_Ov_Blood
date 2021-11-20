@@ -1008,10 +1008,10 @@ fire_only_once = yes
 
 trigger = {
 OR = { 
- has_country_flag = BRU_victory
- has_country_flag = BLF_victory
- has_country_flag = BRC_victory
- has_country_flag = BRL_victory
+ has_country_flag = BRU_victory 
+ has_country_flag = BLF_victory 
+ has_country_flag = BRC_victory 
+ has_country_flag = BRL_victory 
  }
 OR = {
   AND = { 
@@ -1066,41 +1066,33 @@ fire_only_once = yes
 
 trigger = {
  ENG = { has_country_flag = ENG_civil_war }
+ OR = {
+  BRU = { has_war = no }
+  BRL = { has_war = no }
+  BRC = { has_war = no }
+  BLF = { has_war = no }
+}
 OR = {
   AND = { 
 	tag = BRU 
 	BRU = { exists = yes } 
-	BRU = { has_war = no }
-	BRL = { exists = no } 
-	BRC = { exists = no } 
-	BLF = { exists = no } 	
 	}
   AND = { 
 	tag = BRL 
-	BRL = { exists = yes } 
-	BRL = { has_war = no }
-	BRU = { exists = no } 
-	BRC = { exists = no } 
-	BLF = { exists = no } 	
+	BRU = { exists = yes } 
 	}
   AND = { 
 	tag = BRC
-	BRC = { exists = yes } 
-	BRC = { has_war = no }
-	BRU = { exists = no } 
-	BRL = { exists = no } 
-	BLF = { exists = no } 	
+	BRU = { exists = yes } 
 	}
   AND = { 
 	tag = BLF 
-	BLF = { exists = yes } 
-	BLF = { has_war = no }
-	BRU = { exists = no } 
-	BRL = { exists = no } 
-	BRC = { exists = no } 	
+	BRU = { exists = yes } 
 	}
 }
 }
+
+mean_time_to_happen = { days = 1 }
 
 option = {
  name = "The Will Of Worker Has Prevailed!"

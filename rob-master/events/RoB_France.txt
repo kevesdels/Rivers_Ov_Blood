@@ -499,16 +499,11 @@ remove_ideas = {
 	fra_unstable_gov
 }
 add_ideas = {
-	fra_junta_buff
-}
-hidden_effect = {
-	add_ideas = {
-		FRA_Pierre_Laval
-		FRA_Marie_Eugene_Debeney
-		FRA_Andre_Francois_Poncet
-		FRA_Louis_Renault
-		FRA_Eugene_Bridoux
-	}
+	FRA_Pierre_Laval
+	FRA_Marie_Eugene_Debeney
+	FRA_Andre_Francois_Poncet
+	FRA_Louis_Renault
+	FRA_Eugene_Bridoux
 }
 }
 
@@ -538,18 +533,12 @@ set_country_flag = FRA_gaulle_dictatorship
 remove_ideas = {
 	fra_unstable_gov
 }
-
 add_ideas = {
-	fra_junta_buff
-}
-hidden_effect = {
-	add_ideas = {
-		FRA_Charles_de_Gaulle
-		FRA_Maurice_Pujo
-		FRA_Edmond_Michelet
-		FRA_Georges_Lamirand
-		FRA_Henri_Dentz
-	}
+	FRA_Charles_de_Gaulle
+	FRA_Maurice_Pujo
+	FRA_Edmond_Michelet
+	FRA_Georges_Lamirand
+	FRA_Henri_Dentz
 }
 }
 
@@ -1579,22 +1568,6 @@ trigger = {
 option = { 
 name = rob_france.40.a
 add_stability = 0.10
-if = {
-	limit = {
-		has_idea = fra_junta_buff
-	}
-	remove_ideas = {
-		fra_junta_buff
-	}
-}
-if = {
-	limit = {
-		has_idea = fra_junta_debuff
-	}
-	remove_ideas = {
-		fra_junta_debuff
-	}
-}
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_mil_win
 set_capital = 16
@@ -2285,7 +2258,7 @@ is_triggered_only = yes
 
 option = { 
 name = rob_france.63.a
-add_war_support = 0.03
+
 }
 
 }
@@ -2299,7 +2272,7 @@ is_triggered_only = yes
 
 option = { 
 name = rob_france.64.a
-add_stability = 0.03
+
 }
 
 }
@@ -2313,7 +2286,7 @@ is_triggered_only = yes
 
 option = { 
 name = rob_france.65.a
-add_stability = 0.03
+
 }
 
 }
@@ -2328,7 +2301,7 @@ is_triggered_only = yes
 
 option = { 
 name = rob_france.66.a
-add_stability = -0.03
+
 }
 
 }
@@ -2356,6 +2329,29 @@ desc = rob_france.50.d
 fire_only_once = yes
 is_triggered_only = yes
 
+####Dumezil
+option = { 
+name = rob_france.50.a
+set_country_flag = fra_dumezil_route
+create_country_leader = {
+	name = "Georges Dumézil"
+	desc = ""
+	picture = "Dumezil.dds"
+	expire = "1965.1.1"
+	ideology = pagan_pelekism
+	traits = {
+		#
+		}
+	}
+	add_ideas = {
+		FRA_Dumezil
+		FRA_Xavier_Vallat
+		FRA_Jacques_Doriot
+		FRA_Georges_Lamirand
+		FRA_Joseph_Darnand
+	}
+}
+
 ####Maurras
 option = { 
 name = rob_france.50.a
@@ -2371,29 +2367,6 @@ create_country_leader = {
 		}
 	}
 }
-
-####Dumezil
-option = { 
-	name = rob_france.50.b
-	set_country_flag = fra_dumezil_route
-	create_country_leader = {
-		name = "Georges Dumézil"
-		desc = ""
-		picture = "Dumezil.dds"
-		expire = "1965.1.1"
-		ideology = pagan_pelekism
-		traits = {
-			#
-			}
-		}
-		add_ideas = {
-			FRA_Dumezil
-			FRA_Xavier_Vallat
-			FRA_Jacques_Doriot
-			FRA_Georges_Lamirand
-			FRA_Joseph_Darnand
-		}
-	}
 
 }	
 
@@ -2961,16 +2934,16 @@ hidden_effect = {
 
 country_event = { ### Guns for Junta
 id = rob_france.86
-title = "Support from Industrialists"
-desc = "Bullets and guns, this cargo is appreciated."
+title = rob_france.86.t
+desc = rob_france.86.d
 fire_only_once = yes
 is_triggered_only = yes
 
 option = { 
-name = "Put them to use"
+name = rob_france.86.a
 	add_equipment_to_stockpile = {
 	type = infantry_equipment
-	amount = 4000
+	amount = 7500
 	producer = FRA
 	 }
 }
@@ -3230,7 +3203,7 @@ trigger = {
 	NOT = { is_in_faction_with = GER }
 	WLL = {
 		exists = yes
-		is_in_faction_with = GER 
+		is_puppet_of = GER
 		SOCIALIST_ALIGNED_GOVERNMENT = yes
 	}
 }
@@ -3264,7 +3237,6 @@ set_variable = {
 }
 
 country_event = { ### Minigame causes one side to go for war 
-id = rob_france.98
 title = "Clash Over Wallonia"
 desc = "The Situation in Wallonia has edged relationship between Germany and France"
 fire_only_once = yes
@@ -3682,6 +3654,647 @@ if = {
 
 }
 
+country_event = { ### seize town boosto cw event
+id = rob_france.107
+title = "City Looting"
+desc = "Now that we have seized a major city(-ies), we are ransaking the place, in search for guns and suitable recruits."
+trigger = {
+	OR = {
+		tag = FRA
+		tag = FRS
+		tag = FRP
+		tag = FRL
+		tag = FRA
+	}
+	has_country_flag = FRA_civil_war
+	NOT = { has_country_flag = fra_cw_over }
+	OR = {
+		AND = { ###Montpellier
+			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_9898 }
+			controls_province = 9898
+		}
+		AND = { ###Vichy
+			NOT = { owns_state = 26 has_country_flag = fra_cw_prov_9748 }
+			controls_province = 9748
+		}
+		AND = { ###Lyon
+			NOT = { owns_state = 20 has_country_flag = fra_cw_prov_6613 }
+			controls_province = 6613
+		}
+		AND = { ###Marseille
+			NOT = { owns_state = 21 has_country_flag = fra_cw_prov_11834 }
+			controls_province = 11834
+		}
+		AND = {#Touluse
+			NOT = { owns_state = 31 has_country_flag = fra_cw_prov_6766 }
+			controls_province = 6766
+		}
+		AND = { ###Bordeaux
+			NOT = { owns_state = 19 has_country_flag = fra_cw_prov_9737 }
+			controls_province = 9737
+		}
+		AND = {#La Rochelle
+			NOT = { owns_state = 1283 has_country_flag = fra_cw_prov_6657 }
+			controls_province = 6657
+		}
+		AND = {#Nantes
+			NOT = { owns_state = 30 has_country_flag = fra_cw_prov_11465 }
+			controls_province = 11465
+		}
+		AND = { ###Brest
+			NOT = { owns_state = 14 has_country_flag = fra_cw_prov_3552 }
+			controls_province = 3552
+		}
+		AND = { #Cherbourg
+			NOT = { owns_state = 15 has_country_flag = fra_cw_prov_6449 }
+			controls_province = 6449
+		}
+		AND = { ###Tours
+			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_3671 }
+			controls_province = 3671
+		}
+		AND = { ###Nevers
+			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_9609 }
+			controls_province = 9609
+		}
+		AND = {#Bourges
+			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_6688 }
+			controls_province = 6688
+		}
+		AND = { ###Alencon
+			NOT = { owns_state = 1014 has_country_flag = fra_cw_prov_553 }
+			controls_province = 553
+		}
+		AND = { ###Orleans
+			NOT = { owns_state = 24 has_country_flag = fra_cw_prov_512 }
+			controls_province = 512
+		}
+		AND = { ###Le Havre
+			NOT = { owns_state = 818 has_country_flag = fra_cw_prov_9434 }
+			controls_province = 9434
+		}
+		AND = {#Amiens
+			NOT = { owns_state = 785 has_country_flag = fra_cw_prov_11420 }
+			controls_province = 11420
+		}
+		AND = { ###Lille
+			NOT = { owns_state = 1279 has_country_flag = fra_cw_prov_11483 }
+			controls_province = 11483
+		}
+		AND = {#Rennes
+			NOT = { owns_state = 1009 has_country_flag = fra_cw_prov_11508 }
+			controls_province = 11508
+		}
+		AND = { ###Periguex
+			NOT = { owns_state = 25 has_country_flag = fra_cw_prov_9734 }
+			controls_province = 9734
+		}
+		AND = { ###Valence
+			NOT = { owns_state = 32 has_country_flag = fra_cw_prov_762 }
+			controls_province = 762
+		}
+		AND = {#Nice
+			NOT = { owns_state = 821 has_country_flag = fra_cw_prov_9909 }
+			controls_province = 9909
+		}
+		AND = {#Reims
+			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_13011 }
+			controls_province = 13011
+		}
+		AND = {#Troyes
+			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_9490 }
+			controls_province = 9490
+		}
+		AND = {#Dijon
+			NOT = { owns_state = 27 has_country_flag = fra_cw_prov_3652 }
+			controls_province = 3652
+		}
+		AND = {#Besancon
+			NOT = { owns_state = 17 has_country_flag = fra_cw_prov_9642 }
+			controls_province = 9642
+		}
+		AND = {#Mullhouse
+			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_678 }
+			controls_province = 678
+		}
+		AND = {#Metz
+			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9559 }
+			controls_province = 9559
+		}
+		AND = { ###Strasbourg
+			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9503 }
+			controls_province = 9503
+		}
+		AND = { ###Rodez
+			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_11709 }
+			controls_province = 11709
+		}
+	}
+}
+
+option = {
+name = rob_france.107.a
+if = {###Montpellier 5p
+	limit = {
+		AND = {
+			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_9898 }
+			controls_province = 9898
+		}
+	}
+	custom_effect_tooltip = "For capture of Montpellier"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_9898
+}
+if = {###Vichy 3p
+	limit = {
+		AND = { 
+			NOT = { owns_state = 26 has_country_flag = fra_cw_prov_9748 }
+			controls_province = 9748
+		}
+	}
+	custom_effect_tooltip = "For capture of Vichy"
+	add_manpower = 3000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 600
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_9748
+}
+if = {###Lyon 10p
+	limit = {
+		AND = { 
+			NOT = { owns_state = 20 has_country_flag = fra_cw_prov_6613 }
+			controls_province = 6613
+		}
+	}
+	custom_effect_tooltip = "For capture of Lyon"
+	add_manpower = 10000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 2000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_6613
+}
+if = {###Marseille 10p
+	limit = {
+		AND = { ###Marseille
+			NOT = { owns_state = 21 has_country_flag = fra_cw_prov_11834 }
+			controls_province = 11834
+		}
+	}
+	custom_effect_tooltip = "For capture of Marseille"
+	add_manpower = 10000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 2000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_11834
+}
+if = {###Touluse 5p
+	limit = {
+		AND = {#Touluse
+			NOT = { owns_state = 31 has_country_flag = fra_cw_prov_6766 }
+			controls_province = 6766
+		}
+	}
+	custom_effect_tooltip = "For capture of Touluse"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_6766
+}
+if = {###Bordeaux 20p
+	limit = {
+		AND = { ###Bordeaux
+			NOT = { owns_state = 19 has_country_flag = fra_cw_prov_9737 }
+			controls_province = 9737
+		}
+	}
+	custom_effect_tooltip = "For capture of Bordeaux"
+	add_manpower = 20000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 3000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_9737
+}
+if = {###La Rochelle 5p
+	limit = {
+		AND = {#La Rochelle
+			NOT = { owns_state = 1283 has_country_flag = fra_cw_prov_6657 }
+			controls_province = 6657
+		}
+	}
+	custom_effect_tooltip = "For capture of La Rochelle"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_6657
+}
+if = {###Nantes 5p
+	limit = {
+		AND = {#Nantes
+			NOT = { owns_state = 30 has_country_flag = fra_cw_prov_11465 }
+			controls_province = 11465
+		}
+	}
+	custom_effect_tooltip = "For capture of Nantes"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_11465
+}
+if = {###Brest 20p
+	limit = {
+		AND = { ###Brest
+			NOT = { owns_state = 14 has_country_flag = fra_cw_prov_3552 }
+			controls_province = 3552
+		}
+	}
+	custom_effect_tooltip = "For capture of Brest"
+	add_manpower = 20000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 3000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_3552
+}
+if = {###Cherbourg 3p
+	limit = {
+		AND = { #Cherbourg
+			NOT = { owns_state = 15 has_country_flag = fra_cw_prov_6449 }
+			controls_province = 6449
+		}
+	}
+	custom_effect_tooltip = "For capture of Cherbourg"
+	add_manpower = 3000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 600
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_6449
+}
+if = {###Tours 3p
+	limit = {
+		AND = { ###Tours
+			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_3671 }
+			controls_province = 3671
+		}
+	}
+	custom_effect_tooltip = "For capture of Tours"
+	add_manpower = 3000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 600
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_3671
+}
+if = {###Nevers 3p
+	limit = {
+		AND = { ###Nevers
+			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_9609 }
+			controls_province = 9609
+		}
+	}
+	custom_effect_tooltip = "For capture of Nevers"
+	add_manpower = 3000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 600
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_9609
+}
+if = {###Bourges 5p
+	limit = {
+		AND = {#Bourges
+			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_6688 }
+			controls_province = 6688
+		}
+	}
+	custom_effect_tooltip = "For capture of Bourges"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_6688
+}
+if = {###Alencon 3p
+	limit = {
+		AND = { ###Alencon
+			NOT = { owns_state = 1014 has_country_flag = fra_cw_prov_553 }
+			controls_province = 553
+		}
+	}
+	custom_effect_tooltip = "For capture of Alencon"
+	add_manpower = 3000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 600
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_553
+}
+if = {###Orleans 10p
+	limit = {
+		AND = { ###Orleans
+			NOT = { owns_state = 24 has_country_flag = fra_cw_prov_512 }
+			controls_province = 512
+		}
+	}
+	custom_effect_tooltip = "For capture of Orleans"
+	add_manpower = 10000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 2000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_512
+}
+if = {###Le Havre 10p
+	limit = {
+		AND = { ###Le Havre
+			NOT = { owns_state = 818 has_country_flag = fra_cw_prov_9434 }
+			controls_province = 9434
+		}
+	}
+	custom_effect_tooltip = "For capture of Le Havre"
+	add_manpower = 10000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 2000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_9434
+}
+if = {###Amiens 5p
+	limit = {
+		AND = {#Amiens
+			NOT = { owns_state = 785 has_country_flag = fra_cw_prov_11420 }
+			controls_province = 11420
+		}
+	}
+	custom_effect_tooltip = "For capture of Amiens"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_11420
+}
+if = {###Lille 10p
+	limit = {
+		AND = { ###Lille
+			NOT = { owns_state = 1279 has_country_flag = fra_cw_prov_11483 }
+			controls_province = 11483
+		}
+	}
+	custom_effect_tooltip = "For capture of Lille"
+	add_manpower = 10000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 2000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_11483
+}
+if = {###Rennes 5p
+	limit = {
+		AND = {#Rennes
+			NOT = { owns_state = 1009 has_country_flag = fra_cw_prov_11508 }
+			controls_province = 11508
+		}
+	}
+	custom_effect_tooltip = "For capture of Rennes"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_11508
+}
+if = {###Periguex 3p
+	limit = {
+		AND = { ###Periguex
+			NOT = { owns_state = 25 has_country_flag = fra_cw_prov_9734 }
+			controls_province = 9734
+		}
+	}
+	custom_effect_tooltip = "For capture of Periguex"
+	add_manpower = 3000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 600
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_9734
+}
+if = {###Valence 3p
+	limit = {
+		AND = { ###Valence
+			NOT = { owns_state = 32 has_country_flag = fra_cw_prov_762 }
+			controls_province = 762
+		}
+	}
+	custom_effect_tooltip = "For capture of Valence"
+	add_manpower = 3000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 600
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_762
+}
+if = {###Nice 5p
+	limit = {
+		AND = {#Nice
+			NOT = { owns_state = 821 has_country_flag = fra_cw_prov_9909 }
+			controls_province = 9909
+		}
+	}
+	custom_effect_tooltip = "For capture of Nice"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_9909
+}
+if = {###Reims 5p
+	limit = {
+		AND = {#Reims
+			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_13011 }
+			controls_province = 13011
+		}
+	}
+	custom_effect_tooltip = "For capture of Reims"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_13011
+}
+if = {###Troyes 5p
+	limit = {
+		AND = {#Troyes
+			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_9490 }
+			controls_province = 9490
+		}
+	}
+	custom_effect_tooltip = "For capture of Troyes"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_9490
+}
+if = {###Dijon 5p
+	limit = {
+		AND = {#Dijon
+			NOT = { owns_state = 27 has_country_flag = fra_cw_prov_3652 }
+			controls_province = 3652
+		}
+	}
+	custom_effect_tooltip = "For capture of Dijon"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_3652
+}
+if = {###Besancon 5p
+	limit = {
+		AND = {#Besancon
+			NOT = { owns_state = 17 has_country_flag = fra_cw_prov_9642 }
+			controls_province = 9642
+		}
+	}
+	custom_effect_tooltip = "For capture of Besancon"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_9642
+}
+if = {###Mullhouse 5p
+	limit = {
+		AND = {#Mullhouse
+			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_678 }
+			controls_province = 678
+		}
+	}
+	custom_effect_tooltip = "For capture of Mullhouse"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_678
+}
+if = {###Metz 5p
+	limit = {
+		AND = {#Metz
+			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9559 }
+			controls_province = 9559
+		}
+	}
+	custom_effect_tooltip = "For capture of Metz"
+	add_manpower = 5000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_9559
+}
+if = {###Strasbourg 10p
+	limit = {
+		AND = { ###Strasbourg
+			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9503 }
+			controls_province = 9503
+		}
+	}
+	custom_effect_tooltip = "For capture of Strasbourg"
+	add_manpower = 10000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 2000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_9503
+}
+if = {###Rodez 3p
+	limit = {
+		AND = { ###Rodez
+			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_11709 }
+			controls_province = 11709
+		}
+	}
+	custom_effect_tooltip = "For capture of Rodez"
+	add_manpower = 3000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 600
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_11709
+}
+if = {###Paris 50p
+	limit = {
+		AND = { ###Paris
+			NOT = { owns_state = 19 has_country_flag = fra_cw_prov_11506 }
+			controls_province = 11506
+		}
+	}
+	custom_effect_tooltip = "For capture of Paris"
+	add_manpower = 30000
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 5000
+		producer = FRA
+		}
+	set_country_flag = fra_cw_prov_11506
+}
+###end of the options
+}
+
+}
+
 country_event = { ### Demand For Swiz to give over land
 id = rob_france.108
 title = "French Demand"
@@ -4012,640 +4625,22 @@ country_event = {
   
   }
 
-  country_event = { ### seize town boosto cw event
-  id = rob_france.120
-  title = "City Looting"
-  desc = "Now that we have seized major city(-ies), we are ransaking the place, in search for guns and suitable recruits."
-  trigger = {
-	  tag = FRS
-	  has_country_flag = FRA_civil_war
-	  NOT = { has_country_flag = fra_cw_over }
-	  OR = {
-		  AND = { ###Montpellier
-			  NOT = { owns_state = 22 has_country_flag = fra_cw_prov_9898 }
-			  controls_province = 9898
-		  }
-		  AND = { ###Vichy
-			  NOT = { owns_state = 26 has_country_flag = fra_cw_prov_9748 }
-			  controls_province = 9748
-		  }
-		  AND = { ###Lyon
-			  NOT = { owns_state = 20 has_country_flag = fra_cw_prov_6613 }
-			  controls_province = 6613
-		  }
-		  AND = { ###Marseille
-			  NOT = { owns_state = 21 has_country_flag = fra_cw_prov_11834 }
-			  controls_province = 11834
-		  }
-		  AND = {#Touluse
-			  NOT = { owns_state = 31 has_country_flag = fra_cw_prov_6766 }
-			  controls_province = 6766
-		  }
-		  AND = { ###Bordeaux
-			  NOT = { owns_state = 19 has_country_flag = fra_cw_prov_9737 }
-			  controls_province = 9737
-		  }
-		  AND = {#La Rochelle
-			  NOT = { owns_state = 1283 has_country_flag = fra_cw_prov_6657 }
-			  controls_province = 6657
-		  }
-		  AND = {#Nantes
-			  NOT = { owns_state = 30 has_country_flag = fra_cw_prov_11465 }
-			  controls_province = 11465
-		  }
-		  AND = { ###Brest
-			  NOT = { owns_state = 14 has_country_flag = fra_cw_prov_3552 }
-			  controls_province = 3552
-		  }
-		  AND = { #Cherbourg
-			  NOT = { owns_state = 15 has_country_flag = fra_cw_prov_6449 }
-			  controls_province = 6449
-		  }
-		  AND = { ###Tours
-			  NOT = { owns_state = 819 has_country_flag = fra_cw_prov_3671 }
-			  controls_province = 3671
-		  }
-		  AND = { ###Nevers
-			  NOT = { owns_state = 819 has_country_flag = fra_cw_prov_9609 }
-			  controls_province = 9609
-		  }
-		  AND = {#Bourges
-			  NOT = { owns_state = 819 has_country_flag = fra_cw_prov_6688 }
-			  controls_province = 6688
-		  }
-		  AND = { ###Alencon
-			  NOT = { owns_state = 1014 has_country_flag = fra_cw_prov_553 }
-			  controls_province = 553
-		  }
-		  AND = { ###Orleans
-			  NOT = { owns_state = 24 has_country_flag = fra_cw_prov_512 }
-			  controls_province = 512
-		  }
-		  AND = { ###Le Havre
-			  NOT = { owns_state = 818 has_country_flag = fra_cw_prov_9434 }
-			  controls_province = 9434
-		  }
-		  AND = {#Amiens
-			  NOT = { owns_state = 785 has_country_flag = fra_cw_prov_11420 }
-			  controls_province = 11420
-		  }
-		  AND = { ###Lille
-			  NOT = { owns_state = 1279 has_country_flag = fra_cw_prov_11483 }
-			  controls_province = 11483
-		  }
-		  AND = {#Rennes
-			  NOT = { owns_state = 1009 has_country_flag = fra_cw_prov_11508 }
-			  controls_province = 11508
-		  }
-		  AND = { ###Periguex
-			  NOT = { owns_state = 25 has_country_flag = fra_cw_prov_9734 }
-			  controls_province = 9734
-		  }
-		  AND = { ###Valence
-			  NOT = { owns_state = 32 has_country_flag = fra_cw_prov_762 }
-			  controls_province = 762
-		  }
-		  AND = {#Nice
-			  NOT = { owns_state = 821 has_country_flag = fra_cw_prov_9909 }
-			  controls_province = 9909
-		  }
-		  AND = {#Reims
-			  NOT = { owns_state = 18 has_country_flag = fra_cw_prov_13011 }
-			  controls_province = 13011
-		  }
-		  AND = {#Troyes
-			  NOT = { owns_state = 18 has_country_flag = fra_cw_prov_9490 }
-			  controls_province = 9490
-		  }
-		  AND = {#Dijon
-			  NOT = { owns_state = 27 has_country_flag = fra_cw_prov_3652 }
-			  controls_province = 3652
-		  }
-		  AND = {#Besancon
-			  NOT = { owns_state = 17 has_country_flag = fra_cw_prov_9642 }
-			  controls_province = 9642
-		  }
-		  AND = {#Mullhouse
-			  NOT = { owns_state = 28 has_country_flag = fra_cw_prov_678 }
-			  controls_province = 678
-		  }
-		  AND = {#Metz
-			  NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9559 }
-			  controls_province = 9559
-		  }
-		  AND = { ###Strasbourg
-			  NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9503 }
-			  controls_province = 9503
-		  }
-		  AND = { ###Rodez
-			  NOT = { owns_state = 22 has_country_flag = fra_cw_prov_11709 }
-			  controls_province = 11709
-		  }
+    ###
+	country_event = {
+		id = rob_france.120
+		title = ""
+		desc = ""
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = ""
+		 ai_chance = {
+		  factor = 2
+		 }
+		}
+	  
 	  }
-  }
-  
-  option = {
-  name = rob_france.107.a
-  if = {###Montpellier 5p
-	  limit = {
-		  AND = {
-			  NOT = { owns_state = 22 has_country_flag = fra_cw_prov_9898 }
-			  controls_province = 9898
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Montpellier"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_9898
-  }
-  if = {###Vichy 3p
-	  limit = {
-		  AND = { 
-			  NOT = { owns_state = 26 has_country_flag = fra_cw_prov_9748 }
-			  controls_province = 9748
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Vichy"
-	  add_manpower = 3000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 600
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_9748
-  }
-  if = {###Lyon 10p
-	  limit = {
-		  AND = { 
-			  NOT = { owns_state = 20 has_country_flag = fra_cw_prov_6613 }
-			  controls_province = 6613
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Lyon"
-	  add_manpower = 10000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 2000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_6613
-  }
-  if = {###Marseille 10p
-	  limit = {
-		  AND = { ###Marseille
-			  NOT = { owns_state = 21 has_country_flag = fra_cw_prov_11834 }
-			  controls_province = 11834
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Marseille"
-	  add_manpower = 10000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 2000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_11834
-  }
-  if = {###Touluse 5p
-	  limit = {
-		  AND = {#Touluse
-			  NOT = { owns_state = 31 has_country_flag = fra_cw_prov_6766 }
-			  controls_province = 6766
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Touluse"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_6766
-  }
-  if = {###Bordeaux 20p
-	  limit = {
-		  AND = { ###Bordeaux
-			  NOT = { owns_state = 19 has_country_flag = fra_cw_prov_9737 }
-			  controls_province = 9737
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Bordeaux"
-	  add_manpower = 20000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 3000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_9737
-  }
-  if = {###La Rochelle 5p
-	  limit = {
-		  AND = {#La Rochelle
-			  NOT = { owns_state = 1283 has_country_flag = fra_cw_prov_6657 }
-			  controls_province = 6657
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of La Rochelle"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_6657
-  }
-  if = {###Nantes 5p
-	  limit = {
-		  AND = {#Nantes
-			  NOT = { owns_state = 30 has_country_flag = fra_cw_prov_11465 }
-			  controls_province = 11465
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Nantes"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_11465
-  }
-  if = {###Brest 20p
-	  limit = {
-		  AND = { ###Brest
-			  NOT = { owns_state = 14 has_country_flag = fra_cw_prov_3552 }
-			  controls_province = 3552
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Brest"
-	  add_manpower = 20000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 3000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_3552
-  }
-  if = {###Cherbourg 3p
-	  limit = {
-		  AND = { #Cherbourg
-			  NOT = { owns_state = 15 has_country_flag = fra_cw_prov_6449 }
-			  controls_province = 6449
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Cherbourg"
-	  add_manpower = 3000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 600
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_6449
-  }
-  if = {###Tours 3p
-	  limit = {
-		  AND = { ###Tours
-			  NOT = { owns_state = 819 has_country_flag = fra_cw_prov_3671 }
-			  controls_province = 3671
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Tours"
-	  add_manpower = 3000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 600
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_3671
-  }
-  if = {###Nevers 3p
-	  limit = {
-		  AND = { ###Nevers
-			  NOT = { owns_state = 819 has_country_flag = fra_cw_prov_9609 }
-			  controls_province = 9609
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Nevers"
-	  add_manpower = 3000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 600
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_9609
-  }
-  if = {###Bourges 5p
-	  limit = {
-		  AND = {#Bourges
-			  NOT = { owns_state = 819 has_country_flag = fra_cw_prov_6688 }
-			  controls_province = 6688
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Bourges"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_6688
-  }
-  if = {###Alencon 3p
-	  limit = {
-		  AND = { ###Alencon
-			  NOT = { owns_state = 1014 has_country_flag = fra_cw_prov_553 }
-			  controls_province = 553
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Alencon"
-	  add_manpower = 3000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 600
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_553
-  }
-  if = {###Orleans 10p
-	  limit = {
-		  AND = { ###Orleans
-			  NOT = { owns_state = 24 has_country_flag = fra_cw_prov_512 }
-			  controls_province = 512
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Orleans"
-	  add_manpower = 10000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 2000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_512
-  }
-  if = {###Le Havre 10p
-	  limit = {
-		  AND = { ###Le Havre
-			  NOT = { owns_state = 818 has_country_flag = fra_cw_prov_9434 }
-			  controls_province = 9434
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Le Havre"
-	  add_manpower = 10000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 2000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_9434
-  }
-  if = {###Amiens 5p
-	  limit = {
-		  AND = {#Amiens
-			  NOT = { owns_state = 785 has_country_flag = fra_cw_prov_11420 }
-			  controls_province = 11420
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Amiens"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_11420
-  }
-  if = {###Lille 10p
-	  limit = {
-		  AND = { ###Lille
-			  NOT = { owns_state = 1279 has_country_flag = fra_cw_prov_11483 }
-			  controls_province = 11483
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Lille"
-	  add_manpower = 10000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 2000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_11483
-  }
-  if = {###Rennes 5p
-	  limit = {
-		  AND = {#Rennes
-			  NOT = { owns_state = 1009 has_country_flag = fra_cw_prov_11508 }
-			  controls_province = 11508
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Rennes"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_11508
-  }
-  if = {###Periguex 3p
-	  limit = {
-		  AND = { ###Periguex
-			  NOT = { owns_state = 25 has_country_flag = fra_cw_prov_9734 }
-			  controls_province = 9734
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Periguex"
-	  add_manpower = 3000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 600
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_9734
-  }
-  if = {###Valence 3p
-	  limit = {
-		  AND = { ###Valence
-			  NOT = { owns_state = 32 has_country_flag = fra_cw_prov_762 }
-			  controls_province = 762
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Valence"
-	  add_manpower = 3000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 600
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_762
-  }
-  if = {###Nice 5p
-	  limit = {
-		  AND = {#Nice
-			  NOT = { owns_state = 821 has_country_flag = fra_cw_prov_9909 }
-			  controls_province = 9909
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Nice"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_9909
-  }
-  if = {###Reims 5p
-	  limit = {
-		  AND = {#Reims
-			  NOT = { owns_state = 18 has_country_flag = fra_cw_prov_13011 }
-			  controls_province = 13011
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Reims"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_13011
-  }
-  if = {###Troyes 5p
-	  limit = {
-		  AND = {#Troyes
-			  NOT = { owns_state = 18 has_country_flag = fra_cw_prov_9490 }
-			  controls_province = 9490
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Troyes"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_9490
-  }
-  if = {###Dijon 5p
-	  limit = {
-		  AND = {#Dijon
-			  NOT = { owns_state = 27 has_country_flag = fra_cw_prov_3652 }
-			  controls_province = 3652
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Dijon"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_3652
-  }
-  if = {###Besancon 5p
-	  limit = {
-		  AND = {#Besancon
-			  NOT = { owns_state = 17 has_country_flag = fra_cw_prov_9642 }
-			  controls_province = 9642
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Besancon"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_9642
-  }
-  if = {###Mullhouse 5p
-	  limit = {
-		  AND = {#Mullhouse
-			  NOT = { owns_state = 28 has_country_flag = fra_cw_prov_678 }
-			  controls_province = 678
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Mullhouse"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_678
-  }
-  if = {###Metz 5p
-	  limit = {
-		  AND = {#Metz
-			  NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9559 }
-			  controls_province = 9559
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Metz"
-	  add_manpower = 5000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 1000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_9559
-  }
-  if = {###Strasbourg 10p
-	  limit = {
-		  AND = { ###Strasbourg
-			  NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9503 }
-			  controls_province = 9503
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Strasbourg"
-	  add_manpower = 10000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 2000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_9503
-  }
-  if = {###Rodez 3p
-	  limit = {
-		  AND = { ###Rodez
-			  NOT = { owns_state = 22 has_country_flag = fra_cw_prov_11709 }
-			  controls_province = 11709
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Rodez"
-	  add_manpower = 3000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 600
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_11709
-  }
-  if = {###Paris 50p
-	  limit = {
-		  AND = { ###Paris
-			  NOT = { owns_state = 19 has_country_flag = fra_cw_prov_11506 }
-			  controls_province = 11506
-		  }
-	  }
-	  custom_effect_tooltip = "For capture of Paris"
-	  add_manpower = 30000
-	  add_equipment_to_stockpile = {
-		  type = infantry_equipment
-		  amount = 5000
-		  producer = FRA
-		  }
-	  set_country_flag = fra_cw_prov_11506
-  }
-  ###end of the options
-  }
-  
-  }
 
 
    ###Canada Receives demand for quebec
@@ -4721,1913 +4716,6 @@ country_event = {
 			add_political_power = -150
 		}
 	  }
-
-
-
-country_event = { ### seize town boosto cw event
-id = rob_france.123
-title = "City Looting"
-desc = "Now that we have seized major city(-ies), we are ransaking the place, in search for guns and suitable recruits."
-trigger = {
-	tag = FRP
-	has_country_flag = FRA_civil_war
-	NOT = { has_country_flag = fra_cw_over }
-	OR = {
-		AND = { ###Montpellier
-			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_9898 }
-			controls_province = 9898
-		}
-		AND = { ###Vichy
-			NOT = { owns_state = 26 has_country_flag = fra_cw_prov_9748 }
-			controls_province = 9748
-		}
-		AND = { ###Lyon
-			NOT = { owns_state = 20 has_country_flag = fra_cw_prov_6613 }
-			controls_province = 6613
-		}
-		AND = { ###Marseille
-			NOT = { owns_state = 21 has_country_flag = fra_cw_prov_11834 }
-			controls_province = 11834
-		}
-		AND = {#Touluse
-			NOT = { owns_state = 31 has_country_flag = fra_cw_prov_6766 }
-			controls_province = 6766
-		}
-		AND = { ###Bordeaux
-			NOT = { owns_state = 19 has_country_flag = fra_cw_prov_9737 }
-			controls_province = 9737
-		}
-		AND = {#La Rochelle
-			NOT = { owns_state = 1283 has_country_flag = fra_cw_prov_6657 }
-			controls_province = 6657
-		}
-		AND = {#Nantes
-			NOT = { owns_state = 30 has_country_flag = fra_cw_prov_11465 }
-			controls_province = 11465
-		}
-		AND = { ###Brest
-			NOT = { owns_state = 14 has_country_flag = fra_cw_prov_3552 }
-			controls_province = 3552
-		}
-		AND = { #Cherbourg
-			NOT = { owns_state = 15 has_country_flag = fra_cw_prov_6449 }
-			controls_province = 6449
-		}
-		AND = { ###Tours
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_3671 }
-			controls_province = 3671
-		}
-		AND = { ###Nevers
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_9609 }
-			controls_province = 9609
-		}
-		AND = {#Bourges
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_6688 }
-			controls_province = 6688
-		}
-		AND = { ###Alencon
-			NOT = { owns_state = 1014 has_country_flag = fra_cw_prov_553 }
-			controls_province = 553
-		}
-		AND = { ###Orleans
-			NOT = { owns_state = 24 has_country_flag = fra_cw_prov_512 }
-			controls_province = 512
-		}
-		AND = { ###Le Havre
-			NOT = { owns_state = 818 has_country_flag = fra_cw_prov_9434 }
-			controls_province = 9434
-		}
-		AND = {#Amiens
-			NOT = { owns_state = 785 has_country_flag = fra_cw_prov_11420 }
-			controls_province = 11420
-		}
-		AND = { ###Lille
-			NOT = { owns_state = 1279 has_country_flag = fra_cw_prov_11483 }
-			controls_province = 11483
-		}
-		AND = {#Rennes
-			NOT = { owns_state = 1009 has_country_flag = fra_cw_prov_11508 }
-			controls_province = 11508
-		}
-		AND = { ###Periguex
-			NOT = { owns_state = 25 has_country_flag = fra_cw_prov_9734 }
-			controls_province = 9734
-		}
-		AND = { ###Valence
-			NOT = { owns_state = 32 has_country_flag = fra_cw_prov_762 }
-			controls_province = 762
-		}
-		AND = {#Nice
-			NOT = { owns_state = 821 has_country_flag = fra_cw_prov_9909 }
-			controls_province = 9909
-		}
-		AND = {#Reims
-			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_13011 }
-			controls_province = 13011
-		}
-		AND = {#Troyes
-			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_9490 }
-			controls_province = 9490
-		}
-		AND = {#Dijon
-			NOT = { owns_state = 27 has_country_flag = fra_cw_prov_3652 }
-			controls_province = 3652
-		}
-		AND = {#Besancon
-			NOT = { owns_state = 17 has_country_flag = fra_cw_prov_9642 }
-			controls_province = 9642
-		}
-		AND = {#Mullhouse
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_678 }
-			controls_province = 678
-		}
-		AND = {#Metz
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9559 }
-			controls_province = 9559
-		}
-		AND = { ###Strasbourg
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9503 }
-			controls_province = 9503
-		}
-		AND = { ###Rodez
-			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_11709 }
-			controls_province = 11709
-		}
-	}
-}
-
-option = {
-name = rob_france.107.a
-if = {###Montpellier 5p
-	limit = {
-		AND = {
-			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_9898 }
-			controls_province = 9898
-		}
-	}
-	custom_effect_tooltip = "For capture of Montpellier"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9898
-}
-if = {###Vichy 3p
-	limit = {
-		AND = { 
-			NOT = { owns_state = 26 has_country_flag = fra_cw_prov_9748 }
-			controls_province = 9748
-		}
-	}
-	custom_effect_tooltip = "For capture of Vichy"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9748
-}
-if = {###Lyon 10p
-	limit = {
-		AND = { 
-			NOT = { owns_state = 20 has_country_flag = fra_cw_prov_6613 }
-			controls_province = 6613
-		}
-	}
-	custom_effect_tooltip = "For capture of Lyon"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6613
-}
-if = {###Marseille 10p
-	limit = {
-		AND = { ###Marseille
-			NOT = { owns_state = 21 has_country_flag = fra_cw_prov_11834 }
-			controls_province = 11834
-		}
-	}
-	custom_effect_tooltip = "For capture of Marseille"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11834
-}
-if = {###Touluse 5p
-	limit = {
-		AND = {#Touluse
-			NOT = { owns_state = 31 has_country_flag = fra_cw_prov_6766 }
-			controls_province = 6766
-		}
-	}
-	custom_effect_tooltip = "For capture of Touluse"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6766
-}
-if = {###Bordeaux 20p
-	limit = {
-		AND = { ###Bordeaux
-			NOT = { owns_state = 19 has_country_flag = fra_cw_prov_9737 }
-			controls_province = 9737
-		}
-	}
-	custom_effect_tooltip = "For capture of Bordeaux"
-	add_manpower = 20000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 3000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9737
-}
-if = {###La Rochelle 5p
-	limit = {
-		AND = {#La Rochelle
-			NOT = { owns_state = 1283 has_country_flag = fra_cw_prov_6657 }
-			controls_province = 6657
-		}
-	}
-	custom_effect_tooltip = "For capture of La Rochelle"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6657
-}
-if = {###Nantes 5p
-	limit = {
-		AND = {#Nantes
-			NOT = { owns_state = 30 has_country_flag = fra_cw_prov_11465 }
-			controls_province = 11465
-		}
-	}
-	custom_effect_tooltip = "For capture of Nantes"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11465
-}
-if = {###Brest 20p
-	limit = {
-		AND = { ###Brest
-			NOT = { owns_state = 14 has_country_flag = fra_cw_prov_3552 }
-			controls_province = 3552
-		}
-	}
-	custom_effect_tooltip = "For capture of Brest"
-	add_manpower = 20000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 3000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_3552
-}
-if = {###Cherbourg 3p
-	limit = {
-		AND = { #Cherbourg
-			NOT = { owns_state = 15 has_country_flag = fra_cw_prov_6449 }
-			controls_province = 6449
-		}
-	}
-	custom_effect_tooltip = "For capture of Cherbourg"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6449
-}
-if = {###Tours 3p
-	limit = {
-		AND = { ###Tours
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_3671 }
-			controls_province = 3671
-		}
-	}
-	custom_effect_tooltip = "For capture of Tours"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_3671
-}
-if = {###Nevers 3p
-	limit = {
-		AND = { ###Nevers
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_9609 }
-			controls_province = 9609
-		}
-	}
-	custom_effect_tooltip = "For capture of Nevers"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9609
-}
-if = {###Bourges 5p
-	limit = {
-		AND = {#Bourges
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_6688 }
-			controls_province = 6688
-		}
-	}
-	custom_effect_tooltip = "For capture of Bourges"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6688
-}
-if = {###Alencon 3p
-	limit = {
-		AND = { ###Alencon
-			NOT = { owns_state = 1014 has_country_flag = fra_cw_prov_553 }
-			controls_province = 553
-		}
-	}
-	custom_effect_tooltip = "For capture of Alencon"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_553
-}
-if = {###Orleans 10p
-	limit = {
-		AND = { ###Orleans
-			NOT = { owns_state = 24 has_country_flag = fra_cw_prov_512 }
-			controls_province = 512
-		}
-	}
-	custom_effect_tooltip = "For capture of Orleans"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_512
-}
-if = {###Le Havre 10p
-	limit = {
-		AND = { ###Le Havre
-			NOT = { owns_state = 818 has_country_flag = fra_cw_prov_9434 }
-			controls_province = 9434
-		}
-	}
-	custom_effect_tooltip = "For capture of Le Havre"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9434
-}
-if = {###Amiens 5p
-	limit = {
-		AND = {#Amiens
-			NOT = { owns_state = 785 has_country_flag = fra_cw_prov_11420 }
-			controls_province = 11420
-		}
-	}
-	custom_effect_tooltip = "For capture of Amiens"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11420
-}
-if = {###Lille 10p
-	limit = {
-		AND = { ###Lille
-			NOT = { owns_state = 1279 has_country_flag = fra_cw_prov_11483 }
-			controls_province = 11483
-		}
-	}
-	custom_effect_tooltip = "For capture of Lille"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11483
-}
-if = {###Rennes 5p
-	limit = {
-		AND = {#Rennes
-			NOT = { owns_state = 1009 has_country_flag = fra_cw_prov_11508 }
-			controls_province = 11508
-		}
-	}
-	custom_effect_tooltip = "For capture of Rennes"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11508
-}
-if = {###Periguex 3p
-	limit = {
-		AND = { ###Periguex
-			NOT = { owns_state = 25 has_country_flag = fra_cw_prov_9734 }
-			controls_province = 9734
-		}
-	}
-	custom_effect_tooltip = "For capture of Periguex"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9734
-}
-if = {###Valence 3p
-	limit = {
-		AND = { ###Valence
-			NOT = { owns_state = 32 has_country_flag = fra_cw_prov_762 }
-			controls_province = 762
-		}
-	}
-	custom_effect_tooltip = "For capture of Valence"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_762
-}
-if = {###Nice 5p
-	limit = {
-		AND = {#Nice
-			NOT = { owns_state = 821 has_country_flag = fra_cw_prov_9909 }
-			controls_province = 9909
-		}
-	}
-	custom_effect_tooltip = "For capture of Nice"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9909
-}
-if = {###Reims 5p
-	limit = {
-		AND = {#Reims
-			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_13011 }
-			controls_province = 13011
-		}
-	}
-	custom_effect_tooltip = "For capture of Reims"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_13011
-}
-if = {###Troyes 5p
-	limit = {
-		AND = {#Troyes
-			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_9490 }
-			controls_province = 9490
-		}
-	}
-	custom_effect_tooltip = "For capture of Troyes"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9490
-}
-if = {###Dijon 5p
-	limit = {
-		AND = {#Dijon
-			NOT = { owns_state = 27 has_country_flag = fra_cw_prov_3652 }
-			controls_province = 3652
-		}
-	}
-	custom_effect_tooltip = "For capture of Dijon"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_3652
-}
-if = {###Besancon 5p
-	limit = {
-		AND = {#Besancon
-			NOT = { owns_state = 17 has_country_flag = fra_cw_prov_9642 }
-			controls_province = 9642
-		}
-	}
-	custom_effect_tooltip = "For capture of Besancon"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9642
-}
-if = {###Mullhouse 5p
-	limit = {
-		AND = {#Mullhouse
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_678 }
-			controls_province = 678
-		}
-	}
-	custom_effect_tooltip = "For capture of Mullhouse"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_678
-}
-if = {###Metz 5p
-	limit = {
-		AND = {#Metz
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9559 }
-			controls_province = 9559
-		}
-	}
-	custom_effect_tooltip = "For capture of Metz"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9559
-}
-if = {###Strasbourg 10p
-	limit = {
-		AND = { ###Strasbourg
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9503 }
-			controls_province = 9503
-		}
-	}
-	custom_effect_tooltip = "For capture of Strasbourg"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9503
-}
-if = {###Rodez 3p
-	limit = {
-		AND = { ###Rodez
-			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_11709 }
-			controls_province = 11709
-		}
-	}
-	custom_effect_tooltip = "For capture of Rodez"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11709
-}
-if = {###Paris 50p
-	limit = {
-		AND = { ###Paris
-			NOT = { owns_state = 19 has_country_flag = fra_cw_prov_11506 }
-			controls_province = 11506
-		}
-	}
-	custom_effect_tooltip = "For capture of Paris"
-	add_manpower = 30000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 5000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11506
-}
-###end of the options
-}
-
-}
-country_event = { ### seize town boosto cw event
-id = rob_france.124
-title = "City Looting"
-desc = "Now that we have seized major city(-ies), we are ransaking the place, in search for guns and suitable recruits."
-trigger = {
-	tag = FRL
-	has_country_flag = FRA_civil_war
-	NOT = { has_country_flag = fra_cw_over }
-	OR = {
-		AND = { ###Montpellier
-			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_9898 }
-			controls_province = 9898
-		}
-		AND = { ###Vichy
-			NOT = { owns_state = 26 has_country_flag = fra_cw_prov_9748 }
-			controls_province = 9748
-		}
-		AND = { ###Lyon
-			NOT = { owns_state = 20 has_country_flag = fra_cw_prov_6613 }
-			controls_province = 6613
-		}
-		AND = { ###Marseille
-			NOT = { owns_state = 21 has_country_flag = fra_cw_prov_11834 }
-			controls_province = 11834
-		}
-		AND = {#Touluse
-			NOT = { owns_state = 31 has_country_flag = fra_cw_prov_6766 }
-			controls_province = 6766
-		}
-		AND = { ###Bordeaux
-			NOT = { owns_state = 19 has_country_flag = fra_cw_prov_9737 }
-			controls_province = 9737
-		}
-		AND = {#La Rochelle
-			NOT = { owns_state = 1283 has_country_flag = fra_cw_prov_6657 }
-			controls_province = 6657
-		}
-		AND = {#Nantes
-			NOT = { owns_state = 30 has_country_flag = fra_cw_prov_11465 }
-			controls_province = 11465
-		}
-		AND = { ###Brest
-			NOT = { owns_state = 14 has_country_flag = fra_cw_prov_3552 }
-			controls_province = 3552
-		}
-		AND = { #Cherbourg
-			NOT = { owns_state = 15 has_country_flag = fra_cw_prov_6449 }
-			controls_province = 6449
-		}
-		AND = { ###Tours
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_3671 }
-			controls_province = 3671
-		}
-		AND = { ###Nevers
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_9609 }
-			controls_province = 9609
-		}
-		AND = {#Bourges
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_6688 }
-			controls_province = 6688
-		}
-		AND = { ###Alencon
-			NOT = { owns_state = 1014 has_country_flag = fra_cw_prov_553 }
-			controls_province = 553
-		}
-		AND = { ###Orleans
-			NOT = { owns_state = 24 has_country_flag = fra_cw_prov_512 }
-			controls_province = 512
-		}
-		AND = { ###Le Havre
-			NOT = { owns_state = 818 has_country_flag = fra_cw_prov_9434 }
-			controls_province = 9434
-		}
-		AND = {#Amiens
-			NOT = { owns_state = 785 has_country_flag = fra_cw_prov_11420 }
-			controls_province = 11420
-		}
-		AND = { ###Lille
-			NOT = { owns_state = 1279 has_country_flag = fra_cw_prov_11483 }
-			controls_province = 11483
-		}
-		AND = {#Rennes
-			NOT = { owns_state = 1009 has_country_flag = fra_cw_prov_11508 }
-			controls_province = 11508
-		}
-		AND = { ###Periguex
-			NOT = { owns_state = 25 has_country_flag = fra_cw_prov_9734 }
-			controls_province = 9734
-		}
-		AND = { ###Valence
-			NOT = { owns_state = 32 has_country_flag = fra_cw_prov_762 }
-			controls_province = 762
-		}
-		AND = {#Nice
-			NOT = { owns_state = 821 has_country_flag = fra_cw_prov_9909 }
-			controls_province = 9909
-		}
-		AND = {#Reims
-			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_13011 }
-			controls_province = 13011
-		}
-		AND = {#Troyes
-			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_9490 }
-			controls_province = 9490
-		}
-		AND = {#Dijon
-			NOT = { owns_state = 27 has_country_flag = fra_cw_prov_3652 }
-			controls_province = 3652
-		}
-		AND = {#Besancon
-			NOT = { owns_state = 17 has_country_flag = fra_cw_prov_9642 }
-			controls_province = 9642
-		}
-		AND = {#Mullhouse
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_678 }
-			controls_province = 678
-		}
-		AND = {#Metz
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9559 }
-			controls_province = 9559
-		}
-		AND = { ###Strasbourg
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9503 }
-			controls_province = 9503
-		}
-		AND = { ###Rodez
-			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_11709 }
-			controls_province = 11709
-		}
-	}
-}
-
-option = {
-name = rob_france.107.a
-if = {###Montpellier 5p
-	limit = {
-		AND = {
-			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_9898 }
-			controls_province = 9898
-		}
-	}
-	custom_effect_tooltip = "For capture of Montpellier"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9898
-}
-if = {###Vichy 3p
-	limit = {
-		AND = { 
-			NOT = { owns_state = 26 has_country_flag = fra_cw_prov_9748 }
-			controls_province = 9748
-		}
-	}
-	custom_effect_tooltip = "For capture of Vichy"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9748
-}
-if = {###Lyon 10p
-	limit = {
-		AND = { 
-			NOT = { owns_state = 20 has_country_flag = fra_cw_prov_6613 }
-			controls_province = 6613
-		}
-	}
-	custom_effect_tooltip = "For capture of Lyon"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6613
-}
-if = {###Marseille 10p
-	limit = {
-		AND = { ###Marseille
-			NOT = { owns_state = 21 has_country_flag = fra_cw_prov_11834 }
-			controls_province = 11834
-		}
-	}
-	custom_effect_tooltip = "For capture of Marseille"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11834
-}
-if = {###Touluse 5p
-	limit = {
-		AND = {#Touluse
-			NOT = { owns_state = 31 has_country_flag = fra_cw_prov_6766 }
-			controls_province = 6766
-		}
-	}
-	custom_effect_tooltip = "For capture of Touluse"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6766
-}
-if = {###Bordeaux 20p
-	limit = {
-		AND = { ###Bordeaux
-			NOT = { owns_state = 19 has_country_flag = fra_cw_prov_9737 }
-			controls_province = 9737
-		}
-	}
-	custom_effect_tooltip = "For capture of Bordeaux"
-	add_manpower = 20000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 3000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9737
-}
-if = {###La Rochelle 5p
-	limit = {
-		AND = {#La Rochelle
-			NOT = { owns_state = 1283 has_country_flag = fra_cw_prov_6657 }
-			controls_province = 6657
-		}
-	}
-	custom_effect_tooltip = "For capture of La Rochelle"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6657
-}
-if = {###Nantes 5p
-	limit = {
-		AND = {#Nantes
-			NOT = { owns_state = 30 has_country_flag = fra_cw_prov_11465 }
-			controls_province = 11465
-		}
-	}
-	custom_effect_tooltip = "For capture of Nantes"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11465
-}
-if = {###Brest 20p
-	limit = {
-		AND = { ###Brest
-			NOT = { owns_state = 14 has_country_flag = fra_cw_prov_3552 }
-			controls_province = 3552
-		}
-	}
-	custom_effect_tooltip = "For capture of Brest"
-	add_manpower = 20000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 3000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_3552
-}
-if = {###Cherbourg 3p
-	limit = {
-		AND = { #Cherbourg
-			NOT = { owns_state = 15 has_country_flag = fra_cw_prov_6449 }
-			controls_province = 6449
-		}
-	}
-	custom_effect_tooltip = "For capture of Cherbourg"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6449
-}
-if = {###Tours 3p
-	limit = {
-		AND = { ###Tours
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_3671 }
-			controls_province = 3671
-		}
-	}
-	custom_effect_tooltip = "For capture of Tours"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_3671
-}
-if = {###Nevers 3p
-	limit = {
-		AND = { ###Nevers
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_9609 }
-			controls_province = 9609
-		}
-	}
-	custom_effect_tooltip = "For capture of Nevers"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9609
-}
-if = {###Bourges 5p
-	limit = {
-		AND = {#Bourges
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_6688 }
-			controls_province = 6688
-		}
-	}
-	custom_effect_tooltip = "For capture of Bourges"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6688
-}
-if = {###Alencon 3p
-	limit = {
-		AND = { ###Alencon
-			NOT = { owns_state = 1014 has_country_flag = fra_cw_prov_553 }
-			controls_province = 553
-		}
-	}
-	custom_effect_tooltip = "For capture of Alencon"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_553
-}
-if = {###Orleans 10p
-	limit = {
-		AND = { ###Orleans
-			NOT = { owns_state = 24 has_country_flag = fra_cw_prov_512 }
-			controls_province = 512
-		}
-	}
-	custom_effect_tooltip = "For capture of Orleans"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_512
-}
-if = {###Le Havre 10p
-	limit = {
-		AND = { ###Le Havre
-			NOT = { owns_state = 818 has_country_flag = fra_cw_prov_9434 }
-			controls_province = 9434
-		}
-	}
-	custom_effect_tooltip = "For capture of Le Havre"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9434
-}
-if = {###Amiens 5p
-	limit = {
-		AND = {#Amiens
-			NOT = { owns_state = 785 has_country_flag = fra_cw_prov_11420 }
-			controls_province = 11420
-		}
-	}
-	custom_effect_tooltip = "For capture of Amiens"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11420
-}
-if = {###Lille 10p
-	limit = {
-		AND = { ###Lille
-			NOT = { owns_state = 1279 has_country_flag = fra_cw_prov_11483 }
-			controls_province = 11483
-		}
-	}
-	custom_effect_tooltip = "For capture of Lille"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11483
-}
-if = {###Rennes 5p
-	limit = {
-		AND = {#Rennes
-			NOT = { owns_state = 1009 has_country_flag = fra_cw_prov_11508 }
-			controls_province = 11508
-		}
-	}
-	custom_effect_tooltip = "For capture of Rennes"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11508
-}
-if = {###Periguex 3p
-	limit = {
-		AND = { ###Periguex
-			NOT = { owns_state = 25 has_country_flag = fra_cw_prov_9734 }
-			controls_province = 9734
-		}
-	}
-	custom_effect_tooltip = "For capture of Periguex"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9734
-}
-if = {###Valence 3p
-	limit = {
-		AND = { ###Valence
-			NOT = { owns_state = 32 has_country_flag = fra_cw_prov_762 }
-			controls_province = 762
-		}
-	}
-	custom_effect_tooltip = "For capture of Valence"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_762
-}
-if = {###Nice 5p
-	limit = {
-		AND = {#Nice
-			NOT = { owns_state = 821 has_country_flag = fra_cw_prov_9909 }
-			controls_province = 9909
-		}
-	}
-	custom_effect_tooltip = "For capture of Nice"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9909
-}
-if = {###Reims 5p
-	limit = {
-		AND = {#Reims
-			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_13011 }
-			controls_province = 13011
-		}
-	}
-	custom_effect_tooltip = "For capture of Reims"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_13011
-}
-if = {###Troyes 5p
-	limit = {
-		AND = {#Troyes
-			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_9490 }
-			controls_province = 9490
-		}
-	}
-	custom_effect_tooltip = "For capture of Troyes"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9490
-}
-if = {###Dijon 5p
-	limit = {
-		AND = {#Dijon
-			NOT = { owns_state = 27 has_country_flag = fra_cw_prov_3652 }
-			controls_province = 3652
-		}
-	}
-	custom_effect_tooltip = "For capture of Dijon"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_3652
-}
-if = {###Besancon 5p
-	limit = {
-		AND = {#Besancon
-			NOT = { owns_state = 17 has_country_flag = fra_cw_prov_9642 }
-			controls_province = 9642
-		}
-	}
-	custom_effect_tooltip = "For capture of Besancon"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9642
-}
-if = {###Mullhouse 5p
-	limit = {
-		AND = {#Mullhouse
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_678 }
-			controls_province = 678
-		}
-	}
-	custom_effect_tooltip = "For capture of Mullhouse"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_678
-}
-if = {###Metz 5p
-	limit = {
-		AND = {#Metz
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9559 }
-			controls_province = 9559
-		}
-	}
-	custom_effect_tooltip = "For capture of Metz"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9559
-}
-if = {###Strasbourg 10p
-	limit = {
-		AND = { ###Strasbourg
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9503 }
-			controls_province = 9503
-		}
-	}
-	custom_effect_tooltip = "For capture of Strasbourg"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9503
-}
-if = {###Rodez 3p
-	limit = {
-		AND = { ###Rodez
-			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_11709 }
-			controls_province = 11709
-		}
-	}
-	custom_effect_tooltip = "For capture of Rodez"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11709
-}
-if = {###Paris 50p
-	limit = {
-		AND = { ###Paris
-			NOT = { owns_state = 19 has_country_flag = fra_cw_prov_11506 }
-			controls_province = 11506
-		}
-	}
-	custom_effect_tooltip = "For capture of Paris"
-	add_manpower = 30000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 5000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11506
-}
-###end of the options
-}
-
-}
-
-
-country_event = { ### seize town boosto cw event
-id = rob_france.125
-title = "City Looting"
-desc = "Now that we have seized major city(-ies), we are ransaking the place, in search for guns and suitable recruits."
-trigger = {
-	tag = FRR
-	has_country_flag = FRA_civil_war
-	NOT = { has_country_flag = fra_cw_over }
-	OR = {
-		AND = { ###Montpellier
-			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_9898 }
-			controls_province = 9898
-		}
-		AND = { ###Vichy
-			NOT = { owns_state = 26 has_country_flag = fra_cw_prov_9748 }
-			controls_province = 9748
-		}
-		AND = { ###Lyon
-			NOT = { owns_state = 20 has_country_flag = fra_cw_prov_6613 }
-			controls_province = 6613
-		}
-		AND = { ###Marseille
-			NOT = { owns_state = 21 has_country_flag = fra_cw_prov_11834 }
-			controls_province = 11834
-		}
-		AND = {#Touluse
-			NOT = { owns_state = 31 has_country_flag = fra_cw_prov_6766 }
-			controls_province = 6766
-		}
-		AND = { ###Bordeaux
-			NOT = { owns_state = 19 has_country_flag = fra_cw_prov_9737 }
-			controls_province = 9737
-		}
-		AND = {#La Rochelle
-			NOT = { owns_state = 1283 has_country_flag = fra_cw_prov_6657 }
-			controls_province = 6657
-		}
-		AND = {#Nantes
-			NOT = { owns_state = 30 has_country_flag = fra_cw_prov_11465 }
-			controls_province = 11465
-		}
-		AND = { ###Brest
-			NOT = { owns_state = 14 has_country_flag = fra_cw_prov_3552 }
-			controls_province = 3552
-		}
-		AND = { #Cherbourg
-			NOT = { owns_state = 15 has_country_flag = fra_cw_prov_6449 }
-			controls_province = 6449
-		}
-		AND = { ###Tours
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_3671 }
-			controls_province = 3671
-		}
-		AND = { ###Nevers
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_9609 }
-			controls_province = 9609
-		}
-		AND = {#Bourges
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_6688 }
-			controls_province = 6688
-		}
-		AND = { ###Alencon
-			NOT = { owns_state = 1014 has_country_flag = fra_cw_prov_553 }
-			controls_province = 553
-		}
-		AND = { ###Orleans
-			NOT = { owns_state = 24 has_country_flag = fra_cw_prov_512 }
-			controls_province = 512
-		}
-		AND = { ###Le Havre
-			NOT = { owns_state = 818 has_country_flag = fra_cw_prov_9434 }
-			controls_province = 9434
-		}
-		AND = {#Amiens
-			NOT = { owns_state = 785 has_country_flag = fra_cw_prov_11420 }
-			controls_province = 11420
-		}
-		AND = { ###Lille
-			NOT = { owns_state = 1279 has_country_flag = fra_cw_prov_11483 }
-			controls_province = 11483
-		}
-		AND = {#Rennes
-			NOT = { owns_state = 1009 has_country_flag = fra_cw_prov_11508 }
-			controls_province = 11508
-		}
-		AND = { ###Periguex
-			NOT = { owns_state = 25 has_country_flag = fra_cw_prov_9734 }
-			controls_province = 9734
-		}
-		AND = { ###Valence
-			NOT = { owns_state = 32 has_country_flag = fra_cw_prov_762 }
-			controls_province = 762
-		}
-		AND = {#Nice
-			NOT = { owns_state = 821 has_country_flag = fra_cw_prov_9909 }
-			controls_province = 9909
-		}
-		AND = {#Reims
-			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_13011 }
-			controls_province = 13011
-		}
-		AND = {#Troyes
-			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_9490 }
-			controls_province = 9490
-		}
-		AND = {#Dijon
-			NOT = { owns_state = 27 has_country_flag = fra_cw_prov_3652 }
-			controls_province = 3652
-		}
-		AND = {#Besancon
-			NOT = { owns_state = 17 has_country_flag = fra_cw_prov_9642 }
-			controls_province = 9642
-		}
-		AND = {#Mullhouse
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_678 }
-			controls_province = 678
-		}
-		AND = {#Metz
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9559 }
-			controls_province = 9559
-		}
-		AND = { ###Strasbourg
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9503 }
-			controls_province = 9503
-		}
-		AND = { ###Rodez
-			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_11709 }
-			controls_province = 11709
-		}
-	}
-}
-
-option = {
-name = rob_france.107.a
-if = {###Montpellier 5p
-	limit = {
-		AND = {
-			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_9898 }
-			controls_province = 9898
-		}
-	}
-	custom_effect_tooltip = "For capture of Montpellier"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9898
-}
-if = {###Vichy 3p
-	limit = {
-		AND = { 
-			NOT = { owns_state = 26 has_country_flag = fra_cw_prov_9748 }
-			controls_province = 9748
-		}
-	}
-	custom_effect_tooltip = "For capture of Vichy"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9748
-}
-if = {###Lyon 10p
-	limit = {
-		AND = { 
-			NOT = { owns_state = 20 has_country_flag = fra_cw_prov_6613 }
-			controls_province = 6613
-		}
-	}
-	custom_effect_tooltip = "For capture of Lyon"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6613
-}
-if = {###Marseille 10p
-	limit = {
-		AND = { ###Marseille
-			NOT = { owns_state = 21 has_country_flag = fra_cw_prov_11834 }
-			controls_province = 11834
-		}
-	}
-	custom_effect_tooltip = "For capture of Marseille"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11834
-}
-if = {###Touluse 5p
-	limit = {
-		AND = {#Touluse
-			NOT = { owns_state = 31 has_country_flag = fra_cw_prov_6766 }
-			controls_province = 6766
-		}
-	}
-	custom_effect_tooltip = "For capture of Touluse"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6766
-}
-if = {###Bordeaux 20p
-	limit = {
-		AND = { ###Bordeaux
-			NOT = { owns_state = 19 has_country_flag = fra_cw_prov_9737 }
-			controls_province = 9737
-		}
-	}
-	custom_effect_tooltip = "For capture of Bordeaux"
-	add_manpower = 20000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 3000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9737
-}
-if = {###La Rochelle 5p
-	limit = {
-		AND = {#La Rochelle
-			NOT = { owns_state = 1283 has_country_flag = fra_cw_prov_6657 }
-			controls_province = 6657
-		}
-	}
-	custom_effect_tooltip = "For capture of La Rochelle"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6657
-}
-if = {###Nantes 5p
-	limit = {
-		AND = {#Nantes
-			NOT = { owns_state = 30 has_country_flag = fra_cw_prov_11465 }
-			controls_province = 11465
-		}
-	}
-	custom_effect_tooltip = "For capture of Nantes"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11465
-}
-if = {###Brest 20p
-	limit = {
-		AND = { ###Brest
-			NOT = { owns_state = 14 has_country_flag = fra_cw_prov_3552 }
-			controls_province = 3552
-		}
-	}
-	custom_effect_tooltip = "For capture of Brest"
-	add_manpower = 20000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 3000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_3552
-}
-if = {###Cherbourg 3p
-	limit = {
-		AND = { #Cherbourg
-			NOT = { owns_state = 15 has_country_flag = fra_cw_prov_6449 }
-			controls_province = 6449
-		}
-	}
-	custom_effect_tooltip = "For capture of Cherbourg"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6449
-}
-if = {###Tours 3p
-	limit = {
-		AND = { ###Tours
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_3671 }
-			controls_province = 3671
-		}
-	}
-	custom_effect_tooltip = "For capture of Tours"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_3671
-}
-if = {###Nevers 3p
-	limit = {
-		AND = { ###Nevers
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_9609 }
-			controls_province = 9609
-		}
-	}
-	custom_effect_tooltip = "For capture of Nevers"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9609
-}
-if = {###Bourges 5p
-	limit = {
-		AND = {#Bourges
-			NOT = { owns_state = 819 has_country_flag = fra_cw_prov_6688 }
-			controls_province = 6688
-		}
-	}
-	custom_effect_tooltip = "For capture of Bourges"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_6688
-}
-if = {###Alencon 3p
-	limit = {
-		AND = { ###Alencon
-			NOT = { owns_state = 1014 has_country_flag = fra_cw_prov_553 }
-			controls_province = 553
-		}
-	}
-	custom_effect_tooltip = "For capture of Alencon"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_553
-}
-if = {###Orleans 10p
-	limit = {
-		AND = { ###Orleans
-			NOT = { owns_state = 24 has_country_flag = fra_cw_prov_512 }
-			controls_province = 512
-		}
-	}
-	custom_effect_tooltip = "For capture of Orleans"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_512
-}
-if = {###Le Havre 10p
-	limit = {
-		AND = { ###Le Havre
-			NOT = { owns_state = 818 has_country_flag = fra_cw_prov_9434 }
-			controls_province = 9434
-		}
-	}
-	custom_effect_tooltip = "For capture of Le Havre"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9434
-}
-if = {###Amiens 5p
-	limit = {
-		AND = {#Amiens
-			NOT = { owns_state = 785 has_country_flag = fra_cw_prov_11420 }
-			controls_province = 11420
-		}
-	}
-	custom_effect_tooltip = "For capture of Amiens"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11420
-}
-if = {###Lille 10p
-	limit = {
-		AND = { ###Lille
-			NOT = { owns_state = 1279 has_country_flag = fra_cw_prov_11483 }
-			controls_province = 11483
-		}
-	}
-	custom_effect_tooltip = "For capture of Lille"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11483
-}
-if = {###Rennes 5p
-	limit = {
-		AND = {#Rennes
-			NOT = { owns_state = 1009 has_country_flag = fra_cw_prov_11508 }
-			controls_province = 11508
-		}
-	}
-	custom_effect_tooltip = "For capture of Rennes"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11508
-}
-if = {###Periguex 3p
-	limit = {
-		AND = { ###Periguex
-			NOT = { owns_state = 25 has_country_flag = fra_cw_prov_9734 }
-			controls_province = 9734
-		}
-	}
-	custom_effect_tooltip = "For capture of Periguex"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9734
-}
-if = {###Valence 3p
-	limit = {
-		AND = { ###Valence
-			NOT = { owns_state = 32 has_country_flag = fra_cw_prov_762 }
-			controls_province = 762
-		}
-	}
-	custom_effect_tooltip = "For capture of Valence"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_762
-}
-if = {###Nice 5p
-	limit = {
-		AND = {#Nice
-			NOT = { owns_state = 821 has_country_flag = fra_cw_prov_9909 }
-			controls_province = 9909
-		}
-	}
-	custom_effect_tooltip = "For capture of Nice"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9909
-}
-if = {###Reims 5p
-	limit = {
-		AND = {#Reims
-			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_13011 }
-			controls_province = 13011
-		}
-	}
-	custom_effect_tooltip = "For capture of Reims"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_13011
-}
-if = {###Troyes 5p
-	limit = {
-		AND = {#Troyes
-			NOT = { owns_state = 18 has_country_flag = fra_cw_prov_9490 }
-			controls_province = 9490
-		}
-	}
-	custom_effect_tooltip = "For capture of Troyes"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9490
-}
-if = {###Dijon 5p
-	limit = {
-		AND = {#Dijon
-			NOT = { owns_state = 27 has_country_flag = fra_cw_prov_3652 }
-			controls_province = 3652
-		}
-	}
-	custom_effect_tooltip = "For capture of Dijon"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_3652
-}
-if = {###Besancon 5p
-	limit = {
-		AND = {#Besancon
-			NOT = { owns_state = 17 has_country_flag = fra_cw_prov_9642 }
-			controls_province = 9642
-		}
-	}
-	custom_effect_tooltip = "For capture of Besancon"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9642
-}
-if = {###Mullhouse 5p
-	limit = {
-		AND = {#Mullhouse
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_678 }
-			controls_province = 678
-		}
-	}
-	custom_effect_tooltip = "For capture of Mullhouse"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_678
-}
-if = {###Metz 5p
-	limit = {
-		AND = {#Metz
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9559 }
-			controls_province = 9559
-		}
-	}
-	custom_effect_tooltip = "For capture of Metz"
-	add_manpower = 5000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 1000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9559
-}
-if = {###Strasbourg 10p
-	limit = {
-		AND = { ###Strasbourg
-			NOT = { owns_state = 28 has_country_flag = fra_cw_prov_9503 }
-			controls_province = 9503
-		}
-	}
-	custom_effect_tooltip = "For capture of Strasbourg"
-	add_manpower = 10000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 2000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_9503
-}
-if = {###Rodez 3p
-	limit = {
-		AND = { ###Rodez
-			NOT = { owns_state = 22 has_country_flag = fra_cw_prov_11709 }
-			controls_province = 11709
-		}
-	}
-	custom_effect_tooltip = "For capture of Rodez"
-	add_manpower = 3000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 600
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11709
-}
-if = {###Paris 50p
-	limit = {
-		AND = { ###Paris
-			NOT = { owns_state = 19 has_country_flag = fra_cw_prov_11506 }
-			controls_province = 11506
-		}
-	}
-	custom_effect_tooltip = "For capture of Paris"
-	add_manpower = 30000
-	add_equipment_to_stockpile = {
-		type = infantry_equipment
-		amount = 5000
-		producer = FRA
-		}
-	set_country_flag = fra_cw_prov_11506
-}
-###end of the options
-}
-
-}
 ####debug events
 
 

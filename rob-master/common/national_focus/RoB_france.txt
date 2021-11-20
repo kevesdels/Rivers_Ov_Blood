@@ -312,43 +312,59 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_focus_on_defence  }
 		completion_reward = {
-			28 = {
+			816 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
 								add_building_construction = {
 									type = bunker
-									level = 3
-									province = 549
+									level = 2
+									province = 5291
 									instant_build = yes
 								}
 								add_building_construction = {
 									type = bunker
-									level = 3
-									province = 678
+									level = 2
+									province = 3560
+									instant_build = yes
+								}
+						}
+					}
+			815 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+								add_building_construction = {
+									type = bunker
+									level = 2
+									province = 9472
 									instant_build = yes
 								}
 								add_building_construction = {
 									type = bunker
-									level = 3
-									province = 3629
+									level = 2
+									province = 3447
+									instant_build = yes
+								}
+						}
+					}
+			29 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+								add_building_construction = {
+									type = bunker
+									level = 2
+									province = 11606
 									instant_build = yes
 								}
 								add_building_construction = {
 									type = bunker
-									level = 3
-									province = 9503
+									level = 2
+									province = 11483
 									instant_build = yes
 								}
 								add_building_construction = {
 									type = bunker
-									level = 3
-									province = 9559
-									instant_build = yes
-								}
-								add_building_construction = {
-									type = bunker
-									level = 3
-									province = 11502
+									level = 2
+									province = 575
 									instant_build = yes
 								}
 						}
@@ -1192,7 +1208,7 @@ focus_tree = {
 		#Limit the church
 		focus = {
 			id = FRA_limit_the_church
-			icon = GFX_FRA_limit_the_church
+			icon = GFX_FRA_expanded_labour_laws
 			x = 15
 			y = 6
 			cost = 5
@@ -2051,6 +2067,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_diarchy_with_church  }
 		completion_reward = {
+			### event that church goes for non catholics
 			country_event = { id = rob_france.66 days =  1 }
 		}
 	}

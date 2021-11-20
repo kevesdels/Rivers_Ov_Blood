@@ -145,40 +145,6 @@ picture = GFX_idea_overextendadsf
 }
 
 
-fra_junta_buff = {
- 
-  allowed = {
-    always = yes
-  }
-allowed_civil_war = {
-     always = yes
-   }
-  removal_cost = -1
-picture = GFX_idea_overextendadsf
-  modifier = {
-   army_core_attack_factor = 0.1
-   army_core_defence_factor = 0.1
-   army_morale_factor = 0.2
-   }
-}
-
-fra_junta_debuff = {
- 
-  allowed = {
-    always = yes
-  }
-allowed_civil_war = {
-     always = yes
-   }
-  removal_cost = -1
-picture = GFX_idea_overextendadsf
-  modifier = {
-    army_core_attack_factor = -0.1
-    army_core_defence_factor = -0.1
-    army_morale_factor = -0.1
-   }
-}
-
 ###ARMY 
 fra_maneuver_war = {
  
@@ -1752,7 +1718,7 @@ army_chief = {
   maxime_weygand = {
     allowed = {	original_tag = FRA }
     available = { has_completed_focus = FRA_armeedeterre }
-    cost = 150
+    cost = 50
     traits = { army_chief_defensive_2 }
     ai_will_do = {
       factor = 1
