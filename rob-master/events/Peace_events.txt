@@ -254,7 +254,9 @@ country_event = {
   desc = "With the fall of the French state, we are in a akward state of affairs. The colonies are practicly unreachable, yet they are at war with us. We should attempt some sort of diplomatic move to resolve this matter."
   fire_only_once = yes
   trigger = {
-    AND = {
+    NOT = { tag = FRS }
+    NOT = { tag = FRL }
+    NOT = { tag = FRP }
       OR = {
         NOT = { at_war_with = POL }
         POL = { has_war_with = ROOT has_capitulated = yes }
@@ -283,7 +285,6 @@ country_event = {
         }
       }
       ROOT = { surrender_progress < 0.1 }
-    }
   }
   mean_time_to_happen = { days = 1 }
   
