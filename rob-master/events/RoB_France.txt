@@ -2709,13 +2709,13 @@ add_political_power = -50
 
 country_event = { ### Guns for civil war factions
 id = rob_france.82
-title = rob_france.82.t
-desc = rob_france.82.d
+title = "Capture of Armories"
+desc = "With local garrision overwhelmed, we have gained access to considerable ammount of weaopns."
 fire_only_once = yes
 is_triggered_only = yes
 
 option = { 
-name = rob_france.82.a
+name = "Lets Put Them to Good Use"
 	add_equipment_to_stockpile = {
 	type = infantry_equipment
 	amount = 2500
@@ -2727,12 +2727,12 @@ name = rob_france.82.a
 
 country_event = { ### Conditional troops for CW faction (from junta)
 id = rob_france.83
-title = rob_france.83.t
-desc = rob_france.83.d
+title = "Defectors"
+desc = "Some officers did not comply with Juntas orders, believing that the truth can be found under a different banner."
 is_triggered_only = yes
 
 option = { ###republicans get loads of units
-name = rob_france.83.a
+name = "Welcome, fellow countrymen"
 trigger = {
 	tag = FRL
 	FRA = { has_country_flag = FRA_gaulle_dictatorship }
@@ -2757,7 +2757,7 @@ hidden_effect = {
 }
 
 option = { ###socialists get units ( delete infantrie iii )
-name = rob_france.83.a
+name = "Welcome, fellow comrades"
 trigger = {
 	tag = FRS
 	FRA = { has_country_flag = FRA_socialists_united }
@@ -2779,7 +2779,7 @@ hidden_effect = {
 }
 
 option = { ###sorelists get units ( delete infantrie iii )
-name = rob_france.83.a
+name = "Welcome, fellow comrades"
 trigger = {
 	tag = FRR
 	FRA = { has_country_flag = FRA_socialists_united }
@@ -2801,7 +2801,7 @@ hidden_effect = {
 }
 
 option = { ###Pelekists get units
-name = rob_france.83.a
+name = "Welcome, fellow comrades"
 trigger = {
 	tag = FRP
 	FRA = { NOT = { has_country_flag = FRA_pelekists_dead } }

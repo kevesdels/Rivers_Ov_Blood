@@ -35,21 +35,34 @@ bookmarks = {
 		     PRS_rosenbergspresidency
 		  }
 		}
-		"LIT"={
-			history = "LIT_GATHERING_STORM_DESC"
-			ideology = conservative
+		"POL" = {
+			history = "POL_GATHERING_STORM_DESC"
+			ideology = 
 			ideas = {
-           samogitian_identity
-		   pelekists_rising
-		   pearl_of_stability
+				pol_cypher_bureau
+				pol_colonels
+				pol_depression
 			}
 			focuses = {
-            LIT_kunigaiktisvisuomis
-			LIT_tautosvadasmironas
-			LIT_thepresidentwholivesasapeasant
+			   POL_the_death_of_pilsuduski
+			   POL_the_intermarium_rising
+			   POL_the_four_year_plan
 			}
+		  }
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = social_liberal
+			ideas = {
+				fra_eco_disaster
+				fra_unstable_gov
+				fra_pol_violence
+			}
+			focuses = {
+			FRA_legacy_of_marx_and_engels
+			FRA_themarshallssuccesor
+			FRA_embrace_royalism
+			}	
 		}
-
 		"GER"={
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = socialist
@@ -63,20 +76,6 @@ bookmarks = {
 				GER_democraticsocialistmajority
 				GER_luxembourgistmajority
 			}
-		}
-		"TRS"={
-			history = "ITA_GATHERING_STORM_DESC"
-			ideology = socialist
-			ideas = {
-			TRS_backs_to_the_wall
-			TRS_legacy_of_the_red_army
-			TRS_research_not_priority
-			}	
-			focuses = {
-			TRS_battleforkrasnovodsk
-			TRS_proclaimthetranscapiansovietrepublic
-			TRS_ourownsovietunion
-			}		
 		}
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
@@ -92,7 +91,36 @@ bookmarks = {
 			SOV_thenewsovietarmy
 			}	
 		}
-		
+		"LIT"={
+			history = "LIT_GATHERING_STORM_DESC"
+			ideology = conservative
+			minor = yes
+			ideas = {
+           samogitian_identity
+		   pelekists_rising
+		   pearl_of_stability
+			}
+			focuses = {
+            LIT_kunigaiktisvisuomis
+			LIT_tautosvadasmironas
+			LIT_thepresidentwholivesasapeasant
+			}
+		}
+		"TRS"={
+			history = "TRS_GATHERING_STORM_DESC"
+			ideology = socialist
+			ideas = {
+			TRS_backs_to_the_wall
+			TRS_legacy_of_the_red_army
+			TRS_research_not_priority
+			}
+			minor = yes	
+			focuses = {
+			TRS_battleforkrasnovodsk
+			TRS_proclaimthetranscapiansovietrepublic
+			TRS_ourownsovietunion
+			}		
+		}
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"
 		}

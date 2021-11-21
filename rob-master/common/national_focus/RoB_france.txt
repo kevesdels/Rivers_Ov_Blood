@@ -742,7 +742,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = FRA_rule_with_an_iron_first  } prerequisite = { focus = FRA_democratic_socialism  }
+		prerequisite = { focus = FRA_democratic_socialism focus = FRA_rule_with_an_iron_first  }
 		completion_reward = {
 			hidden_effect = {
 				country_event = { id = rob_france.56 days = 1 }
