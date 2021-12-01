@@ -1,0 +1,126 @@
+characters={
+
+	THR_adolf_hitler={
+		name="Adolf Hitler"
+		portraits={
+			civilian={
+				large="gfx/leaders/AUS/Adolf_Hitler.dds"
+			}
+		}
+		country_leader={
+			ideology=pagan_pelekism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+
+##     ## ##    ## #### ########    ##       ########    ###    ########  ######## ########   ######  
+##     ## ###   ##  ##     ##       ##       ##         ## ##   ##     ## ##       ##     ## ##    ## 
+##     ## ####  ##  ##     ##       ##       ##        ##   ##  ##     ## ##       ##     ## ##       
+##     ## ## ## ##  ##     ##       ##       ######   ##     ## ##     ## ######   ########   ######  
+##     ## ##  ####  ##     ##       ##       ##       ######### ##     ## ##       ##   ##         ## 
+##     ## ##   ###  ##     ##       ##       ##       ##     ## ##     ## ##       ##    ##  ##    ## 
+ #######  ##    ## ####    ##       ######## ######## ##     ## ########  ######## ##     ##  ######  
+
+ THR_ernst_rohm={
+	name="Ernst Rohm"
+	portraits={
+		army={
+			large="Portrait_Germany_Ernst_Rohm.tga"
+			small="Portrait_Germany_Ernst_Rohm.tga"
+		}
+	}
+	field_marshal={
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 4
+		logistics_skill = 3
+		legacy_id=-1
+	}
+	traits = {
+		politically_connected
+		career_officer
+		defensive_doctrine
+	}
+}
+
+
+ THR_ernst_kaltenbrunner={
+	name="Ernst Kaltenbrunner"
+	portraits={
+		army={
+			large="Ernst Kaltenbrunner.dds"
+			small="Ernst Kaltenbrunner.dds"
+		}
+	}
+	corps_commander={
+		traits={ armor_officer career_officer }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+		legacy_id=-1
+	}
+}
+
+THR_eduard_dietl={
+	name="Eduard Dietl"
+	portraits={
+		army={
+			large="Eduard Dietl(mountainer).dds"
+			small="Eduard Dietl(mountainer).dds"
+		}
+	}
+	corps_commander={
+		traits={ armor_officer career_officer }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 1
+		legacy_id=-1
+	}
+}
+
+THR_karl_von_fischer_treuenfeld={
+	name="Karl von Fischer-Treuenfeld"
+	portraits={
+		army={
+			large="karl von fischer-treuenfeld.dds"
+			small="karl von fischer-treuenfeld.dds"
+		}
+	}
+	corps_commander={
+		traits={}
+		skill = 2
+		attack_skill = 1
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 3
+		legacy_id=-1
+	}
+}
+
+THR_ulrich_graf={
+	name="Ulrich Graf"
+	portraits={
+		army={
+			large="Ulrich_Graf.dds"
+			small="Ulrich_Graf.dds"
+		}
+	}
+	corps_commander={
+		traits={ armor_officer career_officer }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+		legacy_id=-1
+	}
+}
+
+}

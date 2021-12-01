@@ -1,0 +1,36 @@
+characters={
+
+	AGR_david_burliuk={
+		name="David Burliuk"
+		portraits={
+			civilian={
+				large="AGR_david_burliuk.tga"
+			}
+		}
+		country_leader={
+			traits = {
+				im_futurist
+			}
+			ideology=futuristic_pelekism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	AGR_rudolf_medek={
+		name="Rudolf Medek"
+		portraits={
+			army={
+				large="GFX_Portrait_czechoslovakia_sergej_vojcechovskyss.dds"
+				small="GFX_Portrait_czechoslovakia_sergej_vojcechovskyss.dds"
+			}
+		}
+		corps_commander={
+			traits={ futurist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}

@@ -930,6 +930,7 @@ focus_tree = {
 				fra_legacy_marx_engels
 			}
 			custom_effect_tooltip = FRS_minigame_req
+			create_faction = "European Proleteriat"
 		}
 	}
 
@@ -1794,7 +1795,6 @@ focus_tree = {
 				}
 				custom_effect_tooltip = FRS_diplo_enable_tooltip
 				set_country_flag = FRS_enable_diplo
-				create_faction = "European Proleteriat"
 			}
 		}
 	}
@@ -4255,9 +4255,22 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_repair_the_civilian_economy  }
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = fra_eco_disaster_2
-				add_idea = fra_eco_disaster_3
+			if = {
+				limit = {
+					SOCIALIST_ALIGNED_GOVERNMENT = yes
+				}
+				remove_ideas = {
+					fra_eco_disaster_3
+				}
+			}
+			if = {
+				limit = {
+					SOCIALIST_ALIGNED_GOVERNMENT = no
+				}
+				swap_ideas = {
+					remove_idea = fra_eco_disaster_2
+					add_idea = fra_eco_disaster_3
+				}
 			}
 		}
 	}

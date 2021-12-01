@@ -35,24 +35,5 @@ civil_war_attrition_2
 }
 
 
-create_country_leader = {
-	name = "David Burliuk"
-	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-	picture = "AGR_david_burliuk.tga"
-	expire = "1960.1.1"
-	ideology = futuristic_pelekism
-	traits = {
-		im_futurist
-	}
-}
-
-create_corps_commander = {
-	name = "Rudolf Medek"
-	gfx = "GFX_Portrait_czechoslovakia_sergej_vojcechovsky"
-	traits = { futurist }
-	skill = 2
-    attack_skill = 2
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-}
+recruit_character = AGR_david_burliuk
+recruit_character = AGR_rudolf_medek

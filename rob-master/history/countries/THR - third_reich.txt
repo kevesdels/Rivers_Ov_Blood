@@ -37,72 +37,9 @@ add_ideas = {
 
 set_stability = 0.60
 
-create_country_leader = {
-	name = "Adolf Hitler"
-	desc = ""
-	picture = "gfx//leaders//AUS//Adolf_Hitler.dds"
-	expire = "1965.1.1"
-	ideology = pagan_pelekism 
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "Ernst Rohm"
-	picture = "Portrait_Germany_Ernst_Rohm.tga"
-	traits = {
-		politically_connected
-		career_officer
-		defensive_doctrine
-	}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Ernst Kaltenbrunner"
-	picture = "Ernst Kaltenbrunner.dds"
-	traits = {  armor_officer career_officer  }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Eduard Dietl.dds"
-	picture = "Eduard Dietl(mountainer).dds"
-	traits = {}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "karl von fischer-treuenfeld"
-	picture = "karl von fischer-treuenfeld.dds"
-	traits = {}
-	skill = 2
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Ulrich Graf"
-	picture = "Ulrich_Graf.dds"
-	traits = {}
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
+recruit_character = THR_adolf_hitler
+recruit_character = THR_ernst_rohm
+recruit_character = THR_ernst_kaltenbrunner
+recruit_character = THR_eduard_dietl
+recruit_character = THR_karl_von_fischer_treuenfeld
+recruit_character = THR_ulrich_graf

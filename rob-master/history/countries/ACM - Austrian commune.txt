@@ -48,26 +48,6 @@ create_country_leader = {
 	}
 }
 
-create_field_marshal = {
-	name = "Alfred Klahr"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dd"
-	traits = {
-		politically_connected
-	}
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Josef Plieseis"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-	traits = { trait_mountaineer trickster }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
+recruit_character = AUS_anarchic_goverment
+recruit_character = AUS_alfred_klahr
+recruit_character = AUS_karl_eglseer

@@ -78,38 +78,9 @@ set_popularities = {
 	pelekist = 0
 }
 
-create_country_leader = {
-	name = "Mir Jafar Baghirov"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	expire = "1953.3.1"
-	ideology = democratic_socialist_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Mammad Amin Rasulzade"
-	desc = ""
-	picture = "azr_mammad_amin_rasulzade.tga"
-	expire = "1953.3.1"
-	ideology = social_liberal_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Gara Garabeyov"
-	desc = ""
-	picture = "gfx/leaders/SOV/Portrait_Soviet_Generic_3.dds"
-	expire = "1953.3.1"
-	ideology = conservative_subtype
-	traits = {
-		
-	}
-}
+recruit_character = AZR_mir_jafar_baghirov
+recruit_character = AZR_mammad_amin_rasulzade
+recruit_character = AZR_gara_garabeyov
 
 
 

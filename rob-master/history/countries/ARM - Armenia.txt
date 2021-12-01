@@ -83,37 +83,8 @@ add_ideas = {
 	limited_conscription
 }
 
-create_country_leader = {
-	name = "Drastamat Kanayan"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-	expire = "1953.3.1"
-	ideology = reactionary_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Hovhannes Kajaznuni"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-	expire = "1953.3.1"
-	ideology = social_liberal_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Grigor Harutyunyan"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-	expire = "1953.3.1"
-	ideology = national_socialist_subtype
-	traits = {
-		
-	}
-}
+recruit_character = ARM_drastamat_kanayan
+recruit_character = ARM_hovhannes_kajaznuni
+recruit_character = ARM_grigor_harutyunyan
 
 

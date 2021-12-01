@@ -1,0 +1,30 @@
+characters={
+
+	ASK_paul_von_lettow_vorbeck={
+		name="Paul von Lettow-Vorbeck"
+		portraits={
+			civilian={
+				large=""
+			}
+			army={
+				large=""
+				small=""
+			}
+		}
+		country_leader={
+			ideology=military_junta
+			expire="1965.1.1.1"
+			id=-1
+		}
+		corps_commander={
+			traits={ infantry_officer trickster politically_connected }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 4
+			legacy_id=-1
+		}
+	}
+
+}
