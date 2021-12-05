@@ -10,41 +10,6 @@ set_technology = {
 
 set_convoys = 5
 
-1939.1.1 = {
-	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
-	
-	set_technology = {
-
-		#doctrines
-		grand_battle_plan = 1
-		trench_warfare = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		fuel_silos = 1
-		construction1 = 1
-		construction2 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-	}
-}
 set_politics = {
 	ruling_party = reactionary
 	last_election = "1931.12.19"
@@ -66,7 +31,7 @@ set_popularities = {
 create_country_leader = {
 	
 	name = "Yang Sen"
-	picture = "Yang_Sen.tga"
+	picture = "gfx/leaders/SIH/Yang_Sen.tga"
 	expire = "1965.1.1"
 	ideology = reactionary_subtype
 	traits = {
