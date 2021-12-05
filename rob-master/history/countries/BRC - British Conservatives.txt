@@ -9,6 +9,7 @@ set_war_support = 0.3
 
 # Starting tech
 set_technology = {
+	basic_train = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_support = 1		
@@ -109,7 +110,7 @@ add_ideas = {
 create_country_leader = {
 	name = "Stanley Baldwin"
 	desc = "POLITICS_STANLEY_BALDWIN_DESC"
-	picture = "BRC_stanley_baldwin.tga"
+	picture = "gfx/leaders/BRC/BRC_stanley_baldwin.tga"
 	expire = "1935.6.7"
 	ideology = conservative_subtype
 	traits = {
