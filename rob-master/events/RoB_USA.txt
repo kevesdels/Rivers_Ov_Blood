@@ -1,0 +1,32 @@
+add_namespace = rob_usa
+
+
+country_event = {
+    id = rob_usa.1
+    title = rob_usa.1.t
+    desc = rob_usa.1.d
+    picture = GFX_georgia_under_guns
+
+    fire_only_once = yes
+
+        trigger = {
+        date > 1934.4.08
+      
+      
+    }
+    ####1938 election
+    option = {
+        name = rob_usa.1.a
+        ai_chance = {
+            factor = 100
+            
+        }
+        
+        
+
+       
+        
+    }
+}
+
+
