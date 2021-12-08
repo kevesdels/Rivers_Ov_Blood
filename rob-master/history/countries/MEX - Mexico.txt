@@ -51,18 +51,30 @@ set_popularities = {
 	socialist = 10
 	democratic_socialist = 15
 	social_democracy = 21
-	social_liberal = 23
-	conservative = 19
-	authoritharian = 7
+	social_liberal = 15
+	conservative = 15
+	authoritharian = 19
 	reactionary = 5
 	pelekist = 0
 }
 
 set_politics = {
-	ruling_party = social_liberal
+	ruling_party = authoritharian
 	last_election = "1934.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+
+create_country_leader = {
+	name = "Francisco Luis Urquizo"
+	desc = "POLITICS_LAZARO_CARDENAS_DESC"
+	picture = "gfx/leaders/MEX/Francisco_Luis_Urquizo_civ.dds"
+	expire = "1965.1.1"
+	ideology = authoritharian_democracy
+	traits = {
+		#
+	}
 }
 
 create_country_leader = {
@@ -73,17 +85,6 @@ create_country_leader = {
 	ideology = social_liberal_subtype
 	traits = {
 		#
-	}
-}
-
-create_country_leader = {
-	name = "Salvador Abascal"
-	desc = "POLITICS_SALVADOR_ABASCAL_DESC"
-	picture = "GFX_Portrait_MEX_Salvador_Abascal"
-	expire = "1965.1.1"
-	ideology = authoritharian_subtype
-	traits = {
-		fascist_militia_leader
 	}
 }
 
