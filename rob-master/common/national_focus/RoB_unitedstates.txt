@@ -330,7 +330,57 @@ relative_position_id = USA_rally_the_southern_bloc
 	completion_reward = {
        add_war_support = .01
         ###I have no idea how to add generals with new update
-	
+
+           create_corps_commander = {
+            
+                name = "Lindley Wayland Camp"
+                picture = "general_lindley_wayland_camp.dds"
+                traits = { 
+                     trait_mountaineer
+                     
+                     }
+                skill = 1
+                attack_skill = 2
+                defense_skill = 2
+                planning_skill = 1
+                logistics_skill = 1
+            }
+
+
+            create_corps_commander = {
+               ###1930s head of state guard
+                name = "Sandy Beaver"
+                picture = "general_geogia_2.dds"
+                traits = { 
+                   infantry_officer  
+                     }
+                skill = 1
+                attack_skill = 2
+                defense_skill = 2
+                planning_skill = 1
+                logistics_skill = 1
+            }
+
+
+           create_corps_commander = {
+               #another South Ga colonel allies with Talmadg
+                name = "Lewis C Pope"
+                picture = "colonel_l_c_pope.dds"
+                traits = { 
+                     infantry_officer
+                     old_guard
+                     }
+                skill = 1
+                attack_skill = 1
+                defense_skill = 2
+                planning_skill = 2
+                logistics_skill = 2
+            }
+
+
+
+
+
 	}
 }
 
