@@ -28,5 +28,64 @@ country_event = {
         
     }
 }
+##state of America 
+country_event = {
+    id = rob_usa.2
+    title = rob_usa.2.t
+    desc = rob_usa.2.d
+    picture = GFX_
+
+    fire_only_once = yes
+
+        trigger = {
+        date > 1934.01.08
+      
+      
+    }
+    
+    option = {
+        name = rob_usa.2.a
+        ai_chance = {
+            factor = 100
+            
+        }
+        
+        
+
+       
+        
+    }
+}
+
+##Huey Long announces run for President 
+country_event = {
+    id = rob_usa.3
+    title = rob_usa.3.t
+    desc = rob_usa.3.d
+    picture = GFX_
+
+    fire_only_once = yes
+
+        trigger = {
+        date > 1935.12.05
+      
+      
+    }
+    
+    option = {
+        name = rob_usa.3.a
+        ai_chance = {
+            factor = 100
+            
+        }
+        
+        
+
+       
+        
+    }
+}
+
+
 
 
