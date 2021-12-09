@@ -16,13 +16,14 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 2200 }
 
 
+
 focus = {
 	id = USA_dixie_inaugeration_ball
 	icon = GFX_
 	x = 1
 	y = 0
-	cost = 10
-
+	cost = 1
+# WILL use a time conditioned for this it needs to be
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -48,4 +49,637 @@ relative_position_id = USA_dixie_inaugeration_ball
 		add_political_power = 150 
 	}
 }
+
+
+focus = {
+	id = USA_anti_red_pact
+	icon = GFX_
+	x = -4
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_rally_the_southern_bloc }
+relative_position_id = USA_rally_the_southern_bloc
+	available_if_capitulated = yes
+    ###should be harder to do because 
+      available = {	
+        reactionary  > 0.35	
+		has_political_power > 500
+		}
+	completion_reward = {
+		set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = "Anti Red Pact"
+	}
+}
+
+
+
+focus = {
+	id = USA_visit_brazil
+	icon = GFX_
+	x = -1
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_anti_red_pact }
+relative_position_id = USA_anti_red_pact
+	available_if_capitulated = yes
+    ###should be harder to do because 
+     available = {
+    NOT = {
+     BRA = {
+        OR = {
+        has_government = national_socialist
+        has_government = socialist
+        has_government = democratic_socialist
+         has_government = social_democracy
+        }
+      }
+    }
+     }
+	completion_reward = {
+	
+}
+}
+
+focus = {
+	id = USA_call_on_the_general_of_mexico
+	icon = GFX_
+	x = 1
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_anti_red_pact }
+relative_position_id = USA_anti_red_pact
+	available_if_capitulated = yes
+    ###should be harder to do because 
+     available = {
+    
+     }
+	completion_reward = {
+	MEX = {
+                has_government = authoritharian
+            }
+}
+}
+
+##this doesn't need you to invite Mexico btw
+focus = {
+	id = USA_invite_vensula 
+	icon = GFX_
+	x = 1
+	y = 2
+	cost = 5
+    	prerequisite = { focus = USA_anti_red_pact }
+relative_position_id = USA_anti_red_pact
+	available_if_capitulated = yes
+    ###should be harder to do because 
+     available = {
+    NOT = {
+     VEN= {
+        OR = {
+        has_government = national_socialist
+        has_government = socialist
+        has_government = democratic_socialist
+         has_government = social_democracy
+        }
+      }
+    }
+     }
+	completion_reward = {
+	
+}
+}
+###meets with japan government
+focus = {
+	id = USA_call_on_the_japs
+	icon = GFX_
+	x = -4
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_anti_red_pact }
+relative_position_id = USA_anti_red_pact
+	available_if_capitulated = yes
+    ###should be harder to do because 
+     available = {
+
+     }
+	completion_reward = {
+	
+}
+}
+
+##event where America offers Japan a non-agression pact
+focus = {
+	id = USA_american_japanese_peace_conference
+	icon = GFX_
+	x = -1
+	y = 1
+	cost = 5
+    	prerequisite = { focus = USA_call_on_the_japs }
+relative_position_id = USA_call_on_the_japs
+	available_if_capitulated = yes
+    ###should be harder to do because 
+     available = {
+
+     }
+	completion_reward = {
+	
+}
+
+
+}
+#####USA offers Japan membership and promises of working together 
+
+focus = {
+	id = USA_partners_in_crime
+	icon = GFX_
+	x = 0
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_american_japanese_peace_conference }
+relative_position_id = USA_american_japanese_peace_conference
+	available_if_capitulated = yes
+    ###should be harder to do because 
+     available = {
+   MAL = {  is_puppet = no }
+     }
+	completion_reward = {
+	
+}
+
+
+}
+
+
+###USA and Japan demand Molucas be given to Philipines , and Japan be given Sumantra (for resources)
+focus = {
+	id = USA_bully_the_dutch
+	icon = GFX_
+	x = 0
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_partners_in_crime }
+relative_position_id = USA_partners_in_crime
+	available_if_capitulated = yes
+    ###should be harder to do because 
+     available = {
+   MAL = {  is_puppet = no }
+     }
+	completion_reward = {
+	
+}
+
+
+}
+###send event demanding surrender of all land owned by them or war
+##which will trigger Japan or you can declar  Malasia part of Japan sphrere 
+focus = {
+	id = USA_malaysia_question
+	icon = GFX_
+	x = 1
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_call_on_the_japs }
+relative_position_id = USA_call_on_the_japs
+	available_if_capitulated = yes
+    ###should be harder to do because 
+     available = {
+   MAL = {  is_puppet = no }
+     }
+	completion_reward = {
+	
+}
+
+
+}
+
+focus = {
+	id = USA_governor_pope
+	icon = GFX_
+	x = 1
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_malaysia_question }
+relative_position_id = USA_malaysia_question
+	available_if_capitulated = yes
+    ###should be harder to do because 
+     available = {
+                 
+     }
+	completion_reward = {
+	
+}
+
+
+}
+
+
+
+
+
+### sends event for them to join 
+focus = {
+	id = USA_brazilian_allies
+	icon = GFX_
+	x = 0
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_visit_brazil }
+relative_position_id = USA_visit_brazil
+	available_if_capitulated = yes
+    ###should be harder to do because 
+      available = {	
+        
+		}
+	completion_reward = {
+	
+	}
+}
+focus = {
+	id = USA_child_tax_break
+	icon = GFX_
+	x = 0
+	y = 1
+	cost = 5
+    	prerequisite = { focus = USA_rally_the_southern_bloc }
+relative_position_id = USA_rally_the_southern_bloc
+	available_if_capitulated = yes
+    ###should be harder to do because 
+      available = {	
+        
+		}
+	completion_reward = {
+        #small boost to stability and monthy population 
+	add_timed_idea = {	idea = USA_child_tax_break days = 360 }
+	}
+}
+###Talmadge appoints his own friends in the army
+focus = {
+	id = USA_wool_hats_in_the_army
+	icon = GFX_
+	x = 5
+	y = 1
+	cost = 2
+    	prerequisite = { focus = USA_rally_the_southern_bloc }
+relative_position_id = USA_rally_the_southern_bloc
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+       add_war_support = .01
+        ###I have no idea how to add generals with new update
+	
+	}
+}
+
+###Puts friend of Talmadge Tom Linder as head of West Indies
+focus = {
+	id = USA_southernize_west_indies
+	icon = GFX_
+	x = -1
+	y = 1
+	cost = 2
+    	prerequisite = { focus = USA_wool_hats_in_the_army }
+relative_position_id = USA_wool_hats_in_the_army
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+       
+        ###I have no idea how to add generals with new update
+	
+	}
+}
+
+
+####Roosevelt ran for governor in 1934 got beat by Lehman and runs in 1936 
+##After loosing he still holds influence in NY Democrats MON_conscript_conquered_peoples
+##Roosevelt is seen as 2 time Presidency looser 
+
+##Talmadge gains him as ally and also gets him out of USA
+focus = {
+	id = USA_send_roosevelt_to_purto_rico
+	icon = GFX_
+	x = -1
+	y = 1
+	cost = 2
+    	prerequisite = { focus = USA_southernize_west_indies }
+relative_position_id = USA_southernize_west_indies
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+       
+      add_political_power = 100
+      add_stability = 0.05
+	
+	}
+}
+
+
+###can choose either Van Horn Moseley or Governor or Bill Murray
+focus = {
+	id = USA_new_management_in_philipines
+	icon = GFX_
+	x = 1
+	y = 2
+	cost = 2
+    	prerequisite = { focus = USA_southernize_west_indies }
+relative_position_id = USA_southernize_west_indies
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+       
+     
+	
+	}
+}
+
+focus = {
+	id = USA_cotton_holliday
+	icon = GFX_
+	x = -1
+	y = 1
+	cost = 5
+    	prerequisite = { focus = USA_child_tax_break }
+relative_position_id = USA_child_tax_break
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+      
+	
+	}
+}
+focus = {
+	id = USA_meet_with_military
+	icon = GFX_
+	x = 3
+	y = 1
+	cost = 5
+    	prerequisite = { focus = USA_wool_hats_in_the_army }
+relative_position_id = USA_wool_hats_in_the_army
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+      
+	
+	}
+}
+focus = {
+	id = USA_promote_patton
+	icon = GFX_
+	x = 1
+	y = 1
+	cost = 5
+    	prerequisite = { focus = USA_meet_with_military }
+relative_position_id = USA_meet_with_military
+	available_if_capitulated = yes
+   	mutually_exclusive = { focus = USA_work_with_macauther}
+      available = {	
+        
+		}
+	completion_reward = {
+      
+	
+	}
+}
+focus = {
+	id = USA_work_with_macauther
+	icon = GFX_
+	x = -1
+	y = 1
+	cost = 5
+    	prerequisite = { focus = USA_meet_with_military }
+relative_position_id = USA_meet_with_military
+	mutually_exclusive = { focus = USA_promote_patton }
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+      
+	
+	}
+}
+focus = {
+	id = USA_charleston_naval_yards 
+	icon = GFX_
+	x = 1
+	y = 1
+	cost = 9
+    	prerequisite = { focus = USA_child_tax_break }
+relative_position_id = USA_child_tax_break
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+         364 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type =  dockyard
+					level = 2	
+					instant_build = yes
+				}
+			}
+	
+	}
+}
+
+focus = {
+	id = USA_texan_oil
+	icon = GFX_
+	x = 0
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_cotton_holliday }
+relative_position_id = USA_cotton_holliday
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+      
+	
+	}
+}
+focus = {
+	id = USA_reward_the_earl_of_louisiana
+	icon = GFX_
+	x = 0
+	y = 1
+	cost = 2
+    	prerequisite = { focus = USA_charleston_naval_yards }
+relative_position_id = USA_charleston_naval_yards
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+      
+	
+	}
+}
+
+##Talmadge can choose to focus on defending his priotizing the south, or aiming at communism
+focus = {
+	id = USA_state_of_the_union
+	icon = GFX_
+	x = -1
+	y = 1
+	cost = 2
+    	prerequisite = { focus = USA_texan_oil }
+        	prerequisite = { focus = USA_reward_the_earl_of_louisiana}
+relative_position_id = USA_reward_the_earl_of_louisiana
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+      ###event
+	
+	}
+}
+
+###this isn't to remove it it's whether to increase segration on federal level 
+
+##If he decides to increase feds will try passing federal anti-lynching bill
+focus = {
+	id = USA_segregation_question
+	icon = GFX_
+	x = 3
+	y = 1
+	cost = 2
+    	prerequisite = { focus = USA_state_of_the_union }
+        	
+relative_position_id = USA_state_of_the_union
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+      ###event
+	
+	}
+}
+
+focus = {
+	id = USA_battle_unfair_rail_rates
+	icon = GFX_
+	x = -2
+	y = 1
+	cost = 4
+    	prerequisite = { focus = USA_state_of_the_union }
+        	
+relative_position_id = USA_state_of_the_union
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+    add_political_power = 100
+  add_popularity = {
+				ideology = reactionary
+				popularity = 0.07
+            }
+	
+	}
+}
+
+##talmadge like Huey Long wanted bonus bill passed
+focus = {
+	id = USA_pass_bonus_bill
+	icon = GFX_
+	x = 0
+	y = 1
+	cost = 10
+    prerequisite = { focus = USA_state_of_the_union }
+        	
+relative_position_id = USA_state_of_the_union
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+    add_political_power = 150
+  add_popularity = {
+				ideology = reactionary
+				popularity = 0.05
+            }
+	
+	}
+}
+### Talmadge has army and national guard grab rail roads 
+###hidden event for rail roads not working for a while 
+
+##should end up with battle with rail road heads but he gains support from 
+#Progressives, Westerners and especially in South.
+##has fight with judge
+focus = {
+	id = USA_sieze_railways
+	icon = GFX_
+	x = -1
+	y = 1
+	cost = 2
+    	prerequisite = { focus = USA_battle_unfair_rail_rates }
+        	mutually_exclusive = { focus = USA_bribe_rail_officals }
+relative_position_id = USA_battle_unfair_rail_rates
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+   
+
+	
+	}
+}
+
+##will end up with increased rail rates in south so you can build faster 
+##however hidden event will expose this and loose political power later on
+focus = {
+	id = USA_bribe_rail_officals
+	icon = GFX_
+	x = 1
+	y = 1
+	cost = 4
+    	prerequisite = { focus = USA_battle_unfair_rail_rates }
+        	mutually_exclusive = { focus = USA_sieze_railways }
+relative_position_id = USA_battle_unfair_rail_rates
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+   
+
+	
+	}
+}
+
 }
