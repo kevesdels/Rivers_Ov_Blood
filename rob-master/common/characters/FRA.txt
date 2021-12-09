@@ -1,0 +1,34 @@
+characters={
+
+	FRA_charles_de_gaulle={
+		name=FRA_charles_de_gaulle
+		portraits={
+			army={
+				small="GFX_idea_charles_de_gaulle"
+			}
+			civilian={
+				large="gfx/leaders/FRA/Portrait_France_Charles_De_Gaulle.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = charles_de_gaulle
+			ledger = army
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				has_completed_focus = FRA_battle_of_maneuver
+			}
+			cost = 75.000
+			
+			traits = {
+				blitzkrieg_theorist
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+}
