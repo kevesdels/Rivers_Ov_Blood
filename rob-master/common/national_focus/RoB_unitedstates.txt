@@ -1,0 +1,51 @@
+focus_tree = {
+	id = USA
+	
+	country = {
+		factor = 0
+	
+		modifier = {
+			add = 10
+			tag = USA
+		}
+	}
+
+		
+	default = no
+
+	continuous_focus_position = { x = 50 y = 2200 }
+
+
+focus = {
+	id = USA_dixie_inaugeration_ball
+	icon = GFX_
+	x = 1
+	y = 0
+	cost = 10
+
+	available_if_capitulated = yes
+
+	completion_reward = {
+		set_politics = {
+				ruling_party = reactionary 
+			}
+	}
+}
+
+
+###Congressional 
+focus = {
+	id = USA_rally_the_southern_bloc
+	icon = GFX_
+	x = 0
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_dixie_inaugeration_ball }
+relative_position_id = USA_dixie_inaugeration_ball
+	available_if_capitulated = yes
+     ###will be an event where he meets with Southern bloc
+	completion_reward = {
+		add_political_power = 150 
+	}
+}
+}
