@@ -44,7 +44,7 @@ country_event = {
     id = rob_usa.2
     title = rob_usa.2.t
     desc = rob_usa.2.d
-    picture = usa_wedonthavepicyet
+    picture = wedonthavepicyet #x maybe
 
     fire_only_once = yes
 
@@ -403,5 +403,244 @@ country_event = {
         
     }
 }
+##Bloody Friday in (Minneapolis) 
+country_event = {
+    id = rob_usa.11
+    title = rob_usa.11.t
+    desc = rob_usa.11.d
+    picture = GFX_
+
+    fire_only_once = yes
+
+        trigger = {
+        date > 1934.06.25
+      tag = USA
+      
+    }
+    
+    option = {
+        name = rob_usa.11.a
+        ai_chance = {
+            factor = 100
+            
+        }
+        
+        add_stability = -0.03
+
+       
+        
+    }
+}
+##putting down New England 
+country_event = {
+    id = rob_usa.12
+    title = rob_usa.12.t
+    desc = rob_usa.12.d
+    picture = GFX_
+
+    fire_only_once = yes
+
+        trigger = {
+        date > 1934.05.16
+      tag = USA
+      
+    }
+    
+    
+    ###send army
+    option = {
+        name = rob_usa.12.a
+        ai_chance = {
+            factor = 50
+            
+        }
+        ##Army under Genral MacAuther crushes the Strikes less politcal power
+       
+          hidden_effect = { country_event = { id = rob_usa.13 days = 7 }}
+ 
+ 
+        
+    }
+     
+     
+     ####refuse to aide them due to mid terms
+    option = {
+        name = rob_usa.12.b
+        ai_chance = {
+            factor = 50
+            
+        }
+        
+       #########  this means strikes win over agreement in new england add socialist support and more stability 
+        hidden_effect = { country_event = { id = rob_usa.14 days = 7 }}
+          
+          
+      
+ 
+ 
+        
+    }
+}
+
+##send army into new england
+country_event = {
+    id = rob_usa.13
+    title = rob_usa.13.t
+    desc = rob_usa.13.d
+    picture = x
+
+    fire_only_once = yes
+
+        is_triggered_only = yes
+	
+	
+    ####Talmadge crushes strikes
+    option = {
+        name = rob_usa.13.a
+        ai_chance = {
+            factor = 100
+            
+        }
+               custom_effect_tooltip = USA_new_england_strike_ends ### Alternatively, custom_effect_tooltip = "text", but no option to colour code it
+  hidden_effect = {
+          357 = {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = 1.0 ### +100%
+                      state_resources_factor = 0.6 ### +60%
+                  }
+              }
+          }
+	  
+	  
+	      836 = {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = 1.0 ### +100%
+                      state_resources_factor = 0.6 ### +60%
+                  }
+              }
+          }
+	  
+	  
+	  
+	      840 = {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = 1.0 ### +100%
+                      state_resources_factor = 0.6 ### +60%
+                  }
+              }
+          }
+  }
+
+       
+        
+    }
+}
+#####no army help
+country_event = {
+    id = rob_usa.14
+    title = rob_usa.14.t
+    desc = rob_usa.14.d
+    picture = x
+
+    fire_only_once = yes
+
+       is_triggered_only = yes
+  
+    option = {
+        name = rob_usa.14.a
+        ai_chance = {
+            factor = 100
+            
+        }
+        
+          custom_effect_tooltip = USA_new_england_strike_ends ### Alternatively, custom_effect_tooltip = "text", but no option to colour code it
+  hidden_effect = {
+          357 = {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = 1.0 ### +100%
+                      state_resources_factor = 0.6 ### +60%
+                  }
+              }
+          }
+	  
+	  
+	      836 = {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = 1.0 ### +100%
+                      state_resources_factor = 0.6 ### +60%
+                  }
+              }
+          }
+	  
+	  
+	  
+	      840 = {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = 1.0 ### +100%
+                      state_resources_factor = 0.6 ### +60%
+                  }
+              }
+          }
+  }
+
+       
+        
+    }
+}
 
 
+$$
+country_event = {
+    id = rob_usa.15
+    title = rob_usa.15.t
+    desc = rob_usa.15.d
+    picture = x
+
+    fire_only_once = yes
+
+        trigger = {
+        tag = USA
+        date > 1934.10.08
+      
+      
+    }
+    
+    ##Carolina puts down 
+    option = {
+        name = rob_usa.15a
+        ai_chance = {
+            factor = 100
+            
+        }
+        
+          custom_effect_tooltip = USA_carolina_strike_ends     ###_effect_tooltip = "text", but no option to colour code it
+  hidden_effect = {
+          363 = {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = 1.0 ### +100%
+                      state_resources_factor = 0.6 ### +60%
+                  }
+              }
+          }
+  }
+hidden_effect = {
+          364	= {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = 1.0 ### +100%
+                      state_resources_factor = 0.6 ### +60%
+                  }
+              }
+          }
+  }
+       
+        
+    }
+}
