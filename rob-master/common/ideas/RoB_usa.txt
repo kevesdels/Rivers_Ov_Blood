@@ -41,6 +41,23 @@ ideas = {
          war_support_factor = -0.25
 			}
 		}
+		
+		USA_child_tax_break  = {
+			picture = GFX_
+			allowed = {
+				tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+
+			modifier = {
+			 monthly_population = 0.10
+			}
+		}
 
 }
 }
