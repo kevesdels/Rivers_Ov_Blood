@@ -92,6 +92,10 @@ country_event = {
         
         
 
+ add_popularity = {
+		ideology = authoritharian
+	        popularity = 0.05
+            }
        
         
     }
@@ -279,6 +283,62 @@ add_political_power = 50
         
     }
 }
+###death of Huey P Long in Atlanta 
+country_event = {
+    id = rob_usa.9
+    title = rob_usa.9.t
+    desc = rob_usa.9.d
+    picture = GFX_
 
+    fire_only_once = yes
+
+        trigger = {
+        date > 1936.01.05
+      tag = USA
+      
+    }
+    
+    option = {
+        name = rob_usa.9.a
+        ai_chance = {
+            factor = 100
+            
+        }
+        
+        
+
+       
+        
+    }
+}
+
+##Talmadge meets in Macon Georgia with Gerald LK Smith Oscar Allen
+country_event = {
+    id = rob_usa.10
+    title = rob_usa.10.t
+    desc = rob_usa.10.d
+    picture = GFX_talnadge_and_smith
+
+    fire_only_once = yes
+
+        trigger = {
+        date > 1936.01.25
+      tag = USA
+      
+    }
+    
+    option = {
+        name = rob_usa.10.a
+        ai_chance = {
+            factor = 100
+            
+        }
+        
+        
+
+       
+        
+    }
+}
 
 
