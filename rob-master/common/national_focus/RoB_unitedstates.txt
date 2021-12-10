@@ -16,7 +16,6 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 2200 }
 
 
-
 focus = {
 	id = USA_dixie_inaugeration_ball
 	icon = GFX_
@@ -396,12 +395,18 @@ relative_position_id = USA_wool_hats_in_the_army
 	available_if_capitulated = yes
    
       available = {	
-        
+      BAM = { is_puppet_of = USA }
 		}
 	completion_reward = {
        
+           ####install Tom Linder#######
+	   BAM = {
+                country_event = {
+                    id = rob_usa.16
+                }
+            }
         ###I have no idea how to add generals with new update
-	
+	    
 	}
 }
 
@@ -586,7 +591,9 @@ relative_position_id = USA_charleston_naval_yards
 		}
 	completion_reward = {
       
-	
+	    country_event = {
+                    id = rob_usa.x
+                }
 	}
 }
 
@@ -630,7 +637,9 @@ relative_position_id = USA_state_of_the_union
 		}
 	completion_reward = {
       ###event
-	
+	   country_event = {
+                    id = rob_usa.x
+                }
 	}
 }
 
