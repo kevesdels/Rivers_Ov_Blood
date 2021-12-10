@@ -23,7 +23,17 @@ country_event = {
             
         }
         
-        
+          custom_effect_tooltip = USA_georgia_strikes_ends ### Alternatively, custom_effect_tooltip = "text", but no option to colour code it
+  hidden_effect = {
+          365 = {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = 1.0 ### +100%
+                      state_resources_factor = 0.6 ### +60%
+                  }
+              }
+          }
+  }
 
        
         
@@ -111,7 +121,20 @@ country_event = {
         }
         
         add_stability = -0.05
-
+	
+	
+	##if this works i'll throw in for the carolinas 
+         custom_effect_tooltip = USA_georgia_strikes ### Alternatively, custom_effect_tooltip = "text", but no option to colour code it
+  hidden_effect = {
+          365 = {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = -1.0 ### -100%
+                      state_resources_factor = -0.6 ### -60%
+                  }
+              }
+          }
+  }
        
         
     }
@@ -197,7 +220,7 @@ country_event = {
         hidden_effect = { country_event = { id = rob_usa.8 days = 10 }}
           
           
-  
+      
  
  
         
