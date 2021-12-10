@@ -34,7 +34,7 @@ country_event = {
     id = rob_usa.2
     title = rob_usa.2.t
     desc = rob_usa.2.d
-    picture = GFX_
+    picture = usa_wedonthavepicyet
 
     fire_only_once = yes
 
@@ -86,6 +86,73 @@ country_event = {
         
     }
 }
+
+
+####Strike time, strikes begin breaking out in NJ, MASS,
+country_event = {
+    id = rob_usa.4
+    title = rob_usa.4.t
+    desc = rob_usa.4.d
+    picture = GFX_
+
+    fire_only_once = yes
+
+        trigger = {
+        date > 1934.05.15
+      tag = USA
+      
+    }
+    
+    option = {
+        name = rob_usa.4.a
+        ai_chance = {
+            factor = 100
+            
+        }
+        
+        add_stability = -0.05
+
+       
+        
+    }
+}
+
+
+###2 factories have ben destroyed in NJ due to street fightes New 
+country_event = {
+    id = rob_usa.5
+    title = rob_usa.5.t
+    desc = rob_usa.5.d
+    picture = GFX_
+
+    fire_only_once = yes
+
+        trigger = {
+        date > 1934.06.01
+      tag = USA
+      
+    }
+    
+    option = {
+        name = rob_usa.5.a
+        ai_chance = {
+            factor = 100
+            
+        }
+        
+       
+  359  =   { remove_building = {
+    type = industrial_complex
+    level = 2
+}
+ }      
+ 
+ 
+        
+    }
+}
+
+
 
 
 
