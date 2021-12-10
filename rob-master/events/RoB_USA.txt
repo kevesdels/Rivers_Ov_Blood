@@ -11,7 +11,7 @@ country_event = {
 
         trigger = {
         tag = USA
-        date > 1934.10.08
+        date > 1934.09.08
       
       
     }
@@ -139,11 +139,74 @@ country_event = {
               }
           }
   }
+  
+  
+   custom_effect_tooltip = USA_new_england_strikes ### Alternatively, custom_effect_tooltip = "text", but no option to colour code it
+  hidden_effect = {
+  ##mass
+          357 = {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = -1.0 ### -100%
+                      state_resources_factor = -0.6 ### -60%
+                  }
+              }
+          }
+	  #maine
+	  836= {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = -1.0 ### -100%
+                      state_resources_factor = -0.6 ### -60%
+                  }
+              }
+          }
+	  ##concticit 
+	   840 = {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = -1.0 ### -100%
+                      state_resources_factor = -0.6 ### -60%
+                  }
+              }
+          }
+	  
+	  
+	  
+	  
+  }
+  
+    custom_effect_tooltip = USA_carolina_strikes ### Alternatively, custom_effect_tooltip = "text", but no option to colour code it
+  hidden_effect = {
+  ##NC
+          363 = {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = -1.0 ### -100%
+                      state_resources_factor = -0.6 ### -60%
+                  }
+              }
+          }
+	  #SC
+	  364 = {
+              add_state_modifier = {
+                  modifier = {
+                      state_production_speed_buildings_factor  = -1.0 ### -100%
+                      state_resources_factor = -0.6 ### -60%
+                  }
+              }
+          }
+	  
+	  
+	  
+	  
+	  
+  }
+  
        
         
     }
 }
-
 
 ###2 factories have ben destroyed in NJ due to street fightes New 
 country_event = {
