@@ -644,3 +644,41 @@ hidden_effect = {
         
     }
 }
+
+##BAHAMA GETS THIS UNDER NEW MANGEMENT 
+country_event = {
+    id = rob_usa.16
+    title = rob_usa.2.t
+    desc = rob_usa.2.d
+    picture = wedonthavepicyet #x maybe
+
+    fire_only_once = yes
+     is_triggered_only = yes
+    
+    option = {
+        name = rob_usa.16.a
+        ai_chance = {
+            factor = 100
+            
+        }
+        
+        
+ set_politics = { ruling_party = authoritharian}
+create_country_leader = {
+    name = "Tom Linder"
+    desc = ""
+    picture = "tom_linder.dds"
+    expire = "1965.1.1"
+    ideology =  authoritharian_democracy   ###
+    traits = {
+        #
+    }
+}
+add_popularity = {
+				ideology = authoritharian
+				popularity = 0.10
+            }
+       
+        
+    }
+}
