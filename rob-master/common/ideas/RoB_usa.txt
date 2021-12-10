@@ -1,0 +1,46 @@
+ideas = {
+
+	country = {
+		usa_great_depression = {
+			picture = GFX_idea_great_depression
+			allowed = {
+				tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+
+			modifier = {
+			production_factory_max_efficiency_factor = -0.10
+				production_speed_buildings_factor = -0.3
+				consumer_goods_factor = 0.4
+				local_resources_factor = -0.10
+			}
+		}
+
+}
+
+
+	usa_isolationism = {
+			picture = GFX_
+			allowed = {
+				tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+
+			modifier = {
+			   offensive_war_stability_factor = -0.2
+         war_support_factor = -0.25
+			}
+		}
+
+}
+}
