@@ -250,23 +250,6 @@ on_actions = {
 			news_event = { id = news.159 }
 		}
 	}
-
-	on_coup_succeeded = {
-		effect = {
-			#Turn elections on for democracies created from coup
-			random_other_country = {
-				limit = {
-					has_government = democratic
-					original_tag = ROOT
-				}
-				set_politics = {
-					ruling_party = democratic
-					elections_allowed = yes
-				}
-			}
-		}
-	}
-
 	
 	on_unit_leader_created = {
 		effect = {

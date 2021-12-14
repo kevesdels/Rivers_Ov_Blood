@@ -9,7 +9,7 @@ ideas = {
 				always = yes
 			}
      removal_cost = -1
-	 picture = GFX_idea_bosnian_uprising
+	 picture = BUL_tsar_kiril 
 	 
 	 modifier = {
 				stability_factor = 0.05
@@ -17,9 +17,6 @@ ideas = {
    
    }
 
-
-}
-}
  bulgarian_militarism = {
    allowed = {
        always = no
@@ -28,12 +25,13 @@ ideas = {
 				always = yes
 			}
      removal_cost = -1
-	 picture = GFX_idea_bosnian_uprising
+	 picture = BUL_bulgarian_militarism 
 	 
 	 modifier = {
 				 offence = 0.02
 				 war_support_weekly	= 0.01
-			}    recruitable_population = 0.004
+			    recruitable_population = 0.004
+	 }
    
    }
 

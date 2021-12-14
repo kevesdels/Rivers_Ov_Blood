@@ -166,7 +166,7 @@ focus_tree = {
 	#Focus for Declare Beržanskis a National Hero
 	focus = {
 		id = LIT_declareberanskisanationalhero
-		icon = GFX_focus_LIT_beržianiskshero
+		icon = GFX_focus_LIT_berzianiskshero
 		x = 36
 		y = 1
 		cost = 5
@@ -3890,13 +3890,7 @@ completion_reward = {
 		available_if_capitulated = yes
 		prerequisite = { 
 			focus = LIT_selllithuanianaircraftstoforeigners 
-			focus = LIT_ 
-		}
-		mutually_exclusive = { 
-			focus = LIT_endtheanbomonpoly 
-		}
-		mutually_exclusive = { 
-			focus = LIT_endtheanbomonpoly 
+			focus = LIT_startmassproducementandexport 
 		}
 		completion_reward = {
 		 add_tech_bonus = {
@@ -4829,7 +4823,7 @@ add_extra_state_shared_building_slots = 2
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_defensivedoctrine }
 		mutually_exclusive = { 
-			focus = LIT_mobiledoctrineii 
+			focus = LIT_mobiledoctrine 
 		}
 		mutually_exclusive = { 
 			focus = LIT_massartilleryfire 

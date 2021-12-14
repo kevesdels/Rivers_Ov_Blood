@@ -1,0 +1,32 @@
+
+is_enemy_ideology = {
+	OR = {
+		AND = {
+			SOCIALIST_ALIGNED_GOVERNMENT = yes
+			ROOT = {
+				OR = {
+					ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+					DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+				}
+			}
+		}
+		AND = {
+			DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+			ROOT = {
+				OR = {
+					SOCIALIST_ALIGNED_GOVERNMENT = yes
+					ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+				}
+			}
+		}
+		AND = {
+			ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+			ROOT = {
+				OR = {
+					SOCIALIST_ALIGNED_GOVERNMENT = yes
+					DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+				}
+			}
+		}
+	}
+}
