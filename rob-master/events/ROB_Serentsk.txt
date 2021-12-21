@@ -1,0 +1,25 @@
+#############################
+###Srenetsk Events
+#############################
+
+
+add_namespace = sfs
+
+country_event = { 
+ id = sfs.0
+ title = "Report On The Cleansing Of Kazan"
+ desc = sfs.0.d
+ 
+ fire_only_once = yes
+ trigger = {
+  tag = SFS
+  has_country_flag = sfs_kazan
+ }
+ mean_time_to_happen = { days = 1 }
+ 
+ option = {
+  name = "The Shoulders of Brave Men Carry The Most Weight"
+  add_stability =-0.1
+ }
+}
+
