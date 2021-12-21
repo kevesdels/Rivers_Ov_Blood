@@ -2915,7 +2915,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_french_interests  }
 		completion_reward = {
-			CAN = { country_event = { id = rob_france.121 days = 3 }  }
+			set_country_flag = FRP_europe
+			custom_effect_tooltip = FRP_europe
 		}
 	}
 
@@ -2931,8 +2932,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_french_interests  }
 		completion_reward = {
-			custom_effect_tooltip = "Will be implemented later, for now, have some manpower"
-			add_manpower = 100000
+			set_country_flag = FRP_innerexpansion_enable
+			custom_effect_tooltip = FRP_innerexpansion_enable
 		}
 	}
 
@@ -2948,7 +2949,8 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_french_interests  }
 		completion_reward = {
-			country_event = { id = rob_france.114 days = 3 } 
+			set_country_flag = FRP_across_the_seas_war_enable
+			custom_effect_tooltip = FRP_across_the_seas_war_enable
 		}
 	}
 
