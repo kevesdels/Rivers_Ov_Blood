@@ -46,171 +46,18 @@ set_popularities = {
 	pelekist = 8
 }
 
-
-create_country_leader = {
-	name = "Aleksandras Stulginskis"
-	desc = "POLITICS_ANTANAS_SMETONA_DESC"
-	picture = "gfx/leaders/LIT/Portrait_LIT_Aleksandras_Stulginskis.dds"
-	expire = "1965.1.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
-}
-
-
-create_country_leader = {
-	name = "Antanas Smetona"
-	desc = "POLITICS_ANTANAS_SMETONA_DESC"
-	picture = "gfx/leaders/LIT/GFX_Portrait_lithuania_antanas_smetona"
-	expire = "1965.1.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Antanas Snieckus"
-	desc = "POLITICS_ANTANAS_SNIECKUS_DESC"
-	picture = "gfx/leaders/LIT/gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-	expire = "1965.1.1"
-	ideology = socialist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Antanas Snieckus"
-	desc = "POLITICS_ANTANAS_SNIECKUS_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-	expire = "1965.1.1"
-	ideology = democratic_socialist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Antanas Snieckus"
-	desc = "POLITICS_ANTANAS_SNIECKUS_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-	expire = "1965.1.1"
-	ideology = national_socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Augustinas Voldemaras"
-	desc = ""
-	picture = "gfx/leaders/LIT/Portrait_Lithuania_Augustinas_Voldemaras.tga"
-	expire = "1965.1.1"
-	ideology = pagan_pelekism
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Kazys Grinius"
-	desc = ""
-	picture = "gfx/leaders/LIT/Portrait_Lithuania_Grinius.tga"
-	expire = "1965.1.1"
-	ideology = social_democracy_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Kazys Grinius"
-	desc = ""
-	picture = "gfx/leaders/LIT/Portrait_Lithuania_Grinius.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Kazys Škirpa"
-	desc = ""
-	picture = "gfx/leaders/LIT/Portrait_Lithuania_Kazys_Skirpa_leader.tga"
-	expire = "1965.1.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
-}
-
-
-create_corps_commander = {
-	name = "Jonas Černius"
-	picture = "Portrait_Lithuania_Jonas_Cernius.tga"
-	traits = { trickster war_hero }
-	skill = 3
-	id = 10000
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Kazys Ladiga"
-	picture = "Portrait_Lithuania_Kazys_Ladiga.tga"
-	traits = { aggressive_assaulter war_hero }
-	skill = 2
-	id = 10001
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_field_marshal = {
-	name = "Kazys Škirpa"
-	picture = "Portrait_Lithuania_Kazys_Skirpa.tga"
-	traits = { politically_connected inspirational_leader war_hero }
-	skill = 4
-	id = 10002
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_field_marshal = {
-	name = "Vincas Vitkauskas"
-	picture = "Portrait_Lithuania_Vincas_Vitkauskas.tga"
-	traits = { politically_connected trait_reckless war_hero }
-	skill = 3
-	id = 10003
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Mikas Rėklaitis"
-	picture = "Portrait_Lithuania_Mikas_Reklaitis.tga"
-	traits = { infantry_leader war_hero }
-	skill = 2
-	id = 10004
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Stasys Raštikis"
-	picture = "Portrait_Lithuania_Stasys_Rastikis.tga"
-	traits = { aggressive_assaulter war_hero }
-	skill = 3
-	id = 10005
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
+recruit_character = LIT_kazys_ladiga
+recruit_character = LIT_vincas_vitkauskas
+recruit_character = LIT_aleksandras_stulginskis
+recruit_character = LIT_antanas_smetona
+recruit_character = LIT_antanas_snieckus
+recruit_character = LIT_augustinas_voldemaras
+recruit_character = LIT_kazys_grinius
+recruit_character = LIT_kazys_Škirpa
+recruit_character = LIT_jonas_Černius
+recruit_character = LIT_mikas_rėklaitis
+recruit_character = LIT_stasys_raštikis
+recruit_character = LIT_povilas_plechavicius
+recruit_character = LIT_kazys_musteikis
+recruit_character = LIT_stasys_rastikis
+recruit_character = LIT_stasys_rastikis

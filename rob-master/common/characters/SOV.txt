@@ -1,0 +1,439 @@
+characters={
+	SOV_andrey_andreyevich_vlasov={
+		name="Andrey Andreyevich Vlasov"
+		portraits={
+			civilian={
+				large="gfx/leaders/SOV/Vlaslov.dds"
+			}
+		}
+		country_leader={
+			ideology=vlaslovism
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	SOV_alexy_rykov={
+		name="Alexy Rykov"
+		portraits={
+			civilian={
+				large="gfx/leaders/SOV/AlexyRykov.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ALEXY_RYKOV_DESC"
+			ideology=market_socialism
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	SOV_lev_kamenev={
+		name="Lev Kamenev"
+		portraits={
+			civilian={
+				large="gfx/leaders/SOV/LevKamenev.tga"
+			}
+		}
+		country_leader={
+			ideology=marxism_leninism
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	SOV_alexei_maximovich_peshkov={
+		name="Alexei Maximovich Peshkov"
+		portraits={
+			civilian={
+				large="gfx/leaders/SOV/AlexeiMaximovichPeshkov.dds"
+			}
+		}
+		country_leader={
+			ideology=social_democracy_subtype
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	SOV_georgy_zhukov={
+		name="Georgy Zhukov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_gregory_zhukov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Gregory_Zhukov.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = RSR_zhukov_hc
+			cost = 200
+			available = { has_tech = mobile_warfare }
+			research_bonus = { cat_mobile_warfare = 0.10 }
+			modifier = {
+			 army_armor_attack_factor = 0.05
+			 army_armor_defence_factor = 0.05
+			 motorized_attack_factor = 0.05
+			 motorized_defence_factor = 0.05
+			}
+		}
+		corps_commander={
+			traits={ media_personality armor_officer war_hero winter_specialist }
+			skill=5
+			attack_skill=5
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=5
+			legacy_id=410
+		}
+	}
+	SOV_aleksandr_vasilevsky={
+		name="Aleksandr Vasilevsky"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_aleksandr_vasilevsky.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Aleksandr_Vasilevsky.dds"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer politically_connected }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=407
+		}
+	}
+	SOV_boris_shaposhnikov={
+		name="Boris Shaposhnikov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_boris_shaposhnikov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Boris_Shaposhnikov.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = RSR_shapiso_hc
+			cost = 200
+			available = { has_tech = superior_firepower }
+			research_bonus = { cat_superior_firepower = 0.10 }
+			modifier = {
+			 army_artillery_attack_factor = 0.1
+			 army_artillery_defence_factor = 0.1
+			}
+		}
+		corps_commander={
+			traits={ career_officer trait_cautious }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	SOV_ivan_konev={
+		name="Ivan Konev"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_ivan_konev.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Ivan_Konev.dds"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader armor_officer politically_connected }
+			skill=5
+			attack_skill=4
+			defense_skill=5
+			planning_skill=2
+			logistics_skill=5
+			legacy_id=408
+		}
+	}
+	SOV_semyon_timoshenko={
+		name="Semyon Timoshenko"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_semyon_timoshenko.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Semyon_Timoshenko.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer cavalry_officer politically_connected }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=404
+		}
+	}
+	SOV_kliment_voroshilov={
+		name="Kliment Voroshilov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_kliment_voroshilov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Kliment_Voroshilov.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = RSR_vorshilov_hc
+			cost = 200
+			available = { has_tech = trench_warfare }
+			research_bonus = { cat_grand_battle_plan = 0.10 }
+			modifier = {
+			 army_infantry_attack_factor = 0.1
+			 army_infantry_defence_factor = 0.1
+			}
+		}
+		field_marshal={
+			traits={ old_guard inflexible_strategist politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=405
+		}
+	}
+	SOV_semyon_budyonny={
+		name="Semyon Budyonny"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_semyon_budyonny.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Semyon_Budyonny.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = RSR_buddnyov_hc
+			cost = 200
+			available = { has_tech = mass_assault }
+			research_bonus = { cat_mass_assault = 0.10 }
+			modifier = {
+			  conscription = 0.005
+			}
+		}
+		field_marshal={
+			traits={ old_guard inflexible_strategist politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_issa_pliyev={
+		name="Issa Pliyev"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_issa_pliyev.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Issa_Pliyev.dds"
+			}
+		}
+		corps_commander={
+			traits={ cavalry_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_leonid_govorov={
+		name="Leonid Govorov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_leonid_govorov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Leonid_Govorov.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SOV_grigory_kulik={
+		name="Grigory Kulik"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_grigory_kulik.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Grigory_Kulik.dds"
+			}
+		}
+		field_marshal={
+			traits={ old_guard inflexible_strategist career_officer politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_kirill_meretskov={
+		name="Kirill Meretskov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_kirill_meretskov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Kirill_Meretskov.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless infantry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	SOV_andrey_vlasov={
+		name="Andrey Vlasov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_andrey_vlasov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Andrey_Vlasov.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer winter_specialist }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=412
+		}
+	}
+	SOV_nikolai_berzarin={
+		name="Nikolai Berzarin"
+		portraits={
+			army={
+				small="GFX_Portrait_Soviet_Generic_land_1_small"
+			}
+			army={
+				large="GFX_Portrait_Soviet_Generic_land_1"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SOV_rodion_malinovsky={
+		name="Rodion Malinovsky"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_rodion_malinovsky.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Rodion_Malinovsky.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard career_officer trait_cautious politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_vasily_chuikov={
+		name="Vasily Chuikov"
+		portraits={
+			army={
+				small="GFX_Portrait_Soviet_Generic_land_1_small"
+			}
+			army={
+				large="GFX_Portrait_Soviet_Generic_land_1"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist career_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_yevgeny_berens={
+		name="Yevgeny Berens"
+		portraits={
+			army={
+				small="GFX_Portrait_Soviet_Generic_navy_1_small"
+			}
+			army={
+				large="GFX_Portrait_Soviet_Generic_navy_1"
+			}
+		}
+		navy_leader={
+			traits={ ironside ground_pounder }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_aleksandr_nemits={
+		name="Aleksandr Nemits"
+		portraits={
+			army={
+				small="GFX_Portrait_Soviet_Generic_navy_1_small"
+			}
+			army={
+				large="GFX_Portrait_Soviet_Generic_navy_1"
+			}
+		}
+		navy_leader={
+			traits={ bold navy_career_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=411
+		}
+	}
+}

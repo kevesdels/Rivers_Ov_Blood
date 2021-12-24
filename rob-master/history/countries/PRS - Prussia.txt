@@ -74,202 +74,22 @@ PRS_hjalmar_schacht_em
 PRS_otto_gessler_dm
 }
 
-create_country_leader = {
-	name = "Wilhelm Buck"
-	desc = ""
-	picture = ""
-	expire = "1960.1.1"
-	ideology = marxism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Friedrich Wilhelm III"
-	desc = ""
-	picture = "gfx/leaders/PRS/wilhelm_3.tga"
-	expire = "1951.1.1"
-	ideology = authoritharian_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Friedrich Wilhelm III"
-	desc = ""
-	picture = "gfx/leaders/PRS/wilhelm_3.tga"
-	expire = "1951.1.1"
-	ideology = reactionary_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Alfred Rosenberg"
-	desc = ""
-	picture = "gfx/leaders/PRS/Alfred_Rosenberg.tga"
-	expire = "1951.1.1"
-	ideology = pagan_pelekism
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Wilhelm Pieck"
-	desc = ""
-	picture = ""
-	expire = "1951.1.1"
-	ideology = german_socialism
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Kurt Schumacher"
-	desc = ""
-	picture = ""
-	expire = "1951.1.1"
-	ideology = democratic_socialist_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Heinrich Brüning"
-	desc = ""
-	picture = "gfx/leaders/PRS/PRS_Heinrich_Brüning.tga"
-	expire = "1951.1.1"
-	ideology = social_democracy_subtype
-	traits = {
-	}
-}
-create_country_leader = {
-	name = "Ernst Cassirer"
-	desc = ""
-	picture = "gfx/leaders/PRS/PRS_ernst_cassirer.tga"
-	expire = "1951.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-	}
-}
-
-
-create_field_marshal = {
-	name = "Wilhelm Ritter von Leeb"
-	picture = "Wilhelm_Ritter_von_Leeb.dds"
-	traits = { trait_reckless infantry_officer offensive_doctrine }
-	skill = 4
-	id = 9999990
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_field_marshal = {
-	name = "Walther von Brauchitsch"
-	picture = "walther_von_brauchitsch.dds"
-	traits = { infantry_officer }
-	skill = 3
-	id = 9999991
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-
-create_field_marshal = {
-	name = "Wilhelm Keitel"
-	picture = ""
-	traits = { politically_connected }
-	skill = 2
-	id = 9999993
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Wilhelm Heye"
-	picture = "Portrait_Germany_Wilhelm_Heye.tga"
-	traits = { career_officer old_guard }
-	skill = 3
-	id = 9999994
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Ernst Junger"
-	picture = "Portrait_PRS_ernst_juenger.tga"
-	traits = { war_hero infantry_officer trait_reckless }
-	skill = 3
-	id = 9999989
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-
-
-create_corps_commander = {
-	name = "Alfred Jodl"
-	picture = "Portrait_Germany_Alfred_Jodl.dds"
-	traits = { war_hero }
-	skill = 4
-	id = 9999995
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Heinz Guderian"
-	picture = "Portrait_PRS_guderian.dds"
-	traits = { war_hero trait_reckless trickster }
-	skill = 4
-	id = 9999996
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Friedrich Paulus"
-	picture = "Portrait_Germany_Friedrich_Paulus.dds"
-	traits = { infantry_leader winter_specialist }
-	skill = 2
-	id = 9999997
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-
-create_navy_leader = {
-	name = "Karl Dönitz"
-	picture = "Portrait_Germany_Karl_Donitz.dds"
-	traits = { navy_career_officer seawolf }
-	skill = 5
-	id = 9999998
-	attack_skill = 5
-	defense_skill = 3
-	maneuvering_skill = 3
-	coordination_skill = 5
-}
-
-create_navy_leader = {
-	name = "Erich Raeder"
-		picture = "Portrait_Germany_Erich_Raeder.dds"
-	traits = { naval_lineage battleship_adherent }
-	skill = 4
-	id = 9999999
-	attack_skill = 3
-	defense_skill = 4
-	maneuvering_skill = 3
-	coordination_skill = 3
-}
+recruit_character = PRS_erich_raeder
+recruit_character = PRS_wilhelm_keitel
+recruit_character = PRS_alfred_jodl
+recruit_character = PRS_wilhelm_ritter_von_leeb
+recruit_character = PRS_heinz_guderian
+recruit_character = PRS_ernst_junger
+recruit_character = PRS_konrad_adenauer
+recruit_character = PRS_wilhelm_buck
+recruit_character = PRS_friedrich_wilhelm_iii
+recruit_character = PRS_alfred_rosenberg
+recruit_character = PRS_wilhelm_pieck
+recruit_character = PRS_kurt_schumacher
+recruit_character = PRS_heinrich_brüning
+recruit_character = PRS_ernst_cassirer
+recruit_character = PRS_walther_von_brauchitsch
+recruit_character = PRS_wilhelm_heye
+recruit_character = PRS_friedrich_paulus
+recruit_character = PRS_karl_dönitz
+recruit_character = PRS_walter_model

@@ -1,0 +1,361 @@
+characters={
+	PRS_erich_raeder={
+		name="Erich Raeder"
+		portraits={
+			army={
+				small="GFX_Portrait_Europe_Generic_navy_1_small"
+			}
+			army={
+				large="GFX_Portrait_Europe_Generic_navy_1"
+			}
+		}
+		navy_leader={
+			traits={ battleship_adherent naval_lineage }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=9999999
+		}
+	}
+	PRS_wilhelm_keitel={
+		name="Wilhelm Keitel"
+		portraits={
+			army={
+				small="GFX_Portrait_Europe_Generic_land_1_small"
+			}
+			army={
+				large="GFX_Portrait_Europe_Generic_land_1"
+			}
+		}
+		field_marshal={
+			traits={ politically_connected }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=9999993
+		}
+	}
+	PRS_alfred_jodl={
+		name="Alfred Jodl"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Alfred_Jodl.dds"
+				small="gfx/interface/ideas/idea_GER_alfred_jodl.dds"
+			}
+		}
+		corps_commander={
+			traits={ war_hero }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9999995
+		}
+	}
+	PRS_wilhelm_ritter_von_leeb={
+		name="Wilhelm Ritter von Leeb"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/PRS/Wilhelm_Ritter_von_Leeb.dds"
+			}
+		}
+		field_marshal={
+			traits={ trait_reckless infantry_officer offensive_doctrine }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=9999990
+		}
+	}
+	PRS_heinz_guderian={
+		name="Heinz Guderian"
+		portraits={
+			army={
+				small = "gfx/leaders/PRS/PRS_min_heinz_guderian.tga"
+			}
+			army={
+				large="gfx/leaders/PRS/Portrait_PRS_guderian.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = PRS_heinz_guderian
+			cost = 200
+			available = { has_completed_focus = PRS_lightningwar }
+			research_bonus = { cat_mobile_warfare = 0.10 }
+			modifier = {
+			 army_armor_attack_factor = 0.04
+			 army_armor_defence_factor = 0.04
+			 motorized_attack_factor = 0.06
+			 motorized_defence_factor = 0.06
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless war_hero trickster }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9999996
+		}
+	}
+	PRS_ernst_junger={
+		name="Ernst Jünger"
+		portraits={
+			army={
+				small="gfx/leaders/PRS/PRS_min_ersnt_junger.tga"
+			}
+			army={
+				large="gfx/leaders/PRS/Portrait_PRS_ernst_juenger.tga"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = PRS_ernst_junger
+			cost = 200
+			available = { has_completed_focus = PRS_artilleryfocus }
+			research_bonus = { cat_superior_firepower = 0.10 }
+			modifier = {
+				army_artillery_attack_factor = 0.06
+				army_artillery_defence_factor = 0.06
+			   }
+		}
+		corps_commander={
+			traits={ trait_reckless infantry_officer war_hero }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=9999989
+		}
+	}
+
+	PRS_konrad_adenauer={
+		name="Konrad Adenauer"
+		portraits={
+			civilian={
+				large="gfx/leaders/PRS/Portrait_Germany_Konrad_Adenauer.dds"
+			}
+		}
+		country_leader={
+			ideology=conservative_subtype
+			expire="1960.1.1.1"
+			id=-1
+		}
+	}
+	PRS_wilhelm_buck={
+		name="Wilhelm Buck"
+		portraits={
+			civilian={
+				large="gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1960.1.1.1"
+			id=-1
+		}
+	}
+	PRS_friedrich_wilhelm_iii={
+		name="Friedrich Wilhelm III"
+		portraits={
+			civilian={
+				large="gfx/leaders/PRS/wilhelm_3.tga"
+			}
+		}
+		country_leader={
+			ideology=authoritharian_subtype
+			expire="1951.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=reactionary_subtype
+			expire="1951.1.1.1"
+			id=-1
+		}
+	}
+	PRS_alfred_rosenberg={
+		name="Alfred Rosenberg"
+		portraits={
+			civilian={
+				large="gfx/leaders/PRS/Alfred_Rosenberg.tga"
+			}
+		}
+		country_leader={
+			ideology=pagan_pelekism
+			expire="1951.1.1.1"
+			id=-1
+		}
+	}
+	PRS_wilhelm_pieck={
+		name="Wilhelm Pieck"
+		portraits={
+			civilian={
+				large="gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader={
+			ideology=german_socialism
+			expire="1951.1.1.1"
+			id=-1
+		}
+	}
+	PRS_kurt_schumacher={
+		name="Kurt Schumacher"
+		portraits={
+			civilian={
+				large="gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader={
+			ideology=democratic_socialist_subtype
+			expire="1951.1.1.1"
+			id=-1
+		}
+	}
+	PRS_heinrich_brüning={
+		name="Heinrich Brüning"
+		portraits={
+			civilian={
+				large="gfx/leaders/PRS/PRS_Heinrich_Brüning.tga"
+			}
+		}
+		country_leader={
+			ideology=social_democracy_subtype
+			expire="1951.1.1.1"
+			id=-1
+		}
+	}
+	PRS_ernst_cassirer={
+		name="Ernst Cassirer"
+		portraits={
+			civilian={
+				large="gfx/leaders/PRS/PRS_ernst_cassirer.tga"
+			}
+		}
+		country_leader={
+			ideology=social_liberal_subtype
+			expire="1951.1.1.1"
+			id=-1
+		}
+	}
+	PRS_walther_von_brauchitsch={
+		name="Walther von Brauchitsch"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/PRS/walther_von_brauchitsch.dds"
+			}
+		}
+		field_marshal={
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=9999991
+		}
+	}
+	PRS_wilhelm_heye={
+		name="Wilhelm Heye"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/PRS/Portrait_Germany_Wilhelm_Heye.tga"
+			}
+		}
+		corps_commander={
+			traits={ old_guard career_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=1
+			legacy_id=9999994
+		}
+	}
+	PRS_friedrich_paulus={
+		name="Friedrich Paulus"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Paulus.dds"
+				small="gfx/interface/ideas/idea_GER_friedrich_paulus.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader winter_specialist }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=9999997
+		}
+	}
+	PRS_karl_dönitz={
+		name="Karl Dönitz"
+		portraits={
+			army={
+				small="GFX_Portrait_Europe_Generic_navy_1_small"
+				large="GFX_Portrait_Europe_Generic_navy_1"
+			}
+		}
+		navy_leader={
+			traits={ navy_career_officer seawolf }
+			skill=5
+			attack_skill=5
+			defense_skill=3
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=9999998
+		}
+	}
+
+	PRS_walter_model ={
+		name="Walther Model"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Walter_Model.dds"
+				small="gfx/leaders/PRS/PRS_min_walther_model.tga"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = PRS_walter_model_th
+			cost = 200
+			available = { has_completed_focus = PRS_emphasizelargeoperations }
+			research_bonus = { cat_grand_battle_plan = 0.10 }
+			modifier = {
+			 army_infantry_attack_factor = 0.1
+			 army_infantry_defence_factor = 0.1
+			}
+		}
+		field_marshal={
+			traits={ brilliant_strategist trait_cautious politically_connected defensive_doctrine }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=10
+		}
+	}
+
+}

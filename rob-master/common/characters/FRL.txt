@@ -1,0 +1,324 @@
+characters={
+	FRL_andré_tardieu={
+		name="André Tardieu"
+		portraits={
+			civilian={
+				large="gfx/leaders/FRL/Portrait_FRL_André_Tardieu.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KONSTANTIN_PATS_DESC"
+			ideology=conservative_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FRL_rené_olry={
+		name="René Olry"
+		portraits={
+			army={
+				small="GFX_Portrait_Europe_Generic_land_2_small"
+			}
+			army={
+				large="GFX_Portrait_Europe_Generic_land_2"
+			}
+		}
+		field_marshal={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRL_jean_de_lattre_de_tassigny={
+		name="Jean de Lattre de Tassigny"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRL/Jean_de_Lattre_de_Tassigny.dds"
+			}
+		}
+		corps_commander={
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	FRL_alphonse_juin={
+		name="Alphonse Juin"
+		portraits={
+			army={
+				large="gfx/leaders/FRL/Alphonse_Juin.dds"
+			}
+			army={
+				small="gfx/leaders/FRL/FRA_min_Alphonse_Juin.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = FRA_alphonse_juin
+			cost = 200
+			research_bonus = { land_doctrine = 0.10 }
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				}
+		}
+		corps_commander={
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	FRL_philippe_leclerc_de_hautecloque={
+		name="Philippe Leclerc de Hautecloque"
+		portraits={
+			army={
+				large="gfx/leaders/FRL/Philippe_Leclerc.dds"
+			}
+			army={
+				small="gfx/leaders/FRL/FRA_Philippe_Leclerc_de_Hautecloque.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = FRA_philippe_leclerc
+			cost = 200
+			available = { has_tech = mobile_warfare }
+			research_bonus = { cat_mobile_warfare = 0.10 }
+			modifier = {
+			 army_armor_attack_factor = 0.05
+			 army_armor_defence_factor = 0.05
+			 motorized_attack_factor = 0.05
+			 motorized_defence_factor = 0.05
+			}
+		}
+		corps_commander={
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	FRL_françois_sevez={
+		name="François Sevez"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRL/Francois_Sevez.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRL_joseph_de_goislard={
+		name="Joseph de Goislard"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRL/Joseph_de_Goislard.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRL_gabriel_bougrain={
+		name="Gabriel Bougrain"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRL/Gabriel_Bougrain.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRL_aubert_frere={
+		name="Aubert Frere"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRL/Aubert_Frere.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRL_maurice_grisot={
+		name="Maurice Grisot"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRL/Maurice_Grisot.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRL_charles_mast={
+		name="Charles Mast"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRL/Charles_Mast.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRL_paul_legentilhomme={
+		name="Paul Legentilhomme"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRL/Paul_Legentilhomme.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRL_alfred_heurtaux={
+		name="Alfred Heurtaux"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRL/Alfred_Heurtaux.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRL_philippe_auboyneau={
+		name="Philippe Auboyneau"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRL/Philippe_Auboyneau.dds"
+			}
+		}
+		navy_leader={
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	FRL_georges_thierry_dargenlieu={
+		name="Georges Thierry D'Argenlieu"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRL/Georges_Thierry_Dargenlieu.dds"
+			}
+		}
+		navy_leader={
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	FRL_marcel_gensuol={
+		name="Marcel Gensuol"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRL/Marcel_Gensoul.dds"
+			}
+		}
+		navy_leader={
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+}

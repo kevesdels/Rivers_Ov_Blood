@@ -1,0 +1,467 @@
+characters={
+	GER_hermann_boehm={
+		name="Hermann Boehm"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_GER_hermann_boehm.dds"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Hermann_Boehm.dds"
+			}
+		}
+		navy_leader={
+			traits={ craven superior_tactician }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=29
+		}
+	}
+	GER_erich_von_manstein={
+		name="Erich von Manstein"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_GER_Erich_Von_Manstein_DPRK_uniform-1.tga"
+			}
+		}
+		field_marshal={
+			traits={ war_hero infantry_leader }
+			skill=3
+			attack_skill=4
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=9
+		}
+	}
+	GER_kurt_eisner={
+		name="Kurt Eisner"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/GER/kurt_eisner.tga"
+			}
+		}
+		field_marshal={
+			traits={ trait_reckless politically_connected war_hero }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=10
+		}
+	}
+	GER_george_grosz={
+		name="George Grosz"
+		portraits={
+			civilian={
+				large="gfx/leaders/GER/George_Grosz.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KONRAD_ADENAUER_DESC"
+			ideology=democratic_socialist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GER_georg_ledebour={
+		name="Georg Ledebour"
+		portraits={
+			civilian={
+				large="gfx/leaders/GER/Portrait_GER_Georg_Ledebeur.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KONRAD_ADENAUER_DESC"
+			ideology=social_democracy_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GER_rosa_luxemburg={
+		name="Rosa Luxemburg"
+		portraits={
+			civilian={
+				large="gfx/leaders/GER/Portriat_GRC_Roza_Luksemburg.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ERNST_THALMANN_DESC"
+			ideology=marxism
+			expire="1956.1.1.1"
+			id=-1
+		}
+	}
+	GER_ernst_niekisch={
+		name="Ernst Niekisch"
+		portraits={
+			civilian={
+				large="gfx/leaders/GER/GER_Ernst_Niekish.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ERNST_THALMANN_DESC"
+			ideology=german_socialism
+			expire="1956.1.1.1"
+			id=-1
+		}
+	}
+	GER_reactionary_partisans={
+		name="Reactionary Partisans"
+		portraits={
+			civilian={
+				large="gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ERNST_THALMANN_DESC"
+			ideology=conservative_subtype
+			expire="1956.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_ERNST_THALMANN_DESC"
+			ideology=authoritharian_subtype
+			expire="1956.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_ERNST_THALMANN_DESC"
+			ideology=reactionary_subtype
+			expire="1956.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_ERNST_THALMANN_DESC"
+			ideology=pelekist_subtype
+			expire="1956.1.1.1"
+			id=-1
+		}
+	}
+	GER_erwin_rommel={
+		name="Erwin Rommel"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Erwin_Rommel.dds"
+				small="GFX_idea_erwin_rommel"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = GER_rommel
+			cost = 200
+			available = { has_completed_focus = GER_rommelplan }
+			research_bonus = { cat_mobile_warfare = 0.10 }
+			modifier = {
+			 army_armor_attack_factor = 0.04
+			 army_armor_defence_factor = 0.04
+			 motorized_attack_factor = 0.06
+			 motorized_defence_factor = 0.06
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless media_personality armor_officer war_hero trickster }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=4321
+		}
+	}
+	GER_john_sieg={
+		name="John Sieg"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/GER/John_Sieg.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless media_personality trickster }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=4
+		}
+	}
+	GER_walther_von_seydlitzkurzbach={
+		name="Walther von Seydlitz-Kurzbach"
+		portraits={
+			army={
+				small="gfx/leaders/GER/GER_min_kurt_seydlizt"
+			}
+			army={
+				large="gfx/leaders/GER/serwitz.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = GER_seydlizt
+			cost = 200
+			available = { has_completed_focus = GER_seydlitzplan }
+			research_bonus = { cat_superior_firepower = 0.10 }
+			modifier = {
+			 army_artillery_attack_factor = 0.04
+			 army_artillery_defence_factor = 0.04
+			 army_infantry_attack_factor = 0.06
+			 army_infantry_defence_factor = 0.06
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless harsh_leader war_hero trickster }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=5
+		}
+	}
+	GER_kurt_student={
+		name="Kurt Student"
+		portraits={
+			army={
+				small="gfx/leaders/GER/GER_min_kurt_student.tga"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Kurt_Student.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = GER_student
+			cost = 200
+			available = { has_completed_focus = GER_studentplan }
+			research_bonus = { cat_mass_assault = 0.10 }
+			modifier = {
+			 special_forces_attack_factor = 0.1
+			 special_forces_defence_factor = 0.1
+			 air_paradrop_attack_factor = 0.1
+			 air_paradrop_defence_factor = 0.1
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless war_hero aggressive_assaulter }
+			skill=4
+			attack_skill=5
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=6
+		}
+	}
+	GER_ernst_thälmann={
+		name="Ernst Thälmann"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/GER/Ernst_Thälmann.tga"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless politically_connected aggressive_assaulter }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=7
+		}
+	}
+	GER_karl_liebknecht={
+		name="Karl Liebknecht"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/GER/karl_liebknecht.dds"
+			}
+		}
+		field_marshal={
+			traits={ trait_reckless politically_connected war_hero inspirational_leader }
+			skill=2
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=8
+		}
+	}
+	GER_georg_freiherr_von_boeselager={
+		name="Georg Freiherr Von Boeselager"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/GER/Georg_Freiherr_Von_Boeselager.tga"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=4322
+		}
+	}
+	GER_otto_herfurth={
+		name="Otto Herfurth"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/GER/Otto_Herfurth.tga"
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=12
+		}
+	}
+	GER_fritz_erich_fellgiebel={
+		name="Fritz Erich Fellgiebel"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_GER_Fritz Erich Fellgiebel.tga"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist war_hero trickster }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=13
+		}
+	}
+	GER_karl_hoffman={
+		name="Karl Hoffman"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/GER/Karl_Hoffman.dds"
+			}
+		}
+		field_marshal={
+			traits={ war_hero skilled_staffer inspirational_leader }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=11
+		}
+	}
+	GER_alwinbroder_albrecht={
+		name="Alwin-Broder Albrecht"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_GER_karl_donitz.dds"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Karl_Donitz.dds"
+			}
+		}
+		navy_leader={
+			traits={ navy_career_officer seawolf }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=26
+		}
+	}
+	GER_alfred_saalwächter={
+		name="Alfred Saalwächter"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_GER_alfred_saalwachter.dds"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Alfred_Saalwachter.dds"
+			}
+		}
+		navy_leader={
+			traits={ old_guard_navy bold }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=28
+		}
+	}
+	GER_wilhelm_marschall={
+		name="Wilhelm Marschall"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_GER_wilhelm_marschall.dds"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_Marschall.dds"
+			}
+		}
+		navy_leader={
+			traits={ old_guard_navy bold }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=30
+		}
+	}
+	GER_günther_lütjens={
+		name="Günther Lütjens"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_GER_gunter_lutjens.dds"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Gunter_Lutjens.dds"
+			}
+		}
+		navy_leader={
+			traits={ gentlemanly navy_career_officer superior_tactician }
+			skill=3
+			attack_skill=4
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=31
+		}
+	}
+}

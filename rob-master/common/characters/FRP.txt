@@ -1,0 +1,235 @@
+characters={
+	FRP_united_pelekist_congress={
+		name="United Pelekist Congress"
+		portraits={
+			civilian={
+				large="gfx/leaders/FRP/french_pelekist_council.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KONSTANTIN_PATS_DESC"
+			ideology=pelekist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FRP_charles_noguès={
+		name="Charles Noguès"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRP/Charles_Nogues.dds"
+			}
+		}
+		field_marshal={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRP_jean_charles_romatet={
+		name="Jean Charles Romatet"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRP/Jean_Charles_Romatet.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRP_edgard_puaud={
+		name="Edgard Puaud"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRP/Edgard_Puaud.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRP_raoul_dagostini_={
+		name="Raoul Dagostini "
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRP/Raoul_Dagostini.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRP_paul_marie_gamorydubourdeau={
+		name="Paul Marie Gamory-Dubourdeau"
+		portraits={
+			army={
+				small="GFX_Portrait_Europe_Generic_land_2_small"
+			}
+			army={
+				large="GFX_Portrait_Europe_Generic_land_2"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRP_joseph_darnand={
+		name="Joseph Darnand"
+		portraits={
+			army={
+				small="gfx/leaders/FRP/FRA_Joseph_Darnand.dds"
+			}
+			army={
+				large="GFX_Portrait_Europe_Generic_land_2"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = FRA_joseph_darnand
+			cost = 200
+			research_bonus = { land_doctrine = 0.10 }
+			 modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRP_marc_augier={
+		name="Marc Augier"
+		portraits={
+			army={
+				small="GFX_Portrait_Europe_Generic_land_2_small"
+			}
+			army={
+				large="GFX_Portrait_Europe_Generic_land_2"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	FRP_jean_de_laborde={
+		name="Jean de Laborde"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRP/Jean_de_Laborde.dds"
+			}
+		}
+		navy_leader={
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	FRP_rene_emile_godfroy={
+		name="Rene Emile Godfroy"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRP/Rene_Emile_Godfroy.dds"
+			}
+		}
+		navy_leader={
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	FRP_jeanpierre_esteva={
+		name="Jean-Pierre Esteva"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRP/Jean_Pierre_Esteva.dds"
+			}
+		}
+		navy_leader={
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	FRP_gabriel_auphan={
+		name="Gabriel Auphan"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRP/Gabriel_Auphan.dds"
+			}
+		}
+		navy_leader={
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+}

@@ -60,178 +60,19 @@ set_popularities = {
 	pelekist = 0
 }
 
-create_country_leader = {
-	name = "André Tardieu"
-	desc = "POLITICS_KONSTANTIN_PATS_DESC"
-	picture = "gfx/leaders/FRL/Portrait_FRL_André_Tardieu.tga"
-	expire = "1965.1.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "René Olry"
-	picture = ""
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Jean de Lattre de Tassigny"
-	picture = "Jean_de_Lattre_de_Tassigny.dds"
-	traits = { }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Alphonse Juin"
-	picture = "Alphonse_Juin.dds"
-	traits = { }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Philippe Leclerc de Hautecloque"
-	picture = "Philippe_Leclerc.dds"
-	traits = { }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "François Sevez"
-	picture = "Francois_Sevez.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Joseph de Goislard"
-	picture = "Joseph_de_Goislard.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Gabriel Bougrain"
-	picture = "Gabriel_Bougrain.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Aubert Frere"
-	picture = "Aubert_Frere.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Maurice Grisot"
-	picture = "Maurice_Grisot.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Charles Mast"
-	picture = "Charles_Mast.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Paul Legentilhomme"
-	picture = "Paul_Legentilhomme.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Alfred Heurtaux"
-	picture = "Alfred_Heurtaux.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_navy_leader = {
-	name = "Philippe Auboyneau"
-	picture = "Philippe_Auboyneau.dds"
-	traits = { }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	maneuvering_skill = 4
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-name = "Georges Thierry D'Argenlieu"
-picture = "Georges_Thierry_Dargenlieu.dds"
-traits = { }
-skill = 4
-attack_skill = 4
-defense_skill = 4
-maneuvering_skill = 4
-coordination_skill = 4
-}
-
-create_navy_leader = {
-name = "Marcel Gensuol"
-picture = "Marcel_Gensoul.dds"
-traits = { }
-skill = 4
-attack_skill = 4
-defense_skill = 4
-maneuvering_skill = 4
-coordination_skill = 4
-}
+recruit_character = FRL_andré_tardieu
+recruit_character = FRL_rené_olry
+recruit_character = FRL_jean_de_lattre_de_tassigny
+recruit_character = FRL_alphonse_juin
+recruit_character = FRL_philippe_leclerc_de_hautecloque
+recruit_character = FRL_françois_sevez
+recruit_character = FRL_joseph_de_goislard
+recruit_character = FRL_gabriel_bougrain
+recruit_character = FRL_aubert_frere
+recruit_character = FRL_maurice_grisot
+recruit_character = FRL_charles_mast
+recruit_character = FRL_paul_legentilhomme
+recruit_character = FRL_alfred_heurtaux
+recruit_character = FRL_philippe_auboyneau
+recruit_character = FRL_georges_thierry_dargenlieu
+recruit_character = FRL_marcel_gensuol

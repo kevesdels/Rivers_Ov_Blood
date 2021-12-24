@@ -1,0 +1,208 @@
+characters={
+	FRR_marcel_deat={
+		name="Marcel Deat"
+		portraits={
+			civilian={
+				large="gfx/leaders/FRR/Portrait_FRR_marcel_deat.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KONSTANTIN_PATS_DESC"
+			ideology=sorelianism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FRR_georges_catroux={
+		name="Georges Catroux"
+		portraits={
+			army={
+				small="gfx/leaders/FRR/FRA_Georges_Catroux.dds"
+			}
+			army={
+				large="gfx/leaders/FRR/George_catroux.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = FRA_georges_catroux
+			cost = 200
+			available = { has_tech = trench_warfare }
+			research_bonus = { cat_grand_battle_plan = 0.10 }
+			modifier = {
+			 army_infantry_attack_factor = 0.1
+			 army_infantry_defence_factor = 0.1
+			}
+		}
+		field_marshal={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRR_marcel_garchery={
+		name="Marcel Garchery"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRR/Marcel_Garchery.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRR_joseph_putz={
+		name="Joseph Putz"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRR/Joseph_putz.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRR_gaston_billote={
+		name="Gaston Billote"
+		portraits={
+			army={
+				small="gfx/leaders/FRR/FRA_Gaston_Billote.dds"
+			}
+			army={
+				large="gfx/leaders/FRR/Gaston_Billotte.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = FRA_gaston_billote
+			cost = 200
+			research_bonus = { land_doctrine = 0.10 }
+			 modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRR_raoul_magrinvernerey={
+		name="Raoul Magrin-Vernerey"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRR/Raoul_Magrin_Vernerey.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRR_charles_luizet_={
+		name="Charles Luizet "
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRR/Charles_Luizet.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRR_marcel_déat={
+		name="Marcel Déat"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRR/Portrait_FRR_marcel_deat.tga"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	FRR_georges_valois={
+		name="Georges Valois"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRR/Georges_Valois.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	FRR_emile_muselier={
+		name="Emile Muselier"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRR/Emile_Muselier.dds"
+			}
+		}
+		navy_leader={
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+}

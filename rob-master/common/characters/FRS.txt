@@ -1,0 +1,265 @@
+characters={
+	FRS_paul_ramadier={
+		name="Paul Ramadier"
+		portraits={
+			civilian={
+				large="gfx/leaders/FRS/Portrait_FRS_Paul_Ramadier.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KONSTANTIN_PATS_DESC"
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FRS_maurice_gamelin={
+		name="Maurice Gamelin"
+		portraits={
+			army={
+				small="gfx/leaders/FRS/FRA_Maurice_Gamelin.dds"
+			}
+			army={
+				large="gfx/leaders/FRS/Maurice_Gamelin.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = FRA_maurice_gamelin
+			cost = 200
+			available = { has_tech = trench_warfare }
+			research_bonus = { cat_grand_battle_plan = 0.10 }
+			modifier = {
+			 army_infantry_attack_factor = 0.1
+			 army_infantry_defence_factor = 0.1
+			}
+		}
+		field_marshal={
+			skill=3
+			attack_skill=3
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRS_ernestÉmile_petit={
+		name="Ernest-Émile Petit"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRS/Ernest_Emile_Petit.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRS_georges_maurice_jean_blanchard={
+		name="Georges Maurice Jean Blanchard"
+		portraits={
+			army={
+				small="gfx/leaders/FRS/FRA_jean_blanchard.dds"
+			}
+			army={
+				large="gfx/leaders/FRS/Georges_Maurice_Jean_Blanchard.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = FRA_jean_blanchard
+			cost = 200
+			research_bonus = { land_doctrine = 0.10 }
+			 modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	FRS_henrirol_tanguy={
+		name="Henri-Rol Tanguy"
+		portraits={
+			army={
+				small="GFX_Portrait_Europe_Generic_land_2_small"
+			}
+			army={
+				large="GFX_Portrait_Europe_Generic_land_2"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FRS_pierre_brossolette={
+		name="Pierre Brossolette"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRS/Pierre_Brossolette.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	FRS_andré_marty={
+		name="André Marty"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRS/Andre_Marty.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	FRS_jacques_sadoul={
+		name="Jacques Sadoul"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRS/Jacques_Sadoul.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	FRS_pierre_georges={
+		name="Pierre Georges"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRS/Pierre_Georges.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	FRS_albert_ouzoulias={
+		name="Albert Ouzoulias"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRS/Albert_Ouzoulias.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	FRS_georges_guingouin={
+		name="Georges Guingouin"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRS/Georges_Guingouin.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	FRS_raoul_castex={
+		name="Raoul Castex"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRS/Raoul_Castex.dds"
+			}
+		}
+		navy_leader={
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	FRS_henri_romanspetit={
+		name="Henri Romans-Petit"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FRS/Henri_romans_petit.dds"
+			}
+		}
+		navy_leader={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			maneuvering_skill=3
+			coordination_skill=3
+			legacy_id=-1
+		}
+	}
+}

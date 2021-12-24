@@ -1,0 +1,273 @@
+characters={
+	LIT_kazys_ladiga={
+		name="Kazys Ladiga"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/LIT/Portrait_Lithuania_Kazys_Ladiga.tga"
+			}
+		}
+		corps_commander={
+			traits={ war_hero aggressive_assaulter }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=10001
+		}
+	}
+	LIT_vincas_vitkauskas={
+		name="Vincas Vitkauskas"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/LIT/Portrait_Lithuania_Vincas_Vitkauskas.tga"
+			}
+		}
+		field_marshal={
+			traits={ trait_reckless politically_connected war_hero }
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=10003
+		}
+	}
+	LIT_aleksandras_stulginskis={
+		name="Aleksandras Stulginskis"
+		portraits={
+			civilian={
+				large="gfx/leaders/LIT/Portrait_LIT_Aleksandras_Stulginskis.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ANTANAS_SMETONA_DESC"
+			ideology=conservative_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LIT_antanas_smetona={
+		name="Antanas Smetona"
+		portraits={
+			civilian={
+				large="gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ANTANAS_SMETONA_DESC"
+			ideology=reactionary_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LIT_antanas_snieckus={
+		name="Antanas Snieckus"
+		portraits={
+			civilian={
+				large="gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ANTANAS_SNIECKUS_DESC"
+			ideology=national_socialist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_ANTANAS_SNIECKUS_DESC"
+			ideology=socialist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_ANTANAS_SNIECKUS_DESC"
+			ideology=democratic_socialist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LIT_augustinas_voldemaras={
+		name="Augustinas Voldemaras"
+		portraits={
+			civilian={
+				large="gfx/leaders/LIT/Portrait_Lithuania_Augustinas_Voldemaras.tga"
+			}
+		}
+		country_leader={
+			ideology=pagan_pelekism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LIT_kazys_grinius={
+		name="Kazys Grinius"
+		portraits={
+			civilian={
+				large="gfx/leaders/LIT/Portrait_Lithuania_Grinius.tga"
+			}
+		}
+		country_leader={
+			ideology=social_democracy_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=social_liberal_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LIT_kazys_Škirpa={
+		name="Kazys Škirpa"
+		portraits={
+			civilian={
+				large="gfx/leaders/LIT/Portrait_Lithuania_Kazys_Skirpa_leader.tga"
+			}
+		}
+		field_marshal={
+			traits={ politically_connected war_hero inspirational_leader }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=10002
+		}
+		country_leader={
+			ideology=authoritharian_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LIT_jonas_Černius={
+		name="Jonas Černius"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/LIT/Portrait_Lithuania_Jonas_Cernius.tga"
+			}
+		}
+		corps_commander={
+			traits={ war_hero trickster }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=10000
+		}
+	}
+	LIT_mikas_rėklaitis={
+		name="Mikas Rėklaitis"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/LIT/Portrait_Lithuania_Mikas_Reklaitis.tga"
+			}
+		}
+		corps_commander={
+			traits={ war_hero infantry_leader }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=10004
+		}
+	}
+	LIT_stasys_raštikis={
+		name="Stasys Raštikis"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/LIT/Portrait_Lithuania_Stasys_Rastikis.tga"
+			}
+		}
+		corps_commander={
+			traits={ war_hero aggressive_assaulter }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=10005
+		}
+	}
+
+	LIT_povilas_plechavicius = {
+		name = "Povilas Plechavičius"
+		portraits={
+			army={
+				small="gfx/leaders/LIT/LIT_min_povilas_plechiavius.tga"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = LIT_povilas_plechavicius_hc
+			cost = 200
+			available = { has_tech = trench_warfare }
+			research_bonus = { cat_grand_battle_plan = 0.10 }
+			modifier = {
+			 army_infantry_attack_factor = 0.1
+			 army_infantry_defence_factor = 0.1
+			}
+		}
+	}
+
+	LIT_kazys_musteikis = {
+		name = "Kazys Musteikis"
+		portraits = {
+			army = {
+				small = "gfx/leaders/LIT/LIT_min_kazys_musteikis.tga"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = LIT_kazys_musteikis_hc
+			cost = 200
+			available = { has_tech = trench_warfare }
+			research_bonus = { cat_superior_firepower = 0.10 }
+			modifier = {
+			 army_artillery_attack_factor = 0.1
+			 army_artillery_defence_factor = 0.1
+			}
+		}
+	}
+
+	LIT_stasys_rastikis = {
+		name = "Stasys Raštikis"
+		portraits = {
+			army = {
+				small = "gfx/leaders/LIT/LIT_min_stasys_rastikis.tga"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = LIT_stasys_rastikis_hc
+			cost = 200
+			available = { has_tech = trench_warfare }
+			research_bonus = { cat_mobile_warfare = 0.10 }
+			modifier = {
+			 army_armor_attack_factor = 0.05
+			 army_armor_defence_factor = 0.05
+			 motorized_attack_factor = 0.05
+			 motorized_defence_factor = 0.05
+			}
+		}
+	}
+
+
+}

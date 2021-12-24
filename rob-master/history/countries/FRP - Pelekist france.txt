@@ -60,134 +60,15 @@ set_popularities = {
 	pelekist = 91
 }
 
-create_country_leader = {
-	name = "United Pelekist Congress"
-	desc = "POLITICS_KONSTANTIN_PATS_DESC"
-	picture = "gfx/leaders/FRP/french_pelekist_council.tga"
-	expire = "1965.1.1"
-	ideology = pelekist_subtype
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "Charles Noguès"
-	picture = "Charles_Nogues.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Jean Charles Romatet"
-	picture = "Jean_Charles_Romatet.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Edgard Puaud"
-	picture = "Edgard_Puaud.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Raoul Dagostini "
-	picture = "Raoul_Dagostini.dds"
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Paul Marie Gamory-Dubourdeau"
-	picture = ""
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Joseph Darnand"
-	picture = ""
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Marc Augier"
-	picture = ""
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_navy_leader = {
-name = "Jean de Laborde"
-picture = "Jean_de_Laborde.dds"
-traits = { }
-skill = 4
-attack_skill = 4
-defense_skill = 4
-maneuvering_skill = 4
-coordination_skill = 4
-}
-
-create_navy_leader = {
-name = "Rene Emile Godfroy"
-picture = "Rene_Emile_Godfroy.dds"
-traits = { }
-skill = 4
-attack_skill = 4
-defense_skill = 4
-maneuvering_skill = 4
-coordination_skill = 4
-}
-
-create_navy_leader = {
-name = "Jean-Pierre Esteva"
-picture = "Jean_Pierre_Esteva.dds"
-traits = { }
-skill = 4
-attack_skill = 4
-defense_skill = 4
-maneuvering_skill = 4
-coordination_skill = 4
-}
-
-create_navy_leader = {
-name = "Gabriel Auphan"
-picture = "Gabriel_Auphan.dds"
-traits = { }
-skill = 4
-attack_skill = 4
-defense_skill = 4
-maneuvering_skill = 4
-coordination_skill = 4
-}
+recruit_character = FRP_united_pelekist_congress
+recruit_character = FRP_charles_noguès
+recruit_character = FRP_jean_charles_romatet
+recruit_character = FRP_edgard_puaud
+recruit_character = FRP_raoul_dagostini_
+recruit_character = FRP_paul_marie_gamorydubourdeau
+recruit_character = FRP_joseph_darnand
+recruit_character = FRP_marc_augier
+recruit_character = FRP_jean_de_laborde
+recruit_character = FRP_rene_emile_godfroy
+recruit_character = FRP_jeanpierre_esteva
+recruit_character = FRP_gabriel_auphan
