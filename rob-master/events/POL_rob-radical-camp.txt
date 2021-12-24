@@ -1,56 +1,78 @@
-add_namespace = POL_rob_radical_camp
+add_namespace = POL_rob-radical-camp
 
 #Jewish Revolt
 country_event = {
-	id = POL_rob_radical_camp.1
-	title = POL_rob_radical_camp.1.t
-	desc = POL_rob_radical_camp.1.d
+	id = POL_rob-radical-camp.1
+	title = POL_rob-radical-camp.1.t
+	desc = POL_rob-radical-camp.1.d
 
 	picture = POL_jewish_revolt-474
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+	trigger = {
+		tag = POL
+POL = { has_completed_focus = xxx_give_jewish_property_to_poles }
+	}
+	mean_time_to_happen = { days = 1 }
 	option = {
-		name = POL_rob_radical_camp.1.a
+		name = POL_rob-radical-camp.1.a
+		trigger = {
+			
+		}
 		ai_chance = { factor = 1 }
+		ZOB = { set_state_owner = 67}
+ZOB = { set_state_owner = 863}
+ZOB = { set_state_owner = 92}
+ZOB = { set_state_owner = 1096}
+ZOB = { load_oob = "ZOB_Revolt" }
+POL = { declare_war_on = {
+    target = ZOB
+    type = annex_everything
+} }
+
 		hidden_effect = {
-			every_state = {
-				limit = { is_core_of = POL }
-				add_core_of = ZOB
-			}
-			ZOB = { transfer_state = 67 }
-			ZOB = { transfer_state = 863 }
-			ZOB = { transfer_state = 92 }
-			ZOB = { transfer_state = 1096 }
-			ZOB = { load_oob = "ZOB_Revolt" }
-			POL = { declare_war_on = { target = ZOB type = annex_everything } }
-			PRS = { country_event = { id = POL_rob_radical_camp.2 days = 2 } }
+			PRS = { country_event = {
+    id = POL_rob-radical-camp.2
+    days = 0
+    random =0
+    random_days = 0
+} }
 		}
 	}
 }
 
-#Prussians: Poland Is In Turmoil 
+#Poland Is In Turmoil
 country_event = {
-	id = POL_rob_radical_camp.2
-	title = POL_rob_radical_camp.2.t
-	desc = POL_rob_radical_camp.2.d
+	id = POL_rob-radical-camp.2
+	title = POL_rob-radical-camp.2.t
+	desc = POL_rob-radical-camp.2.d
 
 	picture = POL_poland_is_in_turmoil-552
 	fire_only_once = yes
 	is_triggered_only = yes
-
-	###too risky
 	option = {
-		name = POL_rob_radical_camp.2.a
-		ai_chance = { factor = 0 }	
+		name = POL_rob-radical-camp.2.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
 		hidden_effect = {
+			
 		}
 	}
-
-	###attack poland
 	option = {
-		name = POL_rob_radical_camp.2.b
+		name = POL_rob-radical-camp.2.b
+		trigger = {
+			
+		}
 		ai_chance = { factor = 1 }
-		declare_war_on = { target = POL type = take_state_focusgenerator = { 865 98 97 86 801 66 803 802 } } 
+		declare_war_on = { 
+target = POL 
+type = take_state_focusgenerator = { 865 98 97 86 801 66 803 802 }}
+
+		hidden_effect = {
+			
+		}
 	}
 }

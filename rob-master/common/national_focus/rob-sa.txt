@@ -1,0 +1,641 @@
+focus_tree = {
+	id = rob-sa
+	continuous_focus_position = { x = 0 y = 1000 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = THR
+		}
+	}
+	#Paternalistic Economics
+	focus = {
+		id = THR_paternalistic_economics
+		icon = GFX_THR_paternalistic_economics-88511
+		x = 12
+		y = 2
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = THR_the_people_bank  } prerequisite = { focus = THR_destruction_of_materialism  }
+	}
+
+	#Destruction Of Materialism
+	focus = {
+		id = THR_destruction_of_materialism
+		icon = GFX_THR_destruction_of_materialism-88510
+		x = 13
+		y = 1
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = THR_consult_the_strassers  }
+	}
+
+	#Rise Of The SA
+	focus = {
+		id = THR_rise_of_the_sa
+		icon = GFX_THR_rise_of_the_sa-88498
+		x = 4
+		y = 0
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Purging The Reactionaries
+	focus = {
+		id = THR_purging_the_reactionaries
+		icon = GFX_THR_purging_the_reactionaries-108196
+		x = 1
+		y = 1
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = THR_rise_of_the_sa  }
+	}
+
+	#Consult The Strassers
+	focus = {
+		id = THR_consult_the_strassers
+		icon = GFX_THR_consult_the_strassers-88507
+		x = 13
+		y = 0
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+
+	#The People Bank
+	focus = {
+		id = THR_the_people_bank
+		icon = GFX_THR_the_people_bank-88508
+		x = 10
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = THR_consult_the_strassers  }
+	}
+
+	#Nationalization Of The Unions
+	focus = {
+		id = THR_nationalization_of_the_unions
+		icon = GFX_THR_nationalization_of_the_unions-88513
+		x = 16
+		y = 1
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = THR_consult_the_strassers  }
+	}
+
+	#Worker Controls The Factory
+	focus = {
+		id = THR_worker_controls_the_factory
+		icon = GFX_THR_worker_controls_the_factory-88521
+		x = 14
+		y = 2
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = THR_destruction_of_materialism  } prerequisite = { focus = THR_nationalization_of_the_unions  }
+	}
+
+	#Economic Militarism
+	focus = {
+		id = THR_economic_militarism
+		icon = GFX_THR_economic_militarism-88529
+		x = 11
+		y = 3
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = THR_the_people_bank  } prerequisite = { focus = THR_paternalistic_economics  }
+	}
+
+	#Focus On The Families
+	focus = {
+		id = THR_focus_on_the_families
+		icon = GFX_THR_focus_on_the_families-88535
+		x = 13
+		y = 3
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = THR_destruction_of_materialism  } prerequisite = { focus = THR_paternalistic_economics  } prerequisite = { focus = THR_worker_controls_the_factory  }
+	}
+
+	#Cut Of External Reliances
+	focus = {
+		id = THR_cut_of_external_reliances
+		icon = GFX_THR_cut_of_external_reliances-88537
+		x = 16
+		y = 3
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = THR_nationalization_of_the_unions  } prerequisite = { focus = THR_worker_controls_the_factory  }
+	}
+
+	#Creation Of The International Volksbank
+	focus = {
+		id = THR_creation_of_the_international_volksbank
+		icon = GFX_THR_creation_of_the_international_volksbank-88543
+		x = 14
+		y = 4
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = THR_focus_on_the_families  } prerequisite = { focus = THR_cut_of_external_reliances  }
+	}
+
+	#Empowerment Of Farming Sectors
+	focus = {
+		id = THR_empowerment_of_farming_sectors
+		icon = GFX_THR_empowerment_of_farming_sectors-88552
+		x = 12
+		y = 4
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = THR_economic_militarism  } prerequisite = { focus = THR_focus_on_the_families  }
+	}
+
+	#Austria Today, Germany Tommrow!
+	focus = {
+		id = THR_austriatodaygermanytommrow
+		icon = GFX_THR_austriatodaygermanytommrow-88568
+		x = 13
+		y = 5
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = THR_creation_of_the_international_volksbank  } prerequisite = { focus = THR_empowerment_of_farming_sectors  }
+	}
+
+	#Incorporate The Heimwher
+	focus = {
+		id = THR_incorporate_the_heimwher
+		icon = GFX_THR_incorporate_the_heimwher-107923
+		x = 7
+		y = 1
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = THR_rise_of_the_sa  }
+	}
+
+	#Collaborate with the Ustashe
+	focus = {
+		id = THR_collaborate_with_the_ustashe
+		icon = GFX_THR_collaborate_with_the_ustashe-116030
+		x = 11
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = THR_a_race_against_time  }
+	}
+
+	#A Race against time
+	focus = {
+		id = THR_a_race_against_time
+		icon = GFX_THR_a_race_against_time-116026
+		x = 9
+		y = 6
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+	}
+
+	#Question The Slovenian
+	focus = {
+		id = THR_question_the_slovenian
+		icon = GFX_THR_question_the_slovenian-116031
+		x = 7
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = THR_a_race_against_time  }
+	}
+
+	#Liberate The Balkans
+	focus = {
+		id = THR_liberate_the_balkans
+		icon = GFX_THR_liberate_the_balkans-445
+		x = 9
+		y = 9
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = THR_bring_the_revolution_to_hungary  } prerequisite = { focus = THR_liberatethesudetengermans  } prerequisite = { focus = THR_infiltrate_the_alpes  }
+	}
+
+	#Bring in The Exiles
+	focus = {
+		id = THR_bring_in_the_exiles
+		icon = GFX_THR_bring_in_the_exiles-107921
+		x = 5
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Cooperate With Himmler
+	focus = {
+		id = THR_cooperate_with_himmler
+		icon = GFX_THR_cooperate_with_himmler-108195
+		x = 3
+		y = 1
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+	}
+
+	#Creation Of The Camps
+	focus = {
+		id = THR_creation_of_the_camps
+		icon = GFX_THR_creation_of_the_camps-108201
+		x = 3
+		y = 3
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+	}
+
+	#Letters From Hydrich
+	focus = {
+		id = THR_letters_from_hydrich
+		icon = GFX_THR_letters_from_hydrich-108194
+		x = 6
+		y = 2
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+	}
+
+	#Liquidation Chambers
+	focus = {
+		id = THR_liquidation_chambers
+		icon = GFX_THR_liquidation_chambers-108191
+		x = 5
+		y = 3
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Purge Goering
+	focus = {
+		id = THR_purge_goering
+		icon = GFX_THR_purge_goering-108197
+		x = 2
+		y = 2
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		available = {
+			add_manpower = -1
+			
+		}
+	}
+
+	#Put The Judeo-Marxists in the Camps
+	focus = {
+		id = THR_put_the_judeomarxists_in_the_camps
+		icon = GFX_THR_put_the_judeomarxists_in_the_camps-108198
+		x = 4
+		y = 2
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+	}
+
+	#A Final Solution To Our Woes
+	focus = {
+		id = THR_a_final_solution_to_our_woes
+		icon = GFX_THR_a_final_solution_to_our_woes-108204
+		x = 4
+		y = 4
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+	}
+
+	#Bring The Revolution To Hungary
+	focus = {
+		id = THR_bring_the_revolution_to_hungary
+		icon = GFX_THR_bring_the_revolution_to_hungary-116028
+		x = 11
+		y = 8
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = THR_liberatethesudetengermans  }
+	}
+
+	#Liberate The Sudeten Germans!
+	focus = {
+		id = THR_liberatethesudetengermans
+		icon = GFX_THR_liberatethesudetengermans-116029
+		x = 9
+		y = 8
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = THR_slovakia  } prerequisite = { focus = THR_question_the_slovenian  } prerequisite = { focus = THR_collaborate_with_the_ustashe  }
+	}
+
+	#Slovakia?
+	focus = {
+		id = THR_slovakia
+		icon = GFX_THR_slovakia-116100
+		x = 9
+		y = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = THR_a_race_against_time  }
+	}
+
+	#Strasser Steps In
+	focus = {
+		id = THR_strasser_steps_in
+		icon = GFX_THR_strasser_steps_in-445
+		x = 29
+		y = 0
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+	}
+
+	#Night Of The Longest Knifes
+	focus = {
+		id = THR_night_of_the_longest_knifes
+		icon = GFX_THR_night_of_the_longest_knifes-123443
+		x = 23
+		y = 2
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = THR_question_of_the_hapsburgs  } prerequisite = { focus = THR_the_king_as_a_devine_entity  }
+	}
+
+	#Infiltrate The Alpes
+	focus = {
+		id = THR_infiltrate_the_alpes
+		icon = GFX_THR_infiltrate_the_alpes-116027
+		x = 7
+		y = 8
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = THR_liberatethesudetengermans  }
+	}
+
+	#Military Reform
+	focus = {
+		id = THR_military_reform
+		icon = GFX_THR_military_reform-445
+		x = 31
+		y = 1
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+	}
+
+	#Training The Battalions
+	focus = {
+		id = THR_training_the_battalions
+		icon = GFX_THR_training_the_battalions-123448
+		x = 22
+		y = 3
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = THR_night_of_the_longest_knifes  } prerequisite = { focus = THR_not_two_but_one_germany  }
+	}
+
+	#Recruit The Masses
+	focus = {
+		id = THR_recruit_the_masses
+		icon = GFX_THR_recruit_the_masses-445
+		x = 29
+		y = 1
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+	}
+
+	#A New Empire
+	focus = {
+		id = THR_a_new_empire
+		icon = GFX_THR_a_new_empire-119821
+		x = 21
+		y = 0
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Denounce The Royals
+	focus = {
+		id = THR_denounce_the_royals
+		icon = GFX_THR_denounce_the_royals-119820
+		x = 18
+		y = 1
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = THR_a_new_empire  }
+	}
+
+	#Question Of The Hapsburgs
+	focus = {
+		id = THR_question_of_the_hapsburgs
+		icon = GFX_THR_question_of_the_hapsburgs-119836
+		x = 21
+		y = 1
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = THR_a_new_empire  }
+	}
+
+	#The King As A Devine Entity
+	focus = {
+		id = THR_the_king_as_a_devine_entity
+		icon = GFX_THR_the_king_as_a_devine_entity-123440
+		x = 24
+		y = 1
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = THR_a_new_empire  }
+	}
+
+	#Not Two But One Germany
+	focus = {
+		id = THR_not_two_but_one_germany
+		icon = GFX_THR_not_two_but_one_germany-123444
+		x = 21
+		y = 2
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = THR_question_of_the_hapsburgs  }
+	}
+
+	#Not Prussian But German!
+	focus = {
+		id = THR_notprussianbutgerman
+		icon = GFX_THR_notprussianbutgerman-123672
+		x = 21
+		y = 3
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = THR_not_two_but_one_germany  }
+	}
+
+	#Calling All Those With Truest Hearts
+	focus = {
+		id = THR_calling_all_those_with_truest_hearts
+		icon = GFX_THR_calling_all_those_with_truest_hearts-121751
+		x = 19
+		y = 2
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = THR_denounce_the_royals  } prerequisite = { focus = THR_question_of_the_hapsburgs  }
+	}
+
+	#A Army Guided Of Spirit
+	focus = {
+		id = THR_a_army_guided_of_spirit
+		icon = GFX_THR_a_army_guided_of_spirit-123673
+		x = 20
+		y = 3
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = THR_not_two_but_one_germany  } prerequisite = { focus = THR_calling_all_those_with_truest_hearts  }
+	}
+
+	#The Empire Strikes Back
+	focus = {
+		id = THR_the_empire_strikes_back
+		icon = GFX_THR_the_empire_strikes_back-123694
+		x = 21
+		y = 4
+		cost = 7
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = THR_notprussianbutgerman  } prerequisite = { focus = THR_a_army_guided_of_spirit  }
+	}
+
+	#The Great Debate
+	focus = {
+		id = THR_the_great_debate
+		icon = GFX_THR_the_great_debate-445
+		x = 15
+		y = 8
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = THR_slovakia  }
+	}
+
+	#A Benevolent Overlord
+	focus = {
+		id = THR_a_benevolent_overlord
+		icon = GFX_THR_a_benevolent_overlord-445
+		x = 13
+		y = 10
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Germanization
+	focus = {
+		id = THR_germanization
+		icon = GFX_THR_germanization-445
+		x = 17
+		y = 10
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+	}
+
+	#The Cleansing of The World
+	focus = {
+		id = THR_the_cleansing_of_the_world
+		icon = GFX_THR_the_cleansing_of_the_world-445
+		x = 15
+		y = 10
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_TFV_AUTONOMY
+		}
+	}
+
+	#Hunt them down
+	focus = {
+		id = THR_hunt_them_down
+		icon = GFX_THR_hunt_them_down-445
+		x = 15
+		y = 11
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+
+}

@@ -1,0 +1,60 @@
+the_civil_war = {
+	smuggle_arms_into_austria = {
+		icon = decision_icon_smuggle_arms_into_austria
+		cost = 50
+		days_remove = 15
+		days_re_enable = 30
+		complete_effect = {
+			add_equipment_to_stockpile = {
+ type = infantry_equipment_1 
+amount = 50 
+producer = GER 
+}
+
+		}
+	}
+	influx_of_international_volunteers = {
+		icon = decision_icon_influx_of_international_volunteers
+		activation = {
+			THR = { has_war = yes }
+
+		}
+		is_good = yes
+		days_mission_timeout = 35
+		timeout_effect = {
+			add_manpower = 250
+add_popularity = { 
+ideology = reactionary 
+popularity = 0.1 
+}
+add_popularity = { 
+ideology = pelekism
+popularity = 0.1 
+}
+add_popularity = { 
+ideology = national_socialism
+popularity = 0.1 
+}
+
+		}
+	}
+	empower_the_sturmbaliung = {
+		icon = decision_icon_empower_the_sturmbaliung
+		cost = 25
+		days_remove = 5
+		days_re_enable = 25
+		remove_effect = {
+			load_oob = Sturmbataliung
+
+add_stability = -0.03
+add_popularity = { 
+ideology = national_socialism 
+popularity = 0.03 
+}
+
+		}
+	}
+	empower_the_plf = {
+		icon = decision_icon_empower_the_plf
+	}
+}

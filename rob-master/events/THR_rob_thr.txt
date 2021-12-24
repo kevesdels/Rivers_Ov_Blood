@@ -1,0 +1,866 @@
+add_namespace = THR_rob_thr
+
+#The Civil War Begins
+country_event = {
+	id = THR_rob_thr.1
+	title = THR_rob_thr.1.t
+	desc = THR_rob_thr.1.d
+
+	picture = THR_the_civil_war_begins-445
+	fire_only_once = no
+	trigger = {
+		country_exists = THR
+tag = THR
+	}
+	option = {
+		name = THR_rob_thr.1.a
+		
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+			add_state_core = 807
+			add_state_core = 934
+			add_state_core = 1016
+			add_state_core = 153
+			add_state_core = 1017
+			add_state_core = 4
+			add_state_core = 810
+			add_state_core = 152
+			add_state_core = 806
+			add_state_core = 1015
+			add_state_core = 1023
+			add_state_core = 1022
+			add_state_core = 1021
+			add_state_core = 1020
+			add_state_core = 1018
+			add_state_core = 1019
+			add_state_core = 1127
+			add_state_core = 1128
+			add_state_core = 1219
+		}
+		}
+	}
+}
+
+#??
+country_event = {
+	id = THR_rob_thr.2
+	title = THR_rob_thr.2.t
+	desc = THR_rob_thr.2.d
+
+	picture = THR_unQPfpRZ-445
+	fire_only_once = no
+	trigger = {
+		OR = {
+			AND = {
+  				tag = THR
+  				THR = { surrender_progress > 0.3 } 
+  				has_war_with = ACM
+ 				} 
+			AND = {
+  				tag = THR
+ 				THR = { surrender_progress > 0.3 } 
+  				has_war_with = AUS
+ 				}
+	}
+	option = {
+		name = THR_rob_thr.2.a
+		
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{
+		THR = { load_oob = youth_volunteers }}
+		}
+	}
+}
+
+#??
+country_event = {
+	id = THR_rob_thr.3
+	title = THR_rob_thr.3.t
+	desc = THR_rob_thr.3.d
+
+	picture = THR_HghutVWr-445
+	fire_only_once = no
+	trigger = {
+		tag = THR
+THR = {
+    has_war_with = AUS
+	}
+	option = {
+		name = THR_rob_thr.3.a
+		
+	}
+}
+
+#??
+country_event = {
+	id = THR_rob_thr.4
+	title = THR_rob_thr.4.t
+	desc = THR_rob_thr.4.d
+
+	picture = THR_GmspnHUr-445
+	is_triggered_only = no
+	option = {
+		name = THR_rob_thr.4.a
+		
+	}
+	option = {
+		name = THR_rob_thr.4.b
+		
+	}
+}
+
+#The Civil War Ends
+country_event = {
+	id = THR_rob_thr.5
+	title = THR_rob_thr.5.t
+	desc = THR_rob_thr.5.d
+
+	picture = THR_the_civil_war_ends-445
+	fire_only_once = no
+	trigger = {
+		tag = THR
+has_idea = austrian_civil_war
+has_full_control_of_state = {
+0 = 4
+1 = 152
+2 = 153
+3 = 806
+4 = 807
+5 = 1015
+6 = 1016
+7 = 1017
+8 = 1018
+9 = 1020
+10 = 1021
+11 = 1022
+12 = 1023
+	}
+	option = {
+		name = THR_rob_thr.5.a
+		
+{
+		    id = third_reich.3
+		    days = 1
+		    random = 1
+			}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{
+				THR = {
+				annex_country = {
+    			target = AUS
+    			transfer_troops = NO
+				}
+				annex_country = {
+    			target = ACM
+    			transfer_troops = NO
+				}
+				remove_ideas = {
+				austrian_civil_war
+				extensive_conscription
+				}
+				add_ideas = {   
+            	limited_conscription
+            	}
+        		set_country_flag = AUS_civil_war_ended
+					}}
+		}
+	}
+	option = {
+		name = THR_rob_thr.5.b
+		
+	}
+}
+
+#What To Do With Fascists
+country_event = {
+	id = THR_rob_thr.6
+	title = THR_rob_thr.6.t
+	desc = THR_rob_thr.6.d
+
+	picture = THR_what_to_do_with_fascists-445
+	is_triggered_only = no
+	fire_only_once = no
+	option = {
+		name = THR_rob_thr.6.a
+		
+-10000
+-20
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = third_reich.4
+		    days = 2
+		    random = 2
+			}
+		}
+		}
+	}
+	option = {
+		name = THR_rob_thr.6.b
+		
+25000
+20
+{
+		    ideology = reactionary
+		    popularity = 0.07
+			},{
+		    ideology = authoritharian
+		    popularity = 0.04
+			}
+-0.05
+-50
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = third_reich.4
+		    days = 2
+		    random = 2
+			}
+		}
+		}
+	}
+}
+
+#??
+country_event = {
+	id = THR_rob_thr.7
+	title = THR_rob_thr.7.t
+	desc = THR_rob_thr.7.d
+
+	picture = THR_LReUOFNY-445
+	is_triggered_only = no
+	fire_only_once = no
+	option = {
+		name = THR_rob_thr.7.a
+		
+-15000
+{
+		    ideology = socialist
+		    popularity = -0.10
+			},{
+		    ideology = democratic_socialist
+		    popularity = -0.4
+			}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = third_reich.5
+		    days = 2
+		    random = 2
+			}
+		}
+		}
+	}
+	option = {
+		name = THR_rob_thr.7.b
+		
+{
+		    ideology = socialist
+		    popularity = 0.10
+			},{
+		    ideology = national_socialist
+		    popularity = 0.05
+			},{
+		    ideology = democratic_socialist
+		    popularity = 0.03
+			}
+-0.15
+-50
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = third_reich.6
+		    days = 2
+		    random = 2
+			}
+		}
+		}
+	}
+}
+
+#??
+country_event = {
+	id = THR_rob_thr.8
+	title = THR_rob_thr.8.t
+	desc = THR_rob_thr.8.d
+
+	picture = THR_CYfHoeUT-445
+	fire_only_once = no
+	trigger = {
+		THR = {
+	controls_state = 1017
+	num_of_controlled_states = 1
+	}
+	option = {
+		name = THR_rob_thr.8.a
+		
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{
+		add_ideas{
+		 festung_bregenz 
+		}
+	 }
+		}
+	}
+	option = {
+		name = THR_rob_thr.8.b
+		
+		hidden_effect = {
+			{
+
+	if = {
+    	limit = {ACM = {controls_state = 153}}
+    	ACM = {
+    	annex_country = {
+    target = THR
+    transfer_troops = no
+    				}
+	}
+}
+    if = {
+    	limit = {AUS = {controls_state = 153}}
+    	AUS = {
+    	annex_country = {
+    target = THR
+    transfer_troops = no
+   						 }
+			}
+    	}
+	}
+		}
+	}
+}
+
+#??
+country_event = {
+	id = THR_rob_thr.9
+	title = THR_rob_thr.9.t
+	desc = THR_rob_thr.9.d
+
+	picture = THR_KNmAGLvf-445
+	fire_only_once = no
+	trigger = {
+		THR = {
+	has_idea = festung_bregenz
+	num_of_controlled_states = 3
+	}
+	option = {
+		name = THR_rob_thr.9.a
+		
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{
+			remove_ideas{
+		 	festung_bregenz }}
+		}
+	}
+	option = {
+		name = THR_rob_thr.9.b
+		
+		hidden_effect = {
+			{
+
+	if = {
+    	limit = {ACM = {controls_state = 153}}
+    	ACM = {
+    	annex_country = {
+    target = THR
+    transfer_troops = no
+    				}
+	}
+}
+    if = {
+    	limit = {AUS = {controls_state = 153}}
+    	AUS = {
+    	annex_country = {
+    target = THR
+    transfer_troops = no
+   						 }
+			}
+    	}
+	}
+		}
+	}
+}
+
+#??
+country_event = {
+	id = THR_rob_thr.10
+	title = THR_rob_thr.10.t
+	desc = THR_rob_thr.10.d
+
+	picture = THR_PdoKMaqh-445
+	is_triggered_only = no
+	fire_only_once = no
+	option = {
+		name = THR_rob_thr.10.a
+		
+-15000
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = 
+		    days = 2
+		    random = 2
+			}
+		}
+		}
+	}
+	option = {
+		name = THR_rob_thr.10.b
+		
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = 
+		    days = 2
+		    random = 2
+			}
+		}
+		}
+	}
+}
+
+#??
+country_event = {
+	id = THR_rob_thr.11
+	title = THR_rob_thr.11.t
+	desc = THR_rob_thr.11.d
+
+	picture = THR_ciYzmqEf-445
+	is_triggered_only = no
+	fire_only_once = no
+	option = {
+		name = THR_rob_thr.11.a
+		
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = third_reich.7
+		    days = 2
+		    random = 2
+			}
+		}
+		}
+	}
+	option = {
+		name = THR_rob_thr.11.b
+		
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = 
+		    days = 2
+		    random = 2
+			}
+		}
+		}
+	}
+}
+
+#??
+country_event = {
+	id = THR_rob_thr.12
+	title = THR_rob_thr.12.t
+	desc = THR_rob_thr.12.d
+
+	picture = THR_FLkBAnmH-445
+	is_triggered_only = no
+	fire_only_once = no
+	option = {
+		name = THR_rob_thr.12.a
+		
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = third_reich.8
+		    days = 2
+		    random = 2
+			}
+		}
+		}
+	}
+	option = {
+		name = THR_rob_thr.12.b
+		
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = 
+		    days = 2
+		    random = 2
+			}
+		}
+		}
+	}
+}
+
+#??
+country_event = {
+	id = THR_rob_thr.13
+	title = THR_rob_thr.13.t
+	desc = THR_rob_thr.13.d
+
+	picture = THR_CMOUPViq-445
+	is_triggered_only = no
+	fire_only_once = no
+	option = {
+		name = THR_rob_thr.13.a
+		
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = third_reich.9
+		    days = 2
+		    random = 2 
+			}
+		}
+		}
+	}
+	option = {
+		name = THR_rob_thr.13.b
+		
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = 
+		    days = 2
+		    random = 2
+			}
+		}
+		}
+	}
+}
+
+#??
+country_event = {
+	id = THR_rob_thr.14
+	title = THR_rob_thr.14.t
+	desc = THR_rob_thr.14.d
+
+	picture = THR_VCBKQDJu-445
+	is_triggered_only = no
+	fire_only_once = no
+	option = {
+		name = THR_rob_thr.14.a
+		
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = third_reich.10
+		    days = 1
+		    random = 1
+			}
+		}
+		}
+	}
+	option = {
+		name = THR_rob_thr.14.b
+		
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			{ 
+		tag = THR
+		country_event = {
+		    id = third_reich.11
+		    days = 1
+		    random = 1
+			}
+		}
+		}
+	}
+}
+
+#The Situation In Austria
+country_event = {
+	id = THR_rob_thr.15
+	title = THR_rob_thr.15.t
+	desc = THR_rob_thr.15.d
+
+	picture = THR_the_situation_in_austria-516
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		THR = {
+
+	country_exists = THR
+}
+
+
+	}
+	timeout_days = 14
+	option = {
+		name = THR_rob_thr.15.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		AUS = {
+	country_event = {
+days = 1 
+id = THR_rob_thr.16
+}
+
+}
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The Situation Continued
+country_event = {
+	id = THR_rob_thr.16
+	title = THR_rob_thr.16.t
+	desc = THR_rob_thr.16.d
+
+	picture = THR_the_situation_continued-514
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = THR_rob_thr.16.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		AUS = {
+	country_event = {
+days = 1 
+id = THR_rob_thr.17
+}
+
+}
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The Parties
+country_event = {
+	id = THR_rob_thr.17
+	title = THR_rob_thr.17.t
+	desc = THR_rob_thr.17.d
+
+	picture = THR_the_parties-578
+	fire_only_once = yes
+	option = {
+		name = THR_rob_thr.17.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The July Coup
+country_event = {
+	id = THR_rob_thr.18
+	title = THR_rob_thr.18.t
+	desc = THR_rob_thr.18.d
+
+	picture = THR_the_july_coup-492
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		AUS = {
+	date >  1934.1.5
+
+}
+
+
+	}
+	option = {
+		name = THR_rob_thr.18.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		AUS = {
+	country_event = {
+        days = 10 
+        id = THR_rob_thr.18
+        }
+
+}
+
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Hotel Schiff Incident
+country_event = {
+	id = THR_rob_thr.19
+	title = THR_rob_thr.19.t
+	desc = THR_rob_thr.19.d
+
+	picture = THR_hotel_schiff_incident-62280
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = THR_rob_thr.19.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Dollfuss is Dead
+country_event = {
+	id = THR_rob_thr.20
+	title = THR_rob_thr.20.t
+	desc = THR_rob_thr.20.d
+
+	picture = THR_dollfuss_is_dead-1
+	fire_only_once = yes
+	option = {
+		name = THR_rob_thr.20.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = THR_rob_thr.20.b
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = THR_rob_thr.20.c
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The Death of Germany
+country_event = {
+	id = THR_rob_thr.21
+	title = THR_rob_thr.21.t
+	desc = THR_rob_thr.21.d
+
+	picture = THR_the_death_of_germany-1
+	option = {
+		name = THR_rob_thr.21.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Rohm-Otto Rivalry
+country_event = {
+	id = THR_rob_thr.22
+	title = THR_rob_thr.22.t
+	desc = THR_rob_thr.22.d
+
+	picture = THR_rohmotto_rivalry-460
+	option = {
+		name = THR_rob_thr.22.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			set_variable = {
+	var = Otto_power
+	value = 25
+}
+set_variable = {
+	var = Rohm_power
+	value = 25
+}
+		}
+	}
+}
+
+#Operational Situation Report Austria No.21
+country_event = {
+	id = THR_rob_thr.23
+	title = THR_rob_thr.23.t
+	desc = THR_rob_thr.23.d
+
+	picture = THR_operational_situation_report_austria_no21-107618
+}
+
+#Operational Situation Report no.10
+country_event = {
+	id = THR_rob_thr.24
+	title = THR_rob_thr.24.t
+	desc = THR_rob_thr.24.d
+
+	picture = THR_operational_situation_report_no10-1
+}
+
+#Victory, Finally?
+country_event = {
+	id = THR_rob_thr.25
+	title = THR_rob_thr.25.t
+	desc = THR_rob_thr.25.d
+
+	picture = THR_victory_finally-1
+}
