@@ -196,16 +196,9 @@ guiTypes = {
 				
 		background = {
 			name = "Background"		
-			spriteType = "GFX_mainmenu_background_animated"
+			quadTextureSprite ="GFX_tiled_window"
 		}
-		
-		iconType = {
-			name = "background"
-			position = { x=42 y =5 }
-			spriteType = "GFX_mainmenu_background_animated"
-			pdx_tooltip = "SOCIAL_NEW_MESSAGE"
-		}
-
+			
 		ButtonType = {
 			name = "single_player_button"
 			position = { x = 16 y = 18 }

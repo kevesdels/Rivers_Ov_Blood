@@ -2,15 +2,16 @@ ideas = {
 
 country = {
 
-WLL_german_military_missions = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WLL_german_military_mission" }
+		WLL_german_military_missions = {
+		picture = 
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WLL_german_military_missions" }
 			modifier = {
 				conscription_factor = -0.15
 				stability_factor = -0.05
 			}
-			picture = 
 		}
 		WLL_socialist_paramilitaries = {
+			picture = 
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WLL_socialist_paramilitaries" }
 			modifier = {
 				consumer_goods_factor = -0.12
@@ -18,15 +19,14 @@ WLL_german_military_missions = {
 				army_core_defence_factor = 0.05
 				resistance_target = -0.1
 			}
-			picture = 
 		}
 		WLL_wallonian_nationalism = {
+			picture = 
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea WLL_wallonian_nationalism" }
 			modifier = {
 				political_power_gain = -0.04
 				stability_factor = -0.1
 			}
-			picture = 
 		}	
 	}
 	}
