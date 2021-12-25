@@ -3,11 +3,15 @@ characters={
 		name="Hermann Boehm"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_GER_hermann_boehm.dds"
-			}
-			army={
+				small="gfx/interface/ideas/GER_hermann_bohem.tga"
 				large="gfx/leaders/GER/Portrait_Germany_Hermann_Boehm.dds"
 			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = GER_hermann_boehm
+			traits = { navy_chief_decisive_battle_2 }
+			cost = 150
 		}
 		navy_leader={
 			traits={ craven superior_tactician }
@@ -23,11 +27,15 @@ characters={
 		name="Erich von Manstein"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/interface/ideas/GER_eric_von_manstein.tga"
 				large="gfx/leaders/GER/Portrait_GER_Erich_Von_Manstein_DPRK_uniform-1.tga"
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GER_erich_von_manstein
+			traits = { army_logistics_3 }
+			cost = 150
 		}
 		field_marshal={
 			traits={ war_hero infantry_leader }
@@ -43,11 +51,15 @@ characters={
 		name="Kurt Eisner"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/interface/ideas/GER_kurt_eisner.tga"
 				large="gfx/leaders/GER/kurt_eisner.tga"
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GER_erich_von_manstein
+			traits = { army_entrenchment_2 }
+			cost = 150
 		}
 		field_marshal={
 			traits={ trait_reckless politically_connected war_hero }
@@ -168,6 +180,12 @@ characters={
 			 motorized_defence_factor = 0.06
 			}
 		}
+		advisor={
+			slot = high_command
+			idea_token = GER_rommel_hc
+			traits = { army_chief_maneuver_2 }
+			cost = 150
+		}
 		corps_commander={
 			traits={ trait_reckless media_personality armor_officer war_hero trickster }
 			skill=3
@@ -264,15 +282,19 @@ characters={
 			legacy_id=6
 		}
 	}
-	GER_ernst_thälmann={
+	GER_ernst_thalmann={
 		name="Ernst Thälmann"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/interface/ideas/GER_ernst_thalmann.tga"
 				large="gfx/leaders/GER/Ernst_Thälmann.tga"
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GER_ernst_thalmann
+			traits = { army_infantry_1 }
+			cost = 150
 		}
 		corps_commander={
 			traits={ trait_reckless politically_connected aggressive_assaulter }
@@ -288,11 +310,15 @@ characters={
 		name="Karl Liebknecht"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/interface/ideas/GER_karl_lieknacht.tga"
 				large="gfx/leaders/GER/karl_liebknecht.dds"
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GER_karl_lieknacht
+			traits = { army_regrouping_2 }
+			cost = 150
 		}
 		field_marshal={
 			traits={ trait_reckless politically_connected war_hero inspirational_leader }
@@ -348,11 +374,15 @@ characters={
 		name="Fritz Erich Fellgiebel"
 		portraits={
 			army={
-				small=""
+				small="gfx/interface/ideas/GER_erich_fellgiebel.tga"
+				large="gfx/leaders/GER/Portrait_GER_Fritz_Erich_Fellgiebel.tga"
 			}
-			army={
-				large="gfx/leaders/GER/Portrait_GER_Fritz Erich Fellgiebel.tga"
-			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = GER_fritz_erich
+			traits = { army_chief_defensive_2 }
+			cost = 150
 		}
 		corps_commander={
 			traits={ inflexible_strategist war_hero trickster }
@@ -388,11 +418,15 @@ characters={
 		name="Alwin-Broder Albrecht"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_GER_karl_donitz.dds"
-			}
-			army={
+				small="gfx/interface/ideas/GER_alwin_albrecht.tga"
 				large="gfx/leaders/GER/Portrait_Germany_Karl_Donitz.dds"
 			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = GER_alwin_albrecht
+			traits = { navy_fleet_logistics_1 }
+			cost = 150
 		}
 		navy_leader={
 			traits={ navy_career_officer seawolf }
@@ -404,15 +438,19 @@ characters={
 			legacy_id=26
 		}
 	}
-	GER_alfred_saalwächter={
+	GER_alfred_saalwachter={
 		name="Alfred Saalwächter"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_GER_alfred_saalwachter.dds"
-			}
-			army={
+				small="gfx/interface/ideas/GER_alfred_sallwachter.tga"
 				large="gfx/leaders/GER/Portrait_Germany_Alfred_Saalwachter.dds"
 			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = GER_alfred_saalwachter
+			traits = { navy_chief_commerce_raiding_3 }
+			cost = 150
 		}
 		navy_leader={
 			traits={ old_guard_navy bold }
@@ -444,7 +482,7 @@ characters={
 			legacy_id=30
 		}
 	}
-	GER_günther_lütjens={
+	GER_gunther_lutjens={
 		name="Günther Lütjens"
 		portraits={
 			army={
@@ -462,6 +500,77 @@ characters={
 			maneuvering_skill=1
 			coordination_skill=1
 			legacy_id=31
+		}
+	}
+
+	GER_erich_muchsam={
+		name="Erich Mühsam"
+		portraits={
+			army={
+				small="gfx/interface/ideas/GER_erich_muhsam.tga"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = GER_fritz_erich
+			traits = { army_chief_offensive_2 }
+			cost = 150
+		}
+	}
+	GER_franz_erich={
+		name="Franz Erdmann Mehring"
+		portraits={
+			army={
+				small="gfx/interface/ideas/GER_franz_erdmann_mehrin.tga"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = GER_fritz_erich
+			traits = { army_chief_drill_2 }
+			cost = 150
+		}
+	}
+	GER_walther_wever={
+		name="Walther Wever"
+		portraits={
+			army={
+				small="gfx/interface/ideas/GER_walther_wever.tga"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = GER_walther_wever
+			traits = { air_tactical_bombing_3 }
+			cost = 150
+		}
+	}
+	GER_albert_kesselring={
+		name="Albert Kesselring"
+		portraits={
+			army={
+				small="gfx/interface/ideas/GER_albert_kesselring.tga"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = GER_albert_kesselring
+			traits = { air_pilot_training_2 }
+			cost = 150
+		}
+	}
+	GER_hans_jurgen_stumpff={
+		name="Hans-Jürgen Stumpff"
+		portraits={
+			army={
+				small="gfx/interface/ideas/GER_hans_jurgen_stumpff.tga"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = GER_albert_kesselring
+			traits = { air_bomber_interception_2 }
+			cost = 150
 		}
 	}
 }

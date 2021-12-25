@@ -18,8 +18,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/leaders/FRR/FRA_Georges_Catroux.dds"
-			}
-			army={
 				large="gfx/leaders/FRR/George_catroux.dds"
 			}
 		}
@@ -33,6 +31,13 @@ characters={
 			 army_infantry_attack_factor = 0.1
 			 army_infantry_defence_factor = 0.1
 			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FRA_georges_catroux
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_chief_drill_2 }
 		}
 		field_marshal={
 			skill=3
@@ -66,11 +71,17 @@ characters={
 		name="Joseph Putz"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/leaders/FRR/FRA_Joseph_Putz.dds"
 				large="gfx/leaders/FRR/Joseph_putz.dds"
 			}
+		}
+		advisor = {
+			ledger = army
+			slot = high_command
+			idea_token = FRA_joseph_putz
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_regrouping_2 }
 		}
 		corps_commander={
 			skill=2
@@ -101,6 +112,13 @@ characters={
 				army_infantry_defence_factor = 0.05
 				}
 		}
+		advisor = {
+			slot = army_chief
+			idea_token = FRA_gaston_billotte
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_chief_defensive_2 }
+		}
 		corps_commander={
 			skill=2
 			attack_skill=2
@@ -114,11 +132,17 @@ characters={
 		name="Raoul Magrin-Vernerey"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/leaders/FRR/FRA_Raoul_Magrin_Vernerry.dds"
 				large="gfx/leaders/FRR/Raoul_Magrin_Vernerey.dds"
 			}
+		}
+		advisor = {
+			ledger = army
+			slot = high_command
+			idea_token = FRA_raoul_magrin_vernerry
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_commando_2 }
 		}
 		corps_commander={
 			skill=2
@@ -129,13 +153,11 @@ characters={
 			legacy_id=-1
 		}
 	}
-	FRR_charles_luizet_={
+	FRR_charles_luizet={
 		name="Charles Luizet "
 		portraits={
 			army={
 				small=""
-			}
-			army={
 				large="gfx/leaders/FRR/Charles_Luizet.dds"
 			}
 		}
@@ -148,34 +170,21 @@ characters={
 			legacy_id=-1
 		}
 	}
-	FRR_marcel_déat={
+	FRR_marcel_deat={
 		name="Marcel Déat"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/leaders/FRR/FRA_Marcel_Deat.tga"
 				large="gfx/leaders/FRR/Portrait_FRR_marcel_deat.tga"
 			}
 		}
-		corps_commander={
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
-		}
-	}
-	FRR_georges_valois={
-		name="Georges Valois"
-		portraits={
-			army={
-				small=""
-			}
-			army={
-				large="gfx/leaders/FRR/Georges_Valois.dds"
-			}
+		advisor = {
+			ledger = army
+			slot = high_command
+			idea_token = FRA_marcel_deat
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_concealment_2 }
 		}
 		corps_commander={
 			skill=1
@@ -190,11 +199,16 @@ characters={
 		name="Emile Muselier"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/interface/ideas/idea_emile_muselier.dds"
 				large="gfx/leaders/FRR/Emile_Muselier.dds"
 			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = emile_muselier
+			cost = 150
+			available = { has_completed_focus = FRA_marine_nationale }
+			traits = { navy_chief_maneuver_2 }
 		}
 		navy_leader={
 			skill=4
@@ -202,6 +216,22 @@ characters={
 			defense_skill=4
 			maneuvering_skill=1
 			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	FRR_georges_valois={
+		name="Georges Valois"
+		portraits={
+			army={
+				large="gfx/leaders/FRR/Georges_Valois.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
 			legacy_id=-1
 		}
 	}

@@ -3,11 +3,15 @@ characters={
 		name="Erich Raeder"
 		portraits={
 			army={
-				small="GFX_Portrait_Europe_Generic_navy_1_small"
+				small="gfx/interface/ideas/PRS_erich_raeder.tga"
+				large="gfx/leaders/GER/Portrait_Germany_Erich_Raeder.dds"
 			}
-			army={
-				large="GFX_Portrait_Europe_Generic_navy_1"
-			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = PRS_erich_raeder
+			traits = { navy_chief_decisive_battle_3 }
+			cost = 150
 		}
 		navy_leader={
 			traits={ battleship_adherent naval_lineage }
@@ -23,11 +27,17 @@ characters={
 		name="Wilhelm Keitel"
 		portraits={
 			army={
-				small="GFX_Portrait_Europe_Generic_land_1_small"
+				small="gfx/interface/ideas/PRS_willhelm_keitel.tga"
 				large="gfx/leaders/PRS/Wilhelm_Keitel.dds"
 			}
 		}
-		field_marshal={
+		advisor={
+			slot = high_command
+			idea_token = PRS_wilhelm_keitel
+			traits = { army_entrenchment_2 }
+			cost = 150
+		}
+		corps_commander={
 			traits={ politically_connected }
 			skill=2
 			attack_skill=2
@@ -42,8 +52,14 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Alfred_Jodl.dds"
-				small="gfx/interface/ideas/idea_GER_alfred_jodl.dds"
+				small="gfx/interface/ideas/PRS_alfred_jodl.tga"
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = PRS_alfred_jodl
+			traits = { army_infantry_1 }
+			cost = 150
 		}
 		corps_commander={
 			traits={ war_hero }
@@ -59,11 +75,15 @@ characters={
 		name="Wilhelm Ritter von Leeb"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/interface/ideas/PRS_willhelm_ritter_von_leeb.tga"
 				large="gfx/leaders/PRS/Wilhelm_Ritter_von_Leeb.dds"
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = PRS_wilhelm_ritter_von_leeb
+			traits = { army_artillery_2 }
+			cost = 150
 		}
 		field_marshal={
 			traits={ trait_reckless infantry_officer offensive_doctrine }
@@ -307,13 +327,19 @@ characters={
 			legacy_id=9999997
 		}
 	}
-	PRS_karl_dönitz={
+	PRS_karl_donitz={
 		name="Karl Dönitz"
 		portraits={
 			army={
-				small="GFX_Portrait_Europe_Generic_navy_1_small"
-				large="GFX_Portrait_Europe_Generic_navy_1"
+				small="gfx/interface/ideas/PRS_karl_donitz.tga"
+				large="gfx/leaders/GER/Portrait_Germany_Karl_Donitz.dds"
 			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = PRS_karl_donitz
+			traits = { navy_chief_commerce_raiding_3 }
+			cost = 150
 		}
 		navy_leader={
 			traits={ navy_career_officer seawolf }
@@ -345,6 +371,12 @@ characters={
 			 army_infantry_defence_factor = 0.1
 			}
 		}
+		advisor={
+			slot = army_chief
+			idea_token = PRS_walther_model
+			traits = { army_entrenchment_3 }
+			cost = 150
+		}
 		field_marshal={
 			traits={ brilliant_strategist trait_cautious politically_connected defensive_doctrine }
 			skill=3
@@ -353,6 +385,183 @@ characters={
 			planning_skill=2
 			logistics_skill=2
 			legacy_id=10
+		}
+	}
+
+	PRS_walther_nehring ={
+		name="Walther Nehring"
+		portraits={
+			army={
+				small="gfx/interface/ideas/PRS_walther_nehring.tga"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = PRS_walther_nehring
+			traits = { army_chief_offensive_2 }
+			cost = 150
+		}
+	}
+
+	PRS_willy_langkeit ={
+		name="Willy Langkeit"
+		portraits={
+			army={
+				small="gfx/interface/ideas/PRS_willy_langheit.tga"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = PRS_willy_langkeit
+			traits = { army_armored_2 }
+			cost = 150
+		}
+	}
+
+	PRS_fedor_von_bock={
+		name="Fedor von Bock"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Fedor_von_Bock.dds"
+				small="gfx/interface/ideas/PRS_fedor_von_bocvk.tga"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = PRS_fedor_von_bocvk
+			traits = { army_artillery_2 }
+			cost = 150
+		}
+		corps_commander={
+			traits={ trait_cautious harsh_leader }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=9
+		}
+	}
+
+	PRS_hermann_von_der_lieth ={
+		name="Hermann von der Lieth-Thomsen"
+		portraits={
+			army={
+				small="gfx/interface/ideas/PRS_herman_von_der_lieht.tga"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = PRS_hermann_von_der_lieth
+			traits = { air_air_superiority_3 }
+			cost = 150
+		}
+	}
+
+	PRS_karl_bodenschatz ={
+		name="Karl Bodenschatz"
+		portraits={
+			army={
+				small="gfx/interface/ideas/PRS_karl_bodenschatz.tga"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = PRS_karl_bodenschatz
+			traits = { air_close_air_support_2 }
+			cost = 150
+		}
+	}
+
+	PRS_heinrich_danckelmann ={
+		name="Heinrich Danckelmann"
+		portraits={
+			army={
+				small="gfx/interface/ideas/PRS_heinrich_danckelmann.tga"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = PRS_heinrich_danckelmann
+			traits = { air_bomber_interception_2 }
+			cost = 150
+		}
+	}
+
+	PRS_gerd_von_rundstedt={
+		name="Gerd von Rundstedt"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Gerd_von_Rundstedt.dds"
+				small="gfx/interface/ideas/PRS_gerd_von_rundstedt.tga"
+			}
+		}	
+		advisor={
+			slot = high_command
+			idea_token = PRS_gerd_von_rundstedt
+			ledger = army
+			traits = { army_chief_maneuver_3 }
+			cost = 150
+		}
+		corps_commander={
+			traits={ urban_assault_specialist }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=1
+		}
+	}
+
+	PRS_gunther_von_kluge={
+		name="Günther von Kluge"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Gunther_von_Kluge.dds"
+				small="gfx/interface/ideas/PRS_gunterh_von_kluge.tga"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = PRS_gunther_von_kluge
+			ledger = army
+			traits = { army_chief_morale_2 }
+			cost = 150
+		}
+		field_marshal={
+			traits={ armor_officer offensive_doctrine }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=2
+		}
+	}
+
+	PRS_georg_von_kuchler={
+		name="Georg von Küchler"
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Georg_von_Kuchler.dds"
+				small="gfx/interface/ideas/PRS_georg_von_kuchler.tga"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = PRS_georg_von_kuchler
+			ledger = army
+			traits = { army_chief_planning_3 }
+			cost = 150
+		}
+		corps_commander={
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=22
 		}
 	}
 

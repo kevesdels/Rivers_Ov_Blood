@@ -17,11 +17,17 @@ characters={
 		name="Charles Noguès"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/leaders/FRP/FRA_charles_nogues.dds"
 				large="gfx/leaders/FRP/Charles_Nogues.dds"
 			}
+		}
+		advisor = {
+			ledger = army
+			slot = high_command
+			idea_token = FRA_charles_nogues
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_entrenchment_2 }
 		}
 		field_marshal={
 			skill=3
@@ -36,11 +42,17 @@ characters={
 		name="Jean Charles Romatet"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/leaders/FRP/FRA_Jean_Charles_Romatet.dds"
 				large="gfx/leaders/FRP/Jean_Charles_Romatet.dds"
 			}
+		}
+		advisor = {
+			ledger = army
+			slot = high_command
+			idea_token = FRA_jean_romatet
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_concealment_2 }
 		}
 		corps_commander={
 			skill=3
@@ -55,11 +67,17 @@ characters={
 		name="Edgard Puaud"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/leaders/FRP/FRA_Edgar_Puaud.dds"
 				large="gfx/leaders/FRP/Edgard_Puaud.dds"
 			}
+		}
+		advisor = {
+			ledger = army
+			slot = high_command
+			idea_token = FRA_edgar_puaud
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_commando_2 }
 		}
 		corps_commander={
 			skill=3
@@ -71,12 +89,10 @@ characters={
 		}
 	}
 	FRP_raoul_dagostini_={
-		name="Raoul Dagostini "
+		name="Raoul Dagostini"
 		portraits={
 			army={
 				small=""
-			}
-			army={
 				large="gfx/leaders/FRP/Raoul_Dagostini.dds"
 			}
 		}
@@ -113,8 +129,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/leaders/FRP/FRA_Joseph_Darnand.dds"
-			}
-			army={
 				large="GFX_Portrait_Europe_Generic_land_2"
 			}
 		}
@@ -127,6 +141,13 @@ characters={
 				army_infantry_attack_factor = 0.05
 				army_infantry_defence_factor = 0.05
 				}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FRA_joseph_darnand_2
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_chief_offensive_2 }
 		}
 		corps_commander={
 			skill=2
@@ -142,8 +163,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_Portrait_Europe_Generic_land_2_small"
-			}
-			army={
 				large="GFX_Portrait_Europe_Generic_land_2"
 			}
 		}
@@ -179,11 +198,24 @@ characters={
 		name="Rene Emile Godfroy"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/leaders/FRP/FRA_Rene_Godfroy.dds"
 				large="gfx/leaders/FRP/Rene_Emile_Godfroy.dds"
 			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = FRA_rene_godfroy_nc
+			cost = 150
+			available = { has_completed_focus = FRA_marine_nationale }
+			traits = { navy_chief_commerce_raiding_2 }
+		}
+		advisor = {
+			ledger = navy
+			slot = high_command
+			idea_token = FRA_Rene_Godfroy_hc
+			cost = 150
+			available = { has_completed_focus = FRA_marine_nationale }
+			traits = { navy_screen_2 }
 		}
 		navy_leader={
 			skill=4
@@ -198,11 +230,16 @@ characters={
 		name="Jean-Pierre Esteva"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/leaders/FRP/FRA_Jean_Pierre_Esteva.dds"
 				large="gfx/leaders/FRP/Jean_Pierre_Esteva.dds"
 			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = FRA_jean_esteva
+			cost = 150
+			available = { has_completed_focus = FRA_marine_nationale }
+			traits = { navy_chief_naval_aviation_2 }
 		}
 		navy_leader={
 			skill=4
@@ -218,8 +255,6 @@ characters={
 		portraits={
 			army={
 				small=""
-			}
-			army={
 				large="gfx/leaders/FRP/Gabriel_Auphan.dds"
 			}
 		}
@@ -232,4 +267,37 @@ characters={
 			legacy_id=-1
 		}
 	}
+
+	FRP_jacques_doriot={
+		name="Jacques Doriot"
+		portraits={
+			army={
+				small="gfx/leaders/FRP/FRA_Jacques_Doriot.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FRA_jacques_doriot_2
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_chief_morale_2 }
+		}
+	}
+
+	FRP_alfred_hertaux={
+		name="Alfred Heurtaux"
+		portraits={
+			army={
+				small="gfx/leaders/FRL/FRA_Alfred_Hertaux.dds"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = FRA_alfred_hertaux
+			cost = 150
+			available = { has_completed_focus = FRA_armeedelair }
+			traits = { air_chief_ground_support_2 }
+		}
+	}
+
 }

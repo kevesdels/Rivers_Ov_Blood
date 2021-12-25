@@ -18,8 +18,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/leaders/FRS/FRA_Maurice_Gamelin.dds"
-			}
-			army={
 				large="gfx/leaders/FRS/Maurice_Gamelin.dds"
 			}
 		}
@@ -33,6 +31,13 @@ characters={
 			 army_infantry_attack_factor = 0.1
 			 army_infantry_defence_factor = 0.1
 			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = maurice_gamelin
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_commando_2 }
 		}
 		field_marshal={
 			skill=3
@@ -95,11 +100,17 @@ characters={
 		name="Henri-Rol Tanguy"
 		portraits={
 			army={
-				small="GFX_Portrait_Europe_Generic_land_2_small"
-			}
-			army={
+				small="gfx/leaders/FRS/FRA_henri_rol_tanguy.dds"
 				large="GFX_Portrait_Europe_Generic_land_2"
 			}
+		}
+		advisor = {
+			ledger = army
+			slot = high_command
+			idea_token = FRA_henri_tanguy
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_commando_2 }
 		}
 		corps_commander={
 			skill=2
@@ -133,11 +144,16 @@ characters={
 		name="André Marty"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/leaders/FRS/FRA_Andre_Marty.dds"
 				large="gfx/leaders/FRS/Andre_Marty.dds"
 			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FRA_andre_marty_2
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_chief_morale_2 }
 		}
 		corps_commander={
 			skill=1
@@ -152,11 +168,16 @@ characters={
 		name="Jacques Sadoul"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/leaders/FRS/FRA_Jacques_Sadoul.dds"
 				large="gfx/leaders/FRS/Jacques_Sadoul.dds"
 			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FRA_jacques_sadoul
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_logistics_2 }
 		}
 		corps_commander={
 			skill=1
@@ -228,11 +249,24 @@ characters={
 		name="Raoul Castex"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/leaders/FRS/FRA_Raoul_Castex.dds"
 				large="gfx/leaders/FRS/Raoul_Castex.dds"
 			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = FRA_raoul_castex
+			cost = 150
+			available = { has_completed_focus = FRA_marine_nationale }
+			traits = { navy_chief_naval_aviation_2 }
+		}
+		advisor = {
+			ledger = navy
+			slot = high_command
+			idea_token = FRA_raoul_castex
+			cost = 150
+			available = { has_completed_focus = FRA_marine_nationale }
+			traits = { navy_anti_submarine_2 }
 		}
 		navy_leader={
 			skill=4
@@ -248,8 +282,6 @@ characters={
 		portraits={
 			army={
 				small=""
-			}
-			army={
 				large="gfx/leaders/FRS/Henri_romans_petit.dds"
 			}
 		}
@@ -262,4 +294,21 @@ characters={
 			legacy_id=-1
 		}
 	}
+	
+	FRS_joseph_vuillemin={
+		name="Joseph Vuillemin"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_fra_joseph_vuillemin.dds"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = joseph_vuillemin
+			cost = 150
+			available = { has_completed_focus = FRA_armeedelair }
+			traits = { air_chief_ground_support_2 }
+		}
+	}
+
 }
