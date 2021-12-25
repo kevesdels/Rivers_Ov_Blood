@@ -57,8 +57,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_gregory_zhukov.dds"
-			}
-			army={
 				large="gfx/leaders/SOV/Portrait_Soviet_Gregory_Zhukov.dds"
 			}
 		}
@@ -89,11 +87,21 @@ characters={
 		name="Aleksandr Vasilevsky"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_SOV_aleksandr_vasilevsky.dds"
-			}
-			army={
+				small="gfx/interface/ideas/RSR_aleksander_vasilyveskly.tga"
 				large="gfx/leaders/SOV/Portrait_Soviet_Aleksandr_Vasilevsky.dds"
 			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = RSR_aleksandr_vasilevsky
+			traits = { army_entrenchment_2 }
+			cost = 150
+		}
+		advisor={
+			slot = high_command
+			idea_token = RSR_aleksandr_vasilevsky
+			traits = { army_armored_1 }
+			cost = 150
 		}
 		corps_commander={
 			traits={ armor_officer politically_connected }
@@ -109,9 +117,7 @@ characters={
 		name="Boris Shaposhnikov"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_SOV_boris_shaposhnikov.dds"
-			}
-			army={
+				small="gfx/interface/ideas/RSR_boris_shapishdks.tga"
 				large="gfx/leaders/SOV/Portrait_Soviet_Boris_Shaposhnikov.dds"
 			}
 		}
@@ -125,6 +131,12 @@ characters={
 			 army_artillery_attack_factor = 0.1
 			 army_artillery_defence_factor = 0.1
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = RSR_boris_shapishdks
+			traits = { army_artillery_2 }
+			cost = 150
 		}
 		corps_commander={
 			traits={ career_officer trait_cautious }
@@ -140,11 +152,15 @@ characters={
 		name="Ivan Konev"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_SOV_ivan_konev.dds"
-			}
-			army={
+				small="gfx/interface/ideas/RSR_ivan_kovenev.tga"
 				large="gfx/leaders/SOV/Portrait_Soviet_Ivan_Konev.dds"
 			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = RSR_ivan_kovenev
+			traits = { army_armored_2 }
+			cost = 150
 		}
 		corps_commander={
 			traits={ harsh_leader armor_officer politically_connected }
@@ -160,11 +176,15 @@ characters={
 		name="Semyon Timoshenko"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_SOV_semyon_timoshenko.dds"
-			}
-			army={
+				small="gfx/interface/ideas/RSR_semyon_timoshenko.tga"
 				large="gfx/leaders/SOV/Portrait_Soviet_Semyon_Timoshenko.dds"
 			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = RSR_semyon_timoshenko
+			traits = { army_cavalry_2 }
+			cost = 150
 		}
 		corps_commander={
 			traits={ career_officer cavalry_officer politically_connected }
@@ -180,9 +200,7 @@ characters={
 		name="Kliment Voroshilov"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_SOV_kliment_voroshilov.dds"
-			}
-			army={
+				small="gfx/interface/ideas/RSR_kliment_vorshilov.tga"
 				large="gfx/leaders/SOV/Portrait_Soviet_Kliment_Voroshilov.dds"
 			}
 		}
@@ -196,6 +214,12 @@ characters={
 			 army_infantry_attack_factor = 0.1
 			 army_infantry_defence_factor = 0.1
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = RSR_kliment_vorshilov
+			traits = { army_chief_planning_2 }
+			cost = 150
 		}
 		field_marshal={
 			traits={ old_guard inflexible_strategist politically_connected }
@@ -211,11 +235,15 @@ characters={
 		name="Semyon Budyonny"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_SOV_semyon_budyonny.dds"
-			}
-			army={
+				small="gfx/interface/ideas/RSR_semyonov_budynvo.tga"
 				large="gfx/leaders/SOV/Portrait_Soviet_Semyon_Budyonny.dds"
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = RSR_semyonov_budynvo
+			traits = { army_chief_old_guard }
+			cost = 150
 		}
 		advisor = {
 			slot = theorist
@@ -241,11 +269,15 @@ characters={
 		name="Issa Pliyev"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_SOV_issa_pliyev.dds"
-			}
-			army={
+				small="gfx/interface/ideas/RSR_issa_plyev.tga"
 				large="gfx/leaders/SOV/Portrait_Soviet_Issa_Pliyev.dds"
 			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = RSR_issa_plyev
+			traits = { army_chief_offensive_2 }
+			cost = 150
 		}
 		corps_commander={
 			traits={ cavalry_officer }
@@ -262,8 +294,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_leonid_govorov.dds"
-			}
-			army={
 				large="gfx/leaders/SOV/Portrait_Soviet_Leonid_Govorov.dds"
 			}
 		}
@@ -301,8 +331,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_kirill_meretskov.dds"
-			}
-			army={
 				large="gfx/leaders/SOV/Portrait_Soviet_Kirill_Meretskov.dds"
 			}
 		}
@@ -321,8 +349,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_andrey_vlasov.dds"
-			}
-			army={
 				large="gfx/leaders/SOV/Portrait_Soviet_Andrey_Vlasov.dds"
 			}
 		}
@@ -340,10 +366,8 @@ characters={
 		name="Nikolai Berzarin"
 		portraits={
 			army={
-				small="GFX_Portrait_Soviet_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_Soviet_Generic_land_1"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Nikolay_Berzarin.dds"
+				small="gfx/interface/ideas/idea_SOV_nikolai_berzarin.dds"
 			}
 		}
 		corps_commander={
@@ -361,8 +385,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_rodion_malinovsky.dds"
-			}
-			army={
 				large="gfx/leaders/SOV/Portrait_Soviet_Rodion_Malinovsky.dds"
 			}
 		}
@@ -380,10 +402,8 @@ characters={
 		name="Vasily Chuikov"
 		portraits={
 			army={
-				small="GFX_Portrait_Soviet_Generic_land_1_small"
-			}
-			army={
-				large="GFX_Portrait_Soviet_Generic_land_1"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Vasily_Chuykov.dds"
+				small="gfx/interface/ideas/idea_SOV_vasily_chuikov.dds"
 			}
 		}
 		corps_commander={
@@ -400,13 +420,17 @@ characters={
 		name="Yevgeny Berens"
 		portraits={
 			army={
-				small="GFX_Portrait_Soviet_Generic_navy_1_small"
-			}
-			army={
+				small="gfx/interface/ideas/RSR_yevgeny_barens.tga"
 				large="GFX_Portrait_Soviet_Generic_navy_1"
 			}
 		}
-		navy_leader={
+		advisor ={
+			slot = navy_chief
+			idea_token = RSR_aleksander_nemitz
+			traits = { navy_chief_reform_2 }
+			cost = 150
+		}
+		advisor ={
 			traits={ ironside ground_pounder }
 			skill=2
 			attack_skill=3
@@ -420,11 +444,15 @@ characters={
 		name="Aleksandr Nemits"
 		portraits={
 			army={
-				small="GFX_Portrait_Soviet_Generic_navy_1_small"
-			}
-			army={
+				small="gfx/interface/ideas/RSR_aleksander_nemitz.tga"
 				large="GFX_Portrait_Soviet_Generic_navy_1"
 			}
+		}
+		advisor ={
+			slot = navy_chief
+			idea_token = RSR_aleksander_nemitz
+			traits = { navy_chief_old_guard }
+			cost = 150
 		}
 		navy_leader={
 			traits={ bold navy_career_officer }
@@ -434,6 +462,87 @@ characters={
 			maneuvering_skill=1
 			coordination_skill=1
 			legacy_id=411
+		}
+	}
+	SOV_novkikov={
+		name="Alexander Novikov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/RSR_novikov.tga"
+			}
+		}
+		advisor ={
+			slot = air_chief
+			idea_token = RSR_novikov
+			available = { has_completed_focus = SOV_novikovsplan }
+			traits = { air_close_air_support_3 }
+			cost = 150
+		}
+	}
+	SOV_alksnis={
+		name="Yakov Alksnis"
+		portraits={
+			army={
+				small="gfx/interface/ideas/RSR_alksnis.tga"
+			}
+		}
+		advisor ={
+			slot = air_chief
+			idea_token = RSR_novikov
+			available = { has_completed_focus = SOV_alksnisplan }
+			traits = { air_tactical_bombing_3 }
+			cost = 150
+		}
+	}
+	SOV_aleksandr_yegorov = {
+		name = "Alexander Yegorov"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/RSR_aleksander_yegorov.tga"
+				large = "GFX_portrait_SOV_aleksandr_yegorov"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = RSR_alexander_yegorov_hc
+			traits = { army_chief_drill_2 }
+			cost = 150
+		}
+
+		field_marshal = {
+			traits = { career_officer inflexible_strategist trait_reckless }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = 0
+		}	
+	}
+
+	SOV_vasily_blyukher = {
+		name = "Vasily Blyukher"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/RSR_vasily_bluckher.tga"
+				large = "GFX_portrait_SOV_blyukher"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = RSR_vasily_blyukher_hc
+			traits = { army_chief_defensive_2 }
+			cost = 150
+		}
+
+		field_marshal = {
+			traits = { old_guard career_officer infantry_officer organizer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 0
 		}
 	}
 }

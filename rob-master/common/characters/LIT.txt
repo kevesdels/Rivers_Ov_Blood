@@ -3,11 +3,16 @@ characters={
 		name="Kazys Ladiga"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/interface/ideas/LIT_kazys_ladiga.tga"
 				large="gfx/leaders/LIT/Portrait_Lithuania_Kazys_Ladiga.tga"
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LIT_kazys_ladiga
+			available = { has_completed_focus = LIT_defensivedoctrine }
+			traits = { army_infantry_1 }
+			cost = 150
 		}
 		corps_commander={
 			traits={ war_hero aggressive_assaulter }
@@ -23,11 +28,15 @@ characters={
 		name="Vincas Vitkauskas"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/interface/ideas/LIT_vincas_vitauskas.tga"
 				large="gfx/leaders/LIT/Portrait_Lithuania_Vincas_Vitkauskas.tga"
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LIT_vincas_vitauskas
+			traits = { army_chief_maneuver_3 }
+			cost = 150
 		}
 		field_marshal={
 			traits={ trait_reckless politically_connected war_hero }
@@ -124,12 +133,21 @@ characters={
 			id=-1
 		}
 	}
-	LIT_kazys_Škirpa={
+	LIT_kazys_skirpa={
 		name="Kazys Škirpa"
 		portraits={
 			civilian={
 				large="gfx/leaders/LIT/Portrait_Lithuania_Kazys_Skirpa_leader.tga"
 			}
+			army={
+				small="gfx/interface/ideas/LIT_kazys_skirpa.tga"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LIT_kazys_skirpa
+			traits = { army_regrouping_2 }
+			cost = 150
 		}
 		field_marshal={
 			traits={ politically_connected war_hero inspirational_leader }
@@ -146,15 +164,20 @@ characters={
 			id=-1
 		}
 	}
-	LIT_jonas_Černius={
+	LIT_jonas_cernius={
 		name="Jonas Černius"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/interface/ideas/LIT_jonas_cernius.tga"
 				large="gfx/leaders/LIT/Portrait_Lithuania_Jonas_Cernius.tga"
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LIT_jonas_cernius
+			available = { has_completed_focus = LIT_defensivedoctrine }
+			traits = { army_chief_morale_2 }
+			cost = 150
 		}
 		corps_commander={
 			traits={ war_hero trickster }
@@ -166,15 +189,19 @@ characters={
 			legacy_id=10000
 		}
 	}
-	LIT_mikas_rėklaitis={
+	LIT_mikas_reklaitis={
 		name="Mikas Rėklaitis"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/interface/ideas/LIT_mikas_reklaitis.tga"
 				large="gfx/leaders/LIT/Portrait_Lithuania_Mikas_Reklaitis.tga"
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LIT_mikas_reklaitis
+			traits = { army_infantry_2 }
+			cost = 150
 		}
 		corps_commander={
 			traits={ war_hero infantry_leader }
@@ -186,15 +213,19 @@ characters={
 			legacy_id=10004
 		}
 	}
-	LIT_stasys_raštikis={
+	LIT_stasys_rastikis={
 		name="Stasys Raštikis"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="gfx/interface/ideas/idea_LIT_stasys_rastikis.dds"
 				large="gfx/leaders/LIT/Portrait_Lithuania_Stasys_Rastikis.tga"
 			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LIT_stasys_rastikis
+			traits = { army_commando_2 }
+			cost = 150
 		}
 		corps_commander={
 			traits={ war_hero aggressive_assaulter }
@@ -268,6 +299,132 @@ characters={
 			}
 		}
 	}
+
+	LIT_juozas_barzda_bradauskas = {
+		name = "Juozas Barzda-Bradauskas"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/LIT_jouzas_bradauskas.tga"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = LIT_juozas_barzda_bradauskas
+			available = { has_completed_focus = LIT_defensivedoctrine }
+			traits = { army_entrenchment_2 }
+			cost = 150
+		}
+	}
+
+	LIT_juozas_barzda_bradauskas = {
+		name = "Juozas Barzda-Bradauskas"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/LIT_jouzas_bradauskas.tga"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = LIT_juozas_barzda_bradauskas
+			available = { has_completed_focus = LIT_defensivedoctrine }
+			traits = { army_entrenchment_2 }
+			cost = 150
+		}
+	}
+
+	LIT_edvardas_adamkavicius = {
+		name = "Edvardas Adamkavičius"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/LIT_edvardas_adamkavicius.tga"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = LIT_edvardas_adamkavicius
+			available = { has_completed_focus = LIT_offensivedoctrine }
+			traits = { army_chief_offensive_2 }
+			cost = 150
+		}
+	}
+
+	LIT_julius_caplikas = {
+		name = "Julius Čaplikas"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/LIT_juliuss_caplikas.tga"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = LIT_julius_caplikas
+			traits = { army_chief_planning_2 }
+			cost = 150
+		}
+	}
+
+	LIT_adomas_daugirdas = {
+		name = "Adomas Daugirdas"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/LIT_adomas_daugdiras.tga"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = LIT_adomas_daugirdas
+			traits = { navy_chief_commerce_raiding_1 }
+			cost = 150
+		}
+	}
+
+
+	LIT_juozas_andzejauskas = {
+		name = "Juozas Andžejauskas"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/LIT_jouzas_andzejauskas.tga"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = LIT_juozas_andzejauskas
+			traits = { navy_chief_reform_1 }
+			cost = 150
+		}
+	}
+
+	LIT_ignas_adamkavicius = {
+		name = "Ignas Adamkavičius"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/LIT_ignas_adamkavicius.tga"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = LIT_ignas_adamkavicius
+			traits = { air_chief_safety_3 }
+			cost = 150
+		}
+	}
+	
+	LIT_jurgis_dobkevicius = {
+		name = "Jurgis Dobkevičius"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/LIT_jurgis_dobkevicius.tga"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = LIT_jurgis_dobkevicius
+			traits = { air_chief_ground_support_2 }
+			cost = 150
+		}
+	}
+
+	
 
 
 }
