@@ -1,0 +1,30 @@
+####################
+###Avant Garde Russia Events
+####################
+
+add_namespace = rob_holland
+
+###rape the flanders
+country_event = { 
+id =  rob_holland.1
+title =  "The New Opportunities"
+desc = "Now that we are allied with the French, we can finally begin to adress the rebelling province."
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+ name = "Prepare Invasion"
+ create_wargoal = { type = annex_everything target = FLA }
+ 6 = { add_core_of = HOL }
+}
+
+option = {
+ name = "Now is not the time..."
+ add_political_power = -30
+ add_stability = -0.03
+}
+
+}
+
+###End of country scope
+}

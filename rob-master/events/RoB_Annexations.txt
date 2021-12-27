@@ -88,6 +88,20 @@ country_event = {
 	add_core_of = THR
 	THR = { transfer_state = PREV }
 }
+if = { 
+  limit = { ROOT = { has_government = pelekist } }
+ THR = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+ }
+ if = { 
+  limit = { 
+    AND = { 
+      ROOT = { NOT = { has_government = pelekist } }
+        THR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+      }
+    } 
+    THR = { drop_cosmetic_tag = yes }
+}
+
  }
  
  option = { ###continue occupation
@@ -153,7 +167,21 @@ country_event = {
         }
       } 
       SWI = { drop_cosmetic_tag = yes }
-  }  
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   SWI = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          SWI = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      SWI = { drop_cosmetic_tag = yes }
+  }
+
  }
  
  option = {
@@ -182,21 +210,49 @@ country_event = {
 	
   }
   FRR = {  transfer_state = 892 }
-   if = { 
-  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
-  SWI = {
-  set_cosmetic_tag = Generic_puppet_socialist
-  } 
- }
-   if = { 
-    limit = { 
-      AND = { 
-          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
-          SWI = { has_cosmetic_tag = Generic_puppet_socialist } 
-        }
-      } 
-      SWI = { drop_cosmetic_tag = yes }
-  } 
+  SWI = {set_cosmetic_tag = Generic_puppet_socialist } 
+
+  }
+
+  option = {
+    name = "Annex East, Puppet the Rest"
+    trigger = { tag = FRP 892 = { is_owned_and_controlled_by = FRP } }
+    ai_chance = { factor = 2000  }
+    892 = { add_core_of = FRP }
+    puppet = SWI
+    every_owned_state = {
+      limit = { 
+       NOT = {
+      is_claim_or_core = yes
+     }
+        is_core_of = SWI
+    }
+    SWI = { transfer_state = PREV }
+    
+    }
+    FRP = {  transfer_state = 892 }
+     if = { 
+      limit = { 
+        AND = { 
+            ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+            SWI = { has_cosmetic_tag = Generic_puppet_socialist } 
+          }
+        } 
+        SWI = { drop_cosmetic_tag = yes }
+    }
+    if = { 
+      limit = { ROOT = { has_government = pelekist } }
+     SWI = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+     }
+     if = { 
+      limit = { 
+        AND = { 
+          ROOT = { NOT = { has_government = pelekist } }
+            SWI = { has_cosmetic_tag = Generic_puppet_pelekist } 
+          }
+        } 
+        SWI = { drop_cosmetic_tag = yes }
+    }
   }
 
  option = {
@@ -294,6 +350,21 @@ option = { ###liberate French Socialist Republic
 	add_core_of = FRS
 	FRS = { transfer_state = PREV }
 }
+if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  FRS = {
+  set_cosmetic_tag = Generic_puppet_socialist
+  } 
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          FRS = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      FRS = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = { ###liberate French Republic
@@ -339,6 +410,19 @@ option = { ###liberate French Socialist Republic
 	}
 	add_core_of = FRP
 	FRP = { transfer_state = PREV }
+}
+if = { 
+  limit = { ROOT = { has_government = pelekist } }
+  FRP = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+ }
+ if = { 
+  limit = { 
+    AND = { 
+      ROOT = { NOT = { has_government = pelekist } }
+      FRP = { has_cosmetic_tag = Generic_puppet_pelekist } 
+      }
+    } 
+    FRP = { drop_cosmetic_tag = yes }
 }
  }
  
@@ -399,6 +483,19 @@ country_event = {
       } 
       SPR = { drop_cosmetic_tag = yes }
   }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   SPR = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        SPR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      SPR = { drop_cosmetic_tag = yes }
+  } 
  }
  
  option = {
@@ -496,7 +593,46 @@ country_event = {
       } 
       SPR = { drop_cosmetic_tag = yes }
   }  
- }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   SPR = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        SPR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      SPR = { drop_cosmetic_tag = yes }
+  } 
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   BSQ = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        BSQ = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      BSQ = { drop_cosmetic_tag = yes }
+  } 
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   CAT = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        CAT = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      CAT = { drop_cosmetic_tag = yes }
+  } 
+}
 }
 
 
@@ -543,7 +679,20 @@ country_event = {
         }
       } 
       POR = { drop_cosmetic_tag = yes }
-  }  
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   POR = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        POR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      POR = { drop_cosmetic_tag = yes }
+  }   
  }
  
  option = {
@@ -601,6 +750,21 @@ option = { ###liberate British Socialist Republic
 	add_core_of = BLF
 	BLF = { transfer_state = PREV }
 }
+if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  BLF = {
+  set_cosmetic_tag = Generic_puppet_socialist
+  } 
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          BLF = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      BLF = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = { ###liberate French Republic
@@ -647,6 +811,19 @@ option = { ###liberate British Socialist Republic
 	add_core_of = BRU
 	BRU = { transfer_state = PREV }
 }
+if = { 
+  limit = { ROOT = { has_government = pelekist } }
+ BRU = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+ }
+ if = { 
+  limit = { 
+    AND = { 
+      ROOT = { NOT = { has_government = pelekist } }
+      BRU = { has_cosmetic_tag = Generic_puppet_pelekist } 
+      }
+    } 
+    BRU = { drop_cosmetic_tag = yes }
+} 
  }
  
  option = { ###continue occupation
@@ -706,7 +883,20 @@ country_event = {
         }
       } 
       IRE = { drop_cosmetic_tag = yes }
-  }  
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   IRE = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        IRE = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      IRE = { drop_cosmetic_tag = yes }
+  } 
  }
  
  option = {
@@ -764,7 +954,20 @@ country_event = {
         }
       } 
       LUX = { drop_cosmetic_tag = yes }
-  }  
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   LUX = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        LUX = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      LUX = { drop_cosmetic_tag = yes }
+  }   
  }
  
  option = {
@@ -772,6 +975,14 @@ country_event = {
   trigger = { tag = FRR 8 = { is_owned_and_controlled_by = FRR } }
   ai_chance = { factor = 2000  }
   8 = { add_core_of = FRR }
+  set_country_flag = annex_lux
+  }
+
+ option = {
+  name = "Annex Luxembourg"
+  trigger = { tag = FRP 8 = { is_owned_and_controlled_by = FRP } }
+  ai_chance = { factor = 2000  }
+  8 = { add_core_of = FRP }
   set_country_flag = annex_lux
   }
 
@@ -831,7 +1042,20 @@ country_event = {
         }
       } 
       WLL = { drop_cosmetic_tag = yes }
-  }  
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   WLL = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        WLL = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      WLL = { drop_cosmetic_tag = yes }
+  }   
  }
  
  option = {
@@ -850,12 +1074,23 @@ country_event = {
 
   option = {
     name = "Annex Wallonia"
-    trigger = { tag = FRR 34 = { is_owned_and_controlled_by = FRR } 813 = { is_owned_and_controlled_by = FRR } }
+    trigger = { tag = FRR OR = { 34 = { is_owned_and_controlled_by = FRR } 812 = { is_owned_and_controlled_by = FRR } } }
     ai_chance = { factor = 2000  }
     34 = { add_core_of = FRR }
+    812 = { add_core_of = FRR } 
     813 = { add_core_of = FRR }
-    set_country_flag = annex_lux
+    set_country_flag = annex_wll
     }
+
+    option = {
+      name = "Annex Wallonia"
+      trigger = { tag = FRP OR = { 34 = { is_owned_and_controlled_by = FRP } 812 = { is_owned_and_controlled_by = FRP } } }
+      ai_chance = { factor = 2000  }
+      34 = { add_core_of = FRP }
+      812 = { add_core_of = FRP } 
+      813 = { add_core_of = FRP }
+      set_country_flag = annex_wll
+      }
 
  option = {
   name = "Create Flanders-Wallonia"
@@ -887,7 +1122,19 @@ country_event = {
       } 
       WLL = { drop_cosmetic_tag = yes }
   }
-
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   WLL = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        WLL = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      WLL = { drop_cosmetic_tag = yes }
+  } 
  } 
  
  option = {
@@ -945,6 +1192,19 @@ country_event = {
         }
       } 
       FLA = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   FLA = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        FLA = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      FLA = { drop_cosmetic_tag = yes }
   }  
  }
  
@@ -979,7 +1239,27 @@ country_event = {
       } 
       WLL = { drop_cosmetic_tag = yes }
   }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   WLL = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        WLL = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      WLL = { drop_cosmetic_tag = yes }
+  } 
  }
+
+ option = {
+  name = "Give it to our Dutch Ally"
+  trigger = { tag = FRP 6 = { is_owned_and_controlled_by = FRP } is_in_faction_with = HOL }
+  ai_chance = { factor = 4000  }
+  HOL = { transfer_state = 6 }
+  }
  
  option = {
   name = "Continue Military Occupation"
@@ -1035,7 +1315,20 @@ country_event = {
         }
       } 
       HOL = { drop_cosmetic_tag = yes }
-  }  
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   HOL = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        HOL = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      HOL = { drop_cosmetic_tag = yes }
+  } 
  }
  
  option = {
@@ -1093,6 +1386,19 @@ country_event = {
       } 
       DEN = { drop_cosmetic_tag = yes }
   }  
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   DEN = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        DEN = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      DEN = { drop_cosmetic_tag = yes }
+  } 
  }
  
  option = {
@@ -1151,6 +1457,19 @@ country_event = {
       } 
       SWE = { drop_cosmetic_tag = yes }
   }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   SWE = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        SWE = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      SWE = { drop_cosmetic_tag = yes }
+  } 
  }
  
  option = {
@@ -1209,7 +1528,20 @@ country_event = {
         }
       } 
       FIN = { drop_cosmetic_tag = yes }
-  }  
+  } 
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   FIN = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        FIN = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      FIN = { drop_cosmetic_tag = yes }
+  } 
  }
  
  option = {
@@ -1322,6 +1654,19 @@ country_event = {
       } 
       POL = { drop_cosmetic_tag = yes }
   }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   POL = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        POL = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      POL = { drop_cosmetic_tag = yes }
+  } 
  }
  }
  
@@ -1381,7 +1726,20 @@ country_event = {
         }
       } 
       CZE = { drop_cosmetic_tag = yes }
-  }  
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   CZE = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+        CZE = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      CZE = { drop_cosmetic_tag = yes }
+  }   
  }
  
  option = {
@@ -1437,6 +1795,19 @@ country_event = {
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
           SLO = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      SLO = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   SLO = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          SLO = { has_cosmetic_tag = Generic_puppet_pelekist } 
         }
       } 
       SLO = { drop_cosmetic_tag = yes }
@@ -1510,6 +1881,19 @@ country_event = {
       }
     }
   }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   HUN = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          HUN = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      HUN = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -1554,17 +1938,32 @@ country_event = {
 	}
 	CRO = { transfer_state = PREV }
   }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   CRO = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
  if = { 
   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
- CRO = {
-  set_cosmetic_tag = Generic_puppet_socialist
-  } 
+ CRO = {  set_cosmetic_tag = Generic_puppet_socialist } 
  }  
    if = { 
     limit = { 
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
           CRO = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      CRO = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   CRO = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          CRO = { has_cosmetic_tag = Generic_puppet_pelekist } 
         }
       } 
       CRO = { drop_cosmetic_tag = yes }
@@ -1650,6 +2049,19 @@ country_event = {
       }
     }
   }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   BOS = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          BOS = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      BOS = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -1704,6 +2116,19 @@ country_event = {
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
           SER = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      SER = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   SER = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          SER = { has_cosmetic_tag = Generic_puppet_pelekist } 
         }
       } 
       SER = { drop_cosmetic_tag = yes }
@@ -1770,6 +2195,19 @@ country_event = {
       } 
       ROM = { drop_cosmetic_tag = yes }
   }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   ROM = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          ROM = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      ROM = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -1825,6 +2263,19 @@ country_event = {
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
           BUL = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      BUL = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   BUL = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          BUL = { has_cosmetic_tag = Generic_puppet_pelekist } 
         }
       } 
       BUL = { drop_cosmetic_tag = yes }
@@ -1888,6 +2339,19 @@ country_event = {
       } 
       ALB = { drop_cosmetic_tag = yes }
   }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   ALB = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          ALB = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      ALB = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -1942,6 +2406,19 @@ country_event = {
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
           GRE = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      GRE = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   GRE = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          GRE = { has_cosmetic_tag = Generic_puppet_pelekist } 
         }
       } 
       GRE = { drop_cosmetic_tag = yes }
@@ -2003,6 +2480,19 @@ country_event = {
       } 
       TUR = { drop_cosmetic_tag = yes }
   } 
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   TUR = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          TUR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      TUR = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -2066,6 +2556,19 @@ country_event = {
  hidden_effect = {
   LIT = { remove_ideas = { pelekists_rising semi_loyal_military pearl_of_stability } }
  }
+ if = { 
+  limit = { ROOT = { has_government = pelekist } }
+ LIT = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+ }
+ if = { 
+  limit = { 
+    AND = { 
+      ROOT = { NOT = { has_government = pelekist } }
+        LIT = { has_cosmetic_tag = Generic_puppet_pelekist } 
+      }
+    } 
+    LIT = { drop_cosmetic_tag = yes }
+}
  }
 
  option = {
@@ -2117,6 +2620,32 @@ country_event = {
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
           LIT = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      LIT = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   SAG = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          SAG = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      SAG = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   LIT = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          LIT = { has_cosmetic_tag = Generic_puppet_pelekist } 
         }
       } 
       LIT = { drop_cosmetic_tag = yes }
@@ -2175,6 +2704,19 @@ country_event = {
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
           NOR = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      NOR = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   NOR = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          NOR = { has_cosmetic_tag = Generic_puppet_pelekist } 
         }
       } 
       NOR = { drop_cosmetic_tag = yes }
@@ -2280,6 +2822,21 @@ country_event = {
 	add_core_of = BLR
 	BLR = { transfer_state = PREV }
 }
+
+if = { 
+  limit = { ROOT = { has_government = pelekist } }
+ BLR = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+ }
+ if = { 
+  limit = { 
+    AND = { 
+      ROOT = { NOT = { has_government = pelekist } }
+        BLR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+      }
+    } 
+    BLR = { drop_cosmetic_tag = yes }
+}
+
  }
  option = {
   name = "Continue Military Occupation"
@@ -2333,21 +2890,7 @@ country_event = {
 	add_core_of = UKR
 	UKR = { transfer_state = PREV }
 }
-if = { 
-  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
-  UKR = {
-  set_cosmetic_tag = Generic_puppet_socialist
-  } 
- }  
-    if = { 
-    limit = { 
-      AND = { 
-          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
-          UKR = { has_cosmetic_tag = Generic_puppet_socialist } 
-        }
-      } 
-      UKR = { drop_cosmetic_tag = yes }
-  }
+  UKR = { set_cosmetic_tag = Generic_puppet_socialist } 
  }
 
 
@@ -2370,20 +2913,19 @@ if = {
  DSU = { transfer_state = PREV }
  }
  if = { 
-  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
-  DSU = {
-  set_cosmetic_tag = Generic_puppet_socialist
-  } 
- }  
-    if = { 
-    limit = { 
-      AND = { 
-          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
-          DSU = { has_cosmetic_tag = Generic_puppet_socialist } 
-        }
-      } 
-      DSU = { drop_cosmetic_tag = yes }
-  }
+  limit = { ROOT = { has_government = pelekist } }
+ DSU = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+ }
+ if = { 
+  limit = { 
+    AND = { 
+      ROOT = { NOT = { has_government = pelekist } }
+        DSU = { has_cosmetic_tag = Generic_puppet_pelekist } 
+      }
+    } 
+    DSU = { drop_cosmetic_tag = yes }
+}
+
 }
 
 
@@ -2405,6 +2947,7 @@ if = {
 	add_core_of = DSU
 	DSU = { transfer_state = PREV }
 }
+  DSU = { set_cosmetic_tag = Generic_puppet_socialist } 
  }
  
  option = { ###liberate Ukrainian Republic
@@ -2433,6 +2976,19 @@ if = {
         }
       } 
       DSU = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   UKR = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          UKR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      UKR = { drop_cosmetic_tag = yes }
   }
  }
  
@@ -2546,6 +3102,19 @@ option = { ###liberate Russian Socialist Republic
 	add_core_of = RDR
 	RDR = { transfer_state = PREV }
 }
+if = { 
+  limit = { ROOT = { has_government = pelekist } }
+ RDR = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+ }
+ if = { 
+  limit = { 
+    AND = { 
+      ROOT = { NOT = { has_government = pelekist } }
+        RDR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+      }
+    } 
+    RDR = { drop_cosmetic_tag = yes }
+}
  }
  
  option = { ###continue occupation
@@ -2600,6 +3169,19 @@ country_event = {
   set_cosmetic_tag = ITA_socialist
   } 
  }
+ if = { 
+  limit = { ROOT = { has_government = pelekist } }
+ ITA = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+ }
+ if = { 
+  limit = { 
+    AND = { 
+      ROOT = { NOT = { has_government = pelekist } }
+        ITA = { has_cosmetic_tag = Generic_puppet_pelekist } 
+      }
+    } 
+    ITA = { drop_cosmetic_tag = yes }
+}
  }
  
  option = {
@@ -2658,6 +3240,19 @@ country_event = {
         }
       } 
       PER = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   PER = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          PER = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      PER = { drop_cosmetic_tag = yes }
   }  
  }
  
@@ -2708,6 +3303,7 @@ country_event = {
 	}
 	TRS = { transfer_state = PREV }
   }
+  
  }
  
   option = {
@@ -2727,6 +3323,19 @@ country_event = {
 	}
 	TMS = { transfer_state = PREV }
   } 
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   TMS = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          TMS = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      TMS = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -2782,6 +3391,19 @@ country_event = {
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
           KHV = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      KHV = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   KHV = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          KHV = { has_cosmetic_tag = Generic_puppet_pelekist } 
         }
       } 
       KHV = { drop_cosmetic_tag = yes }
@@ -2841,6 +3463,19 @@ country_event = {
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
           KYR = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      KYR = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   KYR = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          KYR = { has_cosmetic_tag = Generic_puppet_pelekist } 
         }
       } 
       KYR = { drop_cosmetic_tag = yes }
@@ -2922,6 +3557,19 @@ country_event = {
         }
       } 
       KZR = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   KZR = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          KZR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      KZR = { drop_cosmetic_tag = yes }
   }  
  }
  
@@ -2974,6 +3622,19 @@ country_event = {
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
           KAZ = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      KAZ = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   KAZ = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          KAZ = { has_cosmetic_tag = Generic_puppet_pelekist } 
         }
       } 
       KAZ = { drop_cosmetic_tag = yes }
@@ -3033,6 +3694,19 @@ country_event = {
       } 
       KAZ = { drop_cosmetic_tag = yes }
   }  
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   KAZ = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          KAZ = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      KAZ = { drop_cosmetic_tag = yes }
+  }
  }
 
  option = {
@@ -3088,6 +3762,19 @@ country_event = {
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
           UZB = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      UZB = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   UZB = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          UZB = { has_cosmetic_tag = Generic_puppet_pelekist } 
         }
       } 
       UZB = { drop_cosmetic_tag = yes }
@@ -3174,7 +3861,48 @@ country_event = {
       } 
       LAT = { drop_cosmetic_tag = yes }
   }
- EST = { set_cosmetic_tag = EST_liberated }  
+ EST = { set_cosmetic_tag = EST_liberated } 
+ if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  EST = {
+  set_cosmetic_tag = Generic_puppet_socialist
+  } 
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          EST = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      EST = { drop_cosmetic_tag = yes }
+  }
+ if = { 
+  limit = { ROOT = { has_government = pelekist } }
+ LAT = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+ }
+ if = { 
+  limit = { 
+    AND = { 
+      ROOT = { NOT = { has_government = pelekist } }
+        LAT = { has_cosmetic_tag = Generic_puppet_pelekist } 
+      }
+    } 
+    LAT = { drop_cosmetic_tag = yes }
+} 
+if = { 
+  limit = { ROOT = { has_government = pelekist } }
+ EST = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+ }
+ if = { 
+  limit = { 
+    AND = { 
+      ROOT = { NOT = { has_government = pelekist } }
+        EST = { has_cosmetic_tag = Generic_puppet_pelekist } 
+      }
+    } 
+    EST = { drop_cosmetic_tag = yes }
+}
  }
  
   option = {
@@ -3205,6 +3933,19 @@ country_event = {
       } 
       EST = { drop_cosmetic_tag = yes }
   }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   EST = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          EST = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      EST = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -3221,7 +3962,19 @@ country_event = {
 	}
 	EST = { transfer_state = PREV }
   }
- 
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   EST = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          EST = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      EST = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = {
@@ -3278,6 +4031,19 @@ country_event = {
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
           PRS = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      PRS = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   PRS = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          PRS = { has_cosmetic_tag = Generic_puppet_pelekist } 
         }
       } 
       PRS = { drop_cosmetic_tag = yes }
@@ -3408,6 +4174,7 @@ country_event = {
    add_core_of = PRS
    PRS = { transfer_state = PREV }
 }
+
  }
 
 option = { ###liberate German Socialist Republic
@@ -3430,6 +4197,21 @@ option = { ###liberate German Socialist Republic
 	add_core_of = GER
 	GER = { transfer_state = PREV }
 }
+if = { 
+  limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+  GER = {
+  set_cosmetic_tag = Generic_puppet_socialist
+  } 
+ }
+   if = { 
+    limit = { 
+      AND = { 
+          ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+          GER = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      GER = { drop_cosmetic_tag = yes }
+  }
  }
  
  option = { ###liberate German Republic
@@ -3620,8 +4402,76 @@ option = { ###liberate German Socialist Republic
 	add_core_of = GER
 	GER = { transfer_state = PREV }
 }
+if = { 
+  limit = { ROOT = { has_government = pelekist } }
+ GER = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+ }
+ if = { 
+  limit = { 
+    AND = { 
+      ROOT = { NOT = { has_government = pelekist } }
+        GER = { has_cosmetic_tag = Generic_puppet_pelekist } 
+      }
+    } 
+    GER = { drop_cosmetic_tag = yes }
+}
  }
  
+ option = {
+  name = "Move the Border East"
+  trigger = { tag = FRP  42 = { is_owned_and_controlled_by = FRP } 792 = { is_owned_and_controlled_by = FRP } 1089 = { is_owned_and_controlled_by = FRP } }
+  ai_chance = { factor = 2000  }
+  42 = { add_claim_by = FRP }
+  792 = { add_claim_by = FRP }
+  1089 = { add_claim_by = FRP }
+  if = {
+    limit = {
+      OR = { OR = { 51 = { is_owned_and_controlled_by = FRP } 51 = { is_owned_and_controlled_by = FRP } } OR = { 1088 = { is_owned_and_controlled_by = FRP } 1088 = { is_owned_and_controlled_by = FRP } } }
+      NOT = { HOL = { is_in_faction_with = FRP } }
+    }
+    51 = { add_claim_by = FRP }
+    1088 = { add_claim_by = FRP }
+  }
+  if = {
+    limit = {
+     OR = { OR = { 51 = { is_owned_and_controlled_by = FRP } 51 = { is_owned_and_controlled_by = FRP } } OR = { 1088 = { is_owned_and_controlled_by = FRP } 1088 = { is_owned_and_controlled_by = FRP } } }
+     HOL = { is_in_faction_with = FRP } 
+    }
+    51 = { add_claim_by = HOL }
+    1088 = { add_claim_by = HOL }
+  }
+  puppet = GER
+  every_owned_state = {
+    limit = { 
+     NOT = {
+    is_claim_or_core = yes
+   }
+      is_core_of = GER
+  }
+  GER = { transfer_state = PREV }
+  }
+  if = {
+    limit = {
+      HOL = { is_in_faction_with = FRP } 
+     }
+     HOL = {  transfer_state = 51 }
+     HOL = {  transfer_state = 1088 }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   GER = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          GER = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      GER = { drop_cosmetic_tag = yes }
+  }
+  }
+
  option = { ###continue occupation
   name = "Continue Military Occupation"
   ai_chance = { factor = 0 }
@@ -3674,6 +4524,19 @@ country_event = {
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
           AFG = { has_cosmetic_tag = Generic_puppet_socialist } 
+        }
+      } 
+      AFG = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   AFG = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          AFG = { has_cosmetic_tag = Generic_puppet_pelekist } 
         }
       } 
       AFG = { drop_cosmetic_tag = yes }
@@ -3747,6 +4610,19 @@ country_event = {
         }
       } 
       MON = { drop_cosmetic_tag = yes }
+  }
+  if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   MON = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          MON = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      MON = { drop_cosmetic_tag = yes }
   }  
   }
 
@@ -3788,7 +4664,20 @@ country_event = {
          }
        } 
        MON = { drop_cosmetic_tag = yes }
-   }  
+   }
+   if = { 
+    limit = { ROOT = { has_government = pelekist } }
+   MON = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+   }
+   if = { 
+    limit = { 
+      AND = { 
+        ROOT = { NOT = { has_government = pelekist } }
+          MON = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        }
+      } 
+      MON = { drop_cosmetic_tag = yes }
+  }  
    }
   option = { ###continue occupation
   name = "Continue Military Occupation"
@@ -3798,6 +4687,76 @@ country_event = {
   add_war_support =-0.10
   add_political_power =-100
  
+ 
+ }
+
+ country_event = {
+  id = annex.44
+  desc = annex.44.d
+  title = "Fate of Armenia"
+  
+  mean_time_to_happen = { days = 1 }
+  trigger = {
+   has_war = no
+   ARM = { NOT = { is_puppet_of = ROOT } }
+   230 = { is_owned_and_controlled_by = ROOT }
+   NOT = {
+    tag = ARM
+    has_country_flag = annex_arm
+   }
+  }
+  
+  option = {
+   name = "Create a Puppet State"
+   puppet = ARM
+   ai_chance = { factor = 50 }
+   every_owned_state = {
+     limit = { 
+      NOT = {
+     is_claim_or_core = yes
+    }
+       is_core_of = ARM
+   }
+   ARM = { transfer_state = PREV }
+   }
+  if = { 
+   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+   ARM = {
+   set_cosmetic_tag = Generic_puppet_socialist
+   } 
+  }
+    if = { 
+     limit = { 
+       AND = { 
+           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+           ARM = { has_cosmetic_tag = Generic_puppet_socialist } 
+         }
+       } 
+       ARM = { drop_cosmetic_tag = yes }
+   } 
+   if = { 
+     limit = { ROOT = { has_government = pelekist } }
+    ARM = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+    }
+    if = { 
+     limit = { 
+       AND = { 
+         ROOT = { NOT = { has_government = pelekist } }
+         ARM = { has_cosmetic_tag = Generic_puppet_pelekist } 
+         }
+       } 
+       ARM = { drop_cosmetic_tag = yes }
+   } 
+  }
+  
+  option = {
+   name = "Continue Military Occupation"
+   ai_chance = { factor = 0 }
+   set_country_flag = annex_arm
+   add_stability =-0.05
+   add_war_support =-0.05
+   add_political_power =-50
+  }
  
  }
 

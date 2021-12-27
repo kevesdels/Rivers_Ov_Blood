@@ -1,0 +1,550 @@
+characters={
+	POL_wincenty_witos={
+		name="Wincenty Witos"
+		portraits={
+			civilian={
+				large="gfx/leaders/POL/GFX_POL_wincenty_witos.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_WINCENTY_WITOS_DESC"
+			ideology=conservative_subtype
+			traits={ chemist }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	POL_roman_dmowski={
+		name="Roman Dmowski"
+		portraits={
+			civilian={
+				large="gfx/leaders/leader_unknown.dds"
+			}
+		}
+		country_leader={
+			ideology=reactionary_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	POL_wladyslaw_gomulka={
+		name="Władysław Gomułka"
+		portraits={
+			civilian={
+				large="gfx/leaders/POL/Portrait_Poland_Wladyslaw_Gomulka.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_WLADYSLAW_GOMULKA_DESC"
+			ideology=left_communism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	POL_boleslaw_bierut={
+		name="Bolesław Bierut"
+		portraits={
+			civilian={
+				large="gfx/leaders/POL/Bolesław_Bierut.dds"
+			}
+		}
+		country_leader={
+			ideology=socialist_subtype
+			traits={ devoted_socialist }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	POL_felix_dzerzhinsky={
+		name="Feliks Dzierżyński"
+		portraits={
+			civilian={
+				large="gfx/leaders/POL/Felix_Dzerzhinsky.dds"
+			}
+		}
+		country_leader={
+			desc=""
+			ideology=national_socialist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	POL_wladyslaw_kolodziej ={
+		name="Władysław Kołodziej"
+		portraits={
+			civilian={
+				large="gfx/leaders/POL/Władysław_Kołodziej.dds"
+			}
+		}
+		country_leader={
+			desc=""
+			ideology = christian_pelekism
+			traits = {
+				syncretic_theolog
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	POL_jan_stachniuk={
+		name="Jan Stachniuk"
+		portraits={
+			civilian={
+				large="gfx/leaders/POL/Jan_Stachniuk.dds"
+			}
+		}
+		country_leader={
+			desc=""
+			ideology = pagan_pelekism
+			traits = {
+				social_reformer
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	POL_stanislaw_szukalski={
+		name="Stanisław Szukalski"
+		portraits={
+			civilian={
+				large="gfx/leaders/POL/Stanisław_Szukalski.dds"
+			}
+		}
+		country_leader={
+			desc=""
+			ideology = futuristic_pelekism
+			traits = {
+				great_architect
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	POL_jozef_pilsudski={
+		name="Józef Piłsudski"
+		portraits={
+			civilian={
+				large="gfx/leaders/POL/Portrait_POL_Pilsudski.tga"
+			}
+		}
+		field_marshal={
+			traits={ media_personality war_hero offensive_doctrine inspirational_leader }
+			skill=3
+			attack_skill=5
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=6921
+		}
+		country_leader={
+			desc="POLITICS_VASYL_DESC"
+			ideology=authoritharian_democracy
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	POL_walery_slawek={
+		name="Walery Sławek"
+		portraits={
+			civilian={
+				large="gfx/leaders/POL/walery_slawek.dds"
+			}
+		}
+		country_leader={
+			ideology=social_democracy_subtype
+			traits={ free_mason }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	POL_eustachy_sapieha={
+		name="Eustachy Sapieha"
+		portraits={
+			civilian={
+				large="gfx/leaders/POL/Portrait_POL_Eustachy_Sapieha.tga"
+			}
+		}
+		country_leader={
+			ideology=social_liberal_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	POL_wladyslaw_sikorski={
+		name="Władysław Sikorski"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Sikorski.tga"
+			}
+		}
+		field_marshal={
+			traits={ career_officer politically_connected defensive_doctrine }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	POL_tadeusz_rozwadowski={
+		name="Tadeusz Rozwadowski"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Tadeusz_Rozwadowski.tga"
+			}
+		}
+		field_marshal={
+			traits={ infantry_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	POL_edward_rydzsmigly={
+		name="Edward Rydz-Śmigły"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Edward_Smigy_Rydz.tga"
+			}
+		}
+		field_marshal={
+			traits={ trait_cautious skilled_staffer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	POL_zbigniew_antonowicz={
+		name="Zbigniew Antonowicz"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Zbigniew_Antonowicz.tga"
+			}
+		}
+		corps_commander={
+			traits={ urban_assault_specialist }
+			skill=3
+			attack_skill=4
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	POL_stanislaw_sosabowski={
+		name="Stanislaw Sosabowski"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Stanislaw_Sosabowski.tga"
+			}
+		}
+		corps_commander={
+			traits={ commando camouflage_expert }
+			skill=2
+			attack_skill=1
+			defense_skill=5
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	POL_witold_pilecki={
+		name="Witold Pilecki"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Witold_Pilecki.tga"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless trickster guerilla_fighter }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	POL_wladyslaw_anders={
+		name="Władysław Anders"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Wladyslaw_Anders.tga"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	POL_stanislaw_magnuszewski={
+		name="Stanislaw Magnuszewski"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Stanislaw_Magnuszewski.tga"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	POL_artur_gorski={
+		name="Artur Gorski"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Artur_Gorski.tga"
+			}
+		}
+		corps_commander={
+			traits={ fortress_buster }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	POL_henryk_dobrzanski={
+		name="Henryk Dobrzanski"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Henryk_Dobrzanski.tga"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist ranger }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	POL_kazimierz_sosnkowski={
+		name="Kazimierz Sosnkowski"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Kazimierz_Sosnkowski.tga"
+			}
+		}
+		corps_commander={
+			traits={ old_guard }
+			skill=2
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	POL_juliusz_rommel={
+		name="Juliusz Rómmel"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Juliusz_Rommel.tga"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer panzer_leader }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	POL_tadeusz_piskor={
+		name="Tadeusz Piskor"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Tadeusz_Piskor.tga"
+			}
+		}
+		corps_commander={
+			traits={ old_guard }
+			skill=1
+			attack_skill=3
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	POL_waclaw_stachiewicz={
+		name="Wacław Stachiewicz"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Waclaw_Stachiewicz.tga"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	POL_antoni_szylling={
+		name="Antoni Szylling"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Antoni_Szylling.tga"
+			}
+		}
+		corps_commander={
+			traits={ old_guard politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	POL_bolesaw_wieniawa_dugoszewski={
+		name="Bolesaw Wieniawa Dugoszewski"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_Poland_Bolesaw_Wieniawa_Dugoszewski.tga"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	POL_jozef_unrug={
+		name="Józef Unrug"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_POL_Jozef_Unrug.tga"
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	POL_kazimierz_porebski={
+		name="Kazimierz Porębski"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_POL_Kazimierz_Porebski.tga"
+			}
+		}
+		navy_leader={
+			traits={ superior_tactician }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	POL_jerzy_swirski={
+		name="Jerzy Świrski"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/POL/Portrait_POL_Jerzy_Swirski.tga"
+			}
+		}
+		navy_leader={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+
+}

@@ -290,46 +290,19 @@ country_event = {
 		if = {
 			limit = { LES = { has_country_flag = christ } }
 			POL = {
-				create_country_leader = {
-					name = "Władysław Kołodziej"
-					desc = ""
-					picture = "gfx/leaders/POL/Władysław_Kołodziej.dds"
-					expire = "1965.1.1"
-					ideology = christian_pelekism
-					traits = {
-						syncretic_theolog
-					}
-				}
+				POL_wladyslaw_kolodziej = { promote_character = yes }
 			} 
 		}
 		if = {
 			limit = { LES = { has_country_flag = pagan } }
 			POL = {
-				create_country_leader = {
-					name = "Jan Stachniuk"
-					desc = ""
-					picture = "gfx/leaders/POL/Jan_Stachniuk.dds"
-					expire = "1965.1.1"
-					ideology = pagan_pelekism
-					traits = {
-						social_reformer
-					}
-				}
+				POL_jan_stachniuk = { promote_character = yes }
 			} 
 		}
 		if = {
 			limit = { LES = { has_country_flag = poets } }
 			POL = {
-				create_country_leader = {
-					name = "Stanisław Szukalski"
-					desc = ""
-					picture = "gfx/leaders/POL/Stanisław_Szukalski.dds"
-					expire = "1965.1.1"
-					ideology = futuristic_pelekism
-					traits = {
-						great_architect
-					}
-				}
+				POL_stanislaw_szukalski = { promote_character = yes }
 			} 
 		}
 	  }

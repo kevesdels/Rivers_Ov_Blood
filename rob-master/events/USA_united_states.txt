@@ -5,8 +5,11 @@ country_event = {
 	id = USA_united_states.1
 	title = USA_united_states.1.t
 	desc = USA_united_states.1.d
-
 	picture = USA_collapse_of_the_union-929
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = USA_its_happening
+	}
 }
 
 #Pershing Takes Control
@@ -14,8 +17,10 @@ country_event = {
 	id = USA_united_states.2
 	title = USA_united_states.2.t
 	desc = USA_united_states.2.d
-
 	picture = USA_pershing_takes_control-1
+	fire_only_once = yes
+	is_triggered_only = yes
+
 }
 
 #March on Washington
@@ -23,8 +28,10 @@ country_event = {
 	id = USA_united_states.3
 	title = USA_united_states.3.t
 	desc = USA_united_states.3.d
-
 	picture = USA_march_on_washington-1
+	fire_only_once = yes
+	is_triggered_only = yes
+
 }
 
 #Unrest in The States
@@ -32,6 +39,7 @@ country_event = {
 	id = USA_united_states.4
 	title = USA_united_states.4.t
 	desc = USA_united_states.4.d
-
 	picture = USA_unrest_in_the_states-1
+	fire_only_once = yes
+	is_triggered_only = yes
 }

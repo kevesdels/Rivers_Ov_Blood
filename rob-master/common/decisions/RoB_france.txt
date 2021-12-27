@@ -205,7 +205,7 @@ FRA_pelekist_militas = { #when you take Marseille
 }
 
 
-fra_post_civil_war = {
+FRA_colony_reclaiming = {
 
 
 FRA_reenstablish_lordship_over_syr = {
@@ -280,27 +280,6 @@ FRA_assist_syr = {
 	}
 }
 
-
-FRA_reenstablish_lordship_over_FEA = {
-	fire_only_once = yes
-	available = {
-		has_country_flag = fra_cw_over
-	  FEA = { 
-		  exists = yes 
-		  is_puppet = no
-		  has_war = no
-		  }
-	  }
-	  ai_will_do = {
-		  base = 1000
-	  }
-	  cost = 20
-	  days_remove = 3
-	  remove_effect = {
-	  puppet = FEA
-	  }
-  }
-
   FRA_reenstablish_lordship_over_FWA = {
 	fire_only_once = yes
 	available = {
@@ -318,6 +297,7 @@ FRA_reenstablish_lordship_over_FEA = {
 	  days_remove = 3
 	  remove_effect = {
 	  puppet = FWA
+	  puppet = FEA
 	  }
   }
 
@@ -340,8 +320,83 @@ FRA_reenstablish_lordship_over_FEA = {
 	  puppet = FIC
 	  }
   }
-###end of fra_post_civil_war
+###end of FRA_colony_reclaiming
 }
+
+FRA_colony_reclaiming_radicals = {
+
+
+	FRA_reenstablish_lordship_over_syr_rad = {
+	  fire_only_once = yes
+	  available = {
+		  has_country_flag = fra_cw_over
+		SYR = { 
+			exists = yes 
+			is_puppet = no
+			has_war = no
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+		cost = 50
+		days_remove = 20
+		complete_effect = {
+			set_country_flag = FRA_colony_negotiation
+		}
+		remove_effect = {
+			SYR = { country_event = { id = rob_france.126 days = 1 } }
+		}
+	}
+	
+	  FRA_reenstablish_lordship_over_FWA_rad = {
+		fire_only_once = yes
+		available = {
+			has_country_flag = fra_cw_over
+		  FWA = { 
+			  exists = yes 
+			  is_puppet = no
+			  has_war = no
+			  }
+		  }
+		  ai_will_do = {
+			  base = 1000
+		  }
+		  cost = 50
+		  days_remove = 20
+		  complete_effect = {
+			set_country_flag = FRA_colony_negotiation
+		  }
+		  remove_effect = {
+			FWA = { country_event = { id = rob_france.126 days = 3 } }
+		}
+	  }
+	
+	  FRA_reenstablish_lordship_over_FIC_rad = {
+		fire_only_once = yes
+		available = {
+			has_country_flag = fra_cw_over
+			FIC = { 
+			  exists = yes 
+			  is_puppet = no
+			  has_war = no
+			  }
+		  }
+		  ai_will_do = {
+			  base = 1000
+		  }
+		  cost = 50
+		  days_remove = 20
+		  complete_effect = {
+			set_country_flag = FRA_colony_negotiation
+		  }
+		  remove_effect = {
+			FIC = { country_event = { id = rob_france.126 days = 3 } }
+		  }
+	  }
+	###end of FRA_colony_reclaiming_radicals
+	}
+
 
 FRR_diplo = {
 
@@ -953,10 +1008,7 @@ FRP_war = {
 	  }
 
 	  FRP_repatriation = { 
-		cost = 150
-		ai_will_do = {
-		 base = 2000
-		 }
+		cost = 75
 		fire_only_once = yes
 		available = {
 		has_country_flag = FRP_innerexpansion_enable
@@ -971,10 +1023,7 @@ FRP_war = {
 	 
 	  }
 	  FRP_repatriation_2 = { 
-		cost = 150
-		ai_will_do = {
-		 base = 2000
-		 }
+		cost = 100
 		 visible = {
 			 has_idea = fra_maur_repat
 	   	}
@@ -994,9 +1043,6 @@ FRP_war = {
 	  }
 	  FRP_repatriation_3 = { 
 		cost = 150
-		ai_will_do = {
-		 base = 2000
-		 }
 		 visible = {
 			has_idea = fra_maur_repat_2
 		  }

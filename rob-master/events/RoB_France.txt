@@ -1495,7 +1495,7 @@ add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_sorel_win
 set_cosmetic_tag = FRS_victory 
-set_capital = 16
+set_capital = { state = 16 }
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1524,7 +1524,7 @@ add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_comm_win
 set_country_flag = frs_minigame_trigger
-set_capital = 16
+set_capital = { state = 16 }
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1552,7 +1552,7 @@ name = rob_france.37.a
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_rep_win
-set_capital = 16
+set_capital = { state = 16 }
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1597,7 +1597,7 @@ if = {
 }
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_mil_win
-set_capital = 16
+set_capital = { state = 16 }
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1626,7 +1626,7 @@ name = rob_france.41.a
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_mil_win
-set_capital = 16
+set_capital = { state = 16 }
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1654,7 +1654,7 @@ name = rob_france.48.a
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_plk_win
-set_capital = 16
+set_capital = { state = 16 }
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -2604,6 +2604,7 @@ is_triggered_only = yes
 
 option = { #release colonies
 name = rob_france.78.a
+custom_effect_tooltip = FRA_colony_tip
 hidden_effect = {
 	if = { limit = { owns_state = 290 } FNA = { transfer_state = 290 } }
 	if = { limit = { owns_state = 458 } FNA = { transfer_state = 458 } }
@@ -2628,17 +2629,17 @@ hidden_effect = {
 		limit = {
 			FNA = { exists = yes }
 		}
-		FRA = { puppet = FNA }
+		ROOT = { puppet = FNA }
+		FNA = { set_cosmetic_tag = FRA_FNA }
 	}
-	set_cosmetic_tag = FRA_FNA
-	if = { limit = { owns_state = 543 } MAD = { transfer_state = 543 } MAD = { set_cosmetic_tag = FRA_FMA } FRA = { puppet = MAD } }
-	if = { limit = { owns_state = 320 } FID = { transfer_state = 320 } FID = { set_cosmetic_tag = FRA_FID } FRA = { puppet = FID } }
+	if = { limit = { owns_state = 543 } MAD = { transfer_state = 543 } MAD = { set_cosmetic_tag = FRA_FMA } ROOT = { puppet = MAD } }
+	if = { limit = { owns_state = 320 } FID = { transfer_state = 320 } FID = { set_cosmetic_tag = FRA_FID } ROOT = { puppet = FID } }
 	320 = { add_core_of = FID }
-	if = { limit = { owns_state = 268 } FSO = { transfer_state = 268 } FSO = { set_cosmetic_tag = FRA_FSO } FRA = { puppet = FSO } }
+	if = { limit = { owns_state = 268 } FSO = { transfer_state = 268 } FSO = { set_cosmetic_tag = FRA_FSO } ROOT = { puppet = FSO } }
 	268 = { add_core_of = FSO }
-	if = { limit = { owns_state = 310 } FGU = { transfer_state = 310 } FGU = { set_cosmetic_tag = FRA_FGU } FRA = { puppet = FGU } }
+	if = { limit = { owns_state = 310 } FGU = { transfer_state = 310 } FGU = { set_cosmetic_tag = FRA_FGU } ROOT = { puppet = FGU } }
 	310 = { add_core_of = FGU }
-	if = { limit = { owns_state = 694 } FAN = { transfer_state = 694 } FAN = { set_cosmetic_tag = FRA_FGU } FRA = { puppet = FAN } }
+	if = { limit = { owns_state = 694 } FAN = { transfer_state = 694 } FAN = { set_cosmetic_tag = FRA_FGU } ROOT = { puppet = FAN } }
 	694 = { add_core_of = FAN }
 	if = { limit = { owns_state = 635 } FPN = { transfer_state = 635 } }
 	if = { limit = { owns_state = 635 } FPN = { transfer_state = 635 } }
@@ -2651,7 +2652,7 @@ hidden_effect = {
 		limit = {
 			FPN = { exists = yes }
 		}
-		FRA = { puppet = FPN }
+		ROOT = { puppet = FPN }
 	}
 	}
 }
@@ -2962,7 +2963,7 @@ hidden_effect = {
 country_event = { ### Guns for Junta
 id = rob_france.86
 title = "Support from Industrialists"
-desc = "Bullets and guns, this cargo is appreciated."
+desc = "Bullets and rifles, this cargo is appreciated."
 fire_only_once = yes
 is_triggered_only = yes
 
@@ -3446,6 +3447,15 @@ country_event = {
 	  factor = 100
 	 }
 	 ROOT = { add_to_faction = FROM }
+	 hidden_effect = {
+		 if = {
+			 limit = {
+				 FROM = { tag = HOL }
+				 FLA = { exists = yes }
+			 }
+			 HOL = { country_event = { id = rob_holland.1 days = 3 } }
+		 }
+	 }
 	}
   
    }
@@ -6626,8 +6636,99 @@ if = {###Paris 50p
 }
 ###end of the options
 }
+}	
+
+country_event = { ### Colonies, Radicals begin talks
+id = rob_france.126
+title = rob_france.126.t
+desc = rob_france.126.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {####rape us daddy!
+	name = rob_france.126.a
+	ai_chance = { factor = 2 }
+	if = { limit = { tag = SYR } FROM = { set_country_flag = FRA_colony_syr_agree } }
+	if = { limit = { tag = FIC } FROM = { set_country_flag = FRA_colony_fic_agree } }
+	if = { limit = { tag = FWA } FROM = { set_country_flag = FRA_colony_fwa_agree } }
+	FROM = { country_event = { id = rob_france.127 days = 3 } }
+	}
+
+option = {####okay but autonomus
+	name = rob_france.126.b
+	ai_chance = { factor = 4 }
+	if = { limit = { tag = SYR } FROM = { set_country_flag = FRA_colony_syr_debate } }
+	if = { limit = { tag = FIC } FROM = { set_country_flag = FRA_colony_fic_debate } }
+	if = { limit = { tag = FWA } FROM = { set_country_flag = FRA_colony_fwa_debate } }
+	FROM = { country_event = { id = rob_france.127 days = 3 } }
+	}
+
+option = {####Fuck off
+	name = rob_france.126.c
+	ai_chance = { factor = 3 }
+	if = { limit = { tag = SYR } FROM = { set_country_flag = FRA_colony_syr_refuse } }
+	if = { limit = { tag = FIC } FROM = { set_country_flag = FRA_colony_fic_refuse } }
+	if = { limit = { tag = FWA } FROM = { set_country_flag = FRA_colony_fwa_refuse } }
+	FROM = { country_event = { id = rob_france.127 days = 3 } }
+	}
 
 }
+
+country_event = { ### Colonies, Radicals get answer
+id = rob_france.127
+title = rob_france.127.t
+desc = rob_france.127.d
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {  #### incorporated
+	name = rob_france.127.a
+	ai_chance = { factor = 1000 }
+	trigger = {	OR = { has_country_flag = FRA_colony_syr_agree has_country_flag = FRA_colony_fic_agree has_country_flag = FRA_colony_fwa_agree } }
+	puppet = FROM
+	if = { limit = { has_country_flag = FRA_colony_syr_agree } clr_country_flag = FRA_colony_syr_agree }
+	if = { limit = { has_country_flag = FRA_colony_fic_agree } clr_country_flag = FRA_colony_fic_agree }
+	if = { limit = { has_country_flag = FRA_colony_fwa_agree } clr_country_flag = FRA_colony_fwa_agree }
+	clr_country_flag = FRA_colony_negotiation
+	}
+
+option = { #### puppets at additional cost, keep current leader
+	name = rob_france.127.b
+	ai_chance = { factor = 7 }
+	trigger = {	OR = { has_country_flag = FRA_colony_syr_debate has_country_flag = FRA_colony_fic_debate has_country_flag = FRA_colony_fwa_debate } }
+	FROM = { add_political_power = 100 }
+	add_political_power = -100
+	puppet = FROM
+	if = { limit = { has_country_flag = FRA_colony_syr_debate } clr_country_flag = FRA_colony_syr_debate }
+	if = { limit = { has_country_flag = FRA_colony_fic_debate } clr_country_flag = FRA_colony_fic_debate }
+	if = { limit = { has_country_flag = FRA_colony_fwa_debate } clr_country_flag = FRA_colony_fwa_debate }
+	clr_country_flag = FRA_colony_negotiation
+}
+
+option = { #### puppets at additional cost, refuse to keep current leader
+	name = rob_france.127.c
+	ai_chance = { factor = 3 }
+	trigger = {	OR = { has_country_flag = FRA_colony_syr_debate has_country_flag = FRA_colony_fic_debate has_country_flag = FRA_colony_fwa_debate } }
+	create_wargoal = { target = FROM  type = annex_everything }
+	if = { limit = { has_country_flag = FRA_colony_syr_debate } clr_country_flag = FRA_colony_syr_debate }
+	if = { limit = { has_country_flag = FRA_colony_fic_debate } clr_country_flag = FRA_colony_fic_debate }
+	if = { limit = { has_country_flag = FRA_colony_fwa_debate } clr_country_flag = FRA_colony_fwa_debate }
+	clr_country_flag = FRA_colony_negotiation
+}
+
+option = { #### refusal
+	name = rob_france.127.e
+	ai_chance = { factor = 1000 }
+	trigger = {	OR = { has_country_flag = FRA_colony_syr_refuse has_country_flag = FRA_colony_fic_refuse has_country_flag = FRA_colony_fwa_refuse } }
+	create_wargoal = { target = FROM  type = annex_everything }
+	if = { limit = { has_country_flag = FRA_colony_syr_refuse } clr_country_flag = FRA_colony_syr_refuse }
+	if = { limit = { has_country_flag = FRA_colony_fic_refuse } clr_country_flag = FRA_colony_fic_refuse }
+	if = { limit = { has_country_flag = FRA_colony_fwa_refuse } clr_country_flag = FRA_colony_fwa_refuse }
+	clr_country_flag = FRA_colony_negotiation
+	}
+
+}
+
 ####debug events
 
 

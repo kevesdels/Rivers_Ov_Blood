@@ -1,8 +1,7 @@
 ﻿capital = 109
-
 set_research_slots = 2
-
 oob = "CRO_1934"
+set_cosmetic_tag = CRO_pelekist
 
 set_technology = {
 	infantry_weapons = 1
@@ -16,6 +15,9 @@ set_technology = {
 }
 add_ideas = {
 	crotian_economic_pact
+	limited_exports
+	low_economic_mobilisation
+	extensive_conscription
 }
 if = {
 	limit = {
@@ -45,49 +47,6 @@ if = {
 
 set_convoys = 5
 
-
-1939.1.1 = {
-
-	add_political_power = 1198
-	
-	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
-	
-	set_technology = {
-	
-		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		convoy_sailing = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		fuel_silos = 1
-		construction1 = 1
-		construction2 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-	}
-}
 set_politics = {
 	ruling_party = pelekist
 	last_election = "1933.7.1"
