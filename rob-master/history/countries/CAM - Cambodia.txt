@@ -67,7 +67,7 @@ if = {
 }
 
 set_politics = {
-	ruling_party = reactionary
+	ruling_party = conservative
 	last_election = "1931.12.19"
 	election_frequency = 48
 	elections_allowed = yes
@@ -76,11 +76,11 @@ set_popularities = {
 	national_socialist = 0
 	socialist = 0
 	democratic_socialist = 0
-	social_democracy = 10
-	social_liberal = 0
-	conservative = 22
+	social_democracy = 0
+	social_liberal = 10
+	conservative = 48
 	authoritharian = 0
-	reactionary = 68
+	reactionary = 32
 	pelekist = 0
 }
 
@@ -91,7 +91,7 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
 	expire = "1953.3.1"
-	ideology = conservative_subtype
+	ideology = social_liberal_subtype
 	traits = {
 		
 	}
@@ -103,6 +103,17 @@ create_country_leader = {
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"
 	expire = "1953.3.1"
 	ideology = reactionary_subtype
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Son Ngoc Thanh" 
+	desc = ""
+	picture = ""
+	expire = "1953.3.1"
+	ideology = conservative_subtype
 	traits = {
 		
 	}
