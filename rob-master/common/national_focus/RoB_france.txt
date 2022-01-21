@@ -944,6 +944,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available = {
+			has_country_flag = FRA_centreright
+		}
 		prerequisite = { focus = FRA_the_republic_endures  }
 		completion_reward = {
 		country_event = { id = rob_france.105 days = 1 }
@@ -959,6 +962,9 @@ focus_tree = {
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_country_flag = FRA_centreleft
 		}
 		prerequisite = { focus = FRA_the_republic_endures  }
 		completion_reward = {
@@ -1812,11 +1818,54 @@ focus_tree = {
 		prerequisite = { focus = FRA_france_indivisible  }
 		completion_reward = {
 			if = {
-				limit = {
-					tag = FRS
-				}
+				limit = { tag = FRS }
 				custom_effect_tooltip = FRS_war_enable_tooltip
 				set_country_flag = FRS_war_enable
+			}
+			if = {
+				limit = { tag = FRA has_country_flag = fra_admiral_route }
+				custom_effect_tooltip = FRA_war_enable_tooltip
+				set_country_flag = FRA_darlan_war_enable
+				hidden_effect = {
+					8 = { add_claim_by = ROOT }
+					812 = { add_claim_by = ROOT }
+					813 = { add_claim_by = ROOT }
+					34 = { add_claim_by = ROOT }
+					6 = { add_claim_by = ROOT }
+					35 = { add_claim_by = ROOT }
+					36 = { add_claim_by = ROOT }
+					7 = { add_claim_by = ROOT }
+					788 = { add_claim_by = ROOT }
+					51 = { add_claim_by = ROOT }
+					1088 = { add_claim_by = ROOT }
+					1080 = { add_claim_by = ROOT }
+					1089 = { add_claim_by = ROOT }
+					1090 = { add_claim_by = ROOT }
+					792 = { add_claim_by = ROOT }
+					42 = { add_claim_by = ROOT }
+					57 = { add_claim_by = ROOT }
+					56 = { add_claim_by = ROOT }
+					979 = { add_claim_by = ROOT }
+					1210 = { add_claim_by = ROOT }
+					1211 = { add_claim_by = ROOT }
+					1208 = { add_claim_by = ROOT }
+					1209 = { add_claim_by = ROOT }
+					1091 = { add_claim_by = ROOT }
+					59 = { add_claim_by = ROOT }
+					1151 = { add_claim_by = ROOT }
+					1152 = { add_claim_by = ROOT }
+					1153 = { add_claim_by = ROOT }
+					165 = { add_claim_by  = ROOT }
+					1154 = { add_claim_by = ROOT }
+					1110 = { add_claim_by = ROOT }
+					1109 = { add_claim_by = ROOT }
+					158 = { add_claim_by = ROOT }
+					1292 = { add_claim_by = ROOT }
+					1291 = { add_claim_by = ROOT }
+					1290 = { add_claim_by = ROOT }
+					892 = { add_claim_by = ROOT }
+					162 = { add_claim_by = ROOT }
+				}
 			}
 		}
 	}
@@ -1834,6 +1883,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_france_indivisible  }
 		completion_reward = {
 			custom_effect_tooltip = FRA_colonies_wtf
+			set_country_flag = fra_main_colonies
 		}
 	}
 
@@ -2899,7 +2949,9 @@ focus_tree = {
 			custom_effect_tooltip = FRP_diplo_enable_tooltip
 			set_country_flag = FRP_war_enable
 			set_country_flag = FRP_diplo_enable
+			if = { limit = { is_in_faction = no  }
 			create_faction = "Catholic League"
+			}
 		}
 	}
 
@@ -2916,7 +2968,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_the_french_interests  }
 		completion_reward = {
 			set_country_flag = FRP_europe
-			custom_effect_tooltip = FRP_europe
+			custom_effect_tooltip = FRP_across_the_seas_war_enable
 		}
 	}
 
@@ -2950,7 +3002,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_the_french_interests  }
 		completion_reward = {
 			set_country_flag = FRP_across_the_seas_war_enable
-			custom_effect_tooltip = FRP_across_the_seas_war_enable
+			custom_effect_tooltip = FRP_europe
 		}
 	}
 

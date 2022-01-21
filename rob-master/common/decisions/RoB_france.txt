@@ -212,6 +212,11 @@ FRA_reenstablish_lordship_over_syr = {
   fire_only_once = yes
   available = {
 	  has_country_flag = fra_cw_over
+	  OR = {
+				has_country_flag = FRP_war_enable
+				has_country_flag = fra_main_colonies
+				has_country_flag = FRR_war_enable
+			}
 	SYR = { 
 		exists = yes 
 		is_puppet = no
@@ -232,6 +237,11 @@ FRA_assist_syr = {
 	fire_only_once = yes
   	available = {
 		has_country_flag = fra_cw_over
+		OR = {
+				has_country_flag = FRP_war_enable
+				has_country_flag = fra_main_colonies
+				has_country_flag = FRR_war_enable
+			}
 	OR = {
   		SYR = { has_war_with = HJZ }
 		SYR = { has_war_with = TUR }
@@ -284,6 +294,11 @@ FRA_assist_syr = {
 	fire_only_once = yes
 	available = {
 		has_country_flag = fra_cw_over
+		OR = {
+				has_country_flag = FRP_war_enable
+				has_country_flag = fra_main_colonies
+				has_country_flag = FRR_war_enable
+			}
 	  FWA = { 
 		  exists = yes 
 		  is_puppet = no
@@ -305,6 +320,11 @@ FRA_assist_syr = {
 	fire_only_once = yes
 	available = {
 		has_country_flag = fra_cw_over
+		OR = {
+				has_country_flag = FRP_war_enable
+				has_country_flag = fra_main_colonies
+				has_country_flag = FRR_war_enable
+			}
 		FIC = { 
 		  exists = yes 
 		  is_puppet = no
@@ -330,6 +350,11 @@ FRA_colony_reclaiming_radicals = {
 	  fire_only_once = yes
 	  available = {
 		  has_country_flag = fra_cw_over
+		  OR = {
+				has_country_flag = FRP_war_enable
+				has_country_flag = fra_main_colonies
+				has_country_flag = FRR_war_enable
+			}
 		SYR = { 
 			exists = yes 
 			is_puppet = no
@@ -353,6 +378,11 @@ FRA_colony_reclaiming_radicals = {
 		fire_only_once = yes
 		available = {
 			has_country_flag = fra_cw_over
+			OR = {
+				has_country_flag = FRP_war_enable
+				has_country_flag = fra_main_colonies
+				has_country_flag = FRR_war_enable
+			}
 		  FWA = { 
 			  exists = yes 
 			  is_puppet = no
@@ -376,6 +406,11 @@ FRA_colony_reclaiming_radicals = {
 		fire_only_once = yes
 		available = {
 			has_country_flag = fra_cw_over
+			OR = {
+				has_country_flag = FRP_war_enable
+				has_country_flag = fra_main_colonies
+				has_country_flag = FRR_war_enable
+			}
 			FIC = { 
 			  exists = yes 
 			  is_puppet = no
@@ -415,6 +450,368 @@ FRR_diplo = {
 		  }
 	  }
 }
+
+FRA_war_Darlan = {
+
+
+	FRA_nap_ITA = {
+		cost = 30
+		ai_will_do = {
+		 base = 2000
+		 }
+		fire_only_once = yes
+		visible = {
+			ITA = { exists = yes }
+			NOT = { ITA = { is_in_faction_with = ROOT } }
+		}
+		available = {
+		has_war = no
+		}
+		 days_remove = 10
+	   remove_effect = {
+		ROOT = { declare_war_on = { target = ITA  type = annex_everything } }
+		}
+	 
+	  }
+
+	  FRR_nap_SPR = {
+		cost = 30
+		ai_will_do = {
+		 base = 1000
+		 }
+		fire_only_once = yes
+		visible = {
+			OR = {
+				SPR = { exists = yes NOT = { is_in_faction_with = ROOT } }
+				CAT = { exists = yes NOT = { is_in_faction_with = ROOT } }
+				BSQ = { exists = yes NOT = { is_in_faction_with = ROOT } }
+				POR = { exists = yes NOT = { is_in_faction_with = ROOT } }
+			}
+		}
+		available = { has_war = no }
+		days_remove = 10
+	   remove_effect = {
+		   if = {
+			   limit = { SPR = { NOT = { is_in_faction_with = ROOT } } }
+			   ROOT = { declare_war_on = { target = SPR  type = annex_everything } }
+		   }
+		   if = {
+			 limit = { CAT = { NOT = { is_in_faction_with = ROOT } } }
+			 ROOT = { declare_war_on = { target = CAT  type = annex_everything } }
+		 }
+		   if = {
+			 limit = { BSQ = { NOT = { is_in_faction_with = ROOT } } }
+			 ROOT = { declare_war_on = { target = BSQ  type = annex_everything } }
+		 }
+		 if = {
+			limit = { POR = { NOT = { is_in_faction_with = ROOT } } }
+			ROOT = { declare_war_on = { target = POR  type = annex_everything } }
+		}
+		}
+	   }
+	
+	  FRA_nap_SWI = {
+		cost = 30
+		ai_will_do = {
+		 base = 2000
+		 }
+		fire_only_once = yes
+		visible = {
+			SWI = { exists = yes }
+			NOT = { SWI = { is_in_faction_with = ROOT } }
+		}
+		available = {
+		has_war = no
+		}
+		days_remove = 10
+	   remove_effect = {
+		ROOT = { declare_war_on = { target = SWI  type = annex_everything } }
+		}
+	 
+	  }
+
+
+	  FRA_nap_BEL = {
+		cost = 30
+		ai_will_do = {
+		 base = 2000
+		 }
+		fire_only_once = yes
+		visible = {
+			OR = {
+				AND = {
+					WLL = { exists = yes }
+					NOT = { WLL = { is_in_faction_with = ROOT } }
+				}
+				AND = {
+					LUX = { exists = yes }
+					NOT = { LUX = { is_in_faction_with = ROOT } }
+				}
+				AND = {
+					FLA = { exists = yes }
+					NOT = { FLA = { is_in_faction_with = ROOT } }
+				}
+				AND = {
+					HOL = { exists = yes }
+					NOT = { HOL = { is_in_faction_with = ROOT } }
+				}
+			   }	
+		}
+		available = {
+		has_war = no
+		}
+		 days_remove = 10
+	   remove_effect = {
+		   if = {
+			   limit = {
+				WLL = { exists = yes }
+				NOT = { WLL = { is_in_faction_with = ROOT } }
+			   }
+			   ROOT = { declare_war_on = { target = HOL type = annex_everything } }
+		   }
+		   if = {
+			 limit = {
+				FLA = { exists = yes }
+				NOT = { FLA = { is_in_faction_with = ROOT } }
+			 }
+			 ROOT = { declare_war_on = { target = HOL type = annex_everything } }
+		 }
+		 if = {
+			limit = {
+			   LUX = { exists = yes }
+			   NOT = { LUX = { is_in_faction_with = ROOT } }
+			}
+			create_wargoal = { type = annex_everything target = LUX }
+		}
+		 if = {
+			 limit = {
+				HOL = { exists = yes }
+				NOT = { HOL = { is_in_faction_with = ROOT } }
+			 }
+			 create_wargoal = { type = annex_everything target = HOL }
+		 }
+		}
+	   }
+
+	  FRA_nap_GER = {
+		 cost = 30
+		 ai_will_do = {
+		  base = 500
+		  }
+		 fire_only_once = yes
+		 visible = {
+			OR = {
+				AND = {
+					GER = { exists = yes }
+					NOT = { GER = { is_in_faction_with = ROOT } }
+				}
+				AND = {
+					RHN = { exists = yes }
+					NOT = { RHN = { is_in_faction_with = ROOT } }
+				}
+				AND = {
+					BAV = { exists = yes }
+					NOT = { BAV = { is_in_faction_with = ROOT } }
+				}
+				AND = {
+					BDB = { exists = yes }
+					NOT = { BDB = { is_in_faction_with = ROOT } }
+				}
+			   } 
+		 }
+		 available = {
+		 has_war = no
+		 }
+		  days_remove = 10
+		remove_effect = {
+			if = {
+				limit = {
+				  GER = { exists = yes }
+				  NOT = { GER = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+				}
+				ROOT = { declare_war_on = { target = GER  type = annex_everything } }
+			}
+			if = {
+			  limit = {
+				  RHN = { exists = yes }
+				  NOT = { RHN = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+			  }
+			  create_wargoal = { type = annex_everything target = RHN }
+		  }
+			if = {
+			  limit = {
+				  BAV = { exists = yes }
+				  NOT = { BAV = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+			  }
+			  ROOT= { declare_war_on = { target = BAV type = annex_everything } }
+		  }
+		  if = {
+			  limit = {
+				  BDB = { exists = yes }
+				  NOT = { BDB = { OR = { has_government = national_socialist is_in_faction_with = FRR } } }
+			  }
+			  ROOT = { declare_war_on = { target = BDB type = annex_everything } }
+			}
+		}
+	}
+
+	FRA_nap_PRS = {
+		cost = 30
+		ai_will_do = {
+		 base = 2000
+		 }
+		fire_only_once = yes
+		visible = {
+			PRS = { exists = yes }
+			NOT = { PRS = { is_in_faction_with = ROOT } }
+		}
+		available = {
+		has_war = no
+		}
+		 days_remove = 10
+	   remove_effect = {
+		ROOT = { declare_war_on = { target = PRS type = annex_everything } }
+		}
+	  }
+	  
+	  FRA_nap_POL = {
+		cost = 30
+		ai_will_do = {
+		 base = 2000
+		 }
+		fire_only_once = yes
+		visible = {
+			POL = { exists = yes }
+			NOT = { POL = { is_in_faction_with = ROOT } }
+		}
+		available = {
+		has_war = no
+		}
+		 days_remove = 10
+	   remove_effect = {
+		ROOT = { declare_war_on = { target = POL type = annex_everything } }
+		}
+	  }
+
+	  FRA_nap_INDIA = {
+		cost = 30
+		ai_will_do = {
+		 base = 100
+		 }
+		fire_only_once = yes
+		visible = {
+			OR = {
+				TML = { exists = yes }
+				MRS = { exists = yes }
+				MYS = { exists = yes }
+				BBY = { exists = yes }
+				HYD = { exists = yes }
+				ORS = { exists = yes }
+				CIR = { exists = yes }
+				GUJ = { exists = yes }
+				SNH = { exists = yes }
+				BAL = { exists = yes }
+				DEL = { exists = yes }
+				PNJ = { exists = yes }
+				JAK = { exists = yes }
+				BIH = { exists = yes }
+				BNL = { exists = yes }
+				ASM = { exists = yes }
+				BRM = { exists = yes }
+				SNN = { exists = yes }
+				RPF = { exists = yes }
+				RAJ = { exists = yes }
+			}
+		}
+		available = {
+		has_war = no
+		}
+		 days_remove = 10
+	   remove_effect = {
+		if = { limit = {TML = { exists = yes } NOT = { TML = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = TML }
+		}
+		if = { limit = {MRS = { exists = yes } NOT = { MRS = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = MRS }
+		}
+		if = { limit = {MYS = { exists = yes } NOT = { MYS = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = MYS }
+		}
+		if = { limit = {BBY = { exists = yes } NOT = { BBY = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = BBY }
+		}
+		if = { limit = {HYD = { exists = yes } NOT = { HYD = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = HYD }
+		}
+		if = { limit = {ORS = { exists = yes } NOT = { ORS = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = ORS }
+		}
+		if = { limit = {CIR = { exists = yes } NOT = { CIR = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = CIR }
+		}
+		if = { limit = {GUJ = { exists = yes } NOT = { GUJ = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = GUJ }
+		}
+		if = { limit = {SNH = { exists = yes } NOT = { SNH = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = SNH }
+		}
+		if = { limit = {BAL = { exists = yes } NOT = { BAL = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = BAL }
+		}
+		if = { limit = {DEL = { exists = yes } NOT = { DEL = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = DEL }
+		}
+		if = { limit = {PNJ = { exists = yes } NOT = { PNJ = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = PNJ }
+		}
+		if = { limit = {JAK = { exists = yes } NOT = { JAK = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = JAK }
+		}
+		if = { limit = {BIH = { exists = yes } NOT = { BIH = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = BIH }
+		}
+		if = { limit = {BNL = { exists = yes } NOT = { BNL = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = BNL }
+		}
+		if = { limit = {ASM = { exists = yes } NOT = { ASM = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = ASM }
+		}
+		if = { limit = {BRM = { exists = yes } NOT = { BRM = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = BRM }
+		}
+		if = { limit = {SNN = { exists = yes } NOT = { SNN = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = SNN }
+		}
+		if = { limit = {RPF = { exists = yes } NOT = { RPF = { is_in_faction_with = ROOT } } } 
+		create_wargoal = { type = annex_everything target = RPF }
+	}
+		every_state = {
+				limit = { is_core_of = RAJ }
+					add_claim_by = ROOT
+				}	
+			}
+	  }
+
+	  FRA_nap_MEX = {
+		cost = 30
+		ai_will_do = {
+		 base = 100
+		 }
+		fire_only_once = yes
+		visible = {
+			MEX = { exists = yes }
+			NOT = { MEX = { is_in_faction_with = ROOT } }
+		}
+		available = {
+		has_war = no
+		}
+		 days_remove = 10
+	   remove_effect = {
+		create_wargoal = { type = annex_everything target = MEX }
+		}
+	  }
+}
+
 
 FRR_war = {
 
@@ -794,7 +1191,7 @@ FRR_war = {
 	fire_only_once = yes
 	available = {
 	has_country_flag = FRR_war_enable
-	POR = { exists = yes }
+	SWI = { exists = yes }
 	has_war = no
 	NOT = { SWI = { has_government = national_socialist is_in_faction_with = FRR } }
 	custom_trigger_tooltip	= {

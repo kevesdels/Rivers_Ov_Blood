@@ -22,7 +22,8 @@ mean_time_to_happen = { days = 2 }
 option = {
 name = united_kingdom.0.a
 add_political_power = 10
-hidden_effect = { country_event = { id = united_kingdom.1 days = 3 } }
+add_ideas = { ENG_indian_profits }
+hidden_effect = { country_event = { id = united_kingdom.1 days = 3 } add_offsite_building = { type = industrial_complex level = 4 } }
 }
 }
 
@@ -934,6 +935,7 @@ is_triggered_only = yes
 hidden = yes
 
 immediate = {
+ENG = { remove_ideas = { ENG_indian_profits } }
 BRL = { declare_war_on = { type = annex_everything target = BRU } }
 BRL = { declare_war_on = { type = annex_everything target = BRC } }
 BRU = { declare_war_on = { type = annex_everything target = BLF } }

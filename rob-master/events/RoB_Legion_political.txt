@@ -1946,6 +1946,7 @@ option = {
 	
 	mean_time_to_happen = { days = 1 }
 	trigger = {
+	 tag = LES
 	 has_war = no
 	 ALB = { NOT = { is_puppet_of = ROOT } }
 	 1135 = { is_owned_and_controlled_by = ROOT }
@@ -2089,6 +2090,7 @@ country_event = {
 	
 	mean_time_to_happen = { days = 1 }
 	trigger = {
+	tag = LES
 	 has_war = no
 	 ITA = { NOT = { is_puppet_of = ROOT } }
 	 2 = { is_owned_and_controlled_by = ROOT }
