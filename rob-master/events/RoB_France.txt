@@ -1998,6 +1998,7 @@ picture = GFX_picture_FRA_darlan_succeeds_petain
 
 option = { 
 name = rob_france.43.a
+set_cosmetic_tag = FRA_darlan
 set_politics = {
 	ruling_party = reactionary
 	elections_allowed = no 
@@ -7443,49 +7444,37 @@ country_event = {
 	
 	option = { 
 	name = "Yes, sir!"
-	8 = { add_core_of = ROOT }
-	812 = { add_core_of = ROOT }
-	813 = { add_core_of = ROOT }
-	34 = { add_core_of = ROOT }
-	6 = { add_core_of = ROOT }
-	35 = { add_core_of = ROOT }
-	36 = { add_core_of = ROOT }
-	7 = { add_core_of = ROOT }
-	788 = { add_core_of = ROOT }
-	51 = { add_core_of = ROOT }
-	1088 = { add_core_of = ROOT }
-	1080 = { add_core_of = ROOT }
-	1089 = { add_core_of = ROOT }
-	1090 = { add_core_of = ROOT }
-	792 = { add_core_of = ROOT }
-	42 = { add_core_of = ROOT }
-	57 = { add_core_of = ROOT }
-	56 = { add_core_of = ROOT }
-	979 = { add_core_of = ROOT }
-	1210 = { add_core_of = ROOT }
-	1211 = { add_core_of = ROOT }
-	1208 = { add_core_of = ROOT }
-	1209 = { add_core_of = ROOT }
-	1091 = { add_core_of = ROOT }
-	59 = { add_core_of = ROOT }
-	1151 = { add_core_of = ROOT }
-	1152 = { add_core_of = ROOT }
-	1153 = { add_core_of = ROOT }
-	165 = { add_core_of = ROOT }
-	1154 = { add_core_of = ROOT }
-	1110 = { add_core_of = ROOT }
-	1109 = { add_core_of = ROOT }
-	158 = { add_core_of = ROOT }
-	1292 = { add_core_of = ROOT }
-	1291 = { add_core_of = ROOT }
-	1290 = { add_core_of = ROOT }
-	892 = { add_core_of = ROOT }
-	162 = { add_core_of = ROOT }
-	167 = { add_core_of = SPR }
-	1155 = { add_core_of = SPR }
-	177 = { add_core_of = SPR }
-	172 = { add_core_of = SPR }
-	1164 = { add_core_of = SPR }
+	set_country_flag = fra_admiral_route
+	set_politics = {
+		ruling_party = reactionary
+		elections_allowed = no 
+		}
+		create_country_leader = {
+		  name = "François Darlan"
+		  desc = ""
+		  picture = "gfx/leaders/FRA/Francois_Darlan.dds"
+		  expire = "1953.3.1"
+		  ideology = military_junta
+		  traits = {
+			#
+		  }
+		 
+		}
+	1109 = { add_claim_by = FRA }
+    1110 = { add_claim_by = FRA }
+    158 = { add_claim_by = FRA }
+	1290 = { add_claim_by = FRA }
+    162 = { add_claim_by = FRA }
+    1291 = { add_claim_by = FRA }
+    1292 = { add_claim_by = FRA }
+	892 = { add_claim_by = FRA }
+	792 = { add_claim_by = FRA }
+    1089 = { add_claim_by = FRA }
+    42 = { add_claim_by = FRA }
+	51 = { add_claim_by = FRA }
+	1088 = { add_claim_by = FRA }
+	1090 = { add_claim_by = FRA }
+	788 = { add_claim_by = FRA }
 	ROOT = {
 		annex_country = { target = GER }
 		annex_country = { target = HOL }
@@ -7500,6 +7489,7 @@ country_event = {
 		annex_country = { target = MCO }
 		annex_country = { target = SWI }
 		annex_country = { target = RHN }
+		annex_country = { target = POR }
 	}
 	}
 	

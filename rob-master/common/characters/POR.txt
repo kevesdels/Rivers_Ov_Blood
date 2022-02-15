@@ -1,0 +1,57 @@
+characters={
+	POR_manuel_ii={
+		name="Manuel II"
+		portraits={
+			civilian={
+				large="gfx/leaders/POR/Portrait_Portugal_Manuel_I.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ANTÓNIO_DE_OLIVEIRA_SALAZAR_DESC"
+			ideology=authoritharian_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=reactionary_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	POR_manuel_gomes={
+		name="Manuel Teixeira Gomes"
+		portraits={
+			civilian={
+				large="gfx/leaders/POR/Manuel_Teixeira_Gomes.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ANTÓNIO_DE_OLIVEIRA_SALAZAR_DESC"
+			ideology= conservative_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	POR_jose_vicente_de_freitas={
+		name="José Vicente de Freitas"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+
+}

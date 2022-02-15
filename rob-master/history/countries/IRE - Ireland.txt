@@ -31,35 +31,6 @@ set_popularities = {
 }
 
 
-create_country_leader = {
-	name = "Thomas Ryder Johnson"
-	desc = "POLITICS_ÉAMON_DE_VALERA_DESC"
-	picture = "Portrait_Ireland_Eamon_de_Valera.dds"
-	expire = "1965.1.1"
-	ideology = national_socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "William Thomas Cosgrave"
-	desc = "POLITICS_ÉAMON_DE_VALERA_DESC"
-	picture = "gfx/leaders/IRE/Portrait_IRE_William_Thomas_Cosgrave.tga"
-	expire = "1965.1.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_corps_commander = {
-	name = "Michael Costello"
-	portrait_path = "gfx/leaders/ENG/Portrait_Britain_Generic_land_4.dds"
-	traits = {  }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
+recruit_character = IRE_thomas_ryder_johnson
+recruit_character = IRE_william_thomas_cosgrave
+recruit_character = IRE_michael_costello

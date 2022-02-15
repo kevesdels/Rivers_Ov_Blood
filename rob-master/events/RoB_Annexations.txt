@@ -134,9 +134,10 @@ country_event = {
   has_war = no
   SWI = { NOT = { is_puppet_of = ROOT } }
   3 = { is_owned_and_controlled_by = ROOT }
+  NOT = { AND = { tag = FRA has_country_flag = fra_admiral_route } }
   NOT = {
    tag = SWI
-   has_country_flag = annex_aus
+   has_country_flag = annex_swz
   }
  }
  
@@ -188,9 +189,9 @@ country_event = {
   name = "Continue Military Occupation"
   set_country_flag = annex_swz
   ai_chance = { factor = 0 }
-  add_stability =-0.03
-  add_war_support =-0.03
-  add_political_power =-30
+  add_stability =-0.08
+  add_war_support =-0.08
+  add_political_power =-80
  }
 
  option = {
@@ -453,6 +454,7 @@ country_event = {
    tag = SPR
    has_country_flag = annex_spr
   }
+  NOT = { AND = { tag = FRA has_country_flag = fra_admiral_route } }
  }
  
  option = {
@@ -646,6 +648,7 @@ country_event = {
   has_war = no
   POR = { NOT = { is_puppet_of = ROOT } }
   112 = { is_owned_and_controlled_by = ROOT }
+  NOT = { AND = { tag = FRA has_country_flag = fra_admiral_route } }
   NOT = {
    tag = POR
    has_country_flag = annex_por
@@ -925,6 +928,7 @@ country_event = {
    tag = LUX
    has_country_flag = annex_lux
   }
+  NOT = { AND = { tag = FRA has_country_flag = fra_admiral_route } }
  }
  
  option = {
@@ -1008,6 +1012,7 @@ country_event = {
   has_war = no
   WLL = { NOT = { is_puppet_of = ROOT } }
   34 = { is_owned_and_controlled_by = ROOT }
+  NOT = { AND = { tag = FRA has_country_flag = fra_admiral_route } }
   NOT = {
    tag = WLL
    has_country_flag = annex_wll
@@ -1163,6 +1168,7 @@ country_event = {
    tag = FLA
    has_country_flag = annex_fla
   }
+  NOT = { AND = { tag = FRA has_country_flag = fra_admiral_route } }
  }
  
  option = {
@@ -1286,6 +1292,7 @@ country_event = {
    tag = HOL
    has_country_flag = annex_hol
   }
+  NOT = { AND = { tag = FRA has_country_flag = fra_admiral_route } }
  }
  
  option = {
@@ -3148,6 +3155,7 @@ country_event = {
    tag = LES
    has_country_flag = annex_ita
   }
+  NOT = { AND = { tag = FRA has_country_flag = fra_admiral_route } }
  }
  
  option = {
@@ -4072,6 +4080,7 @@ country_event = {
   has_war = no
   GER = { NOT = { is_puppet_of = ROOT } }
   64 = { is_owned_and_controlled_by = ROOT }
+  NOT = { AND = { tag = FRA has_country_flag = fra_admiral_route } }
   NOT = {
    tag = PRS
    tag = GER

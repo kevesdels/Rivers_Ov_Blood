@@ -40,23 +40,5 @@ set_popularities = {
 	pelekist = 0
 }
 
-create_country_leader = {
-	name = "Andrej Hlinka"
-	desc = "POLITICS_JOZEF_TISO_DESC"
-	picture = "gfx/leaders/SLO/Portrait_SLO_Amdrej_Hlinka.tga"
-	expire = "1965.1.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Jozef Tiso"
-	desc = ""
-	picture = "gfx/leaders/SLO/Jozef_Tiso.dds"
-	expire = "1965.1.1"
-	ideology = christian_pelekism
-	traits = {
-	}
-}
+recruit_character = SLO_andrej_hlinka
+recruit_character = SLO_jozef_tiso

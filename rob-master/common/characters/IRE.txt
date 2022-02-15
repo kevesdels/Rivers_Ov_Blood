@@ -1,0 +1,49 @@
+characters={
+	IRE_thomas_ryder_johnson={
+		name="Thomas Ryder Johnson"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRE/Portrait_Ireland_Eamon_de_Valera.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ÉAMON_DE_VALERA_DESC"
+			ideology=national_socialist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	IRE_william_thomas_cosgrave={
+		name="William Thomas Cosgrave"
+		portraits={
+			civilian={
+				large="gfx/leaders/IRE/Portrait_IRE_William_Thomas_Cosgrave.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ÉAMON_DE_VALERA_DESC"
+			ideology=conservative_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	IRE_michael_costello={
+		name="Michael Costello"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_ENG_generic_land_4.dds"
+			}
+			army={
+				large="gfx/leaders/ENG/Portrait_Britain_Generic_land_4.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

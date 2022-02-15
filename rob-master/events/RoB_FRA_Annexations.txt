@@ -1,0 +1,610 @@
+####################
+###Annexation Events
+####################
+
+add_namespace = fra_annex
+
+
+### Darlan route stuff
+country_event = {
+  id = fra_annex.0
+  desc = fra_annex.0.d
+  title = "Fate of Switzerland"
+  
+  mean_time_to_happen = { days = 1 }
+  trigger = {
+    tag = FRA
+    has_war = no
+    SWI = { NOT = { is_puppet_of = ROOT } }
+    3 = { is_owned_and_controlled_by = ROOT }
+    has_country_flag = fra_admiral_route
+    NOT = { has_country_flag = annex_swz }
+  }
+
+
+  option = {
+    name = "Create a Puppet State"
+    puppet = SWI
+    ai_chance = { factor = 50 }
+    hidden_effect = { 
+    if = {
+      limit = { ITA = { is_allied_country = yes } }
+      ITA = { transfer_state = 894 }
+      ITA = { transfer_state = 893 }
+     }
+    every_owned_state = {
+      limit = { 
+       NOT = {
+      is_claim_or_core = yes
+     }
+        is_core_of = SWI
+    }
+    SWI = { transfer_state = PREV }
+    }
+    if = { 
+      limit = { 
+        AND = { 
+            ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+            SWI = { has_cosmetic_tag = Generic_puppet_socialist } 
+          }
+        } 
+        SWI = { drop_cosmetic_tag = yes }
+    }
+     if = { 
+      limit = { 
+        AND = { 
+          ROOT = { NOT = { has_government = pelekist } }
+            SWI = { has_cosmetic_tag = Generic_puppet_pelekist } 
+          }
+        } 
+        SWI = { drop_cosmetic_tag = yes }
+    }
+    }
+   }
+   
+   option = {
+    name = "Continue Military Occupation"
+    set_country_flag = annex_swz
+    ai_chance = { factor = 0 }
+    add_stability =-0.08
+    add_war_support =-0.08
+    add_political_power =-80
+   }
+}
+
+
+country_event = {
+  id = fra_annex.1
+  desc = fra_annex.1.d
+  title = "Fate of Netherlands"
+  
+  mean_time_to_happen = { days = 1 }
+  trigger = {
+    tag = FRA
+    has_war = no
+    HOL = { NOT = { is_puppet_of = ROOT } }
+    7 = { is_owned_and_controlled_by = ROOT }
+    has_country_flag = fra_admiral_route
+    NOT = { has_country_flag = annex_hol }
+  }
+ 
+  
+  option = {
+    name = "Holland Belongs To Us"
+    ai_chance = { factor = 50 }
+    add_political_power =-60
+ }
+
+
+  option = {
+   name = "Set Up Puppet Government"
+   puppet = HOL
+   HOL = { promote_character = HOL_henri_winkelman }
+   ai_chance = { factor = 50 }
+   hidden_effect = {
+    6 = { remove_core_of = HOL }
+    6 = { remove_claim_by = HOL }
+   HOL = { transfer_state = 7 }
+   HOL = { transfer_state = 36 }
+    if = { 
+     limit = { 
+       AND = { 
+           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+           HOL = { has_cosmetic_tag = Generic_puppet_socialist } 
+         }
+       } 
+       HOL = { drop_cosmetic_tag = yes }
+   }
+    if = { 
+     limit = { 
+       AND = { 
+         ROOT = { NOT = { has_government = pelekist } }
+         HOL = { has_cosmetic_tag = Generic_puppet_pelekist } 
+         }
+       } 
+       HOL = { drop_cosmetic_tag = yes }
+   } 
+  }
+}
+  
+  option = {
+    name = "A Strong Ally"
+    puppet = HOL
+    HOL = { promote_character = HOL_henri_winkelman } 
+    ai_chance = { factor = 50 }
+    hidden_effect = {
+     6 = { remove_core_of = FRA }
+     6 = { remove_claim_by = FRA }
+     6 = { add_core_of = HOL }
+    every_owned_state = {
+      limit = { 
+       NOT = {
+      is_claim_or_core = yes
+     }
+        is_core_of = HOL
+    }
+    HOL = { transfer_state = PREV }
+    }
+     if = { 
+      limit = { 
+        AND = { 
+            ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+            HOL = { has_cosmetic_tag = Generic_puppet_socialist } 
+          }
+        } 
+        HOL = { drop_cosmetic_tag = yes }
+    }
+     if = { 
+      limit = { 
+        AND = { 
+          ROOT = { NOT = { has_government = pelekist } }
+          HOL = { has_cosmetic_tag = Generic_puppet_pelekist } 
+          }
+        } 
+        HOL = { drop_cosmetic_tag = yes }
+    } 
+   }
+}
+}
+
+ country_event = {
+  id = fra_annex.2
+  desc = fra_annex.2.d
+  title = "Fate of Portugal"
+  
+  mean_time_to_happen = { days = 1 }
+  trigger = {
+    tag = FRA
+    has_war = no
+    POR = { NOT = { is_puppet_of = ROOT } }
+    112 = { is_owned_and_controlled_by = ROOT }
+    has_country_flag = fra_admiral_route
+    NOT = { has_country_flag = annex_por }
+  }
+ 
+  option = {
+    name = "Set Up Puppet Government"
+    puppet = POR
+    POR = { set_politics = { ruling_party = conservative } add_popularity = { ideology = conservative popularity = 0.5 } } 
+    
+    ai_chance = { factor = 50 }
+    every_owned_state = {
+      limit = { 
+       NOT = {
+      is_claim_or_core = yes
+     }
+        is_core_of = POR
+    }
+    POR = { transfer_state = PREV }
+    }
+     if = { 
+      limit = { 
+        AND = { 
+            ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+            POR = { has_cosmetic_tag = Generic_puppet_socialist } 
+          }
+        } 
+        POR = { drop_cosmetic_tag = yes }
+    }
+     if = { 
+      limit = { 
+        AND = { 
+          ROOT = { NOT = { has_government = pelekist } }
+          POR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+          }
+        } 
+        POR = { drop_cosmetic_tag = yes }
+    }   
+   }
+   
+   option = {
+    name = "Continue Military Occupation"
+    ai_chance = { factor = 0 }
+    set_country_flag = annex_por
+    add_stability =-0.15
+    add_war_support =-0.15
+    add_political_power =-15
+   }
+ 
+}
+
+country_event = {
+  id = fra_annex.3
+  desc = fra_annex.3.d
+  title = "Fate of Spain"
+  
+  mean_time_to_happen = { days = 1 }
+  trigger = {
+    tag = FRA
+    has_war = no
+    SPR = { NOT = { is_puppet_of = ROOT } }
+    41 = { is_owned_and_controlled_by = ROOT }
+    has_country_flag = fra_admiral_route
+    NOT = { has_country_flag = annex_spr }
+  }
+  
+  option = {
+    name = "Incoporate Catalonia"
+    puppet = SPR
+    ai_chance = { factor = 150 }
+    hidden_effect = {
+    165 = { add_claim_by = ROOT }
+    1151 = { add_claim_by = ROOT }
+    1152 = { add_claim_by = ROOT }
+    1153 = { add_claim_by = ROOT }
+    1162 = { add_core_of = SPR }
+    171 = { add_core_of = SPR }
+    167 = { add_core_of = SPR }
+    1155 = { add_core_of = SPR }
+    177 = { add_core_of = SPR }
+    172 = { add_core_of = SPR }
+    1164 = { add_core_of = SPR }
+    1154 = { add_core_of = SPR }
+    every_owned_state = {
+      limit = { 
+       NOT = {
+      is_claim_or_core = yes
+     }
+        is_core_of = SPR
+    }
+    SPR = { transfer_state = PREV }
+    }  
+     if = { 
+      limit = { 
+        AND = { 
+            ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+            SPR = { has_cosmetic_tag = Generic_puppet_socialist } 
+          }
+        } 
+        SPR = { drop_cosmetic_tag = yes }
+    }
+     if = { 
+      limit = { 
+        AND = { 
+          ROOT = { NOT = { has_government = pelekist } }
+          SPR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+          }
+        } 
+        SPR = { drop_cosmetic_tag = yes }
+    } 
+   }
+  }
+
+
+  option = {
+    name = "A Strong Ally"
+    puppet = SPR
+    ai_chance = { factor = 150 }
+    hidden_effect = {
+      1162 = { add_core_of = SPR }
+      171 = { add_core_of = SPR }
+      165 = { add_core_of = SPR }
+      1151 = { add_core_of = SPR }
+      1152 = { add_core_of = SPR }
+      1153 = { add_core_of = SPR }
+      167 = { add_core_of = SPR }
+      1155 = { add_core_of = SPR }
+      177 = { add_core_of = SPR }
+      172 = { add_core_of = SPR }
+      1164 = { add_core_of = SPR }
+      1154 = { add_core_of = SPR }
+    every_owned_state = {
+      limit = { 
+       NOT = {
+      is_claim_or_core = yes
+     }
+        is_core_of = SPR
+    }
+    SPR = { transfer_state = PREV }
+    }
+    if = { 
+      limit = { 
+        AND = { 
+            ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+            SPR = { has_cosmetic_tag = Generic_puppet_socialist } 
+          }
+        } 
+        SPR = { drop_cosmetic_tag = yes }
+    }
+     if = { 
+      limit = { 
+        AND = { 
+          ROOT = { NOT = { has_government = pelekist } }
+          SPR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+          }
+        } 
+        SPR = { drop_cosmetic_tag = yes }
+    } 
+   }
+  }
+  
+  option = {
+   name = "Continue Military Occupation"
+   ai_chance = { factor = 0 }
+   set_country_flag = annex_spr
+   add_stability =-0.5
+   add_war_support =-0.5
+   add_political_power =-500
+  }
+ 
+ }
+
+country_event = {
+  id = fra_annex.4
+  desc = fra_annex.4.d
+  title = "Fate of Italy"
+  
+  mean_time_to_happen = { days = 1 }
+  trigger = {
+    tag = FRA
+    has_war = no
+    ITA = { NOT = { is_puppet_of = ROOT } }
+    2 = { is_owned_and_controlled_by = ROOT }
+    has_country_flag = fra_admiral_route
+    NOT = { has_country_flag = annex_ita }
+  }
+  
+  option = {
+   name = "Italy Submits!"
+   puppet = ITA
+   puppet = SIC
+   117 = { add_core_of = SIC }
+   1101 = { add_core_of = SIC }
+   1102 = { add_core_of = SIC }
+   156 = { add_core_of = SIC }
+   1104 = { add_core_of = SIC }
+   115 = { add_core_of = SIC }
+   1105 = { add_core_of = SIC }
+   1103 = { add_core_of = SIC }
+   157 = { add_core_of = SIC }
+   ###sicily
+   hidden_effect = {
+   every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = SIC
+	}
+	SIC = { transfer_state = PREV }
+  }
+  SIC = { set_capital = {state = 117} }
+  ###italy
+    102 = { remove_core_of = ITA }
+    1125 = { remove_core_of = ITA }
+    939 = { remove_core_of = ITA }
+    163 = { remove_core_of = ITA }
+    103 = { remove_core_of = ITA }
+    1124 = { remove_core_of = ITA }
+    938 = { remove_core_of = ITA }
+    1123 = { remove_core_of = ITA }
+    940 = { remove_core_of = ITA }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = ITA
+	}
+	ITA = { transfer_state = PREV }
+  }
+  ITA = { drop_cosmetic_tag = yes }
+  ITA = { set_cosmetic_tag = ITA_DARLAN } 
+  SIC = { set_cosmetic_tag = SIC_DARLAN } 
+   ai_chance = { factor = 50 }
+  }
+}
+  
+  option = {
+    name = "A Strong Ally"
+    puppet = ITA
+    ai_chance = { factor = 50 }
+    hidden_effect = {
+    ITA = { recruit_character = ITA_victor_emmanuel_iii promote_character = ITA_victor_emmanuel_iii }
+    102 = { remove_core_of = ITA }
+    1125 = { remove_core_of = ITA }
+    939 = { remove_core_of = ITA }
+    163 = { remove_core_of = ITA }
+    103 = { remove_core_of = ITA }
+    1124 = { remove_core_of = ITA }
+    938 = { remove_core_of = ITA }
+    1123 = { remove_core_of = ITA }
+    940 = { remove_core_of = ITA }
+    1290 = { remove_claim_by = FRA }
+    162 = { remove_claim_by = FRA }
+    1291 = { remove_claim_by = FRA }
+    1292 = { remove_claim_by = FRA }
+    every_owned_state = {
+      limit = { 
+       NOT = {
+      is_claim_or_core = yes
+     }
+        is_core_of = ITA
+    }
+    ITA = { transfer_state = PREV }
+    }
+    ITA = { drop_cosmetic_tag = yes }
+    ITA = { set_cosmetic_tag = ITA_DARLAN } 
+  }
+}
+
+  option = {
+   name = "Continue Military Occupation"
+   ai_chance = { factor = 0 }
+   set_country_flag = annex_ita
+   add_stability =-0.5
+   add_war_support =-0.5
+   add_political_power =-500
+  }
+ 
+ }
+
+ country_event = {
+  id = fra_annex.5
+  desc = fra_annex.5.d
+  title = "Fate of Germany"
+  
+  mean_time_to_happen = { days = 1 }
+  trigger = {
+    tag = FRA
+    has_war = no
+    GER = { NOT = { is_puppet_of = ROOT } }
+    64 = { is_owned_and_controlled_by = ROOT }
+    has_country_flag = fra_admiral_route
+    NOT = { has_country_flag = annex_ger }
+  }
+  
+  option = {
+   name = "Germany Uno!"
+   BAV = { drop_cosmetic_tag = yes } 
+   puppet = BAV
+   BAD = { set_cosmetic_tag = BAD_monarchy } 
+   puppet = BAD
+   puppet = HAN
+   HAN = { set_politics = { ruling_party = conservative } add_popularity = { ideology = conservative popularity = 0.5 } } 
+   HAM = { set_cosmetic_tag = HAM_DARLAN }
+   puppet = HAM
+   HAM = { set_politics = { ruling_party = social_liberal } add_popularity = { ideology = social_liberal popularity = 0.5 } }  
+   puppet = SAX
+   SAX = { set_politics = { ruling_party = authoritharian } add_popularity = { ideology = authoritharian popularity = 0.5 } } 
+   puppet = BDB
+
+   hidden_effect = {
+    798 = { add_core_of = BAV }
+    52 = { add_core_of = BAV }
+    800 = { add_core_of = BAV }
+    53 = { add_core_of = BAV }
+    54 = { add_core_of = BAV }
+    1087 = { add_core_of = BAV }
+    1085 = { add_core_of = BAV }
+    1086 = { add_core_of = BAV }
+    791 = { add_core_of = BAD }
+    799 = { add_core_of = BAD }
+    50 = { add_core_of = BAD }
+    1215 = { add_core_of = BAD }
+    790 = { add_core_of = BAD }
+    55 = { add_core_of = HAN }
+    1080 = { add_core_of = HAN }
+    57 = { add_core_of = HAN }
+    1080 = { add_core_of = HAN }
+    56 = { add_core_of = HAN }
+    1210 = { add_core_of = HAN }
+    1208 = { add_core_of = HAN }
+    1091 = { add_core_of = HAN }
+    1206 = { add_core_of = HAN }
+    1205 = { add_core_of = HAN }
+    1209 = { add_core_of = HAN }
+    1204 = { add_core_of = HAN }
+    1207 = { add_core_of = HAN }
+    1094 = { add_core_of = HAN }
+    795 = { add_core_of = SAX }
+    1092 = { add_core_of = SAX }
+    60 = { add_core_of = SAX }
+    1212 = { add_core_of = SAX }
+    65 = { add_core_of = SAX }
+    58 = { add_core_of = HAM }
+    61 = { add_core_of = HAM }
+    1214 = { add_core_of = HAM }
+    796 = { add_core_of = HAM }
+    62 = { add_core_of = HAM }
+    1213 = { add_core_of = HAM }
+    797 = { add_core_of = HAM }
+    1293 = { add_core_of = HAM }
+    979 = { add_core_of = HAM }
+    1211 = { add_core_of = HAM }
+    59 = { add_core_of = HAM }
+    63 = { add_core_of = BDB }
+    1095 = { add_core_of = BDB }
+    68 = { add_core_of = BDB }
+    1093 = { add_core_of = BDB }
+    794 = { add_core_of = BDB }
+    64 = { add_core_of = BDB }
+    793 = { add_core_of = BDB }
+    1203 = { add_core_of = BDB }
+   }
+
+   ###Bavaria
+   hidden_effect = {
+   every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = BAV
+	}
+	BAV = { transfer_state = PREV }
+  }
+  ###Baden
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = BAD
+	}
+	BAD = { transfer_state = PREV }
+  }
+  ###Hannover
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = HAN
+	}
+	HAN = { transfer_state = PREV }
+  }
+  ###Saxony
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = SAX
+	}
+	SAX = { transfer_state = PREV }
+  }
+  ###Saxony
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = HAM
+	}
+	HAM = { transfer_state = PREV }
+  }
+  ###Saxony
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+      is_core_of = BDB
+	}
+	BDB = { transfer_state = PREV }
+  }
+  }
+}
+ 
+ }

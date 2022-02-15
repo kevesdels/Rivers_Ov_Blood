@@ -46,92 +46,14 @@ add_ideas = {
 
 set_stability = 0.85
 
-
-create_country_leader = {
-	name = "Fritz Platten"
-	desc = "POLITICS_ERNST_BEGUIN_DESC"
-	picture = "Portrait_SWI_Marcel_Pilet_Golaz.tga"
-	expire = "1965.1.1"
-	ideology = sorelianism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Marcel Pilet-Golaz"
-	desc = "POLITICS_ERNST_BEGUIN_DESC"
-	picture = "gfx/leaders/SWI/Portrait_SWI_Marcel_Pilet_Golaz.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Rolf Henne"
-	desc = "POLITICS_ERNST_BEGUIN_DESC"
-	picture = "Portrait_SWI_Marcel_Pilet_Golaz.tga"
-	expire = "1965.1.1"
-	ideology = pelekist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Georges Oltramare"
-	desc = "POLITICS_ERNST_BEGUIN_DESC"
-	picture = "Portrait_SWI_Marcel_Pilet_Golaz.tga"
-	expire = "1965.1.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Eugen Bircher"
-	desc = "POLITICS_ERNST_BEGUIN_DESC"
-	picture = "Portrait_SWI_Marcel_Pilet_Golaz.tga"
-	expire = "1965.1.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
-}
-
-
-create_corps_commander = {
-	name = "Henri Guisan"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	traits = {  winter_specialist }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Eugen Bircher"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	traits = {  winter_specialist }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Emil Sonderegger"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	traits = {  winter_specialist }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 1
-}
+recruit_character = SWI_fritz_platten
+recruit_character = SWI_marcel_piletgolaz
+recruit_character = SWI_rolf_henne
+recruit_character = SWI_georges_oltramare
+recruit_character = SWI_eugen_bircher
+recruit_character = SWI_henri_guisan
+recruit_character = SWI_emil_sonderegger
+recruit_character = SWI_charles_deucher
+recruit_character = SWI_martin_wille
+recruit_character = SWI_henri_de_prangins
+recruit_character = SWI_josef_chaudet

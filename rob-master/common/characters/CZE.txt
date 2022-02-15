@@ -1,0 +1,140 @@
+characters={
+	CZE_tomas_garrigue_masaryk={
+		name="Tomáš Garrigue Masaryk"
+		portraits={
+			civilian={
+				large="gfx/leaders/CZE/Tomas_Garrigue_Masaryk.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_EDVARD_BENES_DESC"
+			ideology=conservative_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CZE_vaclav_klofac={
+		name="Václav Klofáč"
+		portraits={
+			civilian={
+				large="gfx/leaders/CZE/Portrait_Czech_Jaroslav_Krejci.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_JAROSLAV_KREJCI_DESC"
+			ideology=democratic_socialist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CZE_klement_gottwald={
+		name="Klement Gottwald"
+		portraits={
+			civilian={
+				large="gfx/leaders/CZE/Portrait_Czech_Klement_Gottwald.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KLEMENT_GOTTWALD_DESC"
+			ideology=socialist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CZE_antonin_hampl={
+		name="Antonín Hampl"
+		portraits={
+			civilian={
+				large="gfx/leaders/CZE/Portrait_Czech_Klement_Gottwald.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KLEMENT_GOTTWALD_DESC"
+			ideology=social_democracy_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CZE_andrej_hlinka={
+		name="Andrej Hlinka"
+		portraits={
+			civilian={
+				large="gfx/leaders/CZE/Portrait_Czech_Klement_Gottwald.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KLEMENT_GOTTWALD_DESC"
+			ideology=reactionary_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CZE_hans_knirsch={
+		name="Hans Knirsch"
+		portraits={
+			civilian={
+				large="gfx/leaders/CZE/Portrait_Czech_Klement_Gottwald.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KLEMENT_GOTTWALD_DESC"
+			ideology=national_socialist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CZE_jan_rys_rozsevac={
+		name="Jan Rys Rozsévač"
+		portraits={
+			civilian={
+				large="gfx/leaders/CZE/Jan_Rys_Rozsévač.dds"
+			}
+		}
+		country_leader={
+			ideology=pelekist_subtype
+			traits={ editor }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CZE_josef_snejdarek={
+		name="Josef Šnejdárek"
+		portraits={
+			army={
+				small="GFX_Portrait_czechoslovakia_josef_snejdarek_small"
+			}
+			army={
+				large="GFX_Portrait_czechoslovakia_josef_snejdarek"
+			}
+		}
+		field_marshal={
+			traits={ defensive_doctrine thorough_planner }
+			skill=3
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	CZE_richard_tesarik={
+		name="Richard Tesařík"
+		portraits={
+			army={
+				small="GFX_Portrait_czechoslovakia_richard_tesarik_small"
+			}
+			army={
+				large="GFX_Portrait_czechoslovakia_richard_tesarik"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=2
+			attack_skill=4
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+}

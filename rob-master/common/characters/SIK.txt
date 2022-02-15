@@ -1,0 +1,36 @@
+characters={
+	SIK_khoja_niyaz={
+		name="Khoja Niyaz"
+		portraits={
+			civilian={
+				large="gfx/leaders/SIK/Khoja_Niyaz.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_SHENG_SHICAI_DESC"
+			ideology=authoritharian_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIK_chiang_yufen={
+		name="Chiang Yu-fen"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_asia_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+}

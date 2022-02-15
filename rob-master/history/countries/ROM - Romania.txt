@@ -9,72 +9,18 @@ if = {
 	}
 }
 
-create_country_leader = {
-	name = "Carol II"
-	desc = "POLITICS_GHEORGHE_TATARESCU_DESC"
-	picture = "gfx/leaders/ROM/Portrait_ROM_Carol_II.tga"
-	expire = "1965.1.1"
-	ideology = conservative_subtype
-	traits = {
-		#
+recruit_character = ROM_carol_ii
+recruit_character = ROM_constantin_ion_parhon
+recruit_character = ROM_corneliu_zelea_codreanu
+recruit_character = ROM_ion_antonescu
+recruit_character = ROM_petre_dumitrescu
+recruit_character = ROM_ioan_mihail_racovita
+recruit_character = ROM_gheorghe_avramescu
+recruit_character = ROM_horia_macellariu
+set_autonomy = {
+		target = HUN
+		autonomous_state = autonomy_puppet
 	}
-}
-create_country_leader = {
-	name = "Carol II"
-	desc = "POLITICS_GHEORGHE_TATARESCU_DESC"
-	picture = "gfx/leaders/ROM/Portrait_ROM_Carol_II.tga"
-	expire = "1965.1.1"
-	ideology = social_democracy_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Carol II"
-	desc = "POLITICS_GHEORGHE_TATARESCU_DESC"
-	picture = "gfx/leaders/ROM/Portrait_ROM_Carol_II.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Constantin Ion Parhon"
-	desc = "POLITICS_CONSTANTIN_PARHON_DESC"
-	picture = "gfx/leaders/ROM/Portrait_Romania_Constantin_Parhon.dds"
-	expire = "1965.1.1"
-	ideology = socialist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Corneliu Zelea Codreanu"
-	desc = "POLITICS_OCTAVIAN_GOGA_DESC"
-	picture = "gfx/leaders/ROM/Corneliu_Zelea_Codreanu.dds"
-	expire = "1965.1.1"
-	ideology = christian_pelekism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ion Antonescu"
-	desc = "POLITICS_ION_ANTONESCU_DESC"
-	picture = "gfx/leaders/ROM/Portrait_Romania_Ion_Antonescu.dds"
-	expire = "1965.1.1"
-	ideology = military_junta
-	traits = {
-		#
-	}
-}
-		set_autonomy = {
-			target = HUN
-			autonomous_state = autonomy_puppet
-		}
 set_research_slots = 3
 set_stability = 0.6
 set_war_support = 0.6

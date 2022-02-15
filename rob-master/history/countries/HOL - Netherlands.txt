@@ -9,6 +9,10 @@ if = {
 	}
 }
 
+add_ideas = {
+	HOL_wilhelmina_queen
+}
+
 set_research_slots = 3
 set_stability = 0.75
 set_war_support = 0
@@ -102,89 +106,19 @@ set_popularities = {
 	reactionary = 45
 	pelekist = 25
 }
-	create_country_leader = {
-		name = "Adrianus Antonius van Nijnatten"
-		desc = "POLITICS_DIRK_JAN_DE_GEER_DESC"
-		picture = "Portrait_Netherlands_Dirk_Jan_de_Geer.dds"
-		expire = "1965.1.1"
-		ideology = military_junta
-		traits = {
-			#
-		}
-	}
 
 set_convoys = 150
-set_stability = 0.75				
+set_stability = 0.75	
 
-
-
-create_field_marshal = {
-	name = "Izaak Reijnders"
-	id = 980
-	gfx = "GFX_portrait_hol_izaak_reijnders"
-	traits = { old_guard inflexible_strategist trait_reckless }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Petrus Wilhelmus Best"
-	gfx = "GFX_portrait_hol_petrus_wilhelmus_best"
-	traits = { organizer skilled_staffer }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Godfried van Voorst tot Voorst"
-	gfx = "GFX_portrait_hol_godfried_van_voorst_tot_voorst"
-	traits = { brilliant_strategist career_officer armor_officer politically_connected }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_navy_leader = {
-	name = "Johannes Theodorus Furstner"
-	gfx = "GFX_portrait_hol_johannes_theodorus_furstner"
-	traits = { caustic_personality fly_swatter blockade_runner }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	maneuvering_skill = 2
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Conrad Helfrich"
-	gfx = "GFX_portrait_hol_conrad_helfrich"
-	traits = { seawolf superior_tactician bold navy_career_officer }
-	id = 981
-	skill = 4
-	attack_skill = 5
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "Karel Doorman"
-	gfx = "GFX_portrait_hol_karel_doorman"
-	traits = { fleet_protector naval_lineage bold }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 2
-}
+recruit_character = HOL_adrianus_antonius_van_nijnatten
+recruit_character = HOL_anton_mussert
+recruit_character = HOL_izaak_reijnders
+recruit_character = HOL_petrus_wilhelmus_best
+recruit_character = HOL_godfried_van_voorst_tot_voorst
+recruit_character = HOL_johannes_theodorus_furstner
+recruit_character = HOL_conrad_helfrich
+recruit_character = HOL_karel_doorman
+recruit_character = HOL_henri_winkelman
 
 
 ### VARIANTS ###

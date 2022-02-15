@@ -403,24 +403,16 @@ option = {
  set_party_name = { ideology = authoritharian long_name = "Partito dei Combattenti" name = "PdC" }
  set_party_name = { ideology = reactionary long_name = "Partito dei Combattenti" name = "PdC" }
  set_country_flag = ITA_messe_forms_pdc
-  create_country_leader = {
-	name = "Giovanni Messe"
-	desc = ""
-	picture = "gfx/leaders/ITA/Giovanni Messe.tga"
-	expire = "1953.3.1"
-	ideology = military_junta
-	traits = {
-		#
+
+ ROOT = {
+	promote_character = ITA_giovanni_messe
+	promote_character = {
+		character = ITA_giovanni_messe
+		Ideology = military_junta
 	}
-}
- create_country_leader = {
-	name = "Giovanni Messe"
-	desc = ""
-	picture = "gfx/leaders/ITA/Giovanni Messe.tga"
-	expire = "1953.3.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
+	promote_character = {
+		character = ITA_giovanni_messe
+		Ideology = authoritharian_subtype
 	}
 }
 }
@@ -510,24 +502,15 @@ option = {
  set_party_name = { ideology = authoritharian long_name = "Partito dei Combattenti" name = "PdC" }
  set_party_name = { ideology = reactionary long_name = "Partito dei Combattenti" name = "PdC" }
  set_country_flag = ITA_graziani_forms_pdc
- create_country_leader = {
-	name = "Rodolfo Graziani"
-	desc = ""
-	picture = "gfx/leaders/ITA/Rodolfo Graziani.tga"
-	expire = "1953.3.1"
-	ideology = military_junta
-	traits = {
-		#
+ ROOT = {
+	promote_character = ITA_giovanni_messe
+	promote_character = {
+		character = ITA_giovanni_messe
+		Ideology = military_junta
 	}
-}
- create_country_leader = {
-	name = "Rodolfo Graziani"
-	desc = ""
-	picture = "gfx/leaders/ITA/Rodolfo Graziani.tga"
-	expire = "1953.3.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
+	promote_character = {
+		character = ITA_giovanni_messe
+		Ideology = authoritharian_subtype
 	}
 }
 }
@@ -591,14 +574,11 @@ SIC = { transfer_state = 448 }
 1105 = { add_core_of = SIC }
 
 SIC = {
-create_country_leader = {
-	name = "Rodolfo Graziani"
-	desc = ""
-	picture = "gfx/leaders/ITA/Rodolfo Graziani.tga"
-	expire = "1953.3.1"
-	ideology = military_junta
-	traits = {
-		#
+ ROOT = {
+	promote_character = ITA_rodolfo_graziani
+	promote_character = {
+		character = ITA_rodolfo_graziani
+		Ideology = military_junta
 	}
 }
 add_cosmetic_tag = SIC_civil_war
@@ -630,14 +610,11 @@ SIC = { transfer_state = 448 }
 1105 = { add_core_of = SIC }
 
 SIC = {
-create_country_leader = {
-	name = "Giovanni Messe"
-	desc = ""
-	picture = "gfx/leaders/ITA/Giovanni Messe.tga"
-	expire = "1953.3.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
+ ROOT = {
+	promote_character = ITA_giovanni_messe
+	promote_character = {
+		character = ITA_giovanni_messe
+		Ideology = authoritharian_subtype
 	}
 }
 add_cosmetic_tag = SIC_civil_war

@@ -33,101 +33,12 @@ set_popularities = {
 	pelekist = 5
 }
 
-create_country_leader = {
-	name = "Tomáš Garrigue Masaryk"
-	desc = "POLITICS_EDVARD_BENES_DESC"
-	picture = "Tomas_Garrigue_Masaryk.dds"
-	expire = "1965.1.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Václav Klofáč"
-	desc = "POLITICS_JAROSLAV_KREJCI_DESC"
-	picture = "Portrait_Czech_Jaroslav_Krejci.dds"
-	expire = "1965.1.1"
-	ideology = democratic_socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Klement Gottwald"
-	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
-	picture = "Portrait_Czech_Klement_Gottwald.dds"
-	expire = "1965.1.1"
-	ideology = socialist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Antonín Hampl"
-	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
-	picture = "Portrait_Czech_Klement_Gottwald.dds"
-	expire = "1965.1.1"
-	ideology = social_democracy_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Andrej Hlinka"
-	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
-	picture = "Portrait_Czech_Klement_Gottwald.dds"
-	expire = "1965.1.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Hans Knirsch"
-	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
-	picture = "Portrait_Czech_Klement_Gottwald.dds"
-	expire = "1965.1.1"
-	ideology = national_socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Jan Rys Rozsévač"
-	desc = ""
-	picture = "Jan_Rys_Rozsévač.dds"
-	expire = "1965.1.1"
-	ideology = pelekist_subtype
-	traits = {
-	editor
-	}
-}
-
-
-create_field_marshal = {
-	name = "Josef Šnejdárek"
-	gfx = "GFX_Portrait_czechoslovakia_josef_snejdarek"
-	traits = { thorough_planner defensive_doctrine }
-	skill = 3
-    attack_skill = 3
-    defense_skill = 4
-    planning_skill = 2
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Richard Tesařík"
-	gfx = "GFX_Portrait_czechoslovakia_richard_tesarik"
-	traits = { armor_officer }
-	skill = 2
-    attack_skill = 4
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-
+recruit_character = CZE_tomas_garrigue_masaryk
+recruit_character = CZE_vaclav_klofac
+recruit_character = CZE_klement_gottwald
+recruit_character = CZE_antonin_hampl
+recruit_character = CZE_andrej_hlinka
+recruit_character = CZE_hans_knirsch
+recruit_character = CZE_jan_rys_rozsevac
+recruit_character = CZE_josef_snejdarek
+recruit_character = CZE_richard_tesarik

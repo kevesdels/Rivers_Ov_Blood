@@ -72,28 +72,9 @@ set_convoys = 100
 set_stability = 0.75
 
 
-create_country_leader = {
-	name = "Manuel II"
-	desc = "POLITICS_ANTÓNIO_DE_OLIVEIRA_SALAZAR_DESC"
-	picture = "gfx/leaders/POR/Portrait_Portugal_Manuel_I.tga"
-	expire = "1965.1.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
-}
-
-create_corps_commander = {
-	name = "José Vicente de Freitas"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	traits = {  }
-	skill = 3
-
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
+recruit_character = POR_manuel_ii
+recruit_character = POR_manuel_gomes
+recruit_character = POR_jose_vicente_de_freitas
 
 ### VARIANTS ###
 # 1936 Start #

@@ -1,0 +1,175 @@
+characters={
+	SWI_fritz_platten={
+		name="Fritz Platten"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ERNST_BEGUIN_DESC"
+			ideology=sorelianism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWI_marcel_piletgolaz={
+		name="Marcel Pilet-Golaz"
+		portraits={
+			civilian={
+				large="gfx/leaders/SWI/Portrait_SWI_Marcel_Pilet_Golaz.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ERNST_BEGUIN_DESC"
+			ideology=social_liberal_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWI_rolf_henne={
+		name="Rolf Henne"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ERNST_BEGUIN_DESC"
+			ideology=pelekist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWI_georges_oltramare={
+		name="Georges Oltramare"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ERNST_BEGUIN_DESC"
+			ideology=reactionary_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWI_eugen_bircher={
+		name="Eugen Bircher"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+		}
+		country_leader={
+			desc="POLITICS_ERNST_BEGUIN_DESC"
+			ideology=authoritharian_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWI_henri_guisan={
+		name="Henri Guisan"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SWI_emil_sonderegger={
+		name="Emil Sonderegger"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist }
+			skill=4
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SWI_charles_deucher={
+		name="Charles Deucher"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1944.1.1.1"
+			id=-1
+		}
+	}
+	SWI_martin_wille={
+		name="Martin Wille"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=syndicalism
+			traits={ tenacious_negotiator }
+			expire="1945.1.1.1"
+			id=-1
+		}
+	}
+	SWI_henri_de_prangins={
+		name="Henri de Prangins"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=social_democracy_subtype
+			expire="1947.1.1.1"
+			id=-1
+		}
+	}
+	SWI_josef_chaudet={
+		name="Josef Chaudet"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=conservative_subtype
+			traits={ armaments_organizer compassionate_gentleman }
+			expire="1948.1.1.1"
+			id=-1
+		}
+	}
+}

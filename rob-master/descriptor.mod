@@ -1,4 +1,4 @@
-version="1.10.3"
+version="1.11.6"
 tags={
 	"Military"
 	"Map"
@@ -38,6 +38,6 @@ replace_path="map"
 replace_path="map/supplyareas"
 replace_path="map/strategicregions"
 picture="rob.png"
-supported_version="1.10.3"
+supported_version="1.11.6"
 path="C:/Users/karogs/Documents/Paradox Interactive/Hearts of Iron IV/mod/rob-master"
 remote_file_id="2384429600"
