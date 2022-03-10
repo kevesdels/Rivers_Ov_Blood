@@ -1,6 +1,5 @@
 ﻿division_template = {
 	name = "Divisão de Infanteria"		# Infantry Division
-	division_names_group = POR_INF_01
 	# Note: each regiment could also mobilize a 3rd battalion if called up
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -17,8 +16,6 @@
 }
 division_template = {
 	name = "Força de Caçadores"		# Elite light infantry, always fully mobilized w best equipment
-	division_names_group = POR_CAC_01
-
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -27,7 +24,6 @@ division_template = {
 }
 division_template = {
 	name = "Brigada de Cavalaria" 		# Cavalry Brigade
-	division_names_group = POR_CAV_01
 	# Note: Cavalry regiments included about 5 squadrons/companies
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -195,7 +191,7 @@ units = {
 		division_template = "Força de Caçadores"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.4
-
+	}
 	division = { # "1a Caçadores de Angola"
 		division_name = {
 				is_name_ordered = yes

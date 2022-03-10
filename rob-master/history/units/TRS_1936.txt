@@ -1,8 +1,6 @@
 division_template = {
 	name = "Russian Infantry"
 
-	division_names_group = TMS_INF_01
-
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -18,8 +16,6 @@ division_template = {
 }
 division_template = {
 	name = "Transcapian Infantry"				# Militia units (lowest experience, oldest equipment)
-
-	division_names_group = TMS_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -66,6 +62,7 @@ units = {
 
 	}
 
+}
 
 ### Starting Equipment ###
 instant_effect = {

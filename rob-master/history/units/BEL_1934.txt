@@ -1,6 +1,5 @@
 ﻿division_template = {
 	name = "Division d'Infanterie"		# Same for "Active" and "Reserve" Infantry Divisions
-	division_names_group = BEL_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -19,7 +18,6 @@
 }
 division_template = {
 	name = "Division de Cavalerie"  	# Cavalry Division
-	division_names_group = BEL_CAV_01
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -37,7 +35,7 @@ division_template = {
 
 division_template = {
 	name = "Division Coloniale"			# Colonial militia, lower experience, equipment
-	division_names_group = BEL_GAR_01 	#TODO make separate namelist for colonial divisions
+	
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }

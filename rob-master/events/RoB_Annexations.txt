@@ -13,6 +13,8 @@ country_event = {
  mean_time_to_happen = { days = 1 }
  trigger = {
   has_war = no
+  AUS = { NOT = { is_puppet_of = ROOT } }
+  THR = { NOT = { is_puppet_of = ROOT } }
   ACM = { NOT = { is_puppet_of = ROOT } }
   1018 = { is_owned_and_controlled_by = ROOT }
   NOT = {

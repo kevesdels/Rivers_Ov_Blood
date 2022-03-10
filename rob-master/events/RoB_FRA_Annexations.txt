@@ -183,7 +183,7 @@ country_event = {
   }
  
   option = {
-    name = "Set Up Puppet Government"
+    name = "Seize Their Colonies"
     puppet = POR
     POR = { set_politics = { ruling_party = conservative } add_popularity = { ideology = conservative popularity = 0.5 } } 
     
@@ -196,6 +196,53 @@ country_event = {
         is_core_of = POR
     }
     POR = { transfer_state = PREV }
+    }
+     if = { 
+      limit = { 
+        AND = { 
+            ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+            POR = { has_cosmetic_tag = Generic_puppet_socialist } 
+          }
+        } 
+        POR = { drop_cosmetic_tag = yes }
+    }
+     if = { 
+      limit = { 
+        AND = { 
+          ROOT = { NOT = { has_government = pelekist } }
+          POR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+          }
+        } 
+        POR = { drop_cosmetic_tag = yes }
+    }   
+   }
+
+   option = {
+    name = "Just Puppet Them"
+    puppet = POR
+    POR = { set_politics = { ruling_party = conservative } add_popularity = { ideology = conservative popularity = 0.5 } } 
+    
+    ai_chance = { factor = 50 }
+    hidden_effect = {
+      every_owned_state = {
+        limit = { 
+         NOT = {
+        is_claim_or_core = yes
+       }
+          is_core_of = POR
+      }
+      POR = { transfer_state = PREV }
+      }
+      POR = {  transfer_state = 702 }
+      POR = {  transfer_state = 540 }
+      POR = {  transfer_state = 544 }
+      POR = {  transfer_state = 1251 }
+      POR = {  transfer_state = 321 }
+      POR = {  transfer_state = 178 }
+      POR = {  transfer_state = 705 }
+      POR = {  transfer_state = 297 }
+      POR = {  transfer_state = 296 }
+      POR = {  transfer_state = 721 }
     }
      if = { 
       limit = { 
@@ -366,6 +413,7 @@ country_event = {
   
   option = {
    name = "Italy Submits!"
+   ai_chance = { factor = 50 }
    puppet = ITA
    puppet = SIC
    117 = { add_core_of = SIC }
@@ -411,7 +459,6 @@ country_event = {
   ITA = { drop_cosmetic_tag = yes }
   ITA = { set_cosmetic_tag = ITA_DARLAN } 
   SIC = { set_cosmetic_tag = SIC_DARLAN } 
-   ai_chance = { factor = 50 }
   }
 }
   
@@ -606,5 +653,83 @@ country_event = {
   }
   }
 }
- 
+
+option = {
+  name = "Germany Dos!"
+  792 = { add_claim_by = FRA }
+  42 = { add_claim_by = FRA }
+  979 = { add_claim_by = FRA }
+  1089 = { add_claim_by = FRA }
+  51 = { add_claim_by = FRA }
+  1088 = { add_claim_by = FRA }
+  1090 = { add_claim_by = FRA }
+  1091 = { add_claim_by = FRA }
+  788 = { add_claim_by = FRA }
+  1080 = { add_claim_by = FRA }
+  57 = { add_claim_by = FRA }
+  56 = { add_claim_by = FRA }
+  59 = { add_claim_by = FRA }
+  1208 = { add_claim_by = FRA }
+  1209 = { add_claim_by = FRA }
+  1210 = { add_claim_by = FRA }
+  1211 = { add_claim_by = FRA }
+
+  puppet = GER
+  GER = { set_cosmetic_tag = GER_darlan_government }
+ hidden_effect = {
+  GER = { remove_ideas = { spartakus_triumphant rampant_corruption german_partisans } }
+  GER = {
+  set_party_name = { ideology = social_liberal long_name = "Fortschrittliche Volkspartei" name = "FVP" }
+  set_party_name = { ideology = conservative long_name = "Deutschkonservative Partei" name = "DkP" }
+  set_party_name = { ideology = authoritharian long_name = "Deutsche Generäle" name = "DG" }
+  set_party_name = { ideology = reactionary long_name = "Deutsche Generäle" name = "DG" }
+  set_party_name = { ideology = pelekist long_name = "Wandervögel" name = "W" }
+  }
+  }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 is_core_of = GER
+	}
+	GER = { transfer_state = PREV }
+}
+
+}
+
+option = {
+  name = "Germany Tres!"
+  792 = { add_claim_by = FRA }
+  42 = { add_claim_by = FRA }
+  1089 = { add_claim_by = FRA }
+  51 = { add_claim_by = FRA }
+  1088 = { add_claim_by = FRA }
+  1090 = { add_claim_by = FRA }
+  788 = { add_claim_by = FRA }
+
+  puppet = GER
+  GER = { set_cosmetic_tag = GER_darlan_government }
+ hidden_effect = {
+  GER = { remove_ideas = { spartakus_triumphant rampant_corruption german_partisans } }
+  GER = {
+  set_party_name = { ideology = social_liberal long_name = "Fortschrittliche Volkspartei" name = "FVP" }
+  set_party_name = { ideology = conservative long_name = "Deutschkonservative Partei" name = "DkP" }
+  set_party_name = { ideology = authoritharian long_name = "Deutsche Generäle" name = "DG" }
+  set_party_name = { ideology = reactionary long_name = "Deutsche Generäle" name = "DG" }
+  set_party_name = { ideology = pelekist long_name = "Wandervögel" name = "W" }
+  }
+  }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+	  is_claim_or_core = yes
+	 }
+	 is_core_of = GER
+	}
+	GER = { transfer_state = PREV }
+}
+
+}
+
  }

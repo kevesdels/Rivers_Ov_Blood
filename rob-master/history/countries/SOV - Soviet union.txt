@@ -1,7 +1,7 @@
 ﻿capital = 219
 
 oob = "SOV_1934"
-set_naval_oob = "SOV_1936_naval_legacy"
+set_naval_oob = "SOV_1934_naval_legacy"
 
 set_research_slots = 3
 set_stability = 0.5
@@ -10,6 +10,7 @@ set_war_support = 0.7
 set_technology = {
 	basic_train = 1
 	infantry_weapons = 1
+	motorised_infantry = 1
 	tech_recon = 1
 	tech_support = 1		
 	tech_military_police = 1
@@ -27,6 +28,7 @@ if = {
 		early_submarine = 1
 		basic_submarine = 1
 		early_destroyer = 1
+		basic_destroyer = 1
 		early_light_cruiser = 1
 		early_heavy_cruiser = 1
 		early_battleship = 1

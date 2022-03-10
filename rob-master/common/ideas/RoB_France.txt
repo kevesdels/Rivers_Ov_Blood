@@ -117,9 +117,7 @@ picture = GFX_idea_overextendadsf
 			conscription = 0.008
 			stability_factor = 0.10
       ai_focus_aggressive_factor = 0.5
-      hidden_effect = {
-        river_crossing_factor = -0.25
-        }
+      hidden_modifier = { river_crossing_factor = -0.25 }
 			}
 } 
 
@@ -138,9 +136,7 @@ picture = GFX_idea_overextendadsf
    stability_factor = 0.10
    ai_focus_aggressive_factor = 1
    army_core_attack_factor = 0.25
-   hidden_effect = {
-    river_crossing_factor = -0.25
-    }
+   hidden_modifier = { river_crossing_factor = -0.25 }
    }
 }
 

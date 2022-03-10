@@ -1,9 +1,7 @@
 ##### Division Templates #####
 division_template = {
 	name = "Division d'Infanterie"		
-	division_names_group = FRA_INF_01
-	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. de Forteresse
-	# Difference is their equipment
+
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -21,9 +19,7 @@ division_template = {
 }
 division_template = {
 	name = "Division d'Infanterie II"		
-	division_names_group = FRA_INF_01
-	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. de Forteresse
-	# Difference is their equipment
+
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -42,9 +38,7 @@ division_template = {
 
 division_template = {
 	name = "Division d'Infanterie III"		
-	division_names_group = FRA_INF_01
-	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. de Forteresse
-	# Difference is their equipment
+
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -63,9 +57,7 @@ division_template = {
 
 division_template = {
 	name = "Division Coloniale"		
-	division_names_group = FRA_COL_01
-	# Represents: Div. d'Inf. Coloniale, Div. d'Inf. Nord-Africaine
-	# Difference from DI is their equipment
+
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -83,9 +75,7 @@ division_template = {
 }
 division_template = {
 	name = "Division Coloniale II"		
-	division_names_group = FRA_COL_01
-	# Represents: Div. d'Inf. Coloniale, Div. d'Inf. Nord-Africaine
-	# Difference from DI is their equipment
+
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -104,7 +94,6 @@ division_template = {
 
 division_template = {
 	name = "Division d'Infanterie Motorisée"	# Division d'Infanterie Motorisée
-	division_names_group = FRA_MOT_01
 
 	regiments = {
 		motorized = { x = 0 y = 0 }
@@ -125,8 +114,6 @@ division_template = {
 
 division_template = {
 	name = "Division d'Infanterie Alpine"	# Division d'Infanterie Alpine
-	division_names_group = FRA_MNT_01
-	# Note: trimmed to 3x Rgts w/ arty bn added, 1939
 
 	regiments = {
 		mountaineers = { x = 0 y = 0 }	# Regular mountain infantry (Infanterie Alpine)
@@ -145,8 +132,7 @@ division_template = {
 }
 division_template = {
 	name = "Division de Cavalerie" 	# Division de Cavalerie
-	division_names_group = FRA_CAV_01
-	# Note: Transformed to DLC, DLM divisions, 1936-39 
+
 	regiments = {
 		cavalry = { x = 0 y = 0 }
 		cavalry = { x = 0 y = 1 }
@@ -159,7 +145,6 @@ division_template = {
 }
 division_template = {
 	name = "Division Légère Mécanique" 		# Division Légère Mécanique
-	division_names_group = FRA_MEC_01
 
 	regiments = {
 		light_armor = { x = 0 y = 0 }		# Bn. of Hotchkiss, then Souma (Med.) tanks
@@ -175,7 +160,7 @@ division_template = {
 }
 division_template = {
 	name = "Division Légère Mécanique II" 	# Brigade de Chars de Combat, independent armor brigades of 2x Rgts., 2 Bns. each
-	division_names_group = FRA_ARM_01
+
 	regiments = {
 		light_armor = { x = 0 y = 0 }		# Bn. of Hotchkiss, then Souma (Med.) tanks
 		light_armor = { x = 0 y = 1 }		# Bn. of Hotchkiss tanks
@@ -191,7 +176,7 @@ division_template = {
 
 division_template = {
 	name = "Division Légère Mécanique III" 	# Brigade de Chars de Combat, independent armor brigades of 2x Rgts., 2 Bns. each
-	division_names_group = FRA_ARM_01
+
 	regiments = {
 		light_armor = { x = 0 y = 0 }		# Bn. of Hotchkiss, then Souma (Med.) tanks
 		light_armor = { x = 0 y = 1 }		# Bn. of Hotchkiss tanks
@@ -207,7 +192,6 @@ division_template = {
 
 division_template = {
 	name = "Brigade Coloniale"			# Represents: 2xRgt colonial forces and , usually with old equipment
-	division_names_group = FRA_COL_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -222,7 +206,6 @@ division_template = {
 
 division_template = {
 	name = "Brigade Coloniale II"			# Represents: 2xRgt colonial forces and , usually with old equipment
-	division_names_group = FRA_COL_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -440,7 +423,7 @@ units = {
 	division= {	
 		name = "3ème Brigade de Chars de Combat"
 		location = 11506
-		division_template = "Brigade de Chars de Combat" 		# FT-17s
+		division_template = "Division Légère Mécanique" 		# FT-17s
 		start_experience_factor = 0.2
 		force_equipment_variants = { gw_tank_equipment = { owner = "FRA" } }
 	}

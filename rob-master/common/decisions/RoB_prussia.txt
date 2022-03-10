@@ -178,7 +178,7 @@ PRS_german_expansion = {
  available = {
    OR = {
     has_war = no
-    any_country = { AND = { OR = { owns_state = 790 owns_state = 50 } at_war_with = PRS }  NOT = { tag = GER } }
+    any_country = { AND = { OR = { owns_state = 790 owns_state = 50 } has_war_with  = PRS }  NOT = { tag = GER } }
       }
       
   NOT = {
@@ -211,7 +211,7 @@ PRS_german_expansion = {
  available = {
   OR = {
     has_war = no
-    any_country = { AND = { owns_state = 1089  at_war_with = PRS }  NOT = { tag = GER } }
+    any_country = { AND = { owns_state = 1089  has_war_with  = PRS }  NOT = { tag = GER } }
       }
   796 = { is_owned_by = PRS }
   804 = { is_owned_by = PRS }
@@ -243,7 +243,7 @@ PRS_german_expansion = {
  available = {
   OR = {
     has_war = no
-    any_country = { AND = { OR = { owns_state = 796 } at_war_with = PRS }  NOT = { tag = GER } }
+    any_country = { AND = { OR = { owns_state = 796 } has_war_with  = PRS }  NOT = { tag = GER } }
       }
   NOT = {
   796 = { is_owned_by = PRS }
@@ -275,7 +275,7 @@ PRS_german_expansion = {
  available = {
   OR = {
     has_war = no
-    any_country = { AND = { OR = { owns_state = 8 } at_war_with = PRS }  NOT = { tag = GER } }
+    any_country = { AND = { OR = { owns_state = 8 } has_war_with  = PRS }  NOT = { tag = GER } }
       }
   NOT = {
   8 = { is_owned_by = PRS }
@@ -306,7 +306,7 @@ PRS_german_expansion = {
  available = {
   OR = {
     has_war = no
-    any_country = { AND = { OR = { owns_state = 812 } at_war_with = PRS }  NOT = { tag = GER } }
+    any_country = { AND = { OR = { owns_state = 812 } has_war_with  = PRS }  NOT = { tag = GER } }
       }
   NOT = {
   813 = { is_owned_by = PRS }
@@ -345,7 +345,7 @@ PRS_baltic_ambition = {
       date > 1936.1.1
       has_war = no
     }
-    any_country = { AND = { owns_state = 784  at_war_with = PRS }  NOT = { tag = PRS } }
+    any_country = { AND = { owns_state = 784  has_war_with  = PRS }  NOT = { tag = PRS } }
       }
    has_country_leader = {
     name = "Vydūnas"
@@ -381,7 +381,7 @@ LIT = {
       date > 1936.1.1
       has_war = no
     }
-    any_country = { AND = { OR = { controls_state = 1266 controls_state = 190 controls_state = 881 controls_state = 1010 controls_state = 880 controls_state = 12 }  at_war_with = PRS }  NOT = { tag = PRS } }
+    any_country = { AND = { OR = { controls_state = 1266 controls_state = 190 controls_state = 881 controls_state = 1010 controls_state = 880 controls_state = 12 }  has_war_with  = PRS }  NOT = { tag = PRS } }
       }
    has_country_leader = {
     name = "Vydūnas"
@@ -494,7 +494,7 @@ PRS_retake_belarus = {
  }
  OR = {
   has_war = no
-  any_country = { AND = { OR = { owns_state = 96 } at_war_with = PRS } }
+  any_country = { AND = { OR = { owns_state = 96 } has_war_with  = PRS } }
     }
  }
  
@@ -536,7 +536,7 @@ PRS_retake_western_belarus = {
  }
  OR = {
   has_war = no
-  any_country = { AND = { OR = { owns_state = 95 owns_state = 933 } at_war_with = PRS }  }
+  any_country = { AND = { OR = { owns_state = 95 owns_state = 933 } has_war_with  = PRS }  }
     }
  }
   complete_effect = {
@@ -576,7 +576,7 @@ PRS_retake_polish_lands = {
  }
  OR = {
   has_war = no
-  any_country = { AND = { OR = { owns_state = 97 } at_war_with = PRS } }
+  any_country = { AND = { OR = { owns_state = 97 } has_war_with  = PRS } }
     }
  }
   complete_effect = {

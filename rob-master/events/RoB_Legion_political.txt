@@ -2051,7 +2051,7 @@ country_event = {
    
 	trigger = {
 		tag = LES
-		LES = { at_war_with = MON }
+		LES = { has_war_with = MON }
 		MON = { surrender_progress > 0.40 }
 		NOT = { MON = { at_war_with = FER } }
 		country_exists = MON
@@ -2199,14 +2199,14 @@ country_event = {
 	OR  = {
 		AND = {
 			tag = LES
-			at_war_with = KAZ
+			has_war_with = KAZ
 			KAZ = { surrender_progress > 0.70}
 			country_exists = KAZ
 			NOT = { country_exists = KZR }
 		}
 		AND = {
 			tag = LES
-			at_war_with = KZR
+			has_war_with = KZR
 			KZR = { surrender_progress > 0.70}
 			country_exists = KZR
 			NOT = { country_exists = KAZ }
@@ -2224,13 +2224,13 @@ country_event = {
 	   if = { limit = { 590 = { is_owned_by = MON } } LES = { transfer_state = 590 } }
 	   if = {
 		   limit = {
-			   at_war_with = KAZ
+			has_war_with = KAZ
 		   }
 		   	white_peace = KAZ
 	   }
 	   if = {
 		   limit = {
-			   at_war_with = KZR
+			has_war_with = KZR
 		   }
 		   	white_peace = KZR
 	   }
@@ -2250,13 +2250,13 @@ country_event = {
 	   if = { limit = { 590 = { is_owned_by = MON } } LES = { transfer_state = 590 } }
 	   if = {
 		   limit = {
-			   at_war_with = KAZ
+			has_war_with = KAZ
 		   }
 		   	white_peace = KAZ
 	   }
 	   if = {
 		   limit = {
-			   at_war_with = KZR
+			has_war_with = KZR
 		   }
 		   	white_peace = KZR
 	   }

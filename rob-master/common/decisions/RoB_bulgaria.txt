@@ -156,20 +156,16 @@ BUL_men_in_albania = {
   cost = 50
   fire_only_once = yes
   available = {
-AND = { 
+	AND = { 
 		country_exists = GRE 
 		has_war_with = GRE 
 		}
-manpower > 10000
-is_in_faction_with = ALB
-}
-    	ai_will_do = {
-			base = 1000
-			}
+		has_manpower > 10000
+		is_in_faction_with = ALB
+	}
+    ai_will_do = { base = 1000 }
   complete_effect = {
-				country_event = {
-    id = bulgaria.123
-}
+	country_event = { id = bulgaria.123 }
  }
 
 }

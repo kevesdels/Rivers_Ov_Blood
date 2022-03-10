@@ -187,7 +187,7 @@ GER_german_expansion = {
   }
   OR = {
     has_war = no
-    any_country = { AND = { OR = { owns_state = 804 owns_state = 796 } at_war_with = PRS } }
+    any_country = { AND = { OR = { owns_state = 804 owns_state = 796 } has_war_with  = PRS } }
       }
   DEN = { exists = yes }
  }
@@ -226,7 +226,7 @@ GER_german_expansion = {
      RHN = { exists = yes }
      OR = {
       has_war = no
-      any_country = { AND = { OR = { owns_state = 1089 owns_state = 1090 } at_war_with = PRS } }
+      any_country = { AND = { OR = { owns_state = 1089 owns_state = 1090 } has_war_with  = PRS } }
         }
    }
  
@@ -260,7 +260,7 @@ GER_german_expansion = {
   POL = { exists = yes }
   OR = {
     has_war = no
-    any_country = { AND = { OR = { owns_state = 865 owns_state = 86 } at_war_with = PRS } }
+    any_country = { AND = { OR = { owns_state = 865 owns_state = 86 } has_war_with  = PRS } }
       }
  }
  
@@ -307,7 +307,7 @@ GER_german_expansion = {
   }
   OR = {
     has_war = no
-    any_country = { AND = { OR = { owns_state = 763 } at_war_with = PRS } }
+    any_country = { AND = { OR = { owns_state = 763 } has_war_with  = PRS } }
       }
  }
  
@@ -365,7 +365,7 @@ GER_german_expansion = {
     }
     OR = {
       has_war = no
-      any_country = { AND = { OR = {  owns_state = 28 owns_state = 814 owns_state = 816 } at_war_with = PRS } }
+      any_country = { AND = { OR = {  owns_state = 28 owns_state = 814 owns_state = 816 } has_war_with  = PRS } }
         }
   }
   

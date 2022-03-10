@@ -19,7 +19,7 @@ country_event = {
       tag = BWR
       tag = TOW
     }
-    ROOT = { at_war_with = JAP }
+    ROOT = { has_war_with = JAP }
       AND = { JAP = { owns_state = 909 } ROOT = { controls_state = 909 } }
       AND = { JAP = { owns_state = 527 } ROOT = { controls_state = 527 } }
       AND = { JAP = { owns_state = 908 } ROOT = { controls_state = 908 } }
@@ -119,7 +119,7 @@ country_event = {
     white_peace = JAP
     if = {
       limit = {
-        at_war_with = MAN
+        has_war_with = MAN
       }
       white_peace = MAN
     }
@@ -143,12 +143,12 @@ country_event = {
   desc = "The Polish military forces have been defeated and so, the Americans should no longer bother supporting them."
   fire_only_once = yes
   trigger = {
-    ROOT = { at_war_with = USA }
+    ROOT = { has_war_with = USA }
     USA = { has_country_flag = pol_usa_support }
     OR = {
       AND = {
         POL = { has_capitulated = yes }
-        POL = { at_war_with = ROOT }
+        POL = { has_war_with = ROOT }
       }
       AND = {
         POL = { exists = no }
@@ -258,19 +258,19 @@ country_event = {
     NOT = { tag = FRL }
     NOT = { tag = FRP }
       OR = {
-        NOT = { at_war_with = POL }
+        NOT = { has_war_with = POL }
         POL = { has_war_with = ROOT has_capitulated = yes }
       }
       OR = {
-       ROOT = { at_war_with = SYR }
-       ROOT = { at_war_with = FWA }
-       ROOT = { at_war_with = FEA }
-       ROOT = { at_war_with = FIC }
+       ROOT = { has_war_with = SYR }
+       ROOT = { has_war_with = FWA }
+       ROOT = { has_war_with = FEA }
+       ROOT = { has_war_with = FIC }
       }
       OR = {
         AND = {
           FRA = { has_capitulated = yes }
-          FRA = { at_war_with = ROOT }
+          FRA = { has_war_with = ROOT }
         }
         AND = {
           FRA = { exists = no }
@@ -412,12 +412,12 @@ country_event = {
         }
       }
     }
-    ROOT = { at_war_with = ITA }
+    ROOT = { has_war_with = ITA }
 
     OR = {
       AND = {
         POL = { has_capitulated = yes }
-        POL = { at_war_with = ROOT }
+        POL = { has_war_with = ROOT }
       }
       AND = {
         POL = { exists = no }
@@ -441,7 +441,7 @@ country_event = {
     name = "Send Peace Offer"
     if = {
       limit = {
-        ITA = { exists = yes at_war_with = ROOT }
+        ITA = { exists = yes has_war_with = ROOT }
       }
       ITA = { country_event = { id = peaceevent.10 days = 3 } }
     }

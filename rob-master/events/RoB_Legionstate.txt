@@ -672,7 +672,7 @@ desc =  "Gadja is reading a frontline report, a smug grin on his face. It seems 
 fire_only_once = yes
 trigger = {
  tag = LES
- at_war_with = KAR
+ has_war_with = KAR
  KAR = { surrender_progress > 0.1}
  country_exists = KAR
 }
@@ -754,14 +754,14 @@ mean_time_to_happen = { days = 3 }
 
 option = {
  name = "Let them join"
- ai_chance = 8
+ ai_chance = { factor = 8 }
  army_experience = 15
  add_popularity = {ideology = national_socialist popularity = 0.15 }
  LES = { load_oob = "LES_recruits_OMS"}
  }
  option = {
  name = "Fuck off"
- ai_chance = 2
+ ai_chance = { factor = 2 }
  add_political_power = 20
  653 = { add_manpower = -12341 }
  }
@@ -1388,14 +1388,7 @@ country_event = {
 
 	option = {
 	name = legion.48.a
-	if = {
-		limit = { CZE  = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
-	ai_chance = { factor = 2 }
-	}
-	if = {
-		limit = { NOT = { CZE  = { SOCIALIST_ALIGNED_GOVERNMENT = yes } } }
 	ai_chance = { factor = 8 }
-	}
     if = {
 		  limit = {
 			 LES = { has_country_flag = les_returnist_2away }
@@ -1645,14 +1638,7 @@ country_event = {
 
 	option = {
 	name = legion.48.b
-	if = {
-		limit = { CZE  = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
-	ai_chance = { factor = 8 }
-	}
-	if = {
-		limit = { NOT = { CZE  = { SOCIALIST_ALIGNED_GOVERNMENT = yes } } }
 	ai_chance = { factor = 2 }
-	}
 		hidden_effect = {
 			set_country_flag = les_returnists_imprisoned
 		}
@@ -1900,24 +1886,24 @@ country_event = {
 	option = {
 	 name = "Moscow"
 	 	LES = { set_capital = 219 }  
-		 hidden_effect = { country_event = { id = legion.56 days = 35 }}
+		 #hidden_effect = { country_event = { id = legion.56 days = 35 }}
 	 }
 	 #Leningrad
 	option = {
 	name = "Leningrad"
 		LES = { set_capital = 195 }  
-		hidden_effect = { country_event = { id = legion.56 days = 35 }}
+		#hidden_effect = { country_event = { id = legion.56 days = 35 }}
 	}
 	#Kazan
 	option = {
 		name = "Kazan"
 		LES = { set_capital = 249 }  
-		hidden_effect = { country_event = { id = legion.56 days = 35 }}
+		#hidden_effect = { country_event = { id = legion.56 days = 35 }}
 	}
 	#Chelyabinsk
 	option = {
 		name = "Chelyabinsk"
-		hidden_effect = { country_event = { id = legion.56 days = 35 }}
+		#hidden_effect = { country_event = { id = legion.56 days = 35 }}
 	}
 }
 
