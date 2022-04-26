@@ -3,8 +3,6 @@ division_template = {
 	# Note: infantry divisions were all at low reserve levels even just prior to Axis 
 	#	invasion of 1941
 
-	division_names_group = YUG_INF_01
-
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -24,8 +22,6 @@ division_template = {
 division_template = {
 	name = "Gorska Pesadija"		# Mountain Brigade
 
-	division_names_group = YUG_MTN_01
-
 	regiments = {
 		mountaineers = { x = 0 y = 0 }
 		mountaineers = { x = 0 y = 1 }
@@ -33,8 +29,6 @@ division_template = {
 	}
 }
 division_template = {
-
-	division_names_group = YUG_CAV_01
 
 	name = "Konjička Divizija" 			# Cavalry Division
 	# Note: regiments within the brigade were battalion-sized units
@@ -51,8 +45,6 @@ division_template = {
 	name = "Tenkovski Bataljon" 			# Tank Battalion
 	# Note: 1st Armor Battalion had FT-17s in 1936, 
 	#	2nd battalion formed when R-35s added in 1940
-
-	division_names_group = YUG_ARM_01
 
 	regiments = {
 		light_armor = { x = 0 y = 0 }

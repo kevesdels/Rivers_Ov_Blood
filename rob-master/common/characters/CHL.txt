@@ -1,0 +1,158 @@
+characters={
+	CHL_eduardo_cruzcoke={
+		name="Eduardo Cruz-Coke"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=conservative_subtype
+			expire="1960.1.1.1"
+			id=-1
+		}
+	}
+	CHL_marmaduke_grove={
+		name="Marmaduke Grove"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			ideology=socialist_subtype
+			expire="1960.1.1.1"
+			id=-1
+		}
+	}
+	CHL_bartolome_blanche={
+		name="Bartolomé Blanche"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_5.dds"
+			}
+		}
+		country_leader={
+			ideology=authoritharian_subtype
+			expire="1951.1.1.1"
+			id=-1
+		}
+	}
+	CHL_carlos_ibanes_del_campos={
+		name="Carlos Ibañes del Campos"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_5.dds"
+			}
+		}
+		country_leader={
+			ideology=reactionary_subtype
+			expire="1951.1.1.1"
+			id=-1
+		}
+	}
+	CHL_jorge_gonzales_von_marees={
+		name="Jorge Gonzáles von Marees"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_6.dds"
+			}
+		}
+		country_leader={
+			ideology=pelekist_subtype
+			expire="1951.1.1.1"
+			id=-1
+		}
+	}
+	CHL_aerturo_puga_osorio={
+		name="Aerturo Puga Osorio"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_4.dds"
+			}
+		}
+		country_leader={
+			ideology=national_socialist_subtype
+			expire="1951.1.1.1"
+			id=-1
+		}
+	}
+	CHL_pedro_aguirre_cerda={
+		name="Pedro Aguirre Cerda"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=democratic_socialist_subtype
+			expire="1951.1.1.1"
+			id=-1
+		}
+	}
+	CHL_gabriel_gonzales_videla={
+		name="Gabriel Gonzales Videla"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=social_democracy_subtype
+			expire="1951.1.1.1"
+			id=-1
+		}
+	}
+	CHL_arturo_alessandri={
+		name="Arturo Alessandri"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_3.dds"
+			}
+		}
+		country_leader={
+			ideology=social_liberal_subtype
+			expire="1951.1.1.1"
+			id=-1
+		}
+	}
+	CHL_rene_vidal_m={
+		name="Rene Vidal M."
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_2.dds"
+			}
+			army={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
+			}
+		}
+		corps_commander={
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	CHL_rafael_fernandez_r={
+		name="Rafael Fernández R."
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_2.dds"
+			}
+			army={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ ranger }
+			skill=4
+			attack_skill=3
+			defense_skill=5
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+}

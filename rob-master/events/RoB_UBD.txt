@@ -449,8 +449,8 @@ country_event = {
         NOT = { has_country_flag = rosenberg_victory }
         NOT = { has_country_flag = vyddunas_victory }
         }
-        PRS = { country_event = { id = ubd.25 days = 3} }
       }
+      PRS = { country_event = { id = ubd.25 days = 3} }
   }
   EST = { set_country_flag = UBD_CW }
   }
@@ -824,10 +824,10 @@ country_event = {
       send_equipment = {
       equipment = infantry_equipment
       amount = 1000
-      target = UBD
+      target = EST
       }
     }
-    UBD = { country_event = { id = ubd.26 days = 1} }
+    EST = { country_event = { id = ubd.26 days = 1} }
  }
  
  option = {
@@ -836,7 +836,7 @@ country_event = {
       factor = 3
     }
     PRS = { add_manpower = -4000}
-    UBD = { country_event = { id = ubd.33 days = 3} }
+    EST = { country_event = { id = ubd.33 days = 3} }
  }
 }
 
@@ -1070,7 +1070,7 @@ country_event = {
     hidden_effect = {
     1266 = { add_core_of = LAT }
     }
-    ROOT = { set_capital = 1266 remove_ideas = { UBD_Latvian_cw } }
+    ROOT = { set_capital = { state = 1266 } remove_ideas = { UBD_Latvian_cw } }
   }
 
 
@@ -1093,7 +1093,7 @@ country_event = {
     hidden_effect = {
     1266 = { add_core_of = LAT }
     }
-    ROOT = { set_capital = 1266 remove_ideas = { UBD_Latvian_cw } }
+    ROOT = { set_capital = { state = 1266 } remove_ideas = { UBD_Latvian_cw } }
     hidden_effect = {  country_event = { id = ldf.0 days = 7 } }
   }
 
@@ -1116,7 +1116,7 @@ country_event = {
     hidden_effect = {
     1266 = { add_core_of = LAT }
     }
-    ROOT = { set_capital = 1266 remove_ideas = { UBD_Latvian_cw } }
+    ROOT = { set_capital = { state = 1266 } remove_ideas = { UBD_Latvian_cw } }
     hidden_effect = {  country_event = { id = lnc.0 days = 7 } }
   }
 }
@@ -1161,7 +1161,7 @@ country_event = {
       remove_core_of = ELP
       remove_core_of = ECA
  }
- ROOT = { set_capital = 1267 }
+ ROOT = { set_capital = { state = 1266 } }
 }
 
 
@@ -1181,7 +1181,7 @@ country_event = {
       remove_core_of = ECA
       remove_core_of = ELA
  }
- ROOT = { set_capital = 1267 }
+ ROOT = { set_capital = { state = 1266 } }
 }
 
  if = {
@@ -1200,7 +1200,7 @@ country_event = {
       remove_core_of = ELA
       remove_core_of = ELP
  }
- ROOT = { set_capital = 1267 }
+ ROOT = { set_capital = { state = 1266 } }
 }
 
 }
@@ -1345,7 +1345,7 @@ country_event = {
        }
     LPR = { exists = yes }
  }
-ai_will_do = {
+ai_chance = {
      	base = 1
 		  
       modifier = {
@@ -1376,7 +1376,7 @@ ai_will_do = {
        }
     ECA = { exists = yes }
  }
-ai_will_do = {
+ ai_chance = {
      	base = 1
 		  
       modifier = {
@@ -1407,7 +1407,7 @@ ai_will_do = {
        }
     LDF = { exists = yes }
  }
-ai_will_do = {
+ ai_chance = {
      	base = 1
 		  
       modifier = {
@@ -1438,7 +1438,7 @@ ai_will_do = {
        }
     ELP = { exists = yes }
  }
-ai_will_do = {
+ ai_chance = {
      	base = 1
 		  
       modifier = {
@@ -1469,7 +1469,7 @@ ai_will_do = {
        }
     LNC = { exists = yes }
  }
-ai_will_do = {
+ ai_chance = {
      	base = 1
 		  
       modifier = {
@@ -1500,7 +1500,7 @@ ai_will_do = {
        }
     ELA = { exists = yes }
  }
-ai_will_do = {
+ ai_chance = {
      	base = 1
 		  
       modifier = {

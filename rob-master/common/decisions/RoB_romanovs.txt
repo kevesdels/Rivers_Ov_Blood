@@ -336,7 +336,7 @@ RUS_russian_reformation = {
  }
  complete_effect = {
   set_cosmetic_tag = ROM_EMP
-  set_capital = 219
+  set_capital = { state = 219 }
       every_state = {
     limit = { 
 	OR = {
@@ -365,7 +365,7 @@ RUS_russian_reformation = {
 
 BWR_search_for_allies = {
  
- ROM_scramble_for_Siberia = {
+ ROM_scramble_for_Siberia_2 = {
  	 fire_only_once = yes
 	 priority = 10
 	 activation = {

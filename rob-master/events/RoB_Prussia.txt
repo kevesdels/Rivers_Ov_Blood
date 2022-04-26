@@ -164,7 +164,7 @@ picture = GFX_report_event_fascist_gathering
 
 trigger = {
 tag = PRS
-date = 1934.1.27
+date > 1934.1.27
 has_country_flag = small_birthday
 }
 mean_time_to_happen = { days = 1 }
@@ -185,7 +185,7 @@ picture = GFX_picture_rosenberg_speaking
 
 trigger = {
 tag = PRS
-date = 1934.3.1
+date > 1934.3.1
 has_country_flag = talks_between_pelekists
 }
 mean_time_to_happen = { days = 1 }
@@ -216,7 +216,7 @@ picture = GFX_picture_pelekist_clash
 
 trigger = {
 tag = PRS
-date = 1934.3.1
+date > 1934.3.1
 has_country_flag = pelekists_banned
 }
 mean_time_to_happen = { days = 1 }
@@ -409,7 +409,7 @@ picture = GFX_picture_pelekist_march
 
 trigger = {
 tag = PRS
-date = 1934.4.20
+date > 1934.4.20
 has_country_flag = pelekists_united
 OR = {
 has_country_flag = ddp_victory

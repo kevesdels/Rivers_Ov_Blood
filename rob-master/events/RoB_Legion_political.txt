@@ -1671,7 +1671,7 @@ country_event = {
 		  }
 		  GER = { transfer_state = PREV }
 		}
-		GER = { set_capital = 790 }  
+		GER = { set_capital = {state = 790} }  
 	   }
 
 	   option = {
@@ -1719,7 +1719,7 @@ country_event = {
 		  }
 		  GER = { transfer_state = PREV }
 		}
-		GER = { set_capital = 790 }  
+		GER = { set_capital = {state = 790} }  
 	   }
 
 	option = {
@@ -2053,7 +2053,7 @@ country_event = {
 		tag = LES
 		LES = { has_war_with = MON }
 		MON = { surrender_progress > 0.40 }
-		NOT = { MON = { at_war_with = FER } }
+		NOT = { MON = { has_war_with = FER } }
 		country_exists = MON
 	  }
    

@@ -1,0 +1,51 @@
+characters={
+	PER_reza_shah_pahlavi={
+		name="Reza Shah Pahlavi"
+		portraits={
+			civilian={
+				large="gfx/leaders/PER/Portrait_Iran_Reza_Shah_Pahlavi.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_REZA_SHAH_PAHLAVI_DESC"
+			ideology=reactionary_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	PER_soleyman_mirza_eskandari={
+		name="Soleyman Mirza Eskandari"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_SOLEYMAN_MIRZA_ESKANDARI_DESC"
+			ideology=anarcho_socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	PER_hasan_arfa={
+		name="Hasan Arfa"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_5.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			}
+		}
+		corps_commander={
+			traits={ desert_fox }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+}

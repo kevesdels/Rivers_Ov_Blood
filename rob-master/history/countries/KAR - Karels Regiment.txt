@@ -35,26 +35,5 @@ extensive_conscription
 civil_war_attrition_2
 }
 
-
-create_country_leader = {
-	name = "Karel Klapálek"
-	desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
-	picture = "gfx/leaders/KAR/Karel_Klapalek.tga"
-	expire = "1960.1.1"
-	ideology = socialist_subtype
-	traits = {
-	
-	}
-}
-
-create_corps_commander = {
-	name = "Karel Klapálek"
-	gfx = "Karel_Klapalek.tga"
-	traits = { fast_planner }
-	skill = 2
-    attack_skill = 2
-    defense_skill = 1
-    planning_skill = 2
-    logistics_skill = 1
-}
+recruit_character = KAR_karel_klapalek
 

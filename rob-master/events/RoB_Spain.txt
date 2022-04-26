@@ -391,10 +391,6 @@ country_event = {
 	picture = dealing_with_the_socialists-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_the_socialists
-
-	}
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -429,10 +425,6 @@ country_event = {
 	picture = dealing_with_the_republicans-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_the_republicans
-
-	}
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -468,10 +460,6 @@ country_event = {
 	picture = dealing_with_the_nationalist-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_the_nationalists
-
-	}
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -508,10 +496,7 @@ country_event = {
 	picture = dealing_with_the_anarchists-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_the_anarchists
 
-	}
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -552,10 +537,7 @@ country_event = {
 	picture = dealing_with_the_carlists-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_the_carlists
 
-	}
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -597,10 +579,7 @@ country_event = {
 	picture = rhIPvgZA-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_destroying_the_pelekists
 
-	}
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -623,10 +602,7 @@ country_event = {
 	picture = our_statement_to_the_world-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_spain_on_the_world_stage_once_more
 
-	}
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -645,10 +621,7 @@ country_event = {
 	picture = the_cities-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_status_of_the_cities
 
-	}
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -667,10 +640,7 @@ country_event = {
 	picture = the_countryside-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_status_of_the_countryside
 
-	}
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -689,10 +659,7 @@ country_event = {
 	picture = the_coasts-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_status_of_the_coastal_regions
 
-	}
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -711,10 +678,7 @@ country_event = {
 	picture = the_islands-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_status_of_the_islands
 
-	}
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -733,10 +697,7 @@ country_event = {
 	picture = the_mountains-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_status_of_the_mountainous_regions
 
-	}
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -755,9 +716,7 @@ country_event = {
 	picture = our_dream-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_cara_al_sol
-	}
+
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -777,10 +736,7 @@ country_event = {
 	picture = spain_asks_for_morocco-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		SPR = has_completed_focus = SPR_our_rightfull_piece_of_morocco
 
-	}
 	mean_time_to_happen = { days = 3 }
 	timeout_days = 14
 	option = {
@@ -810,7 +766,6 @@ country_event = {
 
 	picture = spain_want_to_join_our_alliance-1
 	fire_only_once = yes
-	is_triggered_only = yes
 	trigger = {
 		has_completed_focus = SPR_the_berlin_alliance
 
@@ -839,11 +794,7 @@ news_event = {
 	picture = the_falange_reign_supreme-1
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		has_completed_focus = SPR_a_new_spain
-	}
 
-	}
 	mean_time_to_happen = { days = 1 }
 	timeout_days = 14
 	option = {

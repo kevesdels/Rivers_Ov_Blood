@@ -31,24 +31,4 @@ UZB_afghan_domination
 UZB_young_bukharans
 }
 
-create_country_leader = {
-	name = "Mohammed Alim Khan"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "gfx/leaders/UZB/mohammed_alim_khan.tga"
-	expire = "1965.1.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "Mohammed Alim Khan"
-	picture = "gfx/leaders/UZB/mohammed_alim_khan.dds"
-	traits = { old_guard trait_cautious }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
+recruit_character = UZB_mohammed_alim_khan

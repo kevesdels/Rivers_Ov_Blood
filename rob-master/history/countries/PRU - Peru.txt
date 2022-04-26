@@ -61,49 +61,10 @@ set_politics = {
 	elections_allowed = no
 }
 
-create_country_leader = {
-	name = "José Carlos Mariátegui"
-	desc = "POLITICS_OSCAR_BENAVIDES_DESC"
-	picture = "gfx/leaders/PRU/PRU_jose_carlos.tga"
-	expire = "1965.1.1"
-	ideology = sorelianism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Víctor Raúl Haya de la Torre"
-	desc = "POLITICS_OSCAR_BENAVIDES_DESC"
-	picture = "PRU_jose_carlos.tga"
-	expire = "1965.1.1"
-	ideology = social_democracy_subtype
-	traits = {
-		#
-		}
-}
-
-create_country_leader = {
-	name = "Luis Miguel Sánchez Cerro"
-	desc = "POLITICS_OSCAR_BENAVIDES_DESC"
-	picture = "GFX_Portrait_peru_oscar_benavides"
-	expire = "1965.1.1"
-	ideology = military_junta
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Manuel Prado Ugarteche"
-	desc = "POLITICS_OSCAR_BENAVIDES_DESC"
-	picture = "GFX_Portrait_peru_oscar_benavides"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
+recruit_character = PRU_jose_carlos_mariategui
+recruit_character = PRU_víctor_raul_haya_de_la_torre
+recruit_character = PRU_luis_miguel_sanchez_cerro
+recruit_character = PRU_manuel_prado_ugarteche
 
 
 

@@ -118,7 +118,7 @@ focus_tree = {
 
 	#Focus for Mass Industrilization
 	focus = {
-		id = ITAs_massindustrilization
+		id = ITAs_massindustrilization_2
 		icon = GFX_goal_unknown
 		x = 5
 		y = 3
@@ -152,7 +152,7 @@ focus_tree = {
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = ITAs_massindustrilization }
+		prerequisite = { focus = ITAs_massindustrilization_2 }
 		ai_will_do = {
 			factor = 1
 		}

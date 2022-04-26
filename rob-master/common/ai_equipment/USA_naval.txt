@@ -240,12 +240,20 @@ USA_escorts = {
 	
 	priority = {
 		factor = 1000
+		modifier = {
+			factor = 5
+			anti_submarine_strategy_required_trigger = yes
+		}
 	}
 	
 	escort_default = {
 	
 		priority = {
 			factor = 100
+			modifier = {
+				factor = 20
+				anti_submarine_strategy_required_trigger = yes
+			}
 		}
 
 		role_icon_index = 2
@@ -282,6 +290,10 @@ USA_escorts = {
 	
 		priority = {
 			factor = 120
+			modifier = {
+				factor = 20
+				anti_submarine_strategy_required_trigger = yes
+			}
 		}
 		enable = {
 			AND = {
@@ -1073,6 +1085,10 @@ USA_naval_capital_battleship = {
 	
 		priority = {
 			factor = 10
+			modifier = {
+				has_completed_focus = USA_two_ocean_navy_act
+				factor = 50
+			}
 		}
 		role_icon_index = 1
 		

@@ -1,0 +1,96 @@
+characters={
+
+	DSU_lazar_moiseyevich_kaganovich={
+		name="Lazar Moiseyevich Kaganovich"
+		portraits={
+			civilian={
+				large="gfx/leaders/DSU/Portrait_DSU_kaganovich.dds"
+			}
+		}
+		country_leader={
+			ideology=national_socialist_subtype
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+
+	DSU_semyon_timoshenko={
+		name="Semyon Timoshenko"
+		portraits={
+			army={
+				small="gfx/interface/ideas/RSR_semyon_timoshenko.tga"
+				large="gfx/leaders/SOV/Portrait_Soviet_Semyon_Timoshenko.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = RSR_semyon_timoshenko
+			traits = { army_cavalry_2 }
+			cost = 150
+		}
+		corps_commander={
+			traits={ career_officer cavalry_officer politically_connected }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=404
+		}
+	}
+	
+	DSU_nikolai_vatutin={
+		name="Nikolai Vatutin"
+		portraits={
+			army={
+				large="gfx/leaders/DSU/Nikolai_Vatutin.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id=1003
+		}
+	}
+
+	DSU_vladimir_antonov={
+		name="Vladimir Antonov-Ovseyenko"
+		portraits={
+			army={
+				large="gfx/leaders/DSU/Portrait_Soviet_Generic_land_5.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id=1005
+		}
+	}
+
+	DSU_volodymyr_zatonsky={
+		name="Volodymyr Zatonsky"
+		portraits={
+			army={
+				large="gfx/leaders/DSU/Portrait_Soviet_Generic_land_5.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id=1004
+		}
+	}
+
+}

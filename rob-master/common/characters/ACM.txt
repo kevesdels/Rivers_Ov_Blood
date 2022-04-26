@@ -4,7 +4,7 @@ characters={
 		name="Anarchic Goverment"
 		portraits={
 			civilian={
-				large="Anarchic_Goverment.dds"
+				large="gfx/leaders/ACM/Anarchic_Goverment.dds"
 			}
 		}
 		country_leader={
@@ -23,15 +23,15 @@ characters={
 				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
 			}
-			corps_commander={
-				traits={ politically_connected }
-				skill=1
-				attack_skill=1
-				defense_skill=1
-				planning_skill=1
-				logistics_skill=1
-				legacy_id=-1
-			}
+		}
+		corps_commander={
+			traits={ politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
 		}
 		country_leader={
 			ideology=marxism

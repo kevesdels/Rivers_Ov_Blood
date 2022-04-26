@@ -4,6 +4,39 @@ oob = "MAL_1934"
 
 set_research_slots = 3
 
+if = {
+	limit = { has_dlc = "Together for Victory" }
+
+	add_to_tech_sharing_group = commonwealth_research
+}
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1932.5.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 6
+	democratic_socialist = 0
+	social_democracy = 6
+	social_liberal = 0
+	conservative = 78
+	authoritharian = 6
+	reactionary = 0
+	pelekist = 4
+}
+
+recruit_character = MAL_onn_jaafar
+recruit_character = MAL_shenton_thomas
+recruit_character = MAL_lai_teck
+recruit_character = MAL_ibrahim_hj_yaacob
+
+
+set_cosmetic_tag = MAL_UK # British Malaya
+
+
 # Starting tech
 # clone of UK
 set_technology = {
@@ -68,73 +101,4 @@ if = {
 }
 set_convoys = 25
 
-if = {
-	limit = { has_dlc = "Together for Victory" }
 
-	add_to_tech_sharing_group = commonwealth_research
-}
-
-set_politics = {
-	ruling_party = conservative
-	last_election = "1932.5.1"
-	election_frequency = 48
-	elections_allowed = no
-}
-set_popularities = {
-	national_socialist = 0
-	socialist = 6
-	democratic_socialist = 0
-	social_democracy = 6
-	social_liberal = 0
-	conservative = 78
-	authoritharian = 6
-	reactionary = 0
-	pelekist = 4
-}
-
-
-create_country_leader = {
-	name = "Onn Jaafar"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_democracy.dds"
-	expire = "1953.3.1"
-	ideology = social_democracy_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Shenton Thomas"
-	desc = ""
-	picture = "GFX_portrait_malaya_shenton_thomas"
-	expire = "1953.3.1"
-	ideology = conservative_subtype
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Lai Teck"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
-	expire = "1953.3.1"
-	ideology = marxism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Ibrahim Hj Yaacob" #this guy supported Japanese during the war, and was imprisoned for it, could be made fascist?
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_fascism.dds"
-	expire = "1953.3.1"
-	ideology = authoritharian_subtype
-	traits = {
-		
-	}
-}
-
-set_cosmetic_tag = MAL_UK # British Malaya

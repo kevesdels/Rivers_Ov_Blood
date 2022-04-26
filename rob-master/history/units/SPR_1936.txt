@@ -1,7 +1,6 @@
 ﻿##### Division Templates #####
 division_template = {
 	name = "División de Infantería" 		# Used for both regular infantry divisions and larger garrison divisions
-	division_names_group = SPR_INF_01
 	# Note: Spanish divisions were 2x brigades of 2x2 rgts each, + support
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -20,7 +19,6 @@ division_template = {
 }
 division_template = {
 	name = "División de Caballería"  		# Only one Cavalry Division (3x bge of 2x2 Rgts)
-	division_names_group = SPR_CAV_01
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -42,7 +40,6 @@ division_template = {
 }
 division_template = {
 	name = "Brigada Montaña"  		# Mountain Brigades were 2x2 Rgts + support
-	division_names_group = SPR_MNT_01
 	regiments = {
 		mountaineers = { x = 0 y = 0 }	
 		mountaineers = { x = 0 y = 1 }
@@ -55,7 +52,6 @@ division_template = {
 }
 division_template = {
 	name = "Brigada de Infantería" 		# Infantry Brigade - Used for smaller garrison units
-	division_names_group = SPR_GAR_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }	

@@ -112,15 +112,16 @@ LES_banish_x = {
       }
       custom_effect_tooltip = les_tt_25
       hidden_effect = {
-        any_neighbor_country = {
-        random_list = {
-            75 = {
-
-            }
-            25 = {
-            country_event = { id = legion.56 days = 1 }
+        if = {
+          limit = {
+            any_country = {
+              is_neighbor_of = LES
             }
           }
+            random_list = {
+              75 = {   }
+              25 = { country_event = { id = legion.56 days = 1 } }
+            }
         }
       }
    }
@@ -225,7 +226,7 @@ LES_appease_returnist_2 = {
     has_country_flag = les_factions
     NOT = { has_country_flag = les_rusnat_gone }
     }
-    command_power = 50
+    command_power > 49
    }
    days_remove = 10
 
@@ -300,7 +301,7 @@ LES_appease_russian_nationalist_2 = {
     has_country_flag = les_factions
     NOT = { has_country_flag = les_christ_gone }
     }
-    command_power = 50
+    command_power > 49
    }
    days_remove = 10
    complete_effect = {
@@ -4599,59 +4600,6 @@ LES_easterneurope = {
    remove_effect = {
     ROOT = {
    declare_war_on = { target = BOS type = annex_everything }
-   clr_country_flag = LES_ee_justifying
-    }
-   }
-   }
-
-   les_ee_ukr = {
-    target_trigger = { FROM = {tag = UKR} }
-    visible = {
-      NOT = {
-         tag = UKR
-         UKR = { is_puppet_of = LES }
-       }
-       UKR = {
-        exists = yes
-       }
-   }
-   available = {
-    OR = {
-      is_neighbor_of = UKR
-      UKR = {
-        any_neighbor_country = {
-        is_in_faction_with = LES
-        }
-      }
-     }
-      NOT = {
-     is_in_faction_with = UKR
-     UKR = { is_puppet_of = LES }
-     has_country_flag = LES_ee_justifying
-    }
-    has_war = no
-   }
-   ai_will_do = {
-    base = 10
-     modifier = {
-     factor = 200
-      ROOT = {
-     strength_ratio = {
-      tag = UKR
-      ratio > 0.75
-     }
-    }
-     }
-   }
-   cost = 50
-   fire_only_once = yes
-   days_remove = 20
-   complete_effect = {
-   set_country_flag = LES_ee_justifying
-   }
-   remove_effect = {
-    ROOT = {
-   declare_war_on = { target = UKR type = annex_everything }
    clr_country_flag = LES_ee_justifying
     }
    }

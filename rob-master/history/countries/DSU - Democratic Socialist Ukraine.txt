@@ -37,73 +37,8 @@ set_popularities = {
 	pelekist = 3
 }
 
-create_country_leader = {
-	name = "Lazar Moiseyevich Kaganovich"
-	desc = ""
-	picture = "gfx/leaders/DSU/Portrait_DSU_kaganovich.tga"
-	expire = "1953.3.1"
-	ideology = national_socialist_subtype
-	traits = {
-		
-	}
-}
-
-create_field_marshal = {
-	name = "Voldemar Aussem" # Aristocrat
-	id = 1001
-	picture = ".dds"
-	traits = {  offensive_doctrine inflexible_strategist  }
-	skill = 2
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Semyon Timoshenko"
-	picture = ".dds"
-	traits = {  }
-	id = 1002
-	skill = 3
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 5
-}
-
-create_corps_commander = {
-	name = "Nikolai Vatutin"
-	picture = ".dds"
-	traits = {  }
-	id = 1003
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Volodymyr Zatonsky"
-	picture = ".dds"
-	traits = { career_officer }
-	id = 1004
-	skill = 1
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Vladimir Antonov-Ovseyenko"
-	picture = ".dds"
-	traits = {  }
-	id = 1005
-	skill = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
+recruit_character = SOV_andrey_andreyevich_vlasov
+recruit_character = DSU_semyon_timoshenko
+recruit_character = DSU_nikolai_vatutin
+recruit_character = DSU_vladimir_antonov
+recruit_character = DSU_volodymyr_zatonsky

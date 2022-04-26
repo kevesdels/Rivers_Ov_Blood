@@ -1,0 +1,135 @@
+characters={
+	LES_radola_gajda={
+		name="Radola Gajda"
+		portraits={
+			civilian={
+				large="gfx/leaders/LES/radola_gajda.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_RADOLA_GAJDA_DESC"
+			ideology=pelekist_subtype
+			traits={ dislikes_germany }
+			expire="1960.1.1.1"
+			id=-1
+		}
+	}
+	LES_jan_syrovy={
+		name="Jan Syrový"
+		portraits={
+			army={
+				large="gfx/leaders/LES/Portrait_LES_jan_syrov.dds"
+			}
+		}
+		field_marshal={
+			traits={ offensive_doctrine }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=9986
+		}
+	}
+	LES_josef_jiri_svec={
+		name="Josef Jiří Švec"
+		portraits={
+			army={
+				large="gfx/leaders/LES/Josef_Jiří_Švec.dds"
+			}
+		}
+		corps_commander={
+			traits={ war_hero winter_specialist }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=9985
+		}
+	}
+	LES_vojtech_luza={
+		name="Vojtěch Luža"
+		portraits={
+			army={
+				large="gfx/leaders/LES/Vojtěch_Luža.dds"
+			}
+		}
+		corps_commander={
+			traits={ fast_planner }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=9981
+		}
+	}
+	LES_sergej_vojcechovsky={
+		name="Sergej Vojcechovský"
+		portraits={
+			army={
+				large="gfx/leaders/LES/Sergej_Vojcechovský.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster winter_specialist }
+			skill=3
+			attack_skill=4
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=5721
+		}
+	}
+	LES_stanislav_cecek={
+		name="Stanislav Čeček"
+		portraits={
+			army={
+				large="gfx/leaders/LES/Portrait_LES_stansilav_chechek.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader winter_specialist }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=9982
+		}
+	}
+	LES_oleg_svatek={
+		name="Oleg Svátek"
+		portraits={
+			army={
+				large="gfx/leaders/LES/Oleg_Svátek.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=9983
+		}
+	}
+	LES_vaclav_sara={
+		name="Václav Šára"
+		portraits={
+			army={
+				large="gfx/leaders/LES/Václav_Šára.dds"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=9984
+		}
+	}
+}

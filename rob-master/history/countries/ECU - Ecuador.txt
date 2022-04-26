@@ -31,24 +31,5 @@ set_politics = {
 	elections_allowed = no
 }
 
-create_country_leader = {
-	name = "Federico Páez"
-	desc = "POLITICS_FEDERICO_PAEZ_DESC"
-	picture = "GFX_Portrait_ecuador_federico_paez"
-	expire = "1965.1.1"
-	ideology = socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-		name = "Aurelio Mosquera"
-		desc = "POLITICS_AURELIO_MOSQUERA_DESC"
-		picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
-		expire = "1965.1.1"
-		ideology = social_liberal_subtype
-		traits = {
-			#
-		}
-}
+recruit_character = ECU_federico_paez
+recruit_character = ECU_aurelio_mosquera

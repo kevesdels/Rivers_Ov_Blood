@@ -99,7 +99,7 @@ characters={
 		name="André Tardieu"
 		portraits={
 			civilian={
-				large="gfx/leaders/FRA/Portrait_FRL_André_Tardieu.tga"
+				large="gfx/leaders/FRA/Portrait_FRL_André_Tardieu.dds"
 			}
 		}
 		country_leader={
@@ -311,8 +311,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_FRA_jean-marie_charles_abrial.dds"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_France_Jean-Marie_Charles_Abrial.dds"
 			}
 		}
@@ -338,8 +336,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_FRA_jean-pierre_esteva.dds"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_France_Jean-Pierre_Esteva.dds"
 			}
 		}
@@ -358,8 +354,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_FRA_jean_de_laborde.dds"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_France_Jean_de_Laborde.dds"
 			}
 		}
@@ -385,21 +379,6 @@ characters={
 			slot = army_chief
 			idea_token = FRA_marie_pierre_koenig
 			available = { has_completed_focus = FRA_armeedeterre }
-			traits = { army_chief_offensive_2 }
-			cost = 150
-		}
-	}
-
-	FRA_marie_pierre_koenig={
-		name="Marie-Pierre Koenig"
-		portraits={
-			army={
-				small="gfx/leaders/FRA/FRA_marie_pierre_koenig.dds"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = FRA_marie_pierre_koenig
 			traits = { army_chief_offensive_2 }
 			cost = 150
 		}

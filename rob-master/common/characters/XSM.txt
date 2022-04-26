@@ -1,0 +1,35 @@
+characters={
+	XSM_ma_bufang={
+		name="Ma Bufang"
+		portraits={
+			civilian={
+				large="GFX_portrait_xsm_ma_bufang"
+			}
+		}
+		country_leader={
+			ideology=authoritharian_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	XSM_ma_hongbin={
+		name="Ma Hongbin"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_asia_generic_land_2.dds"
+			}
+			army={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+}

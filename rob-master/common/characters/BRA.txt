@@ -1,0 +1,112 @@
+characters={
+	BRA_getulio_vargas={
+		name="Getúlio Vargas"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRA/Portrait_BRA_getúlio_vargas.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_GETULIO_VARGAS_DESC"
+			ideology=authoritharian_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BRA_plinio_salgado={
+		name="Plínio Salgado"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRA/Portrait_Brazil_Plinio_Salgado.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_PLINIO_SALGADO_DESC"
+			ideology=christian_pelekism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BRA_luis_carlos_prestes={
+		name="Luís Carlos Prestes"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_LUIS_CARLOS_PRESTES_DESC"
+			ideology=socialist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BRA_armando_sales={
+		name="Armando Sales"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ARMANDO_SALES_DESC"
+			ideology=conservative_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BRA_eurico_gaspar_dutra={
+		name="Eurico Gaspar Dutra"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_land_1.dds"
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ ranger }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	BRA_mascarenhas_de_morais={
+		name="Mascarenhas de Morais"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_land_5.dds"
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
+			}
+		}
+		corps_commander={
+			traits={ jungle_rat }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	BRA_augusto_rademaker={
+		name="Augusto Rademaker"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_navy_3.dds"
+				large="gfx/leaders/South America/Portrait_South_America_Generic_navy_3.dds"
+			}
+		}
+		navy_leader={
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=3
+			legacy_id=-1
+		}
+	}
+
+}

@@ -1,0 +1,101 @@
+characters={
+	MAN_zhang_xueliang={
+		name="Zhang Xueliang"
+		portraits={
+			civilian={
+				large="gfx/leaders/MAN/zhang_xueliang.tga"
+			}
+		}
+		country_leader={
+			ideology=authoritharian_subtype
+			traits={ warrior_code }
+			expire="1960.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=reactionary_subtype
+			traits={ warrior_code }
+			expire="1960.1.1.1"
+			id=-1
+		}
+	}
+	MAN_zhang_haipeng={
+		name="Zhang Haipeng"
+		portraits={
+			army={
+				small="GFX_portrait_man_zhang_haipeng_small"
+			}
+			army={
+				large="GFX_portrait_man_zhang_haipeng"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	MAN_zhang_jinghui={
+		name="Zhang Jinghui"
+		portraits={
+			army={
+				small="GFX_portrait_man_zhang_jinghui_small"
+			}
+			army={
+				large="GFX_portrait_man_zhang_jinghui"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	MAN_aisin_gioro_xiqia={
+		name="Aisin Gioro Xiqia"
+		portraits={
+			army={
+				small="GFX_portrait_man_aisin_gioro_xiqia_small"
+			}
+			army={
+				large="GFX_portrait_man_aisin_gioro_xiqia"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	MAN_yoshiko_kawashima={
+		name="Yoshiko Kawashima"
+		portraits={
+			army={
+				small="GFX_portrait_man_yoshiko_kawashima_small"
+			}
+			army={
+				large="GFX_portrait_man_yoshiko_kawashima"
+			}
+		}
+		corps_commander={
+			traits={ cavalry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

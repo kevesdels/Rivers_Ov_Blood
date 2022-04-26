@@ -72,71 +72,10 @@ set_popularities = {
 
 set_convoys = 40
 
-create_country_leader = {
-	name = "Christian X of Denmark"
-	desc = "POLITICS_THORVALD_STAUNING_DESC"
-	picture = "gfx/leaders/DEN/Portrait_DEN_Christian_X.tga"
-	expire = "1965.1.1"
-	ideology = social_democracy_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Christian X of Denmark"
-	desc = "POLITICS_THORVALD_STAUNING_DESC"
-	picture = "gfx/leaders/DEN/Portrait_DEN_Christian_X.tga"
-	expire = "1965.1.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Christian X of Denmark"
-	desc = "POLITICS_THORVALD_STAUNING_DESC"
-	picture = "gfx/leaders/DEN/Portrait_DEN_Christian_X.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Frits Clausen"
-	desc = "POLITICS_FRITS_CLAUSEN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	expire = "1965.1.1"
-	ideology = pelekist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Aksel Larsen"
-	desc = "POLITICS_AKSEL_LARSEN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = socialist_subtype
-	traits = {
-		#
-	}
-}
-
-
-
-create_corps_commander = {
-	name = "Wilhelm Wain Prior"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-	traits = { trickster }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-}
+recruit_character = DEN_christian_x_of_denmark
+recruit_character = DEN_frits_clausen
+recruit_character = DEN_aksel_larsen
+recruit_character = DEN_wilhelm_wain_prior
 
 ### VARIANTS ###
 # 1936 Start #

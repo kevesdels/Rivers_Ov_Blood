@@ -325,11 +325,11 @@ name = republican_italy.14.a
 hidden_effect = {
 ITA = { country_event = { id = republican_italy.15 days = 5 } }
 }
+}
 option = { #Graziani flies to Anatolia
 name = republican_italy.14.a
 hidden_effect = {
 ITA = { country_event = { id = republican_italy.19 days = 5 } }
-}
 }
 }
 }
@@ -362,6 +362,7 @@ option = { ###Messe holds
  hidden_effect = {
   ITA = { country_event = { id = republican_italy.17 days = 5 } }
  }
+}
 
  option = { ###Messe is killed
  name = republican_italy.16.b
@@ -370,7 +371,6 @@ option = { ###Messe holds
  add_popularity = { ideology = authoritharian popularity = -0.05 }
  add_popularity = { ideology = reactionary popularity = -0.05 }
  }
-}
 }
 
 country_event = { ###Messe cracks down on Turks

@@ -1,0 +1,152 @@
+characters={
+	BUL_kiril_i={
+		name="Kiril I"
+		portraits={
+			civilian={
+				large="gfx/leaders/BUL/kiril_preslav.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_BORIS_III_DESC"
+			ideology=authoritharian_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BUL_boris_iii={
+		name="Boris III"
+		portraits={
+			civilian={
+				large="gfx/leaders/BUL/Portrait_Bulgaria_Boris_III.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_BORIS_III_DESC"
+			ideology=reactionary_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BUL_georgi_dimitrov={
+		name="Georgi Dimitrov"
+		portraits={
+			civilian={
+				large="gfx/leaders/BUL/Portrait_Bulgaria_Georgi_Dimitrov.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_GEORGI_DIMITROV_DESC"
+			ideology=socialist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BUL_nikola_petkov={
+		name="Nikola Petkov"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_NIKOLA_PETKOV_DESC"
+			ideology=social_democracy_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BUL_hristo_lukov={
+		name="Hristo Lukov"
+		portraits={
+			civilian={
+				large="GFX_Portrait_bulgaria_hristo_lukov"
+			}
+		}
+		country_leader={
+			desc="POLITICS_HRISTO_LUKOV_DESC"
+			ideology=pelekist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BUL_vasil_tenev_boydev={
+		name="Vasil Tenev Boydev"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	BUL_vladimir_stoychev={
+		name="Vladimir Stoychev"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless cavalry_officer }
+			skill=3
+			attack_skill=5
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	BUL_kiril_stanchev={
+		name="Kiril Stanchev"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	BUL_georgi_nikolov_popov={
+		name="Georgi Nikolov Popov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			}
+		}
+		field_marshal={
+			traits={ defensive_doctrine }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+}

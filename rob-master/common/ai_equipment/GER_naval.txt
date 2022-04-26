@@ -136,6 +136,10 @@ GER_destroyers = {
 	
 		priority = {
 			factor = 1
+			modifier = {
+				factor = 20
+				GER_naval_interest_trigger = yes
+			}
 		}
 		role_icon_index = 2
 		
@@ -276,6 +280,10 @@ GER_naval_light_cruiser = {
 		
 		priority = {
 			factor = 1
+			modifier = {
+				factor = 20
+				GER_naval_interest_trigger = yes
+			}
 		}
 		role_icon_index = 2
 		
@@ -316,6 +324,10 @@ GER_naval_light_cruiser = {
 		
 		priority = {
 			factor = 1
+			modifier = {
+				factor = 10
+				GER_naval_interest_trigger = yes 
+			}
 		}
 		role_icon_index = 2
 		
@@ -370,6 +382,10 @@ GER_naval_cruiser_scout = {
 	
 	priority = {
 		factor = 1
+		modifier = {
+			factor = 25
+			GER_naval_interest_trigger = yes
+		}
 	}
 	scout_cruiser = {
 	
@@ -432,6 +448,10 @@ GER_naval_cruiser_panzerschiff = {
 	
 	priority = {
 		factor = 1
+		modifier = {
+			factor = 5
+			GER_naval_interest_trigger = yes
+		}
 	}
 	panzerschiff_basic = {
 	
@@ -563,6 +583,10 @@ GER_naval_cruiser_heavy = {
 	
 	priority = {
 		factor = 10
+		modifier = {
+			factor = 5
+			GER_naval_interest_trigger = yes
+		}
 	}
 
 	capital_cruiser_early = {
@@ -682,6 +706,10 @@ GER_naval_cruiser_heavy = {
 	
 		priority = {
 			factor = 10
+			modifier = {
+				factor = 10
+				GER_naval_interest_trigger = yes
+			}
 		}
 		role_icon_index = 1
 		
@@ -720,6 +748,10 @@ GER_naval_cruiser_heavy = {
 	
 		priority = {
 			factor = 10
+			modifier = {
+				factor = 10
+				GER_naval_interest_trigger = yes
+			}
 		}
 		role_icon_index = 1
 		
@@ -862,6 +894,10 @@ GER_naval_capital_battleship = {
 	
 		priority = {
 			factor = 1
+			modifier = {
+				factor = 10
+				GER_naval_interest_trigger = yes
+			}
 		}
 		role_icon_index = 1
 
@@ -940,6 +976,10 @@ GER_naval_capital_battleship = {
 	
 		priority = {
 			factor = 20
+			modifier = {
+				factor = 10
+				GER_naval_interest_trigger = yes
+			}
 		}
 		role_icon_index = 1
 		
@@ -977,6 +1017,10 @@ GER_naval_capital_battleship = {
 	
 		priority = {
 			factor = 10
+			modifier = {
+				factor = 10
+				GER_naval_interest_trigger = yes
+			}
 		}
 		role_icon_index = 1
 		
@@ -1028,6 +1072,10 @@ GER_naval_capital_bc = {
 	
 	priority = {
 		factor = 25
+		modifier = {
+			factor = 0
+			not = { GER_naval_interest_trigger = yes }
+		}
 	}
 
 	battlecruiser_early = {
@@ -1110,6 +1158,10 @@ GER_naval_capital_bc = {
 	
 		priority = {
 			factor = 1
+			modifier = {
+				factor = 10
+				GER_naval_interest_trigger = yes
+			}
 		}
 		role_icon_index = 1
 		
@@ -1157,6 +1209,14 @@ GER_naval_carrier = {
 	
 	priority = {
 		factor = 25
+		modifier = {
+			factor = 0
+			has_war_with = SOV
+		}
+		modifier = {
+			GER_naval_interest_trigger = yes
+			factor = 2
+		}
 	}
 
 	carrier_early = {
@@ -1234,6 +1294,10 @@ GER_naval_carrier = {
 	
 		priority = {
 			factor = 1
+			modifier = {
+				factor = 10
+				GER_naval_interest_trigger = yes
+			}
 		}
 		role_icon_index = 7
 		
@@ -1266,6 +1330,10 @@ GER_naval_carrier = {
 	
 		priority = {
 			factor = 1
+			modifier = {
+				factor = 20
+				GER_naval_interest_trigger = yes
+			}
 		}
 		role_icon_index = 7
 		
@@ -1316,6 +1384,10 @@ GER_naval_submarine = {
 		modifier = {
 			factor = 10
 			has_war = yes
+		}
+		modifier = {
+			GER_naval_interest_trigger = yes
+			factor = 0.1
 		}
 	}
 

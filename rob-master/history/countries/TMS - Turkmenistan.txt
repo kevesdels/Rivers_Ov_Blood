@@ -33,46 +33,6 @@ TMS_junaid_dictatorship
 TMS_basmachi_remnant
 }
 
-create_country_leader = {
-	name = "Junaid Khan"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "gfx/leaders/TMS/Junaid_Khan.tga"
-	expire = "1965.1.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "Junaid Khan"
-	picture = "gfx/leaders/TMS/Junaid_Khan.dds"
-	traits = { offensive_doctrine cavalry_officer war_hero }
-	skill = 3
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Ibrahim Bek"
-	picture = ""
-	traits = { trait_cautious cavalry_officer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Konstantin Monstrov"
-	picture = ""
-	traits = { harsh_leader cavalry_officer harsh_leader }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 3
-}
+recruit_character = TMS_junaid_khan
+recruit_character = TMS_ibrahim_bek
+recruit_character = TMS_konstantin_monstrov

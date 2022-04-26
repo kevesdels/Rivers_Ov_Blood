@@ -34,7 +34,7 @@ SLV_recruit_in_maribor = {
 SLV_peace = {
 	fire_only_once = yes
 	visibile = {
-		not = { has_country_flag = slv_p_aus}
+		not = { has_country_flag = slv_p_aus }
 	}
   	available = {
     not = { has_country_flag = slv_p_aus}
@@ -93,7 +93,7 @@ SLV_peace = {
 ###if Austrian republic dies
 SLV_peace_2 = {
 	visibile = {
-		not = { has_country_flag = slv_p_aus}
+		not = { has_country_flag = slv_p_aus }
 	}
 	fire_only_once = yes
   	available = {
@@ -173,4 +173,3 @@ SLV_recruit_in_benedikt = {
 
 }
 ###end of unification
-}

@@ -26,11 +26,7 @@ DSU_use_the_momentum = {
   fire_only_once = yes
   days_remove = 40
     available = {
-	OR = {
-	 has_government = national_socialist
-	 has_government = socialist
-	 has_government = democratic_socialist
-	}
+	SOCIALIST_ALIGNED_GOVERNMENT = yes
 	has_war = no
    has_country_flag = DSU_stable
    has_army_manpower = {
@@ -329,10 +325,7 @@ remove_effect = {
 766 = { add_core_of = ROOT }
 
 every_country = {
-	limit = { controls_state = 80 }
-	limit = { controls_state = 925 }
-	limit = { controls_state = 78 }
-	limit = { controls_state = 766 }
+	limit = { 	OR = { controls_state = 80 controls_state = 925 controls_state = 78 controls_state = 766 } }
 	ROOT = { 
 		create_wargoal = {
 			type = annex_everything		
@@ -399,7 +392,7 @@ target_trigger = {
   ROOT = {
   OR = {
   has_government = socialist
-  has_government democratic_socialist
+  has_government = democratic_socialist
   
  }
  ROOT = {
@@ -427,22 +420,13 @@ DSU_ally_cbr = {
   days_remove = 10
 target_trigger = {
  FROM = {
- OR = {
-  has_government = socialist
-  has_government = democratic_socialist
-  has_government = national_socialist
- }
+	SOCIALIST_ALIGNED_GOVERNMENT = yes
  tag = CBR
  }
  }
   available = {
   ROOT = {
-  OR = {
-  has_government = socialist
-  has_government democratic_socialist
-  has_government = national_socialist
-  
- }
+	SOCIALIST_ALIGNED_GOVERNMENT = yes
  has_country_flag = DSU_stable
  }
 }
@@ -463,22 +447,13 @@ DSU_ally_sov = {
   days_remove = 10
 target_trigger = {
  FROM = {
- OR = {
-  has_government = socialist
-  has_government = democratic_socialist
-  has_government = national_socialist
- }
+	SOCIALIST_ALIGNED_GOVERNMENT = yes
  tag = SOV
  }
  }
   available = {
   ROOT = {
-  OR = {
-  has_government = socialist
-  has_government democratic_socialist
-  has_government = national_socialist
-  
- }
+	SOCIALIST_ALIGNED_GOVERNMENT = yes
   ROOT = {
 	 NOT = { 
 	  is_in_faction_with = RUS

@@ -258,7 +258,7 @@ country_event = {
        remove_core_of = LNC
        remove_core_of = LAC
      }
-     ROOT = { set_capital = 1266 remove_ideas = { LCC_Latvian_cw } }
+     ROOT = { set_capital = {state = 1266} remove_ideas = { LCC_Latvian_cw } }
      clr_country_flag = lnc_civil_War
    }
  
@@ -278,7 +278,7 @@ country_event = {
          remove_core_of = LCC
          remove_core_of = LNC
      }
-     ROOT = { set_capital = 1266 remove_ideas = { LAC_Latvian_cw } }
+     ROOT = { set_capital = {state = 1266} remove_ideas = { LAC_Latvian_cw } }
      clr_country_flag = lnc_civil_War
    }
  
@@ -297,7 +297,7 @@ country_event = {
          remove_core_of = LCC
          remove_core_of = LAC
      }
-     ROOT = { set_capital = 1266 remove_ideas = { LNC_Latvian_cw } }
+     ROOT = { set_capital = {state = 1266} remove_ideas = { LNC_Latvian_cw } }
      clr_country_flag = lnc_civil_War
    }
  }

@@ -30,74 +30,8 @@ set_popularities = {
 	pelekist = 15
 }
 
-create_country_leader = {
-	name = "Zhang Xueliang"
-	
-	picture = "gfx/leaders/MAN/zhang_xueliang.tga"
-	expire = "1960.1.1"
-	ideology = reactionary_subtype
-	traits = {
-		warrior_code
-	}
-}
-
-create_country_leader = {
-	name = "Zhang Xueliang"
-	
-	picture = "gfx/leaders/MAN/zhang_xueliang.tga"
-	expire = "1960.1.1"
-	ideology = authoritharian_subtype
-	traits = {
-		warrior_code
-	}
-}
-
-create_corps_commander = {
-	name = "Zhang Haipeng"
-	GFX = "GFX_portrait_man_zhang_haipeng"
-	traits = {  }
-	skill = 2
-	
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Zhang Jinghui"
-	GFX = "GFX_portrait_man_zhang_jinghui"
-	traits = { infantry_officer }
-	skill = 2
-	
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Aisin Gioro Xiqia"
-	GFX = "GFX_portrait_man_aisin_gioro_xiqia"
-	traits = { career_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Yoshiko Kawashima"
-	gfx = "GFX_portrait_man_yoshiko_kawashima"
-	traits = { cavalry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-	female = yes
-}
-
-1939.1.1 = {
-}
+recruit_character = MAN_zhang_xueliang
+recruit_character = MAN_zhang_haipeng
+recruit_character = MAN_zhang_jinghui
+recruit_character = MAN_aisin_gioro_xiqia
+recruit_character = MAN_yoshiko_kawashima

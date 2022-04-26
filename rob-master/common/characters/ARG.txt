@@ -2,7 +2,7 @@ characters={
 	#######################
 	### COUNTRY LEADERS ###
 	#######################
-	ARG_agustín_pedro_justo={
+	ARG_agustin_pedro_justo={
 		name="Agustín Pedro Justo"
 		portraits={
 			civilian={
@@ -13,6 +13,20 @@ characters={
 			ideology=authoritharian_subtype
 			expire="1965.1.1.1"
 			id=-1
+		}
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = ARG_agustin_pedro_justo
+			ledger = army
+				allowed = {
+					original_tag = ARG
+				}
+				
+				traits = {
+					military_theorist
+				}
 		}
 	}
 	ARG_roberto_maria_ortiz={
@@ -71,7 +85,7 @@ characters={
 		name="Fanny Jabcovsky"
 		portraits={
 			civilian={
-				large="gfx/leaders/ARG/Portrait_Argentina_Fanny_Jabcovsky.dds"
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
 			}
 		}
 		country_leader={
@@ -180,29 +194,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_generic_air_south_america_1"
-			}
-		}
-	}
-	ARG_agustin_pedro_justo={
-		advisor={
-			cost = 100
-			
-			slot = theorist
-			idea_token = ARG_agustin_pedro_justo
-			ledger = army
-				allowed = {
-					original_tag = ARG
-				}
-				
-				traits = {
-					military_theorist
-				}
-		}
-# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
-		name="Agustín Pedro Justo"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_south_america_5"
 			}
 		}
 	}

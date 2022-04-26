@@ -91,15 +91,4 @@ set_popularities = {
 	pelekist = 11
 }
 
-#Order matters here Daladier will start as leaders because added last
-create_country_leader = {
-	name = "Raphaël Antonetti"
-	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-	picture = "gfx/leaders/FEA/FEA_Raphael_Antonetti.tga"
-	expire = "1965.1.1"
-	ideology = authoritharian_subtype
-	traits = {
-
-	}
-}
-
+recruit_character = FEA_raphael_antonetti

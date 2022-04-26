@@ -1,6 +1,6 @@
 capital = 330
 
-oob = "MON_1936"
+oob = "MON_1934"
 
 # Starting tech
 set_technology = {
@@ -31,13 +31,4 @@ add_ideas = {
 }
 
 
-create_country_leader = {
-	name = "Roman von Ungern-Sternberg"
-	desc = "POLITICS_ANANDYN_AMAR_DESC"
-	picture = Roman_von_Ungernsternberg.dds
-	expire = "1965.1.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
-}
+recruit_character = MON_roman_von_ungernsternberg

@@ -394,8 +394,8 @@ add_political_power = -10
 
 country_event = {
 id = bces.110
-title = bces. 110.t
-desc = bces. 110.d
+title = bces.110.t
+desc = bces.110.d
 fire_only_once = yes
 trigger = {
 tag = ENG
@@ -403,7 +403,7 @@ ENG = { has_cosmetic_tag = ENG_navy }
 }
 picture = GFX_picture_bosnian_revolt
 option = {
- name = bces. 110.a
+ name = bces.110.a
 ai_chance = { factor = 99}
 
 NGA = { transfer_state = 558 }
@@ -525,28 +525,28 @@ UGA = { add_opinion_modifier = {
 #
 #}
 
-option = {
+#option = {
 # Heia Safari
- name = bces.113.c
-ai_chance = { factor = 0}
-hidden_effect = { ENG = { country_event = {
-    id = bces.114
-    days = 12
-}
-}
-}
-hidden_effect = { PRS = { country_event = {
-    id = bces.115
-    days = 13
-}
-}
-}
-hidden_effect = { PRS = { country_event = {
-    id = bces.122
-    days = 13
-}
-}
-}
+# name = bces.113.c
+#ai_chance = { factor = 0}
+#hidden_effect = { ENG = { country_event = {
+ #   id = bces.114
+ #   days = 12
+#}
+#}
+##}
+#hidden_effect = { PRS = { country_event = {
+  #  id = bces.115
+ #   days = 13
+#}
+#}
+#}
+#hidden_effect = { PRS = { country_event = {
+#    id = bces.122
+#    days = 13
+#}
+#}
+#}
 
 
 

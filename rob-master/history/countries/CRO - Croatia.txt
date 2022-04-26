@@ -45,8 +45,6 @@ if = {
 	}
 }
 
-set_convoys = 5
-
 set_politics = {
 	ruling_party = pelekist
 	last_election = "1933.7.1"
@@ -64,13 +62,5 @@ set_popularities = {
 	reactionary = 11
 	pelekist = 80
 }
-create_country_leader = {
-	name = "Stjepan Sarkotić"
-	desc = "ANTE_PAVELIC_DESC"
-	picture = "StjepanSarkotic.dds"
-	expire = "1965.1.1"
-	ideology = christian_pelekism
-	traits = {
-		#
-	}
-}
+
+recruit_character = CRO_stjepan_sarkotic

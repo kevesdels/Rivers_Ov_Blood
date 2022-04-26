@@ -449,9 +449,9 @@ BLR_request_lithuanian_support = {
 			}
   allowed = {
    tag = BLR
-   date > 1936.1.1
   }
   available = {
+    date > 1936.1.1
     OR = {
       has_country_flag = BLR_border_victory_2
       has_country_flag = BLR_on_our_own

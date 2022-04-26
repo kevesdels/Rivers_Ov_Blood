@@ -1,0 +1,76 @@
+characters={
+	BEL_leopold_iii_of_belgium={
+		name="Leopold III of Belgium"
+		portraits={
+			civilian={
+				large="gfx/leaders/BEL/BEL_King_Leopold_III.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_LEON_DEGRELLE_DESC"
+			ideology=social_democracy_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_LEON_DEGRELLE_DESC"
+			ideology=social_liberal_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_JOSEPH_JACQUEMOTTE_DESC"
+			ideology=authoritharian_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_HUBERT_PIERLOT_DESC"
+			ideology=reactionary_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_LEON_DEGRELLE_DESC"
+			ideology=pelekist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BEL_m_c_l_keyaerts={
+		name="M.C.L. Keyaerts"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer hill_fighter }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	BEL_georges_timmermans={
+		name="Georges Timmermans"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_navy_3.dds"
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			}
+		}
+		navy_leader={
+			traits={ bold }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+}

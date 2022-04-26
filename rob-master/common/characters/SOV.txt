@@ -172,30 +172,7 @@ characters={
 			legacy_id=408
 		}
 	}
-	SOV_semyon_timoshenko={
-		name="Semyon Timoshenko"
-		portraits={
-			army={
-				small="gfx/interface/ideas/RSR_semyon_timoshenko.tga"
-				large="gfx/leaders/SOV/Portrait_Soviet_Semyon_Timoshenko.dds"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = RSR_semyon_timoshenko
-			traits = { army_cavalry_2 }
-			cost = 150
-		}
-		corps_commander={
-			traits={ career_officer cavalry_officer politically_connected }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=404
-		}
-	}
+	
 	SOV_kliment_voroshilov={
 		name="Kliment Voroshilov"
 		portraits={

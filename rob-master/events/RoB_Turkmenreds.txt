@@ -644,14 +644,11 @@ tag = TRS
 
 option = {
 ###Oh no
-
 name = turkmenreds.118.a
 ai_chance = { factor = 25}
 add_stability = -0.1
 add_manpower = -50
- hidden_effect = { TMS = { { country_event = { id = turkmenreds.119 days = 3 } } }
-
-}
+ hidden_effect = { TMS = {  country_event = { id = turkmenreds.119 days = 3 } } }
 
 }
 
@@ -902,7 +899,7 @@ option = {
 		}
 name = turkmenreds.123.a
 ai_chance = { factor = 60}
-set_capital = 123
+set_capital = { state = 123 }
 add_political_power = -100
 add_manpower = -20000
 123 = { add_building_construction = {
@@ -921,7 +918,7 @@ option = {
 
 name = turkmenreds.123.b
 ai_chance = { factor = 15}
-set_capital = 217
+set_capital = { state = 217 }
 add_political_power = -100
 add_manpower = -20000
 217 = { add_building_construction = {
@@ -939,7 +936,7 @@ option = {
 		}
 name = turkmenreds.123.c
 ai_chance = { factor = 20}
-set_capital = 195
+set_capital = { state = 195 }
 add_political_power = -100
 add_manpower = -20000
 195 = { add_building_construction = {
@@ -1070,7 +1067,7 @@ option = {
 ###yes
 name = turkmenreds.128.a
 ai_chance = { factor = 60}
-set_capital = 584
+set_capital = { state = 584 }
 add_political_power = -100
 add_manpower = -5000
 add_stability = 0.5

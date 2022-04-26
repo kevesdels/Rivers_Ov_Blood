@@ -38,113 +38,14 @@ set_popularities = {
 	reactionary = 31
 	pelekist = 6
 }
-create_country_leader = {
-	name = "Ferenc Szálasi"
-	desc = "POLITICS_MATYAS_RAKOSKI_DESC"
-	picture = "Ferenc_Szálasi.dds"
-	expire = "1965.1.1"
-	ideology = german_socialism
-	traits = {
-		#
-	}
-}
 
-create_country_leader = {
-	name = "Gyula Gombos"
-	desc = "POLITICS_MATYAS_RAKOSKI_DESC"
-	picture = "Gyula_Gombos.dds"
-	expire = "1965.1.1"
-	ideology = pelekist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Miklos Horthy"
-	desc = "POLITICS_MATYAS_RAKOSKI_DESC"
-	picture = "miklos_horthy.dds"
-	expire = "1965.1.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Bela Kun"
-	desc = "POLITICS_MATYAS_RAKOSKI_DESC"
-	picture = "Bela_Kun.dds"
-	expire = "1965.1.1"
-	ideology = left_communism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Istvan Bethlen"
-	desc = "POLITICS_ARPAD_SZAKASITS_DESC"
-	picture = "Istvan_Bethlen.dds"
-	expire = "1965.1.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
-}
-
-#army
-create_corps_commander = {
-	name = "Géza Lakatos"
-	gfx = GFX_Portrait_hungary_geza_lakatos
-	traits = {  }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Iván Hindy"
-	gfx = GFX_Portrait_hungary_ivan_hindy
-	traits = {  trickster }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Károly Beregfy"
-	gfx = GFX_Portrait_hungary_karoly_beregfy
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Lajos Veress"
-	gfx = GFX_Portrait_hungary_lajos_veress
-	traits = { armor_officer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_field_marshal = {
-	name = "Ferenc Feketehalmy-Czeydner"
-	gfx = GFX_Portrait_hungary_ferenc_feketehalmy_czeydner
-	traits = { }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-}
+recruit_character = HUN_ferenc_szalasi
+recruit_character = HUN_gyula_gombos
+recruit_character = HUN_miklos_horthy
+recruit_character = HUN_bela_kun
+recruit_character = HUN_istvan_bethlen
+recruit_character = HUN_geza_lakatos
+recruit_character = HUN_ivan_hindy
+recruit_character = HUN_karoly_beregfy
+recruit_character = HUN_lajos_veress
+recruit_character = HUN_ferenc_feketehalmyczeydner

@@ -38,81 +38,9 @@ TRS_legacy_of_the_red_army
 TRS_research_not_priority
 }
 
-create_country_leader = {
-	name = "Mikhail Frunze"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "gfx/leaders/TRS/Mikhail_Frunze.tga"
-	expire = "1965.1.1"
-	ideology = socialist_subtype
-	traits = {
-		cornered_fox
-	}
-}
-create_country_leader = {
-	name = "Ioseb Jughashvili"
-	desc = "POLITICS_JOSEPH_STALIN_DESC"
-	picture = "gfx/leaders/TRS/Portrait_SOV_Papa_Stalin.tga"
-	expire = "1965.1.1"
-	ideology = national_socialist_subtype
-	traits = {
-		
-	}
-}
-
-create_field_marshal = {
-	name = "Mikhail Frunze"
-	picture = "gfx/leaders/TRS/Mikhail_Frunze.dds"
-	traits = { defensive_doctrine trait_cautious politically_connected }
-	skill = 4
-	attack_skill = 1
-	defense_skill = 5
-	planning_skill = 4
-	logistics_skill = 4
-	id = 3334
-}
-
-create_corps_commander = {
-	name = "Vasily Shorin"
-	picture = ""
-	traits = { defensive_doctrine brilliant_strategist }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Konstantin Avksentevsky"
-	picture = ""
-	traits = { defensive_doctrine infantry_officer }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-	id = 3336
-}
-
-create_corps_commander = {
-	name = "Fayzulla Khodzhayev"
-	picture = ""
-	traits = { defensive_doctrine infantry_officer organizer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 2
-	id = 3335
-}
-
-create_corps_commander = {
-	name = "Yosh Buxoroliklar"
-	picture = ""
-	traits = { defensive_doctrine cavalry_officer }
-	skill = 1
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-}
+recruit_character = TRS_mikhail_frunze
+recruit_character = TRS_ioseb_jughashvili
+recruit_character = TRS_vasily_shorin
+recruit_character = TRS_konstantin_avksentevsky
+recruit_character = TRS_fayzulla_khodzhayev
+recruit_character = TRS_yosh_buxoroliklar

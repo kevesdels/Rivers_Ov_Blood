@@ -1,0 +1,45 @@
+characters={
+	FIC_maurice_antoine_francois_monguillot={
+		name="Maurice Antoine Francois Monguillot"
+		portraits={
+			civilian={
+				large="gfx/leaders/FIC/FIC_Maurice_Antoine_Francois_Monguillot.tga"
+			}
+		}
+		field_marshal={
+			traits={ old_guard inflexible_strategist defensive_doctrine }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+		country_leader={
+			desc="POLITICS_ÉDOUARD_DALADIER_DESC"
+			ideology=reactionary_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIC_maurice_martin={
+		name="Maurice Martin"
+		portraits={
+			army={
+				small="GFX_Portrait_Asia_Generic_land_1_small"
+			}
+			army={
+				large="GFX_Portrait_Asia_Generic_land_1"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist trickster defensive_doctrine }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

@@ -23,9 +23,6 @@
 		prerequisite = { 
 			focus = GER_tankproduction 
 		}
-		prerequisite = { 
-			focus = GER_ 
-		}
 	}
 
 	#Focus for Form the Wehrmacht
@@ -112,7 +109,7 @@
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = GER_LRDvnIzN }
+		prerequisite = { focus = GER_infantryfocus }
 	}
 
 	#Focus for Rommel's Panzerkorp
@@ -146,7 +143,7 @@
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = GER_formthewehrmacht }
-		mutually_exclusive = { focus = GER_LRDvnIzN }
+		mutually_exclusive = { focus = GER_infantryfocus }
 	}
 
 	#Focus for Infantry focus
@@ -252,9 +249,6 @@
 		prerequisite = { 
 			focus = GER_focusonartilleryproduction 
 		}
-		prerequisite = { 
-			focus = GER_ 
-		}
 	}
 
 	#Focus for Plan-Z
@@ -266,7 +260,7 @@
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = GER_formthekriegsmarine }
-		mutually_exclusive = { focus = GER_nluMQgXh }
+		mutually_exclusive = { focus = GER_submarinefocus }
 	}
 
 	#Focus for Submarine focus
@@ -412,6 +406,7 @@
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = GER_formtheluftwaffe }
+		mutually_exclusive = { focus = GER_quantityfirst }
 	}
 
 	#Focus for Quantity First
@@ -446,7 +441,7 @@
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = GER_quantityfirst }
-		mutually_exclusive = { focus = GER_sLRybfMJ }
+		mutually_exclusive = { focus = GER_rampupbomberproduction }
 	}
 
 	#Focus for Ramp up Bomber Production
@@ -470,7 +465,7 @@
 		cost = 10
 		available_if_capitulated = yes
 		prerequisite = { focus = GER_qualityfirst }
-		mutually_exclusive = { focus = GER_YvrlCqMm }
+		mutually_exclusive = { focus = GER_improvebombers }
 	}
 
 	#Focus for Improve Bombers

@@ -226,42 +226,38 @@ SER = { surrender_progress > 0.3 }
 picture = GFX_picture_bosnian_revolt
 option = {
  name = bulgaria.107.a
-ai_chance = { factor = 98}
+    ai_chance = { factor = 98}
 
-white_peace = SER
+    white_peace = SER
 
-BUL = { transfer_state = 106 }
-BUL = { transfer_state = 870 }
-BUL = { transfer_state = 871 }
-106 = { add_core_of = BUL }
-870 = { add_core_of = BUL }
-871 = { add_core_of = BUL }
-IF = {
-limit = { ALB = { has_war_with = SER } }
-ALB = { transfer_state = 878 }
-ALB = { transfer_state = 941 }
-ALB = { white_peace = SER }
-}
-IF = {
-limit = { TUR = { has_war_with = SER } }
-TUR = { white_peace = SER }
-}
-
-}
+    BUL = { transfer_state = 106 }
+    BUL = { transfer_state = 870 }
+    BUL = { transfer_state = 871 }
+    106 = { add_core_of = BUL }
+    870 = { add_core_of = BUL }
+    871 = { add_core_of = BUL }
+    IF = {
+        limit = { ALB = { has_war_with = SER } }
+            ALB = { transfer_state = 878 }
+            ALB = { transfer_state = 941 }
+            ALB = { white_peace = SER }
+    }
+    IF = {
+            limit = { TUR = { has_war_with = SER } }
+            TUR = { white_peace = SER }
+    }
 
 }
 
 option = {
- name = bulgaria.107.b
-ai_chance = { factor = 2}
+    name = bulgaria.107.b
+    ai_chance = { factor = 2}
 
-
-add_political_power = -50
-
-}
+    add_political_power = -50
+    }
 }
 
-# Bulgarian Peace Event Victory Romania
+#Bulgarian Peace Event Victory Romania
 
 country_event = {
 id = bulgaria.108

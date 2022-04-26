@@ -1,0 +1,25 @@
+characters={
+	KAR_karel_klapalek={
+		name="Karel Klapálek"
+		portraits={
+			civilian={
+				large="gfx/leaders/KAR/Karel_Klapalek.tga"
+			}
+		}
+		corps_commander={
+			traits={ fast_planner }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+		country_leader={
+			desc="POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+			ideology=socialist_subtype
+			expire="1960.1.1.1"
+			id=-1
+		}
+	}
+}

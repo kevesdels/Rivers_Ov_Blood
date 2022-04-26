@@ -1,0 +1,544 @@
+characters={
+	GRE_georgios_kondylis={
+		name="Georgios Kondylis"
+		portraits={
+			civilian={
+				large="gfx/leaders/GRE/Portrait_GRE_Kondylis.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_IOANNIS_METAXAS_DESC"
+			ideology=military_junta
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GRE_markos_drakos={
+		name="Markos Drakos"
+		portraits={
+			army={
+				large="GFX_portrait_gre_markos_drakos"
+				small=GFX_portrait_GRE_markos_drakos_small
+			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_officer trickster trait_mountaineer }
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+
+	GRE_nikos_zachariadis={
+		name="Nikos Zachariadis"
+		portraits={
+			civilian={
+				large="GFX_portrait_gre_nikos_zachariadis"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	GRE_charalambos_katsimitros={
+		name="Charalambos Katsimitros"
+		portraits={
+			army={
+				large="GFX_portrait_gre_charalambos_katsimitros"
+				small=GFX_portrait_GRE_charalambos_katsimitros_small
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist trait_cautious war_hero trickster trait_mountaineer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	### Empty characters -> Can become Unit Leaders later
+
+	GRE_theodoros_pangalos = {
+		name="Theodoros Pangalos"
+		portraits={
+			army={
+				large="GFX_portrait_gre_theodoros_pangalos"
+				small=GFX_portrait_GRE_theodoros_pangalos_small #Can become a unit leader later
+			}
+		}
+	}
+
+	GRE_dimitrios_psarros = {
+		name="Dimitrios Psarros"
+		portraits={
+			army={
+				large="GFX_portrait_gre_dimitrios_psarros"
+				small=GFX_portrait_GRE_dimitrios_psarros_small #Can become a unit leader later
+			}
+		}
+	}
+
+	GRE_panagiotis_demestichas = {
+		name="Panagiotis Demestichas"
+		portraits={
+			army={
+				large="GFX_portrait_gre_panagiotis_demestichas"
+				small=GFX_portrait_GRE_panagiotis_demestichas_small #Can become a unit leader later
+			}
+		}
+	}
+
+	GRE_nikolaos_plastiras={
+			name="Nikolaos Plastiras"
+			portraits={
+				army={
+					small="GFX_idea_gre_nikolaos_plastiras"
+					large="GFX_portrait_gre_nikolaos_plastiras" #Can become unit leader later
+				}
+			}
+			advisor={
+				slot = army_chief
+				idea_token = GRE_nikolaos_plastiras
+				ledger = army
+				name = "Nikolaos Plastiras"
+				traits = {
+					army_chief_maneuver_3
+				}
+				cost = 200
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+			advisor={
+				cost = 100
+				slot = theorist
+				idea_token = GRE_nikolaos_plastiras_teo
+				ledger = army
+				traits = {
+					military_theorist
+				}
+			}
+	}
+
+	GRE_napoleon_zervas={
+			name="Napoleon Zervas"
+			portraits={
+				army={
+					small="GFX_idea_gre_napoleon_zervas"
+					large="GFX_portrait_GRE_napoleon_zervas" #Can become unit leader later
+				}
+			}
+			advisor={
+				slot = high_command
+				idea_token = GRE_napoleon_zervas
+				ledger = army
+				name = "Napoleon Zervas"
+				traits = {
+					army_infantry_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+	}
+
+	GRE_dimitrios_oikonomou={
+		name="Dimitrios Oikonomou"
+		portraits={
+			army={
+				small="GFX_idea_gre_dimitrios_oikonomou"
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = GRE_dimitrios_oikonomou
+			ledger = navy
+			traits = {
+				air_naval_strike_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GRE_konstantinos_ventiris={
+			name="Konstantinos Ventiris"
+			portraits={
+				army={
+					small="GFX_idea_gre_konstantinos_ventiris"
+				}
+			}
+			advisor={
+				cost = 150
+				slot = theorist
+				idea_token = GRE_konstantinos_ventiris
+				name = GRE_konstantinos_ventiris
+				ledger = army
+				
+				traits = {
+					grand_battle_plan_expert
+				}
+			}			
+			advisor={
+				slot = army_chief
+				idea_token = GRE_konstantinos_ventiris_chief
+				traits = {
+					army_chief_defensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+	}
+
+	GRE_nikos_beloyannis={
+			name="Nikos Belogiannis"
+			portraits={
+				army={
+					small="GFX_idea_gre_nikos_beloyannis"
+				}
+			}
+			advisor={
+				slot = high_command
+				idea_token = GRE_nikos_beloyannis
+				ledger = army
+				traits = {
+					army_regrouping_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+	}
+
+	GRE_alexandros_sakellariou={
+			name="Alexandros Sakellariou"
+			portraits={
+				army={
+					small="GFX_idea_gre_alexandros_sakellariou"
+					large=GFX_portrait_GRE_alexandros_sakellariou
+				}
+			}
+			advisor={
+				slot = navy_chief
+				idea_token = GRE_alexandros_sakellariou
+				traits = {
+					navy_chief_decisive_battle_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+
+			navy_leader={
+				traits={ media_personality bold caustic_personality fleet_protector }
+				skill=3
+				attack_skill=3
+				defense_skill=2
+				maneuvering_skill=3
+				coordination_skill=2
+				legacy_id=-1
+			}
+	}
+
+	GRE_spyridon_avgeris={
+		name="Spyridon Avgeris"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_anti_submarine_eastern_european_2d"
+			}
+		}
+		advisor={
+			cost = 100	
+			slot = theorist
+			idea_token = GRE_spyridon_avgeris
+			ledger = navy
+			traits = {
+				naval_theorist
+			}
+		}
+	}
+
+	GRE_panagiotis_gazis={
+			name="Panagiotis Gazis"
+			portraits={
+				army={
+					small="GFX_idea_gre_panagiotis_gazis"
+				}
+			}
+			advisor={
+				slot = air_chief
+				idea_token = GRE_panagiotis_gazis
+				traits = {
+					air_chief_reform_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+	}
+
+	GRE_alexandros_papagos={
+		name="Alexandros Papagos"
+		portraits={
+			army={
+				small="GFX_idea_gre_alexandros_papagos"
+				large="GFX_portrait_gre_alexandros_papagos"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = GRE_alexandros_papagos
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		field_marshal={
+			traits={ old_guard inflexible_strategist career_officer war_hero trait_mountaineer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	GRE_petros_voulgaris={
+			name="Petros Voulgaris"
+			portraits={
+				army={
+					small="GFX_idea_gre_petros_voulgaris"
+				}
+			}
+			advisor={
+				slot = navy_chief
+				idea_token = GRE_petros_voulgaris
+				traits = {
+					navy_chief_maneuver_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+	}
+
+	GRE_georgios_tsolakoglou={
+		name="Georgios Tsolakoglou"
+		portraits={
+			army={
+				small="GFX_idea_gre_georgios_tsolakoglou"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = GRE_georgios_tsolakoglou
+			traits = {
+				army_chief_offensive_1
+			}
+				cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GRE_vasilios_tsarpalis={
+			name="Vasilios Tsarpalis"
+			portraits={
+				army={
+					small="GFX_idea_gre_vasilios_tsarpalis"
+				}
+			}
+			advisor={
+				slot = air_chief
+				idea_token = GRE_vasilios_tsarpalis
+				traits = {
+					air_chief_safety_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+	}
+	GRE_epameinondas_kavvadias={
+		name="Epameinondas Kavvadias"
+		portraits={
+			army={
+				small="GFX_idea_gre_epameinondas_kavvadias"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GRE_epameinondas_kavvadias
+			ledger = air
+			traits = {
+				navy_screen_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GRE_marinos_mitralexis={
+		name="Marinos Mitralexis"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_warfare_theorist_south_american_2d"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = GRE_marinos_mitralexis
+			ledger = air
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+
+	GRE_georgios_kosmas={
+		name="Georgios Kosmas"
+		portraits={
+			army={
+				small="GFX_idea_gre_giorgios_kosmas"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GRE_georgios_kosmas
+			ledger = navy
+			traits = {
+				army_artillery_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GRE_aristeidis_moraitinis={
+		name="Aristeidis Moraitinis"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_2"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GRE_aristeidis_moraitinis
+			ledger = air
+			traits = {
+				air_bomber_interception_2
+			}
+				cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	GRE_aris_velouchiotis={
+			name="Aris Velouchiotis"
+			portraits={
+				army={
+					small="GFX_idea_gre_aris_velouchiotis"
+					large = "GFX_portrait_gre_aris_velouchiotis" #Can become unit leader later
+				}
+			}
+			advisor={
+				slot = army_chief
+				idea_token = GRE_aris_velouchiotis
+				traits = {
+					army_chief_defensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+	}
+
+	GRE_aristeidis_dimitratos={
+		name=GRE_aristeidis_dimitratos
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_aristeidis_dimitratos
+			traits = {
+				war_industrialist 
+			}
+		}
+	}
+
+	GRE_father_dimistrios={
+		name="Dimitrios Holevas"
+		portraits={
+			army={
+				small="GFX_idea_gre_father_dimistrios"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_father_dimistrios
+			allowed = {
+				original_tag = GRE
+				has_dlc = "La Resistance"
+			}
+			available = {
+				has_intelligence_agency = yes 
+			}
+			traits = {
+				head_of_intelligence 
+			}
+		}		
+	}
+
+	GRE_sophoklis_venizelos={
+		name="Sofoklis Venizelos"
+		portraits={
+			army={
+				small="GFX_idea_gre_sophoklis_venizelos"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_sophoklis_venizelos
+			traits = {
+				backroom_backstabber 
+			}
+		}
+	}
+}

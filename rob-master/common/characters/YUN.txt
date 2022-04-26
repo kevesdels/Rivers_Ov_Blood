@@ -1,0 +1,36 @@
+characters={
+	YUN_long_yun={
+		name="Long Yun"
+		portraits={
+			civilian={
+				large="GFX_portrait_yun_long_yun"
+			}
+		}
+		country_leader={
+			desc="POLITICS_LONG_YUN_DESC"
+			ideology=military_junta
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	YUN_lu_han={
+		name="Lu Han"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_asia_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+
+}

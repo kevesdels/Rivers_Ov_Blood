@@ -113,16 +113,10 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
-
 			bonus = 1 
-
 			uses = 2 
-
 			category = cat_mass_assault
-
 			}
-
-			
 		}
 	}
 
@@ -137,16 +131,10 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		completion_reward = {
 			add_tech_bonus = {
-
 			bonus = 1
-
 			uses = 2 
-
-			category = cat_trench_warfare
-
+			category = cat_grand_battle_plan
 			}
-
-			
 		}
 	}
 
@@ -882,15 +870,10 @@ focus_tree = {
 		prerequisite = { focus = SPR_end_the_portuguese_misery  }
 		ai_will_do = { factor = 1 }
 		available = {
-			118 = is_controlled_by = SPR
-
-			
+			118 = { is_controlled_by = SPR }
 		}
 		completion_reward = {
 			add_ideas = SPR_control_over_gibraltar
-
-			
-
 			
 		}
 	}

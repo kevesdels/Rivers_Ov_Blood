@@ -1,0 +1,76 @@
+characters={
+	DEN_christian_x_of_denmark={
+		name="Christian X of Denmark"
+		portraits={
+			civilian={
+				large="gfx/leaders/DEN/Portrait_DEN_Christian_X.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_THORVALD_STAUNING_DESC"
+			ideology=social_democracy_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_THORVALD_STAUNING_DESC"
+			ideology=social_liberal_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			desc="POLITICS_THORVALD_STAUNING_DESC"
+			ideology=conservative_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	DEN_frits_clausen={
+		name="Frits Clausen"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_FRITS_CLAUSEN_DESC"
+			ideology=pelekist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	DEN_aksel_larsen={
+		name="Aksel Larsen"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_AKSEL_LARSEN_DESC"
+			ideology=socialist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	DEN_wilhelm_wain_prior={
+		name="Wilhelm Wain Prior"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

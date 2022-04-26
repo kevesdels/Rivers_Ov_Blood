@@ -1612,7 +1612,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		completion_reward {
+		completion_reward = {
 		add_ideas = {
 		LES_Fastest_Army
 		}
@@ -3510,7 +3510,7 @@ focus_tree = {
       	}
       	}
 
-		completion_reward{
+		completion_reward = {
 		swap_ideas = {
 		remove_idea = LES_Tradional_Farming
 		add_idea = LES_Tradional_Farming_2
@@ -3905,7 +3905,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		add_tech_bonus = {
-		name = close air support
+		name = close_air_support
 		bonus = 1.0
 		uses = 1
 		category = cas_bomber

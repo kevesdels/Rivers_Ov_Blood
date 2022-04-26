@@ -27,22 +27,17 @@ characters={
 	name="Ernst Rohm"
 	portraits={
 		army={
-			large="Portrait_Germany_Ernst_Rohm.tga"
-			small="Portrait_Germany_Ernst_Rohm.tga"
+			large="gfx/leaders/THR/Portrait_Germany_Ernst_Rohm.tga"
 		}
 	}
 	field_marshal={
+		traits = { politically_connected career_officer defensive_doctrine }
 		skill = 3
 		attack_skill = 3
 		defense_skill = 3
 		planning_skill = 4
 		logistics_skill = 3
 		legacy_id=-1
-	}
-	traits = {
-		politically_connected
-		career_officer
-		defensive_doctrine
 	}
 }
 
@@ -51,8 +46,7 @@ characters={
 	name="Ernst Kaltenbrunner"
 	portraits={
 		army={
-			large="Ernst Kaltenbrunner.dds"
-			small="Ernst Kaltenbrunner.dds"
+			large="gfx/leaders/THR/Ernst_Kaltenbrunner.dds"
 		}
 	}
 	corps_commander={
@@ -70,8 +64,7 @@ THR_eduard_dietl={
 	name="Eduard Dietl"
 	portraits={
 		army={
-			large="Eduard Dietl(mountainer).dds"
-			small="Eduard Dietl(mountainer).dds"
+			large="gfx/leaders/THR/Eduard_Dietl(mountainer).dds"
 		}
 	}
 	corps_commander={
@@ -89,8 +82,7 @@ THR_karl_von_fischer_treuenfeld={
 	name="Karl von Fischer-Treuenfeld"
 	portraits={
 		army={
-			large="karl von fischer-treuenfeld.dds"
-			small="karl von fischer-treuenfeld.dds"
+			large="gfx/leaders/THR/karl_von_fischer-treuenfeld.dds"
 		}
 	}
 	corps_commander={
@@ -108,8 +100,7 @@ THR_ulrich_graf={
 	name="Ulrich Graf"
 	portraits={
 		army={
-			large="Ulrich_Graf.dds"
-			small="Ulrich_Graf.dds"
+			large="gfx/leaders/THR/Ulrich_Graf.dds"
 		}
 	}
 	corps_commander={

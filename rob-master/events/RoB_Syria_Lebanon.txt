@@ -158,7 +158,7 @@ country_event = {
   trigger = {
     tag = ARM
     has_country_flag = tur_fsl_national_borders
-    at_war_with = SYR
+    has_war_with = SYR
     SYR = { surrender_progress > 0.20 }
     959 = { is_controlled_by = ARM }
   }
@@ -324,7 +324,7 @@ country_event = {
     tag = PER
     has_country_flag = mos_protection
     HJZ = { surrender_progress > 0.50 }
-    at_war_with = HJZ
+    has_war_with = HJZ
   }
   mean_time_to_happen = { days = 1 }
 
@@ -390,7 +390,7 @@ country_event = {
   trigger = {
     tag = TUR
     has_country_flag = tur_fsl_national_borders
-    at_war_with = SYR
+    has_war_with = SYR
     SYR = { surrender_progress > 0.50 }
     OR = {
       AND = {
@@ -489,7 +489,7 @@ country_event = {
       has_country_flag = tur_fsl_imperial_borders
     }
     TUR = { surrender_progress > 0.2 }
-    at_war_with = SYR
+    has_war_with = SYR
   }
 
   mean_time_to_happen = { days = 1 }
@@ -565,7 +565,7 @@ country_event = {
   option = {
       name = "No way"
       ai_chance = { factor = 4 }
-      SYR = { country_event = { id = syrialeb.21 days = 3 } }
+      SYR = { country_event = { id = syrialeb.32 days = 3 } }
       }
   }
 
@@ -582,20 +582,6 @@ country_event = {
     name = "Hurray"
     SYR = { load_oob = "FSL_ITA_AID" }
 
-    }
-  }
-
-###Syrialeb: Italians dont care
-country_event = {
-  id = syrialeb.20
-  title = "Italians are silent"
-  desc = syrialeb.20.d
-  fire_only_once = yes
-  is_triggered_only = yes
-  
-  ###Fuck
-  option = {
-    name = "..."
     }
   }
 
@@ -626,7 +612,7 @@ country_event = {
   trigger = {
     tag = HJZ
     MOS = { surrender_progress > 0.7 }
-    MOS = { at_war_with = SYR }
+    MOS = { has_war_with = SYR }
     NOT = { has_country_flag = HJZ_all_in }
     has_country_flag = HJZ_support_MOS
   }
@@ -716,7 +702,7 @@ country_event = {
     tag = PER
     has_country_flag = mos_protection
     PER = { surrender_progress > 0.40 }
-    at_war_with = HJZ
+    has_war_with = HJZ
   }
   mean_time_to_happen = { days = 1 }
 
@@ -753,7 +739,7 @@ country_event = {
       has_country_flag = HJZ_support_MOS
     }
     HJZ = { surrender_progress > 0.8 }
-    at_war_with = SYR
+    has_war_with = SYR
   }
 
   mean_time_to_happen = { days = 1 }
@@ -831,7 +817,7 @@ country_event = {
   
   ###Fine
   option = {
-    name = syrialeb.27.a
+    name = syrialeb.28.a
     ai_chance = { factor = 1 }
     white_peace = MOS
     set_country_flag = fsyr_p_mos
@@ -839,7 +825,7 @@ country_event = {
 
   ###No way
   option = {
-      name = syrialeb.27.a
+      name = syrialeb.28.b
    ai_chance = { factor = 0 }
     }
 }
@@ -885,112 +871,6 @@ country_event = {
     }
   }
 
-  ###Kingdom of Arabia: Get out Peace with French syria
-country_event = {
-  id = syrialeb.26
-  title = syrialeb.26.t
-  desc = syrialeb.26.d
-  fire_only_once = yes
-  trigger = {
-    tag = HJZ
-    OR = {
-      has_country_flag = HJZ_all_in
-      has_country_flag = HJZ_support_MOS
-    }
-    HJZ = { surrender_progress > 0.6 }
-    at_war_with = SYR
-  }
-
-  mean_time_to_happen = { days = 1 }
-
-  ###Bail out peace
-  option = {
-    name = syrialeb.26.a
-    ai_chance = { factor = 1 }
-    white_peace = SYR
-    if = { limit = { at_war_with = FRA } 
-    white_peace = FRA
-    }
-    if = { limit = { has_country_flag = HJZ_all_in }
-    clr_country_flag = HJZ_all_in
-    }
-    if = { limit = { has_country_flag = HJZ_support_MOS }
-    clr_country_flag = HJZ_support_MOS
-    }
-    if = {
-      limit = { OR = { 946 = { is_controlled_by = HJZ }  946 = { is_controlled_by = SYR } } }
-      SYR = { transfer_state = 946 }
-    }
-    if = {
-      limit = { OR = { 291 = { is_controlled_by = HJZ }  291 = { is_controlled_by = SYR } } }
-      SYR = { transfer_state = 291 }
-    }
-    if = {
-      limit = { OR = { 656 = { is_controlled_by = HJZ }  656 = { is_controlled_by = SYR } } }
-      SYR = { transfer_state = 656 }
-    }
-    if = {
-      limit = { OR = { 945 = { is_controlled_by = HJZ }  945 = { is_controlled_by = SYR } } }
-      SYR = { transfer_state = 945 }
-    }
-    if = {
-      limit = { OR = { 554 = { is_controlled_by = HJZ }  554 = { is_controlled_by = SYR } } }
-      SYR = { transfer_state = 554 }
-    }
-  }
-  ###We still can win?
-  option = {
-    name = syrialeb.26.b
-    ai_chance = { factor = 0 }
-  }
-}
-
-###Mosul: So turkey won, its just syria and us now, we control our shit, lets offer a peace so we can get further in game
-country_event = {
-  id = syrialeb.27
-  title = syrialeb.27.t
-  desc = syrialeb.27.d
-  fire_only_once = yes
-  trigger = {
-    tag = MOS
-   TUR = { has_country_flag = tur_got_np_syr }
-   SYR = { surrender_progress > 0.1 }
-   MOS = { surrender_progress < 0.1 }
-   has_war_with = SYR
-   NOT = { SYR = { has_war_with = HJZ } }
-  }
-  mean_time_to_happen = { days = 1 }
-
-  ###Send it
-  option = {
-    name = syrialeb.27.a
-    SYR = { country_event = { id = syrialeb.28 days = 3 } }
-  }
-}
-
-###Syrialeb: Do we give up on Mosul
-country_event = {
-  id = syrialeb.28
-  title = syrialeb.28.t
-  desc = syrialeb.28.d
-  fire_only_once = yes
-  is_triggered_only = yes
-  
-  ###Fine
-  option = {
-    name = syrialeb.27.a
-    ai_chance = { factor = 1 }
-    white_peace = MOS
-    set_country_flag = fsyr_p_mos
-  }
-
-  ###No way
-  option = {
-      name = syrialeb.27.a
-   ai_chance = { factor = 0 }
-    }
-}
-
 ###Kingdom of Arabia: get cores on mousl
 country_event = {
   id = syrialeb.30
@@ -1031,7 +911,7 @@ country_event = {
       tag = FRL
       tag = FRP
     }
-    at_war_with = HJZ
+    has_war_with = HJZ
     SYR = { has_capitulated = yes }
     NOT = { SYR = { OR = { controls_state = 677 controls_state = 553 controls_state = 877 controls_state = 961 controls_state = 344 } } }
     NOT = { OR = { controls_state = 677 controls_state = 553 controls_state = 877 controls_state = 961 controls_state = 344 } }
@@ -1043,7 +923,7 @@ country_event = {
     name = "The People have spoken"
     white_peace = HJZ
     if = {
-      limit = { at_war_with = MOS }
+      limit = { has_war_with = MOS }
       white_peace = MOS
     }
     }
@@ -1055,6 +935,20 @@ country_event = {
   add_stability = -0.10
   add_war_support = -0.10
   add_political_power = -200
+    }
+  }
+
+  ###Syrialeb: Italians dont care
+country_event = {
+  id = syrialeb.32
+  title = "Italians are silent"
+  desc = syrialeb.20.d
+  fire_only_once = yes
+  is_triggered_only = yes
+  
+  ###Fuck
+  option = {
+    name = "..."
     }
   }
 

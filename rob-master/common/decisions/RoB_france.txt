@@ -40,7 +40,7 @@ FRA_junta_buff_ticks_2 = {
 	 NOT = { has_country_flag = FRA_civil_war }
 	 NOT = { has_country_flag = fra_cw_over }
 	 has_country_flag = fra_junta_debuff_tic
-	 NOT = { has_ideas = fra_junta_debuff }
+	 NOT = { has_idea = fra_junta_debuff }
 	 }
 	}
    activation = {
@@ -2000,7 +2000,7 @@ FRS_minig_investment = {
 		base = 0
 	 modifier = {
 			add = 1
-			NOT = { at_war = yes }
+			NOT = { has_war = yes }
 		  } 
 	  modifier = {
 		  add = 10
@@ -2303,7 +2303,7 @@ FRS_minig_political_support = {
 		base = 0
 	 	modifier = {
 			add = 5
-			NOT = { at_war = yes }
+			NOT = { has_war = yes }
 		  } 
 	  modifier = {
 		  add = 10
@@ -2446,7 +2446,7 @@ FRS_minig_make_threats = {
 		base = 0
 	 	modifier = {
 			add = 5
-			NOT = { at_war = yes }
+			NOT = { has_war = yes }
 		  } 
 	  modifier = {
 		  add = 10
@@ -2697,151 +2697,6 @@ FRS_minig_trade_restrictions = {
 		}
 	  }
 }
-
-FRS_minig_make_threats = {
-	NOT = { has_country_flag = FRS_minig_action_slot_taken }
-	available = {
-		if = {
-			limit = {
-				tag = FRA
-			}
-			NOT = { has_country_flag = FRS_minig_threats_taken }
-			NOT = { GER = { has_country_flag = FRS_minig_threats_taken } }
-		}
-		if = {
-			limit = {
-				tag = FRS
-			}
-			NOT = { has_country_flag = FRS_minig_threats_taken }
-			NOT = { GER = { has_country_flag = FRS_minig_threats_taken } }
-		}
-		if = {
-			limit = {
-				tag = GER
-			}
-			NOT = { has_country_flag = FRS_minig_threats_taken }
-			NOT = { FRS = { has_country_flag = FRS_minig_threats_taken } }
-			NOT = { FRA = { has_country_flag = FRS_minig_threats_taken } }
-		}
-	  }
-	  ai_will_do = {
-		base = 0
-	 	modifier = {
-			add = 5
-			NOT = { at_war = yes }
-		  } 
-	  modifier = {
-		  add = 10
-		  tag = GER
-		  check_variable = { var = FRS_walonia_french value = FRS_walonia_germans compare = equals }
-		} 
-	  modifier = {
-		  add = 10
-		  tag = FRS
-		  check_variable = { var = FRS_walonia_germans value = FRS_walonia_french compare = equals }
-		} 
-	  modifier = {
-		  factor = 4
-		  tag = GER
-		  check_variable = { var = FRS_walonia_french value = FRS_walonia_germans compare = greater_than }
-		}
-	  modifier = {
-		  factor = 4
-		  tag = FRS
-		  check_variable = { var = FRS_walonia_germans value = FRS_walonia_french compare = equals }
-		}
-	  }
-	  days_remove = 40
-	  complete_effect = {
-		set_country_flag = FRS_minig_action_slot_taken
-		if = {
-			limit = {
-				tag =  FRA
-			}
-			set_country_flag = FRS_minig_threats_taken
-	  }
-		if = {
-			limit = {
-				tag =  GER
-			}
-			set_country_flag = FRS_minig_threats_taken
-	  }
-		if = {
-			limit = {
-				tag =  FRS
-			}
-			set_country_flag = FRS_minig_threats_taken
-	  }
-	  }
-	  remove_effect = {
-		clr_country_flag = FRS_minig_action_slot_taken 
-		clr_country_flag = FRS_minig_threats_taken 
-		if = {
-			limit = {
-				tag = FRA
-			}
-			random_list = {
-				50 = {
-					custom_effect_tooltip = FRS_minig_rival_influence_decrease
-					add_to_variable = { var = FRS_walonia_germans value = -1 }
-					GER = {  add_to_variable = { var = FRS_walonia_germans value = -1 } }	
-				}
-
-				30 = {
-					custom_effect_tooltip = FRS_minig_rival_influence_increase
-					add_to_variable = { var = FRS_walonia_germans value = 1 }
-					GER = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
-				}
-				20 = {
-					custom_effect_tooltip = "nothing happening"
-				}
-			}
-		}
-		if = {
-			limit = {
-				tag = FRS
-			}
-			random_list = {
-				50 = {
-					custom_effect_tooltip = FRS_minig_rival_influence_decrease
-					add_to_variable = { var = FRS_walonia_germans value = -1 }
-					GER = {  add_to_variable = { var = FRS_walonia_germans value = -1 } }	
-				}
-
-				30 = {
-					custom_effect_tooltip = FRS_minig_rival_influence_increase
-					add_to_variable = { var = FRS_walonia_germans value = 1 }
-					GER = {  add_to_variable = { var = FRS_walonia_germans value = 1 } }	
-				}
-				20 = {
-					custom_effect_tooltip = "nothing happening"
-				}
-			}
-		}
-
-		if = {
-			limit = {
-				tag = GER
-			}
-			random_list = {
-				50 = {
-					custom_effect_tooltip = FRS_minig_rival_influence_decrease
-					add_to_variable = { var = FRS_walonia_french value = -1 }
-					FRS = {  add_to_variable = { var = FRS_walonia_french value = -1 } }
-				}
-				30 = {
-					custom_effect_tooltip = FRS_minig_rival_influence_increase
-					add_to_variable = { var = FRS_walonia_french value = 1 }
-					FRS = {  add_to_variable = { var = FRS_walonia_french value = 1 } }	
-				}
-				20 = {
-					custom_effect_tooltip = "nothing happening"
-				}
-			}
-		}
-	  }
-}
-
 
 FRS_minig_win = {
 	fire_only_once = yes

@@ -308,7 +308,7 @@ country_event = {
          }
        remove_core_of = LDF
      }
-     ROOT = { set_capital = 1266 remove_ideas = { LDF_Latvian_cw } }
+     ROOT = { set_capital = {state = 1266} remove_ideas = { LDF_Latvian_cw } }
      clr_country_flag = ldf_civil_War
    }
  
@@ -325,7 +325,7 @@ country_event = {
          }
          remove_core_of = LDL
      }
-     ROOT = { set_capital = 1266 remove_ideas = { LDF_Latvian_cw } }
+     ROOT = { set_capital = {state = 1266} remove_ideas = { LDF_Latvian_cw } }
      clr_country_flag = ldf_civil_War
    }
  }

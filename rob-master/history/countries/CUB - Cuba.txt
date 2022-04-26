@@ -31,25 +31,6 @@ set_politics = {
 	elections_allowed = no
 }
 
-create_country_leader = {
-	name = "José Agripino Barnet"
-	desc = "POLITICS_JOSE_AGRIPINO_BARNET_DESC"
-	picture = "GFX_portrait_cuba_jose_barnet"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-		name = "Federico Laredo Brú"
-		desc = "POLITICS_FEDERICO_LAREDO_BRU_DESC"
-		picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
-		expire = "1965.1.1"
-		ideology = socialist_subtype
-		traits = {
-			#
-		}
-}
+recruit_character = CUB_jose_agripino_barnet
+recruit_character = CUB_federico_laredo_bru
 

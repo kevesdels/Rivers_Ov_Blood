@@ -3892,6 +3892,10 @@ completion_reward = {
 			focus = LIT_selllithuanianaircraftstoforeigners 
 			focus = LIT_startmassproducementandexport 
 		}
+		mutually_exclusive = { 
+			focus = LIT_focusonfighters 
+			focus = LIT_focusonbombers 
+		}
 		completion_reward = {
 		 add_tech_bonus = {
 	name = cas_bonus
@@ -4041,14 +4045,14 @@ completion_reward = {
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_thesmallfleet }
 		completion_reward = {
-  add_tech_bonus = {
-	name = defend_the_sea
-	bonus = 1
-    ahead_reduction = 1
-	uses = 1
-	category = dd_tech
-}
-naval_experience = 50
+  			add_tech_bonus = {
+				name = defend_the_sea
+				bonus = 1
+    			ahead_reduction = 1
+				uses = 1
+				category = dd_tech
+				}
+				navy_experience = 50
 		}
 	}
 
@@ -4077,18 +4081,16 @@ naval_experience = 50
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_buymoredestroyers }
 		completion_reward = {
-		navy_experience = 25
-		completion_reward = {
-  add_tech_bonus = {
-	name = small_fleet
-	bonus = 0.5
-    ahead_reduction = 1
-	uses = 1
-	category = dd_tech
-}
- }
-		}
-		}
+  			add_tech_bonus = {
+				name = small_fleet
+				bonus = 0.5
+    			ahead_reduction = 1
+				uses = 1
+				category = dd_tech
+				}
+ 			}
+	}
+		
 
 	#Focus for Buy Foreign Submarines
 	focus = {

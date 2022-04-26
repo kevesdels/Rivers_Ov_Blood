@@ -1,0 +1,120 @@
+characters={
+	TRS_mikhail_frunze={
+		name="Mikhail Frunze"
+		portraits={
+			civilian={
+				large="gfx/leaders/TRS/Mikhail_Frunze.tga"
+			}
+		}
+		field_marshal={
+			traits={ trait_cautious politically_connected defensive_doctrine }
+			skill=4
+			attack_skill=1
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=3334
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=socialist_subtype
+			traits={ cornered_fox }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TRS_ioseb_jughashvili={
+		name="Ioseb Jughashvili"
+		portraits={
+			civilian={
+				large="gfx/leaders/TRS/Portrait_SOV_Papa_Stalin.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_JOSEPH_STALIN_DESC"
+			ideology=national_socialist_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TRS_vasily_shorin={
+		name="Vasily Shorin"
+		portraits={
+			army={
+				small="GFX_Portrait_Asia_Generic_land_1_small"
+			}
+			army={
+				large="GFX_Portrait_Asia_Generic_land_1"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist defensive_doctrine }
+			skill=3
+			attack_skill=1
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	TRS_konstantin_avksentevsky={
+		name="Konstantin Avksentevsky"
+		portraits={
+			army={
+				small="GFX_Portrait_Asia_Generic_land_1_small"
+			}
+			army={
+				large="GFX_Portrait_Asia_Generic_land_1"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer defensive_doctrine }
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=3336
+		}
+	}
+	TRS_fayzulla_khodzhayev={
+		name="Fayzulla Khodzhayev"
+		portraits={
+			army={
+				small="GFX_Portrait_Asia_Generic_land_1_small"
+			}
+			army={
+				large="GFX_Portrait_Asia_Generic_land_1"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer organizer defensive_doctrine }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=3335
+		}
+	}
+	TRS_yosh_buxoroliklar={
+		name="Yosh Buxoroliklar"
+		portraits={
+			army={
+				small="GFX_Portrait_Asia_Generic_land_1_small"
+			}
+			army={
+				large="GFX_Portrait_Asia_Generic_land_1"
+			}
+		}
+		corps_commander={
+			traits={ cavalry_officer defensive_doctrine }
+			skill=1
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+}

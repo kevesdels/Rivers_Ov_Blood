@@ -2870,11 +2870,11 @@ create_wargoal = {
 		y = 15
 		cost = 5
 		available = {
-controls_state = 229
-controls_state = 230
-controls_state = 1182
-controls_state = 1175
-manpower > 800000
+		controls_state = 229
+		controls_state = 230
+		controls_state = 1182
+		controls_state = 1175
+		has_manpower  > 800000
 		}
 		available_if_capitulated = yes
 		prerequisite = { focus = TRS_takethecaucasus }
@@ -2984,10 +2984,7 @@ create_wargoal = {
 			factor = 25
 		}
 		completion_reward = {
-		VIN { country_event = {
-    id = turkmenreds.124
-}
-}
+		VIN = { country_event = { id = turkmenreds.124 } }
 		}
 	}
 

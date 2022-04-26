@@ -5,12 +5,32 @@ characters={
 			civilian={
 				large="gfx/leaders/FRR/Portrait_FRR_marcel_deat.tga"
 			}
+			army={
+				small="gfx/leaders/FRR/FRA_Marcel_Deat.tga"
+				large="gfx/leaders/FRR/Portrait_FRR_marcel_deat.tga"
+			}
 		}
 		country_leader={
 			desc="POLITICS_KONSTANTIN_PATS_DESC"
 			ideology=sorelianism
 			expire="1965.1.1.1"
 			id=-1
+		}
+		advisor = {
+			ledger = army
+			slot = high_command
+			idea_token = FRA_marcel_deat
+			cost = 150
+			available = { has_completed_focus = FRA_armeedeterre }
+			traits = { army_concealment_2 }
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
 		}
 	}
 	FRR_georges_catroux={
@@ -51,9 +71,7 @@ characters={
 	FRR_marcel_garchery={
 		name="Marcel Garchery"
 		portraits={
-			army={
-				small=""
-			}
+
 			army={
 				large="gfx/leaders/FRR/Marcel_Garchery.dds"
 			}
@@ -167,31 +185,6 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=-1
-		}
-	}
-	FRR_marcel_deat={
-		name="Marcel Déat"
-		portraits={
-			army={
-				small="gfx/leaders/FRR/FRA_Marcel_Deat.tga"
-				large="gfx/leaders/FRR/Portrait_FRR_marcel_deat.tga"
-			}
-		}
-		advisor = {
-			ledger = army
-			slot = high_command
-			idea_token = FRA_marcel_deat
-			cost = 150
-			available = { has_completed_focus = FRA_armeedeterre }
-			traits = { army_concealment_2 }
-		}
-		corps_commander={
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
 			legacy_id=-1
 		}
 	}

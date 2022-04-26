@@ -52,7 +52,7 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/GER_kurt_eisner.tga"
-				large="gfx/leaders/GER/kurt_eisner.tga"
+				large="gfx/leaders/GER/kurt_eisner.dds"
 			}
 		}
 		advisor={
@@ -68,7 +68,7 @@ characters={
 			defense_skill=2
 			planning_skill=1
 			logistics_skill=1
-			legacy_id=10
+			legacy_id=-1
 		}
 	}
 	GER_george_grosz={
@@ -103,7 +103,7 @@ characters={
 		name="Rosa Luxemburg"
 		portraits={
 			civilian={
-				large="gfx/leaders/GER/Portriat_GRC_Roza_Luksemburg.tga"
+				large="gfx/leaders/GER/Portriat_GRC_Roza_Luksemburg.dds"
 			}
 		}
 		country_leader={
@@ -200,9 +200,6 @@ characters={
 		name="John Sieg"
 		portraits={
 			army={
-				small=""
-			}
-			army={
 				large="gfx/leaders/GER/John_Sieg.dds"
 			}
 		}
@@ -220,9 +217,7 @@ characters={
 		name="Walther von Seydlitz-Kurzbach"
 		portraits={
 			army={
-				small="gfx/leaders/GER/GER_min_kurt_seydlizt"
-			}
-			army={
+				small="gfx/leaders/GER/GER_min_kurt_seydlizt.tga"
 				large="gfx/leaders/GER/serwitz.dds"
 			}
 		}
@@ -254,8 +249,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/leaders/GER/GER_min_kurt_student.tga"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Kurt_Student.dds"
 			}
 		}
@@ -287,7 +280,7 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/GER_ernst_thalmann.tga"
-				large="gfx/leaders/GER/Ernst_Thälmann.tga"
+				large="gfx/leaders/GER/Portrait_GER_Ernst_Thalmann.dds"
 			}
 		}
 		advisor={
@@ -334,10 +327,7 @@ characters={
 		name="Georg Freiherr Von Boeselager"
 		portraits={
 			army={
-				small=""
-			}
-			army={
-				large="gfx/leaders/GER/Georg_Freiherr_Von_Boeselager.tga"
+				large="gfx/leaders/GER/Georg_Freiherr_Von_Boeselager.dds"
 			}
 		}
 		corps_commander={
@@ -354,10 +344,7 @@ characters={
 		name="Otto Herfurth"
 		portraits={
 			army={
-				small=""
-			}
-			army={
-				large="gfx/leaders/GER/Otto_Herfurth.tga"
+				large="gfx/leaders/GER/Otto_Herfurth.dds"
 			}
 		}
 		corps_commander={
@@ -397,9 +384,6 @@ characters={
 	GER_karl_hoffman={
 		name="Karl Hoffman"
 		portraits={
-			army={
-				small=""
-			}
 			army={
 				large="gfx/leaders/GER/Karl_Hoffman.dds"
 			}
@@ -467,8 +451,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_wilhelm_marschall.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_Marschall.dds"
 			}
 		}
@@ -487,8 +469,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_gunter_lutjens.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Gunter_Lutjens.dds"
 			}
 		}

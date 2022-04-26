@@ -1,0 +1,66 @@
+characters={
+	TMS_junaid_khan={
+		name="Junaid Khan"
+		portraits={
+			civilian={
+				large="gfx/leaders/TMS/Junaid_Khan.tga"
+			}
+		}
+		field_marshal={
+			traits={ cavalry_officer war_hero offensive_doctrine }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+		country_leader={
+			desc="POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			ideology=reactionary_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TMS_ibrahim_bek={
+		name="Ibrahim Bek"
+		portraits={
+			army={
+				small="GFX_Portrait_Asia_Generic_land_1_small"
+			}
+			army={
+				large="GFX_Portrait_Asia_Generic_land_1"
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious cavalry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	TMS_konstantin_monstrov={
+		name="Konstantin Monstrov"
+		portraits={
+			army={
+				small="GFX_Portrait_Asia_Generic_land_1_small"
+			}
+			army={
+				large="GFX_Portrait_Asia_Generic_land_1"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader cavalry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+
+}

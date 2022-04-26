@@ -6,7 +6,7 @@ characters={
 		name=AST_eric_campbell
 		portraits={
 			civilian={
-				large="gfx/leaders/AST/GFX_AST_eric_campbell"
+				large="gfx/leaders/AST/Portrait_Australia_Eric_Campbell.dds"
 			}
 		}
 		country_leader={
@@ -20,7 +20,7 @@ characters={
 		name=AST_richard_dixon
 		portraits={
 			civilian={
-				large="gfx/leaders/AST/GFX_AST_richard_dixon"
+				large="gfx/leaders/AST/Portrait_Australia_Richard_Dixon.dds"
 			}
 		}
 		country_leader={
@@ -34,7 +34,7 @@ characters={
 		name=AST_earle_page
 		portraits={
 			civilian={
-				large="gfx/leaders/AST/GFX_AST_earle_page"
+				large="gfx/leaders/AST/Portrait_Australia_Earle_Page.dds"
 			}
 		}
 		country_leader={
@@ -58,20 +58,6 @@ characters={
 		}
 	}
 
-	AST_james_scullin={
-		name="James Scullin"
-		portraits={
-			civilian={
-				large="gfx/leaders/AST/Portrait_Australia_John_Curtin.dds"
-			}
-		}
-		country_leader={
-			ideology=social_democracy_subtype
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-
 
 ##     ## ##    ## #### ########    ##       ########    ###    ########  ######## ########   ######  
 ##     ## ###   ##  ##     ##       ##       ##         ## ##   ##     ## ##       ##     ## ##    ## 
@@ -86,7 +72,7 @@ characters={
 		name=AST_leslie_morshead
 		portraits={
 			army={
-				large="GFX_AST_leslie_morshead"
+				large="gfx/leaders/AST/Portrait_Australia_Leslie_Morshead.dds"
 				small="gfx/interface/ideas/idea_AST_leslie_morshead.dds"
 			}
 		}
@@ -104,7 +90,7 @@ characters={
 		name=AST_thomas_blamey
 		portraits={
 			army={
-				large="GFX_AST_thomas_blamey"
+				large="gfx/leaders/AST/Portrait_Australia_Thomas_Blamey.dds"
 				small="gfx/interface/ideas/idea_AST_thomas_blamey.dds"
 			}
 		}
@@ -122,7 +108,7 @@ characters={
 		name=AST_henry_wynter
 		portraits={
 			army={
-				large="GFX_AST_henry_wynter"
+				large="gfx/leaders/AST/Portrait_Australia_Henry_Wynter.dds"
 				small="gfx/interface/ideas/idea_AST_henry_wynter.dds"
 			}
 		}
@@ -140,7 +126,7 @@ characters={
 		name=AST_alan_vasey
 		portraits={
 			army={
-				large="GFX_AST_alan_vasey"
+				large="gfx/leaders/AST/Portrait_Australia_Alan_Vasey.dds"
 				small="gfx/interface/ideas/idea_AST_alan_vasey.dds"
 			}
 		}
@@ -159,7 +145,7 @@ characters={
 		name=AST_horace_robertson
 		portraits={
 			army={
-				large="GFX_AST_horace_robertson"
+				large="gfx/leaders/AST/Portrait_Australia_Horace_Robertson.dds"
 				small="gfx/interface/ideas/idea_AST_horace_robertson.dds"
 			}
 		}
@@ -178,7 +164,7 @@ characters={
 		name=AST_john_northcott
 		portraits={
 			army={
-				large="GFX_AST_john_northcott"
+				large="gfx/leaders/AST/Portrait_Australia_John_Northcott.dds"
 				small="gfx/interface/ideas/idea_AST_john_northcott.dds"
 			}
 		}
@@ -197,7 +183,7 @@ characters={
 		name=AST_harold_farncomb
 		portraits={
 			army={
-				large="GFX_AST_harold_farncomb"
+				large="gfx/leaders/AST/Portrait_Australia_Harold_Farncomb.dds"
 				small="gfx/interface/ideas/idea_AST_harold_farncomb.dds"
 			}
 		}
@@ -216,7 +202,7 @@ characters={
 		name=AST_victor_crutchley
 		portraits={
 			army={
-				large="GFX_AST_victor_crutchley"
+				large="gfx/leaders/AST/Portrait_Australia_Victor_Crutchley.dds"
 				small="gfx/interface/ideas/idea_AST_victor_crutchley.dds"
 			}
 		}
@@ -596,7 +582,7 @@ characters={
 			}
 			cost = 150.000
 			available = {
-				has_completed_focus = AST_australian_army_catering_corps
+
 			}
 			traits = {
 				army_logistics_2
@@ -674,7 +660,6 @@ characters={
 				smooth_talking_charmer 
 			}
 			available = {
-				has_completed_focus = AST_never_another_gallipoli 
 			}
 		}		
 	}
@@ -695,14 +680,6 @@ characters={
 			cost = 100.000
 			traits = {
 				silent_workhorse 
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = AST_support_the_policy_of_appeasement 
-				}
 			}
 		}		
 	}

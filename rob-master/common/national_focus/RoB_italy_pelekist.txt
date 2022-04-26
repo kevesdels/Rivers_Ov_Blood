@@ -170,7 +170,6 @@ focus_tree = {
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = ITAp_CSlydtFR }
 		ai_will_do = {
 			factor = 1
 		}
@@ -290,7 +289,6 @@ focus_tree = {
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
-		prerequisite = { focus = ITAp_bzhRQvXc }
 		ai_will_do = {
 			factor = 1
 		}
@@ -1136,9 +1134,6 @@ focus_tree = {
 		}
 		prerequisite = { 
 			focus = ITAp_continuearmorresearch
-		}
-		prerequisite = { 
-			focus = ITAp_KgIpfdLx
 		}
 		ai_will_do = {
 			factor = 1

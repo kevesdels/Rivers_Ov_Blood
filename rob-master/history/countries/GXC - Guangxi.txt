@@ -28,24 +28,5 @@ set_popularities = {
 	pelekist = 4
 }
 
-create_country_leader = {
-	name = "Li Zongren"
-	desc = "POLITICS_LI_ZONGREN_DESC"
-	picture = "gfx/leaders/GXC/Portrait_Guanxi_Clique_Li_Zongren.dds"
-	expire = "1965.1.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
-}
-
-create_corps_commander = {
-	name = "Chen Jitang"
-	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
-	traits = { }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-}
+recruit_character = GXC_li_zongren
+recruit_character = GXC_chen_jitang

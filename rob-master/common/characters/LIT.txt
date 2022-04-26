@@ -106,7 +106,7 @@ characters={
 		name="Augustinas Voldemaras"
 		portraits={
 			civilian={
-				large="gfx/leaders/LIT/Portrait_Lithuania_Augustinas_Voldemaras.tga"
+				large="gfx/leaders/LIT/Portrait_Lithuania_Augustinas_Voldemaras.dds"
 			}
 		}
 		country_leader={
@@ -227,6 +227,19 @@ characters={
 			traits = { army_commando_2 }
 			cost = 150
 		}
+		advisor = {
+			slot = theorist
+			idea_token = LIT_stasys_rastikis_hc
+			cost = 200
+			available = { has_tech = trench_warfare }
+			research_bonus = { cat_mobile_warfare = 0.10 }
+			modifier = {
+			 army_armor_attack_factor = 0.05
+			 army_armor_defence_factor = 0.05
+			 motorized_attack_factor = 0.05
+			 motorized_defence_factor = 0.05
+			}
+		}
 		corps_commander={
 			traits={ war_hero aggressive_assaulter }
 			skill=3
@@ -275,44 +288,6 @@ characters={
 			 army_artillery_attack_factor = 0.1
 			 army_artillery_defence_factor = 0.1
 			}
-		}
-	}
-
-	LIT_stasys_rastikis = {
-		name = "Stasys Raštikis"
-		portraits = {
-			army = {
-				small = "gfx/leaders/LIT/LIT_min_stasys_rastikis.tga"
-			}
-		}
-		advisor = {
-			slot = theorist
-			idea_token = LIT_stasys_rastikis_hc
-			cost = 200
-			available = { has_tech = trench_warfare }
-			research_bonus = { cat_mobile_warfare = 0.10 }
-			modifier = {
-			 army_armor_attack_factor = 0.05
-			 army_armor_defence_factor = 0.05
-			 motorized_attack_factor = 0.05
-			 motorized_defence_factor = 0.05
-			}
-		}
-	}
-
-	LIT_juozas_barzda_bradauskas = {
-		name = "Juozas Barzda-Bradauskas"
-		portraits = {
-			army = {
-				small = "gfx/interface/ideas/LIT_jouzas_bradauskas.tga"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = LIT_juozas_barzda_bradauskas
-			available = { has_completed_focus = LIT_defensivedoctrine }
-			traits = { army_entrenchment_2 }
-			cost = 150
 		}
 	}
 

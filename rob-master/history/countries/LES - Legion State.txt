@@ -42,99 +42,11 @@ LES_Risk_of_Famine
 set_country_flag = RUS_warlord
 puppet = AGR
 
-
-create_country_leader = {
-	name = "Radola Gajda"
-	desc = "POLITICS_RADOLA_GAJDA_DESC"
-	picture = "gfx/leaders/LES/radola_gajda.tga"
-	expire = "1960.1.1"
-	ideology = pelekist_subtype
-	traits = {
-		dislikes_germany
-		experienced_commander
-	}
-}
-
-create_field_marshal = {
-	name = "Jan Syrový"
-	picture = "Portrait_LES_jan_syrov.dds"
-	traits = { offensive_doctrine }
-	skill = 3
-	id = 9986
-    attack_skill = 3
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Josef Jiří Švec"
-	picture = "Josef_Jiří_Švec.dds"
-	traits = { winter_specialist war_hero  }
-	skill = 4
-	id = 9985
-    attack_skill = 4
-    defense_skill = 3
-    planning_skill = 4
-    logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Vojtěch Luža"
-	picture = "Vojtěch_Luža.dds"
-	traits = { fast_planner }
-	skill = 2
-	id = 9981
-    attack_skill = 2
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Sergej Vojcechovský"
-	picture = "Sergej_Vojcechovský.dds"
-	traits = { winter_specialist trickster }
-	id = 5721
-	skill = 3
-    attack_skill = 4
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Stanislav Čeček"
-	picture = "Portrait_LES_stansilav_chechek.dds"
-	traits = { winter_specialist infantry_leader }
-	skill = 3
-	id = 9982
-    attack_skill = 3
-    defense_skill = 3
-    planning_skill = 3
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Oleg Svátek"
-	picture = "Oleg_Svátek.dds"
-	traits = { old_guard }
-	skill = 2
-	id = 9983
-    attack_skill = 2
-    defense_skill = 2
-    planning_skill = 3
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Václav Šára"
-	picture = "Václav_Šára.dds"
-	traits = {  }
-	skill = 1
-	id = 9984
-    attack_skill = 1
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-
+recruit_character = LES_radola_gajda
+recruit_character = LES_jan_syrovy
+recruit_character = LES_josef_jiri_svec
+recruit_character = LES_vojtech_luza
+recruit_character = LES_sergej_vojcechovsky
+recruit_character = LES_stanislav_cecek
+recruit_character = LES_oleg_svatek
+recruit_character = LES_vaclav_sara

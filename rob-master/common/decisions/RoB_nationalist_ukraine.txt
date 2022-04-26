@@ -133,7 +133,7 @@ UKR_proclaim_UNR = {
 }
 
 
-DSU_retake_ukrainian_lands_1 = {
+UKR_retake_ukrainian_lands_1 = {
 	cost = 50
 	  fire_only_once = yes
 	  days_remove = 40
@@ -172,7 +172,7 @@ DSU_retake_ukrainian_lands_1 = {
 				base = 200
 				}
 	}
-	DSU_retake_ukrainian_lands_2 = {
+	UKR_retake_ukrainian_lands_2 = {
 	cost = 50
 	  fire_only_once = yes
 	  days_remove = 40
@@ -213,7 +213,7 @@ DSU_retake_ukrainian_lands_1 = {
 				base = 200
 				}
 	}
-	DSU_retake_ukrainian_lands_3 = {
+	UKR_retake_ukrainian_lands_3 = {
 	cost = 50
 	  fire_only_once = yes
 	  days_remove = 40
@@ -255,7 +255,7 @@ DSU_retake_ukrainian_lands_1 = {
 				base = 200
 				}
 	}
-	DSU_retake_ukrainian_lands_4 = {
+	UKR_retake_ukrainian_lands_4 = {
 	cost = 50
 	  fire_only_once = yes
 	  days_remove = 40
@@ -304,7 +304,7 @@ DSU_retake_ukrainian_lands_1 = {
 				}
 	}
 	
-	DSU_retake_ukrainian_lands_5 = {
+	UKR_retake_ukrainian_lands_5 = {
 	cost = 50
 	  fire_only_once = yes
 	  days_remove = 40
@@ -349,10 +349,7 @@ DSU_retake_ukrainian_lands_1 = {
 	766 = { add_core_of = ROOT }
 	
 	every_country = {
-		limit = { controls_state = 80 }
-		limit = { controls_state = 925 }
-		limit = { controls_state = 78 }
-		limit = { controls_state = 766 }
+		limit = { OR = { controls_state = 80 controls_state = 78 controls_state = 925 controls_state = 766 } }
 		ROOT = { 
 			create_wargoal = {
 				type = annex_everything		

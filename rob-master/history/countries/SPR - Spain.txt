@@ -85,82 +85,15 @@ add_ideas = {
 set_convoys = 150
 set_stability = 0.5
 
-create_country_leader = {
-	name = "Niceto Alcala Zamora"
-	desc = "POLITICS_MANUEL_AZANA_DESC"
-	picture = "gfx/leaders/SPR/Portrait_SPR_Niceto_Alcala_Zamora.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Onésimo Redondo"
-	desc = "POLITICS_MANUEL_AZANA_DESC"
-	picture = "gfx/leaders/SPR/SPR_Onesimo_Redondo.tga"
-	expire = "1965.1.1"
-	ideology = christian_pelekism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Jose Antonio Primo de Rivera"
-	desc = "POLITICS_MANUEL_AZANA_DESC"
-	picture = "gfx/leaders/SPR/Portrait_SPR_Jose_Antonio.tga"
-	expire = "1965.1.1"
-	ideology = sorelianism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "José Díaz"
-	desc = "POLITICS_JOSE_DIAZ_DESC"
-	picture = "gfx/leaders/SPR/Portrait_Spain_Jose_Diaz.dds"
-	expire = "1965.1.1"
-	ideology = socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Francisco Franco"
-	desc = "POLITICS_FRANCISCO_FRANCO_DESC"
-	picture = "gfx/leaders/SPR/Portrait_Spain_Francisco_Franco.dds"
-	expire = "1965.1.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Alejandro Lerroux"
-	desc = "POLITICS_ALEJANDRO_LERROUX_DESC"
-	picture = "gfx/leaders/SPR/Portrait_SPR_Alejandro_Lerroux_Garcia.tga"
-	expire = "1965.1.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "José Asensio Torrado"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-	traits = { defensive_doctrine }
-	skill = 2
-    attack_skill = 1
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 1
-}
+recruit_character = SPR_niceto_alcala_zamora
+recruit_character = SPR_onesimo_redondo
+recruit_character = SPR_jose_antonio_primo_de_rivera
+recruit_character = SPR_jose_diaz
+recruit_character = SPR_francisco_franco
+recruit_character = SPR_alejandro_lerroux
+recruit_character = SPR_jose_asensio_torrado
+recruit_character = SPR_julian_suarez
+recruit_character = SPR_jose_antonio_acuna
 
 
 ### VARIANTS ###

@@ -1,0 +1,185 @@
+areas = {
+
+	suez = {
+        strategic_regions = {
+            128
+            28
+        }
+    }
+
+    scandinavia = {
+		strategic_regions = {
+            11 # Norway
+            10 # Sweden
+            12 # Finland
+            13
+			191
+			192
+            #6 # Sorry Denmark, you are apparently part of Germany ¯\_(ツ)_/¯
+        }
+    }
+
+	europe = {
+		continents = {
+			europe
+		}
+	}
+
+    mainland_europe = {
+        strategic_regions = {
+			# France
+			19 # North France
+			20 # South France
+            208 # Normandy
+			214 # West France
+			219 # Brittany
+			220 # Aquitaine
+			
+			# Benelux
+			5 # Belg-Lux
+			215 # Holland
+
+			# Iberia
+			221 # South Iberia
+			217 # Aragorn
+			218 # Castile
+			41 # Northeast Iberia 
+
+			# Italy
+            23 # Italy
+            21 # Alpes
+
+			# Germany
+            7 # Southern German
+            6 # North-West Germany
+            8 # Eastern Germany
+			211 # Prussia
+			213 # Danish straights
+			216 # Silesia
+			222 # Austria
+			235 # Rhineland
+
+			# Chechoslovakia			
+			209 # Bohemia
+			22 # Slovakia
+
+			# Poland			
+			38 # Western Poland
+			39 # Eastern Poland
+
+			# Baltics
+
+        }
+    }
+    mainland_europe = {
+        strategic_regions = {
+            37 # baltics
+            27 # balkans
+            24
+            26
+            25 # greece
+        }
+    }
+	
+	normandy_landing_zone = {
+        strategic_regions = {
+            208 # france
+            20
+            5 # benelux
+        }
+    }
+
+	north_america = {
+
+		continents = {
+			north_america
+		}
+	}
+
+	south_america = {
+
+		continents = {
+			south_america
+		}
+	}
+
+	africa = {
+
+		continents = {
+			africa
+		}
+	}
+
+	asia = {
+
+		continents = {
+			asia
+		}
+	}
+
+	middle_east = {
+
+		continents = {
+			middle_east
+		}
+	}
+
+	pacific = {
+
+		strategic_regions = {
+			105 # Hawaii
+			180 # Micronesian Gap
+			97  # Eastern Micronesia
+			32  # South-Eastern Pacific
+			84  # Bismarck Sea
+			95  # West Emperor Sea
+			94  # Mariana Region
+			177 # Western North Pacific
+			172 # Pacific Line Ridge
+			78  # Phillipine Sea
+			109 # Peruvian Coast
+			160 # Phillipines
+			83  # Solomon Sea
+			167 # New Guinea
+			91  # Arafura Sea
+			178 # West Polynesia
+			179 # French Polynesia
+		}
+	}
+
+	oceania = {
+
+		strategic_regions = {
+			156 # Australia
+			157 # New Zealand
+			86  # Tasman Sea
+			98  # Great Australian Bight
+			81  # Coral Sea
+		}
+	}
+	
+	home_islands = {
+		strategic_regions = {
+			76 	#Okinawa et al
+			154 #Kanto
+			160 #Phillipines - we care about these too!
+		}
+	}
+	
+	just_philippines = {
+		strategic_regions = {
+			160 #Phillipines
+		}
+	}
+	
+	east_indies = {
+		strategic_regions = {
+			167 #Papua
+			93
+			158
+			159 #Brunei
+			187
+		}
+	}
+	
+}

@@ -389,7 +389,7 @@ DSU = { give_guarantee = UKR }
     value = 2000
 }
 hidden_effect = {
- country_event = { ukraine.13 days = 80 }
+ country_event = { id = ukraine.13 days = 80 }
 }
 }
 
@@ -407,7 +407,7 @@ is_triggered_only = yes
 option = { ###
 name = ukraine.13.a
 DSU = { annex_country = { target = UKR transfer_troops = yes }
-set_capital = 202
+set_capital = { STATE = 202 }
  }
  set_politics = {
  ruling_party = social_democracy
@@ -491,7 +491,7 @@ option = { ###ok
 name = ukraine.16.a
 DSU = { 
  annex_country = { target = UKR transfer_troops = yes }
- set_capital = 202
+ set_capital = { STATE = 202 }
  }
  set_politics = {
  ruling_party = reactionary
@@ -939,7 +939,7 @@ DSU = { give_guarantee = UKR }
 }
 }
 hidden_effect = {
- country_event = { ukraine.28 days = 80 }
+ country_event = { id = ukraine.28 days = 80 }
 }
 }
 

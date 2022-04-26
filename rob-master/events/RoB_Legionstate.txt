@@ -701,8 +701,7 @@ fire_only_once = yes
 is_triggered_only = yes
 
 option = {
- name =  legion.49.a
- desc = "Might as well give up"
+ name = "Might as well give up"
  add_war_support = -0.3
  add_stability = -0.3
  LES = { country_event = { id = legion.27 days = 2 } }
@@ -746,9 +745,7 @@ desc = legion.28.d
 fire_only_once = yes
 trigger = {
  tag = LES
- NOT = { country_exists = OMS )
- LES = { owns_state =  }
-}
+ NOT = { country_exists = OMS LES = { owns_state = 653 } }
 }
 mean_time_to_happen = { days = 3 }
 
@@ -1827,9 +1824,10 @@ country_event = {
 				strength_ratio = {
 				 tag = LES
 				 ratio < 0.25
-			}
-		} 
+				}
+			} 
 		}
+	}
 	 ROOT = { set_cosmetic_tag = LES_gadja_puppet }
 	 LES = { puppet = ROOT }
 
@@ -1849,8 +1847,9 @@ country_event = {
 				strength_ratio = {
 				 tag = LES
 				 ratio > 0.75
-			}
-		} 
+				}
+			} 
+		}
 	}
 	LES = { country_event = { id = legion.54 days = 3 } }
 	}
@@ -1885,19 +1884,19 @@ country_event = {
 	#Moscow
 	option = {
 	 name = "Moscow"
-	 	LES = { set_capital = 219 }  
+	 	LES = { set_capital = {state = 219} }  
 		 #hidden_effect = { country_event = { id = legion.56 days = 35 }}
 	 }
 	 #Leningrad
 	option = {
 	name = "Leningrad"
-		LES = { set_capital = 195 }  
+		LES = { set_capital = {state = 195} }  
 		#hidden_effect = { country_event = { id = legion.56 days = 35 }}
 	}
 	#Kazan
 	option = {
 		name = "Kazan"
-		LES = { set_capital = 249 }  
+		LES = { set_capital = {state = 249} }  
 		#hidden_effect = { country_event = { id = legion.56 days = 35 }}
 	}
 	#Chelyabinsk
@@ -1907,7 +1906,7 @@ country_event = {
 	}
 }
 
-|### New Capital
+### New Capital
 country_event = { 
 	id = legion.56
 	title = "Renaming Cities"
@@ -2158,6 +2157,7 @@ country_event = {
  country_event = { 
 	id = legion.100
 	title = "Debugging Politics"
+	desc = legion.100.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -2188,6 +2188,7 @@ country_event = {
  country_event = { 
 	id = legion.101
 	title = "Debugging Politics"
+	desc = legion.101.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
@@ -2207,6 +2208,7 @@ country_event = {
  country_event = { 
 	id = legion.102
 	title = "Debugging Russia"
+	desc = legion.102.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	

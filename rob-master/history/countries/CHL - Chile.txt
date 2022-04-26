@@ -72,129 +72,17 @@ add_ideas = {
 extensive_conscription
 }
 
-create_country_leader = {
-	name = "Eduardo Cruz-Coke"
-	desc = ""
-	picture = ""
-	expire = "1960.1.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Marmaduke Grove"
-	desc = ""
-	picture = ""
-	expire = "1960.1.1"
-	ideology = socialist_subtype
-	traits = {
-		#
-	}
-}	
-
-create_country_leader = {
-	name = "Bartolomé Blanche"
-	desc = ""
-	picture = ""
-	expire = "1951.1.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Carlos Ibañes del Campos"
-	desc = ""
-	picture = ""
-	expire = "1951.1.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Jorge Gonzáles von Marees"
-	desc = ""
-	picture = ""
-	expire = "1951.1.1"
-	ideology = pelekist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Aerturo Puga Osorio"
-	desc = ""
-	picture = ""
-	expire = "1951.1.1"
-	ideology = national_socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Pedro Aguirre Cerda"
-	desc = ""
-	picture = ""
-	expire = "1951.1.1"
-	ideology = democratic_socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Gabriel Gonzales Videla"
-	desc = ""
-	picture = ""
-	expire = "1951.1.1"
-	ideology = social_democracy_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Arturo Alessandri"
-	desc = ""
-	picture = ""
-	expire = "1951.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-
-
-
-
-create_corps_commander = {
-	name = "Rene Vidal M."
-	portrait_path = ""
-	traits = { mountaineer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Rafael Fernández R."
-	portrait_path = ""
-	traits = { Ranger }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 5
-	planning_skill = 2
-	logistics_skill = 3
-}
+recruit_character = CHL_eduardo_cruzcoke
+recruit_character = CHL_marmaduke_grove
+recruit_character = CHL_bartolome_blanche
+recruit_character = CHL_carlos_ibanes_del_campos
+recruit_character = CHL_jorge_gonzales_von_marees
+recruit_character = CHL_aerturo_puga_osorio
+recruit_character = CHL_pedro_aguirre_cerda
+recruit_character = CHL_gabriel_gonzales_videla
+recruit_character = CHL_arturo_alessandri
+recruit_character = CHL_rene_vidal_m
+recruit_character = CHL_rafael_fernandez_r
 
 ### VARIANTS ###
 # 1936 Start #

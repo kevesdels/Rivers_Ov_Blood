@@ -77,27 +77,9 @@ set_popularities = {
 	reactionary = 0
 	pelekist = 0
 }
-create_country_leader = {
-	name = "Noe Zhordania"
-	desc = ""
-	picture = "noezhordania.dds"
-	expire = "1953.3.1"
-	ideology = democratic_socialist_subtype
-	traits = {
-		
-	}
-}
 
-create_country_leader = {
-	name = "Kandid Charkviani"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	expire = "1953.3.1"
-	ideology = vlaslovism
-	traits = {
-		
-	}
-}
+recruit_character = GEO_noe_zhordania
+recruit_character = GEO_kandid_charkviani
 
 #couldnt find anything else, the commies simply forced everyone else into exile
 

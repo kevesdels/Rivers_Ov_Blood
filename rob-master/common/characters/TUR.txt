@@ -1,0 +1,138 @@
+characters={
+	TUR_ismet_inönü={
+		name="Ismet Inönü"
+		portraits={
+			civilian={
+				large="GFX_portrait_unknown"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ISMET_INÖNÜ_DESC"
+			ideology=social_democracy_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TUR_enver_pasha={
+		name="Enver Pasha"
+		portraits={
+			civilian={
+				large="gfx/leaders/TUR/Portrait_TUR_Enver_Pasha.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MUSTAFA_KEMAL_ATATÜRK_DESC"
+			ideology=reactionary_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TUR_sefik_hüsnü={
+		name="Sefik Hüsnü"
+		portraits={
+			civilian={
+				large="gfx/leaders/TUR/Portrait_Turkey_Sefik_Husnu.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_SEFIK_HUSNU_DESC"
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TUR_celal_bayar={
+		name="Celâl Bayar"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_CELAL_BAYAR_DESC"
+			ideology=conservative_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TUR_cemil_cahit_toydemir={
+		name="Cemil Cahit Toydemir"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_land_1.dds"
+			}
+			army={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ desert_fox }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	TUR_nazmi_solok={
+		name="Nazmi Solok"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	TUR_salih_omurtak={
+		name="Salih Omurtak"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_land_4.dds"
+			}
+			army={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
+			}
+		}
+		corps_commander={
+			traits={ hill_fighter }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	TUR_rauf_orbay={
+		name="Rauf Orbay"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_navy_1.dds"
+			}
+			army={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_navy_1.dds"
+			}
+		}
+		navy_leader={
+			traits={ bold }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+}

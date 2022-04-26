@@ -49,6 +49,8 @@ if = {
 	set_naval_oob = "BRA_1936_naval"	
 }
 
+set_convoys = 40
+
 set_popularities = {
 	national_socialist = 0
 	socialist = 0
@@ -68,83 +70,13 @@ set_politics = {
 	elections_allowed = no
 }
 
-create_country_leader = {
-	name = "Getúlio Vargas"
-	desc = "POLITICS_GETULIO_VARGAS_DESC"
-	picture = "gfx/leaders/BRA/Portrait_BRA_getúlio_vargas.tga"
-	expire = "1965.1.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Plínio Salgado"
-	desc = "POLITICS_PLINIO_SALGADO_DESC"
-	picture = "gfx/leaders/BRA/Portrait_Brazil_Plinio_Salgado.dds"
-	expire = "1965.1.1"
-	ideology = christian_pelekism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Luís Carlos Prestes"
-	desc = "POLITICS_LUIS_CARLOS_PRESTES_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Armando Sales"
-	desc = "POLITICS_ARMANDO_SALES_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
-	expire = "1965.1.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
-}
-
-
-set_convoys = 40
-
-
-
-create_corps_commander = {
-	name = "Eurico Gaspar Dutra"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
-	traits = { ranger  }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Mascarenhas de Morais"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
-	traits = {  jungle_rat }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_navy_leader = {
-	name = "Augusto Rademaker"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_navy_3.dds"
-	traits = {  }
-	skill = 3
-}
+recruit_character = BRA_getulio_vargas
+recruit_character = BRA_plinio_salgado
+recruit_character = BRA_luis_carlos_prestes
+recruit_character = BRA_armando_sales
+recruit_character = BRA_eurico_gaspar_dutra
+recruit_character = BRA_mascarenhas_de_morais
+recruit_character = BRA_augusto_rademaker
 
 if = {
 	limit = {

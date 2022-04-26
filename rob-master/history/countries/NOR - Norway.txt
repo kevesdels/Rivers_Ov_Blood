@@ -75,121 +75,11 @@ set_popularities = {
 	pelekist = 0
 }
 
-
-create_country_leader = {
-	name = "Vidkun Quisling"
-	desc = "POLITICS_VIDKUN_QUISLING_DESC"
-	picture = "Portrait_Norway_Vidkun_Quisling.dds"
-	expire = "1965.1.1"
-	ideology = pagan_pelekism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Haakon VII of Norway"
-	desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-	picture = "gfx/leaders/NOR/Portrait_NOR_Haakon_VII.tga"
-	expire = "1965.1.1"
-	ideology = social_democracy_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Haakon VII of Norway"
-	desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-	picture = "gfx/leaders/NOR/Portrait_NOR_Haakon_VII.tga"
-	expire = "1965.1.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Haakon VII of Norway"
-	desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-	picture = "gfx/leaders/NOR/Portrait_NOR_Haakon_VII.tga"
-	expire = "1965.1.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Haakon VII of Norway"
-	desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-	picture = "gfx/leaders/NOR/Portrait_NOR_Haakon_VII.tga"
-	expire = "1965.1.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Haakon VII of Norway"
-	desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-	picture = "gfx/leaders/NOR/Portrait_NOR_Haakon_VII.tga"
-	expire = "1965.1.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Adam Egede-Nissen"
-	desc = "POLITICS_ADAM_EGEDE_NISSEN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-	expire = "1965.1.1"
-	ideology = socialist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Adam Egede-Nissen"
-	desc = "POLITICS_ADAM_EGEDE_NISSEN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-	expire = "1965.1.1"
-	ideology = national_socialist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Adam Egede-Nissen"
-	desc = "POLITICS_ADAM_EGEDE_NISSEN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-	expire = "1965.1.1"
-	ideology = democratic_socialist_subtype
-	traits = {
-		#
-	}
-}
-
-create_corps_commander = {
-	name = "Carl Gustav Fleischer"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	traits = {  trickster winter_specialist }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 4
-}
-
-create_navy_leader = {
-	name = "Elias Corneliussen"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
-	traits = { navy_career_officer inshore_fighter spotter }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 4
-	maneuvering_skill = 3
-	coordination_skill = 1
-}
+recruit_character = NOR_vidkun_quisling
+recruit_character = NOR_haakon_vii_of_norway
+recruit_character = NOR_adam_egedenissen
+recruit_character = NOR_carl_gustav_fleischer
+recruit_character = NOR_elias_corneliussen
 
 ### VARIANTS ###
 # 1936 Start #
@@ -277,31 +167,4 @@ if = {
 			rear_1_custom_slot = empty
 		}
 	}
-}
-
-# 1939 Start #
-1939.1.1 = {
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		# Ship variants #
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		# Destroyers #
-		create_equipment_variant = {
-			name = "Sleipner & Odin Class"							
-			type = ship_hull_light_1
-			name_group = NOR_DD_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = ship_light_battery_1
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = light_ship_engine_1
-				fixed_ship_torpedo_slot = ship_torpedo_1
-				mid_1_custom_slot = ship_mine_layer_1
-				rear_1_custom_slot = ship_depth_charge_1
-			}
-		}
 }

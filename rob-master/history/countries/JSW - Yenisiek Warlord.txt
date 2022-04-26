@@ -26,23 +26,5 @@ add_ideas = {
 	JSW_decentralized_communes
 }
 
-create_country_leader = {
-	name = "Vsevolod Eikhenbaum"
-	desc = ""
-	picture = "JSW_Vsevolod_Eikhenbaum.dds"
-	expire = "1965.1.1"
-	ideology = democratic_socialist_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Victor Serge"
-	desc = "POLITICS_RICARDO_JIMENEZ_OREAMUNO_DESC"
-	picture = ""
-	expire = "1965.1.1"
-	ideology = socialist_subtype
-	traits = {
-		#
-	}
-}
+recruit_character = JSW_vsevolod_eikhenbaum
+recruit_character = JSW_victor_serge

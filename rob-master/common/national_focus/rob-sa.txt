@@ -94,6 +94,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = THR_a_new_empire
 		}
+		mutually_exclusive = {
+			focus = THR_army_reform
+		}
 		x = 6
 		y = 4
 			search_filters = { FOCUS_FILTER_POLITICAL }
@@ -639,6 +642,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = THR_Consult_Gottfried_Feder
 		}
+		mutually_exclusive = {
+			focus = THR_the_four_year_plan
+		}
 		x = 34
 		y = 4
 			search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1022,7 +1028,7 @@ focus_tree = {
 		x = 4
 		y = 6
 			search_filters = { FOCUS_FILTER_MANPOWER }
-			available = {
+			completion_reward = {
 					add_manpower = -1
 				}
 
@@ -1199,8 +1205,8 @@ focus_tree = {
 		x = 18
 		y = 21
 			search_filters = { FOCUS_FILTER_MANPOWER }
-			available = {
-					add_manpower = -1
+			completion_reward = {
+				add_manpower = -1
 				}
 
 	}

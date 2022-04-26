@@ -78,30 +78,33 @@ set_popularities = {
 }
 set_stability = 0.75
 
-create_country_leader = {
-	name = "Georgios Kondylis"
-	desc = "POLITICS_IOANNIS_METAXAS_DESC"
-	picture = "gfx/leaders/GRE/Portrait_GRE_Kondylis.tga"
-	expire = "1965.1.1"
-	ideology = military_junta
-	traits = {
-		#
-	}
-}
-
-
-
-create_corps_commander = {
-	name = "Markos Drakos"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-	traits = { hill_fighter }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
+recruit_character = GRE_georgios_kondylis
+recruit_character = GRE_markos_drakos
+recruit_character = GRE_nikos_zachariadis
+recruit_character = GRE_charalambos_katsimitros
+recruit_character = GRE_theodoros_pangalos
+recruit_character = GRE_dimitrios_psarros
+recruit_character = GRE_panagiotis_demestichas
+recruit_character = GRE_nikolaos_plastiras
+recruit_character = GRE_napoleon_zervas
+recruit_character = GRE_dimitrios_oikonomou
+recruit_character = GRE_konstantinos_ventiris
+recruit_character = GRE_nikos_beloyannis
+recruit_character = GRE_alexandros_sakellariou
+recruit_character = GRE_spyridon_avgeris
+recruit_character = GRE_panagiotis_gazis
+recruit_character = GRE_alexandros_papagos
+recruit_character = GRE_petros_voulgaris
+recruit_character = GRE_georgios_tsolakoglou
+recruit_character = GRE_vasilios_tsarpalis
+recruit_character = GRE_epameinondas_kavvadias
+recruit_character = GRE_marinos_mitralexis
+recruit_character = GRE_georgios_kosmas
+recruit_character = GRE_aristeidis_moraitinis
+recruit_character = GRE_aris_velouchiotis
+recruit_character = GRE_aristeidis_dimitratos
+recruit_character = GRE_father_dimistrios
+recruit_character = GRE_sophoklis_venizelos
 
 ### VARIANTS ###
 # 1936 Start #
@@ -236,33 +239,5 @@ if = {
 			rear_1_custom_slot = empty
 		}
 		obsolete = yes
-	}
-}
-
-# 1939 Start #
-1939.1.1 = {
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		# Ship variants #
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		# Destroyers #
-	create_equipment_variant = {
-			name = "Vasilefs Georgios I Class"	
-			type = ship_hull_light_2
-			name_group = GRE_DD_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = ship_light_battery_2
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = light_ship_engine_2
-				fixed_ship_torpedo_slot = ship_torpedo_1
-				mid_1_custom_slot = ship_torpedo_1
-				rear_1_custom_slot = ship_depth_charge_1
-			}
-		}
 	}
 }

@@ -32,14 +32,4 @@ KHV_young_khivans
 TMS_basmachi_remnant
 }
 
-create_country_leader = {
-	name = "Sayid Abdullah"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "gfx/leaders/KHV/sayid_abdullah.tga"
-	expire = "1965.1.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-
+recruit_character = KHV_sayid_abdullah

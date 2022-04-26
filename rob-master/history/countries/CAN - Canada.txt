@@ -1,11 +1,25 @@
 ﻿capital = 276
 
-oob = "CAN_1936"
+oob = "CAN_1934"
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "CAN_1934"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "CAN_1934_nsb"
+}
 if = {
 	limit = { has_dlc = "Man the Guns" }
-	set_naval_oob = "CAN_1936_naval_mtg"
+	set_naval_oob = "CAN_1934_naval_mtg"
 	else = {
-		set_naval_oob = "CAN_1936_naval_legacy"
+		set_naval_oob = "CAN_1934_naval_legacy"
 	}
 }
 
@@ -82,127 +96,21 @@ set_popularities = {
 }
 	
 
-
-create_country_leader = {
-	name = "Richard Bedford Bennett"
-	desc = "POLITICS_MACKENZIE_KING_DESC"
-	picture = "gfx/leaders/CAN/Portrait_CAN_richard_bedford_bennett.tga"
-	expire = "1965.1.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Adrien Arcand"
-	desc = "POLITICS_ADRIEN_ARCAND_DESC"
-	picture = "gfx/leaders/CAN/GFX_CAN_adrien_arcand"
-	expire = "1965.1.1"
-	ideology = pelekist_subtype
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Tim Buck"
-	desc = "POLITICS_TIM_BUCK_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	expire = "1965.1.1"
-	ideology = socialist_subtype
-	traits = {
-		#
-	}
-}
+recruit_character = CAN_richard_bedford_bennett
+recruit_character = CAN_adrien_arcand
+recruit_character = CAN_tim_buck
+recruit_character = CAN_thomas_victor_anderson
+recruit_character = CAN_charles_foulkes
+recruit_character = CAN_john_montague
+recruit_character = CAN_bert_hoffmeister
+recruit_character = CAN_leonard_w._murray
+recruit_character = CAN_h.t._bailliegrohman
+recruit_character = CAN_james_d._prentice
+recruit_character = CAN_harry_dewolf
 
 set_convoys = 100
 set_stability = 0.75
 
-create_corps_commander = {
-	name = "Thomas Victor Anderson"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	traits = {  }
-	skill = 4
-    attack_skill = 2
-    defense_skill = 3
-    planning_skill = 3
-    logistics_skill = 5
-}
-
-create_field_marshal = {
-	name = "Charles Foulkes"
-	gfx = "GFX_CAN_charles_foulkes"
-	traits = { }
-	skill = 4
-    attack_skill = 4
-    defense_skill = 2
-    planning_skill = 4
-    logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "John Montague"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-	traits = { }
-	skill = 3
-    attack_skill = 1
-    defense_skill = 1
-    planning_skill = 3
-    logistics_skill = 5
-}
-create_corps_commander = {
-	name = "Bert Hoffmeister"
-	gfx = "GFX_CAN_bert_hoffmeister"
-	traits = { hill_fighter }
-	skill = 4
-    attack_skill = 4
-    defense_skill = 3
-    planning_skill = 3
-    logistics_skill = 3
-}
-
-create_navy_leader = {
-	name = "Leonard W. Murray"
-	gfx = "GFX_CAN_leonard_warren_murray"
-	traits = { }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	maneuvering_skill = 3
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "H.T. Baillie-Grohman"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
-	traits = { spotter }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	maneuvering_skill = 3
-	coordination_skill = 4
-}
-create_navy_leader = {
-	name = "James D. Prentice"
-	gfx = "GFX_CAN_james_prentice"
-	traits = { spotter }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 2
-}
-create_navy_leader = {
-	name = "Harry DeWolf"
-	gfx = "GFX_CAN_harry_dewolf"
-	traits = { superior_tactician bold }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 5
-}
 
 ### VARIANTS ###
 # 1936 Start #

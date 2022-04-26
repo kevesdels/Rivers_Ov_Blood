@@ -101,40 +101,6 @@ add_ideas = {
 	limited_conscription
 }
 
-#give_guarantee = CZE
-
-#Order matters here Daladier will start as leaders because added last
-create_country_leader = {
-	name = "Maurice Antoine Francois Monguillot"
-	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-	picture = "gfx/leaders/FIC/FIC_Maurice_Antoine_Francois_Monguillot.tga"
-	expire = "1965.1.1"
-	ideology = reactionary_subtype
-	traits = {
-
-	}
-}
-
-
-create_corps_commander = {
-	name = "Maurice Martin"
-	picture = ""
-	traits = { trickster defensive_doctrine inflexible_strategist }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 2
-}
-
-create_field_marshal = {
-	name = "Maurice Antoine Francois Monguillot"
-	picture = ""
-	traits = { defensive_doctrine old_guard inflexible_strategist }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
+recruit_character = FIC_maurice_antoine_francois_monguillot
+recruit_character = FIC_maurice_martin
 

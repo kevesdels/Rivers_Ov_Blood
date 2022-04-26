@@ -1,23 +1,23 @@
 add_namespace = THR_rob_thr
 
-#The Civil War Begins
+#The Civil War Begins
+
 country_event = {
 	id = THR_rob_thr.1
 	title = THR_rob_thr.1.t
 	desc = THR_rob_thr.1.d
 
 	picture = THR_the_civil_war_begins-445
-	fire_only_once = no
+	fire_only_once = yes
 	trigger = {
 		country_exists = THR
-tag = THR
+		tag = THR
 	}
 	option = {
 		name = THR_rob_thr.1.a
 		
 		ai_chance = { factor = 1 }
 		hidden_effect = {
-			{ 
 			add_state_core = 807
 			add_state_core = 934
 			add_state_core = 1016
@@ -38,7 +38,6 @@ tag = THR
 			add_state_core = 1128
 			add_state_core = 1219
 		}
-		}
 	}
 }
 
@@ -49,7 +48,7 @@ country_event = {
 	desc = THR_rob_thr.2.d
 
 	picture = THR_unQPfpRZ-445
-	fire_only_once = no
+	fire_only_once = yes
 	trigger = {
 		OR = {
 			AND = {
@@ -62,6 +61,7 @@ country_event = {
  				THR = { surrender_progress > 0.3 } 
   				has_war_with = AUS
  				}
+		}
 	}
 	option = {
 		name = THR_rob_thr.2.a
@@ -81,12 +81,14 @@ country_event = {
 	desc = THR_rob_thr.3.d
 
 	picture = THR_HghutVWr-445
-	fire_only_once = no
+	fire_only_once = yes
 	trigger = {
-		tag = THR
-THR = {
+	tag = THR
+	THR = {
     has_war_with = AUS
 	}
+	}
+
 	option = {
 		name = THR_rob_thr.3.a
 		
@@ -100,7 +102,8 @@ country_event = {
 	desc = THR_rob_thr.4.d
 
 	picture = THR_GmspnHUr-445
-	is_triggered_only = no
+	is_triggered_only = yes
+
 	option = {
 		name = THR_rob_thr.4.a
 		
@@ -111,7 +114,8 @@ country_event = {
 	}
 }
 
-#The Civil War Ends
+#The Civil War Ends
+
 country_event = {
 	id = THR_rob_thr.5
 	title = THR_rob_thr.5.t
@@ -121,30 +125,25 @@ country_event = {
 	fire_only_once = no
 	trigger = {
 		tag = THR
-has_idea = austrian_civil_war
-has_full_control_of_state = {
-0 = 4
-1 = 152
-2 = 153
-3 = 806
-4 = 807
-5 = 1015
-6 = 1016
-7 = 1017
-8 = 1018
-9 = 1020
-10 = 1021
-11 = 1022
-12 = 1023
+		has_idea = austrian_civil_war
+		has_full_control_of_state = {
+		0 = 4
+		1 = 152
+		2 = 153
+		3 = 806
+		4 = 807
+		5 = 1015
+		6 = 1016
+		7 = 1017
+		8 = 1018
+		9 = 1020
+		10 = 1021
+		11 = 1022
+		12 = 1023
+		}
 	}
 	option = {
 		name = THR_rob_thr.5.a
-		
-{
-		    id = third_reich.3
-		    days = 1
-		    random = 1
-			}
 		ai_chance = { factor = 1 }
 		hidden_effect = {
 			{
@@ -174,56 +173,43 @@ has_full_control_of_state = {
 	}
 }
 
-#What To Do With Fascists
+#What To Do With Fascists
+
 country_event = {
 	id = THR_rob_thr.6
 	title = THR_rob_thr.6.t
 	desc = THR_rob_thr.6.d
 
 	picture = THR_what_to_do_with_fascists-445
-	is_triggered_only = no
-	fire_only_once = no
+	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.6.a
-		
--10000
--20
 		ai_chance = { factor = 1 }
+		add_manpower = -10000
+		add_political_power = -20
 		hidden_effect = {
-			{ 
-		tag = THR
 		country_event = {
 		    id = third_reich.4
 		    days = 2
 		    random = 2
 			}
-		}
 		}
 	}
 	option = {
 		name = THR_rob_thr.6.b
-		
-25000
-20
-{
-		    ideology = reactionary
-		    popularity = 0.07
-			},{
-		    ideology = authoritharian
-		    popularity = 0.04
-			}
--0.05
--50
 		ai_chance = { factor = 1 }
+		add_popularity = { ideology = reactionary popularity = 0.07 }
+		add_popularity = { ideology = authoritharian popularity = 0.04 }
+		add_manpower = 25000
+		add_stability = -0.05
+		add_political_power =-50
 		hidden_effect = {
-			{ 
-		tag = THR
 		country_event = {
 		    id = third_reich.4
 		    days = 2
 		    random = 2
 			}
-		}
 		}
 	}
 }
@@ -234,57 +220,37 @@ country_event = {
 	title = THR_rob_thr.7.t
 	desc = THR_rob_thr.7.d
 
-	picture = THR_LReUOFNY-445
-	is_triggered_only = no
-	fire_only_once = no
+	picture = THR_LReUOFNY
+	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.7.a
-		
--15000
-{
-		    ideology = socialist
-		    popularity = -0.10
-			},{
-		    ideology = democratic_socialist
-		    popularity = -0.4
-			}
 		ai_chance = { factor = 1 }
-		hidden_effect = {
-			{ 
-		tag = THR
+		add_manpower = -15000
+		add_popularity = { ideology = socialist popularity = -0.10 }
+		add_popularity = { ideology = democratic_socialist popularity = -0.4 }
+		hidden_effect = {	
 		country_event = {
 		    id = third_reich.5
 		    days = 2
 		    random = 2
 			}
 		}
-		}
 	}
 	option = {
 		name = THR_rob_thr.7.b
-		
-{
-		    ideology = socialist
-		    popularity = 0.10
-			},{
-		    ideology = national_socialist
-		    popularity = 0.05
-			},{
-		    ideology = democratic_socialist
-		    popularity = 0.03
-			}
--0.15
--50
 		ai_chance = { factor = 1 }
+		add_popularity = { ideology = socialist popularity = 0.10 }
+		add_popularity = { ideology = national_socialist popularity = 0.05 }
+		add_popularity = { ideology = democratic_socialist  popularity = 0.03 }
+		add_stability = -0.15
+		add_political_power = -50
 		hidden_effect = {
-			{ 
-		tag = THR
 		country_event = {
 		    id = third_reich.6
 		    days = 2
 		    random = 2
 			}
-		}
 		}
 	}
 }
@@ -295,9 +261,10 @@ country_event = {
 	title = THR_rob_thr.8.t
 	desc = THR_rob_thr.8.d
 
-	picture = THR_CYfHoeUT-445
-	fire_only_once = no
+	picture = THR_CYfHoeUT
+	fire_only_once = yes
 	trigger = {
+	tag = THR
 		THR = {
 	controls_state = 1017
 	num_of_controlled_states = 1
@@ -350,8 +317,9 @@ country_event = {
 	desc = THR_rob_thr.9.d
 
 	picture = THR_KNmAGLvf-445
-	fire_only_once = no
+	fire_only_once = yes
 	trigger = {
+	tag = THR
 		THR = {
 	has_idea = festung_bregenz
 	num_of_controlled_states = 3
@@ -402,8 +370,8 @@ country_event = {
 	desc = THR_rob_thr.10.d
 
 	picture = THR_PdoKMaqh-445
-	is_triggered_only = no
-	fire_only_once = no
+	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.10.a
 		
@@ -444,8 +412,8 @@ country_event = {
 	desc = THR_rob_thr.11.d
 
 	picture = THR_ciYzmqEf-445
-	is_triggered_only = no
-	fire_only_once = no
+	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.11.a
 		
@@ -485,8 +453,8 @@ country_event = {
 	desc = THR_rob_thr.12.d
 
 	picture = THR_FLkBAnmH-445
-	is_triggered_only = no
-	fire_only_once = no
+	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.12.a
 		
@@ -526,8 +494,8 @@ country_event = {
 	desc = THR_rob_thr.13.d
 
 	picture = THR_CMOUPViq-445
-	is_triggered_only = no
-	fire_only_once = no
+	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.13.a
 		
@@ -567,8 +535,8 @@ country_event = {
 	desc = THR_rob_thr.14.d
 
 	picture = THR_VCBKQDJu-445
-	is_triggered_only = no
-	fire_only_once = no
+	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.14.a
 		

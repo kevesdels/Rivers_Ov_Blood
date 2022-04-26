@@ -463,6 +463,20 @@ country_event = {
   name = "Create a Puppet State"
   puppet = SPR
   ai_chance = { factor = 150 }
+  hidden_effect = {
+    165 = { add_core_of = SPR }
+    167 = { add_core_of = SPR }
+    171 = { add_core_of = SPR }
+    172 = { add_core_of = SPR }
+    177 = { add_core_of = SPR }
+    1151 = { add_core_of = SPR }
+    1152 = { add_core_of = SPR }
+    1153 = { add_core_of = SPR }
+    1154 = { add_core_of = SPR }
+    1155 = { add_core_of = SPR }
+    1162 = { add_core_of = SPR }
+    1164 = { add_core_of = SPR }
+  }
   every_owned_state = {
     limit = { 
      NOT = {
@@ -3058,6 +3072,7 @@ option = { ###liberate Russian Socialist Republic
 	 is_core_of = CRM
 	 is_core_of = RDR
 	 is_core_of = RUS
+   is_core_of = FNS
 	 }
 	}
 	add_core_of = SOV
@@ -3065,7 +3080,7 @@ option = { ###liberate Russian Socialist Republic
 }
  }
  
- option = { ###liberate French Republic
+ option = { ###liberate Russian Republic
   name = "Liberate Russian Republic"
   ai_chance = { factor = 150 }
   trigger = { DEMOCRATIC_ALIGNED_GOVERNMENT = yes }
@@ -3082,6 +3097,7 @@ option = { ###liberate Russian Socialist Republic
 	 is_core_of = CRM
 	 is_core_of = RDR
 	 is_core_of = RUS
+   is_core_of = FNS
 	 }
 	}
 	add_core_of = RDR
@@ -3089,7 +3105,7 @@ option = { ###liberate Russian Socialist Republic
 }
  }
  
- option = { ###liberate French State
+ option = { ###liberate Russian State
   name = "Liberate Russian State"
   ai_chance = { factor = 150 }
   trigger = { ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes }
@@ -3106,6 +3122,7 @@ option = { ###liberate Russian Socialist Republic
 	 is_core_of = CRM
 	 is_core_of = RDR
 	 is_core_of = RUS
+   is_core_of = FNS
 	 }
 	}
 	add_core_of = RDR
@@ -3844,6 +3861,7 @@ country_event = {
       is_core_of = LAT
 	}
 	LAT = { transfer_state = PREV }
+  EST = { remove_core_of = PREV }
   }
   
   every_owned_state = {
@@ -3971,6 +3989,14 @@ if = {
 	 }
 	}
 	EST = { transfer_state = PREV }
+  }
+  hidden_effect = {
+    every_owned_state = {
+      limit = { 
+     is_core_of = LAT
+    }
+    EST = { remove_core_of = PREV }
+    }
   }
   if = { 
     limit = { ROOT = { has_government = pelekist } }
@@ -4701,6 +4727,8 @@ country_event = {
  
  }
 
+}
+
  country_event = {
   id = annex.44
   desc = annex.44.d
@@ -4770,5 +4798,3 @@ country_event = {
   }
  
  }
-
-}

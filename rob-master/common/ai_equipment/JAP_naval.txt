@@ -299,6 +299,10 @@ JAP_escorts = {
 	priority = {
 		factor = 200
 		modifier = {
+			anti_submarine_strategy_required_trigger = yes
+			factor = 10
+		}
+		modifier = {
 			convoy_threat > 0.5
 			factor = 20
 		}
@@ -1551,7 +1555,7 @@ JAP_naval_capital_super_heavy = {
 	priority = {
 		factor = 25
 		modifier = {
-			DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+			has_government = democratic
 			factor = 0
 		}
 	}
@@ -1561,7 +1565,7 @@ JAP_naval_capital_super_heavy = {
 		priority = {
 			factor = 10
 			modifier = {
-				DEMOCRATIC_ALIGNED_GOVERNMENT = yes
+				has_government = democratic
 				factor = 0
 			}
 		}

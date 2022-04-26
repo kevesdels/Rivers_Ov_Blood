@@ -181,7 +181,6 @@ country_event = {
 		name = third_reich.3.a
 		ai_chance = { factor = 1}
 		hidden_effect = { 
-		tag = THR
 		country_event = {
 		    id = third_reich.4
 		    days = 2
@@ -195,7 +194,6 @@ country_event = {
 		name = third_reich.3.b
 		ai_chance = { factor = 1}
 		hidden_effect = { 
-		tag = THR
 		country_event = {
 		    id = third_reich.4
 		    days = 2
@@ -229,7 +227,6 @@ country_event = {
 		name = third_reich.4.a
 		ai_chance = { factor = 1}
 		hidden_effect = { 
-		tag = THR
 		country_event = {
 		    id = third_reich.5
 		    days = 2
@@ -250,7 +247,6 @@ country_event = {
 		name = third_reich.4.b
 		ai_chance = { factor = 1}
 		hidden_effect = { 
-		tag = THR
 		country_event = {
 		    id = third_reich.6
 		    days = 2
@@ -297,7 +293,7 @@ option = {
 		name = third_reich.14.a
 		ai_chance = { factor = 1}
 		hidden_effect = {
-		add_ideas{
+		add_ideas = {
 		 festung_bregenz 
 		}
 	 }
@@ -363,27 +359,25 @@ country_event = {
 		option = {
 		name = third_reich.5.a
 		ai_chance = { factor = 1}
-		hidden_effect = { 
-		tag = THR
-		country_event = {
-		    id = 
-		    days = 2
-		    random = 2
-			}
-		}
+		#hidden_effect = { 
+		#country_event = {
+		#    id = 
+		#    days = 2
+		#    random = 2
+		#	}
+		#}
 		add_manpower = -15000
 		}
 		option = {
 		name = third_reich.5.b
 		ai_chance = { factor = 1}
-		hidden_effect = { 
-		tag = THR
-		country_event = {
-		    id = 
-		    days = 2
-		    random = 2
-			}
-		}
+		#hidden_effect = { 
+		#country_event = {
+		#    id = 
+		#    days = 2
+		#    random = 2
+		#	}
+		#}
 
 	}			
 }
@@ -399,7 +393,6 @@ country_event = {
 		name = third_reich.6.a
 		ai_chance = { factor = 1}
 		hidden_effect = { 
-		tag = THR
 		country_event = {
 		    id = third_reich.7
 		    days = 2
@@ -420,7 +413,6 @@ country_event = {
 		name = third_reich.7.a
 		ai_chance = { factor = 1}
 		hidden_effect = { 
-		tag = THR
 		country_event = {
 		    id = third_reich.8
 		    days = 2
@@ -441,7 +433,6 @@ country_event = {
 		name = third_reich.8.a
 		ai_chance = { factor = 1}
 		hidden_effect = { 
-		tag = THR
 		country_event = {
 		    id = third_reich.9
 		    days = 2
@@ -462,7 +453,6 @@ country_event = {
 		name = third_reich.9.a
 		ai_chance = { factor = 1}
 		hidden_effect = { 
-		tag = THR
 		country_event = {
 		    id = third_reich.10
 		    days = 1
@@ -475,7 +465,6 @@ country_event = {
 		name = third_reich.9.b
 		ai_chance = { factor = 1}
 		hidden_effect = { 
-		tag = THR
 		country_event = {
 		    id = third_reich.11
 		    days = 1
@@ -497,7 +486,6 @@ country_event = {
 		ai_chance = { factor = 1}
 		kill_country_leader = yes
 		hidden_effect = { 
-		tag = THR
 		country_event = {
 		    id = third_reich.12
 		    days = 2
@@ -520,7 +508,6 @@ country_event = {
 		ai_chance = { factor = 1}
 		kill_country_leader = yes
 		hidden_effect = { 
-		tag = THR
 		country_event = {
 		    id = third_reich.12
 		    days = 2
@@ -540,13 +527,12 @@ country_event = {
 		option = {
 		name = third_reich.12.a
 		ai_chance = { factor = 1}
-		hidden_effect = { 
-		tag = THR
-		country_event = {
-		    id = 
-		    days = 2
-		    random = 2
-			}
-		}
+		#hidden_effect = { 
+		#country_event = {
+		 #   id = 
+		 #   days = 2
+		#    random = 2
+		#	}
+		#}
 	}			
 }

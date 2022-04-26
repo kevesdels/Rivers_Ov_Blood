@@ -1,0 +1,33 @@
+characters={
+	GXC_li_zongren={
+		name="Li Zongren"
+		portraits={
+			civilian={
+				large="gfx/leaders/GXC/Portrait_Guanxi_Clique_Li_Zongren.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_LI_ZONGREN_DESC"
+			ideology=authoritharian_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GXC_chen_jitang={
+		name="Chen Jitang"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_asia_generic_land_1.dds"
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}
