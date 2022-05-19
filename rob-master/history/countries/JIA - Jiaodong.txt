@@ -12,14 +12,14 @@ set_convoys = 10
 
 
 set_popularities = {
-	national_socialist = 5
+	national_socialist = 0
 	socialist = 10
 	democratic_socialist = 5
 	social_democracy = 0
-	social_liberal = 0
+	social_liberal = 11
 	conservative = 6
 	authoritharian = 54
-	reactionary = 16
+	reactionary = 10
 	pelekist = 4
 }
 
@@ -36,6 +36,50 @@ create_country_leader = {
 	picture = "Qu_Tongfeng.dds"
 	expire = "1965.1.1"
 	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Xu Jingxin"
+	desc = ""
+	picture = " "
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Zhang Lianzhu"
+	desc = ""
+	picture = " "
+	expire = "1965.1.1"
+	ideology = socialist_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Henry Luce"
+	desc = ""
+	picture = " "
+	expire = "1965.1.1"
+	ideology = conversative_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Witness Lee"
+	desc = ""
+	picture = " "
+	expire = "1965.1.1"
+	ideology = reactionary_subtype
 	traits = {
 		#
 	}
