@@ -443,7 +443,7 @@ option = {
 		name = "We WONT"
 		ai_chance = { factor = 1}
 		hidden_effect = {
-		add_ideas{
+		add_ideas = {
 		 festung_bregenz 
 		}
 	 }
@@ -494,7 +494,7 @@ country_event = {
 		name = rob_austria.12.a
 		ai_chance = { factor = 1}
 		hidden_effect = {
-		remove_ideas{
+		remove_ideas = {
 		 festung_bregenz 
 		}
 		 }
@@ -549,5 +549,4 @@ country_event = {
 	}}
 }
 }
-
-}#end
+#end

@@ -69,13 +69,31 @@ characters={
 			id=-1
 		}
 	}
+
+	BUL_georgi_nikolov_popov={
+		name="Georgi Nikolov Popov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			}
+		}
+		field_marshal={
+			traits={ defensive_doctrine }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+
 	BUL_vasil_tenev_boydev={
 		name="Vasil Tenev Boydev"
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
-			}
-			army={
 				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
 			}
 		}
@@ -94,8 +112,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
-			}
-			army={
 				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
 			}
 		}
@@ -114,8 +130,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
-			}
-			army={
 				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
 			}
 		}
@@ -125,26 +139,6 @@ characters={
 			attack_skill=1
 			defense_skill=2
 			planning_skill=2
-			logistics_skill=4
-			legacy_id=-1
-		}
-	}
-	BUL_georgi_nikolov_popov={
-		name="Georgi Nikolov Popov"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
-			}
-			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-			}
-		}
-		field_marshal={
-			traits={ defensive_doctrine }
-			skill=4
-			attack_skill=2
-			defense_skill=4
-			planning_skill=3
 			logistics_skill=4
 			legacy_id=-1
 		}

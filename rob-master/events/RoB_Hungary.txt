@@ -74,6 +74,7 @@ country_event = {
 		ai_chance = { factor = 7 }
 		HUN = { country_event = { id = rob_hungary.2 days = 3 }
 		}
+	}
 }
 
 
@@ -111,9 +112,9 @@ option = {
 
 #we lost
 country_event = {
-	id = rob_hungary.5
-	title = rob_hungary.5.t
-	desc = rob_hungary.5.d
+	id = rob_hungary.3
+	title = rob_hungary.3.t
+	desc = rob_hungary.3.d
 	picture = GFX_report_event_second_vienna_award_pact
 	fire_only_once = yes
 	trigger = {
@@ -124,7 +125,7 @@ country_event = {
 	}
 	#bail out
 	option = {
-		name = rob_hungary.5.a
+		name = rob_hungary.3.a
 		ai_chance = { factor = 10}
 		hidden_effect = { 	
 		every_country = {
@@ -141,6 +142,3 @@ country_event = {
 }
 }
 }
-
-
-on_declare_war = { effect = { if = { limit = { ROOT = { tag = SOV } FROM = { has_idea = anti_soviet_pact } } } } }

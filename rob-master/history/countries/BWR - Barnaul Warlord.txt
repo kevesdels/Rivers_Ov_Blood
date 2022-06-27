@@ -2,25 +2,6 @@ capital = 40
 set_research_slots = 1
 oob = "BWR_1934"
 
-
-set_politics = {
-	ruling_party = authoritharian
-	last_election = "1930.11.9"
-	election_frequency = 48
-	elections_allowed = no
-}
-set_popularities = {
-	national_socialist = 0
-	socialist = 2
-	democratic_socialist = 2
-	social_democracy = 2
-	social_liberal = 2
-	conservative = 2
-	authoritharian = 75
-	reactionary = 6
-	pelekist = 9
-}
-
 set_technology = {
 	infantry_weapons = 1
 	tech_support = 1		
@@ -40,4 +21,23 @@ add_ideas = {
  civil_war_attrition_2
 }
 
-recruit_character = BWR_grand_duke_dmitri_pavlovich
+
+set_politics = {
+	ruling_party = authoritharian
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 2
+	democratic_socialist = 2
+	social_democracy = 2
+	social_liberal = 2
+	conservative = 2
+	authoritharian = 75
+	reactionary = 6
+	pelekist = 9
+}
+
+recruit_character = BWR_dmitri_pavlovich
