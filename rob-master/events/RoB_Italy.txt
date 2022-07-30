@@ -406,12 +406,12 @@ option = {
 
  ROOT = {
 	promote_character = ITA_giovanni_messe
-	promote_character = {
-		character = ITA_giovanni_messe
+	ITA_giovanni_messe = {
+		promote_character = yes
 		Ideology = military_junta
 	}
-	promote_character = {
-		character = ITA_giovanni_messe
+	ITA_giovanni_messe = {
+		promote_character = yes
 		Ideology = authoritharian_subtype
 	}
 }
@@ -504,12 +504,12 @@ option = {
  set_country_flag = ITA_graziani_forms_pdc
  ROOT = {
 	promote_character = ITA_giovanni_messe
-	promote_character = {
-		character = ITA_giovanni_messe
+	ITA_giovanni_messe = {
+		promote_character = yes
 		Ideology = military_junta
 	}
-	promote_character = {
-		character = ITA_giovanni_messe
+	ITA_giovanni_messe = {
+		promote_character = yes
 		Ideology = authoritharian_subtype
 	}
 }
@@ -576,8 +576,8 @@ SIC = { transfer_state = 448 }
 SIC = {
  ROOT = {
 	promote_character = ITA_rodolfo_graziani
-	promote_character = {
-		character = ITA_rodolfo_graziani
+	ITA_rodolfo_graziani = {
+		promote_character = yes
 		Ideology = military_junta
 	}
 }

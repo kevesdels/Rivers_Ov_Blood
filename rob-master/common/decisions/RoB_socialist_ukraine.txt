@@ -264,8 +264,7 @@ remove_effect = {
 89 = { add_core_of = ROOT }
 73 = { add_core_of = ROOT }
 every_country = {
-	limit = { controls_state = 89 }
-	limit = { controls_state = 91 }
+	limit = { OR = { controls_state = 89 controls_state = 91 } }
 	ROOT = { 
 		create_wargoal = {
 			type = annex_everything		

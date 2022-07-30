@@ -68,10 +68,8 @@ country_event = {
 		
 		ai_chance = { factor = 1 }
 		hidden_effect = {
-			{
 		THR = { load_oob = youth_volunteers }}
 		}
-	}
 }
 
 #??
@@ -126,22 +124,23 @@ country_event = {
 	trigger = {
 		tag = THR
 		has_idea = austrian_civil_war
-		has_full_control_of_state = {
-		0 = 4
-		1 = 152
-		2 = 153
-		3 = 806
-		4 = 807
-		5 = 1015
-		6 = 1016
-		7 = 1017
-		8 = 1018
-		9 = 1020
-		10 = 1021
-		11 = 1022
-		12 = 1023
+		AND = {
+			has_full_control_of_state = 4
+			has_full_control_of_state = 152
+			has_full_control_of_state = 153
+			has_full_control_of_state = 806
+			has_full_control_of_state = 807
+			has_full_control_of_state = 1015
+			has_full_control_of_state = 1016
+			has_full_control_of_state = 1017
+			has_full_control_of_state = 1018
+			has_full_control_of_state = 1020
+			has_full_control_of_state = 1021
+			has_full_control_of_state = 1022
+			has_full_control_of_state = 1023
+			}
 		}
-	}
+		
 	option = {
 		name = THR_rob_thr.5.a
 		ai_chance = { factor = 1 }
@@ -166,10 +165,6 @@ country_event = {
         		set_country_flag = AUS_civil_war_ended
 					}}
 		}
-	}
-	option = {
-		name = THR_rob_thr.5.b
-		
 	}
 }
 

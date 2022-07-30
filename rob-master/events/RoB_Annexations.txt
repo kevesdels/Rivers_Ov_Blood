@@ -3860,8 +3860,8 @@ country_event = {
 	 }
       is_core_of = LAT
 	}
+  PREV = { remove_core_of = EST }
 	LAT = { transfer_state = PREV }
-  EST = { remove_core_of = PREV }
   }
   
   every_owned_state = {
@@ -3995,7 +3995,7 @@ if = {
       limit = { 
      is_core_of = LAT
     }
-    EST = { remove_core_of = PREV }
+    PREV = { remove_core_of = EST }
     }
   }
   if = { 

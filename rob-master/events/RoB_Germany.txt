@@ -1010,9 +1010,10 @@ country_event = {
  title = "The French Aren't Watching"
  desc = spartakus_germany.20.d
  fire_only_once = yes
+ is_triggered_only = yes
 
  mean_time_to_happen = { days = 2 }
- is_triggered_only = yes
+
 
 option = {
  name = "Invade Rhineland!"
@@ -1025,7 +1026,7 @@ option = {
 
 option = {
  name = "We Shall wait..."
- add_political_power = -300
+ add_political_power = -200
   ai_chance = {
   factor = 0
    modifier = {
@@ -1549,7 +1550,7 @@ country_event = { ###homofash art
   DEN = {transfer_navy = {
     target = GER
     }
-  DEN = {retire_ideology_leader = socialist}
+  DEN = {retire_ideology_leader = socialism}
   DEN = {set_country_leader_ideology = socialist}
   DEN = {create_country_leader = {
     name = "Ernst Thalmann"
@@ -1745,4 +1746,4 @@ option = {
  BRP = {transfer_state = 1086 }
 }
 }
-}
+#end

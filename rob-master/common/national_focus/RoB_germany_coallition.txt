@@ -895,26 +895,6 @@ random_owned_controlled_state = {
 		}
 		completion_reward = {
 		 	794 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
 				add_building_construction = {
 					type = infrastructure
 					level = 3
@@ -922,26 +902,6 @@ random_owned_controlled_state = {
 				}
 			}
 	     1093 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -949,26 +909,6 @@ random_owned_controlled_state = {
 				}
 			}
 			793 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -976,26 +916,6 @@ random_owned_controlled_state = {
 				}
 			}
 		58 = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
 				add_building_construction = {
 					type = infrastructure
 					level = 2

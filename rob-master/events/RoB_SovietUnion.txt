@@ -510,13 +510,13 @@ add_political_power = 120
 set_politics = {
 ruling_party = socialist
 elections_allowed = no
+}
 add_ideas = {
 RSR_vyacheslav_molotov_hog
 RSR_sergei_kirov_im
 RSR_kliment_voroshilov_dm
 RSR_alexei_kosygin_em
 RSR_anastas_mikoyan_fm
-}
 }
 }
 }
@@ -603,7 +603,7 @@ mean_time_to_happen =  { days = 3 }
 option = {
 name = bolshevik_russia.22.a
 hidden_effect = { load_focus_tree = soviet_focus_bukharin }
-add_popularity = { ideology = democratic_socialist = 0.10 }
+add_popularity = { ideology = democratic_socialist popularity = 0.10 }
 create_country_leader = {
 	name = "Nikolai Ivanovich Bukharin"
 	desc = ""

@@ -307,31 +307,6 @@ RUS_russian_reformation = {
 
 }
 
-RUS_russian_reformation = {
-  icon = GFX_decision_category_military_operation
-  picture = GFX_decision_germany_partisans
-	visible = {
-    OR = {
-	 tag = TOW
-	 tag = BWR
-	}
-	}
-	available = {
-	ROOT = {
-	has_full_control_of_state = 570
-	has_full_control_of_state = 40
-	has_full_control_of_state = 580 
-	has_full_control_of_state = 571
-	}
-	has_country_flag = ROM_victory_in_war
-	}
-		  priority = {
-		  base = 100
-		  }
-
-
-}
-
 SFS_german_reformation = {
   icon = GFX_decision_category_military_operation
   picture = GFX_decision_germany_partisans

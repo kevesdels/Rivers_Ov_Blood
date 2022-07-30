@@ -273,7 +273,7 @@ country_event = {
 
 
 
-}#end
+#end
 ###Do we give up?
 country_event = {
  id = third_reich.14
@@ -336,16 +336,16 @@ country_event = {
 	trigger = {
 	THR = {
 	has_idea = festung_bregenz
-	num_of_controlled_states = 3
+	num_of_controlled_states > 2
 	}
 }
 	option = {
 			name = third_reich.15.a
 			ai_chance = { factor = 1}
 			hidden_effect = {
-			remove_ideas{
-		 	festung_bregenz }}
-		 	}
+			remove_ideas = { festung_bregenz }
+			}
+		}
 }	
 
 ###etler not going to die, choose herman or strasser as econ advisor
@@ -494,7 +494,7 @@ country_event = {
 		}
 	}	
 
-`
+}
 ###Hitler killed in vienna
 country_event = {
 	 id = third_reich.11

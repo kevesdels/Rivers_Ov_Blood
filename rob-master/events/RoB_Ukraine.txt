@@ -430,20 +430,20 @@ is_triggered_only = yes
 
 option = { ###refuse
 name = ukraine.14.a
-add_political_power = -100
 ai_chance = {
- modifier = 0
-}
+	factor = 0
+   }
+add_political_power = -100
 DSU = {
 country_event = { id = ukraine.11 days = 5 }
 }
 }
 option = { ###accept
 name = ukraine.14.a
-add_political_power = 100
 ai_chance = {
- modifier = 1000
-}
+	factor = 1000
+   }
+add_political_power = 100
 DSU = {
 country_event = { id = ukraine.15 days = 5 }
 }
@@ -473,7 +473,7 @@ DSU = { give_guarantee = UKR }
     value = 2000
 }
 hidden_effect = {
- country_event = { ukraine.16 days = 80 }
+ country_event = { id = ukraine.16 days = 80 }
 }
 }
 }
@@ -979,20 +979,20 @@ is_triggered_only = yes
 
 option = { ###refuse
 name = ukraine.29.a
-add_political_power = -100
 ai_chance = {
- modifier = 0
-}
+	factor = 0
+   }
+add_political_power = -100
 UKR = {
 country_event = { id = ukraine.26 days = 5 }
 }
 }
 option = { ###accept
 name = ukraine.29.a
-add_political_power = 100
 ai_chance = {
- modifier = 1000
-}
+	factor = 1000
+   }
+add_political_power = 100
 UKR = {
 country_event = { id = ukraine.30 days = 5 }
 }
@@ -1023,7 +1023,7 @@ DSU = { give_guarantee = UKR }
 }
 }
 hidden_effect = {
- country_event = { ukraine.31 days = 80 }
+ country_event = { id = ukraine.31 days = 80 }
 }
 }
 }

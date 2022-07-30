@@ -336,7 +336,7 @@ add_popularity = { ideology = authoritharian popularity = -0.05 }
 add_popularity = { ideology = conservative popularity = -0.08 }
 set_country_flag = ENG_british_union_formed
 if = {
-	limit = { ruling_party = socialist }
+	limit = { has_government  = socialist }
 	set_country_flag = ENG_labour_absorbed
 }
 }
