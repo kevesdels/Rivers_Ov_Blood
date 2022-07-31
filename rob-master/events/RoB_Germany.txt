@@ -634,7 +634,7 @@ option = { ###Revolution continues!
 name = spartakus_germany.14.a
 add_war_support = 0.15
 set_country_flag = GER_BAV_rebbelion
-set_country_flag = civil_war
+set_country_flag = GER_civil_war
 hidden_effect = { 
 52 = {
 add_core_of = BAV
@@ -1547,25 +1547,22 @@ country_event = { ###homofash art
   GER = {set_state_owner = 796}
   GER = {set_state_owner = 1078} 
   DEN = {every_state = {add_manpower = 10000}}
-  DEN = {transfer_navy = {
-    target = GER
-    }
-  DEN = {retire_ideology_leader = socialism}
-  DEN = {set_country_leader_ideology = socialist}
-  DEN = {create_country_leader = {
-    name = "Ernst Thalmann"
-    desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-    picture = "gfx/leaders/GER/Ernst_Thälmann.tga"
-    expire = "1965.1.1"
-    ideology = marxism_leninism
-    traits = {
+  DEN = { 
+  transfer_navy = { target = GER }
+  retire_ideology_leader = socialist 
+  create_country_leader = {
+        name = "Ernst Thalmann"
+        desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+        picture = "gfx/leaders/GER/Ernst_Thälmann.tga"
+        expire = "1965.1.1"
+        ideology = marxism_leninism
+        traits = {
      
+       }
+      }
     }
   }
-  }
-  }
-  }
-  }
+}
   country_event = { ###modernist art
   id = spartakus_germany.48
   title = "Collapse Iminent"

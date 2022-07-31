@@ -408,11 +408,11 @@ option = {
 	promote_character = ITA_giovanni_messe
 	ITA_giovanni_messe = {
 		promote_character = yes
-		Ideology = military_junta
+		promote_character  = military_junta
 	}
 	ITA_giovanni_messe = {
 		promote_character = yes
-		Ideology = authoritharian_subtype
+		promote_character  = authoritharian_subtype
 	}
 }
 }
@@ -506,11 +506,11 @@ option = {
 	promote_character = ITA_giovanni_messe
 	ITA_giovanni_messe = {
 		promote_character = yes
-		Ideology = military_junta
+		promote_character  = military_junta
 	}
 	ITA_giovanni_messe = {
 		promote_character = yes
-		Ideology = authoritharian_subtype
+		promote_character  = authoritharian_subtype
 	}
 }
 }
@@ -534,14 +534,14 @@ trigger = {
    has_country_flag = ITA_graziani_forms_pdc
    has_country_flag = ITA_messe_forms_pdc
   }
-  
+}
   mean_time_to_happen = { days = 1 }
 
  option = {
   name = republican_italy.24.a
   ITA = { country_event = { id = republican_italy.25 days = 10 } }
  }
-}
+
 }
 
 country_event = { ###Discontent in Army
@@ -578,10 +578,10 @@ SIC = {
 	promote_character = ITA_rodolfo_graziani
 	ITA_rodolfo_graziani = {
 		promote_character = yes
-		Ideology = military_junta
+		promote_character = military_junta
 	}
 }
-add_cosmetic_tag = SIC_civil_war
+set_cosmetic_tag = SIC_civil_war
 }
 }
 ITA = { country_event = { id = republican_italy.26 days = 5 } }
@@ -612,20 +612,20 @@ SIC = { transfer_state = 448 }
 SIC = {
  ROOT = {
 	promote_character = ITA_giovanni_messe
-	promote_character = {
-		character = ITA_giovanni_messe
-		Ideology = authoritharian_subtype
+	ITA_giovanni_messe = {
+		promote_character = yes
+		promote_character = authoritharian_subtype
 	}
 }
-add_cosmetic_tag = SIC_civil_war
+set_cosmetic_tag = SIC_civil_war
 add_popularity = { ideology = authoritharian popularity = 0.75 }
 set_politics = {
  ruling_party = authoritharian
  elections_allowed = no
 } 
 }
-}
 ITA = { country_event = { id = republican_italy.26 days = 5 } }
+}
 }
 }
 
@@ -860,7 +860,7 @@ name = republican_italy.34.a
 add_popularity = { ideology = national_socialist popularity = 0.15 }
 add_popularity = { ideology = socialist popularity = 0.2 }
 add_popularity = { ideology = democratic_socialist popularity = 0.15 }
-add_cosmetic_tag = ITA_socialist
+set_cosmetic_tag = ITA_socialist
 ITA = { country_event = { id = republican_italy.35 days = 10 } }
 }
 }

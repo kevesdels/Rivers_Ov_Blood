@@ -89,66 +89,32 @@ is_triggered_only = yes
 
 option = {
 name = "Rest In Peace."
-create_country_leader = {
-	name = "Edward VIII"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Edward_VIII.tga"
-	expire = "1953.3.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
+
+ENG_edward_viii = {
+	promote_character = yes
+	promote_character = reactionary_subtype
 }
-create_country_leader = {
-	name = "Edward VIII"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Edward_VIII.tga"
-	expire = "1953.3.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
+ENG_edward_viii = {
+	promote_character = yes
+	promote_character = authoritharian_subtype
 }
-create_country_leader = {
-	name = "Edward VIII"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Edward_VIII.tga"
-	expire = "1953.3.1"
-	ideology = pelekist_subtype
-	traits = {
-		#
-	}
+ENG_edward_viii = {
+	promote_character = yes
+	promote_character = pelekist_subtype
 }
-create_country_leader = {
-	name = "Edward VIII"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Edward_VIII.tga"
-	expire = "1953.3.1"
-	ideology = social_democracy_subtype
-	traits = {
-		#
-	}
+ENG_edward_viii = {
+	promote_character = yes
+	promote_character = social_democracy_subtype
 }
-create_country_leader = {
-	name = "Edward VIII"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Edward_VIII.tga"
-	expire = "1953.3.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
+ENG_edward_viii = {
+	promote_character = yes
+	promote_character = social_liberal_subtype
 }
-create_country_leader = {
-	name = "Edward VIII"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Edward_VIII.tga"
-	expire = "1953.3.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
+ENG_edward_viii = {
+	promote_character = yes
+	promote_character = conservative_subtype
 }
+
 }
 }
 
@@ -472,99 +438,62 @@ has_country_flag = ENG_conservatives_independant
 hidden_effect = {
 set_cosmetic_tag = ENG_navy
 ENG = {
-create_country_leader = {
-	name = "Ernle Chatfield"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Ernle_Chatfield.tga"
-	expire = "1953.3.1"
-	ideology = pelekist_subtype
-	traits = {
-		#
-	}
+	ENG_ernle_chatfield = {
+		promote_character = yes
+		promote_character = pelekist_subtype
+	  }
+	  ENG_ernle_chatfield = {
+		promote_character = yes
+		promote_character = reactionary_subtype
+	  }
+	  ENG_ernle_chatfield = {
+		promote_character = yes
+		promote_character = authoritharian_subtype
+	  }
+	  ENG_ernle_chatfield = {
+		promote_character = yes
+		promote_character = conservative_subtype
+	  }
+	  ENG_ernle_chatfield = {
+		promote_character = yes
+		promote_character = social_liberal_subtype
+	  }
+	  ENG_ernle_chatfield = {
+		promote_character = yes
+		promote_character = social_democracy_subtype
+	  }
 }
-create_country_leader = {
-	name = "Ernle Chatfield"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Ernle_Chatfield.tga"
-	expire = "1953.3.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Ernle Chatfield"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Ernle_Chatfield.tga"
-	expire = "1953.3.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Ernle Chatfield"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Ernle_Chatfield.tga"
-	expire = "1953.3.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Ernle Chatfield"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Ernle_Chatfield.tga"
-	expire = "1953.3.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Ernle Chatfield"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Ernle_Chatfield.tga"
-	expire = "1953.3.1"
-	ideology = social_democracy_subtype
-	traits = {
-		#
-	}
-}
+
+set_nationality = {
+    target_country = BRU
+    character = ENG_edward_viii
 }
 
 BRU = {
-create_country_leader = {
-	name = "Edward VIII"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Edward_VIII.tga"
-	expire = "1953.3.1"
-	ideology = pelekist_subtype
-	traits = {
-		#
+	ENG_edward_viii = {
+		promote_character = yes
+		promote_character = reactionary_subtype
 	}
-}
-create_country_leader = {
-	name = "Edward VIII"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Edward_VIII.tga"
-	expire = "1953.3.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
+	ENG_edward_viii = {
+		promote_character = yes
+		promote_character = authoritharian_subtype
 	}
-}
-create_country_leader = {
-	name = "Edward VIII"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Edward_VIII.tga"
-	expire = "1953.3.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
+	ENG_edward_viii = {
+		promote_character = yes
+		promote_character = pelekist_subtype
 	}
-}
+	ENG_edward_viii = {
+		promote_character = yes
+		promote_character = social_democracy_subtype
+	}
+	ENG_edward_viii = {
+		promote_character = yes
+		promote_character = social_liberal_subtype
+	}
+	ENG_edward_viii = {
+		promote_character = yes
+		promote_character = conservative_subtype
+	}
 }
 IRE = { country_event = { id = ireland.1 days = 20 } }
 ENG = { country_event = { id = united_kingdom.18 days = 5 } }
@@ -688,97 +617,61 @@ has_country_flag = ENG_conservatives_absorbed
 hidden_effect = {
 set_cosmetic_tag = ENG_navy
 ENG = {
-create_country_leader = {
-	name = "Ernle Chatfield"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Ernle_Chatfield.tga"
-	expire = "1953.3.1"
-	ideology = pelekist_subtype
-	traits = {
-		#
-	}
+	ENG_ernle_chatfield = {
+		promote_character = yes
+		promote_character = pelekist_subtype
+	  }
+	  ENG_ernle_chatfield = {
+		promote_character = yes
+		promote_character = reactionary_subtype
+	  }
+	  ENG_ernle_chatfield = {
+		promote_character = yes
+		promote_character = authoritharian_subtype
+	  }
+	  ENG_ernle_chatfield = {
+		promote_character = yes
+		promote_character = conservative_subtype
+	  }
+	  ENG_ernle_chatfield = {
+		promote_character = yes
+		promote_character = social_liberal_subtype
+	  }
+	  ENG_ernle_chatfield = {
+		promote_character = yes
+		promote_character = social_democracy_subtype
+	  }
 }
-create_country_leader = {
-	name = "Ernle Chatfield"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Ernle_Chatfield.tga"
-	expire = "1953.3.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Ernle Chatfield"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Ernle_Chatfield.tga"
-	expire = "1953.3.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Ernle Chatfield"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Ernle_Chatfield.tga"
-	expire = "1953.3.1"
-	ideology = conservative_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Ernle Chatfield"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Ernle_Chatfield.tga"
-	expire = "1953.3.1"
-	ideology = social_liberal_subtype
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Ernle Chatfield"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Ernle_Chatfield.tga"
-	expire = "1953.3.1"
-	ideology = social_democracy_subtype
-	traits = {
-		#
-	}
-}
+
+set_nationality = {
+    target_country = BRU
+    character = ENG_edward_viii
 }
 
 BRU = {
-create_country_leader = {
-	name = "Edward VIII"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Edward_VIII.tga"
-	expire = "1953.3.1"
-	ideology = pelekist_subtype
-	traits = {
-		#
+	ENG_edward_viii = {
+		promote_character = yes
+		promote_character = reactionary_subtype
 	}
-}
-create_country_leader = {
-	name = "Edward VIII"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Edward_VIII.tga"
-	expire = "1953.3.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
+	ENG_edward_viii = {
+		promote_character = yes
+		promote_character = authoritharian_subtype
 	}
-}
-create_country_leader = {
-	name = "Edward VIII"
-	desc = ""
-	picture = "gfx/leaders/ENG/ENG_Edward_VIII.tga"
-	expire = "1953.3.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
+	ENG_edward_viii = {
+		promote_character = yes
+		promote_character = pelekist_subtype
+	}
+	ENG_edward_viii = {
+		promote_character = yes
+		promote_character = social_democracy_subtype
+	}
+	ENG_edward_viii = {
+		promote_character = yes
+		promote_character = social_liberal_subtype
+	}
+	ENG_edward_viii = {
+		promote_character = yes
+		promote_character = conservative_subtype
 	}
 }
 }

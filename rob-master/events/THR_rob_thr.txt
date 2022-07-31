@@ -145,7 +145,6 @@ country_event = {
 		name = THR_rob_thr.5.a
 		ai_chance = { factor = 1 }
 		hidden_effect = {
-			{
 				THR = {
 				annex_country = {
     			target = AUS
@@ -163,7 +162,7 @@ country_event = {
             	limited_conscription
             	}
         		set_country_flag = AUS_civil_war_ended
-					}}
+					}
 		}
 	}
 }
@@ -262,46 +261,37 @@ country_event = {
 	tag = THR
 		THR = {
 	controls_state = 1017
-	num_of_controlled_states = 1
+	num_of_controlled_states < 2
 	}
+}
 	option = {
 		name = THR_rob_thr.8.a
 		
 		ai_chance = { factor = 1 }
-		hidden_effect = {
-			{
-		add_ideas{
-		 festung_bregenz 
-		}
-	 }
-		}
+		add_ideas = { festung_bregenz }
 	}
+
 	option = {
 		name = THR_rob_thr.8.b
-		
-		hidden_effect = {
-			{
-
-	if = {
-    	limit = {ACM = {controls_state = 153}}
-    	ACM = {
-    	annex_country = {
-    target = THR
-    transfer_troops = no
+		if = {
+    			limit = {ACM = {controls_state = 153}}
+    			ACM = {
+    			annex_country = {
+    				target = THR
+    				transfer_troops = no
     				}
-	}
-}
+				}
+		}
+
     if = {
     	limit = {AUS = {controls_state = 153}}
     	AUS = {
-    	annex_country = {
-    target = THR
-    transfer_troops = no
+    			annex_country = {
+    				target = THR
+    				transfer_troops = no
    						 }
 			}
     	}
-	}
-		}
 	}
 }
 
@@ -314,48 +304,18 @@ country_event = {
 	picture = THR_KNmAGLvf-445
 	fire_only_once = yes
 	trigger = {
-	tag = THR
+		tag = THR
 		THR = {
-	has_idea = festung_bregenz
-	num_of_controlled_states = 3
+			has_idea = festung_bregenz
+			num_of_controlled_states = 3
+		}
 	}
 	option = {
 		name = THR_rob_thr.9.a
 		
 		ai_chance = { factor = 1 }
-		hidden_effect = {
-			{
-			remove_ideas{
-		 	festung_bregenz }}
+			remove_ideas = { festung_bregenz }
 		}
-	}
-	option = {
-		name = THR_rob_thr.9.b
-		
-		hidden_effect = {
-			{
-
-	if = {
-    	limit = {ACM = {controls_state = 153}}
-    	ACM = {
-    	annex_country = {
-    target = THR
-    transfer_troops = no
-    				}
-	}
-}
-    if = {
-    	limit = {AUS = {controls_state = 153}}
-    	AUS = {
-    	annex_country = {
-    target = THR
-    transfer_troops = no
-   						 }
-			}
-    	}
-	}
-		}
-	}
 }
 
 #??
@@ -370,33 +330,7 @@ country_event = {
 	option = {
 		name = THR_rob_thr.10.a
 		
--15000
 		ai_chance = { factor = 1 }
-		hidden_effect = {
-			{ 
-		tag = THR
-		country_event = {
-		    id = 
-		    days = 2
-		    random = 2
-			}
-		}
-		}
-	}
-	option = {
-		name = THR_rob_thr.10.b
-		
-		ai_chance = { factor = 1 }
-		hidden_effect = {
-			{ 
-		tag = THR
-		country_event = {
-		    id = 
-		    days = 2
-		    random = 2
-			}
-		}
-		}
 	}
 }
 
@@ -413,31 +347,6 @@ country_event = {
 		name = THR_rob_thr.11.a
 		
 		ai_chance = { factor = 1 }
-		hidden_effect = {
-			{ 
-		tag = THR
-		country_event = {
-		    id = third_reich.7
-		    days = 2
-		    random = 2
-			}
-		}
-		}
-	}
-	option = {
-		name = THR_rob_thr.11.b
-		
-		ai_chance = { factor = 1 }
-		hidden_effect = {
-			{ 
-		tag = THR
-		country_event = {
-		    id = 
-		    days = 2
-		    random = 2
-			}
-		}
-		}
 	}
 }
 
@@ -454,31 +363,6 @@ country_event = {
 		name = THR_rob_thr.12.a
 		
 		ai_chance = { factor = 1 }
-		hidden_effect = {
-			{ 
-		tag = THR
-		country_event = {
-		    id = third_reich.8
-		    days = 2
-		    random = 2
-			}
-		}
-		}
-	}
-	option = {
-		name = THR_rob_thr.12.b
-		
-		ai_chance = { factor = 1 }
-		hidden_effect = {
-			{ 
-		tag = THR
-		country_event = {
-		    id = 
-		    days = 2
-		    random = 2
-			}
-		}
-		}
 	}
 }
 
@@ -495,31 +379,6 @@ country_event = {
 		name = THR_rob_thr.13.a
 		
 		ai_chance = { factor = 1 }
-		hidden_effect = {
-			{ 
-		tag = THR
-		country_event = {
-		    id = third_reich.9
-		    days = 2
-		    random = 2 
-			}
-		}
-		}
-	}
-	option = {
-		name = THR_rob_thr.13.b
-		
-		ai_chance = { factor = 1 }
-		hidden_effect = {
-			{ 
-		tag = THR
-		country_event = {
-		    id = 
-		    days = 2
-		    random = 2
-			}
-		}
-		}
 	}
 }
 
@@ -536,31 +395,6 @@ country_event = {
 		name = THR_rob_thr.14.a
 		
 		ai_chance = { factor = 1 }
-		hidden_effect = {
-			{ 
-		tag = THR
-		country_event = {
-		    id = third_reich.10
-		    days = 1
-		    random = 1
-			}
-		}
-		}
-	}
-	option = {
-		name = THR_rob_thr.14.b
-		
-		ai_chance = { factor = 1 }
-		hidden_effect = {
-			{ 
-		tag = THR
-		country_event = {
-		    id = third_reich.11
-		    days = 1
-		    random = 1
-			}
-		}
-		}
 	}
 }
 
@@ -759,6 +593,8 @@ country_event = {
 	id = THR_rob_thr.21
 	title = THR_rob_thr.21.t
 	desc = THR_rob_thr.21.d
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	picture = THR_the_death_of_germany-1
 	option = {
@@ -779,6 +615,8 @@ country_event = {
 	id = THR_rob_thr.22
 	title = THR_rob_thr.22.t
 	desc = THR_rob_thr.22.d
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	picture = THR_rohmotto_rivalry-460
 	option = {
@@ -806,6 +644,8 @@ country_event = {
 	id = THR_rob_thr.23
 	title = THR_rob_thr.23.t
 	desc = THR_rob_thr.23.d
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	picture = THR_operational_situation_report_austria_no21-107618
 }
@@ -815,6 +655,8 @@ country_event = {
 	id = THR_rob_thr.24
 	title = THR_rob_thr.24.t
 	desc = THR_rob_thr.24.d
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	picture = THR_operational_situation_report_no10-1
 }
@@ -824,6 +666,8 @@ country_event = {
 	id = THR_rob_thr.25
 	title = THR_rob_thr.25.t
 	desc = THR_rob_thr.25.d
+	is_triggered_only = yes
+	fire_only_once = yes
 
 	picture = THR_victory_finally-1
 }

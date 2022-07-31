@@ -1207,16 +1207,10 @@ create_wargoal = {
 			factor = 1
 		}
 		completion_reward = {
-create_country_leader = {
-	name = "Mikhail Frunze"
-	desc = ""
-	picture = ""
-	expire = "1965.1.1"
-	ideology = national_socialist
-	traits = {
-		
-	}
-}
+			TRS_mikhail_frunze = {
+				promote_character = yes
+				promote_character = national_socialist
+			}
 		}
 	}
 
