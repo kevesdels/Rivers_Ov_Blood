@@ -40,4 +40,13 @@ add_to_faction = IRK
 set_country_flag = RUS_warlord
 
 
-recruit_character = TOW_grand_duke_kirill_vladimirovich
+create_country_leader = {
+	name="Grand Duke Kirill Vladimirovich"
+	desc = "POLITICS_LOL_DESC"
+	picture = "gfx/leaders/TOW/Portrait_RUS_Kyril_I.tga"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}

@@ -89,30 +89,18 @@ is_triggered_only = yes
 
 option = {
 name = "Rest In Peace."
+kill_country_leader = yes
 
+promote_character = ENG_edward_viii
 ENG_edward_viii = {
-	promote_character = yes
-	promote_character = reactionary_subtype
-}
-ENG_edward_viii = {
-	promote_character = yes
-	promote_character = authoritharian_subtype
-}
-ENG_edward_viii = {
-	promote_character = yes
-	promote_character = pelekist_subtype
-}
-ENG_edward_viii = {
-	promote_character = yes
-	promote_character = social_democracy_subtype
-}
-ENG_edward_viii = {
-	promote_character = yes
-	promote_character = social_liberal_subtype
-}
-ENG_edward_viii = {
-	promote_character = yes
-	promote_character = conservative_subtype
+	promote_character = {
+		Ideology = reactionary_subtype
+		Ideology = authoritharian_subtype
+		Ideology = pelekist_subtype
+		Ideology = social_democracy_subtype
+		Ideology = social_liberal_subtype
+		Ideology = conservative_subtype
+	  }
 }
 
 }
@@ -438,62 +426,37 @@ has_country_flag = ENG_conservatives_independant
 hidden_effect = {
 set_cosmetic_tag = ENG_navy
 ENG = {
+	promote_character = ENG_ernle_chatfield
 	ENG_ernle_chatfield = {
-		promote_character = yes
-		promote_character = pelekist_subtype
-	  }
-	  ENG_ernle_chatfield = {
-		promote_character = yes
-		promote_character = reactionary_subtype
-	  }
-	  ENG_ernle_chatfield = {
-		promote_character = yes
-		promote_character = authoritharian_subtype
-	  }
-	  ENG_ernle_chatfield = {
-		promote_character = yes
-		promote_character = conservative_subtype
-	  }
-	  ENG_ernle_chatfield = {
-		promote_character = yes
-		promote_character = social_liberal_subtype
-	  }
-	  ENG_ernle_chatfield = {
-		promote_character = yes
-		promote_character = social_democracy_subtype
-	  }
+		promote_character = {
+			Ideology = reactionary_subtype
+			Ideology = authoritharian_subtype
+			Ideology = pelekist_subtype
+			Ideology = social_democracy_subtype
+			Ideology = social_liberal_subtype
+			Ideology = conservative_subtype
+		  }
+	}
 }
-
 set_nationality = {
     target_country = BRU
     character = ENG_edward_viii
 }
 
 BRU = {
+	promote_character = ENG_edward_viii
 	ENG_edward_viii = {
-		promote_character = yes
-		promote_character = reactionary_subtype
+		promote_character = {
+			Ideology = reactionary_subtype
+			Ideology = authoritharian_subtype
+			Ideology = pelekist_subtype
+			Ideology = social_democracy_subtype
+			Ideology = social_liberal_subtype
+			Ideology = conservative_subtype
+		}	
 	}
-	ENG_edward_viii = {
-		promote_character = yes
-		promote_character = authoritharian_subtype
-	}
-	ENG_edward_viii = {
-		promote_character = yes
-		promote_character = pelekist_subtype
-	}
-	ENG_edward_viii = {
-		promote_character = yes
-		promote_character = social_democracy_subtype
-	}
-	ENG_edward_viii = {
-		promote_character = yes
-		promote_character = social_liberal_subtype
-	}
-	ENG_edward_viii = {
-		promote_character = yes
-		promote_character = conservative_subtype
-	}
+}
+
 }
 IRE = { country_event = { id = ireland.1 days = 20 } }
 ENG = { country_event = { id = united_kingdom.18 days = 5 } }
@@ -606,7 +569,6 @@ BRJ = {
 ENG = { end_puppet = BRJ }
 BRJ = { leave_faction = yes }
 }
-}
 
 option = { ###Rebels rise up, no conservatives
 name = united_kingdom.16.a
@@ -617,61 +579,34 @@ has_country_flag = ENG_conservatives_absorbed
 hidden_effect = {
 set_cosmetic_tag = ENG_navy
 ENG = {
+	promote_character = ENG_ernle_chatfield
 	ENG_ernle_chatfield = {
-		promote_character = yes
-		promote_character = pelekist_subtype
-	  }
-	  ENG_ernle_chatfield = {
-		promote_character = yes
-		promote_character = reactionary_subtype
-	  }
-	  ENG_ernle_chatfield = {
-		promote_character = yes
-		promote_character = authoritharian_subtype
-	  }
-	  ENG_ernle_chatfield = {
-		promote_character = yes
-		promote_character = conservative_subtype
-	  }
-	  ENG_ernle_chatfield = {
-		promote_character = yes
-		promote_character = social_liberal_subtype
-	  }
-	  ENG_ernle_chatfield = {
-		promote_character = yes
-		promote_character = social_democracy_subtype
-	  }
+		promote_character = {
+			Ideology = reactionary_subtype
+			Ideology = authoritharian_subtype
+			Ideology = pelekist_subtype
+			Ideology = social_democracy_subtype
+			Ideology = social_liberal_subtype
+			Ideology = conservative_subtype
+		  }
+	}
 }
-
 set_nationality = {
     target_country = BRU
     character = ENG_edward_viii
 }
 
 BRU = {
+	promote_character = ENG_edward_viii
 	ENG_edward_viii = {
-		promote_character = yes
-		promote_character = reactionary_subtype
-	}
-	ENG_edward_viii = {
-		promote_character = yes
-		promote_character = authoritharian_subtype
-	}
-	ENG_edward_viii = {
-		promote_character = yes
-		promote_character = pelekist_subtype
-	}
-	ENG_edward_viii = {
-		promote_character = yes
-		promote_character = social_democracy_subtype
-	}
-	ENG_edward_viii = {
-		promote_character = yes
-		promote_character = social_liberal_subtype
-	}
-	ENG_edward_viii = {
-		promote_character = yes
-		promote_character = conservative_subtype
+		promote_character = {
+			Ideology = reactionary_subtype
+			Ideology = authoritharian_subtype
+			Ideology = pelekist_subtype
+			Ideology = social_democracy_subtype
+			Ideology = social_liberal_subtype
+			Ideology = conservative_subtype
+		}	
 	}
 }
 }
@@ -787,7 +722,6 @@ ENG = { end_puppet = BRJ }
 BRJ = { leave_faction = yes }
 }
 }
-}
 
 
 ###Irish invasion
@@ -870,28 +804,6 @@ option = {
  add_political_power =-30
 }
 }
-
-###Egypt declares independence
-country_event = {
-id = united_kingdom.21
-title = "Egypt Declares Independence"
-desc = united_kingdom.21.d
-fire_only_once = yes
-is_triggered_only = yes
-
-
-option = {
- name = "We Can't Do Anything Now..."
- FRA = { end_puppet = FWA }
- FWA = { 
- 
- drop_cosmetic_tag = yes
- }
- 
- add_political_power =-30
-}
-}
-
 
 ###British Admirality is annexed
 country_event = {

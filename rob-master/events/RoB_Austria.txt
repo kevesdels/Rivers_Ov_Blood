@@ -58,33 +58,17 @@ country_event = {
  is_triggered_only = yes
 	option = {
 		name = rob_austria.3.a
-		create_country_leader= {
-			name = "Kurt Schuschnigg" 
-			desc = ""
-			picture = "gfx/leaders/AUS/Kurt_Schuschnigg.dds"
-			expire = "1965.1.1"
-			ideology = reactionary_subtype
-			traits = {
-				}
-			}
-			create_field_marshal = {
-			name = "Kurt Schuschnigg"
-			portrait_path = "gfx/leaders/AUS/Kurt_Schuschnigg.dds"
-			traits = { }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-}
-hidden_effect = { 
-            country_event = {
-		    id = rob_austria.4
-		    days = 5
-		    random = 25
-		}
-		}
-		 
+			kill_country_leader = yes
+			AUS_kurt_schuschnigg = { promote_character = yes }
+			add_field_marshal_role = {
+				Character = AUS_kurt_schuschnigg
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			  }
+			hidden_effect = { country_event = { id = rob_austria.4 days = 5} }
 	}
 }
 
@@ -102,6 +86,9 @@ country_event = {
 		name = rob_austria.4.a
 		hidden_effect = { 
 		        news_event = { id = news_event.1 days = 1 }
+				set_nationality = { target_country = ACM character = AUS_alfred_klahr}
+				set_nationality = { target_country = THR character = THR_adolf_hitler }
+				THR = { THR_adolf_hitler = { promote_character = yes } }
 				ACM = { transfer_state = 1018 }
 				ACM = { transfer_state = 1021 }
 				ACM = { transfer_state = 1020 }

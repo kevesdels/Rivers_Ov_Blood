@@ -37,7 +37,6 @@ is_triggered_only = yes
 
 option = { ###kill that traitor!
 name = ukraine.1.a
-remove_unit_leader = 1001
 add_stability = -0.05
 add_political_power = -50
 country_event = { id = ukraine.2 days = 5 }
@@ -87,8 +86,8 @@ name = ukraine.3.a
 add_stability = -0.1
 add_political_power = -1
 add_manpower = -43
-remove_unit_leader = 1002
-remove_unit_leader = 1003
+remove_unit_leader = 1004
+remove_unit_leader = 1005
 add_to_variable = {
  var = DSU_purge
  value = 2
@@ -178,16 +177,7 @@ mean_time_to_happen = { days = 1 }
 option = { ###search his belongings
 name = ukraine.6.a
 kill_country_leader = yes
-create_country_leader = {
-	name = "Council of Ukrainian Soviets"
-	desc = ""
-	picture = ".tga"
-	expire = "1953.3.1"
-	ideology = national_socialist_subtype
-	traits = {
-		#
-	}
-}
+DSU_ukrainian_soviet_concil = { promote_character = yes }
 hidden_effect = {
  country_event = { id = ukraine.7 days = 2 }
 }
@@ -196,16 +186,7 @@ hidden_effect = {
 option = { ###state security seizes control
 name = ukraine.7.a
 kill_country_leader = yes
-create_country_leader = {
-	name = "Ukrainian Commissariat for Internal Affairs"
-	desc = ""
-	picture = ".tga"
-	expire = "1953.3.1"
-	ideology = national_socialist_subtype
-	traits = {
-		#
-	}
-}
+DSU_ukrainian_commissariat_IA = { promote_character = yes }
 hidden_effect = {
  IF = {
   limit = {
@@ -231,16 +212,7 @@ is_triggered_only = yes
 option = { ###Nikita takes over
 add_stability = 0.1
 add_political_power = 100
-create_country_leader = {
-	name = "Nikita Khrushchev"
-	desc = ""
-	picture = "gfx/leaders/DSU/Nikita_Khrushchev.dds"
-	expire = "1953.3.1"
-	ideology = national_socialist_subtype
-	traits = {
-		#
-	}
-}
+DSU_nikita_khrushcheva = { promote_character = yes }
 set_country_flag = DSU_stable
 }
 }
@@ -262,16 +234,7 @@ set_politics = {
 add_political_power = 100
 add_popularity = {ideology = socialist popularity =0.35}
 set_country_flag = DSU_stable
-create_country_leader = {
-	name = "Anton Makarenko"
-	desc = ""
-	picture = "gfx/leaders/DSU/Anton_Makarenko.dds"
-	expire = "1953.3.1"
-	ideology = socialist_subtype
-	traits = {
-		#
-	}
-}
+DSU_anton_makarenko = { promote_character = yes }
 }
 option = { ###Yaroslav Halan in charge
 name = ukraine.8.a
@@ -280,16 +243,7 @@ set_politics = {
  elections_allowed = no
 }
 add_political_power = 100
-create_country_leader = {
-	name = "Yaroslav Halan"
-	desc = ""
-	picture = "gfx/leaders/DSU/Yaroslav_Halan.dds"
-	expire = "1953.3.1"
-	ideology = democratic_socialist_subtype
-	traits = {
-		#
-	}
-}
+DSU_yaroslav_halan = { promote_character = yes }
 add_popularity = {ideology = democratic_socialist popularity =0.35}
 set_country_flag = DSU_stable
 }
@@ -310,16 +264,7 @@ set_politics = {
  elections_allowed = no
 }
 add_popularity = {ideology = authoritharian popularity =0.6}
-create_country_leader = {
-	name = "Nikolai Vatutin"
-	desc = ""
-	picture = "gfx/leaders/DSU/Nikolai_Vatutin.dds"
-	expire = "1953.3.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
-}
+DSU_nikolai_vatutin = { promote_character = yes }
 set_country_flag = DSU_stable
 set_cosmetic_tag = DSU_reactionary
 }
@@ -500,16 +445,7 @@ DSU = {
 add_popularity = {ideology = reactionary popularity =0.6 }
 set_country_flag = DSU_ukraine_united
 set_cosmetic_tag = UKR_united
-create_country_leader = {
-	name = "Reactionary Junta"
-	desc = ""
-	picture = ".tga"
-	expire = "1953.3.1"
-	ideology = military_junta
-	traits = {
-		#
-	}
-}
+DSU_reactionary_junta = { promote_character = yes }
 }
 
 }
@@ -688,16 +624,7 @@ name = ukraine.20.b
 add_stability = -0.15
 kill_country_leader = yes
 add_political_power = -150
-create_country_leader = {
-	name = "Ukrainian Parliament"
-	desc = ""
-	picture = ".tga"
-	expire = "1953.3.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
+UKR_ukrainian_parliament = { promote_character = yes }
 hidden_effect = {
  UKR = { country_event = { id = ukraine.21 days = 30 }
 }
@@ -716,16 +643,7 @@ is_triggered_only = yes
 option = { ###Bandera elected as a heir
 name = ukraine.21.a
 add_stability = 0.1
-create_country_leader = {
-	name = "Stepan Bandera"
-	desc = ""
-	picture = "gfx/leaders/UKR/Portrait_Ukraine_Stepan.dds"
-	expire = "1953.3.1"
-	ideology = pelekist_subtype
-	traits = {
-		#
-	}
-}
+UKR_stepan_bandera = { promote_character = yes  }
 set_politics = {
 ruling_party = pelekist
 elections_allowed = no
@@ -738,16 +656,7 @@ add_popularity = { ideology = pelekist popularity = 0.3 }
 option = { ###Military steps in
 name = ukraine.21.b
 add_stability = -0.15
-create_country_leader = {
-	name = "Mykhailo Omelianovych-Pavlenko"
-	desc = ""
-	picture = "gfx/leaders/UKR/Portrait_Ukraine_Mykhailo_Omelianovych_Pavlenko.tga"
-	expire = "1953.3.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
+UKR_mykhailo_pavlenko = { promote_character = yes }
 hidden_effect = {
  UKR = { country_event = { id = ukraine.22 days = 30 }
 }
@@ -780,16 +689,7 @@ ruling_party = authoritharian
 elections_allowed = no
 }
 set_country_flag = UKR_stable
-create_country_leader = {
-	name = "Pavlo Petrovych Skoropadskyi"
-	desc = ""
-	picture = "gfx/leaders/UKR/Pavlo_Petrovych_Skoropadskyi.dds"
-	expire = "1953.3.1"
-	ideology = authoritharian_subtype
-	traits = {
-		#
-	}
-}
+UKR_Pavlo_Skoropadskyio = { promote_character = yes }
 }
 }
 
@@ -805,32 +705,13 @@ is_triggered_only = yes
 option = { ###Andriy Livytskyi assumes leadership
 name = ukraine.23.a
 retire_country_leader = yes
-create_country_leader = {
-	name = "Andriy Livytskyi"
-	desc = ""
-	picture = "gfx/leaders/UKR/Andriy_Livytskyi.dds"
-	expire = "1953.3.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
-
+UKR_Andriy_Livytskyi = { promote_character = yes }
 }
 
 option = { ###Stepan Vytvytskyi assumes leadership
 name = ukraine.23.b
 retire_country_leader = yes
-create_country_leader = {
-	name = "Stepan Vytvytskyi"
-	desc = ""
-	picture = "gfx/leaders/UKR/Stepan_Wytwycki.dds"
-	expire = "1953.3.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
+UKR_Stepan_Vytvytskyi = { promote_character = yes }
 hidden_effect = { 
  country_event = { id = ukraine.24 days = 25 }
 }
@@ -1048,16 +929,7 @@ UKR = {
 }
 add_popularity = {ideology = authoritharian popularity =0.6 }
 set_country_flag = UKR_ukraine_united
-create_country_leader = {
-	name = "Reactionary Junta"
-	desc = ""
-	picture = ".tga"
-	expire = "1953.3.1"
-	ideology = military_junta
-	traits = {
-		#
-	}
-}
+UKR_reactionary_junta = { promote_character = yes }
 }
 
 }

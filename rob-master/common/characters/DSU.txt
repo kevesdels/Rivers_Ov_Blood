@@ -14,6 +14,116 @@ characters={
 		}
 	}
 
+	DSU_ukrainian_soviet_concil={
+		name="Council of Ukrainian Soviets"
+		portraits={
+			civilian={
+				large="dzīvespatiesība"
+			}
+		}
+		country_leader={
+			ideology=national_socialist_subtype
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+
+	DSU_ukrainian_commissariat_IA={
+		name="Ukrainian Commissariat for Internal Affairs"
+		portraits={
+			civilian={
+				large="dzīvespatiesība"
+			}
+		}
+		country_leader={
+			ideology=national_socialist_subtype
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+
+	DSU_nikita_khrushcheva={
+		name="Nikita Khrushchev"
+		portraits={
+			civilian={
+				large="gfx/leaders/DSU/Nikita_Khrushchev.dds"
+			}
+		}
+		country_leader={
+			ideology=national_socialist_subtype
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+
+	DSU_anton_makarenko={
+		name="Anton Makarenko"
+		portraits={
+			civilian={
+				large="gfx/leaders/DSU/Anton_Makarenko.dds"
+			}
+		}
+		country_leader={
+			ideology=socialist_subtype
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+
+	DSU_yaroslav_halan={
+		name="Yaroslav Halan"
+		portraits={
+			civilian={
+				large="gfx/leaders/DSU/Yaroslav_Halan.dds"
+			}
+		}
+		country_leader={
+			ideology=democratic_socialist_subtype
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+
+	DSU_nikolai_vatutin={
+		name="Nikolai Vatutin"
+		portraits={
+			civilian={
+				large="gfx/leaders/DSU/Nikolai_Vatutin.dds"
+			}
+			army={
+				large="gfx/leaders/DSU/Nikolai_Vatutin.dds"
+			}
+		}
+		country_leader={
+			ideology=authoritharian_subtype
+			expire="1953.3.1.1"
+			id=-1
+		}
+		corps_commander={
+			traits={ }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id=1003
+		}
+	}
+
+	DSU_reactionary_junta={
+		name="Reactionary Junta"
+		portraits={
+			civilian={
+				large="pullup"
+			}
+		}
+		country_leader={
+			ideology=military_junta
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+
 	DSU_semyon_timoshenko={
 		name="Semyon Timoshenko"
 		portraits={
@@ -36,24 +146,6 @@ characters={
 			planning_skill=2
 			logistics_skill=3
 			legacy_id=404
-		}
-	}
-	
-	DSU_nikolai_vatutin={
-		name="Nikolai Vatutin"
-		portraits={
-			army={
-				large="gfx/leaders/DSU/Nikolai_Vatutin.dds"
-			}
-		}
-		corps_commander={
-			traits={ }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 3
-			legacy_id=1003
 		}
 	}
 

@@ -31,4 +31,13 @@ set_popularities = {
 	pelekist = 0
 }
 
-recruit_character = JOB_isaac_steinberg
+create_country_leader = {
+	name = "Isaac Steinberg"
+	desc = "POLITICS_LOL_DESC"
+	picture = "gfx/leaders/JOB/isaac_steinberg.tga"
+	expire = "1965.1.1"
+	ideology = socialist_subtype
+	traits = {
+		#
+	}
+}

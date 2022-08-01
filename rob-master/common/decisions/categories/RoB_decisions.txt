@@ -958,23 +958,40 @@ SOV_diplomacy = {
 		}	
 }
 
+THR_the_civil_war = {
+	icon = decision_category_icon_the_civil_war
+	picture = decision_category_picture_the_civil_war
+	visible = {
+		tag = THR
+	}
+}
+
+THR_the_power_struggle = {
+	icon = decision_category_icon_the_power_struggle
+	picture = decision_category_picture_the_power_struggle
+	visible = {
+		tag = THR
+	}
+	available = {
+		tag = THR
+	}
+}
+
+
 ALL_executive = {
 
   icon = GFX_decision_category_military_operation
   picture = GFX_decision_germany_partisans
 	visible = {
 	NOT = { is_ai = yes }
-	NOT = { has_country_flag = no_executives }
-	has_country_flag = enable_all_exe
+	NOT = { has_country_flag = no_executives }	
 	}
 	available = {
 	ROOT = {
 	NOT = { is_ai = yes }
 	}
 	}
-		  priority = {
-		  base = 1
-		  }
+	priority = { base = 1 }
 
 
 }

@@ -226,6 +226,7 @@ picture = GFX_picture_bosnian_revolt
 trigger = {
 tag = EGY
 is_puppet = no
+country_exists = ISR
 NOT = { ISR = { controls_state = 453 } }
 NOT = { PAL = { exists = yes } }
 }

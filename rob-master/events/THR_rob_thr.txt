@@ -259,11 +259,8 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 	tag = THR
-		THR = {
-	controls_state = 1017
-	num_of_controlled_states < 2
+	THR = { controls_state = 1017 num_of_controlled_states < 2 }
 	}
-}
 	option = {
 		name = THR_rob_thr.8.a
 		
@@ -312,7 +309,6 @@ country_event = {
 	}
 	option = {
 		name = THR_rob_thr.9.a
-		
 		ai_chance = { factor = 1 }
 			remove_ideas = { festung_bregenz }
 		}
@@ -329,7 +325,6 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.10.a
-		
 		ai_chance = { factor = 1 }
 	}
 }
@@ -345,7 +340,6 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.11.a
-		
 		ai_chance = { factor = 1 }
 	}
 }
@@ -361,7 +355,6 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.12.a
-		
 		ai_chance = { factor = 1 }
 	}
 }
@@ -377,7 +370,6 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.13.a
-		
 		ai_chance = { factor = 1 }
 	}
 }
@@ -393,7 +385,6 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.14.a
-		
 		ai_chance = { factor = 1 }
 	}
 }
@@ -406,33 +397,14 @@ country_event = {
 
 	picture = THR_the_situation_in_austria-516
 	fire_only_once = yes
-	is_triggered_only = yes
 	trigger = {
-		THR = {
-
-	country_exists = THR
-}
-
-
+		THR = { country_exists = THR }
 	}
 	timeout_days = 14
 	option = {
 		name = THR_rob_thr.15.a
-		trigger = {
-			
-		}
 		ai_chance = { factor = 1 }
-		AUS = {
-	country_event = {
-days = 1 
-id = THR_rob_thr.16
-}
-
-}
-
-		hidden_effect = {
-			
-		}
+		AUS = { country_event = { days = 1 id = THR_rob_thr.16 } }
 	}
 }
 
@@ -447,21 +419,8 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = THR_rob_thr.16.a
-		trigger = {
-			
-		}
 		ai_chance = { factor = 1 }
-		AUS = {
-	country_event = {
-days = 1 
-id = THR_rob_thr.17
-}
-
-}
-
-		hidden_effect = {
-			
-		}
+		AUS = { country_event = { days = 1 id = THR_rob_thr.17 } }
 	}
 }
 
@@ -475,14 +434,7 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.17.a
-		trigger = {
-			
-		}
 		ai_chance = { factor = 1 }
-		
-		hidden_effect = {
-			
-		}
 	}
 }
 
@@ -497,29 +449,13 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		AUS = {
-	date >  1934.1.5
-
-}
-
-
+			date >  1934.1.5
+		}
 	}
 	option = {
 		name = THR_rob_thr.18.a
-		trigger = {
-			
-		}
 		ai_chance = { factor = 1 }
-		AUS = {
-	country_event = {
-        days = 10 
-        id = THR_rob_thr.18
-        }
-
-}
-
-		hidden_effect = {
-			
-		}
+		AUS = {	country_event = {  	days = 10   id = THR_rob_thr.18	 } }
 	}
 }
 
@@ -534,14 +470,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = THR_rob_thr.19.a
-		trigger = {
-			
-		}
 		ai_chance = { factor = 1 }
-		
-		hidden_effect = {
-			
-		}
 	}
 }
 
@@ -555,36 +484,15 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = THR_rob_thr.20.a
-		trigger = {
-			
-		}
 		ai_chance = { factor = 1 }
-		
-		hidden_effect = {
-			
-		}
 	}
 	option = {
 		name = THR_rob_thr.20.b
-		trigger = {
-			
-		}
 		ai_chance = { factor = 1 }
-		
-		hidden_effect = {
-			
-		}
 	}
 	option = {
 		name = THR_rob_thr.20.c
-		trigger = {
-			
-		}
 		ai_chance = { factor = 1 }
-		
-		hidden_effect = {
-			
-		}
 	}
 }
 
@@ -599,14 +507,8 @@ country_event = {
 	picture = THR_the_death_of_germany-1
 	option = {
 		name = THR_rob_thr.21.a
-		trigger = {
-			
-		}
 		ai_chance = { factor = 1 }
 		
-		hidden_effect = {
-			
-		}
 	}
 }
 
@@ -621,20 +523,17 @@ country_event = {
 	picture = THR_rohmotto_rivalry-460
 	option = {
 		name = THR_rob_thr.22.a
-		trigger = {
-			
-		}
 		ai_chance = { factor = 1 }
 		
 		hidden_effect = {
 			set_variable = {
-	var = Otto_power
-	value = 25
-}
-set_variable = {
-	var = Rohm_power
-	value = 25
-}
+				var = Otto_power
+				value = 25
+			}
+			set_variable = {
+				var = Rohm_power
+				value = 25
+			}
 		}
 	}
 }
@@ -648,6 +547,11 @@ country_event = {
 	fire_only_once = yes
 
 	picture = THR_operational_situation_report_austria_no21-107618
+	option = {
+		name = THR_rob_thr.23.a
+		ai_chance = { factor = 1 }
+		
+	}
 }
 
 #Operational Situation Report no.10
@@ -659,6 +563,11 @@ country_event = {
 	fire_only_once = yes
 
 	picture = THR_operational_situation_report_no10-1
+	option = {
+		name = THR_rob_thr.24.a
+		ai_chance = { factor = 1 }
+		
+	}
 }
 
 #Victory, Finally?
@@ -670,4 +579,9 @@ country_event = {
 	fire_only_once = yes
 
 	picture = THR_victory_finally-1
+	option = {
+		name = THR_rob_thr.25.a
+		ai_chance = { factor = 1 }
+		
+	}
 }

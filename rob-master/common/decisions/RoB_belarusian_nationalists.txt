@@ -340,7 +340,9 @@ BLR_request_lithuanian_support = {
    clr_state_flag = border_incident_active
   }
   }
-  
+  visible = {
+    country_exists = DBR
+      }
   available = {
     NOT = { owns_state = 95 }
     hidden_trigger = {
@@ -390,6 +392,9 @@ BLR_request_lithuanian_support = {
 			base = 200
 			}
     cost = 50
+      visible = {
+    country_exists = DBR
+      }
   available = {
     NOT = { owns_state = 95 }
       OR = {
@@ -447,6 +452,9 @@ BLR_request_lithuanian_support = {
    	ai_will_do = {
 			base = 200
 			}
+  visible = {
+    country_exists = DBR
+      }
   allowed = {
    tag = BLR
   }
@@ -481,6 +489,9 @@ BLR_request_lithuanian_support = {
      	ai_will_do = {
 			base = 200
 			}
+      visible = {
+        country_exists = CBR
+          }
  available = {
   NOT = { owns_state = 1082 }
   OR = {
@@ -540,6 +551,9 @@ BLR_request_lithuanian_support = {
 			base = 200
 			}
  fire_only_once = yes
+ visible = {
+  country_exists = CBR
+    }
   allowed = {
    tag = BLR
    

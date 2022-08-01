@@ -41,4 +41,13 @@ set_popularities = {
 	pelekist = 0
 }
 
-recruit_character = CAA_alexander_pavlovich_kutepov
+create_country_leader = {
+	name = "Alexander Pavlovich Kutepov"
+	desc = "POLITICS_LOL_DESC"
+	picture = "gfx/leaders/CAA/alexander_pavlovich_kutepov.dds"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+		#
+	}
+}

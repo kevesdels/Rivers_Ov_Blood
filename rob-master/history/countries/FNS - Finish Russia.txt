@@ -1,4 +1,4 @@
-capital = 22
+capital = 213
 
 set_research_slots = 2
 oob = "FNS_1934"
@@ -50,4 +50,13 @@ set_popularities = {
 	pelekist = 0
 }
 
-recruit_character = FNS_anatol_von_lieven
+create_country_leader = {
+	name = "Anatol von Lieve"
+	desc = "POLITICS_LOL_DESC"
+	picture = "gfx/leaders/FNS/Anatol_von_Lieven.tga"
+	expire = "1965.1.1"
+	ideology = conservative_subtype
+	traits = {
+		#
+	}
+}

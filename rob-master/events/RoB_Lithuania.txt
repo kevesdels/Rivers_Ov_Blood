@@ -181,7 +181,7 @@ fire_only_once = yes
 is_triggered_only = yes
 
 
-option = { ###Jonas Beržanskis
+option = { ###Jonas Berzanskis
  name = lithuania.6.a
  add_stability = 0.1
  add_popularity = {ideology = pelekist popularity =0.15}
@@ -196,16 +196,9 @@ option = { ###Jonas Beržanskis
  LIT_leonas_prapuolenis_em
  LIT_petras_kubiliunas_dm
  }
- create_country_leader = {
-	name = "Jonas Beržanskis"
-	desc = ""
-	picture = "gfx/leaders/LIT/Jonas_Beržanskis.dds"
-	expire = "1953.3.1"
-	ideology = pagan_pelekism
-	traits = {
-		#
-	}
-}
+
+ promote_character = LIT_jonas_berzanskis
+
 set_party_name = { ideology = pelekist long_name = LIT_pelekism_visoumis_long name = LIT_pelekism_visoumis}
 hidden_effect = {
  country_event = { id = lithuania.7 days = 3 } 
@@ -226,16 +219,9 @@ option = { ###Augustinas Voldemaras
  LIT_klemensas_brunius_em
  LIT_ignas_vylius_dm
  }
- create_country_leader = {
-	name = "Augustinas Voldemaras"
-	desc = ""
-	picture = "gfx/leaders/LIT/Portrait_Lithuania_Augustinas_Voldemaras.tga"
-	expire = "1953.3.1"
-	ideology = pelekist_subtype
-	traits = {
-		#
-	}
-}
+ 
+ promote_character = LIT_augustinas_voldemaras
+
 hidden_effect = {
  country_event = { id = lithuania.8 days = 3 }
 }
@@ -255,16 +241,7 @@ option = { ###Military Dictaotshiop
  LIT_vytautas_zemaitis_em
  LIT_kazys_musteikis_dm
  }
- create_country_leader = {
-	name = "Kazys Škirpa"
-	desc = ""
-	picture = "gfx/leaders/LIT/Portrait_Lithuania_Kazys_Skirpa_leader.tga"
-	expire = "1953.3.1"
-	ideology = authoritharian
-	traits = {
-		#
-	}
-}
+ promote_character = LIT_kazys_skirpa
 set_country_flag = LIT_skirpa_rules
 }
 
@@ -284,16 +261,6 @@ option = { ###Smentona Dictaotshiop
  LIT_povilas_plechavicius_dm
  }
  set_country_flag = LIT_smetona_president
- create_country_leader = {
-	name = "Antanas Smetona"
-	desc = ""
-	picture = "gfx/leaders/LIT/portrait_LIT_antanas_smetona.tga"
-	expire = "1953.3.1"
-	ideology = reactionary_subtype
-	traits = {
-		#
-	}
-}
 }
 }
 
@@ -337,16 +304,7 @@ name = "May he rest in peace."
 set_country_flag = LIT_voldemaras_dead
 kill_country_leader = yes
 set_country_flag = LIT_mironas_rules
- create_country_leader = {
-	name = "Vladas Mironas"
-	desc = "POLITICS_VLADAS_MIRONAS_DESC"
-	picture = "gfx/leaders/LIT/LIT_Mironas.tga"
-	expire = "1953.3.1"
-	ideology = christian_pelekism
-	traits = {
-		#
-	}
-}
+promote_character = LIT_vladas_mironas
 
 }
 }
@@ -454,16 +412,7 @@ name = lithuania.13.a
 add_political_power = 150
 add_stability = 0.05
 set_country_flag = LIT_visoumis_rule
- create_country_leader = {
-	name = "Gintautas I"
-	desc = "POLITICS_VISOUMIS_DESC"
-	picture = "gfx/leaders/LIT/LIT_Visuomis.tga"
-	expire = "1953.3.1"
-	ideology = pagan_pelekism
-	traits = {
-		#
-	}
-}
+promote_character = LIT_visuomis
 }
 }
 ###Beržanskis - National hero

@@ -1,7 +1,6 @@
 ##### Division Templates #####
 division_template = {
 	name = "Division d'Infanterie II"		
-	division_names_group = FRA_INF_01
 	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. de Forteresse
 	# Difference is their equipment
 	regiments = {
@@ -22,7 +21,6 @@ division_template = {
 
 division_template = {
 	name = "Division Coloniale II"		
-	division_names_group = FRA_COL_01
 	# Represents: Div. d'Inf. Coloniale, Div. d'Inf. Nord-Africaine
 	# Difference from DI is their equipment
 	regiments = {
@@ -43,7 +41,6 @@ division_template = {
 
 division_template = {
 	name = "Division Légère Mécanique II" 	# Brigade de Chars de Combat, independent armor brigades of 2x Rgts., 2 Bns. each
-	division_names_group = FRA_ARM_01
 	regiments = {
 		light_armor = { x = 0 y = 0 }		# Bn. of Hotchkiss, then Souma (Med.) tanks
 		light_armor = { x = 0 y = 1 }		# Bn. of Hotchkiss tanks
@@ -59,7 +56,6 @@ division_template = {
 
 division_template = {
 	name = "Brigade Coloniale II"			# Represents: 2xRgt colonial forces and , usually with old equipment
-	division_names_group = FRA_COL_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }

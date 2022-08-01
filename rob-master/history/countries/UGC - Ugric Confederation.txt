@@ -33,4 +33,13 @@ set_popularities = {
 }
 
 
-recruit_character = UGC_federal_council
+create_country_leader = {
+	name="Federal Council"
+	desc = "POLITICS_LOL_DESC"
+	picture = "gfx/leaders/UGC/federal_council.dds"
+	expire = "1965.1.1"
+	ideology = social_liberal_subtype
+	traits = {
+		#
+	}
+}

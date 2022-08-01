@@ -29,5 +29,13 @@ add_ideas = {
 extensive_conscription
 }
 
-recruit_character = SKK_tashi_namgyale
-
+create_country_leader = {
+	name="Tashi Namgyal"
+	desc = "POLITICS_LOL_DESC"
+	picture = "gfx/leaders/SKK/tashinamgyal.dds"
+	expire = "1965.1.1"
+	ideology = reactionary_subtype
+	traits = {
+		#
+	}
+}

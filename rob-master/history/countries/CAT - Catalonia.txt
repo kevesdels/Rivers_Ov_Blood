@@ -41,4 +41,14 @@ set_popularities = {
 	pelekist = 0
 }
 
-recruit_character = CAT_lluis_companys
+
+create_country_leader = {
+	name = "Lluís Companys"
+	desc = "POLITICS_LOL_DESC"
+	picture = "gfx/leaders/CAT/Portrait_CAT_Lluis_Companys.tga"
+	expire = "1965.1.1"
+	ideology = social_democracy_subtype
+	traits = {
+		#
+	}
+}

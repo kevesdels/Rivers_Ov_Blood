@@ -40,4 +40,13 @@ set_popularities = {
 	pelekist = 9
 }
 
-recruit_character = BWR_dmitri_pavlovich
+create_country_leader = {
+	name = "Grand Duke Dmitri Pavlovich"
+	desc = "POLITICS_LOL_DESC"
+	picture = "gfx/leaders/BWR/dmitri_pavlovich.tga"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
