@@ -16,6 +16,7 @@ focus_tree = {
 	continuous_focus_position = { x = 50 y = 2200 }
 
 
+
 focus = {
 	id = USA_dixie_inaugeration_ball
 	icon = GFX_
@@ -97,7 +98,10 @@ relative_position_id = USA_anti_red_pact
     }
      }
 	completion_reward = {
-	
+       BRA = {	
+			add_opinion_modifier = { target = USA modifier = large_increase}
+			
+			}
 }
 }
 
@@ -117,7 +121,12 @@ relative_position_id = USA_anti_red_pact
             }
      }
 	completion_reward = {
-	
+        MEX = {
+            country_event = {
+               id  = rob_usa.X
+           } 
+           
+           }
 }
 }
 
@@ -145,7 +154,12 @@ relative_position_id = USA_anti_red_pact
     }
      }
 	completion_reward = {
-	
+        VEN = {
+            country_event = {
+               id  = rob_usa.X
+           } 
+           
+           }
 }
 }
 ###meets with japan government
@@ -163,7 +177,12 @@ relative_position_id = USA_anti_red_pact
 
      }
 	completion_reward = {
-	
+        JAP = {
+            country_event = {
+               id  = rob_usa.x
+           } 
+           
+           }
 }
 }
 
@@ -291,7 +310,12 @@ relative_position_id = USA_visit_brazil
         
 		}
 	completion_reward = {
-	
+        BRA = {
+            country_event = {
+               id  = rob_usa.17
+           } 
+           
+           }
 	}
 }
 focus = {
@@ -453,8 +477,12 @@ relative_position_id = USA_southernize_west_indies
         
 		}
 	completion_reward = {
-       
-     
+       BAH = {
+            country_event = {
+               id  = rob_usa.X
+           } 
+           
+           }
 	
 	}
 }
@@ -592,7 +620,7 @@ relative_position_id = USA_charleston_naval_yards
 	completion_reward = {
       
 	    country_event = {
-                    id = rob_usa.x
+                    id = rob_usa.18
                 }
 	}
 }
