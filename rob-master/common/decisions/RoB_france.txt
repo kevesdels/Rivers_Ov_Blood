@@ -10,15 +10,15 @@ FRA_junta_buff_ticks = {
    hidden_trigger = {
 	 NOT = { has_country_flag = FRA_civil_war }
 	 NOT = { has_country_flag = fra_cw_over }
-	 NOT = { has_country_flag = fra_junta_debuff_tic }
 	 }
 	}
    activation = {
 	tag = FRA
-   hidden_trigger = {
+
    has_country_flag = FRA_civil_war
    NOT = { has_country_flag = fra_cw_over }
-   }
+   NOT = { has_country_flag = fra_junta_debuff_tic }
+   
 	}
 	days_mission_timeout = 60
 	timeout_effect = {
@@ -40,17 +40,17 @@ FRA_junta_buff_ticks_2 = {
 	 NOT = { has_country_flag = FRA_civil_war }
 	 NOT = { has_country_flag = fra_cw_over }
 	 has_country_flag = fra_junta_debuff_tic
-	 NOT = { has_idea = fra_junta_debuff }
 	 }
 	}
    activation = {
    hidden_trigger = {
    has_country_flag = FRA_civil_war
    NOT = { has_country_flag = fra_cw_over }
+   NOT = { has_idea = fra_junta_debuff }
    has_country_flag = fra_junta_debuff_tic
    }
 	}
-	days_mission_timeout = 90
+	days_mission_timeout = 10
 	timeout_effect = {
 		add_ideas = {
 			fra_junta_debuff

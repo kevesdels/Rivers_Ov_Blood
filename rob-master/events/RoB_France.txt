@@ -1580,20 +1580,12 @@ option = {
 name = rob_france.40.a
 add_stability = 0.10
 if = {
-	limit = {
-		has_idea = fra_junta_buff
-	}
-	remove_ideas = {
-		fra_junta_buff
-	}
+	limit = { has_idea = fra_junta_buff }
+	remove_ideas = { fra_junta_buff }
 }
 if = {
-	limit = {
-		has_idea = fra_junta_debuff
-	}
-	remove_ideas = {
-		fra_junta_debuff
-	}
+	limit = { has_idea = fra_junta_debuff }
+	remove_ideas = { fra_junta_debuff }
 }
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_mil_win
@@ -1624,6 +1616,14 @@ trigger = {
 option = { 
 name = rob_france.41.a
 add_stability = 0.10
+if = {
+	limit = { has_idea = fra_junta_buff }
+	remove_ideas = { fra_junta_buff }
+}
+if = {
+	limit = { has_idea = fra_junta_debuff }
+	remove_ideas = { fra_junta_debuff }
+}
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_mil_win
 set_capital = { state = 16 }

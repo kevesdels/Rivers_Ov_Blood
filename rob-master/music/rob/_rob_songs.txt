@@ -63,6 +63,36 @@ music = {
   }
 }
 
+music = {
+	song = "rob_peace_5" ## A. Marcello - Oboe Concerto in d minor (Marcel Ponseele, baroque oboe   Il Gardellino) I. Andante e spiccato
+	chance = {
+	modifier = {
+		factor = 1
+		has_war = no
+	}
+	modifier = {
+		factor = 0
+
+		has_war = yes
+	}		
+  }
+}
+
+music = {
+	song = "rob_peace_6" ## A. Marcello - Oboe Concerto in d minor (Marcel Ponseele, baroque oboe   Il Gardellino) III. Presto
+	chance = {
+	modifier = {
+		factor = 1
+		has_war = no
+	}
+	modifier = {
+		factor = 0
+
+		has_war = yes
+	}		
+  }
+}
+
 
 ### WAR  ### 
 music = {
@@ -147,6 +177,22 @@ music = {
 
 music = {
 	song = "rob_war_6" ##  Antonio Vivaldi La Stravaganza III Allegro
+	
+	chance = {
+		modifier = {
+			factor = 0
+			has_war = no
+		}
+		modifier = {
+			factor = 1
+
+			has_war = yes
+		}
+	}	
+}
+
+music = {
+	song = "rob_war_7" ##  Antonio Vivaldi Concerto for Two Violins & Two Cellos Allegro
 	
 	chance = {
 		modifier = {
@@ -368,6 +414,38 @@ music = {
 	}	
 }
 
+music = {
+	song = "rob_GER_8" ## Landwirtschaft und Industrie (Komsomolzenlied)
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = GER }
+		}
+		modifier = {
+			factor = 1
+
+			tag = GER
+		}
+	}		
+}
+
+music = {
+	song = "rob_GER_9" ## Was geh'n euch meine Lumpen an
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = GER }
+		}
+		modifier = {
+			factor = 1
+
+			tag = GER
+		}
+	}		
+}
+
 
 ### Third Reich
 
@@ -560,6 +638,34 @@ music = {
 	}	
 }
 
+music = {
+	song = "rob_SOV_2" ##  Песня единого фронта  - Einheitsfrontlied in Russian
+	
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = { tag = SOV }
+			NOT = { tag = DSU }
+			NOT = { tag = RUS }
+			NOT = { tag = CBR }
+			NOT = { tag = OMS }
+			NOT = { tag = JSW }
+		}
+		modifier = {
+			factor = 1
+
+			OR = {
+			tag = SOV
+			tag = DSU
+			tag = RUS
+			tag = CBR
+			tag = OMS
+			tag = JSW
+			}
+		}
+	}	
+}
+
 ### Nationalist Russia
 
 music = {
@@ -652,6 +758,8 @@ music = {
 	}	
 }
 
+### Italy
+
 music = {
 	song = "rob_ITA_1" ##  La Leggenda Del Piave
 	
@@ -667,6 +775,9 @@ music = {
 	}	
 }
 
+
+
+### Poland
 music = {
 	song = "rob_POL_1" ##  Hej, sokoły!
 	
@@ -759,3 +870,75 @@ music = {
 		}
 	}	
 }
+
+music = {
+	song = "rob_POL_7" ## Canción revolucionaria soviética  Tachanka
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = POL }
+		}
+
+		modifier = {
+			factor = 0 
+			AND = {
+				tag = POL
+				OR = {
+					has_government = social_democracy
+					has_government = social_liberal
+					has_government = conservative
+					has_government = authoritharian
+					has_government = reactionary
+					has_government = pelekist
+				}
+			}
+		}
+
+		modifier = {
+			factor = 1
+			AND = {
+				tag = POL
+				OR = {
+					has_government = national_socialist
+					has_government = socialist
+					has_government = democratic_socialist
+				}
+			}
+		}
+	}	
+}
+
+###Finland
+
+music = {
+	song = "rob_FIN_1" ## Akateemisen Karjalaseuran Marssi
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FIN }
+		}
+		modifier = {
+			factor = 1
+			tag = FIN
+		}
+	}	
+}
+
+music = {
+	song = "rob_FIN_2" ## Vilppulan urhojen muistolle
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FIN }
+		}
+		modifier = {
+			factor = 1
+			tag = FIN
+		}
+	}	
+}
+
+###France

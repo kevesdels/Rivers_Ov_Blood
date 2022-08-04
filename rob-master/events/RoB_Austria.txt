@@ -19,11 +19,8 @@ news_event = {
     popularity = 0.05
 }
 hidden_effect = { 
-		country_event = {
-		    id = rob_austria.2
-		    days = 5
-		    random = 15
-		}}
+		country_event = {  id = rob_austria.2 days = 5 random = 15 }
+	}
 
 }
 }
@@ -39,11 +36,8 @@ hidden_effect = {
 	option = {
 		name = rob_austria.2.a
 		hidden_effect = { 
-            country_event = {
-		    id = rob_austria.3
-		    days = 5
-		    random = 25
-		}}
+			 country_event = { id = rob_austria.3 days = 5 random = 25 } 
+			}
 		 }
 	}
 
@@ -86,9 +80,12 @@ country_event = {
 		name = rob_austria.4.a
 		hidden_effect = { 
 		        news_event = { id = news_event.1 days = 1 }
-				set_nationality = { target_country = ACM character = AUS_alfred_klahr}
-				set_nationality = { target_country = THR character = THR_adolf_hitler }
-				THR = { THR_adolf_hitler = { promote_character = yes } }
+				AUS = {
+					AUS_alfred_klahr = { set_nationality = ACM }
+					AUS_adolf_hitler = { set_nationality = THR }
+				}
+				THR = { promote_character = AUS_adolf_hitler }
+				ACM = { promote_character = AUS_alfred_klahr }
 				ACM = { transfer_state = 1018 }
 				ACM = { transfer_state = 1021 }
 				ACM = { transfer_state = 1020 }
@@ -140,7 +137,13 @@ country_event = {
 	option = {
 		name = rob_austria.4.b
 				hidden_effect = {
-                news_event = { id = news_event.1 days = 1 }		
+                news_event = { id = news_event.1 days = 1 }	
+				AUS = {
+					AUS_alfred_klahr = { set_nationality = ACM }
+					AUS_adolf_hitler = { set_nationality = THR }
+				}
+				THR = { promote_character = AUS_adolf_hitler }	
+				ACM = { promote_character = AUS_alfred_klahr }
 				ACM = { transfer_state = 1018 }
 				ACM = { transfer_state = 1021 }
 				ACM = { transfer_state = 1020 }
@@ -192,6 +195,12 @@ country_event = {
 		ai_chance = { factor = 1}
 		hidden_effect = {
                 news_event = { id = news_event.1 days = 1 }	
+				AUS = {
+					AUS_alfred_klahr = { set_nationality = ACM }
+					AUS_adolf_hitler = { set_nationality = THR }
+				}
+				THR = { promote_character = AUS_adolf_hitler }
+				ACM = { promote_character = AUS_alfred_klahr }
 				ACM = { transfer_state = 1018 }
 				ACM = { transfer_state = 1021 }
 				ACM = { transfer_state = 1020 }
@@ -238,32 +247,6 @@ country_event = {
 		}
 	}
 }
-###Gunzzzz
-country_event = {
- id = rob_austria.13
- title = rob_austria.13.t
- desc = rob_austria.13.d
- picture = GFX_report_event_french_resistance_02
- fire_only_once = yes
- trigger = {
-    tag = AUS
-    AUS = {
-    has_war_with = ACM
-    has_war_with = THR
-    }}
-
-    option = {
-    name = rob_austria.13.a
-    AUS = {
-    add_equipment_to_stockpile = {
-    type = infantry_equipment
-    amount = 2000
-    producer = AUS
-                                }
-                                }
-    } 
-    
- }	
 ### ostmarksche_volunteers
 country_event = {
  id = rob_austria.5
@@ -285,6 +268,7 @@ country_event = {
  				} 
 			}
 		}
+		
 		option = {
 				name = rob_austria.5.a
 				ai_chance = { factor = 1}
@@ -308,12 +292,7 @@ country_event = {
 		name = rob_austria.6.a
 		ai_chance = { factor = 3}
 			hidden_effect = {
-				AUS = {
-				 country_event = {
-				    id = rob_austria.7 
-				    days = 3
-								 }
-					}
+				AUS = { country_event = {  id = rob_austria.7 days = 3 } }
 		}
 	}
 
@@ -323,10 +302,7 @@ country_event = {
 		ai_chance = { factor = 7}
 			hidden_effect = {
 				AUS = {
-				 country_event = {
-				    id = rob_austria.8 
-				    days = 5
-								 }
+				 country_event = { id = rob_austria.8  days = 5 }
 		 			  }
 				}
 				add_political_power = 80
@@ -344,11 +320,8 @@ country_event = {
  	option = {
  	name = rob_austria.7.a
  	Hidden_effect = { 	
- 	AUS = { 
-	add_ideas = {
-				slovenian_autonomy
-				}
-		}}		
+ 	AUS = { add_ideas = { slovenian_autonomy } }
+		}		
 	}
 }
 
@@ -407,85 +380,27 @@ country_event = {
 		}
         }
 		
-}
+}	
 
-###Do we give up?
+###Gunzzzz
 country_event = {
- id = rob_austria.11
- title = "Is This the End?"
- desc = ""
- picture = GFX_report_event_generic_read_write
- fire_only_once = yes
+	id = rob_austria.9
+	title = rob_austria.9.t
+	desc = rob_austria.9.d
+	picture = GFX_report_event_french_resistance_02
+	fire_only_once = yes
 	trigger = {
-	tag = AUS
-	AUS = {
-	controls_state = 1017
-	num_of_controlled_states < 2
-	}
-}
-
-
-###We wont give in
-option = {
-		name = "We WONT"
-		ai_chance = { factor = 1}
-		hidden_effect = {
-		add_ideas = {
-		 festung_bregenz 
-		}
-	 }
- }
-
- ###Further conflict is futile
-option = {
-		name = "Just shoot me already"
-		hidden_effect = {
-
-	if = {
-    	limit = {ACM = {controls_state = 153}}
-    	ACM = {
-    	annex_country = {
-    target = AUS
-    transfer_troops = no
-    				}
-	}
-}
-    if = {
-    	limit = {THR = {controls_state = 153}}
-    	THR = {
-    	annex_country = {
-    target = AUS
-    transfer_troops = no
-   						 }
-			}
-    	}
-	}
-}
-}
-
-###We have survived
-country_event = {
- id = rob_austria.12
- title = rob_austria.12.t
- desc = rob_austria.12.d
- picture = GFX_report_event_generic_read_write
- fire_only_once = yes
-	trigger = {
-	THR = {
-	has_idea = festung_bregenz
-	num_of_controlled_states > 3
-	}
-}
-
-		option = {
-		name = rob_austria.12.a
-		ai_chance = { factor = 1}
-		hidden_effect = {
-		remove_ideas = {
-		 festung_bregenz 
-		}
-		 }
-		 }
+	   tag = AUS
+	   AUS = {
+	   has_war_with = ACM
+	   has_war_with = THR
+	   }}
+   
+	   option = {
+	   name = rob_austria.9.a
+	   AUS = { add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = AUS } }
+	   } 
+	   
 	}	
 
 ###Civil War Ends
@@ -536,4 +451,7 @@ country_event = {
 	}}
 }
 }
+
+
+
 #end
