@@ -69,38 +69,7 @@ focus_tree = {
 		}
 	}
 
-	#Jet Engines and Rocket Technologies
-	focus = {
-		id = SPR_jet_engines_and_rocket_technologies
-		x = 72
-		y = 9
-		cost = 10
-		prerequisite = { focus = SPR_strategic_destruction  focus = SPR_battlefield_support  focus = SPR_operational_integrity  }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_tech_bonus = {
 
-			bonus = 1 
-
-			uses = 1 
-
-			category = rocketry 
-
-			}
-
-			add_tech_bonus = {
-
-			bonus = 0.5 
-
-			uses = 1 
-
-			category = jet_technology
-
-			}
-
-			
-		}
-	}
 
 	#Mass Assault
 	focus = {
@@ -112,10 +81,11 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_mobile_warfare  } mutually_exclusive = { focus = SPR_superior_firepower  } mutually_exclusive = { focus = SPR_trench_warfare  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_tech_bonus = {
-			bonus = 1 
-			uses = 2 
-			category = cat_mass_assault
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_mass_assault
 			}
 		}
 	}
@@ -130,10 +100,11 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_mobile_warfare  } mutually_exclusive = { focus = SPR_superior_firepower  } mutually_exclusive = { focus = SPR_mass_assault  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_tech_bonus = {
-			bonus = 1
-			uses = 2 
-			category = cat_grand_battle_plan
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
 			}
 		}
 	}
@@ -263,7 +234,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_political_power = 10
+			add_political_power = 100
 
 			
 		}
@@ -379,7 +350,7 @@ focus_tree = {
 		prerequisite = { focus = SPR_antitrust_laws  focus = SPR_market_socialism_with_spanish_characteristics  focus = SPR_buyspanishproducts  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 70
 
 			
 		}
@@ -443,7 +414,7 @@ focus_tree = {
 		prerequisite = { focus = SPR_a_syndicalist_economy  focus = SPR_a_mutualist_economy  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_political_power = 20
+			add_political_power = 60
 
 			
 		}
@@ -578,7 +549,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_political_power = 10
+			add_political_power = 100
 
 			
 		}
@@ -675,7 +646,7 @@ focus_tree = {
 
 			type = industrial_complex 
 
-			level = 1 
+			level = 2
 
 			}
 
@@ -751,7 +722,7 @@ focus_tree = {
 		prerequisite = { focus = SPR_new_war_industries  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_political_power = 15
+			add_political_power = 30
 
 			
 		}
@@ -766,7 +737,7 @@ focus_tree = {
 		prerequisite = { focus = SPR_our_lost_lands  } prerequisite = { focus = SPR_a_deal_with_the_corporates  } prerequisite = { focus = SPR_a_gun_in_every_hand  } prerequisite = { focus = SPR_closer_ties_with_berlin  } prerequisite = { focus = SPR_using_the_money_of_the_church  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100
 
 			add_stability = 0.05
 
@@ -845,18 +816,33 @@ focus_tree = {
 		cost = 8
 		prerequisite = { focus = SPR_spain_on_the_world_stage_once_more  }
 		ai_will_do = { factor = 1 }
+		available = {
+			has_war = no
+			POR = { NOT = { is_puppet_of = SPR } }
+		}
+		bypass = {
+			POR = { is_puppet_of = SPR } 
+		}
 		completion_reward = {
 			
 			add_state_core = 178
 			add_state_core = 180
-			
-			create_wargoal = { 
 
-			type = annex_everything 
-
-			target = POR
-
+			if = {
+				limit = {
+					171 = { NOT = { is_core_of = SPR } }
+				}
+				add_state_core = 171
 			}
+
+			if = {
+				limit = {
+					1162 = { NOT = { is_core_of = SPR } }
+				}
+				add_state_core = 1162
+			}
+			
+			create_wargoal = { type = annex_everything 	target = POR }
 		}
 		will_lead_to_war_with = POR
 	}
@@ -991,16 +977,70 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = SPR_our_final_test  }
 		ai_will_do = { factor = 1 }
-		completion_reward = {
-			create_wargoal = { 
-
-			type = annex_everything 
-
-			target = FRA
-
+		available = {
+			has_war = no
+			FRA = { NOT = { is_puppet_of = SPR } }
+		}
+		bypass = {
+			OR = {
+				OR = {
+					has_war_with = FRA
+					has_war_with = FRR
+					has_war_with = FRS
+					has_war_with = FRL
+					has_war_with = FRP
+				}
+				OR = {
+					FRA = { is_puppet_of = SPR } 
+					FRR = { is_puppet_of = SPR } 
+					FRS = { is_puppet_of = SPR } 
+					FRL = { is_puppet_of = SPR } 
+					FRP = { is_puppet_of = SPR } 
+				}
+				AND = {
+					NOT = {
+						country_exists = FRA
+						country_exists = FRR
+						country_exists = FRS
+						country_exists = FRL
+						country_exists = FRP
+					}
+				}
 			}
 		}
-		will_lead_to_war_with = FRA
+		completion_reward = {
+
+			if = { 
+				limit = { FRA = { exists = yes is_puppet = no } }
+				
+				create_wargoal = { type = annex_everything target = FRA }
+				will_lead_to_war_with = FRA
+			}
+			if = { 
+				limit = { FRR = { exists = yes is_puppet = no } }
+				
+				create_wargoal = { type = annex_everything target = FRR }
+				will_lead_to_war_with = FRR
+			}
+			if = { 
+				limit = { FRS = { exists = yes is_puppet = no } }
+				
+				create_wargoal = { type = annex_everything target = FRS }
+				will_lead_to_war_with = FRS
+			}
+			if = { 
+				limit = { FRL = { exists = yes is_puppet = no } }
+				
+				create_wargoal = { type = annex_everything target = FRL }
+				will_lead_to_war_with = FRL
+			}
+			if = { 
+				limit = { FRP = { exists = yes is_puppet = no } }
+				
+				create_wargoal = { type = annex_everything target = FRP }
+				will_lead_to_war_with = FRP
+			}
+		}
 	}
 
 	#Destiny Still Arrives
@@ -1508,7 +1548,7 @@ focus_tree = {
 
 			type = steel 
 
-			amount = 8 
+			amount = 14
 
 			state = 173 
 
@@ -1518,7 +1558,7 @@ focus_tree = {
 
 			type = aluminium
 
-			amount = 4 
+			amount = 8
 
 			state = 41
 
@@ -1832,14 +1872,11 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_superior_firepower  } mutually_exclusive = { focus = SPR_trench_warfare  } mutually_exclusive = { focus = SPR_mass_assault  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_tech_bonus = {
-
-			bonus = 1 
-
-			uses = 2 
-
-			category = cat_mobile_warfare
-
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_mobile_warfare
 			}
 
 			
@@ -1875,17 +1912,12 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_mobile_warfare  } mutually_exclusive = { focus = SPR_trench_warfare  } mutually_exclusive = { focus = SPR_mass_assault  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_tech_bonus = {
-
-			bonus = 1 
-
-			uses = 2 
-
-			category = cat_superior_firepower
-
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_superior_firepower
 			}
-
-			
 		}
 	}
 
@@ -2114,14 +2146,11 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_trade_interdiction  } mutually_exclusive = { focus = SPR_base_strike  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_tech_bonus = {
-
-			bonus = 1 
-
-			uses = 2 
-
-			category = fleet_in_being_tree
-
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = fleet_in_being_tree
 			}
 
 			
@@ -2138,16 +2167,12 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_fleet_in_being  } mutually_exclusive = { focus = SPR_base_strike  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_tech_bonus = {
-
-			bonus = 1 
-
-			uses = 2 
-
-			category = trade_interdiction_tree 
-
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = trade_interdiction_tree
 			}
-
 			
 		}
 	}
@@ -2162,16 +2187,12 @@ focus_tree = {
 		mutually_exclusive = { focus = SPR_fleet_in_being  } mutually_exclusive = { focus = SPR_trade_interdiction  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_tech_bonus = {
-
-			bonus = 1
-
-			uses = 2 
-
-			category = cat_base_strike
-
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_base_strike
 			}
-
 			
 		}
 	}
@@ -2311,23 +2332,18 @@ focus_tree = {
 	focus = {
 		id = SPR_battlefield_support
 		x = 72
-		y = 7
+		y = 3
 		cost = 4
 		prerequisite = { focus = SPR_new_pilot_schools  }
 		mutually_exclusive = { focus = SPR_strategic_destruction  } mutually_exclusive = { focus = SPR_operational_integrity  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_tech_bonus = {
-
-			bonus = 1 
-
-			uses = 2 
-
-			category = battlefield_support_tree 
-
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = battlefield_support_tree
 			}
-
-			
 		}
 	}
 
@@ -2482,22 +2498,18 @@ focus_tree = {
 	focus = {
 		id = SPR_strategic_destruction
 		x = 70
-		y = 7
+		y = 3
 		cost = 4
 		prerequisite = { focus = SPR_new_pilot_schools  }
 		mutually_exclusive = { focus = SPR_battlefield_support  } mutually_exclusive = { focus = SPR_operational_integrity  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_tech_bonus = {
-
-			bonus = 1 
-
-			uses = 2 
-
-			category = strategic_destruction_tree
-
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = strategic_destruction_tree
 			}
-
 			
 		}
 	}
@@ -2506,43 +2518,17 @@ focus_tree = {
 	focus = {
 		id = SPR_operational_integrity
 		x = 74
-		y = 7
+		y = 3
 		cost = 4
 		prerequisite = { focus = SPR_new_pilot_schools  }
 		mutually_exclusive = { focus = SPR_strategic_destruction  } mutually_exclusive = { focus = SPR_battlefield_support  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_tech_bonus = {
-
-			bonus = 1
-
-			uses = 2 
-
-			category = operational_integrity_tree 
-
-			}
-
-			
-		}
-	}
-
-	#Nuclear Power
-	focus = {
-		id = SPR_nuclear_power
-		x = 72
-		y = 11
-		cost = 10
-		prerequisite = { focus = SPR_jet_engines_and_rocket_technologies  }
-		ai_will_do = { factor = 1 }
-		completion_reward = {
-			add_tech_bonus = {
-
-			bonus = 1 
-
-			uses = 1 
-
-			category = nuclear
-
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = operational_integrity_tree
 			}
 
 			
@@ -2614,24 +2600,18 @@ focus_tree = {
 		prerequisite = { focus = SPR_general_modernization  }
 		ai_will_do = { factor = 1 }
 		completion_reward = {
-			add_tech_bonus = {
-
-			bonus = 1 
-
-			uses = 2 
-
-			category = land_doctrine 
-
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
 			}
-
 			
 
 			add_tech_bonus = {
 
 			bonus = 1 
-
 			uses = 1 
-
 			category = infantry_weapons
 
 			}
@@ -2670,8 +2650,8 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = SPR_a_welfare_state  }
 		completion_reward = {
-			add_stability = 0.05
-			add_political_power = -50
+			add_stability = 0.07
+			add_political_power = -70
 
 			
 		}
@@ -2685,7 +2665,6 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = SPR_a_welfare_state  }
 		completion_reward = {
-			add_stability = 0.05
 			add_ideas = SPR_agriculture
 			
 		}
@@ -2776,6 +2755,19 @@ focus_tree = {
 						}
 		}
 		
+	}
+
+
+	#Research slot
+	focus = {
+			id = SPR_research
+			x = 25
+			y = 14
+			cost = 5
+			prerequisite = { focus = SPR_reopen_all_industries  }
+			completion_reward = {
+			add_research_slot = 1
+		}
 	}
 
 	#Develop The African Territories

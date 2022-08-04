@@ -9,6 +9,12 @@ if = {
 	}
 }
 
+add_opinion_modifier = { target = ITA modifier = major_colony_seized }
+add_opinion_modifier = { target = POR modifier = hostile_status }
+add_opinion_modifier = { target = FRA modifier = hostile_status }
+add_opinion_modifier = { target = POR modifier = embargo }
+add_opinion_modifier = { target = FRA modifier = embargo }
+
 set_research_slots = 3
 
 set_technology = {

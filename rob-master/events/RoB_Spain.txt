@@ -20,10 +20,7 @@ option = {
   elections_allowed = no
  }
  add_popularity = {ideology = pelekist popularity = 0.3 }
- country_event = {
-  id = rob_spain.1
-  days = 5
-  }
+ country_event = { id = rob_spain.1  days = 5  }
   hidden_effect = {
    news_event = { id = news_event.5 days = 1 }
   }
@@ -184,43 +181,56 @@ country_event = {
   
   option = { 
    name = "We Only Take What is Ours..."
+   ai_chance = {
+	factor = 40
+	}
    SPR = { white_peace = POR }
    SPR = { transfer_state = 171 }
    SPR = { transfer_state = 1162 }
-IF = { limit = { POR = { owns_state = 297 } } transfer_state = 297 }
-   ai_chance = {
-			factor = 40
-		}
+	IF = { limit = { POR = { owns_state = 297 } } transfer_state = 297 }
+	hidden_effect = {
+		remove_opinion_modifier = { target = POR modifier = embargo }
+		remove_opinion_modifier = { target = POR modifier = hostile_status }
+	}
   }
   option = { 
    name = "And Their Colonies..."
+
+   ai_chance = {
+	factor = 60
+	}
    SPR = { white_peace = POR }
    add_stability =-0.05
 
    SPR = { transfer_state = 171 }
    SPR = { transfer_state = 1162 }
-IF = { limit = { POR = { owns_state = 702 } } transfer_state = 702 }
-IF = { limit = { POR = { owns_state = 296 } } transfer_state = 296 }
-IF = { limit = { POR = { owns_state = 297 } } transfer_state = 297 }
-IF = { limit = { POR = { owns_state = 540 } } transfer_state = 540 }
-IF = { limit = { POR = { owns_state = 544 } } transfer_state = 544 }
-IF = { limit = { POR = { owns_state = 1251 } } transfer_state = 1251 }
-IF = { limit = { POR = { owns_state = 770 } } transfer_state = 770 }
-IF = { limit = { POR = { owns_state = 771 } } transfer_state = 771 }
-IF = { limit = { POR = { owns_state = 1245 } } transfer_state = 1245 }
-IF = { limit = { POR = { owns_state = 321 } } transfer_state = 321 }
-IF = { limit = { POR = { owns_state = 425 } } transfer_state = 425 }
-IF = { limit = { POR = { owns_state = 326 } } transfer_state = 326 }
-IF = { limit = { POR = { owns_state = 729 } } transfer_state = 729 }
-IF = { limit = { POR = { owns_state = 721 } } transfer_state = 721 }
-IF = { limit = { POR = { owns_state = 705 } } transfer_state = 705 }
-
-   ai_chance = {
-			factor = 60
-		}
+	IF = { limit = { POR = { owns_state = 702 } } transfer_state = 702 }
+	IF = { limit = { POR = { owns_state = 296 } } transfer_state = 296 }
+	IF = { limit = { POR = { owns_state = 297 } } transfer_state = 297 }
+	IF = { limit = { POR = { owns_state = 540 } } transfer_state = 540 }
+	IF = { limit = { POR = { owns_state = 544 } } transfer_state = 544 }
+	IF = { limit = { POR = { owns_state = 1251 } } transfer_state = 1251 }
+	IF = { limit = { POR = { owns_state = 770 } } transfer_state = 770 }
+	IF = { limit = { POR = { owns_state = 771 } } transfer_state = 771 }
+	IF = { limit = { POR = { owns_state = 1245 } } transfer_state = 1245 }
+	IF = { limit = { POR = { owns_state = 321 } } transfer_state = 321 }
+	IF = { limit = { POR = { owns_state = 425 } } transfer_state = 425 }
+	IF = { limit = { POR = { owns_state = 326 } } transfer_state = 326 }
+	IF = { limit = { POR = { owns_state = 729 } } transfer_state = 729 }
+	IF = { limit = { POR = { owns_state = 721 } } transfer_state = 721 }
+	IF = { limit = { POR = { owns_state = 705 } } transfer_state = 705 }
+	hidden_effect = {
+		remove_opinion_modifier = { target = POR modifier = embargo }
+		remove_opinion_modifier = { target = POR modifier = hostile_status }
+		POR = { add_opinion_modifier = { target = SPR modifier = major_colony_seized } }
+	}
   }
   option = {
   name = "Humiliate Portugese!"
+  ai_chance = {
+	factor = 80
+	}
+
    POR = { surrender_progress > 0.5 }
    SPR = { white_peace = POR }
    add_stability =-0.1
@@ -228,29 +238,33 @@ IF = { limit = { POR = { owns_state = 705 } } transfer_state = 705 }
    SPR = { transfer_state = 1162 }
    SPR = { transfer_state = 180 }
 
-IF = { limit = { POR = { owns_state = 702 } } transfer_state = 702 }
-IF = { limit = { POR = { owns_state = 296 } } transfer_state = 296 }
-IF = { limit = { POR = { owns_state = 297 } } transfer_state = 297 }
-IF = { limit = { POR = { owns_state = 540 } } transfer_state = 540 }
-IF = { limit = { POR = { owns_state = 544 } } transfer_state = 544 }
-IF = { limit = { POR = { owns_state = 1251 } } transfer_state = 1251 }
-IF = { limit = { POR = { owns_state = 770 } } transfer_state = 770 }
-IF = { limit = { POR = { owns_state = 771 } } transfer_state = 771 }
-IF = { limit = { POR = { owns_state = 1245 } } transfer_state = 1245 }
-IF = { limit = { POR = { owns_state = 321 } } transfer_state = 321 }
-IF = { limit = { POR = { owns_state = 425 } } transfer_state = 425 }
-IF = { limit = { POR = { owns_state = 326 } } transfer_state = 326 }
-IF = { limit = { POR = { owns_state = 729 } } transfer_state = 729 }
-IF = { limit = { POR = { owns_state = 721 } } transfer_state = 721 }
-IF = { limit = { POR = { owns_state = 705 } } transfer_state = 705 }
-
-
-   ai_chance = {
-			factor = 80
-		}
+	IF = { limit = { POR = { owns_state = 702 } } transfer_state = 702 }
+	IF = { limit = { POR = { owns_state = 296 } } transfer_state = 296 }
+	IF = { limit = { POR = { owns_state = 297 } } transfer_state = 297 }
+	IF = { limit = { POR = { owns_state = 540 } } transfer_state = 540 }
+	IF = { limit = { POR = { owns_state = 544 } } transfer_state = 544 }
+	IF = { limit = { POR = { owns_state = 1251 } } transfer_state = 1251 }
+	IF = { limit = { POR = { owns_state = 770 } } transfer_state = 770 }
+	IF = { limit = { POR = { owns_state = 771 } } transfer_state = 771 }
+	IF = { limit = { POR = { owns_state = 1245 } } transfer_state = 1245 }
+	IF = { limit = { POR = { owns_state = 321 } } transfer_state = 321 }
+	IF = { limit = { POR = { owns_state = 425 } } transfer_state = 425 }
+	IF = { limit = { POR = { owns_state = 326 } } transfer_state = 326 }
+	IF = { limit = { POR = { owns_state = 729 } } transfer_state = 729 }
+	IF = { limit = { POR = { owns_state = 721 } } transfer_state = 721 }
+	IF = { limit = { POR = { owns_state = 705 } } transfer_state = 705 }
+	hidden_effect = {
+		remove_opinion_modifier = { target = POR modifier = embargo }
+		remove_opinion_modifier = { target = POR modifier = hostile_status }
+		POR = { add_opinion_modifier = { target = SPR modifier = major_colony_seized } }
+	}
  }
   option = {
   name = "Demand Total Subjugation!"
+  
+  ai_chance = {
+	factor = 100
+	}
    POR = { surrender_progress > 0.7 }
    SPR = { puppet = POR }
    add_stability =-0.2
@@ -259,25 +273,26 @@ IF = { limit = { POR = { owns_state = 705 } } transfer_state = 705 }
    SPR = { transfer_state = 1162 }
    SPR = { transfer_state = 180 }
 
-IF = { limit = { POR = { owns_state = 702 } } transfer_state = 702 }
-IF = { limit = { POR = { owns_state = 296 } } transfer_state = 296 }
-IF = { limit = { POR = { owns_state = 297 } } transfer_state = 297 }
-IF = { limit = { POR = { owns_state = 540 } } transfer_state = 540 }
-IF = { limit = { POR = { owns_state = 544 } } transfer_state = 544 }
-IF = { limit = { POR = { owns_state = 1251 } } transfer_state = 1251 }
-IF = { limit = { POR = { owns_state = 770 } } transfer_state = 770 }
-IF = { limit = { POR = { owns_state = 771 } } transfer_state = 771 }
-IF = { limit = { POR = { owns_state = 1245 } } transfer_state = 1245 }
-IF = { limit = { POR = { owns_state = 321 } } transfer_state = 321 }
-IF = { limit = { POR = { owns_state = 425 } } transfer_state = 425 }
-IF = { limit = { POR = { owns_state = 326 } } transfer_state = 326 }
-IF = { limit = { POR = { owns_state = 729 } } transfer_state = 729 }
-IF = { limit = { POR = { owns_state = 721 } } transfer_state = 721 }
-IF = { limit = { POR = { owns_state = 705 } } transfer_state = 705 }
-
-   ai_chance = {
-			factor = 100
-		}
+	IF = { limit = { POR = { owns_state = 702 } } transfer_state = 702 }
+	IF = { limit = { POR = { owns_state = 296 } } transfer_state = 296 }
+	IF = { limit = { POR = { owns_state = 297 } } transfer_state = 297 }
+	IF = { limit = { POR = { owns_state = 540 } } transfer_state = 540 }
+	IF = { limit = { POR = { owns_state = 544 } } transfer_state = 544 }
+	IF = { limit = { POR = { owns_state = 1251 } } transfer_state = 1251 }
+	IF = { limit = { POR = { owns_state = 770 } } transfer_state = 770 }
+	IF = { limit = { POR = { owns_state = 771 } } transfer_state = 771 }
+	IF = { limit = { POR = { owns_state = 1245 } } transfer_state = 1245 }
+	IF = { limit = { POR = { owns_state = 321 } } transfer_state = 321 }
+	IF = { limit = { POR = { owns_state = 425 } } transfer_state = 425 }
+	IF = { limit = { POR = { owns_state = 326 } } transfer_state = 326 }
+	IF = { limit = { POR = { owns_state = 729 } } transfer_state = 729 }
+	IF = { limit = { POR = { owns_state = 721 } } transfer_state = 721 }
+	IF = { limit = { POR = { owns_state = 705 } } transfer_state = 705 }
+	hidden_effect = {
+		remove_opinion_modifier = { target = POR modifier = embargo }
+		remove_opinion_modifier = { target = POR modifier = hostile_status }
+		POR = { add_opinion_modifier = { target = SPR modifier = major_colony_seized } }
+	}
  } 
   }
   
@@ -585,8 +600,8 @@ country_event = {
 	option = {
 		name = rob_spain.16.a
 		ai_chance = { factor = 1 }
-		add_stability = 0.25
-	add_war_support = 0.25
+		add_stability = 0.10
+	add_war_support = 0.10
 	add_political_power = 150
 	add_manpower = 3500
 
@@ -743,18 +758,22 @@ country_event = {
 		name = rob_spain.24.a
 		ai_chance = { factor = 5 }
 		
-		SPR = {
-		set_state_owner = 290
-		set_state_owner = 699
+		290 = { transfer_state_to = SPR }
+		699 = { transfer_state_to = SPR }
 
+		hidden_effect = {
+			SPR = { remove_opinion_modifier = { target = ITA modifier = major_colony_seized} }
+			country_event = { id = rob_spain.27  days = 5  }
 		}
-		
 	}
 	option = {
 		name = rob_spain.24.b
 		ai_chance = { factor = 1 }
-
 		add_political_power = -25
+		hidden_effect = {
+			SPR = { add_opinion_modifier = { target = ITA modifier = hostile_status } }
+			country_event = { id = rob_spain.28  days = 5  }
+		}
 	}
 }
 
@@ -802,5 +821,51 @@ news_event = {
 
 		ai_chance = { factor = 1 }
 		
+	}
+}
+
+#Italy Accepts return of Tanigers
+news_event = {
+	id = rob_spain.27
+	title = rob_spain.27.t
+	desc = rob_spain.27.d
+
+	picture = the_falange_reign_supreme-1
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = { days = 1 }
+	timeout_days = 14
+	option = {
+		name = rob_spain.27.a
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+	}
+}
+
+#Italy Refusts return of Tanigers
+news_event = {
+	id = rob_spain.28
+	title = rob_spain.28.t
+	desc = rob_spain.28.d
+
+	picture = the_falange_reign_supreme-1
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = { days = 1 }
+	timeout_days = 14
+
+	option = {
+		name = rob_spain.28.a
+		ai_chance = { factor = 1 }
+		add_political_power = -150
+	}
+
+	option = {
+		name = rob_spain.28.b
+		ai_chance = { factor = 0 }
+		add_stability = -0.05
+		create_wargoal = { type = annex_everything 	target = ITA }
 	}
 }
