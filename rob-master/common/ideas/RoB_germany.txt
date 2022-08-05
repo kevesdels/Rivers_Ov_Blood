@@ -908,9 +908,9 @@ GER_local_defense = {
 			}
 			removal_cost = -1
 		modifier = {
-       army_attack_factor =-0.1
-	   army_morale_factor =-0.05
-	   army_org_factor =-0.05
+       army_attack_factor =-0.2
+	   army_morale_factor =-0.2
+	   army_org_factor =-0.2
 }	
  
  }
@@ -987,7 +987,6 @@ GER_local_defense = {
  
    GER_fresh_officeries = {
  picture = GFX_idea_rampant_corruption
- research_bonus = { land_doctrine = 0.1 }
  allowed = {
        always = no
      }
@@ -996,10 +995,11 @@ GER_local_defense = {
 			}
 			removal_cost = -1
 		modifier = {
+			army_attack_factor =0.05
+			army_morale_factor =0.1
+			army_org_factor = 0.1
 
-
-}	
- 
+		}	
  }
  
    GER_foreign_revolutionaries = {

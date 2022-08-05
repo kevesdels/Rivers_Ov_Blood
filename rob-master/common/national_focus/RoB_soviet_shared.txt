@@ -460,9 +460,9 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
- add_tech_bonus = {
-	name = zhukov
-	bonus = 1.0
+add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
 	uses = 2
 	category = cat_mobile_warfare
 }
@@ -481,9 +481,9 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
- add_tech_bonus = {
+add_doctrine_cost_reduction = {
 	name = vorshilov
-	bonus = 1.0
+	cost_reduction = 0.5
 	uses = 2
 	category = cat_grand_battle_plan
 }
@@ -2094,7 +2094,7 @@ icon = GFX_focus_SOV_look_outwards
 x = 16
 y = 10
 cost = 5
-available_if_capitulated = yes
+available_if_capitulated = no
 available = {
  has_country_flag = sov_crisis_resolved
 } 
@@ -2137,7 +2137,7 @@ icon = GFX_focus_SOV_comrades_abroad
 x = 20
 y = 11
 cost = 5
-available_if_capitulated = yes 
+available_if_capitulated = no 
 prerequisite = { focus = SOV_lookoutwards } 
 available_if_capitulated = yes 
 		completion_reward = {
@@ -2168,7 +2168,7 @@ bypass = {
 		JSW = { exists = no }
 	}
 }
-available_if_capitulated = yes 
+available_if_capitulated = no 
 prerequisite = { focus = SOV_lookoutwards } 
 		completion_reward = {
          OMS = {
@@ -2221,6 +2221,7 @@ ai_will_do = {
 			factor = 1
 			}
 		cost = 2
+		available_if_capitulated = no 
 		prerequisite = { focus = SOV_siberiancomrades  }
 		mutually_exclusive = { focus = SOV_extend_cooperation  }
 		bypass = {
@@ -2268,6 +2269,7 @@ ai_will_do = {
 			factor = 1
 			}
 		cost = 2
+		available_if_capitulated = no 
 		available = { is_faction_leader = yes } 
 		prerequisite = { focus = SOV_siberiancomrades  }
 		mutually_exclusive = { focus = SOV_demand_subservience  }
@@ -2313,7 +2315,13 @@ cost = 5
 bypass = {
 	owns_state = 137  owns_state = 234 owns_state = 986 owns_state = 985 owns_state = 218  owns_state = 245 owns_state = 217 owns_state = 238 owns_state = 237 owns_state = 232 owns_state = 235 owns_state = 987 owns_state = 233 owns_state = 931 owns_state = 932 owns_state = 231 owns_state = 229 owns_state = 230
    }
-available_if_capitulated = yes 
+available_if_capitulated = no
+available = {
+	if = {
+		limit = { is_ai = yes }
+		has_war = no
+	}
+}
 prerequisite = { focus = SOV_enemiesonallsides } 
 		completion_reward = {
 			custom_effect_tooltip = SOV_southrussiacampaign
@@ -2330,7 +2338,7 @@ prerequisite = { focus = SOV_enemiesonallsides }
 			}
 		}
 		ai_will_do = { 
-			factor = 1
+			factor = 100
 			modifier = {
 			   add = 4
 			   has_war = no
@@ -2353,7 +2361,13 @@ cost = 5
 bypass = {
 	owns_state = 222 owns_state = 224 owns_state = 220 owns_state = 257 owns_state = 258 owns_state = 260 owns_state = 256  owns_state = 400 owns_state = 397 owns_state = 262 owns_state = 581  owns_state = 398 owns_state = 651 owns_state = 573 owns_state = 249 owns_state = 651 owns_state = 652 owns_state = 251 owns_state = 250 owns_state = 255 owns_state = 239 owns_state = 401 owns_state = 930 owns_state = 265 
    }
-available_if_capitulated = yes 
+available_if_capitulated = no 
+available = {
+	if = {
+		limit = { is_ai = yes }
+		has_war = no
+	}
+}
 prerequisite = { focus = SOV_enemiesonallsides } 
 		completion_reward = {
 			custom_effect_tooltip = SOV_easterneuropecapaign
@@ -2370,7 +2384,7 @@ prerequisite = { focus = SOV_enemiesonallsides }
 			}
 		}
 ai_will_do = { 
- factor = 4
+ factor = 100
  modifier = {
 	add = 4
 	has_war = no
@@ -2396,9 +2410,9 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
- add_tech_bonus = {
-	name = doctrine
-	bonus = 1.0
+add_doctrine_cost_reduction = {
+	name = vorshilov
+	cost_reduction = 0.5
 	uses = 2
 	category = cat_mass_assault
 }
@@ -2533,7 +2547,13 @@ cost = 5
 bypass = {
 	owns_state = 572  owns_state = 653 owns_state = 403  owns_state = 1231  owns_state = 571  owns_state = 580  owns_state = 579  owns_state = 516  owns_state = 577  owns_state = 578  owns_state = 570  owns_state = 40  owns_state = 569  owns_state = 654  owns_state = 568  owns_state = 567  owns_state = 576  owns_state = 988  owns_state = 575
    }
-available_if_capitulated = yes 
+available_if_capitulated = no 
+available = {
+	if = {
+		limit = { is_ai = yes }
+		has_war = no
+	}
+}
 prerequisite = { focus = SOV_centralasiandirection } 
 prerequisite = { focus = SOV_easterneuropeancampaign } 
 prerequisite = { focus = SOV_southernrussiandirection } 
@@ -2576,7 +2596,13 @@ cost = 5
 bypass = {
 	owns_state = 407  owns_state = 406 owns_state = 402 owns_state = 587 owns_state = 585 owns_state = 404 owns_state = 984 owns_state = 405 owns_state = 586 owns_state = 589 owns_state = 588 owns_state = 732 owns_state = 1217 owns_state = 1218 owns_state = 742 owns_state = 1177 owns_state = 1178 owns_state = 1176 owns_state = 1185 owns_state = 1181 owns_state = 1183 owns_state = 1182 owns_state = 1184 owns_state = 584 owns_state = 1180 owns_state = 1179 owns_state = 1175
    }
-available_if_capitulated = yes 
+available_if_capitulated = no 
+available = {
+	if = {
+		limit = { is_ai = yes }
+		has_war = no
+	}
+}
 prerequisite = { focus = SOV_enemiesonallsides } 
 		completion_reward = {
 			custom_effect_tooltip = SOV_centralasia_campaign
@@ -2593,7 +2619,7 @@ prerequisite = { focus = SOV_enemiesonallsides }
 			}
 		}
 		ai_will_do = { 
-			factor = 1
+			factor = 5
 			modifier = {
 			   add = 4
 			   has_war = no
@@ -2756,9 +2782,9 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
- add_tech_bonus = {
-	name = sup_fire
-	bonus = 1.0
+add_doctrine_cost_reduction = {
+	name = vorshilov
+	cost_reduction = 0.5
 	uses = 2
 	category = cat_superior_firepower
 }
@@ -2805,9 +2831,9 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
- add_tech_bonus = {
-	name = zhukov
-	bonus = 1.0
+add_doctrine_cost_reduction = {
+	name = vorshilov
+	cost_reduction = 0.5
 	uses = 2
 	category = cat_mobile_warfare
 }
@@ -2874,9 +2900,9 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
- add_tech_bonus = {
-	name = doctrine
-	bonus = 1.0
+add_doctrine_cost_reduction = {
+	name = vorshilov
+	cost_reduction = 0.5
 	uses = 2
 	category = cat_grand_battle_plan
 }
@@ -3033,9 +3059,9 @@ ai_will_do = {
  } 
 completion_reward = {
 add_manpower = 100000
- add_tech_bonus = {
+add_doctrine_cost_reduction = {
 	name = doctrine_bonus
-	bonus = 1.0
+	cost_reduction = 0.5
 	uses = 2
 	category = cat_mass_assault
 }
@@ -3060,7 +3086,6 @@ add_tech_bonus = {
 	bonus = 1.0
 	uses = 3
 	category = logistics_tech	
-
 }
 }
  } 
@@ -3102,9 +3127,9 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
- add_tech_bonus = {
-	name = shap
-	bonus = 1.0
+add_doctrine_cost_reduction = {
+	name = doctrine_bonus
+	cost_reduction = 0.5
 	uses = 2
 	category = cat_superior_firepower
 }
@@ -3158,7 +3183,7 @@ icon = GFX_focus_SOV_soviet_union
 x = 14
 y = 15
 cost = 5
-available_if_capitulated = yes 
+available_if_capitulated = no 
 prerequisite = { focus = SOV_thefareast } 
 prerequisite = { focus = SOV_sovietgermanpact } 
 available = {
@@ -3249,6 +3274,7 @@ completion_reward = {
 	search_filters = {
 		FOCUS_FILTER_POLITICAL
 	}
+	available_if_capitulated = no 
 	bypass = {
 		POL = { exists = no }
 	}
@@ -3256,6 +3282,10 @@ completion_reward = {
 		NOT = {
 			POL = { is_in_faction_with = SOV }
 		}
+		if = {
+			limit = { is_ai = yes }
+				has_war = no
+			}
 	}
 	ai_will_do = { 
 		factor = 1
@@ -3279,6 +3309,7 @@ completion_reward = {
 				type = annex_everything
 				target = POL
 			}
+			will_lead_to_war_with = POL
 		}
 	}
 }
@@ -3292,7 +3323,7 @@ shared_focus = {
 	search_filters = {
 		FOCUS_FILTER_POLITICAL
 	}
-	
+	available_if_capitulated = no 
 	bypass = {
 		owns_state = 202  owns_state = 221 owns_state = 200 
 	   }
@@ -3300,6 +3331,10 @@ shared_focus = {
 		NOT = {
 			DSU = { is_in_faction_with = SOV }
 		}
+		if = {
+			limit = { is_ai = yes }
+				has_war = no
+			}
 	}
 	ai_will_do = { 
 		factor = 1
@@ -3339,6 +3374,7 @@ shared_focus = {
 	search_filters = {
 		FOCUS_FILTER_POLITICAL
 	}
+	available_if_capitulated = no 
 	available = {
 		NOT = {
 			AND = {
@@ -3346,6 +3382,10 @@ shared_focus = {
 					LPR = { is_in_faction_with = SOV }
 				}
 		}
+		if = {
+			limit = { is_ai = yes }
+				has_war = no
+			}
 	}
 	bypass = {
 		owns_state = 784  owns_state = 1266 owns_state = 882 owns_state = 880 owns_state = 189  owns_state = 881 owns_state = 190 owns_state = 1267 owns_state = 13 owns_state = 1268 
@@ -3389,9 +3429,16 @@ shared_focus = {
 	search_filters = {
 		FOCUS_FILTER_POLITICAL
 	}
+	available_if_capitulated = no 
 	cost = 5
 	bypass = {
 		owns_state = 111  owns_state = 213
+	   }
+	   available = {
+			if = {
+				limit = { is_ai = yes }
+				has_war = no
+			}
 	   }
 	ai_will_do = { 
 		factor = 1
@@ -3430,6 +3477,7 @@ shared_focus = {
 	search_filters = {
 		FOCUS_FILTER_POLITICAL
 	}
+	available_if_capitulated = no 
 	cost = 5
 	ai_will_do = { 
 		factor = 1
@@ -3442,6 +3490,12 @@ shared_focus = {
 		   has_war = yes
 		 }
 		}
+		available = {
+			if = {
+				limit = { is_ai = yes }
+				has_war = no
+			}
+	   }
 	prerequisite = { focus = SOV_eliminate_polish_opposition  focus = SOV_the_bread_basket_of_europe  }
 	completion_reward = {
 		custom_effect_tooltip = SOV_bessarabiancampaign
@@ -3468,6 +3522,7 @@ shared_focus = {
 	search_filters = {
 		FOCUS_FILTER_POLITICAL
 	}
+	available_if_capitulated = no 
 	bypass = {
 		owns_state = 94  owns_state = 206 owns_state = 241
 	   }
@@ -3475,6 +3530,10 @@ shared_focus = {
 		NOT = {
 			CBR = { is_in_faction_with = SOV }
 		}
+		if = {
+			limit = { is_ai = yes }
+				has_war = no
+			}
 	}
 	cost = 5
 	ai_will_do = { 
@@ -3512,7 +3571,7 @@ icon = GFX_focus_SOV_socialist_internationale
 x = 20
 y = 12
 cost = 5
-available_if_capitulated = yes 
+available_if_capitulated = no 
 prerequisite = { focus = SOV_comradesabroad } 
 bypass = {
  is_in_faction = yes
@@ -3543,7 +3602,13 @@ cost = 5
 bypass = {
 	owns_state = 566  owns_state = 564 owns_state = 1199 owns_state = 1202 owns_state = 1201 owns_state = 1186 owns_state = 1200 owns_state = 329 owns_state = 1227 owns_state = 1198 owns_state = 1220 owns_state = 1230 owns_state = 1224 owns_state = 1197 owns_state = 1225 owns_state = 1226 owns_state = 1199 owns_state = 1221 owns_state = 563 owns_state = 1229 owns_state = 1228 owns_state = 561 owns_state = 657 owns_state = 560 owns_state = 970 owns_state = 565 owns_state = 982 owns_state = 574 owns_state = 644 owns_state = 1187 owns_state = 562 owns_state = 637 owns_state = 1232 owns_state = 1270 owns_state = 970 owns_state = 409 owns_state = 408
    }
-available_if_capitulated = yes 
+available_if_capitulated = no 
+available = {
+	if = {
+		limit = { is_ai = yes }
+		has_war = no
+	}
+}
 prerequisite = { focus = SOV_siberiancampaign } 
 ai_will_do = { 
 	factor = 1
@@ -3595,7 +3660,7 @@ icon = GFX_focus_SOV_german_treaty
 x = 19
 y = 13
 cost = 5
-available_if_capitulated = yes 
+available_if_capitulated = no 
 prerequisite = { focus = SOV_socialistinternationale } 
 bypass = {
 	OR = {
@@ -3626,15 +3691,16 @@ ai_will_do = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available_if_capitulated = no 
 		bypass = {
 			AND = {
 				OR = {
 					DSU = { exists = no }
-					DSU = { SOCIALIST_ALIGNED_GOVERNMENT = no }
+					DSU = { SOCIALIST_ALIGNED_GOVERNMENT = YES }
 				}
 				OR = {
 					CBR = { exists = no }
-					CBR = { SOCIALIST_ALIGNED_GOVERNMENT = no }
+					CBR = { SOCIALIST_ALIGNED_GOVERNMENT = YES }
 				}
 			}
 		}
@@ -3646,15 +3712,17 @@ ai_will_do = {
 		completion_reward = {
 			if = {
 				limit = {
-					DSU = { exists = yes SOCIALIST_ALIGNED_GOVERNMENT = yes }
+					DSU = { exists = yes SOCIALIST_ALIGNED_GOVERNMENT = no }
 				}
 				DSU = { country_event = { id = bolshevik_russia.99 days = 3 } }
+				will_lead_to_war_with = DSU
 			}
 			if = {
 				limit = {
-					CBR = { exists = yes SOCIALIST_ALIGNED_GOVERNMENT = yes }
+					CBR = { exists = yes SOCIALIST_ALIGNED_GOVERNMENT = no }
 				}
 				CBR = { country_event = { id = bolshevik_russia.99 days = 3 } }
+				will_lead_to_war_with = CBR
 			}
 		}
 	}
@@ -3669,6 +3737,7 @@ ai_will_do = {
 			FOCUS_FILTER_RESEARCH
 		}
 		cost = 5
+		available_if_capitulated = no 
 		bypass = {
 			OR = {
 				is_faction_leader = no
@@ -3700,6 +3769,7 @@ ai_will_do = {
 			FOCUS_FILTER_RESEARCH
 		}
 		cost = 5
+		available_if_capitulated = no 
 		bypass = {
 			OR = {
 				is_faction_leader = no
@@ -3729,6 +3799,7 @@ ai_will_do = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available_if_capitulated = no 
 		ai_will_do = { 
 			factor = 1
 			}
@@ -3749,6 +3820,7 @@ ai_will_do = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available_if_capitulated = no 
 		available = {
 			has_country_flag = sov_globo_communist
 		   } 
@@ -3813,6 +3885,7 @@ ai_will_do = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		available_if_capitulated = no 
 		ai_will_do = { 
 			factor = 1
 			}
@@ -3837,6 +3910,7 @@ ai_will_do = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available_if_capitulated = no 
 		ai_will_do = { 
 			factor = 2
 			}
@@ -3904,6 +3978,7 @@ ai_will_do = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available_if_capitulated = no 
 		ai_will_do = { 
 			factor = 1
 			modifier = {
@@ -3915,6 +3990,12 @@ ai_will_do = {
 			   has_war = yes
 			 }
 			}
+			available = {
+				if = {
+					limit = { is_ai = yes }
+					has_war = no
+				}
+		   }
 		prerequisite = { focus = SOV_begin_insurgencies  }
 		completion_reward = {
 			custom_effect_tooltip = SOV_eurorev
@@ -4067,9 +4148,9 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
- add_tech_bonus = {
+add_doctrine_cost_reduction = {
 	name = doctrine_bonus
-	bonus = 1.0
+	cost_reduction = 0.5
 	uses = 2
 	category = cat_operational_integrity
 }
@@ -4155,9 +4236,9 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
- add_tech_bonus = {
+add_doctrine_cost_reduction = {
 	name = doctrine_bonus
-	bonus = 0.75
+	cost_reduction = 0.40
 	uses = 2
 	category = cat_strategic_bomber
 }
@@ -4177,9 +4258,9 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
- add_tech_bonus = {
+add_doctrine_cost_reduction = {
 	name = doctrine_bonus
-	bonus = 1.0
+	cost_reduction = 0.5
 	uses = 2
 	category = cat_battlefield_support
 }
@@ -4306,9 +4387,9 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
- add_tech_bonus = {
-	name = air_doctrine
-	bonus = 1.0
+add_doctrine_cost_reduction = {
+	name = doctrine_bonus
+	cost_reduction = 0.5
 	uses = 2
 	category = air_doctrine
 }

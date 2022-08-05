@@ -123,6 +123,7 @@ focus_tree = {
  	 	}
 		completion_reward = {
 			create_wargoal = { target = LIT  type = annex_everything }
+			will_lead_to_war_with = LIT
 		}
 	}
 
@@ -800,6 +801,7 @@ focus_tree = {
      	base = 4
  	 	}
 		available = {
+			is_puppet = no
 			has_war = no
 			PRS = { exists = yes }
 		}
@@ -1011,6 +1013,10 @@ focus_tree = {
 				}
 				has_country_flag = pol_depression_gone
 			}
+			is_puppet = no
+		}
+		bypass = {
+			is_puppet_of = GER
 		}
 		prerequisite = { 
 			focus = POL_from_the_ministry_of_public_security 
@@ -1039,6 +1045,7 @@ focus_tree = {
  	 	}
 		available = { 
 			has_country_flag = pol_depression_gone
+			is_puppet = no
 		}
 		prerequisite = { 
 			focus = POL_from_the_ministry_of_public_security 
@@ -1856,6 +1863,7 @@ focus_tree = {
 		available = { 
 				has_country_flag = pol_depression_gone
 				custom_effect_tooltip = pol_tt_2
+				is_puppet = no
 			}
 		prerequisite = { 
 			focus = POL_the_eagle_peaks_its_head  
@@ -1887,6 +1895,7 @@ focus_tree = {
  	 	}
 		available = { 
 			has_country_flag = pol_depression_gone
+			is_puppet = no
 		}
 		prerequisite = { 
 			focus = POL_the_eagle_peaks_its_head  
@@ -1919,6 +1928,9 @@ focus_tree = {
  	 	}
 		prerequisite = { focus = POL_delegation_to_the_soviets  }
 		mutually_exclusive = { focus = POL_invitation_to_warsaw_pact  }
+		available = {
+			is_puppet = no
+		}
 		completion_reward = {
 			SOV = { country_event = { id = rob_poland.11 days = 3 } }
 		}
@@ -1937,6 +1949,7 @@ focus_tree = {
      	base = 4
  	 	}
 		available = {
+			is_puppet = no
 			has_war = no
 			hidden_trigger = {
 				NOT = {
@@ -2014,6 +2027,7 @@ focus_tree = {
  	 	}
 		available = {
 			has_war = no
+			is_puppet = no
 		}
 		bypass = { OR = { CZE = { is_puppet = yes } CZE = { exists = no } } }
 		prerequisite = { focus = POL_the_legacy_of_pilsuduski  }
@@ -2040,6 +2054,7 @@ focus_tree = {
 		cost = 5
 		available = {
 			has_war = no
+			is_puppet = no
 		}
 		bypass = { OR = { CZE = { is_puppet = yes } CZE = { exists = no } } }
 		search_filters = {
@@ -2066,6 +2081,7 @@ focus_tree = {
 		cost = 5
 		available = {
 			has_war = no
+			is_puppet = no
 		}
 		bypass = { OR = { SLO = { is_puppet = yes } SLO = { exists = no } } }
 		search_filters = {
@@ -2100,6 +2116,7 @@ focus_tree = {
      	base = 4
  	 	}
 		available = {
+			is_puppet = no
 			has_war = no
 			NOT = {
 				LIT = { is_puppet = yes }
@@ -2129,6 +2146,7 @@ focus_tree = {
      	base = 4
  	 	}
 		available = {
+			is_puppet = no
 			has_war = no
 			NOT = {
 				LIT = { is_puppet = yes }
@@ -2167,6 +2185,7 @@ focus_tree = {
      	base = 4
  	 	}
 		available = {
+			is_puppet = no
 			has_war = no
 			NOT = {
 				LIT = { is_puppet = yes }
@@ -2205,6 +2224,7 @@ focus_tree = {
 		}
 		available = {
 			has_war = no
+			is_puppet = no
 		}
 		ai_will_do = {
      	base = 7
@@ -2233,6 +2253,7 @@ focus_tree = {
 		}
 		available = {
 			has_war = no
+			is_puppet = no
 		}
 		ai_will_do = {
      	base = 3
@@ -2252,6 +2273,7 @@ focus_tree = {
 		y = 13
 		cost = 5
 		available = {
+			is_puppet = no
 			has_war = no
 			GER = {
 				exists = yes
@@ -2270,6 +2292,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { GER = { exists = yes } }
+				will_lead_to_war_with = GER
 			create_wargoal = { target = GER  type = annex_everything }
 			}
 		}
@@ -2291,6 +2314,7 @@ focus_tree = {
 		}
 		available = {
 			has_war = no
+			is_puppet = no
 		}
 		ai_will_do = {
      	base = 3
@@ -2300,6 +2324,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { UKR = { exists = yes } }
+				will_lead_to_war_with = UKR
 			create_wargoal = { target = UKR  type = annex_everything }
 			}
 		}
@@ -2314,6 +2339,7 @@ focus_tree = {
 		y = 9
 		cost = 5
 		available = {
+			is_puppet = no
 			hidden_trigger = {
 				NOT = {
 					AND = {
@@ -2398,6 +2424,7 @@ focus_tree = {
 				SOCIALIST_ALIGNED_GOVERNMENT = no
 				is_puppet = no
 				}
+				is_puppet = no
 		}
 		prerequisite = { focus = POL_the_west_knows_best  }
 		mutually_exclusive = { focus = POL_seek_friends_in_italy  focus = POL_seek_friends_in_france  }
@@ -2428,6 +2455,7 @@ focus_tree = {
 				SOCIALIST_ALIGNED_GOVERNMENT = no
 				is_puppet = no
 				}
+				is_puppet = no
 		}
 		prerequisite = { focus = POL_the_west_knows_best  }
 		mutually_exclusive = { focus = POL_seek_friends_in_usa  focus = POL_seek_friends_in_france  }
@@ -2452,6 +2480,9 @@ focus_tree = {
 		ai_will_do = {
      	base = 10
  	 	}
+		available = {
+			is_puppet = no
+		}
 		prerequisite = { focus = POL_slovak_admission }
 		prerequisite = { focus = POL_offer_to_lithuania }
 		prerequisite = { focus = POL_land_for_alliance  focus = POL_convince_through_force  }
@@ -2477,6 +2508,7 @@ focus_tree = {
      	base = 6
  	 	}
 		available = {
+			is_puppet = no
 			has_war = no
 				PRS = { exists = yes }
 		}
@@ -2485,6 +2517,7 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { PRS = { exists = yes } }
+				will_lead_to_war_with = PRS
 			create_wargoal = { target = PRS  type = annex_everything }
 			}
 		}
@@ -2532,6 +2565,9 @@ focus_tree = {
      	base = 4
  	 	}
 		prerequisite = { focus = POL_the_warsaw_pact  focus = POL_hand_in_hand_with_spartacists  }
+		available = {
+			is_puppet = no
+		}
 		completion_reward = {
 			if = {
 				limit = {
@@ -2732,6 +2768,9 @@ focus_tree = {
 		ai_will_do = {
      	base = 4
  	 	}
+		available = {
+			is_puppet = no
+		}
 		prerequisite = { focus = POL_develop_economical_ties  }
 		completion_reward = {
 			if = {
@@ -2825,6 +2864,7 @@ focus_tree = {
 				SOCIALIST_ALIGNED_GOVERNMENT = no
 				is_puppet = no
 				}
+				is_puppet = no
 		}
 		prerequisite = { focus = POL_seek_friends_in_usa  }
 		completion_reward = {
@@ -2849,6 +2889,9 @@ focus_tree = {
 		ai_will_do = {
      	base = 3
  	 	}
+		available = {
+			is_puppet = no
+		}
 		prerequisite = { focus = POL_western_technology  }
 		prerequisite = {  focus = POL_begin_the_exports  }
 		completion_reward = {
@@ -2874,6 +2917,9 @@ focus_tree = {
 		ai_will_do = {
      	base = 4
  	 	}
+		available = {
+			is_puppet = no
+		}
 		prerequisite = { focus = POL_use_antigerman_sentiment  }
 		completion_reward = {
 			if = {
@@ -2973,6 +3019,7 @@ focus_tree = {
      	base = 3
  	 	}
 		available = {
+			is_puppet = no
 			has_war = no
 			OR = {
 				UKR = { exists = yes }
@@ -2984,14 +3031,17 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { UKR = { exists = yes } }
+				will_lead_to_war_with = UKR
 			create_wargoal = { target = UKR  type = annex_everything }
 			}
 			if = {
 				limit = { DSU = { exists = yes } }
+				will_lead_to_war_with = DSU
 			create_wargoal = { target = DSU  type = annex_everything }
 			}
 			if = {
 				limit = { FTT = { exists = yes } }
+				will_lead_to_war_with = FTT
 			create_wargoal = { target = FTT  type = annex_everything }
 			}
 		}
@@ -3079,6 +3129,7 @@ focus_tree = {
      	base = 3
  	 	}
 		available = {
+			is_puppet = no
 			has_war = no
 			OR = {
 				BLR = { exists = yes }
@@ -3089,10 +3140,12 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { BLR = { exists = yes } }
+				will_lead_to_war_with = BLR
 			create_wargoal = { target = BLR  type = annex_everything }
 			}
 			if = {
 				limit = { CBR = { exists = yes } }
+				will_lead_to_war_with = CBR
 			create_wargoal = { target = CBR  type = annex_everything }
 			}
 		}	
@@ -3243,6 +3296,7 @@ focus_tree = {
 				SOCIALIST_ALIGNED_GOVERNMENT = no
 				is_puppet = no
 				}
+				is_puppet = no
 		}
 		prerequisite = { focus = POL_a_deal_with_the_devil  }
 		completion_reward = {
@@ -3276,6 +3330,7 @@ focus_tree = {
 				SOCIALIST_ALIGNED_GOVERNMENT = no
 				is_puppet = no
 				}
+				is_puppet = no
 		}
 		prerequisite = { focus = POL_a_deal_with_the_devil  }
 		completion_reward = {
@@ -3308,6 +3363,7 @@ focus_tree = {
      	base = 4
  	 	}
 		available = {
+			is_puppet = no
 			has_country_flag  = pol_friend
 		}
 		prerequisite = { focus = POL_seek_friends_in_france  focus = POL_seek_friends_in_italy  }
@@ -3379,6 +3435,7 @@ focus_tree = {
      	base = 3
  	 	}
 		available = {
+			is_puppet = no
 			has_war = no
 			PRS = { exists = yes }
 		}
@@ -3405,13 +3462,18 @@ focus_tree = {
      	base = 3
  	 	}
 		prerequisite = { focus = POL_contact_comrades_in_belaruss  }
+		available = {
+			is_puppet = no
+		}
 		completion_reward = {
 			if = {
 				limit = { DBR = { exists = yes } }
+				will_lead_to_war_with = DBR
 				create_wargoal = { target = DBR  type = liberate_wargoal }
 			}
 			if = {
 				limit = { BLR = { exists = yes } }
+				will_lead_to_war_with = BLR
 				create_wargoal = { target = BLR  type = liberate_wargoal }
 			}
 		}
@@ -3435,6 +3497,9 @@ focus_tree = {
      	base = 4
  	 	}
 		prerequisite = { focus = POL_the_warsaw_pact  focus = POL_hand_in_hand_with_spartacists  }
+		available = {
+			is_puppet = no
+		}
 		completion_reward = {
 			if = {
 				limit = {
@@ -3468,13 +3533,18 @@ focus_tree = {
      	base = 3
  	 	}
 		prerequisite = { focus = POL_contact_comrades_in_ukraine  }
+		available = {
+			is_puppet = no
+		}
 		completion_reward = {
 			if = {
 				limit = { UKR = { exists = yes } }
+				will_lead_to_war_with = UKR
 				create_wargoal = { target = UKR  type = liberate_wargoal }
 			}
 			if = {
 				limit = { FTT = { exists = yes } }
+				will_lead_to_war_with = FTT
 				create_wargoal = { target = FTT  type = liberate_wargoal }
 			}
 		}
@@ -3498,6 +3568,9 @@ focus_tree = {
      	base = 3
  	 	}
 		prerequisite = { focus = POL_the_warsaw_pact  }
+		available = {
+			is_puppet = no
+		}
 		completion_reward = {
 			add_political_power = 25
 		}
@@ -3522,6 +3595,9 @@ focus_tree = {
  	 	}
 		prerequisite = { focus = POL_delegation_to_the_soviets  }
 		mutually_exclusive = { focus = POL_uneasy_interest_in_alliance  }
+		available = {
+			is_puppet = no
+		}
 		completion_reward = {
 			SOV = { country_event = { id = rob_poland.3 days = 3 } }
 		}
@@ -3544,6 +3620,7 @@ focus_tree = {
      	base = 4
  	 	}
 		available = {
+			is_puppet = no
 			CBR = {
 				exists = yes
 				SOCIALIST_ALIGNED_GOVERNMENT = yes
@@ -3638,12 +3715,12 @@ focus_tree = {
 		prerequisite = { focus = POL_joint_research_teams  }
 		completion_reward = {
 			army_experience = 5
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
-			}
+				}
 		}
 	}
 
@@ -3656,6 +3733,7 @@ focus_tree = {
 		y = 11
 		cost = 5
 		available = {
+			is_puppet = no
 			hidden_trigger = {
 			OR = {
 				OR = {
@@ -3713,18 +3791,22 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { OR = { LNC = { exists = yes } LNC = { is_puppet_of = POL  } } }
+				will_lead_to_war_with = LAT
 			create_wargoal = { target = LAT  type = annex_everything }
 			}
 			if = {
 				limit = { OR = { LIT = { exists = yes } LIT = { is_puppet_of = POL  } } }
+				will_lead_to_war_with = LIT
 			create_wargoal = { target = LIT  type = annex_everything }
 			}
 			if = {
 				limit = { OR = { LDF = { exists = yes } LDF = { is_puppet_of = POL  } } }
+				will_lead_to_war_with = LDF
 			create_wargoal = { target = LDF  type = annex_everything }
 			}
 			if = {
 				limit = { OR = { LNC = { exists = yes } LNC = { is_puppet_of = POL  } } }
+				will_lead_to_war_with = LNC
 			create_wargoal = { target = LNC  type = annex_everything }
 			}
 			if = {
@@ -3733,6 +3815,7 @@ focus_tree = {
 			}
 			if = {
 				limit = { OR = { EST = { exists = yes } EST = { is_puppet_of = POL  } } }
+				will_lead_to_war_with = EST
 			create_wargoal = { target = EST  type = annex_everything }
 			}
 			if = {
@@ -3741,10 +3824,12 @@ focus_tree = {
 			}
 			if = {
 				limit = { OR = { ELP = { exists = yes } ELP = { is_puppet_of = POL  } } }
+				will_lead_to_war_with = ELP
 			create_wargoal = { target = ELP  type = annex_everything }
 			}
 			if = {
 				limit = { OR = { ELA = { exists = yes } ELA = { is_puppet_of = POL  } } }
+				will_lead_to_war_with = ELA
 			create_wargoal = { target = ELA  type = annex_everything }
 			}
 		}
@@ -3760,6 +3845,7 @@ focus_tree = {
 		cost = 1
 		bypass =  { SOV = { exists = no } }
 		available = {
+			is_puppet = no
 			OR = {
 			SOV = {
 				 is_in_faction_with = POL 
@@ -3803,6 +3889,9 @@ focus_tree = {
 			
 						FOCUS_FILTER_POLITICAL
 					
+		}
+		available = {
+			is_puppet = no
 		}
 		ai_will_do = {
      	base = 3
@@ -3889,10 +3978,12 @@ focus_tree = {
      	base = 3
  	 	}
 		available = {
+			is_puppet = no
 			  PRS = { exists = yes }
 		  }
 		prerequisite = { focus = POL_the_three_sister_initiative  focus = POL_german_tanks  }
 		completion_reward = {
+			will_lead_to_war_with = PRS
 			create_wargoal = { target = PRS  type = annex_everything }
 		}
 	}
@@ -3914,6 +4005,7 @@ focus_tree = {
      	base = 3
  	 	}
 		available = {
+			is_puppet = no
 			hidden_trigger = {
 				NOT = {
 					OR = {
@@ -3950,12 +4042,15 @@ focus_tree = {
 		prerequisite = { focus = POL_the_three_sister_initiative  }
 		completion_reward = {
 			if = { limit = { RMN = { exists = yes } }
+			will_lead_to_war_with = RMN
 			create_wargoal = { target = RMN  type = annex_everything }
 			}
 			if = { limit = { ROM = { exists = yes } }
+			will_lead_to_war_with = ROM
 			create_wargoal = { target = ROM  type = annex_everything }
 			}
 			if = { limit = { RMR = { exists = yes } }
+			will_lead_to_war_with = RMR
 			create_wargoal = { target = RMR  type = annex_everything }
 			}
 		 }
@@ -4937,12 +5032,12 @@ focus_tree = {
 		prerequisite = { focus = POL_infantry_standardisation  }
 		completion_reward = {
 			army_experience = 5
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
-			}
+				}
 		}
 	}
 
@@ -4984,12 +5079,12 @@ focus_tree = {
 		prerequisite = { focus = POL_well_planned_offensives  }
 		completion_reward = {
 			army_experience = 10
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_grand_battle_plan
-			}
+				}
 		}
 	}
 
@@ -5186,12 +5281,12 @@ focus_tree = {
 		mutually_exclusive = { focus = POL_artillery_modernization  focus = POL_well_planned_offensives  }
 		completion_reward = {
 			army_experience = 10
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_mobile_warfare
-			}
+				}
 		}
 	}
 
@@ -5314,12 +5409,12 @@ focus_tree = {
 		prerequisite = { focus = POL_artillery_modernization  }
 		completion_reward = {
 			army_experience = 10
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_superior_firepower
-			}
+				}
 		}
 	}
 
@@ -5441,12 +5536,12 @@ focus_tree = {
  	 	}
 		completion_reward = {
 			air_experience = 50
-			add_tech_bonus = {
-				name = air_doc_bonus
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
-			}	
+				}	
 		}
 	}
 
@@ -5693,12 +5788,12 @@ focus_tree = {
 		prerequisite = { focus = POL_the_polish_navy  }
 		mutually_exclusive = { focus = POL_use_traditional_combat_methods  }
 		completion_reward = {
-			add_tech_bonus = {
-				name = fleet_in_being_bonus
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_trade_interdiction
-			}
+				}
 		}
 	}
 
@@ -5767,12 +5862,12 @@ focus_tree = {
  	 	}
 		prerequisite = { focus = POL_use_traditional_combat_methods  }
 		completion_reward = {
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1.0
-				uses = 1
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
 				category = naval_doctrine
-			}
+				}
 		}
 	}
 
@@ -5839,12 +5934,12 @@ focus_tree = {
  	 	}
 		prerequisite = { focus = POL_convoy_targeting  }
 		completion_reward = {
-			add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
-			}
+				}
 		}
 	}
 
@@ -5909,12 +6004,12 @@ focus_tree = {
  	 	}
 		prerequisite = { focus = POL_modern_battleships  }
 		completion_reward = {
-		add_tech_bonus = {
-				name = doctrine_bonus
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
-			}
+				}
 		}
 	}
 

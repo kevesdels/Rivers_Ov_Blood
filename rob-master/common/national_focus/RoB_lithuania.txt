@@ -3234,13 +3234,13 @@ completion_reward = {
 			focus = LIT_interveneinbelarus 
 			focus = LIT_supportforminorityrights 
 		}
-				completion_reward = {
-		add_tech_bonus = {
-    name = doctrine_bonus
-    bonus = 0.50
-    uses = 1
-	category = land_doctrine
-	}
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
 	}
 	}
 
@@ -3494,19 +3494,19 @@ completion_reward = {
 		prerequisite = { focus = LIT_reversetheinterventionalism }
 		completion_reward = {
 		 add_tech_bonus = {
-	name = oil
-	bonus = 0.5
-    uses = 2
-	category = industry
-}
-11 = {
-add_extra_state_shared_building_slots = 2
- add_building_construction = {
-	type = industrial_complex
-	level = 2
-	instant_build = yes
-}
-}
+			name = oil
+			bonus = 0.5
+    		uses = 2
+			category = industry
+			}
+		11 = {
+			add_extra_state_shared_building_slots = 2
+ 			add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+			}
+		}
 	}
 	}
 
@@ -3798,13 +3798,15 @@ completion_reward = {
 			focus = LIT_trenchwarfare 
 		}
 	completion_reward = {
-		 add_tech_bonus = {
-	name = mass_artillery
-	bonus = 1.0
-	uses = 2
-	category = cat_superior_firepower
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_superior_firepower
+			}
 		}
-		}
+
+
 	}
 
 	#Focus for End the ANBO Monpoly
@@ -4005,15 +4007,15 @@ completion_reward = {
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_lietuvosoropajgos }
-		completion_reward = {
- add_tech_bonus = {
-	name = doctrine_bonus
-	bonus = 1.0
-	uses = 2
-	category = air_doctrine
-}
-}
+		completion_reward = {	
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = air_doctrine
+			}
 		}
+	}
 	
 
 	#Focus for Air Doctrine Focus II
@@ -4026,13 +4028,13 @@ completion_reward = {
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_airdoctrinefocusi }
 		completion_reward = {
- add_tech_bonus = {
-	name = doctrine_bonus
-	bonus = 1.0
-	uses = 2
-	category = air_doctrine
-}
-}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+				}
+		}
 	}
 
 	#Focus for Defend the Sea!
@@ -4344,14 +4346,14 @@ add_extra_state_shared_building_slots = 2
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_mobiledoctrine }
-		        completion_reward = {
- add_tech_bonus = {
-	name = mobile_doctrine
-	bonus = 1.0
-	uses = 2
-	category = cat_mobile_warfare
-}
-}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_mobile_warfare
+				}
+		}
 	}
 
 	#Focus for Grant Power to the Lithuanian Riflemen
@@ -4501,13 +4503,13 @@ add_extra_state_shared_building_slots = 2
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_trenchwarfare }
 		completion_reward = {
-		 add_tech_bonus = {
-	name = trench_doctrine
-	bonus = 1.0
-	uses = 2
-	category = cat_grand_battle_plan
-}
-	}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+				}
+		}
 	}
 	
 	#Focus for Mass Artillery II
@@ -4519,13 +4521,13 @@ add_extra_state_shared_building_slots = 2
 		cost = 5
 		available_if_capitulated = yes
 		prerequisite = { focus = LIT_massartilleryfire } 
-				completion_reward = {
-		 add_tech_bonus = {
-	name = mass_artillery
-	bonus = 1.0
-	uses = 2
-	category = cat_superior_firepower
-		}
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_superior_firepower
+			}
 		}
 	}
 
@@ -4831,12 +4833,12 @@ add_extra_state_shared_building_slots = 2
 			focus = LIT_massartilleryfire 
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	name = trench_doctrine
-	bonus = 1.0
-	uses = 2
-	category = cat_grand_battle_plan
-}
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_grand_battle_plan
+			}
 		}
 	}
 
@@ -4856,12 +4858,12 @@ add_extra_state_shared_building_slots = 2
 			focus = LIT_massartilleryfire 
 		}
         completion_reward = {
- add_tech_bonus = {
-	name = mobile_doctrine
-	bonus = 1.0
-	uses = 2
-	category = cat_mobile_warfare
-}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_mobile_warfare
+				}
 		}
 	}
 

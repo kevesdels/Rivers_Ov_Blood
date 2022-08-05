@@ -265,7 +265,7 @@ country_event = {
 		name = THR_rob_thr.8.a
 		
 		ai_chance = { factor = 1 }
-		add_ideas = { festung_bregenz }
+		THR = { add_ideas = { festung_bregenz } }
 	}
 
 	option = {
@@ -310,7 +310,7 @@ country_event = {
 	option = {
 		name = THR_rob_thr.9.a
 		ai_chance = { factor = 1 }
-			remove_ideas = { festung_bregenz }
+			THR = { remove_ideas = { festung_bregenz } }
 		}
 }
 

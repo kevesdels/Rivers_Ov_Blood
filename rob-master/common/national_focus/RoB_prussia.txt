@@ -1829,9 +1829,8 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		 PRS = {
-		  declare_war_on = { target = LIT type = annex_everything }
-		 }
+		will_lead_to_war_with = LIT
+		 PRS = { declare_war_on = { target = LIT type = annex_everything } }
 		}
 	}
 
@@ -2021,12 +2020,14 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		  add_tech_bonus = {
-	       name = doctrine
-	       bonus = 0.4
-	       uses = 3
-	       category = land_doctrine
-}
+
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.25
+			uses = 3
+			category = land_doctrine
+			}
+
 		}
 	}
 
@@ -2224,12 +2225,12 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		  add_tech_bonus = {
-	        name = doctrine_bonus
-	        bonus = 1.0
-	        uses = 1
-	        category = land_doctrine
-}
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+			}
 		}
 	}
 
@@ -3012,12 +3013,12 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = cat_mobile_warfare
-           }    
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_mobile_warfare
+			}
 		}
 	}
 
@@ -3049,12 +3050,12 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = cat_grand_battle_plan
-           }    
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_grand_battle_plan
+			}
 		}
 	}
 
@@ -3089,12 +3090,12 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = cat_superior_firepower
-           }    
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_superior_firepower
+			}
 		}
 	}
 
@@ -3201,12 +3202,12 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = cat_superior_firepower
-           }
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_superior_firepower
+			}
         add_equipment_to_stockpile = {
          type = artillery_equipment_1
 					amount = 400
@@ -3424,12 +3425,12 @@ add_building_construction = {
 		 add_ideas = {
 		 PRS_old_methods
 		 }
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 0.85
-	      uses = 2
-	      category = land_doctrine
-           }
+		add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.40
+			uses = 2
+			category = land_doctrine
+			}
 		}
 	}
 
@@ -3449,12 +3450,12 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 3
-	      category = land_doctrine
-           }
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.40
+			uses = 3
+			category = land_doctrine
+			}
 		}
 	}
 
@@ -3598,12 +3599,12 @@ add_building_construction = {
              type = fighter_genius
              is_female = no
 }
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = air_doctrine
-           }
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = air_doctrine
+			}
 		}
 		
 		}
@@ -3644,12 +3645,12 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = air_doctrine
-           }
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = air_doctrine
+			}
 		}
 	}
 
@@ -3666,12 +3667,12 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 1
-	      category = air_doctrine
-           }
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = air_doctrine
+			}
 		air_experience = 75
 		}
 	}
@@ -3734,12 +3735,12 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = air_doctrine
-           }
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = air_doctrine
+			}
 		
 		}
 	}
@@ -3839,12 +3840,12 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 3
-	      category = air_doctrine
-           }
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 3
+			category = air_doctrine
+			}
 		
 		}
 	}
@@ -3862,12 +3863,12 @@ add_building_construction = {
 			factor = 1
 		}
 	  completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 1
-	      category = naval_doctrine
-           }
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = naval_doctrine
+			}
       763 = {
       add_extra_state_shared_building_slots = 2
                 add_building_construction = {
@@ -4040,12 +4041,12 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 4
-	      category = naval_doctrine
-           }	
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 4
+			category = naval_doctrine
+			}	
 		}
 	}
 
@@ -4341,12 +4342,12 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = naval_doctrine
-           }	
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = naval_doctrine
+			}
 		}
 	}
 
@@ -4389,12 +4390,12 @@ add_building_construction = {
 			factor = 1
 		}
 			completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = naval_doctrine
-           }	
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = naval_doctrine
+			}
 		}
 	}
 

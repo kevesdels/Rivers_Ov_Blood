@@ -1496,6 +1496,10 @@ set_country_flag = fra_cw_over
 set_country_flag = fra_cw_sorel_win
 set_cosmetic_tag = FRS_victory 
 set_capital = { state = 16 }
+if = {
+	limit = { has_idea = fra_civil_war }
+	remove_ideas = { fra_civil_war }
+}
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1525,6 +1529,10 @@ set_country_flag = fra_cw_over
 set_country_flag = fra_cw_comm_win
 set_country_flag = frs_minigame_trigger
 set_capital = { state = 16 }
+if = {
+	limit = { has_idea = fra_civil_war }
+	remove_ideas = { fra_civil_war }
+}
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1553,6 +1561,10 @@ add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_rep_win
 set_capital = { state = 16 }
+if = {
+	limit = { has_idea = fra_civil_war }
+	remove_ideas = { fra_civil_war }
+}
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1574,6 +1586,7 @@ trigger = {
 	FRL = { exists = no }
 	FRR = { exists = no }
 	has_country_flag = FRA_civil_war
+	has_country_flag = FRA_petain_dictatorship
 }
 
 option = { 
@@ -1584,8 +1597,8 @@ if = {
 	remove_ideas = { fra_junta_buff }
 }
 if = {
-	limit = { has_idea = fra_junta_debuff }
-	remove_ideas = { fra_junta_debuff }
+	limit = { has_idea = fra_civil_war }
+	remove_ideas = { fra_civil_war }
 }
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_mil_win
@@ -1611,6 +1624,7 @@ trigger = {
 	FRL = { exists = no }
 	FRR = { exists = no }
 	has_country_flag = FRA_civil_war
+	has_country_flag = FRA_gaulle_dictatorship
 }
 
 option = { 
@@ -1623,6 +1637,10 @@ if = {
 if = {
 	limit = { has_idea = fra_junta_debuff }
 	remove_ideas = { fra_junta_debuff }
+}
+if = {
+	limit = { has_idea = fra_civil_war }
+	remove_ideas = { fra_civil_war }
 }
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_mil_win
@@ -1655,6 +1673,10 @@ add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_plk_win
 set_capital = { state = 16 }
+if = {
+	limit = { has_idea = fra_civil_war }
+	remove_ideas = { fra_civil_war }
+}
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
 }
@@ -1956,7 +1978,7 @@ set_politics = {
 	create_country_leader = {
 	  name = "Militar Junta"
 	  desc = ""
-	  picture = ""
+	  picture = "gfx/leaders/FRA/france_junta.dds"
 	  expire = "1953.3.1"
 	  ideology = military_junta
 	  traits = {

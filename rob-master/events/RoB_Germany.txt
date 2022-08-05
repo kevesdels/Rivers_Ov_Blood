@@ -945,49 +945,20 @@ fire_only_once = yes
 mean_time_to_happen = { days = 2 }
 
 trigger = {
-has_country_flag = south_holds
-has_country_flag = north_holds
-OR = {
-has_country_flag = GER_lux_ds_victory
-has_country_flag = GER_dem_victory
-has_country_flag = GER_lux_victory
-has_country_flag = GER_lux_nb_victory
-has_country_flag = GER_nb_vitory
-}
-}
-
-option = { ###Für Revolution! 
-name = spartakus_germany.19.a
-add_stability = 0.2
-add_political_power = 150
-set_country_flag = GER_socialists_hold
-set_country_flag = GER_south_secured
-set_country_flag = GER_north_secured	 
-}
-}
-
-country_event = { ###Socialists hold on
-id = spartakus_germany.31
-title = spartakus_germany.19.t
-desc = spartakus_germany.19.d
-fire_only_once = yes
-mean_time_to_happen = { days = 2 }
-
-trigger = {
-tag = GER
-BDB = { exists = no }
-BAV = { exists = no }
-OR = {
-has_country_flag = GER_BAV_rebbelion
-has_country_flag = GER_BDB_rebbelion
-}
-OR = {
-has_country_flag = GER_lux_ds_victory
-has_country_flag = GER_dem_victory
-has_country_flag = GER_lux_victory
-has_country_flag = GER_lux_nb_victory
-has_country_flag = GER_nb_vitory
-}
+  tag = GER
+  BDB = { exists = no }
+  BAV = { exists = no }
+  OR = {
+  has_country_flag = GER_BAV_rebbelion
+  has_country_flag = GER_BDB_rebbelion
+  }
+  OR = {
+  has_country_flag = GER_lux_ds_victory
+  has_country_flag = GER_dem_victory
+  has_country_flag = GER_lux_victory
+  has_country_flag = GER_lux_nb_victory
+  has_country_flag = GER_nb_vitory
+  }
 }
 
 option = { ###Für Revolution! 
@@ -1216,23 +1187,24 @@ country_event = {
  
    option = {
    name = "Refuse!"
-   GER = { create_wargoal = { type = annex_everything target = CZE } }
    ai_chance = {
-    factor = 20
+    factor = 5
    }
+   GER = { create_wargoal = { type = annex_everything target = CZE } }
   }
    option = {
    name = "Bend to German Will..."
-   GER = { 
-    set_state_owner = 888
-	set_state_owner = 74
-	set_state_owner = 887
-	set_state_owner = 69
-	set_state_owner = 886
-   }
    ai_chance = {
-    factor = 2000
+    factor = 5
    }
+   GER = { 
+    transfer_state = 888
+    transfer_state = 74
+    transfer_state = 887
+    transfer_state = 69
+    transfer_state = 886
+   }
+   CZE = { set_cosmetic_tag = Generic_puppet_socialist } 
   }
  }
 
@@ -1674,7 +1646,7 @@ picture = GFX_picture_russia_kazan
  
 trigger = {
  tag = GER
- has_country_flag = collapse3
+ has_country_flag = collapse4
 }
 
 mean_time_to_happen = { days = 3 }
@@ -1708,7 +1680,7 @@ picture = GFX_picture_russia_kazan
  
 trigger = {
  tag = GER
- has_country_flag = collapse3
+ has_country_flag = collapse5
 }
 
 mean_time_to_happen = { days = 3 }

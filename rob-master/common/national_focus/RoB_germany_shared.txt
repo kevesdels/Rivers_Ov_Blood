@@ -97,12 +97,12 @@
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 0.5
-	      uses = 1
-	      category = land_doctrine
-           }    
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}  
 		}
 	}
 
@@ -185,12 +185,12 @@
 			factor = 1
 		}
 		 	  completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = cat_mobile_warfare
-           }    
+				add_doctrine_cost_reduction = {
+					name = doctrine_bonus
+					cost_reduction = 0.5
+					uses = 2
+					category = cat_mobile_warfare
+				}
 		}
 		}
 
@@ -211,13 +211,13 @@
 		ai_will_do = {
 			factor = 1
 		}
-				 	  completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = cat_mobile_warfare
-           }    
+	  completion_reward = {
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_mobile_warfare
+		}
 		}
 	}
 
@@ -260,12 +260,12 @@
 			factor = 1
 		}
 	completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 4
-	      category = cat_superior_firepower
-           }    
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_superior_firepower
+		}
 		}
 	}
 
@@ -304,12 +304,12 @@
 			factor = 1
 		}
 	completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = cat_superior_firepower
-           }    
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_superior_firepower
+		}
 		}
 	}
 
@@ -326,12 +326,12 @@
 			factor = 1
 		}
 	completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = cat_mass_assault
-           }    
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_mass_assault
+		}
 		}
 	}
 
@@ -376,7 +376,7 @@
 		}
 		completion_reward = {
 		 add_ideas = {
-		  extensive_conscription
+		  service_by_requirement
 		 }
 		}
 	}
@@ -398,15 +398,13 @@
 		ai_will_do = {
 			factor = 1
 		}
-		 	completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 3
-	      category = cat_mass_assault
-           }    
-		}
 		completion_reward = {
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 3
+			category = cat_mass_assault
+		}
 		 add_tech_bonus = {
 	      name = para_bonus
 	      bonus = 1.0
@@ -465,12 +463,12 @@
 			factor = 1
 		}
 	  completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 0.75
-	      uses = 1
-	      category = land_doctrine
-           }    
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
 		}
 	}
 
@@ -490,6 +488,7 @@
 		}
 		completion_reward = {
          army_experience = 10
+		 add_research_slot = 1
 		}
 	}
 
@@ -509,6 +508,7 @@
 		}
 		completion_reward = {
          army_experience = 10
+		 add_research_slot = 1
 		}
 	}
 
@@ -571,7 +571,7 @@
 		}
 		completion_reward = {
 		 add_ideas = {
-		  limited_conscription
+		  extensive_conscription
 		 }
 		}
 	}
@@ -596,6 +596,7 @@
 		}
 		completion_reward = {
          army_experience = 10
+		 add_research_slot = 1
 		}
 		}
 
@@ -771,12 +772,12 @@
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = air_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = air_doctrine
-           }    
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = air_doctrine
+		}
 		}
 	}
 
@@ -812,12 +813,12 @@
 			factor = 1
 		}
 		completion_reward = {
-		 add_tech_bonus = {
-	      name = air_bonus
-	      bonus = 1.0
-	      uses = 2
-	      category = air_doctrine
-           }    
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = air_doctrine
+		}    
 		}
 	}
 
@@ -1043,12 +1044,12 @@
 			factor = 1
 		}
 	   completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 1.0
-	      uses = 3
-	      category = naval_doctrine
-           }    
+		   add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 3
+			category = naval_doctrine
+		}
 		}
 	}
 
@@ -1065,12 +1066,12 @@
 			factor = 1
 		}
 	   completion_reward = {
-		 add_tech_bonus = {
-	      name = doctrine_bonus
-	      bonus = 0.75
-	      uses = 2
-	      category = naval_doctrine
-           }    
+		add_doctrine_cost_reduction = {
+			name = doctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = naval_doctrine
+		}   
 		}
 	}
 
