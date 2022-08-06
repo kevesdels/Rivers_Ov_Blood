@@ -429,6 +429,7 @@ country_event = {
 	id = THR_rob_thr.17
 	title = THR_rob_thr.17.t
 	desc = THR_rob_thr.17.d
+	is_triggered_only = yes
 
 	picture = THR_the_parties-578
 	fire_only_once = yes
@@ -448,9 +449,7 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	trigger = {
-		AUS = {
-			date >  1934.1.5
-		}
+		date >  1934.1.5
 	}
 	option = {
 		name = THR_rob_thr.18.a
@@ -479,7 +478,8 @@ country_event = {
 	id = THR_rob_thr.20
 	title = THR_rob_thr.20.t
 	desc = THR_rob_thr.20.d
-
+	is_triggered_only = yes
+	
 	picture = THR_dollfuss_is_dead-1
 	fire_only_once = yes
 	option = {

@@ -8,7 +8,7 @@ add_namespace = fra_annex
 ### Darlan route stuff
 country_event = {
   id = fra_annex.0
-  desc = fra_annex.0.d
+  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
   title = "Fate of Switzerland"
   
   mean_time_to_happen = { days = 1 }
@@ -75,7 +75,7 @@ country_event = {
 
 country_event = {
   id = fra_annex.1
-  desc = fra_annex.1.d
+  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
   title = "Fate of Netherlands"
   
   mean_time_to_happen = { days = 1 }
@@ -169,7 +169,7 @@ country_event = {
 
  country_event = {
   id = fra_annex.2
-  desc = fra_annex.2.d
+  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
   title = "Fate of Portugal"
   
   mean_time_to_happen = { days = 1 }
@@ -398,7 +398,7 @@ country_event = {
 
 country_event = {
   id = fra_annex.4
-  desc = fra_annex.4.d
+  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
   title = "Fate of Italy"
   
   mean_time_to_happen = { days = 1 }
@@ -508,7 +508,7 @@ country_event = {
 
  country_event = {
   id = fra_annex.5
-  desc = fra_annex.5.d
+  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
   title = "Fate of Germany"
   
   mean_time_to_happen = { days = 1 }
@@ -517,6 +517,10 @@ country_event = {
     has_war = no
     GER = { NOT = { is_puppet_of = ROOT } }
     64 = { is_owned_and_controlled_by = ROOT }
+    52 = { is_owned_and_controlled_by = ROOT }
+    50 = { is_owned_and_controlled_by = ROOT }
+    1205 = { is_owned_and_controlled_by = ROOT }
+    795 = { is_owned_and_controlled_by = ROOT }
     has_country_flag = fra_admiral_route
     NOT = { has_country_flag = annex_ger }
   }

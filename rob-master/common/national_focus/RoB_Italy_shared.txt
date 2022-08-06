@@ -1,0 +1,1728 @@
+	#The Great Ones
+	shared_focus = {
+		id = ITA_the_great_ones
+		icon = GFX_goal_unknown
+		x = 5
+		y = 22
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_piedmontese_way_of_war  }
+	}
+
+	#Arditi E Feroci
+	shared_focus = {
+		id = ITA_arditi_e_feroci
+		icon = GFX_goal_unknown
+		x = 5
+		y = 23
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_the_great_ones  }
+	}
+
+	#Compagnie Della Morte
+	shared_focus = {
+		id = ITA_compagnie_della_morte
+		icon = GFX_goal_unknown
+		x = 3
+		y = 26
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ITA_assault_tactics  }
+	}
+
+	#Anti-Tank Tactics
+	shared_focus = {
+		id = ITA_antitank_tactics
+		icon = GFX_goal_unknown
+		x = 6
+		y = 26
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_shock_battalions  }
+	}
+
+	#Esercito Italiano
+	shared_focus = {
+		id = ITA_esercito_italiano
+		icon = GFX_goal_unknown
+		x = 15
+		y = 14
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+	}
+
+	#The Question of the Army
+	shared_focus = {
+		id = ITA_the_question_of_the_army
+		icon = GFX_goal_unknown
+		x = 15
+		y = 15
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_esercito_italiano  }
+	}
+
+	#La Grande Ristrutturazione
+	shared_focus = {
+		id = ITA_la_grande_ristrutturazione
+		icon = GFX_goal_unknown
+		x = 15
+		y = 16
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_the_question_of_the_army  }
+	}
+
+	#Secure Funding
+	shared_focus = {
+		id = ITA_secure_funding
+		icon = GFX_goal_unknown
+		x = 14
+		y = 17
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_la_grande_ristrutturazione  }
+	}
+
+	#The New War Academy
+	shared_focus = {
+		id = ITA_the_new_war_academy
+		icon = GFX_goal_unknown
+		x = 15
+		y = 19
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_mass_enlistement_of_officer_cadets  } prerequisite = { focus = ITA_new_military_culture  }
+	}
+
+	#Restaff the High Command
+	shared_focus = {
+		id = ITA_restaff_the_high_command
+		icon = GFX_goal_unknown
+		x = 16
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_la_grande_ristrutturazione  }
+	}
+
+	#Mass Enlistement of Officer Cadets
+	shared_focus = {
+		id = ITA_mass_enlistement_of_officer_cadets
+		icon = GFX_goal_unknown
+		x = 16
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_restaff_the_high_command  }
+	}
+
+	#New Military Culture
+	shared_focus = {
+		id = ITA_new_military_culture
+		icon = GFX_goal_unknown
+		x = 14
+		y = 18
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_secure_funding  }
+	}
+
+	#The Future of the Army
+	shared_focus = {
+		id = ITA_the_future_of_the_army
+		icon = GFX_goal_unknown
+		x = 15
+		y = 20
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_the_new_war_academy  }
+	}
+
+	#Piedmontese Way of War
+	shared_focus = {
+		id = ITA_piedmontese_way_of_war
+		icon = GFX_goal_unknown
+		x = 5
+		y = 21
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_the_future_of_the_army  }
+	}
+
+	#The Future of War
+	shared_focus = {
+		id = ITA_the_future_of_war
+		icon = GFX_goal_unknown
+		x = 15
+		y = 21
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_the_future_of_the_army  }
+	}
+
+	#Legacy of the Isonzo
+	shared_focus = {
+		id = ITA_legacy_of_the_isonzo
+		icon = GFX_goal_unknown
+		x = 14
+		y = 22
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_the_future_of_war  }
+	}
+
+	#Legacy of Vittorio Veneto
+	shared_focus = {
+		id = ITA_legacy_of_vittorio_veneto
+		icon = GFX_goal_unknown
+		x = 16
+		y = 22
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_the_future_of_war  }
+		mutually_exclusive = { focus = ITA_legacy_of_the_isonzo  }
+	}
+
+	#Legacy of Cadorna
+	shared_focus = {
+		id = ITA_legacy_of_cadorna
+		icon = GFX_goal_unknown
+		x = 12
+		y = 22
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_the_future_of_war  }
+		mutually_exclusive = { focus = ITA_legacy_of_vittorio_veneto  } mutually_exclusive = { focus = ITA_legacy_of_the_isonzo  }
+	}
+
+	#Legacy of Fiume
+	shared_focus = {
+		id = ITA_legacy_of_fiume
+		icon = GFX_goal_unknown
+		x = 18
+		y = 22
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_the_future_of_war  }
+		mutually_exclusive = { focus = ITA_legacy_of_the_isonzo  } mutually_exclusive = { focus = ITA_legacy_of_vittorio_veneto  } mutually_exclusive = { focus = ITA_legacy_of_cadorna  }
+	}
+
+	#Memory of Cambrai
+	shared_focus = {
+		id = ITA_memory_of_cambrai
+		icon = GFX_goal_unknown
+		x = 24
+		y = 21
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_the_future_of_the_army  }
+		mutually_exclusive = { focus = ITA_piedmontese_way_of_war  }
+	}
+
+	#Blocking Detachments
+	shared_focus = {
+		id = ITA_blocking_detachments
+		icon = GFX_goal_unknown
+		x = 12
+		y = 23
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_legacy_of_cadorna  }
+	}
+
+	#Army Traditions
+	shared_focus = {
+		id = ITA_army_traditions
+		icon = GFX_goal_unknown
+		x = 10
+		y = 22
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_piedmontese_way_of_war  }
+	}
+
+	#Reform the Arditi Units
+	shared_focus = {
+		id = ITA_reform_the_arditi_units
+		icon = GFX_goal_unknown
+		x = 2
+		y = 24
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_arditi_e_feroci  }
+	}
+
+	#Bravery of the Bersaglieri
+	shared_focus = {
+		id = ITA_bravery_of_the_bersaglieri
+		icon = GFX_goal_unknown
+		x = 5
+		y = 24
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_arditi_e_feroci  }
+	}
+
+	#The Defenders of the Alps
+	focus = {
+		id = ITA_the_defenders_of_the_alps
+		icon = GFX_goal_unknown
+		x = 8
+		y = 24
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_arditi_e_feroci  }
+	}
+
+	#Assault Tactics
+	shared_focus = {
+		id = ITA_assault_tactics
+		icon = GFX_goal_unknown
+		x = 3
+		y = 25
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_reform_the_arditi_units  }
+	}
+
+	#The Bayonet and the Grenade
+	shared_focus = {
+		id = ITA_the_bayonet_and_the_grenade
+		icon = GFX_goal_unknown
+		x = 1
+		y = 25
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_reform_the_arditi_units  }
+	}
+
+	#Way of the Romans
+	shared_focus = {
+		id = ITA_way_of_the_romans
+		icon = GFX_goal_unknown
+		x = 10
+		y = 23
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_army_traditions  }
+	}
+
+	#Cannone da 149/40
+	shared_focus = {
+		id = ITA_cannoneda14940
+		icon = GFX_goal_unknown
+		x = 10
+		y = 24
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_way_of_the_romans  }
+	}
+
+	#O la vittoria, o tutti accoppati
+	shared_focus = {
+		id = ITA_olavittoriaotuttiaccoppati
+		icon = GFX_goal_unknown
+		x = 2
+		y = 27
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_compagnie_della_morte  } prerequisite = { focus = ITA_best_of_the_best  }
+	}
+
+	#Best of the Best
+	shared_focus = {
+		id = ITA_best_of_the_best
+		icon = GFX_goal_unknown
+		x = 1
+		y = 26
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_the_bayonet_and_the_grenade  }
+	}
+
+	#Recon by Fire
+	shared_focus = {
+		id = ITA_recon_by_fire
+		icon = GFX_goal_unknown
+		x = 4
+		y = 25
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_bravery_of_the_bersaglieri  }
+	}
+
+	#Shock Battalions
+	shared_focus = {
+		id = ITA_shock_battalions
+		icon = GFX_goal_unknown
+		x = 6
+		y = 25
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_bravery_of_the_bersaglieri  }
+		mutually_exclusive = { focus = ITA_recon_by_fire  }
+	}
+
+	#Modern Exploratores
+	shared_focus = {
+		id = ITA_modern_exploratores
+		icon = GFX_goal_unknown
+		x = 4
+		y = 26
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_recon_by_fire  }
+	}
+
+	#Ictu Impetuque Primus
+	shared_focus = {
+		id = ITA_ictu_impetuque_primus
+		icon = GFX_goal_unknown
+		x = 5
+		y = 27
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_modern_exploratores  focus = ITA_antitank_tactics  }
+	}
+
+	#Pack Artillery
+	shared_focus = {
+		id = ITA_pack_artillery
+		icon = GFX_goal_unknown
+		x = 9
+		y = 25
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_the_defenders_of_the_alps  }
+	}
+
+	#Di qui non si Passa!
+	shared_focus = {
+		id = ITA_diquinonsipassa
+		icon = GFX_goal_unknown
+		x = 8
+		y = 27
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_nomattertheterrain  } prerequisite = { focus = ITA_modern_artillery_tactics  }
+	}
+
+	#Cadets of the Alps
+	shared_focus = {
+		id = ITA_cadets_of_the_alps
+		icon = GFX_goal_unknown
+		x = 7
+		y = 25
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_the_defenders_of_the_alps  }
+	}
+
+	#No Matter the Terrain!
+	shared_focus = {
+		id = ITA_nomattertheterrain
+		icon = GFX_goal_unknown
+		x = 7
+		y = 26
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_cadets_of_the_alps  }
+	}
+
+	#Modern Artillery Tactics
+	shared_focus = {
+		id = ITA_modern_artillery_tactics
+		icon = GFX_goal_unknown
+		x = 9
+		y = 26
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_pack_artillery  }
+	}
+
+	#Death to the Enemy!
+	shared_focus = {
+		id = ITA_deathtotheenemy
+		icon = GFX_goal_unknown
+		x = 5
+		y = 28
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_olavittoriaotuttiaccoppati  } prerequisite = { focus = ITA_ictu_impetuque_primus  } prerequisite = { focus = ITA_diquinonsipassa  }
+	}
+
+	#Corpo Logistico Italiano
+	shared_focus = {
+		id = ITA_corpo_logistico_italiano
+		icon = GFX_goal_unknown
+		x = 10
+		y = 25
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_cannoneda14940  }
+	}
+
+	#Tuscan Example
+	shared_focus = {
+		id = ITA_tuscan_example
+		icon = GFX_goal_unknown
+		x = 12
+		y = 24
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_blocking_detachments  }
+	}
+
+	#The P20 Project
+	shared_focus = {
+		id = ITA_the_p20_project
+		icon = GFX_goal_unknown
+		x = 24
+		y = 24
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_improved_engines  }
+	}
+
+	#Standardise the Artillery
+	shared_focus = {
+		id = ITA_standardise_the_artillery
+		icon = GFX_goal_unknown
+		x = 14
+		y = 23
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_legacy_of_the_isonzo  }
+	}
+
+	#The God of War
+	shared_focus = {
+		id = ITA_the_god_of_war
+		icon = GFX_goal_unknown
+		x = 14
+		y = 24
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_standardise_the_artillery  }
+	}
+
+	#Shovel and Bayonet
+	shared_focus = {
+		id = ITA_shovel_and_bayonet
+		icon = GFX_goal_unknown
+		x = 16
+		y = 23
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_legacy_of_vittorio_veneto  }
+	}
+
+	#The Italian General Staff
+	shared_focus = {
+		id = ITA_the_italian_general_staff
+		icon = GFX_goal_unknown
+		x = 16
+		y = 24
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_shovel_and_bayonet  }
+	}
+
+	#A Mechanized Army
+	shared_focus = {
+		id = ITA_a_mechanized_army
+		icon = GFX_goal_unknown
+		x = 18
+		y = 23
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_legacy_of_fiume  }
+	}
+
+	#Corpo di Carri Armati
+	shared_focus = {
+		id = ITA_corpo_di_carri_armati
+		icon = GFX_goal_unknown
+		x = 18
+		y = 24
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_a_mechanized_army  }
+	}
+
+	#Dottrina Perfecta
+	shared_focus = {
+		id = ITA_dottrina_perfecta
+		icon = GFX_goal_unknown
+		x = 15
+		y = 25
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_tuscan_example  focus = ITA_the_god_of_war  focus = ITA_the_italian_general_staff  focus = ITA_corpo_di_carri_armati  }
+	}
+
+	#Italian Home Army
+	shared_focus = {
+		id = ITA_italian_home_army
+		icon = GFX_goal_unknown
+		x = 27
+		y = 22
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_memory_of_cambrai  }
+	}
+
+	#Youth Rifleman
+	shared_focus = {
+		id = ITA_youth_rifleman
+		icon = GFX_goal_unknown
+		x = 28
+		y = 23
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_italian_home_army  }
+	}
+
+	#Form Riflemen's Clubs
+	shared_focus = {
+		id = ITA_formriflemensclubs
+		icon = GFX_goal_unknown
+		x = 26
+		y = 23
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_italian_home_army  }
+	}
+
+	#Form an National Guard
+	shared_focus = {
+		id = ITA_form_an_national_guard
+		icon = GFX_goal_unknown
+		x = 26
+		y = 24
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_formriflemensclubs  }
+	}
+
+	#Mass Gun Ownership
+	shared_focus = {
+		id = ITA_mass_gun_ownership
+		icon = GFX_goal_unknown
+		x = 28
+		y = 24
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_youth_rifleman  }
+	}
+
+	#Assymetrical Warfare
+	shared_focus = {
+		id = ITA_assymetrical_warfare
+		icon = GFX_goal_unknown
+		x = 27
+		y = 25
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ITA_form_an_national_guard  } prerequisite = { focus = ITA_mass_gun_ownership  }
+	}
+
+	#Militare Perfecto
+	shared_focus = {
+		id = ITA_militare_perfecto
+		icon = GFX_goal_unknown
+		x = 21
+		y = 22
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_memory_of_cambrai  }
+	}
+
+	#Masters of Maneuver
+	shared_focus = {
+		id = ITA_masters_of_maneuver
+		icon = GFX_goal_unknown
+		x = 20
+		y = 23
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_militare_perfecto  }
+	}
+
+	#Divisione Binaria
+	shared_focus = {
+		id = ITA_divisione_binaria
+		icon = GFX_goal_unknown
+		x = 20
+		y = 24
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_masters_of_maneuver  }
+	}
+
+	#Mass Motorisation
+	shared_focus = {
+		id = ITA_mass_motorisation
+		icon = GFX_goal_unknown
+		x = 22
+		y = 23
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_militare_perfecto  }
+	}
+
+	#Forza Italia!
+	shared_focus = {
+		id = ITA_forzaitalia
+		icon = GFX_goal_unknown
+		x = 22
+		y = 24
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_mass_motorisation  }
+	}
+
+	#Fast as Lightning
+	shared_focus = {
+		id = ITA_fast_as_lightning
+		icon = GFX_goal_unknown
+		x = 21
+		y = 25
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_divisione_binaria  } prerequisite = { focus = ITA_forzaitalia  }
+	}
+
+	#Cavalry of the Future!
+	shared_focus = {
+		id = ITA_cavalryofthefuture
+		icon = GFX_goal_unknown
+		x = 24
+		y = 22
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_memory_of_cambrai  }
+	}
+
+	#Improved Engines
+	shared_focus = {
+		id = ITA_improved_engines
+		icon = GFX_goal_unknown
+		x = 24
+		y = 23
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_cavalryofthefuture  }
+	}
+
+	#Vincere! Vincere! Vincere!
+	shared_focus = {
+		id = ITA_vincerevincerevincere
+		icon = GFX_goal_unknown
+		x = 24
+		y = 26
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_fast_as_lightning  } prerequisite = { focus = ITA_the_p20_project  } prerequisite = { focus = ITA_assymetrical_warfare  }
+	}
+
+	#The Greatest Army
+	shared_focus = {
+		id = ITA_the_greatest_army
+		icon = GFX_goal_unknown
+		x = 15
+		y = 29
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_dottrina_perfecta  } prerequisite = { focus = ITA_vincerevincerevincere  focus = ITA_dottrina_perfecta  } prerequisite = { focus = ITA_deathtotheenemy  }
+	}
+
+	#Regia Marina
+	shared_focus = {
+		id = ITA_regia_marina
+		icon = GFX_goal_unknown
+		x = 36
+		y = 14
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Reinforce the Adriatic
+	shared_focus = {
+		id = ITA_reinforce_the_adriatic
+		icon = GFX_goal_unknown
+		x = 34
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_regia_marina  }
+	}
+
+	#The Italian Naval Industry
+	shared_focus = {
+		id = ITA_the_italian_naval_industry
+		icon = GFX_goal_unknown
+		x = 38
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_regia_marina  }
+	}
+
+	#Colonial Defences
+	shared_focus = {
+		id = ITA_colonial_defences
+		icon = GFX_goal_unknown
+		x = 36
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_regia_marina  }
+	}
+
+	#The Future of the Marina
+	shared_focus = {
+		id = ITA_the_future_of_the_marina
+		icon = GFX_goal_unknown
+		x = 36
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_reinforce_the_adriatic  } prerequisite = { focus = ITA_the_italian_naval_industry  } prerequisite = { focus = ITA_colonial_defences  }
+	}
+
+	#The San Marco Brigade
+	shared_focus = {
+		id = ITA_the_san_marco_brigade
+		icon = GFX_goal_unknown
+		x = 36
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_the_future_of_the_marina  }
+	}
+
+	#Expand Past the Brigade
+	shared_focus = {
+		id = ITA_expand_past_the_brigade
+		icon = GFX_goal_unknown
+		x = 35
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_the_san_marco_brigade  }
+	}
+
+	#Amphibious Operation Warplans
+	shared_focus = {
+		id = ITA_amphibious_operation_warplans
+		icon = GFX_goal_unknown
+		x = 37
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_the_san_marco_brigade  }
+	}
+
+	#Form the Decima Flottiglia MAS
+	shared_focus = {
+		id = ITA_form_the_decima_flottiglia_mas
+		icon = GFX_goal_unknown
+		x = 36
+		y = 19
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_expand_past_the_brigade  } prerequisite = { focus = ITA_amphibious_operation_warplans  }
+	}
+
+	#Battleship Navy
+	shared_focus = {
+		id = ITA_battleship_navy
+		icon = GFX_goal_unknown
+		x = 33
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_reinforce_the_adriatic  } prerequisite = { focus = ITA_the_italian_naval_industry  } prerequisite = { focus = ITA_colonial_defences  }
+	}
+
+	#Carrier Navy
+	shared_focus = {
+		id = ITA_carrier_navy
+		icon = GFX_goal_unknown
+		x = 39
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_reinforce_the_adriatic  } prerequisite = { focus = ITA_the_italian_naval_industry  } prerequisite = { focus = ITA_colonial_defences  }
+		mutually_exclusive = { focus = ITA_battleship_navy  }
+	}
+
+	#New Battleship Designs
+	shared_focus = {
+		id = ITA_new_battleship_designs
+		icon = GFX_goal_unknown
+		x = 32
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_battleship_navy  }
+	}
+
+	#Perfected Production Method
+	shared_focus = {
+		id = ITA_perfected_production_method
+		icon = GFX_goal_unknown
+		x = 32
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_new_battleship_designs  }
+	}
+
+	#New Destroyers
+	shared_focus = {
+		id = ITA_new_destroyers
+		icon = GFX_goal_unknown
+		x = 34
+		y = 17
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_battleship_navy  }
+	}
+
+	#The Italian Naval Doctrine
+	shared_focus = {
+		id = ITA_the_italian_naval_doctrine
+		icon = GFX_goal_unknown
+		x = 34
+		y = 18
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_new_destroyers  }
+	}
+
+	#Regia Aeronautica
+	shared_focus = {
+		id = ITA_regia_aeronautica
+		icon = GFX_goal_unknown
+		x = 47
+		y = 15
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	#Specialty of the Navy
+	shared_focus = {
+		id = ITA_specialty_of_the_navy
+		icon = GFX_goal_unknown
+		x = 33
+		y = 19
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_perfected_production_method  } prerequisite = { focus = ITA_the_italian_naval_doctrine  }
+	}
+
+	#Improved Fire Control
+	shared_focus = {
+		id = ITA_improved_fire_control
+		icon = GFX_goal_unknown
+		x = 34
+		y = 20
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_specialty_of_the_navy  }
+	}
+
+	#Italian Range Finders
+	shared_focus = {
+		id = ITA_italian_range_finders
+		icon = GFX_goal_unknown
+		x = 32
+		y = 20
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_specialty_of_the_navy  }
+	}
+
+	#The Italian Supermarina
+	shared_focus = {
+		id = ITA_the_italian_supermarina
+		icon = GFX_goal_unknown
+		x = 33
+		y = 21
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_improved_fire_control  } prerequisite = { focus = ITA_italian_range_finders  }
+	}
+
+	#Italian Destroyers
+	shared_focus = {
+		id = ITA_italian_destroyers
+		icon = GFX_goal_unknown
+		x = 38
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_carrier_navy  }
+	}
+
+	#The Aquila and Sparviero
+	shared_focus = {
+		id = ITA_the_aquila_and_sparviero
+		icon = GFX_goal_unknown
+		x = 40
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_carrier_navy  }
+	}
+
+	#Naval Airforce
+	shared_focus = {
+		id = ITA_naval_airforce
+		icon = GFX_goal_unknown
+		x = 40
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_the_aquila_and_sparviero  }
+	}
+
+	#Superior Destroyer Tactics
+	shared_focus = {
+		id = ITA_superior_destroyer_tactics
+		icon = GFX_goal_unknown
+		x = 38
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_italian_destroyers  }
+	}
+
+	#Death From Above!
+	shared_focus = {
+		id = ITA_deathfromabove
+		icon = GFX_goal_unknown
+		x = 39
+		y = 19
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_naval_airforce  } prerequisite = { focus = ITA_superior_destroyer_tactics  }
+	}
+
+	#Mass Naval Bomber Production
+	shared_focus = {
+		id = ITA_mass_naval_bomber_production
+		icon = GFX_goal_unknown
+		x = 39
+		y = 20
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ITA_deathfromabove  }
+	}
+
+	#Return of Devotio
+	shared_focus = {
+		id = ITA_return_of_devotio
+		icon = GFX_goal_unknown
+		x = 39
+		y = 21
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_mass_naval_bomber_production  }
+	}
+
+	#Mare Nostrum
+	shared_focus = {
+		id = ITA_mare_nostrum
+		icon = GFX_goal_unknown
+		x = 36
+		y = 22
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_form_the_decima_flottiglia_mas  } prerequisite = { focus = ITA_return_of_devotio  focus = ITA_the_italian_supermarina  } prerequisite = { focus = ITA_form_the_decima_flottiglia_mas  }
+	}
+
+	#Citta dell'Aria
+	shared_focus = {
+		id = ITA_cittadellaria
+		icon = GFX_goal_unknown
+		x = 47
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_regia_aeronautica  }
+	}
+
+	#Cooperation with the Navy and Airforce
+	shared_focus = {
+		id = ITA_cooperation_with_the_navy_and_airforce
+		icon = GFX_goal_unknown
+		x = 42
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_cittadellaria  } prerequisite = { focus = ITA_carrier_navy  }
+	}
+
+	#Increase Plane production
+	shared_focus = {
+		id = ITA_increase_plane_production
+		icon = GFX_goal_unknown
+		x = 48
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_foreignpartsitalianplanes  }
+	}
+
+	#Foreign Parts, Italian planes
+	shared_focus = {
+		id = ITA_foreignpartsitalianplanes
+		icon = GFX_goal_unknown
+		x = 49
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_cittadellaria  }
+	}
+
+	#Prepare the Groundwork
+	shared_focus = {
+		id = ITA_prepare_the_groundwork
+		icon = GFX_goal_unknown
+		x = 44
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ITA_fully_domestic_airial_industry  }
+	}
+
+	#Foreign Instructors
+	shared_focus = {
+		id = ITA_foreign_instructors
+		icon = GFX_goal_unknown
+		x = 50
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_foreignpartsitalianplanes  }
+	}
+
+	#Fully Domestic Airial Industry
+	shared_focus = {
+		id = ITA_fully_domestic_airial_industry
+		icon = GFX_goal_unknown
+		x = 45
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_cittadellaria  }
+		mutually_exclusive = { focus = ITA_foreignpartsitalianplanes  }
+	}
+
+	#Jobs for Italians
+	shared_focus = {
+		id = ITA_jobs_for_italians
+		icon = GFX_goal_unknown
+		x = 46
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_fully_domestic_airial_industry  }
+	}
+
+	#Priority on Fighters
+	shared_focus = {
+		id = ITA_priority_on_fighters
+		icon = GFX_goal_unknown
+		x = 45
+		y = 19
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_prepare_the_groundwork  } prerequisite = { focus = ITA_jobs_for_italians  }
+	}
+
+	#Superior Planes
+	shared_focus = {
+		id = ITA_superior_planes
+		icon = GFX_goal_unknown
+		x = 49
+		y = 19
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_increase_plane_production  } prerequisite = { focus = ITA_foreign_instructors  }
+	}
+
+	#Airforce of the Future
+	shared_focus = {
+		id = ITA_airforce_of_the_future
+		icon = GFX_goal_unknown
+		x = 47
+		y = 20
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ITA_priority_on_fighters  } prerequisite = { focus = ITA_superior_planes  }
+	}
+
+	#Adaptable Pilots
+	shared_focus = {
+		id = ITA_adaptable_pilots
+		icon = GFX_goal_unknown
+		x = 48
+		y = 21
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_airforce_of_the_future  }
+	}
+
+	#Improved Training
+	shared_focus = {
+		id = ITA_improved_training
+		icon = GFX_goal_unknown
+		x = 46
+		y = 21
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_airforce_of_the_future  }
+	}
+
+	#Virtute Siderum Tenus
+	shared_focus = {
+		id = ITA_virtute_siderum_tenus
+		icon = GFX_goal_unknown
+		x = 47
+		y = 22
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_adaptable_pilots  } prerequisite = { focus = ITA_improved_training  }
+	}
+
+	#Devalue the Lira
+	shared_focus = {
+		id = ITA_devalue_the_lira
+		icon = GFX_goal_unknown
+		x = 56
+		y = 15
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	#Deficit Spending
+	shared_focus = {
+		id = ITA_deficit_spending
+		icon = GFX_goal_unknown
+		x = 54
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_devalue_the_lira  }
+	}
+
+	#Corporatism
+	shared_focus = {
+		id = ITA_corporatism
+		icon = GFX_goal_unknown
+		x = 58
+		y = 16
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_devalue_the_lira  }
+		mutually_exclusive = { focus = ITA_deficit_spending  }
+	}
+
+	#The RAI
+	shared_focus = {
+		id = ITA_the_rai
+		icon = GFX_goal_unknown
+		x = 52
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_deficit_spending  }
+	}
+
+	#Backing Struggling Banks
+	shared_focus = {
+		id = ITA_backing_struggling_banks
+		icon = GFX_goal_unknown
+		x = 54
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_deficit_spending  }
+	}
+
+	#The Ansaldo Trust
+	shared_focus = {
+		id = ITA_the_ansaldo_trust
+		icon = GFX_goal_unknown
+		x = 52
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_the_rai  }
+	}
+
+	#Reinforce Free Trade Policies
+	shared_focus = {
+		id = ITA_reinforce_free_trade_policies
+		icon = GFX_goal_unknown
+		x = 54
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_backing_struggling_banks  }
+	}
+
+	#Develop the 'Industrial Triangle'
+	shared_focus = {
+		id = ITA_developtheindustrialtriangle
+		icon = GFX_goal_unknown
+		x = 53
+		y = 19
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_the_ansaldo_trust  } prerequisite = { focus = ITA_reinforce_free_trade_policies  }
+	}
+
+	#Connected Railroads
+	shared_focus = {
+		id = ITA_connected_railroads
+		icon = GFX_goal_unknown
+		x = 56
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_deficit_spending  focus = ITA_corporatism  }
+	}
+
+	#The Lagging South
+	shared_focus = {
+		id = ITA_the_lagging_south
+		icon = GFX_goal_unknown
+		x = 56
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_connected_railroads  }
+	}
+
+	#United Industry
+	shared_focus = {
+		id = ITA_united_industry
+		icon = GFX_goal_unknown
+		x = 56
+		y = 19
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_the_lagging_south  }
+	}
+
+	#Modern Farming
+	shared_focus = {
+		id = ITA_modern_farming
+		icon = GFX_goal_unknown
+		x = 54
+		y = 20
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_developtheindustrialtriangle  } prerequisite = { focus = ITA_united_industry  }
+	}
+
+	#National Industry
+	shared_focus = {
+		id = ITA_national_industry
+		icon = GFX_goal_unknown
+		x = 52
+		y = 20
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_developtheindustrialtriangle  }
+	}
+
+	#National Agriculture
+	shared_focus = {
+		id = ITA_national_agriculture
+		icon = GFX_goal_unknown
+		x = 54
+		y = 21
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = ITA_modern_farming  } prerequisite = { focus = ITA_national_industry  }
+	}
+
+	#The Battle for the Lira
+	shared_focus = {
+		id = ITA_the_battle_for_the_lira
+		icon = GFX_goal_unknown
+		x = 58
+		y = 17
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ITA_corporatism  }
+	}
+
+	#Found the IRI
+	shared_focus = {
+		id = ITA_found_the_iri
+		icon = GFX_goal_unknown
+		x = 60
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ITA_the_battle_for_the_lira  }
+	}
+
+	#Agricultural Self Sufficiency
+	shared_focus = {
+		id = ITA_agricultural_self_sufficiency
+		icon = GFX_goal_unknown
+		x = 58
+		y = 19
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ITA_the_grain_campaign  }
+	}
+
+	#Introduce Protectionism
+	shared_focus = {
+		id = ITA_introduce_protectionism
+		icon = GFX_goal_unknown
+		x = 60
+		y = 19
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ITA_found_the_iri  }
+	}
+
+	#Nationalise the Banks
+	shared_focus = {
+		id = ITA_nationalise_the_banks
+		icon = GFX_goal_unknown
+		x = 58
+		y = 20
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ITA_united_industry  } prerequisite = { focus = ITA_agricultural_self_sufficiency  }
+	}
+
+	#The Grain Campaign
+	shared_focus = {
+		id = ITA_the_grain_campaign
+		icon = GFX_goal_unknown
+		x = 58
+		y = 18
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ITA_the_battle_for_the_lira  }
+	}
+
+	#State Ownership
+	shared_focus = {
+		id = ITA_state_ownership
+		icon = GFX_goal_unknown
+		x = 60
+		y = 20
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ITA_agricultural_self_sufficiency  } prerequisite = { focus = ITA_introduce_protectionism  }
+	}
+
+	#Exploit the Po Valley
+	shared_focus = {
+		id = ITA_exploit_the_po_valley
+		icon = GFX_goal_unknown
+		x = 56
+		y = 21
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ITA_modern_farming  focus = ITA_nationalise_the_banks  }
+	}
+
+	#Italian Autarky
+	shared_focus = {
+		id = ITA_italian_autarky
+		icon = GFX_goal_unknown
+		x = 58
+		y = 21
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ITA_nationalise_the_banks  } prerequisite = { focus = ITA_state_ownership  }
+	}
+
+	#The Italian Economic Miracle
+	shared_focus = {
+		id = ITA_the_italian_economic_miracle
+		icon = GFX_goal_unknown
+		x = 56
+		y = 22
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ITA_national_agriculture  } prerequisite = { focus = ITA_exploit_the_po_valley  } prerequisite = { focus = ITA_italian_autarky  }
+	}
+

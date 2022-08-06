@@ -1009,3 +1009,35 @@ name = "Failure"
 }
 
 }
+
+
+###DEBUG
+
+country_event = { ###For Loading italian political trees
+id = republican_italy.1000
+title = "Load in focus tree"
+desc = "Do it"
+fire_only_once = yes
+is_triggered_only = yes
+
+option = {
+	name = "Pelekist tree"
+	load_focus_tree = italy_pelekist
+	}
+
+option = {
+	name = "Reactionary tree"
+	load_focus_tree = italy_army_tree
+	}
+
+option = {
+	name = "Socialist tree"
+	load_focus_tree = italy_socialist
+	}
+
+option = {
+	name = "Democrat tree"
+		custom_effect_tooltip = "Nothing here"
+	}	
+
+}

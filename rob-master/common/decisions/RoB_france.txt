@@ -567,14 +567,14 @@ FRA_war_Darlan = {
 				WLL = { exists = yes }
 				NOT = { WLL = { is_in_faction_with = ROOT } }
 			   }
-			   ROOT = { declare_war_on = { target = HOL type = annex_everything } }
+			   ROOT = { declare_war_on = { target = WLL type = annex_everything } }
 		   }
 		   if = {
 			 limit = {
 				FLA = { exists = yes }
 				NOT = { FLA = { is_in_faction_with = ROOT } }
 			 }
-			 ROOT = { declare_war_on = { target = HOL type = annex_everything } }
+			 ROOT = { declare_war_on = { target = FLA type = annex_everything } }
 		 }
 		 if = {
 			limit = {
