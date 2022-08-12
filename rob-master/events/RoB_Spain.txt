@@ -230,8 +230,13 @@ country_event = {
   ai_chance = {
 	factor = 80
 	}
+	trigger = {
+		OR = {
+			POR = { surrender_progress > 0.5 }
+			is_ai = NO
+		}
+	}
 
-   POR = { surrender_progress > 0.5 }
    SPR = { white_peace = POR }
    add_stability =-0.1
    SPR = { transfer_state = 171 }
@@ -265,7 +270,12 @@ country_event = {
   ai_chance = {
 	factor = 100
 	}
-   POR = { surrender_progress > 0.7 }
+	trigger = {
+		OR = {
+			POR = { surrender_progress > 0.7 }
+			is_ai = NO
+		}
+	}
    SPR = { puppet = POR }
    add_stability =-0.2
    SPR = { white_peace = POR }

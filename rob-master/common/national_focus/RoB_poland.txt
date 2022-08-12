@@ -123,8 +123,8 @@ focus_tree = {
  	 	}
 		completion_reward = {
 			create_wargoal = { target = LIT  type = annex_everything }
-			will_lead_to_war_with = LIT
 		}
+		will_lead_to_war_with = LIT
 	}
 
 
@@ -372,6 +372,7 @@ focus_tree = {
 		mutually_exclusive = { focus = POL_the_polish_socialist_party  }
 		completion_reward = {
 			custom_effect_tooltip = pol_tt_1
+			load_focus_tree = { tree = rob_poland_vanguard keep_completed = yes }
 		}
 	}
 

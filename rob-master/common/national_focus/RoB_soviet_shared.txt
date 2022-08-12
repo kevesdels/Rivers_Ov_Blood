@@ -3309,9 +3309,9 @@ completion_reward = {
 				type = annex_everything
 				target = POL
 			}
-			will_lead_to_war_with = POL
 		}
 	}
+	will_lead_to_war_with = POL
 }
 
 #The Bread Basket of Europe
@@ -3715,14 +3715,12 @@ ai_will_do = {
 					DSU = { exists = yes SOCIALIST_ALIGNED_GOVERNMENT = no }
 				}
 				DSU = { country_event = { id = bolshevik_russia.99 days = 3 } }
-				will_lead_to_war_with = DSU
 			}
 			if = {
 				limit = {
 					CBR = { exists = yes SOCIALIST_ALIGNED_GOVERNMENT = no }
 				}
 				CBR = { country_event = { id = bolshevik_russia.99 days = 3 } }
-				will_lead_to_war_with = CBR
 			}
 		}
 	}

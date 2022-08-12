@@ -28,24 +28,6 @@ set_technology = {
 
 set_convoys = 10
 
-set_politics = {
-	ruling_party = conservative
-	last_election = "1933.7.1"
-	election_frequency = 48
-	elections_allowed = no
-}
-set_popularities = {
-	national_socialist = 0
-	socialist = 0
-	democratic_socialist = 6
-	social_democracy = 22
-	social_liberal = 7
-	conservative = 33
-	authoritharian = 12
-	reactionary = 12
-	pelekist = 8
-}
-
 recruit_character = LIT_kazys_ladiga
 recruit_character = LIT_vincas_vitkauskas
 recruit_character = LIT_aleksandras_stulginskis
@@ -69,3 +51,22 @@ recruit_character = LIT_jurgis_dobkevicius
 recruit_character = LIT_jonas_berzanskis
 recruit_character = LIT_visuomis
 recruit_character = LIT_vladas_mironas
+
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 6
+	social_democracy = 22
+	social_liberal = 7
+	conservative = 33
+	authoritharian = 12
+	reactionary = 12
+	pelekist = 8
+}

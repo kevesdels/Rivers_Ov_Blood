@@ -1014,33 +1014,33 @@ focus_tree = {
 				limit = { FRA = { exists = yes is_puppet = no } }
 				
 				create_wargoal = { type = annex_everything target = FRA }
-				will_lead_to_war_with = FRA
 			}
 			if = { 
 				limit = { FRR = { exists = yes is_puppet = no } }
 				
 				create_wargoal = { type = annex_everything target = FRR }
-				will_lead_to_war_with = FRR
 			}
 			if = { 
 				limit = { FRS = { exists = yes is_puppet = no } }
 				
 				create_wargoal = { type = annex_everything target = FRS }
-				will_lead_to_war_with = FRS
 			}
 			if = { 
 				limit = { FRL = { exists = yes is_puppet = no } }
 				
 				create_wargoal = { type = annex_everything target = FRL }
-				will_lead_to_war_with = FRL
 			}
 			if = { 
 				limit = { FRP = { exists = yes is_puppet = no } }
 				
 				create_wargoal = { type = annex_everything target = FRP }
-				will_lead_to_war_with = FRP
 			}
 		}
+		will_lead_to_war_with = FRA
+		will_lead_to_war_with = FRR
+		will_lead_to_war_with = FRS
+		will_lead_to_war_with = FRL
+		will_lead_to_war_with = FRP
 	}
 
 	#Destiny Still Arrives
@@ -1600,9 +1600,6 @@ focus_tree = {
 
 			has_completed_focus = SPR_our_own_aircraft_carriers
 
-			has_completed_focus = SPR_nuclear_power
-
-			
 		}
 		completion_reward = {
 			country_event = {
