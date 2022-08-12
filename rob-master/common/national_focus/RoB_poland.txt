@@ -2292,10 +2292,10 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { GER = { exists = yes } }
-				will_lead_to_war_with = GER
 			create_wargoal = { target = GER  type = annex_everything }
 			}
 		}
+		will_lead_to_war_with = GER
 	}
 
 	#Convince Through Force
@@ -2324,10 +2324,10 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { UKR = { exists = yes } }
-				will_lead_to_war_with = UKR
 			create_wargoal = { target = UKR  type = annex_everything }
 			}
 		}
+		will_lead_to_war_with = UKR
 	}
 
 	#Seek Friends in France
@@ -2517,10 +2517,10 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { PRS = { exists = yes } }
-				will_lead_to_war_with = PRS
 			create_wargoal = { target = PRS  type = annex_everything }
 			}
 		}
+		will_lead_to_war_with = PRS
 	}
 
 	#One man enters
@@ -2620,9 +2620,9 @@ focus_tree = {
                 POL_adam_tarnowski_dm
             	}
 			create_country_leader = {
-				name = "Fryderyk Krystian"
+				name = "George von Sachsen"
 				desc = ""
-				picture = "Georg_Crown_Prince_of_Saxony.tga"
+				picture = "gfx/leaders/POL/Georg_Crown_Prince_of_Saxony.tga"
 				expire = "1965.1.1"
 				ideology = reactionary_monarchy 
 				traits = { new_monarch }
@@ -3031,20 +3031,29 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { UKR = { exists = yes } }
-				will_lead_to_war_with = UKR
 			create_wargoal = { target = UKR  type = annex_everything }
 			}
 			if = {
 				limit = { DSU = { exists = yes } }
-				will_lead_to_war_with = DSU
 			create_wargoal = { target = DSU  type = annex_everything }
 			}
 			if = {
 				limit = { FTT = { exists = yes } }
-				will_lead_to_war_with = FTT
 			create_wargoal = { target = FTT  type = annex_everything }
 			}
+			every_country = {
+				limit = { NOT = { is_in_faction_with = POL } OR = { owns_state = 93  owns_state = 1083 owns_state = 1084  owns_state = 199  owns_state = 198  owns_state = 201  owns_state = 202  owns_state = 203  owns_state = 192  owns_state = 829  owns_state = 197  owns_state = 226  owns_state = 200  owns_state = 196  owns_state = 225  owns_state = 926  owns_state = 259  owns_state = 221  owns_state = 227 } }
+				ROOT = { 
+					create_wargoal = {
+						type = annex_everything		
+						target = PREV
+					}			
+				}
+			}
 		}
+		will_lead_to_war_with = UKR
+		will_lead_to_war_with = DSU
+		will_lead_to_war_with = FTT
 	}
 
 	#Incorporate the Belarusian Democratic Republic
@@ -3090,7 +3099,7 @@ focus_tree = {
 		icon = GFX_POL_even_friendlier_administration
 		x = 12
 		y = 13
-		cost = 5
+		cost = 15
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
@@ -3140,15 +3149,24 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { BLR = { exists = yes } }
-				will_lead_to_war_with = BLR
 			create_wargoal = { target = BLR  type = annex_everything }
 			}
 			if = {
 				limit = { CBR = { exists = yes } }
-				will_lead_to_war_with = CBR
 			create_wargoal = { target = CBR  type = annex_everything }
 			}
-		}	
+			every_country = {
+				limit = { NOT = { is_in_faction_with = POL } OR = { owns_state = 94  owns_state = 95 owns_state = 933  owns_state = 194  owns_state = 204  owns_state = 206  owns_state = 96  owns_state = 207  owns_state = 1081  owns_state = 1082  owns_state = 927  owns_state = 241 } }
+				ROOT = { 
+					create_wargoal = {
+						type = annex_everything		
+						target = PREV
+					}			
+				}
+			}
+		}
+		will_lead_to_war_with = CBR
+		will_lead_to_war_with = BLR	
 	}
 
 	#Economic Pact
@@ -3468,15 +3486,24 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { DBR = { exists = yes } }
-				will_lead_to_war_with = DBR
 				create_wargoal = { target = DBR  type = liberate_wargoal }
 			}
 			if = {
 				limit = { BLR = { exists = yes } }
-				will_lead_to_war_with = BLR
 				create_wargoal = { target = BLR  type = liberate_wargoal }
 			}
+			every_country = {
+				limit = { NOT = { is_in_faction_with = POL } OR = { owns_state = 94  owns_state = 95 owns_state = 933  owns_state = 194  owns_state = 204  owns_state = 206  owns_state = 96  owns_state = 207  owns_state = 1081  owns_state = 1082  owns_state = 927  owns_state = 241 } }
+				ROOT = { 
+					create_wargoal = {
+						type = annex_everything		
+						target = PREV
+					}			
+				}
+			}
 		}
+		will_lead_to_war_with = BLR
+		will_lead_to_war_with = DBR
 	}
 
 	#Contact Comrades in Ukraine
@@ -3539,15 +3566,24 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { UKR = { exists = yes } }
-				will_lead_to_war_with = UKR
 				create_wargoal = { target = UKR  type = liberate_wargoal }
 			}
 			if = {
 				limit = { FTT = { exists = yes } }
-				will_lead_to_war_with = FTT
 				create_wargoal = { target = FTT  type = liberate_wargoal }
 			}
+			every_country = {
+				limit = { NOT = { is_in_faction_with = POL } OR = { owns_state = 93  owns_state = 1083 owns_state = 1084  owns_state = 199  owns_state = 198  owns_state = 201  owns_state = 202  owns_state = 203  owns_state = 192  owns_state = 829  owns_state = 197  owns_state = 226  owns_state = 200  owns_state = 196  owns_state = 225  owns_state = 926  owns_state = 259  owns_state = 221  owns_state = 227 } }
+				ROOT = { 
+					create_wargoal = {
+						type = annex_everything		
+						target = PREV
+					}			
+				}
+			}
 		}
+		will_lead_to_war_with = UKR
+		will_lead_to_war_with = FTT
 	}
 
 	#Delegation to the Soviets
@@ -3791,22 +3827,18 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { OR = { LNC = { exists = yes } LNC = { is_puppet_of = POL  } } }
-				will_lead_to_war_with = LAT
 			create_wargoal = { target = LAT  type = annex_everything }
 			}
 			if = {
 				limit = { OR = { LIT = { exists = yes } LIT = { is_puppet_of = POL  } } }
-				will_lead_to_war_with = LIT
 			create_wargoal = { target = LIT  type = annex_everything }
 			}
 			if = {
 				limit = { OR = { LDF = { exists = yes } LDF = { is_puppet_of = POL  } } }
-				will_lead_to_war_with = LDF
 			create_wargoal = { target = LDF  type = annex_everything }
 			}
 			if = {
 				limit = { OR = { LNC = { exists = yes } LNC = { is_puppet_of = POL  } } }
-				will_lead_to_war_with = LNC
 			create_wargoal = { target = LNC  type = annex_everything }
 			}
 			if = {
@@ -3815,7 +3847,6 @@ focus_tree = {
 			}
 			if = {
 				limit = { OR = { EST = { exists = yes } EST = { is_puppet_of = POL  } } }
-				will_lead_to_war_with = EST
 			create_wargoal = { target = EST  type = annex_everything }
 			}
 			if = {
@@ -3824,15 +3855,20 @@ focus_tree = {
 			}
 			if = {
 				limit = { OR = { ELP = { exists = yes } ELP = { is_puppet_of = POL  } } }
-				will_lead_to_war_with = ELP
 			create_wargoal = { target = ELP  type = annex_everything }
 			}
 			if = {
 				limit = { OR = { ELA = { exists = yes } ELA = { is_puppet_of = POL  } } }
-				will_lead_to_war_with = ELA
 			create_wargoal = { target = ELA  type = annex_everything }
 			}
 		}
+		will_lead_to_war_with = LAT
+		will_lead_to_war_with = LIT
+		will_lead_to_war_with = LDF
+		will_lead_to_war_with = LNC
+		will_lead_to_war_with = EST
+		will_lead_to_war_with = ELP
+		will_lead_to_war_with = ELA
 	}
 
 	#Backstab Soviets
@@ -3983,9 +4019,9 @@ focus_tree = {
 		  }
 		prerequisite = { focus = POL_the_three_sister_initiative  focus = POL_german_tanks  }
 		completion_reward = {
-			will_lead_to_war_with = PRS
 			create_wargoal = { target = PRS  type = annex_everything }
 		}
+		will_lead_to_war_with = PRS
 	}
 
 	#Paint Romania Red
@@ -4042,18 +4078,18 @@ focus_tree = {
 		prerequisite = { focus = POL_the_three_sister_initiative  }
 		completion_reward = {
 			if = { limit = { RMN = { exists = yes } }
-			will_lead_to_war_with = RMN
 			create_wargoal = { target = RMN  type = annex_everything }
 			}
 			if = { limit = { ROM = { exists = yes } }
-			will_lead_to_war_with = ROM
 			create_wargoal = { target = ROM  type = annex_everything }
 			}
 			if = { limit = { RMR = { exists = yes } }
-			will_lead_to_war_with = RMR
 			create_wargoal = { target = RMR  type = annex_everything }
 			}
 		 }
+		 will_lead_to_war_with = RMN
+		 will_lead_to_war_with = ROM
+		 will_lead_to_war_with = RMR
 	}
 
 	#Fund Military Projects

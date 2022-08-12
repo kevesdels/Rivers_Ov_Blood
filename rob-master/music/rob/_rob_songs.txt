@@ -79,19 +79,20 @@ music = {
 }
 
 music = {
-	song = "rob_peace_6" ## A. Marcello - Oboe Concerto in d minor (Marcel Ponseele, baroque oboe   Il Gardellino) III. Presto
-	chance = {
-	modifier = {
-		factor = 1
-		has_war = no
-	}
-	modifier = {
-		factor = 0
+    song = "rob_peace_6" ## A. Marcello - Oboe Concerto in d minor (Marcel Ponseele, baroque oboe   Il Gardellino) III. Presto
+    chance = {
+    modifier = {
+        factor = 1
+        has_war = no
+    }
+    modifier = {
+        factor = 0
 
-		has_war = yes
-	}		
+        has_war = yes
+    }       
   }
 }
+
 
 
 ### WAR  ### 
@@ -942,3 +943,321 @@ music = {
 }
 
 ###France
+
+music = {
+	song = "rob_FRA_1" ## L’Edelweiss - French Foreign Legion March
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_2" ## Guerre guerre, vente vent - French Navy Song
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_3" ## MARCHE D'AUSTERLITZ -1805-  (On va leur percer le flanc !)
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_4" ## Charlus - La Bédouine et le tuba
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_5" ## La Catholique
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			NOT = { has_government = socialist }
+			NOT = { has_government = democratic_socialist }
+			NOT = { has_government = national_socialist }
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_6" ## Les Croix de Feu - French populist song.
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			NOT = { has_government = socialist }
+			NOT = { has_government = democratic_socialist }
+			NOT = { has_government = national_socialist }
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_7" ## La Marche Lorraine 
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			NOT = { has_government = socialist }
+			NOT = { has_government = democratic_socialist }
+			NOT = { has_government = national_socialist }
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_8" ## Le rêve passe
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			NOT = { has_government = socialist }
+			NOT = { has_government = democratic_socialist }
+			NOT = { has_government = national_socialist }
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_9" ## Maréchal nous voilà!  (Marshal, Here We Are!)
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				has_country_flag = FRA_petain_dictatorship 
+				has_country_flag = FRA_gaulle_dictatorship 
+			}
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_10" ## Le Chant des Cohortes  Anthem of  French Militia 
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				has_country_flag = FRA_petain_dictatorship 
+				has_country_flag = FRA_gaulle_dictatorship 
+			}
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_11" ## Les chacals - Chant nationaliste français
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			NOT = { has_government = socialist }
+			NOT = { has_government = democratic_socialist }
+			NOT = { has_government = national_socialist }
+			NOT = { has_government = social_democracy }
+			NOT = { has_government = social_liberal }
+			NOT = { has_government = conservative }
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_12" ## Chanson du Bas-Poitou - Chant de l'armée catholique et royale (monarchitsts)
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			has_country_flag = FRA_gaulle_dictatorship 
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_13" ## Chanson de l'armée de Charette (monarchists)
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			has_country_flag = FRA_gaulle_dictatorship 
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_14" ## Chant LA ROYALE
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			has_country_flag = FRA_gaulle_dictatorship 
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_15" ## La Varsovienne  - Warszawianka in French
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				has_government = socialist
+				has_government = democratic_socialist
+				has_government = national_socialist
+			}
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_16" ## Vas y Leon  !
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				has_government = socialist
+				has_government = democratic_socialist
+				has_government = national_socialist
+			}
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_17" ## L'Internationale (Complete with 6 stanzas, original lyrics in French)
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				has_government = socialist
+				has_government = democratic_socialist
+				has_government = national_socialist
+			}
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_18" ## Quand fera-t-il jour, camarade 
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				has_government = socialist
+				has_government = democratic_socialist
+				has_government = national_socialist
+			}
+		}
+	}	
+}
+
+music = {
+	song = "rob_FRA_19" ## Le Capitaine « Au mur » 
+	
+	chance = {
+		modifier = {
+			factor = 0
+		NOT = { tag = FRA }
+		}
+		modifier = {
+			factor = 1
+			OR = {
+				has_government = socialist
+				has_government = democratic_socialist
+				has_government = national_socialist
+			}	
+		}
+	}	
+}

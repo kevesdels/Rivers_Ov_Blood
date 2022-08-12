@@ -11,7 +11,7 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = authoritharian
+	ruling_party = reactionary
 	last_election = "1934.1.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -34,6 +34,18 @@ create_country_leader = {
 	picture = "gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
 	expire = "1960.1.1"
 	ideology = pagan_pelekism
+	traits = {
+		#
+	}
+}
+
+
+create_country_leader = {
+	name = "Albrecht I"
+	desc = ""
+	picture = "gfx/leaders/WUR/Albrecht.dds"
+	expire = "1960.1.1"
+	ideology = reactionary_monarchy
 	traits = {
 		#
 	}

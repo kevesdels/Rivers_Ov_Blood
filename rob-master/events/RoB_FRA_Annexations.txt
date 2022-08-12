@@ -90,14 +90,14 @@ country_event = {
  
   
   option = {
-    name = "Holland Belongs To Us"
+    name = "Annex Them"
     ai_chance = { factor = 50 }
     add_political_power =-60
  }
 
 
   option = {
-   name = "Set Up Puppet Government"
+   name = "Seize Brabant, Puppet the Rest"
    puppet = HOL
    HOL = { promote_character = HOL_henri_winkelman }
    ai_chance = { factor = 50 }
@@ -277,7 +277,7 @@ country_event = {
 
 country_event = {
   id = fra_annex.3
-  desc = fra_annex.3.d
+  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
   title = "Fate of Spain"
   
   mean_time_to_happen = { days = 1 }
@@ -412,7 +412,7 @@ country_event = {
   }
   
   option = {
-   name = "Italy Submits!"
+   name = "Reshape Italy"
    ai_chance = { factor = 50 }
    puppet = ITA
    puppet = SIC
@@ -524,142 +524,43 @@ country_event = {
     has_country_flag = fra_admiral_route
     NOT = { has_country_flag = annex_ger }
   }
-  
-  option = {
-   name = "Germany Uno!"
-   BAV = { drop_cosmetic_tag = yes } 
-   puppet = BAV
-   BAD = { set_cosmetic_tag = BAD_monarchy } 
-   puppet = BAD
-   puppet = HAN
-   HAN = { set_politics = { ruling_party = conservative } add_popularity = { ideology = conservative popularity = 0.5 } } 
-   HAM = { set_cosmetic_tag = HAM_DARLAN }
-   puppet = HAM
-   HAM = { set_politics = { ruling_party = social_liberal } add_popularity = { ideology = social_liberal popularity = 0.5 } }  
-   puppet = SAX
-   SAX = { set_politics = { ruling_party = authoritharian } add_popularity = { ideology = authoritharian popularity = 0.5 } } 
-   puppet = BDB
 
-   hidden_effect = {
-    798 = { add_core_of = BAV }
-    52 = { add_core_of = BAV }
-    800 = { add_core_of = BAV }
-    53 = { add_core_of = BAV }
-    54 = { add_core_of = BAV }
-    1087 = { add_core_of = BAV }
-    1085 = { add_core_of = BAV }
-    1086 = { add_core_of = BAV }
-    791 = { add_core_of = BAD }
-    799 = { add_core_of = BAD }
-    50 = { add_core_of = BAD }
-    1215 = { add_core_of = BAD }
-    790 = { add_core_of = BAD }
-    55 = { add_core_of = HAN }
-    1080 = { add_core_of = HAN }
-    57 = { add_core_of = HAN }
-    1080 = { add_core_of = HAN }
-    56 = { add_core_of = HAN }
-    1210 = { add_core_of = HAN }
-    1208 = { add_core_of = HAN }
-    1091 = { add_core_of = HAN }
-    1206 = { add_core_of = HAN }
-    1205 = { add_core_of = HAN }
-    1209 = { add_core_of = HAN }
-    1204 = { add_core_of = HAN }
-    1207 = { add_core_of = HAN }
-    1094 = { add_core_of = HAN }
-    795 = { add_core_of = SAX }
-    1092 = { add_core_of = SAX }
-    60 = { add_core_of = SAX }
-    1212 = { add_core_of = SAX }
-    65 = { add_core_of = SAX }
-    58 = { add_core_of = HAM }
-    61 = { add_core_of = HAM }
-    1214 = { add_core_of = HAM }
-    796 = { add_core_of = HAM }
-    62 = { add_core_of = HAM }
-    1213 = { add_core_of = HAM }
-    797 = { add_core_of = HAM }
-    1293 = { add_core_of = HAM }
-    979 = { add_core_of = HAM }
-    1211 = { add_core_of = HAM }
-    59 = { add_core_of = HAM }
-    63 = { add_core_of = BDB }
-    1095 = { add_core_of = BDB }
-    68 = { add_core_of = BDB }
-    1093 = { add_core_of = BDB }
-    794 = { add_core_of = BDB }
-    64 = { add_core_of = BDB }
-    793 = { add_core_of = BDB }
-    1203 = { add_core_of = BDB }
-   }
+option = {
+  name = "Rhine will do"
+  792 = { add_claim_by = FRA }
+  42 = { add_claim_by = FRA }
+  1089 = { add_claim_by = FRA }
+  51 = { add_claim_by = FRA }
+  1088 = { add_claim_by = FRA }
+  1090 = { add_claim_by = FRA }
+  788 = { add_claim_by = FRA }
 
-   ###Bavaria
-   hidden_effect = {
-   every_owned_state = {
-    limit = { 
-     NOT = {
-	  is_claim_or_core = yes
-	 }
-      is_core_of = BAV
-	}
-	BAV = { transfer_state = PREV }
+  puppet = GER
+  GER = { set_cosmetic_tag = GER_darlan_government }
+ hidden_effect = {
+  GER = { remove_ideas = { spartakus_triumphant rampant_corruption german_partisans } }
+  GER = {
+  set_party_name = { ideology = social_liberal long_name = "Fortschrittliche Volkspartei" name = "FVP" }
+  set_party_name = { ideology = conservative long_name = "Deutschkonservative Partei" name = "DkP" }
+  set_party_name = { ideology = authoritharian long_name = "Deutsche Generäle" name = "DG" }
+  set_party_name = { ideology = reactionary long_name = "Deutsche Generäle" name = "DG" }
+  set_party_name = { ideology = pelekist long_name = "Wandervögel" name = "W" }
   }
-  ###Baden
+  }
   every_owned_state = {
     limit = { 
      NOT = {
 	  is_claim_or_core = yes
 	 }
-      is_core_of = BAD
+	 is_core_of = GER
 	}
-	BAD = { transfer_state = PREV }
-  }
-  ###Hannover
-  every_owned_state = {
-    limit = { 
-     NOT = {
-	  is_claim_or_core = yes
-	 }
-      is_core_of = HAN
-	}
-	HAN = { transfer_state = PREV }
-  }
-  ###Saxony
-  every_owned_state = {
-    limit = { 
-     NOT = {
-	  is_claim_or_core = yes
-	 }
-      is_core_of = SAX
-	}
-	SAX = { transfer_state = PREV }
-  }
-  ###Saxony
-  every_owned_state = {
-    limit = { 
-     NOT = {
-	  is_claim_or_core = yes
-	 }
-      is_core_of = HAM
-	}
-	HAM = { transfer_state = PREV }
-  }
-  ###Saxony
-  every_owned_state = {
-    limit = { 
-     NOT = {
-	  is_claim_or_core = yes
-	 }
-      is_core_of = BDB
-	}
-	BDB = { transfer_state = PREV }
-  }
-  }
+	GER = { transfer_state = PREV }
+}
+
 }
 
 option = {
-  name = "Germany Dos!"
+  name = "As Victors, we deserve more"
   792 = { add_claim_by = FRA }
   42 = { add_claim_by = FRA }
   979 = { add_claim_by = FRA }
@@ -703,37 +604,138 @@ option = {
 }
 
 option = {
-  name = "Germany Tres!"
-  792 = { add_claim_by = FRA }
-  42 = { add_claim_by = FRA }
-  1089 = { add_claim_by = FRA }
-  51 = { add_claim_by = FRA }
-  1088 = { add_claim_by = FRA }
-  1090 = { add_claim_by = FRA }
-  788 = { add_claim_by = FRA }
+  name = "Dismantle Germany"
+  BAV = { drop_cosmetic_tag = yes } 
+  puppet = BAV
+  BAD = { set_cosmetic_tag = BAD_monarchy } 
+  puppet = BAD
+  puppet = HAN
+  HAN = { set_politics = { ruling_party = conservative } add_popularity = { ideology = conservative popularity = 0.5 } } 
+  HAM = { set_cosmetic_tag = HAM_DARLAN }
+  puppet = HAM
+  HAM = { set_politics = { ruling_party = social_liberal } add_popularity = { ideology = social_liberal popularity = 0.5 } }  
+  puppet = SAX
+  SAX = { set_politics = { ruling_party = authoritharian } add_popularity = { ideology = authoritharian popularity = 0.5 } } 
+  puppet = BDB
 
-  puppet = GER
-  GER = { set_cosmetic_tag = GER_darlan_government }
- hidden_effect = {
-  GER = { remove_ideas = { spartakus_triumphant rampant_corruption german_partisans } }
-  GER = {
-  set_party_name = { ideology = social_liberal long_name = "Fortschrittliche Volkspartei" name = "FVP" }
-  set_party_name = { ideology = conservative long_name = "Deutschkonservative Partei" name = "DkP" }
-  set_party_name = { ideology = authoritharian long_name = "Deutsche Generäle" name = "DG" }
-  set_party_name = { ideology = reactionary long_name = "Deutsche Generäle" name = "DG" }
-  set_party_name = { ideology = pelekist long_name = "Wandervögel" name = "W" }
+  hidden_effect = {
+   798 = { add_core_of = BAV }
+   52 = { add_core_of = BAV }
+   800 = { add_core_of = BAV }
+   53 = { add_core_of = BAV }
+   54 = { add_core_of = BAV }
+   1087 = { add_core_of = BAV }
+   1085 = { add_core_of = BAV }
+   1086 = { add_core_of = BAV }
+   791 = { add_core_of = BAD }
+   799 = { add_core_of = BAD }
+   50 = { add_core_of = BAD }
+   1215 = { add_core_of = BAD }
+   790 = { add_core_of = BAD }
+   55 = { add_core_of = HAN }
+   1080 = { add_core_of = HAN }
+   57 = { add_core_of = HAN }
+   1080 = { add_core_of = HAN }
+   56 = { add_core_of = HAN }
+   1210 = { add_core_of = HAN }
+   1208 = { add_core_of = HAN }
+   1091 = { add_core_of = HAN }
+   1206 = { add_core_of = HAN }
+   1205 = { add_core_of = HAN }
+   1209 = { add_core_of = HAN }
+   1204 = { add_core_of = HAN }
+   1207 = { add_core_of = HAN }
+   1094 = { add_core_of = HAN }
+   795 = { add_core_of = SAX }
+   1092 = { add_core_of = SAX }
+   60 = { add_core_of = SAX }
+   1212 = { add_core_of = SAX }
+   65 = { add_core_of = SAX }
+   58 = { add_core_of = HAM }
+   61 = { add_core_of = HAM }
+   1214 = { add_core_of = HAM }
+   796 = { add_core_of = HAM }
+   62 = { add_core_of = HAM }
+   1213 = { add_core_of = HAM }
+   797 = { add_core_of = HAM }
+   1293 = { add_core_of = HAM }
+   979 = { add_core_of = HAM }
+   1211 = { add_core_of = HAM }
+   59 = { add_core_of = HAM }
+   63 = { add_core_of = BDB }
+   1095 = { add_core_of = BDB }
+   68 = { add_core_of = BDB }
+   1093 = { add_core_of = BDB }
+   794 = { add_core_of = BDB }
+   64 = { add_core_of = BDB }
+   793 = { add_core_of = BDB }
+   1203 = { add_core_of = BDB }
   }
-  }
+
+  ###Bavaria
+  hidden_effect = {
   every_owned_state = {
-    limit = { 
-     NOT = {
-	  is_claim_or_core = yes
-	 }
-	 is_core_of = GER
-	}
-	GER = { transfer_state = PREV }
+   limit = { 
+    NOT = {
+   is_claim_or_core = yes
+  }
+     is_core_of = BAV
+ }
+ BAV = { transfer_state = PREV }
+ }
+ ###Baden
+ every_owned_state = {
+   limit = { 
+    NOT = {
+   is_claim_or_core = yes
+  }
+     is_core_of = BAD
+ }
+ BAD = { transfer_state = PREV }
+
+ }
+ ###Hannover
+ every_owned_state = {
+   limit = { 
+    NOT = {
+   is_claim_or_core = yes
+  }
+     is_core_of = HAN
+ }
+ HAN = { transfer_state = PREV }
+ }
+ ###Saxony
+ every_owned_state = {
+   limit = { 
+    NOT = {
+   is_claim_or_core = yes
+  }
+     is_core_of = SAX
+ }
+ SAX = { transfer_state = PREV }
+ }
+ ###Low Germany
+ every_owned_state = {
+   limit = { 
+    NOT = {
+   is_claim_or_core = yes
+  }
+     is_core_of = HAM
+ }
+ HAM = { transfer_state = PREV }
+ }
+ ###Brandenburg
+ every_owned_state = {
+   limit = { 
+    NOT = {
+   is_claim_or_core = yes
+  }
+     is_core_of = BDB
+ }
+ BDB = { transfer_state = PREV }
+ }
+ }
 }
 
-}
 
  }

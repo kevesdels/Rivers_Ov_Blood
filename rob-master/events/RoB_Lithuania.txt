@@ -1,4 +1,4 @@
-####################
+ ####################
 ###Lithuanian Events
 ####################
 
@@ -790,3 +790,49 @@ option = {
  clr_country_flag = LIT_active_raid
  }
 }
+
+
+###Lithuania wins over Prussia Peace DEAL
+country_event = { 
+	id = lithuania.37
+	title = "The Capture of Konigsberg"
+	desc = "With the fall of the Prussian capital, the  forces have become disoriented. Perhaps its time to end this war?"
+	fire_only_once = yes
+	trigger = {
+		tag = LIT
+		has_defensive_war_with = PRS
+		LIT = { controls_state = 763 }	
+	}
+	
+	
+	option = {
+		trigger = {
+			OR = {
+				has_country_flag = LIT_democracyholds
+				has_country_flag = LIT_mironas_rules
+			}
+		}
+	 name = "Peace on our terms"
+	 188 = { transfer_state_to = LIT }
+	 white_peace = PRS
+	 }
+
+	 option = {
+		trigger = {
+			OR = {
+				has_country_flag = LIT_smetona_president
+				has_country_flag = LIT_skirpa_rules
+				has_country_flag = LIT_visoumis_rule
+			}
+		}
+	 name = "Peace on our terms"
+	 188 = { transfer_state_to = LIT }
+	 763 = { transfer_state_to = LIT }
+	 white_peace = PRS
+	 }
+
+	option = {
+	 name = "End the Prussian state"
+	 add_political_power = -100
+	 }
+	}

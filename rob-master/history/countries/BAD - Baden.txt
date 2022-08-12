@@ -48,11 +48,22 @@ set_popularities = {
 }
 
 create_country_leader = {
-	name = "Wilhelm Murr.tga"
-	desc = "ANTE_PAVELIC_DESC"
+	name = "Wilhelm Murr"
+	desc = ""
 	picture = "gfx/leaders/BAD/Wilhelm_Murr.tga"
 	expire = "1965.1.1"
 	ideology = pelekist_subtype
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Maximilian I"
+	desc = ""
+	picture = "gfx/leaders/BAD/Prince Maximilian.dds"
+	expire = "1965.1.1"
+	ideology = reactionary_monarchy
 	traits = {
 		#
 	}

@@ -4798,3 +4798,231 @@ country_event = {
   }
  
  }
+
+ country_event = {
+  id = annex.45
+  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+  title = "Fate of Indonesia"
+  
+  mean_time_to_happen = { days = 1 }
+  trigger = {
+   has_war = no
+   INS = { NOT = { is_puppet_of = ROOT } }
+   335 = { is_owned_and_controlled_by = ROOT }
+   NOT = {
+    tag = INS
+    has_country_flag = annex_ins
+   }
+  }
+  
+  option = {
+   name = "Create a Puppet State"
+   puppet = INS
+   ai_chance = { factor = 50 }
+   every_owned_state = {
+     limit = { 
+      NOT = {
+     is_claim_or_core = yes
+    }
+       is_core_of = INS
+   }
+   INS = { transfer_state = PREV }
+   }
+  if = { 
+   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+   INS = {
+   set_cosmetic_tag = Generic_puppet_socialist
+   } 
+  }
+    if = { 
+     limit = { 
+       AND = { 
+           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+           INS = { has_cosmetic_tag = Generic_puppet_socialist } 
+         }
+       } 
+       INS = { drop_cosmetic_tag = yes }
+   } 
+   if = { 
+     limit = { ROOT = { has_government = pelekist } }
+     INS = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+    }
+    if = { 
+     limit = { 
+       AND = { 
+         ROOT = { NOT = { has_government = pelekist } }
+         INS = { has_cosmetic_tag = Generic_puppet_pelekist } 
+         }
+       } 
+       INS = { drop_cosmetic_tag = yes }
+   } 
+  }
+  
+  option = {
+   name = "Continue Military Occupation"
+   ai_chance = { factor = 0 }
+   set_country_flag = annex_ins
+   add_stability =-0.015
+   add_war_support =-0.015
+   add_political_power =-150
+  }
+ 
+ }
+
+ country_event = {
+  id = annex.46
+  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+  title = "Fate of Azerbaijan"
+  
+  mean_time_to_happen = { days = 1 }
+  trigger = {
+   has_war = no
+   AZR = { NOT = { is_puppet_of = ROOT } }
+   229 = { is_owned_and_controlled_by = ROOT }
+   NOT = {
+    tag = AZR
+    has_country_flag = annex_azr
+   }
+   NOT = {
+    OR = {
+      tag = SOV
+      tag = CAA
+      tag = CAU
+      tag = CRM
+      tag = RDR
+    }
+   }
+  }
+  
+  option = {
+   name = "Create a Puppet State"
+   puppet = AZR
+   ai_chance = { factor = 50 }
+   every_owned_state = {
+     limit = { 
+      NOT = {
+     is_claim_or_core = yes
+    }
+       is_core_of = AZR
+   }
+   AZR = { transfer_state = PREV }
+   }
+  if = { 
+   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+   AZR = {
+   set_cosmetic_tag = Generic_puppet_socialist
+   } 
+  }
+    if = { 
+     limit = { 
+       AND = { 
+           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+           AZR = { has_cosmetic_tag = Generic_puppet_socialist } 
+         }
+       } 
+       AZR = { drop_cosmetic_tag = yes }
+   } 
+   if = { 
+     limit = { ROOT = { has_government = pelekist } }
+     AZR = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+    }
+    if = { 
+     limit = { 
+       AND = { 
+         ROOT = { NOT = { has_government = pelekist } }
+         AZR = { has_cosmetic_tag = Generic_puppet_pelekist } 
+         }
+       } 
+       AZR = { drop_cosmetic_tag = yes }
+   } 
+  }
+  
+  option = {
+   name = "Continue Military Occupation"
+   ai_chance = { factor = 0 }
+   set_country_flag = annex_azr
+   add_stability =-0.015
+   add_war_support =-0.015
+   add_political_power =-150
+  }
+ 
+ }
+
+ country_event = {
+  id = annex.47
+  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+  title = "Fate of Georgia"
+  
+  mean_time_to_happen = { days = 1 }
+  trigger = {
+   has_war = no
+   GEO = { NOT = { is_puppet_of = ROOT } }
+   231 = { is_owned_and_controlled_by = ROOT }
+   NOT = {
+    tag = GEO
+    has_country_flag = annex_geo
+   }
+   NOT = {
+    OR = {
+      tag = SOV
+      tag = CAA
+      tag = CAU
+      tag = CRM
+      tag = RDR
+    }
+   }
+  }
+  
+  option = {
+   name = "Create a Puppet State"
+   puppet = GEO
+   ai_chance = { factor = 50 }
+   every_owned_state = {
+     limit = { 
+      NOT = {
+     is_claim_or_core = yes
+    }
+       is_core_of = GEO
+   }
+   GEO = { transfer_state = PREV }
+   }
+  if = { 
+   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
+   GEO = {
+   set_cosmetic_tag = Generic_puppet_socialist
+   } 
+  }
+    if = { 
+     limit = { 
+       AND = { 
+           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
+           GEO = { has_cosmetic_tag = Generic_puppet_socialist } 
+         }
+       } 
+       GEO = { drop_cosmetic_tag = yes }
+   } 
+   if = { 
+     limit = { ROOT = { has_government = pelekist } }
+     GEO = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+    }
+    if = { 
+     limit = { 
+       AND = { 
+         ROOT = { NOT = { has_government = pelekist } }
+         GEO = { has_cosmetic_tag = Generic_puppet_pelekist } 
+         }
+       } 
+       GEO = { drop_cosmetic_tag = yes }
+   } 
+  }
+  
+  option = {
+   name = "Continue Military Occupation"
+   ai_chance = { factor = 0 }
+   set_country_flag = annex_geo
+   add_stability =-0.015
+   add_war_support =-0.015
+   add_political_power =-150
+  }
+ 
+ }

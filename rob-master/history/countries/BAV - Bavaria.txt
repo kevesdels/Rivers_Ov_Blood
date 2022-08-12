@@ -48,7 +48,7 @@ set_popularities = {
 
 create_country_leader = {
 	name = "Heinrich Himmler"
-	desc = "ANTE_PAVELIC_DESC"
+	desc = ""
 	picture = "gfx/leaders/BAV/HeinrichHimmler.tga"
 	expire = "1965.1.1"
 	ideology = pelekist_subtype
@@ -58,15 +58,27 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Franz Ritter von Epp"
-	desc = "ANTE_PAVELIC_DESC"
-	picture = "gfx/leaders/BAV/HeinrichHimmler.tga"
+	name = "Rupprecht I"
+	desc = ""
+	picture = "gfx/leaders/BAV/Portrait_Bavaria_Rupprecht.dds"
 	expire = "1965.1.1"
-	ideology = reactionary_subtype
+	ideology = reactionary_monarchy
 	traits = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Franz Ritter von Epp"
+	desc = ""
+	picture = "gfx/leaders/BAV/HeinrichHimmler.tga"
+	expire = "1965.1.1"
+	ideology = authoritharian_subtype
+	traits = {
+		#
+	}
+}
+
 create_corps_commander  = {
 	name = "August Zehender"
 	portrait_path = "gfx/leaders/BAV/August_Zehender.tga"
