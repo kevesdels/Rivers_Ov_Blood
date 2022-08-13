@@ -3390,7 +3390,10 @@ completion_reward = {
 		mutually_exclusive = { focus = LIT_farmerpresident }
 		completion_reward = {
 		add_political_power = 120
-			}
+		hidden_effect = {
+			country_event = { id = lithuania.38 days = 6 }
+		}
+		}
 	}
 
 	#Focus for Industrilization
@@ -5109,9 +5112,16 @@ add_tech_bonus = {
 			x = 48
 			y = 0
 			cost = 1
+			available = {
+				has_government = national_socialist
+				has_country_flag = LIT_commie_takeover
+			}
 			search_filters = {
 				FOCUS_FILTER_POLITICAL
 			}
+			completion_reward = {
+				add_political_power = 120
+			   }
 		}
 	
 		#Congress of Kaunas
@@ -5125,6 +5135,9 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_the_lithuanian_socialist_republic  }
+			completion_reward = {
+				country_event = { id = lithuania.41 days = 1 }
+			}
 		}
 	
 		#Destroy Traitorous Elements
@@ -5138,6 +5151,15 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_congress_of_kaunas  }
+			completion_reward = {
+				remove_ideas = {
+					semi_loyal_military
+				   }
+				add_timed_idea = {
+					idea = LIT_army_in_shambles
+					days = 365
+				}
+			}
 		}
 	
 		#Lietuvos Liaudies Kariuomenė
@@ -5150,7 +5172,18 @@ add_tech_bonus = {
 			search_filters = {
 				FOCUS_FILTER_POLITICAL
 			}
+			available = {
+				NOT = {
+					has_idea = LIT_army_in_shambles
+				}
+			}
 			prerequisite = { focus = LIT_destroy_traitorous_elements  }
+			completion_reward = {
+				add_ideas =  {
+					LIT_lauzu_armija
+				} 
+			}
+			
 		}
 	
 		#Darbininku Milicija
@@ -5164,6 +5197,11 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_lietuvosliaudieskariuomene  }
+			completion_reward = {
+				add_ideas =  {
+					LIT_darbinieku_milici
+				} 
+			}
 		}
 	
 		#People's Election!
@@ -5177,6 +5215,10 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_congress_of_kaunas  }
+			completion_reward = {
+				country_event = { id = lithuania.41 days = 1 }
+			}
+			
 		}
 	
 		#Commemorate the Samogitian Revolution
@@ -5190,6 +5232,10 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_peopleselection  }
+			completion_reward = {
+				country_event = { id = lithuania.41 days = 1 }
+			}
+			
 		}
 	
 		#Propagandos Ministerija
@@ -5203,6 +5249,10 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_commemorate_the_samogitian_revolution  }
+			completion_reward = {
+				add_popularity = {ideology = national_socialist popularity =0.10}
+				add_stability = 0.05
+			}
 		}
 	
 		#Declare Land Reform
@@ -5216,6 +5266,9 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_congress_of_kaunas  }
+			completion_reward = {
+				country_event = { id = lithuania.41 days = 1 }
+			}
 		}
 	
 		#Forced Collectivisation
@@ -5229,6 +5282,10 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_declare_land_reform  }
+			completion_reward = {
+				add_ideas = lit_force_collect
+				country_event = { id = lithuania.41 days = 1 }
+			}
 		}
 	
 		#Expel the Bourgeoisie
@@ -5242,6 +5299,21 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_forced_collectivisation  }
+			completion_reward = {
+				add_stability = -0.1
+				784 = {
+					add_manpower = -2110
+				   }
+				11 = {
+					add_manpower = -3008
+				   }
+				879 = {
+					add_manpower = -1765
+				   }
+				189 = {
+					add_manpower = -1532
+				   }
+			}
 		}
 	
 		#First Step towards Lithuanian Socialism
@@ -5255,11 +5327,14 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_expel_the_bourgeoisie  } prerequisite = { focus = LIT_propagandos_ministerija  } prerequisite = { focus = LIT_darbininku_milicija  }
+			completion_reward = {
+				add_popularity = {ideology = national_socialist popularity =0.16}
+			}
 		}
 	
 		#Work for All!
 		focus = {
-			id = LIT_workforall
+			id = LIT_workforall_2
 			icon = GFX_goal_unknown
 			x = 46
 			y = 6
@@ -5268,6 +5343,11 @@ add_tech_bonus = {
 				FOCUS_FILTER_INDUSTRY
 			}
 			prerequisite = { focus = LIT_first_step_towards_lithuanian_socialism  }
+			completion_reward = {
+				add_ideas = {
+					LIT_soc_work_con
+				}
+			}
 		}
 	
 		#Revolution of the Industry
@@ -5280,7 +5360,27 @@ add_tech_bonus = {
 			search_filters = {
 				FOCUS_FILTER_INDUSTRY
 			}
-			prerequisite = { focus = LIT_workforall  }
+			prerequisite = { focus = LIT_workforall_2  }
+			completion_reward = {
+				11 = { 
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+		   
+				  type = industrial_complex
+				  level = 2
+				  instant_build = yes
+					}
+					}
+				784 = { 
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+			   
+					  type = industrial_complex
+					  level = 2
+					  instant_build = yes
+						}
+						}
+			}
 		}
 	
 		#Socialist Housing
@@ -5294,6 +5394,12 @@ add_tech_bonus = {
 				FOCUS_FILTER_INDUSTRY
 			}
 			prerequisite = { focus = LIT_first_step_towards_lithuanian_socialism  }
+			completion_reward = {
+				add_ideas = {
+					LIT_soc_housing
+				}
+			}
+			
 		}
 	
 		#Urbanise the Nation
@@ -5307,6 +5413,11 @@ add_tech_bonus = {
 				FOCUS_FILTER_INDUSTRY
 			}
 			prerequisite = { focus = LIT_socialist_housing  }
+			completion_reward = {
+				add_ideas = {
+					LIT_urbanization
+				}
+			}
 		}
 	
 		#Cult of Progress
@@ -5320,6 +5431,10 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_first_step_towards_lithuanian_socialism  }
+			completion_reward = {
+				country_event = { id = lithuania.41 days = 1 }
+				add_stability = 0.08
+			}
 		}
 	
 		#Penkmečio Planas
@@ -5333,6 +5448,9 @@ add_tech_bonus = {
 				FOCUS_FILTER_INDUSTRY
 			}
 			prerequisite = { focus = LIT_cult_of_progress  }
+			completion_reward = {
+				custom_effect_tooltip = "Mission to Build stuff in 5 years, reward at the end(WIP)"
+			}
 		}
 	
 		#Prepare for Greatness
@@ -5346,6 +5464,9 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_revolution_of_the_industry  } prerequisite = { focus = LIT_urbanise_the_nation  } prerequisite = { focus = LIT_penkmecioplanas  }
+			completion_reward = {
+				country_event = { id = lithuania.41 days = 1 }
+			}
 		}
 	
 		#Declare the Union of National Socialist Republics
@@ -5359,6 +5480,10 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_prepare_for_greatness  }
+			completion_reward = {
+				custom_effect_tooltip = "Custom Tag switch(WIP)"
+				country_event = { id = lithuania.41 days = 1 }
+			}
 		}
 	
 		#Intervene in Belarus
@@ -5372,6 +5497,9 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_declare_the_union_of_national_socialist_republics  }
+			completion_reward = {
+				custom_effect_tooltip = "Once Belarus unified, event for fusion(WIP)"
+			}
 		}
 	
 		#Socialist Diplomacy
@@ -5385,6 +5513,9 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_intervene_in_belarus  }
+			completion_reward = {
+				custom_effect_tooltip = "Pick Germany or Russia as ally(WIP)"
+			}
 		}
 	
 		#Aid Foreign Revolutions
@@ -5398,6 +5529,9 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_socialist_diplomacy  }
+			completion_reward = {
+				custom_effect_tooltip = "Invade people(WIP)"
+			}
 		}
 	
 		#Ethnic Borders
@@ -5411,6 +5545,12 @@ add_tech_bonus = {
 				FOCUS_FILTER_INDUSTRY
 			}
 			prerequisite = { focus = LIT_declare_the_union_of_national_socialist_republics  }
+			completion_reward = {
+				add_ideas = {
+					LIT_ethnic_borders
+				}
+			}
+
 		}
 	
 		#Prepare Population Transfers
@@ -5422,8 +5562,12 @@ add_tech_bonus = {
 			cost = 5
 			search_filters = {
 				FOCUS_FILTER_POLITICAL
-			}
+			}	
 			prerequisite = { focus = LIT_ethnic_borders  }
+			completion_reward = {
+				custom_effect_tooltip = "Decisions to transfer Population(WIP)"
+			}
+	
 		}
 	
 		#Centralise the Economies
@@ -5437,6 +5581,9 @@ add_tech_bonus = {
 				FOCUS_FILTER_INDUSTRY
 			}
 			prerequisite = { focus = LIT_prepare_population_transfers  }
+			completion_reward = {
+				custom_effect_tooltip = "Improves Older Ideas(WIP)"
+			}
 		}
 	
 		#Socializmo Ateitis
@@ -5450,6 +5597,9 @@ add_tech_bonus = {
 				FOCUS_FILTER_POLITICAL
 			}
 			prerequisite = { focus = LIT_aid_foreign_revolutions  } prerequisite = { focus = LIT_centralise_the_economies  }
+			completion_reward = {
+				country_event = { id = lithuania.41 days = 1 }
+			}
 		}
 
 #End of focuses 

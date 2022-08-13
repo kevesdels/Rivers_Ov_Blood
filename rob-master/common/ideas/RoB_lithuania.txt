@@ -869,7 +869,83 @@ lithuanian_stormtroopers = {
 	 industrial_capacity_factory = 0.01
 	 }
 	 }
-	 
+
+	 LIT_army_in_shambles = {
+		allowed = { always = no }
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GFX_idea_famine_of_1933asass
+		modifier = {
+		   army_attack_factor = -0.4
+		   army_defence_factor = -0.3
+		   planning_speed = -0.5
+		   army_org_factor  = -0.5
+			 }
+		}
+
+	LIT_darbinieku_milici = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_famine_of_1933asass
+			modifier = {
+				conscription  = 0.01
+				 }
+			}
+
+	 LIT_soc_work_con = {
+		allowed = { always = no }
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GFX_idea_famine_of_1933asass
+		modifier = {
+			production_factory_max_efficiency_factor = 0.04
+			monthly_population = 0.15
+			 }
+		}
+
+	 LIT_urbanization = {
+		allowed = { always = no }
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GFX_idea_famine_of_1933asass
+		modifier = {
+			monthly_population = 0.40
+			 }
+		}
+
+	LIT_soc_housing = {
+		allowed = { always = no }
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GFX_idea_famine_of_1933asass
+		modifier = {
+			global_building_slots_factor = 0.20
+			 }
+		}
+	LIT_lauzu_armija = {
+		allowed = { always = no }
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GFX_idea_famine_of_1933asass
+		modifier = {
+			experience_loss_factor = -0.3
+			army_defence_factor = 0.1
+			army_attack_factor = 0.1
+			 }
+		}
+	LIT_ethnic_borders = {
+		allowed = { always = no }
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GFX_idea_famine_of_1933asass
+		modifier = {
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+			stability_weekly = 0.001
+			 }
+		}
+
 ###ARMY IDEAS ADDED BY NEIRONS
  LIT_lion_of_offence = {
   allowed = { always = no }
@@ -905,7 +981,7 @@ lithuanian_stormtroopers = {
   picture = GFX_idea_famine_of_1933
   modifier = {
      justify_war_goal_time = -0.3
-	 generate_wargoal_tension -0.5
+	 generate_wargoal_tension = -0.5
 	   }
 	  }
  LIT_lith_supported_partisans = {

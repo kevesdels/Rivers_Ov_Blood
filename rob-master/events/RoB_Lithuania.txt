@@ -836,3 +836,93 @@ country_event = {
 	 add_political_power = -100
 	 }
 	}
+
+
+###Place holder for commies
+country_event = { 
+	id = lithuania.38
+	title = "PLACE HOLDER: Communist plot rumoured"
+	desc = lithuania.38.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+	 name = "Investigate it"
+	 hidden_effect = {
+		country_event = { id = lithuania.39 days = 5 }
+	 }
+	 }
+
+	option = {
+		name = "...Ignore it"
+		hidden_effect = {
+			country_event = { id = lithuania.39 days = 5 }
+		 }
+		}
+
+	}
+
+###Place holder for commies
+country_event = { 
+	id = lithuania.39
+	title = "PLACE HOLDER: Communist plot is true"
+	desc = lithuania.39.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+	 name = "Stop it!"
+
+	 }
+
+	option = {
+	 name = "...Ignore it"
+	 hidden_effect = {
+		country_event = { id = lithuania.40 days = 7 }
+	 }
+	 }
+
+
+	}
+###Place holder for commies
+country_event = { 
+	id = lithuania.40
+	title = "PLACE HOLDER: Communist take over"
+	desc = lithuania.40.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+	 name = "...Oh"
+
+	 add_popularity = {ideology = national_socialist popularity =0.05}
+	 set_country_flag = LIT_commie_takeover
+	 set_politics = {
+	  ruling_party = national_socialist
+	  elections_allowed = no
+	 }
+
+	 }
+
+
+	}
+
+###Place holder for commies
+country_event = { 
+	id = lithuania.41
+	title = "PLACE HOLDER: Event not done"
+	desc = lithuania.41.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+	 name = "I can't breathe"
+
+	 }
+
+
+	}
