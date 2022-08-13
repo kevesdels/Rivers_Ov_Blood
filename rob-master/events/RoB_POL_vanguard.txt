@@ -1,0 +1,119 @@
+﻿###########################
+# Chonqing Event
+###########################
+
+add_namespace = rob_pol_van
+##Rivers of blood
+country_event = {
+	id = rob_pol_van.1
+	title = rob_pol_van.1.t
+	desc = rob_pol_van.1.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+#officer corps butchered
+country_event = {
+	id = rob_pol_van.2
+	title = rob_pol_van.2.t
+	desc = rob_pol_van.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.2.a
+		ai_chance = { factor = 100 }
+		add_ideas = Vanpol_butcheredcorps
+		hidden_effect{
+			retire_character = POL_zbigniew_antonowicz
+			retire_character = POL_juliusz_rommel
+			retire_character = POL_stanislaw_sosabowski
+			retire_character = POL_witold_pilecki
+			retire_character = POL_wladyslaw_anders
+			retire_character = POL_stanislaw_magnuszewski
+			retire_character = POL_waclaw_stachiewicz
+			retire_character = POL_bolesaw_wieniawa_dugoszewski
+			retire_character = POL_wladyslaw_sikorski
+			retire_character = POL_jozef_pilsudski
+			retire_character = POL_edward_rydzsmigly
+		}
+	}
+}
+#landlord event
+country_event = {
+	id = rob_pol_van.3
+	title = rob_pol_van.3.t
+	desc = rob_pol_van.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.3.a
+		ai_chance = { factor = 100 }
+		add_ideas = Vanpol_emptylands
+		hidden_effect{
+
+		}
+	}
+}
+#politician event
+country_event = {
+	id = rob_pol_van.4
+	title = rob_pol_van.4.t
+	desc = rob_pol_van.4.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.4.a
+		ai_chance = { factor = 100 }
+		add_ideas = Vanpol_understaffedbureaucracy
+		hidden_effect{
+
+		}
+	}
+}
+#kulaks event
+country_event = {
+	id = rob_pol_van.5
+	title = rob_pol_van.5.t
+	desc = rob_pol_van.5.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.5.a
+		ai_chance = { factor = 100 }
+		add_ideas = Vanpol_farmingcollapse
+		hidden_effect{
+
+		}
+	}
+}
+# event
+country_event = {
+	id = rob_pol_van.sad
+	title = rob_pol_van.sad.t
+	desc = rob_pol_van.sad.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.sad.a
+		ai_chance = { factor = 100 }
+		add_ideas = 
+		hidden_effect{
+
+		}
+	}
+}
