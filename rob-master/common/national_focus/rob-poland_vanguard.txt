@@ -1,2621 +1,601 @@
 focus_tree = {
-	id = rob_poland_vanguard
-	continuous_focus_position = { x = -40 y = 1050 } 
+	id = rob_pol_vanguard
+	continuous_focus_position = { x = -40 y = 1570 } 
 	country = {
 		factor = 0
 	}
-	#The Polish Navy
+	#Rivers of Blood
 	focus = {
-		id = POL_the_polish_navy
+		id = POL_rivers_of_blood
 		icon = GFX_goal_unknown
-		x = 19
-		y = 15
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	#The Polish Cypher Bureau
-	focus = {
-		id = POL_the_polish_cypher_bureau
-		icon = GFX_goal_unknown
-		x = 35
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_the_four_year_plan  }
-	}
-
-	#Restore the Polish-Lithuanian Commonwealth
-
-	focus = {
-		id = POL_restorethepolishlithuaniancommonwealth
-		icon = GFX_goal_unknown
-		x = 29
-		y = 9
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_enforcechangeonthelithuaniangovernment  }
-	}
-
-	#Enforce Change on the Lithuanian Government
-
-	focus = {
-		id = POL_enforcechangeonthelithuaniangovernment
-		icon = GFX_goal_unknown
-		x = 29
-		y = 8
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_analliancewithlithuania  }
-	}
-
-	#Defend the Proletariat
-
-	focus = {
-		id = POL_defendtheproletariat
-		icon = GFX_goal_unknown
-		x = 6
-		y = 5
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_empowerthetradeunions  }
-	}
-
-	#Reform the Economy
-
-	focus = {
-		id = POL_reformtheeconomy
-		icon = GFX_goal_unknown
-		x = 8
-		y = 4
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_provideforthepeople  }
-	}
-
-	#The Death of Pilsuduski
-
-	focus = {
-		id = POL_thedeathofpilsuduski
-		icon = GFX_goal_unknown
-		x = 15
+		x = 9
 		y = 0
-		cost = 10
+		cost = 5
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_POLITICAL
 		}
 	}
 
-	#Oppose Nationalism
-
+	#...Priests...
 	focus = {
-		id = POL_opposenationalism
+		id = POL_priests
+		icon = GFX_goal_unknown
+		x = 10
+		y = 3
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = POL_kulaks  }
+	}
+
+	#...Officers...
+	focus = {
+		id = POL_officers
 		icon = GFX_goal_unknown
 		x = 8
 		y = 1
-		cost = 10
+		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = POL_thedeathofpilsuduski  }
-		mutually_exclusive = { focus = POL_embraceradicalnationalism  } mutually_exclusive = { focus = POL_strengthenthesanationgovernment  } mutually_exclusive = { focus = POL_supporttheendecjamovement  } mutually_exclusive = { focus = POL_supportthecentristalliance  } mutually_exclusive = { focus = POL_restorethepolishmonarchy  }
+		prerequisite = { focus = POL_rivers_of_blood  }
 	}
 
-	#Begin the COP
+	#...Intellectuals...
 	focus = {
-		id = POL_begin_the_cop
+		id = POL_intellectuals
 		icon = GFX_goal_unknown
-		x = 33
+		x = 8
+		y = 3
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = POL_politicians  }
+	}
+
+	#...Landlords...
+	focus = {
+		id = POL_landlords
+		icon = GFX_goal_unknown
+		x = 10
 		y = 1
+		cost = 4
 		search_filters = {
-			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
-		prerequisite = { focus = POL_the_four_year_plan  }
+		prerequisite = { focus = POL_rivers_of_blood  }
 	}
 
-	#Support the Centrist Alliance
-
+	#Ensure Food Availability
 	focus = {
-		id = POL_supportthecentristalliance
+		id = POL_ensure_food_availability
 		icon = GFX_goal_unknown
-		x = 13
-		y = 1
-		cost = 10
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thedeathofpilsuduski  }
-		mutually_exclusive = { focus = POL_opposenationalism  } mutually_exclusive = { focus = POL_strengthenthesanationgovernment  } mutually_exclusive = { focus = POL_supporttheendecjamovement  } mutually_exclusive = { focus = POL_embraceradicalnationalism  } mutually_exclusive = { focus = POL_restorethepolishmonarchy  }
-	}
-
-	#The Polish Socialist Party
-
-	focus = {
-		id = POL_thepolishsocialistparty
-		icon = GFX_goal_unknown
-		x = 7
-		y = 2
-		cost = 10
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_opposenationalism  }
-	}
-
-	#Bolshevist Takeover
-
-	focus = {
-		id = POL_bolshevisttakeover
-		icon = GFX_goal_unknown
-		x = 6
-		y = 3
-		cost = 10
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thepolishsocialistparty  }
-		mutually_exclusive = { focus = POL_provideforthepeople  }
-	}
-
-	#Provide for the People
-
-	focus = {
-		id = POL_provideforthepeople
-		icon = GFX_goal_unknown
-		x = 8
-		y = 3
-		cost = 10
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thepolishsocialistparty  }
-		mutually_exclusive = { focus = POL_bolshevisttakeover  }
-	}
-
-	#Empower the Trade Unions
-
-	focus = {
-		id = POL_empowerthetradeunions
-		icon = GFX_goal_unknown
-		x = 6
-		y = 4
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_provideforthepeople  }
-	}
-
-	#Revise Leninist Theories
-
-	focus = {
-		id = POL_reviseleninisttheories
-		icon = GFX_goal_unknown
-		x = 6
+		x = 10
 		y = 6
+		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_STABILITY
 		}
-		prerequisite = { focus = POL_defendtheproletariat  }
+		prerequisite = { focus = POL_the_upcoming_arsenal  } prerequisite = { focus = POL_nationalization_of_industry  }
 	}
 
-	#Proclaim the Socialist Republic
-
+	#...Kulaks...
 	focus = {
-		id = POL_proclaimthesocialistrepublic
+		id = POL_kulaks
 		icon = GFX_goal_unknown
-		x = 8
-		y = 5
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_reformtheeconomy  }
-	}
-
-	#Secularise the State
-
-	focus = {
-		id = POL_secularisethestate
-		icon = GFX_goal_unknown
-		x = 8
-		y = 6
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_proclaimthesocialistrepublic  focus = POL_defendtheproletariat  }
-	}
-
-	#From the Ministry of Public Security
-
-	focus = {
-		id = POL_fromtheministryofpublicsecurity
-		icon = GFX_goal_unknown
-		x = 7
-		y = 7
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_secularisethestate  }
-	}
-
-	#Ignite the Spirit of Freedom
-
-	focus = {
-		id = POL_ignitethespiritoffreedom
-		icon = GFX_goal_unknown
-		x = 11
-		y = 4
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_reversethemaycoup  }
-	}
-
-	#Provide Maternity Benefits
-
-	focus = {
-		id = POL_providematernitybenefits
-		icon = GFX_goal_unknown
-		x = 13
-		y = 4
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_tightenthegovernmentsgrip  } prerequisite = { focus = POL_reversethemaycoup  }
-	}
-
-	#Invite Military Officials
-
-	focus = {
-		id = POL_invitemilitaryofficials
-		icon = GFX_goal_unknown
-		x = 15
+		x = 10
 		y = 2
+		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
-		prerequisite = { focus = POL_supportthecentristalliance  }
+		prerequisite = { focus = POL_landlords  }
 	}
 
-	#Tighten the Government's Grip
-
+	#Agricultural Expansion
 	focus = {
-		id = POL_tightenthegovernmentsgrip
-		icon = GFX_goal_unknown
-		x = 15
-		y = 3
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_invitemilitaryofficials  }
-	}
-
-	#Reestablish a  Democratic System
-
-	focus = {
-		id = POL_reestablishademocraticsystem
-		icon = GFX_goal_unknown
-		x = 11
-		y = 2
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_supportthecentristalliance  }
-	}
-
-	#Offer a Hand to Prussia
-
-	focus = {
-		id = POL_offerahandtoprussia
-		icon = GFX_goal_unknown
-		x = 24
-		y = 13
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_theintermariumrising  }
-		mutually_exclusive = { focus = POL_theywontlisten  }
-	}
-
-	#Reverse the May Coup
-
-	focus = {
-		id = POL_reversethemaycoup
-		icon = GFX_goal_unknown
-		x = 11
-		y = 3
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_reestablishademocraticsystem  }
-	}
-
-	#Enforce Basic Military Training
-
-	focus = {
-		id = POL_enforcebasicmilitarytraining
-		icon = GFX_goal_unknown
-		x = 15
-		y = 4
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_tightenthegovernmentsgrip  }
-	}
-
-	#Demilitarize the Government
-
-	focus = {
-		id = POL_demilitarizethegovernment
-		icon = GFX_goal_unknown
-		x = 11
-		y = 5
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_ignitethespiritoffreedom  focus = POL_providematernitybenefits  }
-	}
-
-	#Combat Radicalism
-
-	focus = {
-		id = POL_combatradicalism
-		icon = GFX_goal_unknown
-		x = 15
-		y = 5
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_enforcebasicmilitarytraining  focus = POL_providematernitybenefits  }
-	}
-
-	#Consolidate Power
-
-	focus = {
-		id = POL_consolidatepower
-		icon = GFX_goal_unknown
-		x = 13
-		y = 6
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_combatradicalism  } prerequisite = { focus = POL_demilitarizethegovernment  }
-	}
-
-	#Welcome Foreign Immigrants
-
-	focus = {
-		id = POL_welcomeforeignimmigrants
+		id = POL_agricultural_expansion
 		icon = GFX_goal_unknown
 		x = 10
 		y = 7
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_consolidatepower  }
-	}
-
-	#Silent Solitude
-
-	focus = {
-		id = POL_silentsolitude
-		icon = GFX_goal_unknown
-		x = 11
-		y = 8
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_welcomeforeignimmigrants  } prerequisite = { focus = POL_fromtheministryofpublicsecurity  }
-		mutually_exclusive = { focus = POL_handinhandwithspartacists  } mutually_exclusive = { focus = POL_thewestknowsbest  }
-	}
-
-	#Hand in Hand with Spartacists
-
-	focus = {
-		id = POL_handinhandwithspartacists
-		icon = GFX_goal_unknown
-		x = 0
-		y = 8
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_fromtheministryofpublicsecurity  }
-		mutually_exclusive = { focus = POL_silentsolitude  } mutually_exclusive = { focus = POL_thewarsawpact  }
-	}
-
-	#The Warsaw Pact
-
-	focus = {
-		id = POL_thewarsawpact
-		icon = GFX_goal_unknown
-		x = 5
-		y = 8
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_fromtheministryofpublicsecurity  }
-		mutually_exclusive = { focus = POL_silentsolitude  } mutually_exclusive = { focus = POL_handinhandwithspartacists  }
-	}
-
-	#The Defense of Poland
-
-	focus = {
-		id = POL_thedefenseofpoland
-		icon = GFX_goal_unknown
-		x = 11
-		y = 9
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_silentsolitude  }
-	}
-
-	#Integrate Militias in the Army
-
-	focus = {
-		id = POL_integratemilitiasinthearmy
-		icon = GFX_goal_unknown
-		x = 11
-		y = 10
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thedefenseofpoland  }
-	}
-
-	#Strengthen the Sanation Government
-
-	focus = {
-		id = POL_strengthenthesanationgovernment
-		icon = GFX_goal_unknown
-		x = 20
-		y = 1
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thedeathofpilsuduski  }
-		mutually_exclusive = { focus = POL_supportthecentristalliance  } mutually_exclusive = { focus = POL_opposenationalism  } mutually_exclusive = { focus = POL_supporttheendecjamovement  } mutually_exclusive = { focus = POL_embraceradicalnationalism  } mutually_exclusive = { focus = POL_restorethepolishmonarchy  }
-	}
-
-	#The Sanation Left
-
-	focus = {
-		id = POL_thesanationleft
-		icon = GFX_goal_unknown
-		x = 18
-		y = 2
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_strengthenthesanationgovernment  }
-	}
-
-	#Support the Castle
-
-	focus = {
-		id = POL_supportthecastle
-		icon = GFX_goal_unknown
-		x = 20
-		y = 2
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_strengthenthesanationgovernment  }
-	}
-
-	#The Sanation Right
-
-	focus = {
-		id = POL_thesanationright
-		icon = GFX_goal_unknown
-		x = 22
-		y = 2
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_strengthenthesanationgovernment  }
-	}
-
-	#"Modus Vivendi"
-
-	focus = {
-		id = POL_modusvivendi
-		icon = GFX_goal_unknown
-		x = 18
-		y = 3
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thesanationleft  }
-	}
-
-	#Moderate Socialism
-
-	focus = {
-		id = POL_moderatesocialism
-		icon = GFX_goal_unknown
-		x = 18
-		y = 4
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_modusvivendi  }
-	}
-
-	#National Interest
-
-	focus = {
-		id = POL_nationalinterest
-		icon = GFX_goal_unknown
-		x = 18
-		y = 5
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_moderatesocialism  }
-	}
-
-	#Generously Stimulate Local Businesses
-
-	focus = {
-		id = POL_generouslystimulatelocalbusinesses
-		icon = GFX_goal_unknown
-		x = 20
-		y = 3
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_supportthecastle  }
-	}
-
-	#The Dream of Greater Poland
-
-	focus = {
-		id = POL_thedreamofgreaterpoland
-		icon = GFX_goal_unknown
-		x = 20
-		y = 5
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_generouslystimulatelocalbusinesses  }
-	}
-
-	#The Colonel's Government
-
-	focus = {
-		id = POL_thecolonelsgovernment
-		icon = GFX_goal_unknown
-		x = 21
-		y = 4
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_militarystate  } prerequisite = { focus = POL_generouslystimulatelocalbusinesses  }
-	}
-
-	#Military State
-
-	focus = {
-		id = POL_militarystate
-		icon = GFX_goal_unknown
-		x = 22
-		y = 3
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thesanationright  }
-	}
-
-	#The National Defense Fund
-
-	focus = {
-		id = POL_thenationaldefensefund
-		icon = GFX_goal_unknown
-		x = 22
-		y = 5
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_militarystate  }
-	}
-
-	#Establish the Kabaty Woods Facility
-
-	focus = {
-		id = POL_establishthekabatywoodsfacility
-		icon = GFX_goal_unknown
-		x = 22
-		y = 6
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thenationaldefensefund  } prerequisite = { focus = POL_polishmilitarism  }
-	}
-
-	#Advertise the Cultural Hubs
-
-	focus = {
-		id = POL_advertisetheculturalhubs
-		icon = GFX_goal_unknown
-		x = 19
-		y = 6
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_nationalinterest  } prerequisite = { focus = POL_thedreamofgreaterpoland  }
-	}
-
-	#The Eagle Peaks Its Head
-
-	focus = {
-		id = POL_theeaglepeaksitshead
-		icon = GFX_goal_unknown
-		x = 18
-		y = 7
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_consolidatepower  } prerequisite = { focus = POL_advertisetheculturalhubs  }
-	}
-
-	#The Red Poppy Blossoms
-
-	focus = {
-		id = POL_theredpoppyblossoms
-		icon = GFX_goal_unknown
-		x = 20
-		y = 7
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_advertisetheculturalhubs  } prerequisite = { focus = POL_establishthekabatywoodsfacility  }
-	}
-
-	#Support the Endecja Movement
-
-	focus = {
-		id = POL_supporttheendecjamovement
-		icon = GFX_goal_unknown
-		x = 24
-		y = 1
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thedeathofpilsuduski  }
-		mutually_exclusive = { focus = POL_embraceradicalnationalism  } mutually_exclusive = { focus = POL_strengthenthesanationgovernment  } mutually_exclusive = { focus = POL_supportthecentristalliance  } mutually_exclusive = { focus = POL_opposenationalism  } mutually_exclusive = { focus = POL_restorethepolishmonarchy  }
-	}
-
-	#The Four Year Plan
-	focus = {
-		id = POL_the_four_year_plan
-		icon = GFX_goal_unknown
-		x = 36
-		y = 0
+		cost = 10
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		prerequisite = { focus = POL_ensure_food_availability  }
 	}
 
-	#Replace the Sanation Ideals
-
+	#Investigate Thievery
 	focus = {
-		id = POL_replacethesanationideals
+		id = POL_investigate_thievery
 		icon = GFX_goal_unknown
-		x = 24
-		y = 2
+		x = 8
+		y = 6
+		cost = 10
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_STABILITY
 		}
-		prerequisite = { focus = POL_supporttheendecjamovement  }
+		prerequisite = { focus = POL_nationalization_of_industry  } prerequisite = { focus = POL_restructured_governance  }
 	}
 
-	#Polish Nationalism
-
+	#The Red Dawn
 	focus = {
-		id = POL_polishnationalism
+		id = POL_the_red_dawn
 		icon = GFX_goal_unknown
-		x = 24
-		y = 3
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_replacethesanationideals  }
-	}
-
-	#Enforce the Polonization of Minorities
-
-	focus = {
-		id = POL_enforcethepolonizationofminorities
-		icon = GFX_goal_unknown
-		x = 24
+		x = 9
 		y = 4
+		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
-		prerequisite = { focus = POL_polishnationalism  }
+		prerequisite = { focus = POL_priests  } prerequisite = { focus = POL_intellectuals  }
 	}
 
-	#Polish Militarism
-
+	#Bureaucratic Standardization
 	focus = {
-		id = POL_polishmilitarism
-		icon = GFX_goal_unknown
-		x = 24
-		y = 5
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_enforcethepolonizationofminorities  }
-	}
-
-	#Embrace  Radical Nationalism
-
-	focus = {
-		id = POL_embraceradicalnationalism
-		icon = GFX_goal_unknown
-		x = 26
-		y = 1
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thedeathofpilsuduski  }
-		mutually_exclusive = { focus = POL_opposenationalism  } mutually_exclusive = { focus = POL_supportthecentristalliance  } mutually_exclusive = { focus = POL_strengthenthesanationgovernment  } mutually_exclusive = { focus = POL_supporttheendecjamovement  } mutually_exclusive = { focus = POL_restorethepolishmonarchy  }
-	}
-
-	#Establish the ONR-Falanga
-
-	focus = {
-		id = POL_establishtheonrfalanga
-		icon = GFX_goal_unknown
-		x = 26
-		y = 2
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_embraceradicalnationalism  }
-	}
-
-	#Nationalist Mindset
-
-	focus = {
-		id = POL_nationalistmindset
-		icon = GFX_goal_unknown
-		x = 26
-		y = 3
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_establishtheonrfalanga  }
-	}
-
-	#The Legacy of Pilsuduski
-
-	focus = {
-		id = POL_thelegacyofpilsuduski
-		icon = GFX_goal_unknown
-		x = 22
-		y = 8
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_theredpoppyblossoms  } prerequisite = { focus = POL_theeaglepeaksitshead  }
-		mutually_exclusive = { focus = POL_thewestknowsbest  }
-	}
-
-	#The West Knows Best
-
-	focus = {
-		id = POL_thewestknowsbest
-		icon = GFX_goal_unknown
-		x = 16
-		y = 8
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_theredpoppyblossoms  } prerequisite = { focus = POL_theeaglepeaksitshead  }
-		mutually_exclusive = { focus = POL_thelegacyofpilsuduski  } mutually_exclusive = { focus = POL_silentsolitude  }
-	}
-
-	#Uneasy Interest in Alliance
-
-	focus = {
-		id = POL_uneasyinterestinalliance
+		id = POL_bureaucratic_standardization
 		icon = GFX_goal_unknown
 		x = 6
-		y = 10
+		y = 6
+		cost = 10
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_STABILITY
 		}
-		prerequisite = { focus = POL_delegationtothesoviets  }
-		mutually_exclusive = { focus = POL_invitationtowarsawpact  }
+		prerequisite = { focus = POL_restructured_governance  }
 	}
 
-	#Expand the Polish-Romanian Treaty
-
+	#Leading the Federation
 	focus = {
-		id = POL_expandthepolishromaniantreaty
+		id = POL_leading_the_federation
 		icon = GFX_goal_unknown
 		x = 25
-		y = 9
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thelegacyofpilsuduski  }
-	}
-
-	#Renounce Territorial Claims in Czechia
-
-	focus = {
-		id = POL_renounceterritorialclaimsinczechia
-		icon = GFX_goal_unknown
-		x = 20
-		y = 9
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thelegacyofpilsuduski  }
-	}
-
-	#The Czech-Polish Friendship
-
-	focus = {
-		id = POL_theczechpolishfriendship
-		icon = GFX_goal_unknown
-		x = 20
-		y = 10
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_renounceterritorialclaimsinczechia  }
-	}
-
-	#Slovak Admission
-
-	focus = {
-		id = POL_slovakadmission
-		icon = GFX_goal_unknown
-		x = 20
-		y = 11
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_theczechpolishfriendship  }
-	}
-
-	#Offer to Lithuania
-
-	focus = {
-		id = POL_offertolithuania
-		icon = GFX_goal_unknown
-		x = 22
-		y = 11
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thelublintreaty  }
-	}
-
-	#Reinvigorate Historic Ties with Lithuanians
-
-	focus = {
-		id = POL_reinvigoratehistorictieswithlithuanians
-		icon = GFX_goal_unknown
-		x = 22
-		y = 9
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thelegacyofpilsuduski  }
-	}
-
-	#The Lublin Treaty
-
-	focus = {
-		id = POL_thelublintreaty
-		icon = GFX_goal_unknown
-		x = 22
-		y = 10
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_reinvigoratehistorictieswithlithuanians  }
-	}
-
-	#Land for Alliance
-
-	focus = {
-		id = POL_landforalliance
-		icon = GFX_goal_unknown
-		x = 24
-		y = 11
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_theukrainianquestion  }
-		mutually_exclusive = { focus = POL_convincethroughforce  }
-	}
-
-	#The Ukrainian Question
-
-	focus = {
-		id = POL_theukrainianquestion
-		icon = GFX_goal_unknown
-		x = 25
-		y = 10
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_expandthepolishromaniantreaty  }
-	}
-
-	#Pre-Emptive War
-
-	focus = {
-		id = POL_preemptivewar
-		icon = GFX_goal_unknown
-		x = 20
-		y = 13
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thepolishgolem  } prerequisite = { focus = POL_onestruggle  } prerequisite = { focus = POL_theintermariumrising  }
-	}
-
-	#Convince Through Force
-
-	focus = {
-		id = POL_convincethroughforce
-		icon = GFX_goal_unknown
-		x = 26
-		y = 11
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_theukrainianquestion  }
-	}
-
-	#Seek Friends in France
-
-	focus = {
-		id = POL_seekfriendsinfrance
-		icon = GFX_goal_unknown
-		x = 18
-		y = 9
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thewestknowsbest  }
-		mutually_exclusive = { focus = POL_seekfriendsinusa  } mutually_exclusive = { focus = POL_seekfriendsinitaly  }
-	}
-
-	#Seek Friends in USA
-
-	focus = {
-		id = POL_seekfriendsinusa
-		icon = GFX_goal_unknown
-		x = 14
-		y = 9
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thewestknowsbest  }
-		mutually_exclusive = { focus = POL_seekfriendsinitaly  } mutually_exclusive = { focus = POL_seekfriendsinfrance  }
-	}
-
-	#Seek Friends in Italy
-
-	focus = {
-		id = POL_seekfriendsinitaly
-		icon = GFX_goal_unknown
-		x = 16
-		y = 9
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thewestknowsbest  }
-		mutually_exclusive = { focus = POL_seekfriendsinusa  } mutually_exclusive = { focus = POL_seekfriendsinfrance  }
-	}
-
-	#The Intermarium Rising
-
-	focus = {
-		id = POL_theintermariumrising
-		icon = GFX_goal_unknown
-		x = 22
-		y = 12
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_slovakadmission  focus = POL_offertolithuania  focus = POL_landforalliance  } prerequisite = { focus = POL_convincethroughforce  }
-	}
-
-	#They Won't Listen
-
-	focus = {
-		id = POL_theywontlisten
-		icon = GFX_goal_unknown
-		x = 26
-		y = 13
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_theintermariumrising  }
-		mutually_exclusive = { focus = POL_offerahandtoprussia  } mutually_exclusive = { focus = POL_theywontlisten  }
-	}
-
-	#Restore the Polish Monarchy
-
-	focus = {
-		id = POL_restorethepolishmonarchy
-		icon = GFX_goal_unknown
-		x = 29
-		y = 1
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thedeathofpilsuduski  }
-		mutually_exclusive = { focus = POL_opposenationalism  } mutually_exclusive = { focus = POL_strengthenthesanationgovernment  } mutually_exclusive = { focus = POL_supportthecentristalliance  } mutually_exclusive = { focus = POL_supporttheendecjamovement  } mutually_exclusive = { focus = POL_embraceradicalnationalism  }
-	}
-
-	#Contact Comrades in Belaruss
-
-	focus = {
-		id = POL_contactcomradesinbelaruss
-		icon = GFX_goal_unknown
-		x = 2
-		y = 9
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thewarsawpact  } prerequisite = { focus = POL_handinhandwithspartacists  }
-	}
-
-	#The Coronation
-
-	focus = {
-		id = POL_thecoronation
-		icon = GFX_goal_unknown
-		x = 29
-		y = 2
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_restorethepolishmonarchy  }
-	}
-
-	#Retain Some Autocratic Power
-
-	focus = {
-		id = POL_retainsomeautocraticpower
-		icon = GFX_goal_unknown
-		x = 28
-		y = 3
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thecoronation  }
-		mutually_exclusive = { focus = POL_popularsovereignity  }
-	}
-
-	#Popular Sovereignity
-
-	focus = {
-		id = POL_popularsovereignity
-		icon = GFX_goal_unknown
-		x = 30
-		y = 3
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thecoronation  }
-		mutually_exclusive = { focus = POL_retainsomeautocraticpower  }
-	}
-
-	#A Nation Reborn
-
-	focus = {
-		id = POL_anationreborn
-		icon = GFX_goal_unknown
-		x = 28
-		y = 4
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_retainsomeautocraticpower  }
-	}
-
-	#Oaths of Loyalty to the King
-
-	focus = {
-		id = POL_oathsofloyaltytotheking
-		icon = GFX_goal_unknown
-		x = 28
-		y = 5
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_anationreborn  }
-	}
-
-	#Empower the Sejm
-
-	focus = {
-		id = POL_empowerthesejm
-		icon = GFX_goal_unknown
-		x = 30
-		y = 4
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_popularsovereignity  }
-	}
-
-	#Guarantee the Right to Vote
-
-	focus = {
-		id = POL_guaranteetherighttovote
-		icon = GFX_goal_unknown
-		x = 30
-		y = 5
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_empowerthesejm  }
-	}
-
-	#A New Constitution
-
-	focus = {
-		id = POL_anewconstitution
-		icon = GFX_goal_unknown
-		x = 29
 		y = 6
+		cost = 4
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
-		prerequisite = { focus = POL_oathsofloyaltytotheking  } prerequisite = { focus = POL_guaranteetherighttovote  }
 	}
 
-	#An Alliance With Lithuania
-
+	#Nationalization of Industry
 	focus = {
-		id = POL_analliancewithlithuania
+		id = POL_nationalization_of_industry
 		icon = GFX_goal_unknown
-		x = 29
-		y = 7
+		x = 9
+		y = 5
+		cost = 10
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_INDUSTRY
 		}
-		prerequisite = { focus = POL_anewconstitution  }
+		prerequisite = { focus = POL_the_red_dawn  }
 	}
 
-	#Use Anti-German Sentiment
-
+	#...Politicians...
 	focus = {
-		id = POL_useantigermansentiment
-		icon = GFX_goal_unknown
-		x = 17
-		y = 11
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_developeconomicalties  }
-	}
-
-	#A Deal With the Devil
-
-	focus = {
-		id = POL_adealwiththedevil
-		icon = GFX_goal_unknown
-		x = 14
-		y = 10
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_seekfriendsinusa  }
-	}
-
-	#The Polish Golem
-
-	focus = {
-		id = POL_thepolishgolem
-		icon = GFX_goal_unknown
-		x = 15
-		y = 12
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_westerntechnology  focus = POL_begintheexports  }
-	}
-
-	#One Struggle
-
-	focus = {
-		id = POL_onestruggle
-		icon = GFX_goal_unknown
-		x = 17
-		y = 12
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_developeconomicalties  }
-	}
-
-	#Secure the Bread Basket of Europe
-
-	focus = {
-		id = POL_securethebreadbasketofeurope
-		icon = GFX_goal_unknown
-		x = 14
-		y = 13
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thepolishgolem  }
-	}
-
-	#Incorporate the Belarusian Democratic Republic
-
-	focus = {
-		id = POL_incorporatethebelarusiandemocraticrepublic
-		icon = GFX_goal_unknown
-		x = 12
-		y = 12
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_guardtheborders  } prerequisite = { focus = POL_begintheexports  }
-		mutually_exclusive = { focus = POL_pulloutfrombelarus  }
-	}
-
-	#Secure the Rest of Belarus
-
-	focus = {
-		id = POL_securetherestofbelarus
-		icon = GFX_goal_unknown
-		x = 16
-		y = 13
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thepolishgolem  } prerequisite = { focus = POL_onestruggle  }
-	}
-
-	#Economic Pact
-
-	focus = {
-		id = POL_economicpact
-		icon = GFX_goal_unknown
-		x = 0
-		y = 12
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_germantanks  }
-	}
-
-	#Guard the Borders
-
-	focus = {
-		id = POL_guardtheborders
-		icon = GFX_goal_unknown
-		x = 11
-		y = 11
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_integratemilitiasinthearmy  }
-	}
-
-	#Pull Out From Belarus
-
-	focus = {
-		id = POL_pulloutfrombelarus
-		icon = GFX_goal_unknown
-		x = 10
-		y = 12
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_guardtheborders  }
-		mutually_exclusive = { focus = POL_incorporatethebelarusiandemocraticrepublic  }
-	}
-
-	#Western Technology
-
-	focus = {
-		id = POL_westerntechnology
-		icon = GFX_goal_unknown
-		x = 15
-		y = 11
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_adealwiththedevil  }
-	}
-
-	#Begin the Exports
-
-	focus = {
-		id = POL_begintheexports
-		icon = GFX_goal_unknown
-		x = 13
-		y = 11
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_adealwiththedevil  }
-	}
-
-	#Develop Economical Ties
-
-	focus = {
-		id = POL_developeconomicalties
-		icon = GFX_goal_unknown
-		x = 17
-		y = 10
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_seekfriendsinfrance  } prerequisite = { focus = POL_seekfriendsinitaly  }
-	}
-
-	#Gdansk or War
-
-	focus = {
-		id = POL_gdanskorwar
-		icon = GFX_goal_unknown
-		x = 18
-		y = 13
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thepolishgolem  }
-	}
-
-	#Liberate Belarus
-
-	focus = {
-		id = POL_liberatebelarus
-		icon = GFX_goal_unknown
-		x = 2
-		y = 10
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_contactcomradesinbelaruss  }
-	}
-
-	#Contact Comrades in Ukraine
-
-	focus = {
-		id = POL_contactcomradesinukraine
-		icon = GFX_goal_unknown
-		x = 4
-		y = 9
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thewarsawpact  } prerequisite = { focus = POL_handinhandwithspartacists  }
-	}
-
-	#Liberate Ukraine
-
-	focus = {
-		id = POL_liberateukraine
-		icon = GFX_goal_unknown
-		x = 4
-		y = 10
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_contactcomradesinukraine  }
-	}
-
-	#Delegation to the Soviets
-
-	focus = {
-		id = POL_delegationtothesoviets
-		icon = GFX_goal_unknown
-		x = 7
-		y = 9
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thewarsawpact  }
-	}
-
-	#Invitation to Warsaw Pact
-
-	focus = {
-		id = POL_invitationtowarsawpact
+		id = POL_politicians
 		icon = GFX_goal_unknown
 		x = 8
-		y = 10
+		y = 2
+		cost = 6
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
-		prerequisite = { focus = POL_delegationtothesoviets  }
-		mutually_exclusive = { focus = POL_uneasyinterestinalliance  }
+		prerequisite = { focus = POL_officers  }
 	}
 
-	#The Three Sister Initiative
-
+	#Increase Responsibilities...
 	focus = {
-		id = POL_thethreesisterinitiative
-		icon = GFX_goal_unknown
-		x = 3
-		y = 11
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_liberatebelarus  focus = POL_liberateukraine  }
-	}
-
-	#German Tanks
-
-	focus = {
-		id = POL_germantanks
-		icon = GFX_goal_unknown
-		x = 0
-		y = 11
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_learnfromgermandoctrine  }
-	}
-
-	#Learn from German Doctrine
-
-	focus = {
-		id = POL_learnfromgermandoctrine
-		icon = GFX_goal_unknown
-		x = 0
-		y = 10
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_jointresearchteams  }
-	}
-
-	#Secure Baltics
-
-	focus = {
-		id = POL_securebaltics
-		icon = GFX_goal_unknown
-		x = 7
-		y = 11
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_invitationtowarsawpact  } prerequisite = { focus = POL_uneasyinterestinalliance  }
-	}
-
-	#Backstab Soviets
-
-	focus = {
-		id = POL_backstabsoviets
+		id = POL_increaseresponsibilities
 		icon = GFX_goal_unknown
 		x = 6
-		y = 12
+		y = 7
+		cost = 10
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_STABILITY
 		}
-		prerequisite = { focus = POL_securebaltics  }
-		mutually_exclusive = { focus = POL_cooperatewithsoviets  }
+		prerequisite = { focus = POL_bureaucratic_standardization  }
 	}
 
-	#Cooperate With Soviets
-
+	#...But Decrease Posts
 	focus = {
-		id = POL_cooperatewithsoviets
+		id = POL_butdecreaseposts
 		icon = GFX_goal_unknown
-		x = 8
-		y = 12
+		x = 6
+		y = 8
+		cost = 10
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_STABILITY
 		}
-		prerequisite = { focus = POL_securebaltics  }
+		prerequisite = { focus = POL_increaseresponsibilities  }
 	}
 
-	#Joint Research Teams
-
+	#Orphan Protection
 	focus = {
-		id = POL_jointresearchteams
-		icon = GFX_goal_unknown
-		x = 0
-		y = 9
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_handinhandwithspartacists  }
-		mutually_exclusive = { focus = POL_backstabsoviets  }
-	}
-
-	#The Red Poppy
-
-	focus = {
-		id = POL_theredpoppy
-		icon = GFX_goal_unknown
-		x = 0
-		y = 13
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_economicpact  }
-	}
-
-	#Crush Prussians
-
-	focus = {
-		id = POL_crushprussians
-		icon = GFX_goal_unknown
-		x = 2
-		y = 12
-		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
-		}
-		prerequisite = { focus = POL_thethreesisterinitiative  } prerequisite = { focus = POL_germantanks  }
-	}
-
-	#Paint Romania Red
-
-	focus = {
-		id = POL_paintromaniared
+		id = POL_orphan_protection
 		icon = GFX_goal_unknown
 		x = 4
-		y = 12
+		y = 7
+		cost = 10
 		search_filters = {
-			
-						FOCUS_FILTER_POLITICAL
-					
+			FOCUS_FILTER_STABILITY
 		}
-		prerequisite = { focus = POL_thethreesisterinitiative  }
+		prerequisite = { focus = POL_further_land_confiscation  }
 	}
 
-	#Fund Military Projects
+	#Utilizing Religion
 	focus = {
-		id = POL_fund_military_projects
+		id = POL_utilizing_religion
 		icon = GFX_goal_unknown
-		x = 35
-		y = 2
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_the_polish_cypher_bureau  }
-	}
-
-	#Allocate More Funds to the University of Warsaw
-	focus = {
-		id = POL_allocate_more_funds_to_the_university_of_warsaw
-		icon = GFX_goal_unknown
-		x = 34
-		y = 3
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_invest_in_private_enterprises  } prerequisite = { focus = POL_fund_military_projects  }
-	}
-
-	#Invest in Private Enterprises
-	focus = {
-		id = POL_invest_in_private_enterprises
-		icon = GFX_goal_unknown
-		x = 33
-		y = 2
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_begin_the_cop  }
-	}
-
-	#Finish COP
-	focus = {
-		id = POL_finish_cop
-		icon = GFX_goal_unknown
-		x = 33
-		y = 4
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_allocate_more_funds_to_the_university_of_warsaw  } prerequisite = { focus = POL_build_rural_train_stations  }
-	}
-
-	#Boost Factory Production
-	focus = {
-		id = POL_boost_factory_production
-		icon = GFX_goal_unknown
-		x = 33
-		y = 5
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_finish_cop  }
-	}
-
-	#Manage Construction Projects
-	focus = {
-		id = POL_manage_construction_projects
-		icon = GFX_goal_unknown
-		x = 33
+		x = 2
 		y = 6
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_boost_factory_production  }
-	}
-
-	#The Bomba Kryptologizcna
-	focus = {
-		id = POL_the_bomba_kryptologizcna
-		icon = GFX_goal_unknown
-		x = 35
-		y = 4
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_expand_polmin  } prerequisite = { focus = POL_allocate_more_funds_to_the_university_of_warsaw  }
-	}
-
-	#Examining the Atom Theory
-	focus = {
-		id = POL_examining_the_atom_theory
-		icon = GFX_goal_unknown
-		x = 35
-		y = 5
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_the_bomba_kryptologizcna  }
-	}
-
-	#Truly An Industrialized Nation
-	focus = {
-		id = POL_truly_an_industrialized_nation
-		icon = GFX_goal_unknown
-		x = 36
-		y = 7
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_end_depression_recovery  } prerequisite = { focus = POL_manage_construction_projects  }
-	}
-
-	#Warsaw Main Railway
-	focus = {
-		id = POL_warsaw_main_railway
-		icon = GFX_goal_unknown
-		x = 37
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_the_four_year_plan  }
-	}
-
-	#Combating Unemployment
-	focus = {
-		id = POL_combating_unemployment
-		icon = GFX_goal_unknown
-		x = 40
-		y = 1
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_the_four_year_plan  }
-	}
-
-	#Replace the Gold Standard
-	focus = {
-		id = POL_replace_the_gold_standard
-		icon = GFX_goal_unknown
-		x = 41
-		y = 2
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_combating_unemployment  }
-	}
-
-	#Expand the Rail Network
-	focus = {
-		id = POL_expand_the_rail_network
-		icon = GFX_goal_unknown
-		x = 37
-		y = 2
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_warsaw_main_railway  }
-	}
-
-	#Expand Polmin
-	focus = {
-		id = POL_expand_polmin
-		icon = GFX_goal_unknown
-		x = 39
-		y = 3
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_subsidize_new_urban_projects  }
-	}
-
-	#Subsidize New Urban Projects
-	focus = {
-		id = POL_subsidize_new_urban_projects
-		icon = GFX_goal_unknown
-		x = 39
-		y = 2
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_combating_unemployment  }
-	}
-
-	#Build Rural Train Stations
-	focus = {
-		id = POL_build_rural_train_stations
-		icon = GFX_goal_unknown
-		x = 37
-		y = 3
+		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = POL_expand_the_rail_network  }
+		prerequisite = { focus = POL_restructured_governance  }
 	}
 
-	#Resource Exploitation Programs
+	#Bolshevik Priests
 	focus = {
-		id = POL_resource_exploitation_programs
+		id = POL_bolshevik_priests
 		icon = GFX_goal_unknown
-		x = 39
-		y = 4
+		x = 2
+		y = 7
+		cost = 10
 		search_filters = {
-			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_WAR_SUPPORT
 		}
-		prerequisite = { focus = POL_expand_polmin  } prerequisite = { focus = POL_build_rural_train_stations  }
+		prerequisite = { focus = POL_utilizing_religion  }
 	}
 
-	#Reintroduce the Marka
+	#Socialist Ceremons
 	focus = {
-		id = POL_reintroduce_the_marka
+		id = POL_socialist_ceremons
 		icon = GFX_goal_unknown
-		x = 41
-		y = 3
+		x = 2
+		y = 8
+		cost = 10
 		search_filters = {
-			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_WAR_SUPPORT
 		}
-		prerequisite = { focus = POL_replace_the_gold_standard  }
+		prerequisite = { focus = POL_bolshevik_priests  }
 	}
 
-	#Stabilize the Currency
+	#Further Land Confiscation
 	focus = {
-		id = POL_stabilize_the_currency
+		id = POL_further_land_confiscation
 		icon = GFX_goal_unknown
-		x = 41
-		y = 4
+		x = 4
+		y = 6
+		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = POL_reintroduce_the_marka  }
+		prerequisite = { focus = POL_restructured_governance  }
 	}
 
-	#End Depression Recovery
+	#Send the UB's
 	focus = {
-		id = POL_end_depression_recovery
-		icon = GFX_goal_unknown
-		x = 40
-		y = 5
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_stabilize_the_currency  } prerequisite = { focus = POL_resource_exploitation_programs  }
-	}
-
-	#Begin the 15 Year Plan
-	focus = {
-		id = POL_begin_the_15_year_plan
-		icon = GFX_goal_unknown
-		x = 38
-		y = 7
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_end_depression_recovery  } prerequisite = { focus = POL_manage_construction_projects  }
-	}
-
-	#Large Scale Infrastructure Upgrades
-	focus = {
-		id = POL_large_scale_infrastructure_upgrades
-		icon = GFX_goal_unknown
-		x = 37
-		y = 8
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_begin_the_15_year_plan  }
-	}
-
-	#Agricultural Advances
-	focus = {
-		id = POL_agricultural_advances
-		icon = GFX_goal_unknown
-		x = 39
-		y = 8
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_begin_the_15_year_plan  }
-	}
-
-	#Higher Education Standarts
-	focus = {
-		id = POL_higher_education_standarts
-		icon = GFX_goal_unknown
-		x = 38
-		y = 9
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_large_scale_infrastructure_upgrades  } prerequisite = { focus = POL_agricultural_advances  }
-	}
-
-	#Commercial Hub Expansion
-	focus = {
-		id = POL_commercial_hub_expansion
-		icon = GFX_goal_unknown
-		x = 38
-		y = 10
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_higher_education_standarts  }
-	}
-
-	#Army Modernization
-	focus = {
-		id = POL_army_modernization
-		icon = GFX_goal_unknown
-		x = 5
-		y = 15
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	#Infantry Standardisation
-	focus = {
-		id = POL_infantry_standardisation
-		icon = GFX_goal_unknown
-		x = 4
-		y = 16
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_army_modernization  }
-	}
-
-	#The Romanian Bridgehead Strategy
-	focus = {
-		id = POL_the_romanian_bridgehead_strategy
-		icon = GFX_goal_unknown
-		x = 6
-		y = 16
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_army_modernization  }
-	}
-
-	#Learn from the Great War
-	focus = {
-		id = POL_learn_from_the_great_war
-		icon = GFX_goal_unknown
-		x = 2
-		y = 17
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_infantry_standardisation  }
-	}
-
-	#Well Planned Offensives
-	focus = {
-		id = POL_well_planned_offensives
-		icon = GFX_goal_unknown
-		x = 2
-		y = 18
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_learn_from_the_great_war  }
-		mutually_exclusive = { focus = POL_artillery_modernization  } mutually_exclusive = { focus = POL_cavalry_tanks_designs  }
-	}
-
-	#Study the French General Staff
-	focus = {
-		id = POL_study_the_french_general_staff
-		icon = GFX_goal_unknown
-		x = 2
-		y = 19
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_well_planned_offensives  }
-	}
-
-	#Train New Officers
-	focus = {
-		id = POL_train_new_officers
-		icon = GFX_goal_unknown
-		x = 2
-		y = 20
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_study_the_french_general_staff  } prerequisite = { focus = POL_begin_tank_production  } prerequisite = { focus = POL_focus_on_firepower  }
-	}
-
-	#Foreign Tank Pruchases
-	focus = {
-		id = POL_foreign_tank_pruchases
-		icon = GFX_goal_unknown
-		x = 4
-		y = 17
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_infantry_standardisation  } prerequisite = { focus = POL_the_romanian_bridgehead_strategy  }
-	}
-
-	#Fortification Construction
-	focus = {
-		id = POL_fortification_construction
-		icon = GFX_goal_unknown
-		x = 6
-		y = 17
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_the_romanian_bridgehead_strategy  } prerequisite = { focus = POL_infantry_standardisation  }
-	}
-
-	#Cavalry Tanks Designs
-	focus = {
-		id = POL_cavalry_tanks_designs
-		icon = GFX_goal_unknown
-		x = 4
-		y = 18
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_foreign_tank_pruchases  }
-		mutually_exclusive = { focus = POL_artillery_modernization  } mutually_exclusive = { focus = POL_well_planned_offensives  }
-	}
-
-	#Begin Tank Production
-	focus = {
-		id = POL_begin_tank_production
-		icon = GFX_goal_unknown
-		x = 4
-		y = 19
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_cavalry_tanks_designs  }
-	}
-
-	#Mechanization of the Army
-	focus = {
-		id = POL_mechanization_of_the_army
-		icon = GFX_goal_unknown
-		x = 6
-		y = 20
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_study_the_french_general_staff  } prerequisite = { focus = POL_begin_tank_production  } prerequisite = { focus = POL_focus_on_firepower  }
-	}
-
-	#From the  Polish Impact Unit
-	focus = {
-		id = POL_fromthepolishimpactunit
-		icon = GFX_goal_unknown
-		x = 4
-		y = 20
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_study_the_french_general_staff  } prerequisite = { focus = POL_begin_tank_production  } prerequisite = { focus = POL_focus_on_firepower  }
-	}
-
-	#Oversee the Baltic Sea
-	focus = {
-		id = POL_oversee_the_baltic_sea
-		icon = GFX_goal_unknown
-		x = 12
-		y = 18
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_pzl37los  } prerequisite = { focus = POL_light_bomber_priority  } prerequisite = { focus = POL_continue_fighter_development  }
-	}
-
-	#Focus on Firepower
-	focus = {
-		id = POL_focus_on_firepower
-		icon = GFX_goal_unknown
-		x = 6
-		y = 19
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-		prerequisite = { focus = POL_artillery_modernization  }
-	}
-
-	#Artillery Modernization
-	focus = {
-		id = POL_artillery_modernization
-		icon = GFX_goal_unknown
-		x = 6
-		y = 18
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_fortification_construction  }
-		mutually_exclusive = { focus = POL_cavalry_tanks_designs  } mutually_exclusive = { focus = POL_well_planned_offensives  }
-	}
-
-	#Tank Killers
-	focus = {
-		id = POL_tank_killers
-		icon = GFX_goal_unknown
-		x = 6
-		y = 21
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_mechanization_of_the_army  } prerequisite = { focus = POL_fromthepolishimpactunit  }
-		mutually_exclusive = { focus = POL_rocket_artillery_trials  }
-	}
-
-	#Rocket Artillery Trials
-	focus = {
-		id = POL_rocket_artillery_trials
+		id = POL_sendtheubs
 		icon = GFX_goal_unknown
 		x = 8
-		y = 21
+		y = 7
+		cost = 10
 		search_filters = {
-			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
-		prerequisite = { focus = POL_missile_research  } prerequisite = { focus = POL_mechanization_of_the_army  }
+		prerequisite = { focus = POL_investigate_thievery  }
 	}
 
-	#Combined Arms Operations
+	#More and Faster
 	focus = {
-		id = POL_combined_arms_operations
-		icon = GFX_goal_unknown
-		x = 4
-		y = 21
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_train_new_officers  } prerequisite = { focus = POL_mechanization_of_the_army  } prerequisite = { focus = POL_fromthepolishimpactunit  }
-	}
-
-	#The Polish Airforce
-	focus = {
-		id = POL_the_polish_airforce
+		id = POL_more_and_faster
 		icon = GFX_goal_unknown
 		x = 10
-		y = 15
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-	}
-
-	#PZL P.11c
-	focus = {
-		id = POL_pzl_p11c
-		icon = GFX_goal_unknown
-		x = 8
-		y = 16
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_the_polish_airforce  }
-	}
-
-	#Continue Fighter Development
-	focus = {
-		id = POL_continue_fighter_development
-		icon = GFX_goal_unknown
-		x = 8
-		y = 17
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_pzl_p11c  }
-	}
-
-	#PZL.23 Karaś
-	focus = {
-		id = POL_pzl23karas
-		icon = GFX_goal_unknown
-		x = 12
-		y = 16
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_the_polish_airforce  }
-	}
-
-	#PZL.37 Łoś
-	focus = {
-		id = POL_pzl37los
-		icon = GFX_goal_unknown
-		x = 11
-		y = 17
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_pzl23karas  }
-		mutually_exclusive = { focus = POL_light_bomber_priority  }
-	}
-
-	#Light Bomber Priority
-	focus = {
-		id = POL_light_bomber_priority
-		icon = GFX_goal_unknown
-		x = 13
-		y = 17
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_pzl23karas  }
-		mutually_exclusive = { focus = POL_pzl37los  }
-	}
-
-	#PZL.50 Jastrząb
-	focus = {
-		id = POL_pzl50jastrzab
-		icon = GFX_goal_unknown
-		x = 10
-		y = 18
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_pzl37los  } prerequisite = { focus = POL_light_bomber_priority  } prerequisite = { focus = POL_continue_fighter_development  }
-	}
-
-	#Look in to Jet Engines
-	focus = {
-		id = POL_look_in_to_jet_engines
-		icon = GFX_goal_unknown
-		x = 11
-		y = 19
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
-		prerequisite = { focus = POL_oversee_the_baltic_sea  } prerequisite = { focus = POL_pzl50jastrzab  }
-	}
-
-	#Missile Research
-	focus = {
-		id = POL_missile_research
-		icon = GFX_goal_unknown
-		x = 11
-		y = 20
+		y = 8
+		cost = 10
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = POL_look_in_to_jet_engines  }
+		prerequisite = { focus = POL_agricultural_expansion  }
 	}
 
-	#Use Traditional Combat Methods
+	#Iron for Felix
 	focus = {
-		id = POL_use_traditional_combat_methods
+		id = POL_iron_for_felix
 		icon = GFX_goal_unknown
-		x = 20
-		y = 16
+		x = 12
+		y = 6
+		cost = 10
 		search_filters = {
-			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_INDUSTRY
 		}
-		prerequisite = { focus = POL_the_polish_navy  }
-		mutually_exclusive = { focus = POL_adopt_commerce_raiding_tactics  }
+		prerequisite = { focus = POL_the_upcoming_arsenal  }
 	}
 
-	#Adopt Commerce Raiding Tactics
+	#Worthwhile Drilling
 	focus = {
-		id = POL_adopt_commerce_raiding_tactics
+		id = POL_worthwhile_drilling
 		icon = GFX_goal_unknown
-		x = 18
-		y = 16
+		x = 12
+		y = 7
+		cost = 10
 		search_filters = {
-			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_INDUSTRY
 		}
-		prerequisite = { focus = POL_the_polish_navy  }
-		mutually_exclusive = { focus = POL_use_traditional_combat_methods  }
+		prerequisite = { focus = POL_iron_for_felix  }
 	}
 
-	#Import Submarine Designs
+	#Metallurgy Giant
 	focus = {
-		id = POL_import_submarine_designs
+		id = POL_metallurgy_giant
 		icon = GFX_goal_unknown
-		x = 16
-		y = 17
+		x = 12
+		y = 8
+		cost = 1o
 		search_filters = {
-			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_INDUSTRY
 		}
-		prerequisite = { focus = POL_adopt_commerce_raiding_tactics  }
+		prerequisite = { focus = POL_worthwhile_drilling  }
 	}
 
-	#Develop Screening Ships
+	#Tools of Revolution
 	focus = {
-		id = POL_develop_screening_ships
+		id = POL_tools_of_revolution
+		icon = GFX_goal_unknown
+		x = 14
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = POL_the_upcoming_arsenal  }
+	}
+
+	#Prepare Backline Support
+	focus = {
+		id = POL_prepare_backline_support
+		icon = GFX_goal_unknown
+		x = 14
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = POL_tools_of_revolution  }
+	}
+
+	#Breakthrough Machines
+	focus = {
+		id = POL_breakthrough_machines
+		icon = GFX_goal_unknown
+		x = 14
+		y = 8
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = POL_prepare_backline_support  }
+	}
+
+	#Reconstruct the Red Army
+	focus = {
+		id = POL_reconstruct_the_red_army
 		icon = GFX_goal_unknown
 		x = 19
-		y = 17
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = POL_the_upcoming_arsenal  }
+	}
+
+	#Drums of Change!
+	focus = {
+		id = POL_drumsofchange
+		icon = GFX_goal_unknown
+		x = 13
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = POL_metallurgy_giant  } prerequisite = { focus = POL_breakthrough_machines  }
+	}
+
+	#The Upcoming Arsenal
+	focus = {
+		id = POL_the_upcoming_arsenal
+		icon = GFX_goal_unknown
+		x = 12
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = POL_the_red_dawn  }
+	}
+
+	#A Glimmer of Hope
+	focus = {
+		id = POL_a_glimmer_of_hope
+		icon = GFX_goal_unknown
+		x = 8
+		y = 9
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = POL_more_and_faster  } prerequisite = { focus = POL_butdecreaseposts  }
+	}
+
+	#Mass Mobilization
+	focus = {
+		id = POL_mass_mobilization
+		icon = GFX_goal_unknown
+		x = 19
+		y = 7
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = POL_reconstruct_the_red_army  }
+	}
+
+	#Encourage Pilot Clubs
+	focus = {
+		id = POL_encourage_pilot_clubs
+		icon = GFX_goal_unknown
+		x = 17
+		y = 9
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = POL_use_traditional_combat_methods  } prerequisite = { focus = POL_adopt_commerce_raiding_tactics  }
+		prerequisite = { focus = POL_foreign_instructors  }
 	}
 
-	#Study Heavy Hulls
+	#Enlisting Fishermen
 	focus = {
-		id = POL_study_heavy_hulls
+		id = POL_enlisting_fishermen
 		icon = GFX_goal_unknown
 		x = 21
-		y = 17
+		y = 8
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = POL_use_traditional_combat_methods  }
+		prerequisite = { focus = POL_in_to_the_sea  }
 	}
 
-	#Costal Defence
+	#Shortened Training
 	focus = {
-		id = POL_costal_defence
+		id = POL_shortened_training
 		icon = GFX_goal_unknown
-		x = 18
-		y = 18
+		x = 19
+		y = 8
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = POL_develop_screening_ships  }
+		prerequisite = { focus = POL_mass_mobilization  }
 	}
 
-	#Convoy Targeting
+	#Foreign Instructors
 	focus = {
-		id = POL_convoy_targeting
+		id = POL_foreign_instructors
 		icon = GFX_goal_unknown
-		x = 18
-		y = 19
+		x = 17
+		y = 8
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = POL_costal_defence  }
+		prerequisite = { focus = POL_heading_upwards  }
 	}
 
-	#Modern Torpdoes
+	#Restructured Governance
 	focus = {
-		id = POL_modern_torpdoes
+		id = POL_restructured_governance
 		icon = GFX_goal_unknown
-		x = 16
-		y = 20
+		x = 6
+		y = 5
 		search_filters = {
-			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = POL_convoy_targeting  }
+		prerequisite = { focus = POL_the_red_dawn  }
 	}
 
-	#Design Heavier Guns
+	#In to the Sea
 	focus = {
-		id = POL_design_heavier_guns
+		id = POL_in_to_the_sea
 		icon = GFX_goal_unknown
-		x = 20
-		y = 20
+		x = 21
+		y = 7
 		search_filters = {
-			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_POLITICAL
 		}
-		prerequisite = { focus = POL_modern_battleships  }
+		prerequisite = { focus = POL_reconstruct_the_red_army  }
 	}
 
-	#Dominate the Baltic
+	#Heading Upwards
 	focus = {
-		id = POL_dominate_the_baltic
+		id = POL_heading_upwards
 		icon = GFX_goal_unknown
-		x = 20
-		y = 18
+		x = 17
+		y = 7
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = POL_develop_screening_ships  }
-		mutually_exclusive = { focus = POL_costal_defence  } mutually_exclusive = { focus = POL_dominate_the_baltic  }
+		prerequisite = { focus = POL_reconstruct_the_red_army  }
 	}
 
-	#Advanced Basing
+	#indoctrinated Army
 	focus = {
-		id = POL_advanced_basing
+		id = POL_indoctrinated_army
 		icon = GFX_goal_unknown
-		x = 22
-		y = 20
+		x = 19
+		y = 9
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = POL_modern_battleships  }
+		prerequisite = { focus = POL_shortened_training  }
 	}
 
-	#Modern Battleships
+	#Improving Ship Construction
 	focus = {
-		id = POL_modern_battleships
+		id = POL_improving_ship_construction
 		icon = GFX_goal_unknown
-		x = 20
-		y = 19
+		x = 21
+		y = 9
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = POL_dominate_the_baltic  }
+		prerequisite = { focus = POL_enlisting_fishermen  }
 	}
 
-	#Cruiser Submarines
+	#Checkpoint focus Viens
 	focus = {
-		id = POL_cruiser_submarines
+		id = POL_checkpoint_focus_viens
 		icon = GFX_goal_unknown
-		x = 16
-		y = 18
+		x = 17
+		y = 10
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
 		}
-		prerequisite = { focus = POL_import_submarine_designs  }
+		prerequisite = { focus = POL_encourage_pilot_clubs  }
 	}
 
-	#Prepare Escorts
+	#Checkpoint Focus Triis
 	focus = {
-		id = POL_prepare_escorts
+		id = POL_checkpoint_focus_triis
 		icon = GFX_goal_unknown
-		x = 18
-		y = 20
+		x = 21
+		y = 10
+		cost = 5
 		search_filters = {
-			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_INDUSTRY
 		}
-		prerequisite = { focus = POL_convoy_targeting  }
+		prerequisite = { focus = POL_improving_ship_construction  }
+	}
+
+	#Checkpoint Focus Divi
+	focus = {
+		id = POL_checkpoint_focus_divi
+		icon = GFX_goal_unknown
+		x = 19
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = POL_indoctrinated_army  }
 	}
 
 }
