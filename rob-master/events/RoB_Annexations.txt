@@ -2544,6 +2544,7 @@ country_event = {
    tag = LIT
    tag = LES
    tag = SAG
+   has_country_flag = vyddunas_victory
    has_country_flag = annex_lit
   }
  }
@@ -3893,14 +3894,14 @@ country_event = {
  if = { 
   limit = { ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = yes } }
   EST = {
-  set_cosmetic_tag = Generic_puppet_socialist
+  set_cosmetic_tag = EST_liberated_socialist
   } 
  }
    if = { 
     limit = { 
       AND = { 
           ROOT = { SOCIALIST_ALIGNED_GOVERNMENT = no } 
-          EST = { has_cosmetic_tag = Generic_puppet_socialist } 
+          EST = { has_cosmetic_tag = EST_liberated_socialist } 
         }
       } 
       EST = { drop_cosmetic_tag = yes }
@@ -3920,13 +3921,13 @@ country_event = {
 } 
 if = { 
   limit = { ROOT = { has_government = pelekist } }
- EST = {  set_cosmetic_tag = Generic_puppet_pelekist } 
+ EST = {  set_cosmetic_tag = EST_liberated_pelekist } 
  }
  if = { 
   limit = { 
     AND = { 
       ROOT = { NOT = { has_government = pelekist } }
-        EST = { has_cosmetic_tag = Generic_puppet_pelekist } 
+        EST = { has_cosmetic_tag = EST_liberated_pelekist } 
       }
     } 
     EST = { drop_cosmetic_tag = yes }

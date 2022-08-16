@@ -36,8 +36,8 @@ LES_pagang = {
 
   modifier = {
   command_power_gain_mult = 0.25
-  max_command_power = 20
-  experience_loss_factor = -0.25
+  max_command_power = 25
+  army_attack_factor = 0.10
   army_morale = 10
   }
 }
@@ -763,6 +763,7 @@ LES_epic_horsies = {
   modifier = {
     cavalry_attack_factor = 0.3
     cavalry_defence_factor = 0.3
+    cavalry_speed_factor = 0.1
   }
 
 }

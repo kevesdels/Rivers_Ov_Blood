@@ -70,8 +70,8 @@ characters={
 			slot = theorist
 			idea_token = FRA_alphonse_juin_theo
 			cost = 200
-			research_bonus = { land_doctrine = 0.10 }
 			modifier = {
+				land_doctrine_cost_factor = -0.1
 				army_infantry_attack_factor = 0.05
 				army_infantry_defence_factor = 0.05
 				}
@@ -105,8 +105,8 @@ characters={
 			idea_token = FRA_philippe_leclerc
 			cost = 200
 			available = { has_tech = mobile_warfare }
-			research_bonus = { cat_mobile_warfare = 0.10 }
 			modifier = {
+			 cat_mobile_warfare_cost_factor = -0.1
 			 army_armor_attack_factor = 0.05
 			 army_armor_defence_factor = 0.05
 			 motorized_attack_factor = 0.05

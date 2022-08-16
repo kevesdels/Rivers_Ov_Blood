@@ -133,9 +133,11 @@ ideas = {
 			
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.1 group = mobilization_laws }
-				has_war_support > 0.5
 				has_war = yes
-
+				OR = {
+					has_war_support > 0.5
+					surrender_progress > 0.1
+				}
 
 			}
 
@@ -203,7 +205,7 @@ ideas = {
 				has_war = yes
 				OR = {
 					has_war_support > 0.7
-					surrender_progress > 0
+					surrender_progress > 0.15
 				}
 				enemies_strength_ratio > 0.75
 				#any_enemy_country = {

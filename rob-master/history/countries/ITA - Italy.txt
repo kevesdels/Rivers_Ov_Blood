@@ -84,25 +84,6 @@ if = {
 
 set_convoys = 200
 
-
-set_politics = {
-	ruling_party = social_liberal
-	last_election = "1932.6.21"
-	election_frequency = 48
-	elections_allowed = yes
-}
-set_popularities = {
-	national_socialist = 9
-	socialist = 12
-	democratic_socialist = 13
-	social_democracy = 3
-	social_liberal = 32
-	conservative = 8
-	authoritharian = 6
-	reactionary = 6
-	pelekist = 11
-}
-
 recruit_character = ITA_victor_emmanuel_iii
 recruit_character = ITA_pelekist_triumvirate
 recruit_character = ITA_arturo_labriola
@@ -126,6 +107,24 @@ recruit_character = ITA_giuseppe_fioravanzo
 recruit_character = ITA_carlo_bergamini
 recruit_character = ITA_angelo_iachino
 
+
+set_politics = {
+	ruling_party = social_liberal
+	last_election = "1932.6.21"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	national_socialist = 9
+	socialist = 12
+	democratic_socialist = 13
+	social_democracy = 3
+	social_liberal = 32
+	conservative = 8
+	authoritharian = 6
+	reactionary = 6
+	pelekist = 11
+}
 
 ### VARIANTS ###
 # 1936 Start #

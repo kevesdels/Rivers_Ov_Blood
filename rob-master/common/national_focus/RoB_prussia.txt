@@ -1241,7 +1241,10 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		 add_war_support = 0.15
+		 swap_ideas = {
+			remove_idea = PRS_ss
+			add_idea = PRS_ss_2
+		}
 		}
 	}
 
@@ -1495,6 +1498,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		bypass = {
+			OR = {
+				EST = { has_cosmetic_tag = EST_liberated_democracy  }
+				EST = { has_cosmetic_tag = EST_liberated_pelekist  }
+				EST = { has_cosmetic_tag = EST_liberated_socialist }
+				EST = { exists = no }
+			}
+		}
 		completion_reward = {
 		 EST = { country_event = { id = prussia.28 days = 2 } }
 		}
@@ -1532,7 +1543,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		 add_popularity = { ideology = pelekist popularity =0.1 }
+		 add_stability = 0.1
 		}
 	}
 
@@ -1625,7 +1636,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		 army_experience = 25
+		 army_experience = 50
 		}
 	}
 
@@ -2914,7 +2925,7 @@ add_building_construction = {
 		}
 		completion_reward = {
 		 remove_ideas = {
-		 the_great_depression
+			PRS_the_great_depression
 		 }
 		}
 	}
@@ -4488,7 +4499,9 @@ add_building_construction = {
 			factor = 1
 		}
 		completion_reward = {
-		 
+		 add_ideas = {
+			PRS_reclaim_birthright
+		 }
 		}
 	}
 

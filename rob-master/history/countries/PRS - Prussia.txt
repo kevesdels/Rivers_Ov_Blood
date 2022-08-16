@@ -27,53 +27,6 @@ set_technology = {
 }
 
 
-
-set_politics = {
-	ruling_party = authoritharian
-	last_election = "1933.7.1"
-	election_frequency = 48
-	elections_allowed = no
-}
-set_popularities = {
-	national_socialist = 0
-	socialist = 0
-	democratic_socialist = 0
-	social_democracy = 5
-	social_liberal = 8
-	conservative = 15
-	authoritharian = 40
-	reactionary = 10
-	pelekist = 22
-}
-
-set_convoys = 300
-
-create_country_leader = {
-	name = "Konrad Adenauer"
-	desc = ""
-	picture = "gfx/leaders/PRS/Portrait_Germany_Konrad_Adenauer.dds"
-	expire = "1960.1.1"
-	ideology = conservative_subtype
-	traits = {
-		
-	}
-}
-
-add_ideas = {
-minority_troubles
-weak_king
-prussian_army
-prussian_high_command
-limited_conscription
-isolation
-the_great_depression
-PRS_hindenburg_hog
-PRS_erich_kochweser_im
-PRS_theodor_duesterberg_fm
-PRS_hjalmar_schacht_em
-PRS_otto_gessler_dm
-}
-
 recruit_character = PRS_erich_raeder
 recruit_character = PRS_wilhelm_keitel
 recruit_character = PRS_alfred_jodl
@@ -102,3 +55,38 @@ recruit_character = PRS_heinrich_danckelmann
 recruit_character = PRS_gerd_von_rundstedt
 recruit_character = PRS_gunther_von_kluge
 recruit_character = PRS_georg_von_kuchler
+
+set_politics = {
+	ruling_party = authoritharian
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 5
+	social_liberal = 8
+	conservative = 15
+	authoritharian = 40
+	reactionary = 10
+	pelekist = 22
+}
+
+set_convoys = 300
+
+add_ideas = {
+PRS_the_great_depression
+minority_troubles
+weak_king
+prussian_army
+prussian_high_command
+limited_conscription
+isolation
+PRS_hindenburg_hog
+PRS_erich_kochweser_im
+PRS_theodor_duesterberg_fm
+PRS_hjalmar_schacht_em
+PRS_otto_gessler_dm
+}
