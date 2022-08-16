@@ -30,6 +30,10 @@ focus_tree = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
 		prerequisite = { focus = POL_kulaks  }
+		completion_reward = {
+			POL = { country_event = { id = rob_pol_van.7 days=2 } }
+			add_ideas = Vanpol_nodistractions
+					}
 	}
 
 	#...Officers...
@@ -45,7 +49,12 @@ focus_tree = {
 		prerequisite = { focus = POL_rivers_of_blood  }
 		completion_reward = {
 			POL = { country_event = { id = rob_pol_van.2 days=2 } }
+			
 			add_ideas = Vanpol_loyalcorps
+			hidden_effect = {
+				POL = { country_event = { id = rob_pol_van.8 days=20 } }
+			}
+
 					}
 	}
 
@@ -60,6 +69,10 @@ focus_tree = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
 		prerequisite = { focus = POL_politicians  }
+		completion_reward = {
+			POL = { country_event = { id = rob_pol_van.6 days=2 } }
+			add_ideas = Vanpol_forthecause
+					}
 	}
 
 	#...Landlords...
@@ -90,6 +103,12 @@ focus_tree = {
 			FOCUS_FILTER_STABILITY
 		}
 		prerequisite = { focus = POL_the_upcoming_arsenal  } prerequisite = { focus = POL_nationalization_of_industry  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Vanpol_farmingcollapse
+				add_idea = Vanpol_farmingcollapse2
+			}
+					}
 	}
 
 	#...Kulaks...
@@ -119,6 +138,12 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = POL_ensure_food_availability  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Vanpol_farmingcollapse2
+				add_idea = Vanpol_farmingcollapse3
+			}
+					}
 	}
 
 	#Investigate Thievery
@@ -132,6 +157,10 @@ focus_tree = {
 			FOCUS_FILTER_STABILITY
 		}
 		prerequisite = { focus = POL_nationalization_of_industry  } prerequisite = { focus = POL_restructured_governance  }
+		completion_reward = {
+			POL = { country_event = { id = rob_pol_van.12 days=4 } }
+		}
+	
 	}
 
 	#The Red Dawn
@@ -145,6 +174,9 @@ focus_tree = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
 		prerequisite = { focus = POL_priests  } prerequisite = { focus = POL_intellectuals  }
+		completion_reward = {
+			POL = { country_event = { id = rob_pol_van.9 days=0 } }
+					}
 	}
 
 	#Bureaucratic Standardization
@@ -158,6 +190,12 @@ focus_tree = {
 			FOCUS_FILTER_STABILITY
 		}
 		prerequisite = { focus = POL_restructured_governance  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Vanpol_understaffedbureaucracy2
+				add_idea = Vanpol_understaffedbureaucracy3
+			}
+					}
 	}
 
 	#Leading the Federation
@@ -183,6 +221,16 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = POL_the_red_dawn  }
+		
+		completion_reward = {
+			add_stability = 0.025
+
+
+			swap_ideas = {
+				remove_idea = Vanpol_emptylands
+				add_idea = Vanpol_emptylands2
+			}
+					}
 	}
 
 	#...Politicians...
@@ -213,6 +261,12 @@ focus_tree = {
 			FOCUS_FILTER_STABILITY
 		}
 		prerequisite = { focus = POL_bureaucratic_standardization  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Vanpol_understaffedbureaucracy3
+				add_idea = Vanpol_understaffedbureaucracy4
+			}
+					}
 	}
 
 	#...But Decrease Posts
@@ -226,6 +280,12 @@ focus_tree = {
 			FOCUS_FILTER_STABILITY
 		}
 		prerequisite = { focus = POL_increaseresponsibilities  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Vanpol_understaffedbureaucracy4
+				add_idea = Vanpol_streamlinedbureaucracy
+			}
+					}
 	}
 
 	#Orphan Protection
@@ -239,6 +299,10 @@ focus_tree = {
 			FOCUS_FILTER_STABILITY
 		}
 		prerequisite = { focus = POL_further_land_confiscation  }
+		completion_reward = {
+			POL = { country_event = { id = rob_pol_van.11 days=0 } }
+			
+					}
 	}
 
 	#Utilizing Religion
@@ -252,6 +316,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = POL_restructured_governance  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Vanpol_extremepushback
+				add_idea = Vanpol_extremepushback2
+			}
+					}
 	}
 
 	#Bolshevik Priests
@@ -265,6 +335,12 @@ focus_tree = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
 		prerequisite = { focus = POL_utilizing_religion  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Vanpol_extremepushback2
+				add_idea = Vanpol_extremepushback3
+			}
+					}
 	}
 
 	#Socialist Ceremons
@@ -278,6 +354,11 @@ focus_tree = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
 		prerequisite = { focus = POL_bolshevik_priests  }
+		completion_reward = {
+			POL = { country_event = { id = rob_pol_van.10 days=4 } }
+				remove_ideas = Vanpol_extremepushback3
+		}
+
 	}
 
 	#Further Land Confiscation
@@ -291,6 +372,17 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = POL_restructured_governance  }
+		completion_reward = {
+
+			865 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					  }
+			}
+		}
 	}
 
 	#Send the UB's
@@ -304,6 +396,10 @@ focus_tree = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
 		prerequisite = { focus = POL_investigate_thievery  }
+		completion_reward = {
+				remove_ideas = Valpol_organizedbandits
+				
+					}
 	}
 
 	#More and Faster
@@ -317,6 +413,12 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = POL_agricultural_expansion  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Vanpol_farmingcollapse3
+				add_idea = Vanpol_farmingrejuvination
+					}
+				}
 	}
 
 	#Iron for Felix
@@ -329,7 +431,27 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
-		prerequisite = { focus = POL_the_upcoming_arsenal  }
+		prerequisite = { focus = POL_the_upcoming_arsenal  } prerequisite = { focus = POL_nationalization_of_industry  }
+		completion_reward = {
+			90 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+			67 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+			762 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+		}
 	}
 
 	#Worthwhile Drilling
@@ -343,6 +465,18 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = POL_iron_for_felix  }
+		completion_reward = {
+			88 = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+			}
+				swap_ideas = {
+					remove_idea = Vanpol_emptylands2
+					add_idea = Vanpol_emptylands3
+				}
+		}
 	}
 
 	#Metallurgy Giant
@@ -356,6 +490,14 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = POL_worthwhile_drilling  }
+		completion_reward = {
+				add_resource = {
+					type = aluminium
+					amount = 20
+					state = 67
+				}
+			remove_ideas = Vanpol_emptylands3
+		}
 	}
 
 	#Tools of Revolution
@@ -369,6 +511,15 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = POL_the_upcoming_arsenal  }
+		completion_reward = {
+			add_tech_bonus = {
+				name = zhukov_mot
+				bonus = 1.0
+				uses = 1
+				technology = motorised_infantry	
+				technology = mechanised_infantry
+			}
+		}
 	}
 
 	#Prepare Backline Support
@@ -382,6 +533,15 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = POL_tools_of_revolution  }
+		completion_reward = {
+			add_tech_bonus = {
+			  name = infantry_bonus
+			  bonus = 1.0
+			  
+			  uses = 2
+			  category = artillery
+		  }
+		   }
 	}
 
 	#Breakthrough Machines
@@ -395,6 +555,16 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = POL_prepare_backline_support  }
+		completion_reward = {
+			add_tech_bonus = {
+			  name = infantry_bonus
+			  bonus = 2.0
+			  
+			  uses = 1
+			  category = armor
+		  }
+		   }
+
 	}
 
 	#Reconstruct the Red Army
@@ -408,6 +578,9 @@ focus_tree = {
 			FOCUS_FILTER_MANPOWER
 		}
 		prerequisite = { focus = POL_the_upcoming_arsenal  }
+		completion_reward = {
+			army_experience = 20
+	 }
 	}
 
 	#Drums of Change!
@@ -421,6 +594,18 @@ focus_tree = {
 			FOCUS_FILTER_STABILITY
 		}
 		prerequisite = { focus = POL_metallurgy_giant  } prerequisite = { focus = POL_breakthrough_machines  }
+		completion_reward = {
+			POL = { country_event = { id = rob_pol_van.14 } }
+			87 = { 
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+	
+			 type = arms_factory
+			 level = 3
+			 instant_build = yes
+   }
+   }
+		   }
 	}
 
 	#The Upcoming Arsenal
@@ -434,6 +619,13 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		prerequisite = { focus = POL_the_red_dawn  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea =  Vanpol_nodistractions
+				add_idea =  Vanpol_nodistractions2
+			}
+			add_stability = 0.025
+					}
 	}
 
 	#A Glimmer of Hope
@@ -447,6 +639,15 @@ focus_tree = {
 			FOCUS_FILTER_STABILITY
 		}
 		prerequisite = { focus = POL_more_and_faster  } prerequisite = { focus = POL_butdecreaseposts  }
+		completion_reward = {
+			POL = { country_event = { id = rob_pol_van.13 } }
+			remove_ideas = Vanpol_deathofscience
+				add_timed_idea = {
+					idea = Vanpol_recoveringscience
+					days = 180
+				}
+			
+		}
 	}
 
 	#Mass Mobilization
@@ -460,6 +661,15 @@ focus_tree = {
 			FOCUS_FILTER_MANPOWER
 		}
 		prerequisite = { focus = POL_reconstruct_the_red_army  }
+		completion_reward = {
+			add_ideas = Valpol_massconscription
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+				}
+			}
 	}
 
 	#Encourage Pilot Clubs
@@ -486,6 +696,10 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = POL_in_to_the_sea  }
+		 completion_reward = {
+			add_ideas = Valpol_experiencedsailors
+				
+		 }
 	}
 
 	#Shortened Training
@@ -499,6 +713,13 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = POL_mass_mobilization  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Valpol_massconscription
+				add_idea = Valpol_massconscription2
+			}
+		}
+
 	}
 
 	#Foreign Instructors
@@ -512,6 +733,9 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = POL_heading_upwards  }
+		completion_reward = {
+			add_ideas = Valpol_foreigninstructors
+		}
 	}
 
 	#Restructured Governance
@@ -524,6 +748,13 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = POL_the_red_dawn  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Vanpol_understaffedbureaucracy
+				add_idea = Vanpol_understaffedbureaucracy2
+			}
+			add_stability = 0.025
+					}
 	}
 
 	#In to the Sea
@@ -532,10 +763,22 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		x = 21
 		y = 7
+		cost = 5
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = POL_reconstruct_the_red_army  }
+		completion_reward = {
+			865 = { 
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+	
+			 type = dockyard
+			 level = 2
+			 instant_build = yes
+   }
+   }
+		   }
 	}
 
 	#Heading Upwards
@@ -549,6 +792,9 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = POL_reconstruct_the_red_army  }
+		completion_reward = {
+			air_experience = 25
+		  }
 	}
 
 	#indoctrinated Army
@@ -562,6 +808,12 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = POL_shortened_training  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = Valpol_massconscription2
+				add_idea = Valpol_massconscription3
+			}
+		}
 	}
 
 	#Improving Ship Construction
@@ -575,6 +827,9 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = POL_enlisting_fishermen  }
+		completion_reward = {
+			add_ideas = Valpol_streamlinedshipproduction
+		}
 	}
 
 	#Checkpoint focus Viens

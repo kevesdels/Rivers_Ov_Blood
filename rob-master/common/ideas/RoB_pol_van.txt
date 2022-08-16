@@ -50,7 +50,37 @@ ideas = {
     modifier = {
       local_building_slots_factor = -0.70
 	}
+}
+   Vanpol_emptylands2 = { # seized useless lands
+      allowed = {
+         always = no
+       }
+      allowed_civil_war = {
+              always = yes
+           }
+       removal_cost = -1
+      picture = GFX_idea_famine_of_1933
+     
+      modifier = {
+        local_building_slots_factor = -0.60
+        consumer_goods_factor = -0.02
+     }
    }
+   Vanpol_emptylands3 = { # seized useless lands
+   allowed = {
+      always = no
+    }
+   allowed_civil_war = {
+           always = yes
+        }
+    removal_cost = -1
+   picture = GFX_idea_famine_of_1933
+  
+   modifier = {
+     local_building_slots_factor = -0.40
+  }
+}
+
    #tendrils of the state
        Vanpol_statetendrils = {
     allowed = {
@@ -80,11 +110,69 @@ ideas = {
    
     modifier = {
     political_power_gain = -0.4
-	 consumer_goods_factor = -0.05
+	 consumer_goods_factor = 0.05
 	}
    }
+   Vanpol_understaffedbureaucracy2 = {
+      allowed = {
+         always = no
+       }
+      allowed_civil_war = {
+              always = yes
+           }
+       removal_cost = -1
+      picture = GFX_idea_famine_of_1933
+     
+      modifier = {
+      political_power_gain = -0.20
+      consumer_goods_factor = 0.05
+     }
+     }
+     Vanpol_understaffedbureaucracy3 = {
+      allowed = {
+         always = no
+       }
+      allowed_civil_war = {
+              always = yes
+           }
+       removal_cost = -1
+      picture = GFX_idea_famine_of_1933
+     
+      modifier = {
+      political_power_gain = -0.10
+      consumer_goods_factor = 0.05
+     }
+     }
+     Vanpol_understaffedbureaucracy4 = {
+      allowed = {
+         always = no
+       }
+      allowed_civil_war = {
+              always = yes
+           }
+       removal_cost = -1
+      picture = GFX_idea_famine_of_1933
+     
+      modifier = {
+      consumer_goods_factor = 0.05
+     }
+     }
+     Vanpol_streamlinedbureaucracy = {
+      allowed = {
+         always = no
+       }
+      allowed_civil_war = {
+              always = yes
+           }
+       removal_cost = -1
+      picture = GFX_idea_famine_of_1933
+     
+      modifier = {
+      consumer_goods_factor = -0.05
+     }
+     }
    #Farming collapse
-   Vanpol_farmingcollapse= {
+   Vanpol_farmingcollapse = {
     allowed = {
        always = no
      }
@@ -95,12 +183,57 @@ ideas = {
 	 picture = GFX_idea_famine_of_1933
    
     modifier = {
-      weekly_manpower = -500
+      weekly_manpower = -800
       stability_factor = -0.3
 	}
-
    }
-   TRS_backs_to_the_wall= {
+   Vanpol_farmingcollapse2 = {
+      allowed = {
+         always = no
+       }
+      allowed_civil_war = {
+              always = yes
+           }
+       removal_cost = -1
+      picture = GFX_idea_famine_of_1933
+     
+      modifier = {
+        weekly_manpower = -400
+        stability_factor = -0.25
+     }
+     }
+     Vanpol_farmingcollapse3 = {
+      allowed = {
+         always = no
+       }
+      allowed_civil_war = {
+              always = yes
+           }
+       removal_cost = -1
+      picture = GFX_idea_famine_of_1933
+     
+      modifier = {
+        weekly_manpower = -200
+        stability_factor = -0.2
+     }
+     }
+     Vanpol_farmingrejuvination = {
+      allowed = {
+         always = no
+       }
+      allowed_civil_war = {
+              always = yes
+           }
+       removal_cost = -1
+      picture = GFX_idea_famine_of_1933
+     
+      modifier = {
+        weekly_manpower = 50
+        stability_factor = 0.05
+     }
+     }
+   #Inovate for the cause
+   Vanpol_forthecause= {
     allowed = {
        always = no
      }
@@ -111,11 +244,11 @@ ideas = {
 	 picture = GFX_idea_famine_of_1933
    
     modifier = {
-  	army_defence_factor = 0.25
-	supply_consumption_factor = -0.25
+      land_doctrine_cost_factor = -0.1
 	}
    }
-   TRS_legacy_of_the_red_army= {
+   #Death of science
+   Vanpol_deathofscience = {
     allowed = {
        always = no
      }
@@ -126,11 +259,26 @@ ideas = {
 	 picture = GFX_idea_famine_of_1933
    
     modifier = {
-   	conscription = 0.1
-	non_core_manpower = 0.08
+   	research_speed_factor = -0.8
 	}
    }
-   TRS_research_not_priority= {
+   #Recovering scientific community
+   Vanpol_recoveringscience = {
+      allowed = {
+         always = no
+       }
+      allowed_civil_war = {
+              always = yes
+           }
+       removal_cost = -1
+      picture = GFX_idea_famine_of_1933
+     
+      modifier = {
+        research_speed_factor = -0.4
+     }
+     }
+#No distractions
+    Vanpol_nodistractions = {
     allowed = {
        always = no
      }
@@ -141,12 +289,27 @@ ideas = {
 	 picture = GFX_idea_famine_of_1933
    
     modifier = {
-    research_speed_factor = -0.5
-
+      production_factory_max_efficiency_factor = 0.2
+      production_factory_efficiency_gain_factor = 0.2 
 	}
    }
-
-   TRS_shell_shocked= {
+   Vanpol_nodistractions2 = {
+      allowed = {
+         always = no
+       }
+      allowed_civil_war = {
+              always = yes
+           }
+       removal_cost = -1
+      picture = GFX_idea_famine_of_1933
+     
+      modifier = {
+        production_factory_max_efficiency_factor = 0.25
+        production_factory_efficiency_gain_factor = 0.25
+     }
+     }
+#pushback to priest death
+   Vanpol_extremepushback = {
     allowed = {
        always = no
      }
@@ -157,31 +320,76 @@ ideas = {
 	 picture = GFX_idea_famine_of_1933
    
     modifier = {
-	army_speed_factor = -0.15
-	army_defence_factor = -0.15
-
+      production_factory_start_efficiency_factor = -0.2
+      stability_weekly= -0.02
+	}
+   }
+   Vanpol_extremepushback2 = {
+      allowed = {
+         always = no
+       }
+      allowed_civil_war = {
+              always = yes
+           }
+       removal_cost = -1
+      picture = GFX_idea_famine_of_1933
+     
+      modifier = {
+        production_factory_start_efficiency_factor = -0.15
+        stability_weekly= -0.015
+     }
+     }
+     Vanpol_extremepushback3 = {
+      allowed = {
+         always = no
+       }
+      allowed_civil_war = {
+              always = yes
+           }
+       removal_cost = -1
+      picture = GFX_idea_famine_of_1933
+     
+      modifier = {
+        production_factory_start_efficiency_factor = -0.1
+        stability_weekly= -0.01
+     }
+     }
+      
+#banditry
+   Valpol_bandits = {
+    allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_famine_of_1933
+   
+    modifier = {
+    stability_factor = -0.1
+    production_factory_max_efficiency_factor = -0.1
 
 	}
    }
+   Valpol_organizedbandits = {
+      allowed = {
+         always = no
+       }
+      allowed_civil_war = {
+              always = yes
+           }
+       removal_cost = -1
+      picture = GFX_idea_famine_of_1933
+     
+      modifier = {
+      stability_factor = -0.25
+      production_factory_max_efficiency_factor = -0.1
   
-
-   TRS_research_kinda= {
-    allowed = {
-       always = no
      }
-	 allowed_civil_war = {
-				always = yes
-			}
-     removal_cost = -1
-	 picture = GFX_idea_famine_of_1933
-   
-    modifier = {
-    research_speed_factor = -0.2
-
-	}
-   }
-   
-      TRS_tsar_tank = {	
+     }
+   #revolutionary youth
+      Valpol_revolutionaryyouth = {	
     allowed = {	
        always = no	
      }	
@@ -192,17 +400,14 @@ ideas = {
 	 picture = GFX_idea_famine_of_1933	
 
     modifier = {	
- 	army_armor_speed_factor = -0.35	
-	army_armor_attack_factor = 0.1	
-	army_armor_defence_factor = 0.1	
-	army_org_factor = -0.1	
-
-
+      research_speed_factor = 0.05
+      weekly_manpower = 250
+      stability_factor = 0.05
 	}	
    }
    
-  ###Soviet Armed Forces and Industry
-   TRS_soviet_armed_forces = {	
+  ###Mass mobilization
+   Valpol_massconscription = {	
     allowed = {	
        always = no	
      }	
@@ -213,11 +418,43 @@ ideas = {
 	 picture = famine_of_1933	
 
     modifier = {	
-     army_leader_start_level = 2
+      conscription = 0.05
 	}	
    }
-   
-   TRS_new_soviet_tactics = {	
+   Valpol_massconscription2 = {	
+      allowed = {	
+         always = no	
+       }	
+      allowed_civil_war = {	
+              always = yes	
+           }	
+       removal_cost = -1	
+      picture = famine_of_1933	
+  
+      modifier = {	
+        conscription = 0.05
+        training_time_factor = -0.2
+     }	
+     }
+     Valpol_massconscription3 = {	
+      allowed = {	
+         always = no	
+       }	
+      allowed_civil_war = {	
+              always = yes	
+           }	
+       removal_cost = -1	
+      picture = famine_of_1933	
+  
+      modifier = {	
+        conscription = 0.05
+        training_time_factor = -0.2
+        army_attack_factor = 0.05
+        army_defence_factor = 0.05
+     }	
+     }
+#foreign instructors
+   Valpol_foreigninstructors = {	
     allowed = {	
        always = no	
      }	
@@ -228,11 +465,11 @@ ideas = {
 	 picture = famine_of_1933	
 
     modifier = {		
-	 army_org_factor = 0.1	
+      air_mission_xp_gain_factor = 0.2
 	}	
    }
-   
-   TRS_military_proffesionalism = {	
+   #experienced sailors
+   Valpol_experiencedsailors = {	
     allowed = {	
        always = no	
      }	
@@ -243,12 +480,11 @@ ideas = {
 	 picture = famine_of_1933	
 
     modifier = {		
-	 army_attack_factor = 0.10
-	 army_defence_factor = 0.10
+      naval_accidents_chance = -0.3
 	}	
    }
-   
-   TRS_more_conscription = {	
+   #streamlined ship production
+   Valpol_streamlinedshipproduction = {	
     allowed = {	
        always = no	
      }	
@@ -259,7 +495,7 @@ ideas = {
 	 picture = famine_of_1933	
 
     modifier = {		
-	 conscription = 0.02
+      production_cost_max_ship_hull_light = -0.2
 	}	
    }
    

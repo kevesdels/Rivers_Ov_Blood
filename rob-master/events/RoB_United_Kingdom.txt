@@ -91,14 +91,24 @@ option = {
 name = "Rest In Peace."
 kill_country_leader = yes
 
-promote_character = ENG_edward_viii
+promote_character = ENG_edward_viii 
 ENG_edward_viii = {
 	promote_character = {
 		Ideology = reactionary_subtype
+	  }
+	  promote_character = {
 		Ideology = authoritharian_subtype
+	  }
+	  promote_character = {
 		Ideology = pelekist_subtype
+	  }
+	  promote_character = {
 		Ideology = social_democracy_subtype
+	  }
+	  promote_character = {
 		Ideology = social_liberal_subtype
+	  }
+	  promote_character = {
 		Ideology = conservative_subtype
 	  }
 }
@@ -428,12 +438,23 @@ set_cosmetic_tag = ENG_navy
 ENG = {
 	promote_character = ENG_ernle_chatfield
 	ENG_ernle_chatfield = {
-		promote_character = {
+
+		  promote_character = {
 			Ideology = reactionary_subtype
+		  }
+		  promote_character = {
 			Ideology = authoritharian_subtype
+		  }
+		  promote_character = {
 			Ideology = pelekist_subtype
+		  }
+		  promote_character = {
 			Ideology = social_democracy_subtype
+		  }
+		  promote_character = {
 			Ideology = social_liberal_subtype
+		  }
+		  promote_character = {
 			Ideology = conservative_subtype
 		  }
 	}
@@ -444,12 +465,22 @@ BRU = {
 	ENG_edward_viii = {
 		promote_character = {
 			Ideology = reactionary_subtype
+		  }
+		  promote_character = {
 			Ideology = authoritharian_subtype
+		  }
+		  promote_character = {
 			Ideology = pelekist_subtype
+		  }
+		  promote_character = {
 			Ideology = social_democracy_subtype
+		  }
+		  promote_character = {
 			Ideology = social_liberal_subtype
+		  }
+		  promote_character = {
 			Ideology = conservative_subtype
-		}	
+		  }
 	}
 }
 
@@ -579,10 +610,20 @@ ENG = {
 	ENG_ernle_chatfield = {
 		promote_character = {
 			Ideology = reactionary_subtype
+		  }
+		  promote_character = {
 			Ideology = authoritharian_subtype
+		  }
+		  promote_character = {
 			Ideology = pelekist_subtype
+		  }
+		  promote_character = {
 			Ideology = social_democracy_subtype
+		  }
+		  promote_character = {
 			Ideology = social_liberal_subtype
+		  }
+		  promote_character = {
 			Ideology = conservative_subtype
 		  }
 	}
@@ -593,17 +634,27 @@ BRU = {
 	ENG_edward_viii = {
 		promote_character = {
 			Ideology = reactionary_subtype
+		  }
+		  promote_character = {
 			Ideology = authoritharian_subtype
+		  }
+		  promote_character = {
 			Ideology = pelekist_subtype
+		  }
+		  promote_character = {
 			Ideology = social_democracy_subtype
+		  }
+		  promote_character = {
 			Ideology = social_liberal_subtype
+		  }
+		  promote_character = {
 			Ideology = conservative_subtype
-		}	
+		  }
 	}
 }
 }
 IRE = { country_event = { id = ireland.1 days = 20 } }
-ENG = { country_event = { id = united_kingdom.24 days = 1 } }
+#ENG = { country_event = { id = united_kingdom.24 days = 1 } }
 ENG = { country_event = { id = united_kingdom.18 days = 5 } }
 BLF = { transfer_state = 861 }
 BLF = { transfer_state = 120 }

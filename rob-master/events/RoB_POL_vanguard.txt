@@ -30,7 +30,7 @@ country_event = {
 		name = rob_pol_van.2.a
 		ai_chance = { factor = 100 }
 		add_ideas = Vanpol_butcheredcorps
-		hidden_effect{
+		hidden_effect = {
 			retire_character = POL_zbigniew_antonowicz
 			retire_character = POL_juliusz_rommel
 			retire_character = POL_stanislaw_sosabowski
@@ -58,7 +58,7 @@ country_event = {
 		name = rob_pol_van.3.a
 		ai_chance = { factor = 100 }
 		add_ideas = Vanpol_emptylands
-		hidden_effect{
+		hidden_effect = {
 
 		}
 	}
@@ -76,7 +76,7 @@ country_event = {
 		name = rob_pol_van.4.a
 		ai_chance = { factor = 100 }
 		add_ideas = Vanpol_understaffedbureaucracy
-		hidden_effect{
+		hidden_effect = {
 
 		}
 	}
@@ -94,7 +94,172 @@ country_event = {
 		name = rob_pol_van.5.a
 		ai_chance = { factor = 100 }
 		add_ideas = Vanpol_farmingcollapse
-		hidden_effect{
+		hidden_effect = {
+
+		}
+	}
+}
+#intellectuals event
+country_event = {
+	id = rob_pol_van.6
+	title = rob_pol_van.6.t
+	desc = rob_pol_van.6.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.6.a
+		ai_chance = { factor = 100 }
+		add_ideas = Vanpol_deathofscience
+		hidden_effect = {
+
+		}
+	}
+}
+#priests event
+country_event = {
+	id = rob_pol_van.7
+	title = rob_pol_van.7.t
+	desc = rob_pol_van.7.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.7.a
+		ai_chance = { factor = 100 }
+		add_ideas = Vanpol_extremepushback
+		hidden_effect = {
+
+		}
+	}
+}
+#bandit  event
+country_event = {
+	id = rob_pol_van.8
+	title = rob_pol_van.8.t
+	desc = rob_pol_van.8.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.8.a
+		ai_chance = { factor = 100 }
+		add_ideas = Valpol_bandits
+		hidden_effect = {
+
+		}
+	}
+}
+#the red dawn
+country_event = {
+	id = rob_pol_van.9
+	title = rob_pol_van.9.t
+	desc = rob_pol_van.9.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.9.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.1
+		hidden_effect = {
+
+		}
+	}
+}
+#socialist ceremons
+country_event = {
+	id = rob_pol_van.10
+	title = rob_pol_van.10.t
+	desc = rob_pol_van.10.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.10.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.1
+		hidden_effect = {
+
+		}
+	}
+}
+#our nations future event
+country_event = {
+	id = rob_pol_van.11
+	title = rob_pol_van.11.t
+	desc = rob_pol_van.11.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.11.a
+		ai_chance = { factor = 100 }
+		add_ideas = Valpol_revolutionaryyouth
+		hidden_effect = {
+
+		}
+	}
+}
+#more than simple bandits? event
+country_event = {
+	id = rob_pol_van.12
+	title = rob_pol_van.12.t
+	desc = rob_pol_van.12.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.12.a
+		ai_chance = { factor = 100 }
+		swap_ideas = {
+			remove_idea = Valpol_bandits
+			add_idea = Valpol_organizedbandits
+		}
+		hidden_effect = {
+
+		}
+	}
+}
+# glimmer of hope
+country_event = {
+	id = rob_pol_van.13
+	title = rob_pol_van.13.t
+	desc = rob_pol_van.13.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.13.a
+		ai_chance = { factor = 100 }
+
+		hidden_effect = {
+
+		}
+	}
+}
+# event
+country_event = {
+	id = rob_pol_van.14
+	title = rob_pol_van.14.t
+	desc = rob_pol_van.14.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = rob_pol_van.14.a
+		ai_chance = { factor = 100 }
+		
+		hidden_effect = {
 
 		}
 	}
@@ -111,8 +276,8 @@ country_event = {
 	option = { 
 		name = rob_pol_van.sad.a
 		ai_chance = { factor = 100 }
-		add_ideas = 
-		hidden_effect{
+		#add_ideas = 
+		hidden_effect = {
 
 		}
 	}
