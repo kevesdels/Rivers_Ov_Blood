@@ -19,7 +19,7 @@ focus_tree = {
 
 focus = {
 	id = USA_dixie_inaugeration_ball
-	icon = GFX_focus_USA_Eugine_Tamalage ###idk why the shine effect isnt applied
+	icon = GFX_focus_USA_Eugine_Tamalage 
 	x = 1
 	y = 0
 	cost = 1
@@ -30,6 +30,13 @@ focus = {
 		set_politics = {
 				ruling_party = reactionary 
 			}
+         hidden_effect = {
+		    add_ideas = {
+			  USA_crump_opposition
+			  USA_texas_oil_barons
+			  USA_automative_deadlock
+		     }
+	     }
 	}
 }
 
@@ -54,10 +61,10 @@ relative_position_id = USA_dixie_inaugeration_ball
 focus = {
 	id = USA_anti_red_pact
 	icon = GFX_focus_USA_anti_red_pact
-	x = -4
-	y = 1
+	x = -5
+	y = 2
 	cost = 10
-    	prerequisite = { focus = USA_rally_the_southern_bloc }
+    	prerequisite = { focus = USA_child_tax_break }
 relative_position_id = USA_rally_the_southern_bloc
 	available_if_capitulated = yes
     ###should be harder to do because 
@@ -73,11 +80,112 @@ relative_position_id = USA_rally_the_southern_bloc
 	}
 }
 
+focus = {
+	id = USA_ally_with_nw_democrats
+	icon = GFX_ally_with_nw_democrats
+	x = -4
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_rally_the_southern_bloc }
+relative_position_id = USA_rally_the_southern_bloc
+	available_if_capitulated = yes
+    available = {	
+
+		}
+	completion_reward = {
+
+
+		###gains advisor Charles Martin (military governer +compliance gain + war support)
+	}
+}
+
+focus = {
+	id = USA_deal_with_texas_democrats
+	icon = GFX_deal_with_texas_democrats
+	x = -2
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_rally_the_southern_bloc }
+relative_position_id = USA_rally_the_southern_bloc
+	available_if_capitulated = yes
+    available = {	
+
+		}
+	completion_reward = {###removes oil baron debuff
+
+	remove_ideas = {
+		USA_texas_oil_barons
+	}
+
+	###event battle of athens
+	}
+}
+
+
+
+focus = {
+	id = USA_deal_with_e_h_crump
+	icon = GFX_deal_with_e_h_crump
+	x = 0
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_rally_the_southern_bloc }
+relative_position_id = USA_rally_the_southern_bloc
+	available_if_capitulated = yes
+    available = {	
+
+		}
+	completion_reward = { ###removes opposition debuff
+		remove_ideas = {
+			USA_crump_opposition
+		}
+	}
+}
+
+focus = {
+	id = USA_deal_with_north_republicans
+	icon = GFX_deal_with_north_republicans
+	x = 2
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_rally_the_southern_bloc }
+relative_position_id = USA_rally_the_southern_bloc
+	available_if_capitulated = yes
+    available = {	
+
+		}
+	completion_reward = {
+		###deals with atomative deadlock,  idk how you would handle it 
+		remove_ideas = {
+			USA_automative_deadlock
+		}
+	}
+}
+
+
+focus = {
+	id = USA_the_tamalage_new_deal
+	icon = GFX_the_tamalage_new_deal
+	x = 4
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_rally_the_southern_bloc }
+relative_position_id = USA_rally_the_southern_bloc
+	available_if_capitulated = yes
+    available = {	
+
+		}
+	completion_reward = {
+
+
+		###timed construction bonus
+	}
+}
 
 
 focus = {
 	id = USA_visit_brazil
-	icon = GFX_
+	icon = GFX_focus_USA_visit_brazil
 	x = -1
 	y = 1
 	cost = 10
@@ -107,7 +215,7 @@ relative_position_id = USA_anti_red_pact
 
 focus = {
 	id = USA_call_on_the_general_of_mexico
-	icon = GFX_
+	icon = GFX_focus_USA_generalofmexico
 	x = 1
 	y = 1
 	cost = 10
@@ -133,7 +241,7 @@ relative_position_id = USA_anti_red_pact
 ##this doesn't need you to invite Mexico btw
 focus = {
 	id = USA_invite_vensula 
-	icon = GFX_
+	icon = GFX_focus_USA_invite_vensula
 	x = 1
 	y = 2
 	cost = 5
@@ -189,7 +297,7 @@ relative_position_id = USA_anti_red_pact
 ##event where America offers Japan a non-agression pact
 focus = {
 	id = USA_american_japanese_peace_conference
-	icon = GFX_
+	icon = GFX_focus_USA_american_japanese_p_c
 	x = -1
 	y = 1
 	cost = 5
@@ -210,7 +318,7 @@ relative_position_id = USA_call_on_the_japs
 
 focus = {
 	id = USA_partners_in_crime
-	icon = GFX_
+	icon = GFX_focus_USA_partners_incrime
 	x = 0
 	y = 1
 	cost = 10
@@ -232,7 +340,7 @@ relative_position_id = USA_american_japanese_peace_conference
 ###USA and Japan demand Molucas be given to Philipines , and Japan be given Sumantra (for resources)
 focus = {
 	id = USA_bully_the_dutch
-	icon = GFX_
+	icon = GFX_focus_USA_bully_dutch
 	x = 0
 	y = 1
 	cost = 10
@@ -253,7 +361,7 @@ relative_position_id = USA_partners_in_crime
 ##which will trigger Japan or you can declar  Malasia part of Japan sphrere 
 focus = {
 	id = USA_malaysia_question
-	icon = GFX_
+	icon = GFX_focus_USA_malasia_question
 	x = 1
 	y = 1
 	cost = 10
@@ -298,7 +406,7 @@ relative_position_id = USA_malaysia_question
 ### sends event for them to join 
 focus = {
 	id = USA_brazilian_allies
-	icon = GFX_
+	icon = GFX_focus_USA_brazil_ally
 	x = 0
 	y = 1
 	cost = 10
@@ -322,9 +430,14 @@ focus = {
 	id = USA_child_tax_break
 	icon = GFX_focus_USA_child_tax_break
 	x = 0
-	y = 1
+	y = 2
 	cost = 5
-    	prerequisite = { focus = USA_rally_the_southern_bloc }
+    prerequisite = { focus = USA_ally_with_nw_democrats }
+	prerequisite = { focus = USA_deal_with_texas_democrats }
+	prerequisite = { focus = USA_deal_with_e_h_crump }
+	prerequisite = { focus = USA_deal_with_north_republicans }
+	prerequisite = { focus = USA_the_tamalage_new_deal }
+
 relative_position_id = USA_rally_the_southern_bloc
 	available_if_capitulated = yes
     ###should be harder to do because 
@@ -341,9 +454,9 @@ focus = {
 	id = USA_wool_hats_in_the_army
 	icon = GFX_focus_USA_woolhats
 	x = 5
-	y = 1
+	y = 2
 	cost = 2
-    	prerequisite = { focus = USA_rally_the_southern_bloc }
+    	prerequisite = { focus = USA_child_tax_break }
 relative_position_id = USA_rally_the_southern_bloc
 	available_if_capitulated = yes
    
@@ -410,7 +523,7 @@ relative_position_id = USA_rally_the_southern_bloc
 ###Puts friend of Talmadge Tom Linder as head of West Indies
 focus = {
 	id = USA_southernize_west_indies
-	icon = GFX_
+	icon = GFX_focus_USA_southernize_west_indies
 	x = -1
 	y = 1
 	cost = 2
@@ -560,6 +673,87 @@ relative_position_id = USA_meet_with_military
 	
 	}
 }
+
+
+focus = {
+	id = USA_parris_island_marines
+	icon = GFX_focus_USA_parris_island
+	x = 0
+	y = 2
+	cost = 5
+    	prerequisite = { focus = USA_work_with_macauther }
+		prerequisite = { focus = USA_strenghten_natgurad }
+relative_position_id = USA_work_with_macauther
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+      
+	
+	}
+}
+
+focus = {
+	id = USA_strenghten_tank_cores
+	icon = GFX_focus_USA_strengthen_tank_Core
+	x = 0
+	y = 2
+	cost = 5
+    	prerequisite = { focus = USA_promote_patton }
+		prerequisite = { focus = USA_strenghten_natgurad }
+relative_position_id = USA_promote_patton
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+      
+	
+	}
+}
+
+
+focus = {
+	id = USA_democrat_political_officers
+	icon = GFX_focus_USA_democratic_political_officers
+	x = 0
+	y = 2
+	cost = 5
+    	prerequisite = { focus = USA_parris_island_marines focus = USA_strenghten_tank_cores }
+relative_position_id = USA_strenghten_natgurad
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+      
+	
+	}
+}
+
+focus = {
+	id = USA_strenghten_natgurad
+	icon = GFX_focus_USA_strengthen_national_guard
+	x = 1
+	y = 1
+	cost = 5
+    	prerequisite = { focus = USA_work_with_macauther focus = USA_promote_patton }
+relative_position_id = USA_work_with_macauther
+	available_if_capitulated = yes
+   
+      available = {	
+        
+		}
+	completion_reward = {
+      
+	
+	}
+}
+
 focus = {
 	id = USA_charleston_naval_yards 
 	icon = GFX_focus_USA_charleston_naval_yard

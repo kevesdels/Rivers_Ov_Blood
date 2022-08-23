@@ -25,7 +25,7 @@ ideas = {
 
 
 	usa_isolationism = {
-			picture = GFX_
+			picture = GFX_usa_isolationism
 			allowed = {
 				tag = USA
 			}
@@ -43,7 +43,7 @@ ideas = {
 		}
 		
 		USA_child_tax_break  = {
-			picture = GFX_
+			picture = GFX_USA_child_tax_break
 			allowed = {
 				tag = USA
 			}
@@ -57,6 +57,50 @@ ideas = {
 			modifier = {
 			 monthly_population = 0.10
 			}
+		}
+
+		USA_crump_opposition  = {
+			picture = GFX_USA_crump_opposition
+			allowed = {
+				tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = -0.5
+				stability_factor = -0.1
+				production_speed_buildings_factor = -0.35
+			}
+		}
+
+		USA_texas_oil_barons  = {
+			picture = GFX_USA_texas_oil_barons 
+			allowed = {
+				tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				base_fuel_gain_factor = -0.95
+			}
+		}
+
+
+		USA_automative_deadlock  = {
+			picture = GFX_USA_automative_deadloc
+			allowed = {
+				tag = USA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			research_bonus = { armor = -1.0 }
+			equipment_bonus = { Motorized = { build_cost_ic = 0.20 instant = yes } }
 		}
 
 }
