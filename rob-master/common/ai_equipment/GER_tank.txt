@@ -2195,10 +2195,6 @@ GER_super_heavy_tanks = {
 	basic_super_heavy_tank_default = { #Maus
 		priority = {
 			factor = 10
-			modifier = { 
-				ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
-				factor = 5
-			}
 			modifier = {
 				surrender_progress > 0
 				is_historical_focus_on = yes

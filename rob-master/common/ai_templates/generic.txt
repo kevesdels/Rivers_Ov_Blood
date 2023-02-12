@@ -622,19 +622,7 @@ suppression_generic = {
 		custom_icon = 13
 	
 		upgrade_prio = {
-			factor = 2
-
-			modifier = {
-				factor = 50
-				tag = GER
-					
-					AND = {
-						any_country = {
-							is_justifying_wargoal_against = ROOT
-						}
-						NOT = { ai_has_role_template = garrison }
-					}
-				}			
+			factor = 2			
 		}
 		
 		target_width = 12.0

@@ -238,6 +238,11 @@ guiTypes = {
 			maxWidth = 250
 			maxHeight = 20	
 		}
+
+		positionType = {
+			name = "version_label_subscription_position"
+			position = { x = 35 y = 524 }
+		}
 		
 		
 		ButtonType = {
@@ -292,6 +297,16 @@ guiTypes = {
 		positionType = {
 			name = "position_without_social_gui"
 			position = { x = 0 y = 155 }
+		}
+
+		positionType = {
+			name = "subscription_position"
+			position = { x = -50 y = 109 }
+		}
+
+		positionType = {
+			name = "subscription_position_without_social_gui"
+			position = { x = 0 y = 239 }
 		}
 		
 		containerWindowType = {

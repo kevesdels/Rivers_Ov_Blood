@@ -4614,12 +4614,15 @@ country_event = {
    name = "Create a Puppet State"
    trigger = {
     NOT = { 
-    tag = SOV 
-    tag = TOW 
-    tag = BWR 
-    tag = IRK 
-    tag = FER 
-    tag = TRS 
+      OR = {
+        tag = SOV 
+        tag = TOW 
+        tag = BWR 
+        tag = IRK 
+        tag = FER 
+        tag = TRS 
+        tag = LES
+      }
     }
   }
    puppet = MON
@@ -4666,14 +4669,17 @@ country_event = {
 
   ###RussIan tag puppet choice 
   option = {
-    name = "Create a Puppet State"
+    name = "Create a Puppet State 2"
     trigger = {
-    tag = SOV 
-    tag = TOW 
-    tag = BWR 
-    tag = IRK 
-    tag = FER 
-    tag = TRS 
+      OR = {
+        tag = SOV 
+        tag = TOW 
+        tag = BWR 
+        tag = IRK 
+        tag = FER 
+        tag = TRS 
+        tag = LES
+      }
    }
     puppet = MON
     ai_chance = { factor = 50 }

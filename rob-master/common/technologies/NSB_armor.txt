@@ -2,9 +2,10 @@ technologies = {
 
 
 	@1918 = 0
-	@1936 = 2
-	@1938 = 4
-	@1939 = 6
+	@1936 = 4
+	@1937 = 5
+	@1938 = 6
+	@1939 = 7
 	@1940 = 7
 	@1941 = 8
 	@1942 = 9
@@ -58,6 +59,7 @@ technologies = {
 			extra_ammo_storage
 			wet_ammo_storage
 			smoke_launchers
+			expanded_fuel_tank
 		}
 		enable_subunits = {
 			light_armor
@@ -185,16 +187,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		path = {
-			leads_to_tech = amphibious_tank_chassis
-			research_cost_coeff = 1
-		}
-
 		research_cost = 2
 		start_year = 1934
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 2 }
+			position = { x = -1 y = 2 }
 		}
 
 		ai_will_do = {
@@ -241,12 +238,17 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+		path = {
+			leads_to_tech = amphibious_tank_chassis
+			research_cost_coeff = 1
+		}
+
 		research_cost = 2
 		start_year = 1936
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 4 }
+			position = { x = -1 y = 4 }
 		}
 
 		ai_will_do = {
@@ -287,6 +289,9 @@ technologies = {
 			}
 		}
 
+		on_research_complete = {
+		}
+
 		categories = {
 			armor
 			cat_light_armor
@@ -319,7 +324,7 @@ technologies = {
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -1 y = 5 }
+			position = { x = -4 y = 5 }
 		}
 
 		ai_will_do = {
@@ -382,7 +387,7 @@ technologies = {
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -1 y = 8 }
+			position = { x = -4 y = 8 }
 		}
 
 		ai_will_do = {
@@ -424,17 +429,12 @@ technologies = {
 			light_tank_aa_chassis_3
 		}
 
-		path = {
-			leads_to_tech = main_battle_tank_chassis
-			research_cost_coeff = 1
-		}
-
 		research_cost = 2
 		start_year = 1941
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -4 y = 8 }
+			position = { x = -1 y = 8 }
 		}
 
 		ai_will_do = {
@@ -510,17 +510,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		path = {
-			leads_to_tech = amphibious_tank_chassis
-			research_cost_coeff = 1
-		}
-
 		research_cost = 2
-		start_year = 1936
+		start_year = 1938
 
 		folder = {
 			name = nsb_armour_folder
-			position = { x = 2 y = @1936 }
+			position = { x = 2 y = @1937 }
 		}
 
 		ai_will_do = {
@@ -591,6 +586,10 @@ technologies = {
 			position = { x = 2 y = @1940 }
 		}
 
+		on_research_complete = {
+
+		}
+
 		ai_will_do = {
 			factor = 3
 
@@ -658,6 +657,9 @@ technologies = {
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 2 y = @1943 }
+		}
+
+		on_research_complete = {
 		}
 
 		ai_will_do = {
@@ -844,6 +846,10 @@ technologies = {
 			position = { x = 5 y = @1940 }
 		}
 
+		on_research_complete = {
+
+		}
+
 		ai_will_do = {
 			factor = 0.8
 			modifier = {
@@ -896,6 +902,9 @@ technologies = {
 			position = { x = 5 y = @1943 }
 		}
 
+		on_research_complete = {
+		}
+
 		ai_will_do = {
 			factor = 0.8
 
@@ -945,6 +954,10 @@ technologies = {
 			position = { x = 8 y = @1943 }
 		}
 
+		on_research_complete = {
+
+		}
+
 		ai_will_do = {
 			factor = 0 # Hitler cries on the inside
 		}
@@ -971,7 +984,7 @@ technologies = {
 		show_effect_as_desc = yes
 
 		research_cost = 1
-		start_year = 1934
+		start_year = 1936
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 3 y = @1936 }

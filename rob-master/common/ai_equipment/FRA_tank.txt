@@ -1366,6 +1366,10 @@ FRA_heavy_tanks = {
 				has_tech = improved_heavy_tank_chassis 
 				factor = 0 #let's not waste XP here
 			}
+			modifier = {
+				has_completed_focus = FRA_division_cuirassee
+				factor = 25
+			}
 			
 		}
 
@@ -2062,7 +2066,7 @@ FRA_super_heavy_tanks = {
 		priority = {
 			factor = 10
 			modifier = { 
-				ANTI_LIBERAL_ALIGNED_GOVERNMENT = yes
+				has_government = pelekist
 				factor = 50
 			}
 			

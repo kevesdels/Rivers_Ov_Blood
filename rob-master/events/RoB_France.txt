@@ -946,6 +946,7 @@ trigger = {
   add_ideas = {
 	fra_civil_war
   }
+  set_major = yes
  }
  FRA = { end_puppet = SYR }
  FRA = { end_puppet = FWA }
@@ -970,6 +971,7 @@ trigger = {
  add_ideas = {
 	fra_civil_war
   }
+  set_major = yes
  }
  FRS = {
  declare_war_on = { type = annex_everything target = FRR }
@@ -977,11 +979,13 @@ trigger = {
  add_ideas = {
 	fra_civil_war
   }
+  set_major = yes
  }
  FRR = {
 	add_ideas = {
 	fra_civil_war
 	} 
+	set_major = yes
  }
  FRP = {
  create_faction = FRA_national_france
@@ -989,6 +993,7 @@ trigger = {
  add_ideas = {
 	fra_civil_war
   }
+  set_major = yes
  }
  }
 }
@@ -1004,6 +1009,7 @@ country_lock_all_division_template = no
   add_ideas = {
 	fra_civil_war
   }
+  set_major = yes
  }
  hidden_effect = {
 	FRA = {
@@ -1062,6 +1068,7 @@ trigger = {
  add_ideas = {
 	fra_civil_war
   }
+  set_major = yes
  }
  FRS = {
  declare_war_on = { type = annex_everything target = FRP }
@@ -1070,17 +1077,20 @@ trigger = {
  add_ideas = {
 	fra_civil_war
   }
+  set_major = yes
  }
  FRR = {
 	add_ideas = {
 		fra_civil_war
 	  }
+	  set_major = yes
  }
  FRP = {
  declare_war_on = { type = annex_everything target = FRR }
  add_ideas = {
 	fra_civil_war
   }
+  set_major = yes
  }
  }
 }
@@ -1126,6 +1136,7 @@ set_country_flag = FRA_civil_war
   add_ideas = {
 	fra_civil_war
   }
+  set_major = yes
  }
  FRA = { end_puppet = SYR }
  FRA = { end_puppet = FWA }
@@ -1154,6 +1165,7 @@ trigger = {
  add_ideas = {
 	fra_civil_war
   }
+  set_major = yes
  }
  FRS = {
  declare_war_on = { type = annex_everything target = FRP }
@@ -1161,17 +1173,20 @@ trigger = {
  add_ideas = {
 	fra_civil_war
   }
+  set_major = yes
  }
  FRR = {
 	add_ideas = {
 		fra_civil_war
 	  }
+	  set_major = yes
  }
  FRP = {
  declare_war_on = { type = annex_everything target = FRR }
  add_ideas = {
 	fra_civil_war
   }
+  set_major = yes
  }
  }
 }
