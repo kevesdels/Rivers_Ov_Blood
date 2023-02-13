@@ -249,7 +249,7 @@ LES_munidirectrulez_4 = {
 
   modifier = {
     compliance_growth_on_our_occupied_states = -0.35
-    occupation_cost = -0.35
+    annex_cost_factor = -0.15
     industrial_capacity_factory = 0.04
     production_factory_max_efficiency_factor = 0.02
   }
@@ -271,7 +271,7 @@ LES_munidirectrulez_5 = {
 
   modifier = {
     compliance_growth_on_our_occupied_states = -0.35
-    occupation_cost = -0.35
+    annex_cost_factor = -0.20
     industrial_capacity_factory = 0.06
     production_factory_max_efficiency_factor = 0.04
     global_building_slots_factor = 0.1
@@ -294,7 +294,7 @@ LES_munidirectrulez_6 = {
 
   modifier = {
     compliance_growth_on_our_occupied_states = -0.35
-    occupation_cost = -0.35
+    annex_cost_factor = -0.25
     industrial_capacity_factory = 0.1
     production_factory_max_efficiency_factor = 0.05
     global_building_slots_factor = 0.2
@@ -316,7 +316,7 @@ LES_municipalsz = {
 
   modifier = {
     compliance_growth_on_our_occupied_states = -0.15
-    occupation_cost = -0.15
+    annex_cost_factor = -0.05
   }
 }
 
@@ -335,7 +335,7 @@ LES_municipalsz_2 = {
 
   modifier = {
     compliance_growth_on_our_occupied_states = -0.25
-    occupation_cost = -0.25
+    annex_cost_factor = -0.1
   }
 }
 
@@ -354,7 +354,7 @@ LES_municipalsz_3 = {
 
   modifier = {
     compliance_growth_on_our_occupied_states = -0.35
-    occupation_cost = -0.35
+    annex_cost_factor = -0.1
   }
 }
 
@@ -373,7 +373,7 @@ LES_municipalsz_4 = {
 
   modifier = {
     compliance_growth_on_our_occupied_states = -0.35
-    occupation_cost = -0.35
+    annex_cost_factor = -0.15
     production_speed_infrastructure_factor = 0.1
     political_power_gain = 0.05
   }
@@ -394,7 +394,7 @@ LES_municipalsz_5 = {
 
   modifier = {
     compliance_growth_on_our_occupied_states = -0.35
-    occupation_cost = -0.35
+    annex_cost_factor = -0.20
     production_speed_infrastructure_factor = 0.2
     political_power_gain = 0.1
   }
@@ -415,7 +415,7 @@ LES_municipalsz_6 = {
 
   modifier = {
     compliance_growth_on_our_occupied_states = -0.35
-    occupation_cost = -0.35
+    annex_cost_factor = -0.25
     production_speed_infrastructure_factor = 0.35
     political_power_gain = 0.15
   }
@@ -761,9 +761,8 @@ LES_epic_horsies = {
      }
     removal_cost = -1
   modifier = {
-    cavalry_attack_factor = 0.3
-    cavalry_defence_factor = 0.3
-    cavalry_speed_factor = 0.1
+    cavalry_attack_factor = 0.4
+    cavalry_defence_factor = 0.4
   }
 
 }

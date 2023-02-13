@@ -1,9 +1,49 @@
 technologies = {
+
 	electronic_mechanical_engineering = {
+
+		# small boost to research speed
+		research_speed_factor = 0.02
+		
+		path = {
+			leads_to_tech = interwar_electric 
+			research_cost_coeff = 1
+		}
+
+		enable_equipment_modules = { 
+			ship_fire_control_system_0
+		}
+		
+		research_cost = 1.5
+		start_year = 1934
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = -2.0 }
+		}
+		
+		ai_will_do = {
+			factor = 30
+			
+			
+			modifier = {
+				factor = 3
+				date > "1935.1.1"
+			}
+		}
+		
+		categories = {
+			electronics
+		}
+		
+
+	}
+
+	interwar_electric = {
 
 		# small boost to research speed
 		research_speed_factor = 0.03
 		
+
 		path = {
 			leads_to_tech = radio 
 			research_cost_coeff = 1
@@ -12,13 +52,9 @@ technologies = {
 			leads_to_tech = mechanical_computing 
 			research_cost_coeff = 1
 		}
-
-		enable_equipment_modules = { 
-			ship_fire_control_system_0
-		}
 		
-		research_cost = 1
-		start_year = 1936
+		research_cost = 1.5
+		start_year = 1935
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 0 }
@@ -30,7 +66,7 @@ technologies = {
 			
 			modifier = {
 				factor = 3
-				date > "1937.1.1"
+				date > "1936.1.1"
 			}
 		}
 		

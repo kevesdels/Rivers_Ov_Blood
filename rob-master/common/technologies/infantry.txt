@@ -61,7 +61,7 @@ technologies = {
 		}		
 
 		research_cost = 1.5
-		start_year = 1936
+		start_year = 1934
 		folder = {
 			name = infantry_folder
 			position = { x = 0 y = @1936 }
@@ -76,17 +76,7 @@ technologies = {
 			
 			modifier = {
 				factor = 10
-				tag = CHI
-				
-				OR = {
-					date > "1937.1.1"
-					JAP = { is_ai = no }
-				}
-			}
-			
-			modifier = {
-				factor = 10
-				date > "1936.1.3"
+				date > "1934.1.3"
 			}
 		}
 	}	
@@ -118,7 +108,7 @@ technologies = {
 		}		
 
 		research_cost = 1.5
-		start_year = 1938
+		start_year = 1936
 		folder = {
 			name = infantry_folder
 			position = { x = 0 y = @1938 }
@@ -147,7 +137,7 @@ technologies = {
 
 			modifier = {
 				factor = 5
-				date > "1939.1.1"
+				date > "1938.1.1"
 			}
 		}
 	}
@@ -168,7 +158,7 @@ technologies = {
 		}		
 
 		research_cost = 2
-		start_year = 1939
+		start_year = 1938
 		folder = {
 			name = infantry_folder
 			position = { x = 0 y = @1939 }
@@ -183,7 +173,7 @@ technologies = {
 						
 			modifier = {
 				factor = 10
-				date > "1939.1.1"
+				date > "1938.1.1"
 			}
 			modifier = {
 				num_of_military_factories < 50
@@ -445,7 +435,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1936
+		start_year = 1934
 		folder = {
 			name = infantry_folder
 			position = { x = 2 y = @1936 }
@@ -501,7 +491,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1939
+		start_year = 1938
 		folder = {
 			name = infantry_folder
 			position = { x = 2 y = @1939 }
@@ -595,7 +585,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1936
+		start_year = 1934
 		folder = {
 			name = infantry_folder
 			position = { x = 3 y = @1936 }
@@ -634,7 +624,7 @@ technologies = {
 		
 
 		research_cost = 1.5
-		start_year = 1939
+		start_year = 1938
 		folder = {
 			name = infantry_folder
 			position = { x = 3 y = @1939 }
@@ -717,7 +707,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1936
+		start_year = 1934
 		folder = {
 			name = infantry_folder
 			position = { x = 5 y = @1936 }
@@ -747,7 +737,7 @@ technologies = {
 
 
 		research_cost = 1.5
-		start_year = 1939
+		start_year = 1938
 		folder = {
 			name = infantry_folder
 			position = { x = 5 y = @1939 }
@@ -812,7 +802,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1938
+		start_year = 1936
 		folder = {
 			name = infantry_folder
 			position = { x = 4 y = @1938 }
@@ -1033,53 +1023,6 @@ technologies = {
 
 	}
 
-	SWI_mountaineer_paratroopers_tech = { #Unlocked in Swiss Focus SWI_mountaneer_paratroopers
-
-		research_cost = 1
-
-		allow = {
-			always = no
-		}
-
-		paratrooper = {  # CHANGE TOOLTIP WHEN NEEDED
-			mountain = {
-				attack = 0.35
-				defence = 0.1
-				movement = 0.2
-			}
-			hills = {
-				attack = 0.2
-				defence = 0.05
-				movement = 0.1
-			}
-		}
-
-	}
-
-	HUN_light_infantry_tech = {
-
-		research_cost = 1
-
-		# only from focus!!! #####
-		allow = {
-			always = no
-		}
-
-
-		#If you change these
-		#Change the custom tooltip too: HUN_light_infantry_divisions_doctrine_effect
-		infantry = {
-			forest = {
-				attack = 0.02
-				movement = 0.05
-			}
-
-			urban = {
-				attack = 0.05 
-				movement = 0.05
-			}
-		}
-	}
 
 	mountain_warfare = {
 
@@ -1340,7 +1283,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1938
+		start_year = 1936
 		folder = {
 			name = infantry_folder
 			position = { x = 0 y = @1938 }
@@ -1592,7 +1535,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1936
+		start_year = 1934
 		folder = {
 			name = infantry_folder
 			position = { x = 0 y = @1936 }
@@ -1645,15 +1588,10 @@ technologies = {
 		}
 	
 		research_cost = 1.5
-		start_year = 1939
+		start_year = 1938
 		
 		ai_will_do = {
 			factor = 1
-			
-			modifier = {
-				factor = 2
-				tag = SOV
-			}
 		}
 		
 		categories = {

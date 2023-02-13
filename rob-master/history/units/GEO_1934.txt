@@ -1,0 +1,90 @@
+﻿division_template = {
+	name = "Infantry"  			# Infantry Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Mountainers" 				# Mountain Brigade
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+
+	division = {
+		location = 1599
+		division_template = "Infantry" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	
+	division = {
+		location = 3653
+		division_template = "Infantry" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		location = 6669
+		division_template = "Infantry" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+	
+	division = {
+		location = 6669
+		division_template = "Infantry" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		location = 1599
+		division_template = "Infantry" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+	division = {
+		location = 1599
+		division_template = "Mountainers" 
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+}
+
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "GEO"
+		}
+		requested_factories = 1
+		progress = 0.43
+		efficiency = 100
+	}
+}

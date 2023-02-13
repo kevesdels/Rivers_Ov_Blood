@@ -1,5 +1,34 @@
 technologies = {
 
+	interwar_industrial = {
+	
+		production_factory_max_efficiency_factor = 0.02
+		production_factory_start_efficiency_factor = 0.03
+
+		
+		path = {
+			leads_to_tech = basic_machine_tools 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1934
+		folder = {
+			name = industry_folder
+			position = { x = 0 y = -2.0 }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+		
+		categories = {
+			industry
+			cat_production
+		}
+	}
+
+
 	basic_machine_tools = {
 	
 		production_factory_max_efficiency_factor = 0.1
@@ -244,7 +273,6 @@ technologies = {
 				factor = 2
 				date > "1937.1.1"
 			}
-
 		}
 		
 		categories = {
@@ -272,7 +300,6 @@ technologies = {
 				factor = 2
 				date > "1937.1.1"
 			}
-
 		}
 		
 		categories = {

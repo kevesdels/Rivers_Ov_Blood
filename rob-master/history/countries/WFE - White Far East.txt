@@ -96,18 +96,7 @@ create_country_leader = {
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Variants ###
-	# Submarines #
-	create_equipment_variant = {
-		name = "S Class"
-		type = submarine_1
-		parent_version = 1
-		upgrades = {
-			ship_reliability_upgrade = 0
-			sub_engine_upgrade = 0
-			sub_stealth_upgrade = 0
-			sub_torpedo_upgrade = 0
-		}
-	}
+
 	# Destroyers #
 	create_equipment_variant = {
 		name = "A/B/C/D Class"
@@ -149,18 +138,6 @@ if = {
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	### Variants ###
-	# Submarines #
-	create_equipment_variant = {
-		name = "O/P/R Class"
-		type = ship_hull_submarine_1
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
 	# Destroyers #
 	create_equipment_variant = {
 		name = "S Class"
