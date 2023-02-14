@@ -9,6 +9,14 @@ if = {
 	}
 }
 
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "SPR_1936_air_bba"
+	else = {
+		set_air_oob = "SPR_1936_air_legacy"
+	}
+}
+
 add_opinion_modifier = { target = ITA modifier = major_colony_seized }
 add_opinion_modifier = { target = POR modifier = hostile_status }
 add_opinion_modifier = { target = FRA modifier = hostile_status }
@@ -64,6 +72,18 @@ if = {
 		mtg_transport = 1
 	}
 }
+
+if = {
+	limit = {
+		NOT = { has_dlc = "By Blood Alone" }
+	}
+	set_technology = {
+		early_fighter = 1
+		early_bomber = 1
+		naval_bomber1 = 1
+	}
+}
+
 set_politics = {
 	ruling_party = social_liberal
 	last_election = "1933.7.1"

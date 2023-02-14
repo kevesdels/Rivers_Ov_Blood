@@ -1,7 +1,22 @@
 ﻿capital = 109
 set_research_slots = 2
-oob = "CRO_1934"
 set_cosmetic_tag = CRO_pelekist
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "CRO_1934"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "CRO_1934_nsb"
+}
+
 
 set_technology = {
 	infantry_weapons = 1

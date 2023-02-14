@@ -1,6 +1,7 @@
 ﻿division_template = {
 	name = "Infanterie Division"
-
+	division_names_group = AUS_INF_01
+	
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -19,7 +20,8 @@
 
 division_template = {
 	name = "Alpenjäger Division"
-	
+	division_names_group = AUS_MNT_01
+
 	regiments = {
 		mountaineers = { x = 0 y = 0 }
 		mountaineers = { x = 0 y = 1 }
@@ -35,7 +37,8 @@ division_template = {
 
 division_template = {
 	name = "Schnelle Division"  		# Schnelle-Division (cavalry)
-
+	division_names_group = AUS_CAV_01
+	
 	regiments = {
 		cavalry = { x = 0 y = 0 }
 		cavalry = { x = 0 y = 1 }
@@ -214,18 +217,6 @@ units = {
 
 	}
 
-}
-
-
-air_wings = {
-	### Luftstreitkräfte -- Vienna (full air force, consolidated), CR.32 aircraft
-	4 = {
-		fighter_equipment_0 =  {
-			owner = "AUS" 
-			creator = "ITA"
-			amount = 42
-		}
-	}
 }
 
 ### Starting Production ###

@@ -2761,7 +2761,14 @@ hidden_effect = {
 			division_template = "Division Coloniale II"
 		}
 	}
-	load_oob = "FRA_junta_flipflop"
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		load_oob = "FRA_junta_flipflop_nsb"
+
+		else = {
+			load_oob = "FRA_junta_flipflop"
+		}
+	}
 }
 }
 
@@ -2805,7 +2812,14 @@ hidden_effect = {
 			division_template = "Division Légère Mécanique III"
 		}
 	}
-	load_oob = "FRA_junta_flipflop_Sorelists"
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		load_oob = "FRA_junta_flipflop_Sorelists_nsb"
+
+		else = {
+			load_oob = "FRA_junta_flipflop_Sorelists"
+		}
+	}
 }
 }
 
@@ -2827,7 +2841,14 @@ hidden_effect = {
 			division_template = "Division Légère Mécanique III"
 		}
 	}
-	load_oob = "FRA_junta_flipflop_Pelekists"
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		load_oob = "FRA_junta_flipflop_Pelekists_nsb"
+
+		else = {
+			load_oob = "FRA_junta_flipflop_Pelekists"
+		}
+	}
 }
 }
 

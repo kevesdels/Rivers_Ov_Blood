@@ -177,6 +177,7 @@
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = ITA_the_future_of_the_army  }
+		mutually_exclusive = { focus = ITA_memory_of_cambrai  }
 	}
 
 	#The Future of War
@@ -203,6 +204,7 @@
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ITA_the_future_of_war  }
+		mutually_exclusive = { focus = ITA_legacy_of_fiume  } mutually_exclusive = { focus = ITA_legacy_of_vittorio_veneto  } mutually_exclusive = { focus = ITA_legacy_of_cadorna  }
 	}
 
 	#Legacy of Vittorio Veneto
@@ -216,7 +218,7 @@
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ITA_the_future_of_war  }
-		mutually_exclusive = { focus = ITA_legacy_of_the_isonzo  }
+		mutually_exclusive = { focus = ITA_legacy_of_fiume  } mutually_exclusive = { focus = ITA_legacy_of_the_isonzo  } mutually_exclusive = { focus = ITA_legacy_of_cadorna  }
 	}
 
 	#Legacy of Cadorna
@@ -230,7 +232,7 @@
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ITA_the_future_of_war  }
-		mutually_exclusive = { focus = ITA_legacy_of_vittorio_veneto  } mutually_exclusive = { focus = ITA_legacy_of_the_isonzo  }
+		mutually_exclusive = { focus = ITA_legacy_of_fiume  } mutually_exclusive = { focus = ITA_legacy_of_vittorio_veneto  } mutually_exclusive = { focus = ITA_legacy_of_the_isonzo  }
 	}
 
 	#Legacy of Fiume
@@ -314,7 +316,7 @@
 	}
 
 	#The Defenders of the Alps
-	focus = {
+	shared_focus = {
 		id = ITA_the_defenders_of_the_alps
 		icon = GFX_goal_unknown
 		x = 8
@@ -415,6 +417,7 @@
 			FOCUS_FILTER_MANPOWER
 		}
 		prerequisite = { focus = ITA_bravery_of_the_bersaglieri  }
+		mutually_exclusive = { focus = ITA_recon_by_fire  }
 	}
 
 	#Shock Battalions
@@ -1000,6 +1003,7 @@
 			FOCUS_FILTER_MANPOWER
 		}
 		prerequisite = { focus = ITA_reinforce_the_adriatic  } prerequisite = { focus = ITA_the_italian_naval_industry  } prerequisite = { focus = ITA_colonial_defences  }
+		mutually_exclusive = { focus = ITA_battleship_navy  }
 	}
 
 	#Carrier Navy
@@ -1282,6 +1286,7 @@
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ITA_cittadellaria  }
+		mutually_exclusive = { focus = ITA_fully_domestic_airial_industry  }
 	}
 
 	#Prepare the Groundwork
@@ -1437,6 +1442,7 @@
 			FOCUS_FILTER_RESEARCH
 		}
 		prerequisite = { focus = ITA_devalue_the_lira  }
+		mutually_exclusive = { focus = ITA_corporatism  }
 	}
 
 	#Corporatism

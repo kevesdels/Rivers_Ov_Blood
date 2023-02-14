@@ -141,9 +141,8 @@ country_event = {
   id = peaceevent.3
   title = "The Polish Capitulation"
   desc = "The Polish military forces have been defeated and so, the Americans should no longer bother supporting them."
-  fire_only_once = yes
   trigger = {
-    ROOT = { has_war_with = USA }
+    ROOT = { has_war_with = USA NOT = { has_country_flag = pol_usa_peace } }
     USA = { has_country_flag = pol_usa_support }
     OR = {
       AND = {
@@ -171,6 +170,7 @@ country_event = {
   option = {
     name = "Send Peace Offer"
     USA = { country_event = { id = peaceevent.4 days = 3 } }
+    set_country_flag = pol_usa_peace
     }
 
   ###Continue
@@ -180,6 +180,7 @@ country_event = {
   add_stability = -0.10
   add_war_support = -0.10
   add_political_power = -200
+  set_country_flag = pol_usa_peace
     }
   }
 
@@ -203,8 +204,8 @@ country_event = {
   option = {
     ai_chance = { factor = 0 }
     name = "Continue!"
-    set_country_flag = usa_continue_fight
     FROM = { country_event = { id = peaceevent.5 days = 3 } }
+    set_country_flag = usa_continue_fight
     }
   }
 

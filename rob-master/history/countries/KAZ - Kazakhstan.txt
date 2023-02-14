@@ -2,6 +2,23 @@ capital = 588
 
 oob = "KAZ_1934"
 
+
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "KAZ_1934"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "KAZ_1934_nsb"
+}
+
+
 set_technology = {
 	infantry_weapons = 1
 }

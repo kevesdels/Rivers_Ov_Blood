@@ -1,6 +1,6 @@
 ﻿capital = 291
 
-oob = "IRQ_1936"
+oob = "IRQ_1934"
 
 # Starting tech
 set_technology = {
@@ -8,9 +8,22 @@ set_technology = {
 	infantry_weapons1 = 1
 	tech_mountaineers = 1
 	gw_artillery = 1
-	early_fighter = 1
-	CAS1 = 1
 	fuel_silos = 1
+}
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			engines_1 = 1
+			early_bombs = 1
+		}
+	else = {
+		set_technology = {
+			early_fighter = 1
+		}
+	}
 }
 
 set_convoys = 5

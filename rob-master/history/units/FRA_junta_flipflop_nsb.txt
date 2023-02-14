@@ -1,0 +1,171 @@
+##### Division Templates #####
+division_template = {
+	name = "Division d'Infanterie II"		
+	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. de Forteresse
+	# Difference is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+	}
+}
+
+division_template = {
+	name = "Division Coloniale II"		
+	# Represents: Div. d'Inf. Coloniale, Div. d'Inf. Nord-Africaine
+	# Difference from DI is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+	}
+}
+
+division_template = {
+	name = "Division Légère Mécanique II" 	# Brigade de Chars de Combat, independent armor brigades of 2x Rgts., 2 Bns. each
+	regiments = {
+		light_armor = { x = 0 y = 0 }		# Bn. of Hotchkiss, then Souma (Med.) tanks
+		light_armor = { x = 0 y = 1 }		# Bn. of Hotchkiss tanks
+		motorized = { x = 1 y = 0 }			# Brigade of 2x Rgts., 2 Bns. each (later 1 Rgt. of 3x Bns.)
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 42 ACs + motorcycles
+	}
+}
+
+division_template = {
+	name = "Brigade Coloniale II"			# Represents: 2xRgt colonial forces and , usually with old equipment
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+##### OOB #####
+units = {
+	##### Northern France Region #####
+	# VIe Corps d'Armée (Région Militaire in 1936) -- Metz
+	division= {	# "42ème Division d'Infanterie"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 33
+		}
+		location = 9734
+		division_template = "Division d'Infanterie II" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+			division= {	# "42ème Division d'Infanterie"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 34
+		}
+		location = 3754
+		division_template = "Division d'Infanterie II" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+			division= {	# "42ème Division d'Infanterie"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 30
+		}
+		location = 6766
+		division_template = "Division d'Infanterie II" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+			division= {	# "42ème Division d'Infanterie"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 6766
+		division_template = "Division d'Infanterie Alpine" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+			division= {	# "1ère Division Légère Mécanique"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1285
+		division_template = "Division Légère Mécanique II" 	# DLM is frontline, best equipment, L Arm = H-35
+		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_chassis_0 = { owner = FRA creator = FRA version_name = "FT Char Cannon" } }
+	}
+	
+	###Africa
+
+
+		division= {	# "1ère Div. d'Inf. Coloniale"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 7081
+		division_template = "Division Coloniale II"	 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+				division= {	# "1ère Div. d'Inf. Coloniale"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 7081
+		division_template = "Division Coloniale II"	 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+					division= {	# "1ère Div. d'Inf. Coloniale"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 1145
+		division_template = "Division Coloniale II"	 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+						division= {	# "1ère Div. d'Inf. Coloniale"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 21
+		}
+		location = 1145
+		division_template = "Division Coloniale II"	 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+}
+###################

@@ -1,18 +1,4 @@
 ALL_executive = {
- 
- ALL_temp_crash_fix = {
- fire_only_once = yes
-  available = {
-	NOT = { is_ai = yes }
- }
- complete_effect = {
-    IRE = { annex_country = { target = ENG transfer_troops = no } set_country_flag = annex_eng }
- }
- ai_will_do = {
-  base = 200
- }
- }
-
 
 
     

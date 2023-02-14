@@ -126,26 +126,6 @@ units = {
 
 }
 
-### Air Wings
-air_wings = {
-	# Z.d'Op. Aériennes Nord -- Lille
-	286 = { 
-		# Groupement de Chasse 21 
-		# Groupement de Chasse 23
-		fighter_equipment_0 = {
-			owner = "FIC" 
-			amount = 50
-		}
-		# Groupement de Bombardment 6
-		# Groupement de Bombardment 9
-		tac_bomber_equipment_1 =  {
-			owner = "FIC" 
-			amount = 10
-		}
-	}
-
-
-}
 
 #########################
 ## STARTING PRODUCTION ##
@@ -161,5 +141,5 @@ instant_effect = {
 		progress = 0.1
 		efficiency = 50
 	}
-
+}
 ###################

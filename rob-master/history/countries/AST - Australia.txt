@@ -12,18 +12,28 @@ set_technology = {
 	tech_recon = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	gwtank = 1
-	early_fighter = 1
-	cv_early_fighter = 1
-	cv_naval_bomber1 = 1
-	naval_bomber1 = 1
-	early_bomber = 1
-	CAS1 = 1
 	
+	basic_train = 1
 	trench_warfare = 1
 	fuel_silos = 1
 
 	fleet_in_being = 1
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
 }
 if = {
 	limit = {
@@ -52,11 +62,25 @@ if = {
 		basic_battery = 1
 		basic_torpedo = 1
 		basic_depth_charges = 1
-		
 		basic_cruiser_armor_scheme = 1
 		mtg_transport = 1
 	}
 	set_naval_oob = "AST_1936_naval"
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "AST_1936_air_bba"
+	else = {
+		set_air_oob = "AST_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
 }
 if = {
 	limit = {
