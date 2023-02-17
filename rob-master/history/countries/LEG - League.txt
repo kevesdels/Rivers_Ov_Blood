@@ -1,13 +1,6 @@
 ﻿capital = 613 
 
 oob = ""
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "CHI_1936_naval_mtg"
-	else = {
-		set_naval_oob = "CHI_1936_naval_legacy"
-	}
-}
 
 set_stability = 0.2
 set_war_support = 0.5

@@ -2,8 +2,14 @@ capital = 560
 
 set_research_slots = 3
 oob = "WFE_1934"
-set_naval_oob = "WFE_navy"
 
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "WFE_navy_mtg"
+	else = {
+		set_naval_oob = "WFE_navy_legacy"
+	}
+}
 
 set_technology = {
 	infantry_weapons = 1
@@ -151,6 +157,24 @@ if = {
 	limit = { has_dlc = "Man the Guns" }
 	### Variants ###
 	# Destroyers #
+
+	create_equipment_variant = {
+		name = "Orfey Class"						# represents Yakov Sverdlov, Frunze, and Orfey classes
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+
 	create_equipment_variant = {
 		name = "S Class"
 		type = ship_hull_light_1

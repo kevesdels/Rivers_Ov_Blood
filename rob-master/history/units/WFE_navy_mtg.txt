@@ -1,0 +1,31 @@
+units = {
+	##### NAVAL UNITS #####
+	### HOME COMMAND ###
+	fleet = {
+		name = "White Fleet"			
+		naval_base = 12559 # Nikolayevsk
+		task_force = {
+			name = "White Fleet"
+			location = 12559 # Scapa Flow
+			ship = { name = "General Kedrov" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = WFE version_name = "General Kedrov Class" } } }
+			ship = { name = "General Alekseyev" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = WFE version_name = "General Alekseyev Class" } } }
+			ship = { name = "Georgii Pobedonosets" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = WFE version_name = "General Alekseyev Class" } } } 
+			ship = { name = "General Kornilov" definition = heavy_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = WFE version_name = "Renown Class" } } }
+			ship = { name = "Almaz" definition = heavy_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = WFE version_name = "Renown Class" } } }
+			ship = { name = "Kapitan Saken" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WFE version_name = "Orfey Class" } } }
+			ship = { name = "Bespokoiny" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WFE version_name = "Orfey Class" } } }
+			ship = { name = "Derzky" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WFE version_name = "Orfey Class" } } }
+			ship = { name = "Gnevny" definition = destroyer equipment ={ ship_hull_light_1 = { amount = 1 owner = WFE version_name = "Orfey Class" } } }
+			ship = { name = "Pylkiy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WFE version_name = "Orfey Class" } } }
+			ship = { name = "Pospeshny" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WFE version_name = "Orfey Class" } } }
+			ship = { name = "Tserigo" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WFE version_name = "Orfey Class" } } }
+			ship = { name = "Zharkiy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WFE version_name = "Orfey Class" } } }
+			ship = { name = "Zvonkiy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WFE version_name = "Orfey Class" } } }
+			ship = { name = "Zorkiy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WFE version_name = "Orfey Class" } } }
+			ship = { name = "Grozny" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WFE version_name = "Orfey Class" } } }
+			ship = { name = "Gaidamak" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WFE version_name = "Orfey Class" } } }
+			ship = { name = "Ural" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WFE version_name = "Orfey Class" } } }
+			}
+
+		}		
+	}		

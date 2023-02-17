@@ -2,10 +2,32 @@ capital = 1197
 
 oob = "SFS_1934"
 
+
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
 }
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = { 
+		gwtank = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = { 
+		gwtank_chassis = 1
+	}
+}
+
+
 set_politics = {
 	ruling_party = reactionary
 	last_election = "1934.1.1"

@@ -1,0 +1,31 @@
+units = {
+	##### NAVAL UNITS #####
+	### HOME COMMAND ###
+	fleet = {
+		name = "White Fleet"			
+		naval_base = 12559 # Nikolayevsk
+		task_force = {
+			name = "White Fleet"
+			location = 12559 # Scapa Flow
+			ship = { name = "General Kedrov" definition = battleship equipment = { battleship_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "General Alekseyev" definition = battleship equipment = { battleship_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Georgii Pobedonosets" definition = battleship equipment = { battleship_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "General Kornilov" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Almaz" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Kapitan Saken" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Bespokoiny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Derzky" definition = destroyer equipment =  { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Gnevny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Pylkiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Pospeshny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Tserigo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Zharkiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Zvonkiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Zorkiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Grozny" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Gaidamak" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			ship = { name = "Ural" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = WFE } } }
+			}
+
+		}		
+	}		

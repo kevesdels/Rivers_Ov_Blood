@@ -218,7 +218,7 @@ ai_chance = { factor = 50}
 add_political_power = -50
 add_stability = -0.05
 MNT = { transfer_state = 105 }
-MNT = { load_oob = "MNT_1936" }
+MNT = { load_oob = "MNT_1934" }
 
 declare_war_on = { target = MNT  type = annex_everything } 
 hidden_effect = { SER = { country_event = { id = serbia.105 days = 3 } } }
@@ -229,7 +229,7 @@ name = serbia.104.b
 ai_chance = { factor = 50}
 
 MNT = { transfer_state = 105 }
-MNT = { load_oob = "MNT_1936" }
+MNT = { load_oob = "MNT_1934" }
 puppet = MNT
 add_political_power = -200
 add_stability = -0.25

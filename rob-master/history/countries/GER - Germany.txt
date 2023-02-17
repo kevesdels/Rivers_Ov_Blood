@@ -47,7 +47,6 @@ set_technology = {
 	tech_engineers = 1
 	tech_mountaineers = 1
 	gw_artillery = 1
-	interwar_antiair = 1
 	motorised_infantry = 1
 	
 	formation_flying = 1
@@ -58,22 +57,16 @@ if = {
 		set_air_oob = "GER_1934_air_bba"
 		set_technology = {
 			aa_lmg = 1
-			aa_cannon_1 = 1
 			engines_1 = 1
-			engines_2 = 1
 			early_bombs = 1
-			aircraft_construction = 1
 			iw_small_airframe = 1
-			basic_small_airframe = 1
 			iw_medium_airframe = 1
-			basic_medium_airframe = 1
 			iw_large_airframe = 1
 		}
 	else = {
 		set_air_oob = "GER_1934_air_legacy"
 		set_technology = {
 			early_fighter = 1
-			fighter1 = 1
 			early_bomber = 1
 			tactical_bomber1 = 1
 			strategic_bomber1 = 1
@@ -112,7 +105,6 @@ if = {
 		early_submarine = 1
 		basic_submarine = 1
 		early_destroyer = 1
-		basic_destroyer = 1
 		early_light_cruiser = 1
 		early_heavy_cruiser = 1
 		transport = 1
@@ -125,7 +117,6 @@ if = {
 	set_technology = {
 		basic_naval_mines = 1
 		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
 		early_ship_hull_cruiser = 1
 		pre_dreadnoughts = 1
 		early_ship_hull_submarine = 1
@@ -244,6 +235,22 @@ if = {
 			fixed_ship_engine_slot = sub_ship_engine_1
 			rear_1_custom_slot = empty
 		}
+	}
+	create_equipment_variant = {
+		name = "Type 24 Class"
+		type = ship_hull_light_1
+		name_group = GER_TB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+		obsolete = yes
 	}
 }
 
