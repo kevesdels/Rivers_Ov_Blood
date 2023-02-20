@@ -85,7 +85,7 @@ focus = {
 	icon = GFX_ally_with_nw_democrats
 	x = -4
 	y = 1
-	cost = 10
+	cost = 3.5
     	prerequisite = { focus = USA_rally_the_southern_bloc }
 relative_position_id = USA_rally_the_southern_bloc
 	available_if_capitulated = yes
@@ -104,7 +104,7 @@ focus = {
 	icon = GFX_deal_with_texas_democrats
 	x = -2
 	y = 1
-	cost = 10
+	cost = 3.5
     	prerequisite = { focus = USA_rally_the_southern_bloc }
 relative_position_id = USA_rally_the_southern_bloc
 	available_if_capitulated = yes
@@ -128,7 +128,7 @@ focus = {
 	icon = GFX_deal_with_e_h_crump
 	x = 0
 	y = 1
-	cost = 10
+	cost = 3.5
     	prerequisite = { focus = USA_rally_the_southern_bloc }
 relative_position_id = USA_rally_the_southern_bloc
 	available_if_capitulated = yes
@@ -147,7 +147,7 @@ focus = {
 	icon = GFX_deal_with_north_republicans
 	x = 2
 	y = 1
-	cost = 10
+	cost = 3.5
     	prerequisite = { focus = USA_rally_the_southern_bloc }
 relative_position_id = USA_rally_the_southern_bloc
 	available_if_capitulated = yes
@@ -168,7 +168,7 @@ focus = {
 	icon = GFX_the_tamalage_new_deal
 	x = 4
 	y = 1
-	cost = 10
+	cost = 3.5
     	prerequisite = { focus = USA_rally_the_southern_bloc }
 relative_position_id = USA_rally_the_southern_bloc
 	available_if_capitulated = yes
@@ -292,8 +292,10 @@ focus = {
            } 
            
            }
-}
-}
+
+		}
+		   #JAPAN IS FASCIST
+	}
 
 focus = {
 	id = USA_Deal_With_Unloyal_Japanese
@@ -316,7 +318,9 @@ focus = {
            } 
            
            }
-}
+		   #JAPAN IS NOT FASCIST
+		}
+
 }
 
 
@@ -356,10 +360,26 @@ focus = {
 	completion_reward = {
 	
 }
-
-
 }
 
+
+focus = {
+	id = USA_The_Fate_Of_Post_War_Japan
+	icon = GFX_
+	x = 0
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_Pacific_Naval_Program }
+	relative_position_id = USA_Pacific_Naval_Program
+	available_if_capitulated = yes
+
+     available = {
+                 
+     }
+	completion_reward = {
+	
+}
+}
 ##event where America offers Japan a non-agression pact
 focus = {
 	id = USA_american_japanese_peace_conference
@@ -383,11 +403,11 @@ focus = {
 	icon = GFX_
 	x = -3
 	y = 1
-	cost = 5
+	cost = 10
     	prerequisite = { focus = USA_call_on_the_japs }
 relative_position_id = USA_call_on_the_japs
 	available_if_capitulated = yes
-    ###should be harder to do because 
+
      available = {
 
      }
@@ -401,7 +421,7 @@ focus = {
 	icon = GFX_
 	x = 0
 	y = 2
-	cost = 5
+	cost = 10
     prerequisite = { focus = USA_Joint_American_Japanese_Fighter_Program }
     prerequisite = { focus = USA_partners_in_crime }
 	relative_position_id = USA_Joint_American_Japanese_Fighter_Program
@@ -557,7 +577,7 @@ focus = {
 	icon = GFX_focus_USA_woolhats
 	x = 5
 	y = 2
-	cost = 2
+	cost = 5
     	prerequisite = { focus = USA_child_tax_break }
 relative_position_id = USA_rally_the_southern_bloc
 	available_if_capitulated = yes
@@ -621,6 +641,26 @@ relative_position_id = USA_rally_the_southern_bloc
 
 	}
 }
+
+focus = {
+	id = USA_Bomber_Mafia
+	icon = GFX_
+	x = 2
+	y = 1
+	cost = 5
+    	prerequisite = { focus = USA_wool_hats_in_the_army }
+relative_position_id = USA_wool_hats_in_the_army
+	available_if_capitulated = yes
+
+     available = {
+
+     }
+	completion_reward = {
+	#Strat_Bombers
+	}
+
+}
+
 
 ###Puts friend of Talmadge Tom Linder as head of West Indies
 focus = {
@@ -723,7 +763,7 @@ relative_position_id = USA_child_tax_break
 focus = {
 	id = USA_meet_with_military
 	icon = GFX_focus_USA_meet_with_military
-	x = 3
+	x = 5
 	y = 1
 	cost = 5
     	prerequisite = { focus = USA_wool_hats_in_the_army }
@@ -757,6 +797,25 @@ relative_position_id = USA_meet_with_military
 	}
 }
 focus = {
+	id = USA_Willys_Jeep_Program
+	icon = GFX_
+	x = 2
+	y = 2
+	cost = 5
+    	prerequisite = { focus = USA_promote_patton }
+relative_position_id = USA_promote_patton
+	available_if_capitulated = yes
+
+     available = {
+
+     }
+	completion_reward = {
+	
+	}
+
+}
+
+focus = {
 	id = USA_work_with_macauther
 	icon = GFX_focus_USA_macarthor
 	x = -1
@@ -775,7 +834,24 @@ relative_position_id = USA_meet_with_military
 	
 	}
 }
+focus = {
+	id = USA_Developing_The_Bomb
+	icon = GFX_
+	x = -2
+	y = 2
+	cost = 5
+    	prerequisite = { focus = USA_work_with_macauther }
+relative_position_id = USA_work_with_macauther
+	available_if_capitulated = yes
 
+     available = {
+
+     }
+	completion_reward = {
+	
+	}
+
+}
 
 focus = {
 	id = USA_parris_island_marines
@@ -943,6 +1019,28 @@ relative_position_id = USA_reward_the_earl_of_louisiana
 }
 
 ###this isn't to remove it it's whether to increase segration on federal level 
+
+
+
+focus = {
+	id = USA_Seize_Fort_Knox_Gold
+	icon = GFX_
+	x = -5
+	y = 1
+	cost = 5
+    	prerequisite = { focus = USA_state_of_the_union }
+relative_position_id = USA_state_of_the_union
+	available_if_capitulated = yes
+
+     available = {
+
+     }
+	completion_reward = {
+	#Strat_Bombers
+	}
+
+}
+
 
 ##If he decides to increase feds will try passing federal anti-lynching bill
 focus = {
