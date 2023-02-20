@@ -277,8 +277,9 @@ focus = {
 	x = -4
 	y = 1
 	cost = 10
-    	prerequisite = { focus = USA_anti_red_pact }
-relative_position_id = USA_anti_red_pact
+	mutually_exclusive = { focus = USA_Deal_With_Unloyal_Japanese }
+	prerequisite = { focus = USA_anti_red_pact }
+	relative_position_id = USA_anti_red_pact
 	available_if_capitulated = yes
     ###should be harder to do because 
      available = {
@@ -292,6 +293,71 @@ relative_position_id = USA_anti_red_pact
            
            }
 }
+}
+
+focus = {
+	id = USA_Deal_With_Unloyal_Japanese
+	icon = GFX_
+	x = -11
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_anti_red_pact }
+	relative_position_id = USA_anti_red_pact
+	mutually_exclusive = { focus = USA_call_on_the_japs }
+	available_if_capitulated = yes
+
+     available = {
+
+     }
+	completion_reward = {
+        JAP = {
+            country_event = {
+               id  = rob_usa.x
+           } 
+           
+           }
+}
+}
+
+
+focus = {
+	id = USA_Propaganda_Japan_Is_Soft
+	icon = GFX_
+	x = 0
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_Deal_With_Unloyal_Japanese }
+	relative_position_id = USA_Deal_With_Unloyal_Japanese
+	available_if_capitulated = yes
+
+     available = {
+                 
+     }
+	completion_reward = {
+	
+}
+
+
+}
+
+focus = {
+	id = USA_Pacific_Naval_Program
+	icon = GFX_
+	x = 0
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_Propaganda_Japan_Is_Soft }
+	relative_position_id = USA_Propaganda_Japan_Is_Soft
+	available_if_capitulated = yes
+
+     available = {
+                 
+     }
+	completion_reward = {
+	
+}
+
+
 }
 
 ##event where America offers Japan a non-agression pact
@@ -310,10 +376,46 @@ relative_position_id = USA_call_on_the_japs
      }
 	completion_reward = {
 	
+	}
+}
+focus = {
+	id = USA_Joint_American_Japanese_Fighter_Program
+	icon = GFX_
+	x = -3
+	y = 1
+	cost = 5
+    	prerequisite = { focus = USA_call_on_the_japs }
+relative_position_id = USA_call_on_the_japs
+	available_if_capitulated = yes
+    ###should be harder to do because 
+     available = {
+
+     }
+	completion_reward = {
+	
+	}
+
+}
+focus = {
+	id = USA_American_Investment_In_Japan
+	icon = GFX_
+	x = 0
+	y = 2
+	cost = 5
+    prerequisite = { focus = USA_Joint_American_Japanese_Fighter_Program }
+    prerequisite = { focus = USA_partners_in_crime }
+	relative_position_id = USA_Joint_American_Japanese_Fighter_Program
+	available_if_capitulated = yes
+    ###should be harder to do because 
+     available = {
+
+     }
+	completion_reward = {
+	
+	}
 }
 
 
-}
 #####USA offers Japan membership and promises of working together 
 
 focus = {
