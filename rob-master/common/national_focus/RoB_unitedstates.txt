@@ -66,7 +66,7 @@ focus = {
 	cost = 10
     	prerequisite = { focus = USA_child_tax_break }
 relative_position_id = USA_rally_the_southern_bloc
-	available_if_capitulated = yes
+	available_if_capitulated = no
     ###should be harder to do because 
       available = {	
         reactionary  > 0.35	
@@ -191,7 +191,7 @@ focus = {
 	cost = 10
     	prerequisite = { focus = USA_anti_red_pact }
 relative_position_id = USA_anti_red_pact
-	available_if_capitulated = yes
+	available_if_capitulated = no
     ###should be harder to do because 
      available = {
     NOT = {
@@ -221,7 +221,7 @@ focus = {
 	cost = 10
     	prerequisite = { focus = USA_anti_red_pact }
 relative_position_id = USA_anti_red_pact
-	available_if_capitulated = yes
+	available_if_capitulated = no
     ###should be harder to do because 
      available = {
     MEX = {
@@ -247,7 +247,7 @@ focus = {
 	cost = 5
     	prerequisite = { focus = USA_anti_red_pact }
 relative_position_id = USA_anti_red_pact
-	available_if_capitulated = yes
+	available_if_capitulated = no
     ###should be harder to do because 
      available = {
     NOT = {
@@ -280,7 +280,7 @@ focus = {
 	mutually_exclusive = { focus = USA_Deal_With_Unloyal_Japanese }
 	prerequisite = { focus = USA_anti_red_pact }
 	relative_position_id = USA_anti_red_pact
-	available_if_capitulated = yes
+	available_if_capitulated = no
     ###should be harder to do because 
      available = {
 
@@ -306,7 +306,7 @@ focus = {
     	prerequisite = { focus = USA_anti_red_pact }
 	relative_position_id = USA_anti_red_pact
 	mutually_exclusive = { focus = USA_call_on_the_japs }
-	available_if_capitulated = yes
+	available_if_capitulated = no
 
      available = {
 
@@ -332,10 +332,10 @@ focus = {
 	cost = 10
     	prerequisite = { focus = USA_Deal_With_Unloyal_Japanese }
 	relative_position_id = USA_Deal_With_Unloyal_Japanese
-	available_if_capitulated = yes
+	available_if_capitulated = no
 
      available = {
-                 
+		has_war = yes
      }
 	completion_reward = {
 	
@@ -352,7 +352,7 @@ focus = {
 	cost = 10
     	prerequisite = { focus = USA_Propaganda_Japan_Is_Soft }
 	relative_position_id = USA_Propaganda_Japan_Is_Soft
-	available_if_capitulated = yes
+	available_if_capitulated = no
 
      available = {
                  
@@ -371,7 +371,7 @@ focus = {
 	cost = 10
     	prerequisite = { focus = USA_Pacific_Naval_Program }
 	relative_position_id = USA_Pacific_Naval_Program
-	available_if_capitulated = yes
+	available_if_capitulated = no
 
      available = {
                  
@@ -389,7 +389,7 @@ focus = {
 	cost = 5
     	prerequisite = { focus = USA_call_on_the_japs }
 relative_position_id = USA_call_on_the_japs
-	available_if_capitulated = yes
+	available_if_capitulated = no
     ###should be harder to do because 
      available = {
 
@@ -406,7 +406,7 @@ focus = {
 	cost = 10
     	prerequisite = { focus = USA_call_on_the_japs }
 relative_position_id = USA_call_on_the_japs
-	available_if_capitulated = yes
+	available_if_capitulated = no
 
      available = {
 
@@ -425,7 +425,7 @@ focus = {
     prerequisite = { focus = USA_Joint_American_Japanese_Fighter_Program }
     prerequisite = { focus = USA_partners_in_crime }
 	relative_position_id = USA_Joint_American_Japanese_Fighter_Program
-	available_if_capitulated = yes
+	available_if_capitulated = no
     ###should be harder to do because 
      available = {
 
@@ -446,7 +446,7 @@ focus = {
 	cost = 10
     	prerequisite = { focus = USA_american_japanese_peace_conference }
 relative_position_id = USA_american_japanese_peace_conference
-	available_if_capitulated = yes
+	available_if_capitulated = no
     ###should be harder to do because 
      available = {
    MAL = {  is_puppet = no }
@@ -468,7 +468,7 @@ focus = {
 	cost = 10
     	prerequisite = { focus = USA_partners_in_crime }
 relative_position_id = USA_partners_in_crime
-	available_if_capitulated = yes
+	available_if_capitulated = no
     ###should be harder to do because 
      available = {
    MAL = {  is_puppet = no }
@@ -489,7 +489,7 @@ focus = {
 	cost = 10
     	prerequisite = { focus = USA_call_on_the_japs }
 relative_position_id = USA_call_on_the_japs
-	available_if_capitulated = yes
+	available_if_capitulated = no
     ###should be harder to do because 
      available = {
    MAL = {  is_puppet = no }
@@ -509,7 +509,7 @@ focus = {
 	cost = 10
     	prerequisite = { focus = USA_malaysia_question }
 relative_position_id = USA_malaysia_question
-	available_if_capitulated = yes
+	available_if_capitulated = no
     ###should be harder to do because 
      available = {
                  
@@ -534,7 +534,7 @@ focus = {
 	cost = 10
     	prerequisite = { focus = USA_visit_brazil }
 relative_position_id = USA_visit_brazil
-	available_if_capitulated = yes
+	available_if_capitulated = no
     ###should be harder to do because 
       available = {	
         
@@ -656,11 +656,66 @@ relative_position_id = USA_wool_hats_in_the_army
 
      }
 	completion_reward = {
-	#Strat_Bombers
+		add_tech_bonus = {
+			name = bomber_bonus
+			bonus = 1.0
+			uses = 2
+			technology = strategic_bomber1
+			technology = strategic_bomber2
+			technology = strategic_bomber3
+			category = tactical_bomber
+		}
 	}
 
 }
 
+focus = {
+	id = USA_Full_Scale_Bomber_Production
+	icon = GFX_
+	x = 0
+	y = 1
+	cost = 5
+    prerequisite = { focus = USA_Bomber_Mafia }
+	relative_position_id = USA_Bomber_Mafia
+	available_if_capitulated = yes
+
+     available = {
+		has_war = yes
+     }
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+				OR = {
+					is_in_home_area = yes
+					NOT = {
+						owner = {
+							any_owned_state = {
+								free_building_slots = {
+									building = arms_factory
+									size > 0
+									include_locked = yes
+								}
+								is_in_home_area = yes
+							}
+						}
+					}
+				}
+			}
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = arms_factory
+				level = 4
+				instant_build = yes
+			}
+		}
+	}
+
+}
 
 ###Puts friend of Talmadge Tom Linder as head of West Indies
 focus = {
@@ -847,8 +902,12 @@ relative_position_id = USA_work_with_macauther
      available = {
 
      }
-	completion_reward = {
-	
+	 completion_reward = {
+		add_tech_bonus = {
+			name = nuclear_bonus
+			ahead_reduction = 2
+			category = nuclear
+		}
 	}
 
 }
@@ -1025,9 +1084,9 @@ relative_position_id = USA_reward_the_earl_of_louisiana
 focus = {
 	id = USA_Seize_Fort_Knox_Gold
 	icon = GFX_
-	x = -5
+	x = -6
 	y = 1
-	cost = 5
+	cost = 10
     	prerequisite = { focus = USA_state_of_the_union }
 relative_position_id = USA_state_of_the_union
 	available_if_capitulated = yes
@@ -1036,7 +1095,25 @@ relative_position_id = USA_state_of_the_union
 
      }
 	completion_reward = {
-	#Strat_Bombers
+	#sell gold from fort knox
+	}
+
+}
+focus = {
+	id = USA_Decentralize_Federal_Reserve
+	icon = GFX_
+	x = 0
+	y = 1
+	cost = 10
+    	prerequisite = { focus = USA_Seize_Fort_Knox_Gold }
+relative_position_id = USA_Seize_Fort_Knox_Gold
+	available_if_capitulated = yes
+
+     available = {
+
+     }
+	completion_reward = {
+	
 	}
 
 }
@@ -1048,7 +1125,7 @@ focus = {
 	icon = GFX_focus_USA_desegrigation_question
 	x = 3
 	y = 1
-	cost = 2
+	cost = 5
     	prerequisite = { focus = USA_state_of_the_union }
         	
 relative_position_id = USA_state_of_the_union
@@ -1068,9 +1145,9 @@ relative_position_id = USA_state_of_the_union
 focus = {
 	id = USA_battle_unfair_rail_rates
 	icon = GFX_focus_USA_battle_unfair_railways
-	x = -2
+	x = -3
 	y = 1
-	cost = 4
+	cost = 5
     	prerequisite = { focus = USA_state_of_the_union }
         	
 relative_position_id = USA_state_of_the_union
