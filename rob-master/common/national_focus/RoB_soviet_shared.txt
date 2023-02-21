@@ -382,14 +382,31 @@ prerequisite = { focus = SOV_repairrenaultftunits }
 ai_will_do = { 
  factor = 1
  } 
+ bypass = {
+	Or = {
+		has_tech = basic_light_tank  
+		has_tech = basic_light_tank_chassis 
+		}
+ }
 completion_reward = {
-add_tech_bonus = {
-	name = zhukov_tanks
-	bonus = 1.0
-	uses = 1
-	technology = basic_light_tank	
-
-}
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		add_tech_bonus = {
+			name = zhukov_tanks
+			bonus = 1.0
+			uses = 1
+			technology = basic_light_tank_chassis
+		}			
+		else = {
+			add_tech_bonus = {
+				name = zhukov_tanks
+				bonus = 1.0
+				uses = 1
+				technology = basic_light_tank	
+			
+			}
+		}
+	}
 }
  } 
 
@@ -439,12 +456,23 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
- add_equipment_to_stockpile = {
-  type = gw_tank_equipment
+	if = {
+		limit = { has_dlc = "No Step Back" }
+		add_equipment_to_stockpile = {
+			type = light_tank_chassis_0
+				amount = 132
+				producer = FRA
+				variant_name = "FT mod. 31"
+		   }
+		   else = {
+			add_equipment_to_stockpile = {
+				type = gw_tank_equipment
 					amount = 132
 					producer = FRA
- }
-}
+			   }
+		   }
+		}
+	}
  } 
 
 #Focus for Develop Armored Doctrines
@@ -2803,6 +2831,12 @@ prerequisite = { focus = SOV_gorkovskyavtomobilnyzavod }
 ai_will_do = { 
  factor = 1
  } 
+ bypass = {
+	AND = {
+		has_tech = motorised_infantry  
+		has_tech = mechanised_infantry 
+		}
+ }
 completion_reward = {
 set_technology = {
     motorised_infantry = 1 
@@ -4106,7 +4140,21 @@ ai_will_do = {
  }
  completion_reward = {
   air_experience = 25
- }
+  
+  if = {
+	limit = { has_dlc = "By Blood Alone" }
+	create_equipment_variant = {
+		name = "PK-23" #
+		type = small_plane_airframe
+		modules = {
+			fixed_main_weapon_slot = small_bomb_bay
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+			}
+		obsolete = yes
+		}
+	 }
+	}
 } 
 
  #Focus for Alksnis Plan
@@ -4127,8 +4175,23 @@ ai_will_do = {
  } 
  completion_reward = {
   air_experience = 25
-  set_technology = {
-    early_bomber = 1 
+  if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = { iw_large_airframe = 1 }
+	create_equipment_variant = {
+		name = "LV-7" #
+		type = large_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = large_bomb_bay
+			engine_type_slot = engine_4_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+
+	else = {
+		set_technology = { early_bomber = 1 }
+	}
 }
  }
  } 
@@ -4168,11 +4231,23 @@ ai_will_do = {
  factor = 1
  } 
   completion_reward = {
-  add_equipment_to_stockpile = {
-  type = tac_bomber_equipment_0
-					amount = 50
-					producer = SOV
- }
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		add_equipment_to_stockpile = {
+			type = large_plane_airframe_0
+				   amount = 50
+				   producer = SOV
+				   variant_name = "LV-7"
+		   }
+		
+		else = {
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_0
+					   amount = 50
+					   producer = SOV
+			   }
+		}
+	}
  }
  }
  
@@ -4189,12 +4264,31 @@ prerequisite = { focus = SOV_bolkhovitinovdba }
 ai_will_do = { 
  factor = 1
  } 
-  completion_reward = {
-  add_equipment_to_stockpile = {
-  type = tac_bomber_equipment_0
-					amount = 45
-					producer = SOV
+ bypass = {
+	has_tech = strategic_bomber1
+	has_tech = basic_large_airframe
  }
+  completion_reward = {
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		add_tech_bonus = {
+			name = cas_bonus
+			bonus = 1.0
+			uses = 1
+			technology = basic_small_airframe
+		}
+		
+		else = {
+			add_tech_bonus = {
+				name = cas_bonus
+				bonus = 1.0
+				uses = 1
+				technology = strategic_bomber1
+			}
+		}
+	}
+
  }
  }
  
@@ -4277,12 +4371,31 @@ prerequisite = { focus = SOV_battlefieldsupportdoctrine }
 ai_will_do = { 
  factor = 1
  } 
-completion_reward = {
- add_equipment_to_stockpile = {
-  type = CAS_equipment_1
-					amount = 60
-					producer = ENG
+ available = {
+	OR = {
+	has_tech = cas1
+	has_tech = iw_small_airframe
+ 	}
  }
+completion_reward = {
+
+ if = {
+	limit = { has_dlc = "By Blood Alone" }
+	add_equipment_to_stockpile = {
+		type = large_plane_airframe_0
+			   amount = 50
+			   producer = SOV
+			   variant_name = "LV-7"
+	   }
+	
+	else = {
+		add_equipment_to_stockpile = {
+			type = CAS_equipment_1
+							  amount = 60
+							  producer = ENG
+		   }
+	}
+}
 
 }
  }
@@ -4300,21 +4413,34 @@ ai_will_do = {
  factor = 1
  } 
 completion_reward = {
- add_equipment_to_stockpile = {
-  type = CAS_equipment_1
-					amount = 2
-					producer = USA
- }
- add_equipment_to_stockpile = {
-  type = CAS_equipment_1
-					amount = 3
-					producer = FRA
- }
-  add_equipment_to_stockpile = {
-  type = CAS_equipment_1
-					amount = 1
-					producer = GER
- }
+
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		add_equipment_to_stockpile = {
+			type = large_plane_airframe_0
+				   amount = 6
+				   producer = SOV
+				   variant_name = "LV-7"
+		   }
+		
+		else = {
+			add_equipment_to_stockpile = {
+				type = CAS_equipment_1
+								  amount = 2
+								  producer = USA
+			   }
+			   add_equipment_to_stockpile = {
+				type = CAS_equipment_1
+								  amount = 3
+								  producer = FRA
+			   }
+				add_equipment_to_stockpile = {
+				type = CAS_equipment_1
+								  amount = 1
+								  producer = GER
+			   }
+		}
+	}
   add_tech_bonus = {
 	name = cas_bonus
 	bonus = 0.75
@@ -4362,12 +4488,29 @@ prerequisite = { focus = SOV_expandaircraftindustry }
 ai_will_do = { 
  factor = 1
  } 
+ bypass = {
+	has_tech = CAS2
+	has_tech = basic_small_airframe
+ }
 completion_reward = {
- add_tech_bonus = {
-	name = cas_bonus
-	bonus = 1.0
-	uses = 1
-	technology = CAS2
+
+ if = {
+	limit = { has_dlc = "By Blood Alone" }
+	add_tech_bonus = {
+		name = cas_bonus
+		bonus = 1.0
+		uses = 1
+		technology = basic_small_airframe
+	}
+	
+	else = {
+		add_tech_bonus = {
+			name = cas_bonus
+			bonus = 1.0
+			uses = 1
+			technology = CAS2
+		}
+	}
 }
 }
  }

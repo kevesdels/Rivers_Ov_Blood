@@ -130,5 +130,48 @@ ideas = {
     }
     traits = { industrial_concern }
 }
+
+
+FRA_cdc = {		
+  available = {
+    has_completed_focus = FRA_merge_minor_electric_companies_with_CDC
+  }
+  allowed = {
+      OR = {
+          original_tag = FRA
+          original_tag = FRS
+          original_tag = FRR
+          original_tag = FRL
+          original_tag = FRP
+    }
+  }      
+  research_bonus = {
+      electronics = 0.15
+  }
+  traits = { electronics_concern }
+}
+
+FRA_CFP = {		
+  available = {
+    has_completed_focus = FRA_hire_Ernest_Mercier
+  }
+  allowed = {
+      OR = {
+          original_tag = FRA
+          original_tag = FRS
+          original_tag = FRR
+          original_tag = FRL
+          original_tag = FRP
+    }
+  }      
+  research_bonus = {
+    synth_resources = 0.25
+  }
+  modifier = [
+  production_speed_synthetic_refinery_factor = 0.15
+  }
+
+  traits = { refinery_concern }
+
   }
  } 

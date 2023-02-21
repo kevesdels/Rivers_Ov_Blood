@@ -178,6 +178,9 @@ ideas = {
    ###France
 
    somua = {
+      available = {
+         has_completed_focus = FRA_resurect_auto_industry
+      }
       allowed = {
 OR = {
       original_tag = FRA
@@ -188,7 +191,7 @@ OR = {
 }
       }
       research_bonus = {
-         motorized_equipment = 0.15
+         motorized_equipment = 0.25
       }
       traits = { motorized_equipment_manufacturer }
 
