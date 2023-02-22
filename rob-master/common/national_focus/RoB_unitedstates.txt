@@ -505,8 +505,16 @@ relative_position_id = USA_call_on_the_japs
      available = {
 
      }
-	completion_reward = {
-	
+	 completion_reward = {
+		add_tech_bonus = {
+			name = fighter_bonus
+			bonus = 1.0
+			uses = 2
+			technology = early_fighter
+			technology = fighter1
+			technology = fighter2
+			technology = fighter3
+		}
 	}
 
 }
