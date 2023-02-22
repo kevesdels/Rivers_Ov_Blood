@@ -494,7 +494,7 @@ relative_position_id = USA_call_on_the_japs
 }
 focus = {
 	id = USA_Joint_American_Japanese_Fighter_Program
-	icon = GFX_
+	icon = GFX_focus_USA_zero_usa
 	x = -3
 	y = 1
 	cost = 10
@@ -597,7 +597,7 @@ relative_position_id = USA_call_on_the_japs
 
 focus = {
 	id = USA_governor_pope
-	icon = GFX_
+	icon = GFX_focus_USA_pope
 	x = 1
 	y = 1
 	cost = 10
@@ -941,8 +941,14 @@ relative_position_id = USA_meet_with_military
         
 		}
 	completion_reward = {
-      
-	
+		#add patton
+		army_experience = 5
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 1.0
+			uses = 1
+			category = land_doctrine
+		}
 	}
 }
 focus = {
@@ -959,7 +965,7 @@ relative_position_id = USA_promote_patton
 
      }
 	completion_reward = {
-	
+		add_ideas = USA_Willys_Jeep_Program_idea
 	}
 
 }
@@ -979,8 +985,14 @@ relative_position_id = USA_meet_with_military
         
 		}
 	completion_reward = {
-      
-	
+		#add_macauther
+		army_experience = 5
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 1.0
+			uses = 1
+			category = land_doctrine
+		}
 	}
 }
 focus = {
