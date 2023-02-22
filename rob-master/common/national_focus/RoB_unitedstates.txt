@@ -654,7 +654,7 @@ focus = {
 	id = USA_child_tax_break
 	icon = GFX_focus_USA_child_tax_break
 	x = 0
-	y = 3
+	y = 2
 	cost = 5
     prerequisite = { focus = USA_ally_with_nw_democrats }
 	prerequisite = { focus = USA_deal_with_texas_democrats }
@@ -1075,6 +1075,7 @@ relative_position_id = USA_promote_patton
         
 		}
 	completion_reward = {
+		add_ideas = USA_Haunted_Tanks
 		add_tech_bonus = {
 			name = armor_bonus
 			bonus = 1.0
@@ -1117,7 +1118,6 @@ relative_position_id = USA_work_with_macauther
         
 		}
 	completion_reward = {
-      
 		add_ideas = USA_strenghten_natgurad_idea
 	}
 }
@@ -1216,7 +1216,7 @@ focus = {
 	id = USA_Seize_Fort_Knox_Gold
 	icon = GFX_focus_USA_Seize_Fort_Knox_Gold
 	x = -6
-	y = 1
+	y = 2
 	cost = 10
     	prerequisite = { focus = USA_state_of_the_union }
 relative_position_id = USA_state_of_the_union
