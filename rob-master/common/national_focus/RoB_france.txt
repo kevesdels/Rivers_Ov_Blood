@@ -569,6 +569,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		completion_reward = {
+			add_stability = 0.01
+		}
 	}
 
 	#Remember 1871
@@ -2918,6 +2921,12 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		available = {
+			OR = {
+				has_country_flag = fra_colonies_done
+				has_country_flag = FRA_colonies_abandoned
+			}
+		}
 		prerequisite = { focus = FRA_decentralisedassembliesinfrance  }
 		completion_reward = {
 			country_event = { id = rob_france.78 days =  3 }
@@ -4141,7 +4150,7 @@ focus_tree = {
 			has_country_flag = fra_cw_over
 		}
 		completion_reward = {
-			
+			add_political_power = 150
 		}
 	}
 
@@ -4477,6 +4486,12 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FRA_dams_lol_tooltip
 				set_country_flag = enable_fra_col_infa
+				ROOT =  {
+					set_variable = { 
+						var = FRA_col_infra
+						value = 0
+					  }
+				}
 		}
 	}
 
@@ -4494,6 +4509,12 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = FRA_dams_lol_tooltip
 			set_country_flag = enable_fra_col_indus
+			ROOT =  {
+				set_variable = { 
+					var = fra_col_industry
+					value = 0
+				  }
+			}
 		}
 	}
 
@@ -4508,10 +4529,39 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		available = {
+			has_country_flag = FRA_colony_ifrasturcture_tooltip
+			has_country_flag = FRA_colony_industry_tooltip
+			check_variable = { var = FRA_col_infra value = 10 compare = greater_than_or_equals }
+			check_variable = { var = fra_col_indus value = 5 compare = greater_than_or_equals }
+		}
 		prerequisite = { focus = FRA_colonial_infrastructure }
 		prerequisite = { focus = FRA_industrialize_colonial_centres }
 		completion_reward = {
-				
+			if = {
+				limit = {
+					SYR = { or = { is_subject_of = ROOT is_puppet_of = ROOT } }
+				}
+				SYR = { add_ideas = { FRA_modern_agriculture } set_country_flag = fra_colonial_agri  }
+			}
+			if = {
+				limit = {
+					FEA = { or = { is_subject_of = ROOT is_puppet_of = ROOT } }
+				}
+				FEA = { add_ideas = { FRA_modern_agriculture } set_country_flag = fra_colonial_agri  }
+			}
+			if = {
+				limit = {
+					FWA = { or = { is_subject_of = ROOT is_puppet_of = ROOT } }
+				}
+				FWA = { add_ideas = { FRA_modern_agriculture } set_country_flag = fra_colonial_agri  }
+			}
+			if = {
+				limit = {
+					FIC = { or = { is_subject_of = ROOT is_puppet_of = ROOT } }
+				}
+				FIC = { add_ideas = { FRA_modern_agriculture } set_country_flag = fra_colonial_agri  }
+			}
 		}
 	}
 
@@ -4527,7 +4577,39 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_modernize_colonial_agriculture }
 		completion_reward = {
-				
+				set_country_flag = fra_colonies_done
+				if = {
+					limit = {
+						has_idea = fra_colonial_problems
+					}
+					remove_ideas = {
+						fra_colonial_problems
+					}
+				}
+				if = {
+					limit = {
+						has_idea = fra_colonial_problems
+					}
+					remove_ideas = {
+						fra_colonial_problems_2
+					}
+				}
+				if = {
+					limit = {
+						has_idea = fra_colonial_problems
+					}
+					remove_ideas = {
+						fra_colonial_problems_3
+					}
+				}
+				if = {
+					limit = {
+						has_idea = fra_colonial_problems
+					}
+					remove_ideas = {
+						fra_colonial_problems_4
+					}
+				}
 		}
 	}
 
@@ -4610,10 +4692,44 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		available = {
+			OR = {
+				FIC = { is_puppet_of = ROOT }
+				FWA = { is_puppet_of = ROOT }
+				FEA = { is_puppet_of = ROOT }
+				SYR = { is_puppet_of = ROOT }
+			}
+			NOT = { has_country_flag = FRA_colonies_abandoned }
+		}
 		prerequisite = { focus = FRA_civil_war_victory  }
 		mutually_exclusive = { focus = FRA_support_settlers  }
 		completion_reward = {
+
+			if = {
+				limit = {
+					SYR = { or = { is_subject_of = ROOT is_puppet_of = ROOT } }
+				}
+				SYR = { remove_ideas = { fra_colonial_monopolies } set_country_flag = fra_colonial_mono_crushed  }
 				
+			}
+			if = {
+				limit = {
+					FEA = { or = { is_subject_of = ROOT is_puppet_of = ROOT } }
+				}
+				FEA = { remove_ideas = { fra_colonial_monopolies } set_country_flag = fra_colonial_mono_crushed  }
+			}
+			if = {
+				limit = {
+					FWA = { or = { is_subject_of = ROOT is_puppet_of = ROOT } }
+				}
+				FWA = { remove_ideas = { fra_colonial_monopolies } set_country_flag = fra_colonial_mono_crushed  }
+			}
+			if = {
+				limit = {
+					FIC = { or = { is_subject_of = ROOT is_puppet_of = ROOT } }
+				}
+				FIC = { remove_ideas = { fra_colonial_monopolies } set_country_flag = fra_colonial_mono_crushed  }
+			}
 		}
 	}
 
@@ -4627,10 +4743,20 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		available = {
+			has_country_flag = WIP_DO_NOT_PICK
+			OR = {
+				FIC = { is_puppet_of = ROOT }
+				FWA = { is_puppet_of = ROOT }
+				FEA = { is_puppet_of = ROOT }
+				SYR = { is_puppet_of = ROOT }
+			}
+			NOT = { has_country_flag = FRA_colonies_abandoned }
+		}
 		prerequisite = { focus = FRA_civil_war_victory  }
 		mutually_exclusive = { focus = FRA_break_up_colonial_oligarchies  }
 		completion_reward = {
-				
+				custom_effect_tooltip = "WIP"
 		}
 	}
 
@@ -4646,7 +4772,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_support_settlers }
 		completion_reward = {
-				
+			custom_effect_tooltip = "WIP"
 		}
 	}
 
@@ -4662,7 +4788,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_support_settlers }
 		completion_reward = {
-				
+			custom_effect_tooltip = "WIP"
 		}
 	}
 
@@ -4679,7 +4805,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_increase_colonial_taxes }
 		prerequisite = { focus = FRA_increase_raw_resource_aqusition }
 		completion_reward = {
-				
+			custom_effect_tooltip = "WIP"
 		}
 	}
 
@@ -4695,7 +4821,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_suppress_colonial_trade_unions }
 		completion_reward = {
-				
+			custom_effect_tooltip = "WIP"
 		}
 	}
 

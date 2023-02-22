@@ -6772,6 +6772,102 @@ option = {  ####
 
 }
 
+country_event = { ### colony remove monopoly after getting puppet if the focus has been taken before hand
+id = rob_france.129
+title = rob_france.129.t
+desc = rob_france.129.d
+trigger = {
+	OR = {
+		tag = FIC
+		tag = FEA
+		tag = FWA
+		tag = SYR
+	}
+
+	OR = {
+		AND = {
+			is_puppet_of = FRA
+			FRA = { has_completed_focus = FRA_break_up_colonial_oligarchies }
+		}
+		AND = {
+			is_puppet_of = FRL
+			FRL = { has_completed_focus = FRA_break_up_colonial_oligarchies }
+		}
+		AND = {
+			is_puppet_of = FRP
+			FRP = { has_completed_focus = FRA_break_up_colonial_oligarchies }
+		}
+		AND = {
+			is_puppet_of = FRS
+			FRS = { has_completed_focus = FRA_break_up_colonial_oligarchies }
+		}
+		AND = {
+			is_puppet_of = FRR
+			FRR = { has_completed_focus = FRA_break_up_colonial_oligarchies }
+		}
+	}
+	has_idea = fra_colonial_monopolies
+	NOT = { has_country_flag = fra_colonial_mono_crushed has_country_flag = fra_colonial_mono_crushed_checked }
+}
+
+option = {  #### 
+	name = rob_france.129.a
+	remove_ideas = {
+		fra_colonial_monopolies
+	}
+	set_country_flag = fra_colonial_mono_crushed_checked
+	}
+
+}
+
+country_event = { ### colony remove monopoly after getting puppet if the focus has been taken before hand
+id = rob_france.130
+title = rob_france.130.t
+desc = rob_france.130.d
+trigger = {
+	OR = {
+		tag = FIC
+		tag = FEA
+		tag = FWA
+		tag = SYR
+	}	
+
+	OR = {
+		AND = {
+			is_puppet_of = FRA
+			FRA = { has_completed_focus = FRA_modernize_colonial_agriculture }
+		}
+		AND = {
+			is_puppet_of = FRL
+			FRL = { has_completed_focus = FRA_modernize_colonial_agriculture }
+		}
+		AND = {
+			is_puppet_of = FRP
+			FRP = { has_completed_focus = FRA_modernize_colonial_agriculture }
+		}
+		AND = {
+			is_puppet_of = FRS
+			FRS = { has_completed_focus = FRA_modernize_colonial_agriculture }
+		}
+		AND = {
+			is_puppet_of = FRR
+			FRR = { has_completed_focus = FRA_modernize_colonial_agriculture }
+		}
+	}
+	NOT = { has_idea = FRA_modernize_colonial_agriculture }
+	NOT = { has_country_flag = fra_colonial_agri has_country_flag = fra_colonial_agri_checked }
+}
+
+option = {  #### 
+	name = rob_france.130.a
+	add_ideas = {
+		FRA_modern_agriculture
+	}
+	set_country_flag = fra_colonial_agri_checked
+	}
+
+}
+
 ####debug events
 
 

@@ -756,6 +756,9 @@ FRA_colony_reclaiming = {
 			}
 			has_war = no
 			has_country_flag = FRA_civil_war
+			NOT = { has_country_flag = FRA_colonies_abandoned }
+		}
+		available = {
 			not = { has_country_flag = FRA_colony_negotiation }
 		}
 		priority = {
@@ -774,6 +777,7 @@ FRA_colony_reclaiming_radicals = {
 			}
 			has_war = no
 			has_country_flag = FRA_civil_war
+			NOT = { has_country_flag = FRA_colonies_abandoned }
 		}
 		available = {
 			not = { has_country_flag = FRA_colony_negotiation }

@@ -208,6 +208,21 @@ FRA_pelekist_militas = { #when you take Marseille
 FRA_colony_reclaiming = {
 
 
+FRA_abandon_colonies_dec = {
+		fire_only_once = yes
+		available = {
+			has_country_flag = fra_cw_over
+			NOT = { has_country_flag = FRA_not_abandon_colonies }
+		  }
+		  ai_will_do = {
+			  base = 0
+		  }
+		  complete_effect = {
+			  set_country_flag = FRA_colonies_abandoned
+		  }
+	  }
+
+
 FRA_reenstablish_lordship_over_syr = {
   fire_only_once = yes
   available = {
@@ -228,6 +243,9 @@ FRA_reenstablish_lordship_over_syr = {
 	}
 	cost = 40
 	days_remove = 3
+	complete_effect = {
+	 set_country_flag = FRA_not_abandon_colonies
+	}
 	remove_effect = {
 	puppet = SYR
 	}
@@ -254,6 +272,9 @@ FRA_assist_syr = {
 	}
 	cost = 20
 	days_remove = 3
+	complete_effect = {
+		set_country_flag = FRA_not_abandon_colonies
+	   }
 	remove_effect = {
 		if = {
 			limit =  { SYR = { has_war_with = HJZ } }
@@ -310,6 +331,9 @@ FRA_assist_syr = {
 	  }
 	  cost = 20
 	  days_remove = 3
+	  complete_effect = {
+		set_country_flag = FRA_not_abandon_colonies
+	   }
 	  remove_effect = {
 	  puppet = FWA
 	  puppet = FEA
@@ -336,6 +360,9 @@ FRA_assist_syr = {
 	  }
 	  cost = 20
 	  days_remove = 3
+	  complete_effect = {
+		set_country_flag = FRA_not_abandon_colonies
+	   }
 	  remove_effect = {
 	  puppet = FIC
 	  }
@@ -345,6 +372,20 @@ FRA_assist_syr = {
 
 FRA_colony_reclaiming_radicals = {
 
+
+
+	FRA_abandon_colonies_dec = {
+		fire_only_once = yes
+		available = {
+			has_country_flag = fra_cw_over
+		  }
+		  ai_will_do = {
+			  base = 0
+		  }
+		  complete_effect = {
+			  set_country_flag = FRA_colonies_abandoned
+		  }
+	  }
 
 	FRA_reenstablish_lordship_over_syr_rad = {
 	  fire_only_once = yes
@@ -368,6 +409,7 @@ FRA_colony_reclaiming_radicals = {
 		days_remove = 20
 		complete_effect = {
 			set_country_flag = FRA_colony_negotiation
+			set_country_flag = FRA_not_abandon_colonies
 		}
 		remove_effect = {
 			SYR = { country_event = { id = rob_france.126 days = 1 } }
@@ -396,6 +438,7 @@ FRA_colony_reclaiming_radicals = {
 		  days_remove = 20
 		  complete_effect = {
 			set_country_flag = FRA_colony_negotiation
+			set_country_flag = FRA_not_abandon_colonies
 		  }
 		  remove_effect = {
 			FWA = { country_event = { id = rob_france.126 days = 3 } }
@@ -424,6 +467,7 @@ FRA_colony_reclaiming_radicals = {
 		  days_remove = 20
 		  complete_effect = {
 			set_country_flag = FRA_colony_negotiation
+			set_country_flag = FRA_not_abandon_colonies
 		  }
 		  remove_effect = {
 			FIC = { country_event = { id = rob_france.126 days = 3 } }
@@ -3314,7 +3358,11 @@ FRA_colonial_investments = {
 			FROM = { set_state_flag = fra_col_infa }
 			add_to_variable = { var = FRA_col_infra value = 1 }
 			FROM = { 
-				
+				add_building_construction = {
+					type = infrastructure
+					 level = 1
+					 instant_build = yes
+					}
 			} 
 		 }
 	  
@@ -3361,14 +3409,16 @@ FRA_colonial_investments = {
 		cost = 40
 		days_remove = 1
 	  
-		complete_effect = {
-		}
 	  
 		remove_effect = {
 			FROM = { set_state_flag = fra_col_infa }
 			add_to_variable = { var = FRA_col_infra value = 1 }
 			FROM = { 
-				
+				add_building_construction = {
+					type = infrastructure
+					 level = 1
+					 instant_build = yes
+					}
 			} 
 		 }
 	  
@@ -3423,7 +3473,11 @@ FRA_colonial_investments = {
 			FROM = { set_state_flag = fra_col_infa }
 			add_to_variable = { var = FRA_col_infra value = 1 }
 			FROM = { 
-				
+				add_building_construction = {
+					type = infrastructure
+					 level = 1
+					 instant_build = yes
+					}
 			} 
 		 }
 	  
@@ -3479,12 +3533,69 @@ FRA_colonial_investments = {
 			FROM = { set_state_flag = fra_col_infa }
 			add_to_variable = { var = FRA_col_infra value = 1 }
 			FROM = { 
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-					  type = industrial_complex
-					   level = 1
-					   instant_build = yes
-					  }
+				add_building_construction = {
+					type = infrastructure
+					 level = 1
+					 instant_build = yes
+					}
+			} 
+		 }
+	  
+	  }
+
+	  FRA_colonial_infrastructure_syria = {
+
+		icon  = GFX_decision_generic_construction
+		ai_will_do = {
+		  base = 0
+		  }
+		available = {
+			SYR = {
+				is_subject_of = ROOT
+				any_owned_state = {
+					NOT = {has_state_flag = fra_col_indus is_on_continent = europe is_on_continent = south_america is_on_continent = north_america }
+			}
+			}
+		}
+
+		visible = {has_country_flag = enable_fra_col_infa }
+	  
+		ai_will_do = {
+		  base = 1
+		}
+		state_target = yes
+	  
+		on_map_mode = map_and_decisions_view 
+	  
+		target_array = SYR.core_states
+	  
+		target_trigger = {
+		  FROM = {
+			  OR = {
+				is_on_continent = africa
+				is_on_continent = asia
+			  }
+				NOT = {has_state_flag = fra_col_infa is_core_of = ROOT state = 783 has_state_category = wasteland has_state_category = enclave has_state_category = tiny_island  has_state_category = small_territory has_state_category = small_island }
+			  }
+		   }
+	  
+		fire_only_once = yes
+
+		cost = 40
+		days_remove = 1
+	  
+		complete_effect = {
+		}
+	  
+		remove_effect = {
+			FROM = { set_state_flag = fra_col_infa }
+			add_to_variable = { var = FRA_col_infra value = 1 }
+			FROM = { 
+				add_building_construction = {
+					type = infrastructure
+					 level = 1
+					 instant_build = yes
+					}
 			} 
 		 }
 	  
@@ -3536,7 +3647,12 @@ FRA_colonial_investments = {
 			FROM = { set_state_flag = fra_col_indus }
 			add_to_variable = { var = fra_col_industry value = 1 }
 			FROM = { 
-				
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = industrial_complex
+				   level = 1
+				   instant_build = yes
+				  }
 			} 
 		 }
 	  
@@ -3592,7 +3708,12 @@ FRA_colonial_investments = {
 			FROM = { set_state_flag = fra_col_indus }
 			add_to_variable = { var = fra_col_industry value = 1 }
 			FROM = { 
-				
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = industrial_complex
+				   level = 1
+				   instant_build = yes
+				  }
 			} 
 		 }
 	  
@@ -3647,7 +3768,12 @@ FRA_colonial_investments = {
 			FROM = { set_state_flag = fra_col_indus }
 			add_to_variable = { var = fra_col_industry value = 1 }
 			FROM = { 
-				
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = industrial_complex
+				   level = 1
+				   instant_build = yes
+				  }
 			} 
 		 }
 	  
@@ -3701,10 +3827,73 @@ FRA_colonial_investments = {
 			FROM = { set_state_flag = fra_col_indus }
 			add_to_variable = { var = fra_col_industry value = 1 }
 			FROM = { 
-				
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = industrial_complex
+				   level = 1
+				   instant_build = yes
+				  }
 			} 
 		 }
 	  
 	  }
 
+	  FRA_colonial_industry_syr = {
+
+		icon  = GFX_decision_generic_factory
+		ai_will_do = {
+		  base = 0
+		  }
+		available = {
+			SYR = {
+				is_subject_of = ROOT
+				any_owned_state = {
+					NOT = {has_state_flag = fra_col_indus is_on_continent = europe is_on_continent = south_america is_on_continent = north_america }
+			}
+		  }
+		}
+
+		visible = {has_country_flag = enable_fra_col_indus }
+	  
+		ai_will_do = {
+		  base = 1
+		}
+		state_target = yes
+	  
+		on_map_mode = map_and_decisions_view 
+	  
+		target_array = SYR.core_states 
+
+		target_trigger = {
+		  FROM = {
+			  OR = {
+				is_on_continent = africa
+				is_on_continent = asia
+			  }
+				NOT = {has_state_flag = fra_col_indus is_core_of = ROOT has_state_category = pastoral has_state_category = wasteland has_state_category = enclave has_state_category = tiny_island  has_state_category = small_territory has_state_category = small_island }
+			  }
+		   }
+	  
+		fire_only_once = yes
+
+		cost = 40
+		days_remove = 1
+	  
+		complete_effect = {
+		}
+	  
+		remove_effect = {
+			FROM = { set_state_flag = fra_col_indus }
+			add_to_variable = { var = fra_col_industry value = 1 }
+			FROM = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = industrial_complex
+				   level = 1
+				   instant_build = yes
+				  }
+			} 
+		 }
+	  
+	  }
 }

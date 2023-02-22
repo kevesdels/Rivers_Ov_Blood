@@ -22,6 +22,23 @@ ideas = {
      }
 }
 
+fra_colonial_monopolies = {
+
+      allowed = {
+        always = yes
+      }
+    allowed_civil_war = {
+         always = yes
+       }
+      removal_cost = -1
+    picture = GFX_idea_overextendadsf
+      modifier = {
+        consumer_goods_factor = 0.2
+        production_speed_buildings_factor = -0.2
+        industrial_capacity_factory = 0.40
+       }
+ }
+
 fra_lots_of_men_dead = {
  
   allowed = {
@@ -470,6 +487,21 @@ picture = GFX_idea_overextendadsf
    }
 }
 
+FRA_modern_agriculture = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    stability_factor = 0.1
+    production_factory_max_efficiency_factor = 0.05
+   }
+}
 
 fra_colonial_problems = {
  
@@ -482,9 +514,9 @@ allowed_civil_war = {
   removal_cost = -1
 picture = GFX_idea_overextendadsf
   modifier = {
-    production_factory_max_efficiency_factor = -0.20
+    production_factory_max_efficiency_factor = -0.1
     consumer_goods_factor = 0.05
-    production_lack_of_resource_penalty_factor = 0.5
+    production_lack_of_resource_penalty_factor = 0.25
    }
 }
 
@@ -499,10 +531,43 @@ allowed_civil_war = {
   removal_cost = -1
 picture = GFX_idea_overextendadsf
   modifier = {
-    min_export = 0.70
-    production_factory_max_efficiency_factor = -0.1
-    production_factory_efficiency_gain_factor = -0.2
-    production_dockyard_efficiency_gain_factor = -0.2
+    production_factory_max_efficiency_factor = -0.15
+    consumer_goods_factor = 0.075
+    production_lack_of_resource_penalty_factor = 0.50
+   }
+}
+
+fra_colonial_problems_3 = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    production_factory_max_efficiency_factor = -0.20
+    consumer_goods_factor = 0.1
+    production_lack_of_resource_penalty_factor = 0.75
+   }
+}
+
+fra_colonial_problems_4 = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    production_factory_max_efficiency_factor = -0.25
+    consumer_goods_factor = 0.125
+    production_lack_of_resource_penalty_factor = 1.0
    }
 }
 
