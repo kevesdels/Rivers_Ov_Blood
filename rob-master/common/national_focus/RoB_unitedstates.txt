@@ -931,7 +931,13 @@ relative_position_id = USA_wool_hats_in_the_army
         
 		}
 	completion_reward = {
-      
+		add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 1.0
+			uses = 1
+			category = infantry_weapons
+			category = artillery
+		}
 	
 	}
 }
@@ -1041,7 +1047,15 @@ relative_position_id = USA_work_with_macauther
         
 		}
 	completion_reward = {
-      
+		add_ideas = ROB_special_forces
+		add_tech_bonus = {
+			name = ROB_special_forces_bonus
+			bonus = 1.0
+			uses = 1
+			technology = marines
+			technology = marines2
+			technology = marines3
+		}
 	
 	}
 }
@@ -1061,8 +1075,12 @@ relative_position_id = USA_promote_patton
         
 		}
 	completion_reward = {
-      
-	
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 1.0
+			uses = 2
+			category = armor
+		}
 	}
 }
 
@@ -1081,8 +1099,7 @@ relative_position_id = USA_parris_island_marines
         
 		}
 	completion_reward = {
-      
-	
+		add_ideas = USA_democrat_political_officers_idea
 	}
 }
 
@@ -1101,7 +1118,7 @@ relative_position_id = USA_work_with_macauther
 		}
 	completion_reward = {
       
-	
+		add_ideas = USA_strenghten_natgurad_idea
 	}
 }
 
@@ -1210,7 +1227,8 @@ relative_position_id = USA_state_of_the_union
      }
 	completion_reward = {
 	#sell gold from fort knox
-	}
+    add_political_power = 150
+}
 
 }
 focus = {
@@ -1227,7 +1245,7 @@ relative_position_id = USA_Seize_Fort_Knox_Gold
 
      }
 	completion_reward = {
-	
+		add_ideas = USA_Decentralized_Federal_Reserve_idea
 	}
 
 }
@@ -1296,10 +1314,10 @@ relative_position_id = USA_state_of_the_union
         
 		}
 	completion_reward = {
-    add_political_power = 150
+
   add_popularity = {
 				ideology = reactionary
-				popularity = 0.05
+				popularity = 0.25
             }
 	
 	}
