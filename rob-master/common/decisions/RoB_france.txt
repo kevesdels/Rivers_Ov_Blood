@@ -3073,3 +3073,638 @@ FRS_post_minigame_wars = {
 		}
 	}
 }
+
+
+FRA_industry_investments = {
+
+	FRA_electrification = {
+
+		icon  = GFX_decision_generic_construction
+		ai_will_do = {
+		  base = 0
+		  }
+		available = {
+			any_owned_state = {
+				is_core_of = ROOT
+			NOT = {has_state_flag = fra_electricity}
+		  }
+		}
+		visible = {has_country_flag = enable_fra_electricity}
+	  
+		ai_will_do = {
+		  base = 1
+		}
+		state_target = yes
+	  
+		on_map_mode = map_and_decisions_view 
+	  
+		target_array = controlled_states
+	  
+		target_trigger = {
+		  FROM = {
+			  is_core_of = ROOT
+			  OR = {
+				state_population > 800000
+			  }
+				NOT = {has_state_flag = fra_electricity}
+			  }
+		   }
+	  
+		fire_only_once = yes
+
+		cost = 40
+		days_remove = 1
+	  
+		complete_effect = {
+		}
+	  
+		remove_effect = {
+			FROM = { set_state_flag = fra_electricity }
+			add_to_variable = { var = FRA_electricity value = 1 }
+			FROM = { 
+				add_state_modifier = {
+				modifier = {
+					local_supplies = 0.1
+					state_production_speed_buildings_factor = 0.1
+					}
+				}
+			} 
+		 }
+	  
+	  } 
+
+	  FRA_sautet_dam = {
+		fire_only_once = yes
+		on_map_mode = map_and_decisions_view
+		visible = {
+			has_country_flag = enable_fra_dam_decisions
+		}
+		available = {
+			owns_state = 32
+			controls_state = 32
+			NOT = {has_country_flag = fra_dam_complete1 }
+		  }
+		  ai_will_do = {
+			  base = 1000
+		  }
+		  cost = 50
+		  days_remove = 360
+
+		  modifier = {
+			civilian_factory_use = 1
+		}
+
+		  remove_effect = {
+			32 = {
+				add_building_construction = {
+					type = industrial_complex
+					 level = 3
+					 instant_build = yes
+					}
+			}
+			set_country_flag = fra_dam_complete1
+		  }
+	  }
+
+	  FRA_Lla_girotte = {
+		fire_only_once = yes
+		on_map_mode = map_and_decisions_view
+		visible = {
+			has_country_flag = enable_fra_dam_decisions
+		}
+		available = {
+			owns_state = 735
+			controls_state = 735
+			NOT = {has_country_flag = fra_dam_complete2 }
+		  }
+		  ai_will_do = {
+			  base = 1000
+		  }
+		  cost = 30
+		  days_remove = 240
+
+		  modifier = {
+			civilian_factory_use = 1
+		}
+
+		  remove_effect = {
+			735 = {
+				add_building_construction = {
+					type = industrial_complex
+					 level = 2
+					 instant_build = yes
+					}
+			}
+			set_country_flag = fra_dam_complete2
+		  }
+	  }
+
+	  FRA_Barrage_du_Chambon = {
+		fire_only_once = yes
+		on_map_mode = map_and_decisions_view
+		visible = {
+			has_country_flag = enable_fra_dam_decisions
+		}
+		available = {
+			owns_state = 823
+			controls_state = 823
+			NOT = {has_country_flag = fra_dam_complete3 }
+		  }
+		  ai_will_do = {
+			  base = 1000
+		  }
+		  cost = 30
+		  days_remove = 240
+
+		  modifier = {
+			civilian_factory_use = 1
+		}
+
+		  remove_effect = {
+			823 = {
+				add_building_construction = {
+					type = industrial_complex
+					 level = 2
+					 instant_build = yes
+					}
+			}
+			set_country_flag = fra_dam_complete3
+		  }
+	  }
+	  
+	  FRA_Genissiat_Dam = {
+		fire_only_once = yes
+		on_map_mode = map_and_decisions_view
+		visible = {
+			has_country_flag = enable_fra_dam_decisions
+		}
+		available = {
+			owns_state = 1286
+			controls_state = 1286
+			NOT = {has_country_flag = fra_dam_complete3 }
+		  }
+		  ai_will_do = {
+			  base = 1000
+		  }
+		  cost = 50
+		  days_remove = 360
+
+		  modifier = {
+			civilian_factory_use = 1
+		}
+
+		  remove_effect = {
+			1286 = {
+				add_building_construction = {
+					type = industrial_complex
+					 level = 3
+					 instant_build = yes
+					}
+			}
+			set_country_flag = fra_dam_complete3
+		  }
+	  }
+}
+
+
+FRA_colonial_investments = {
+
+	FRA_colonial_infrastructure_owned = {
+
+		icon  = GFX_decision_generic_construction
+		ai_will_do = {
+		  base = 0
+		  }
+		available = {
+			any_owned_state = {
+			NOT = {has_state_flag = fra_col_infa is_core_of = ROOT }
+		  }
+		}
+
+		visible = {has_country_flag = enable_fra_col_infa }
+	  
+		ai_will_do = {
+		  base = 1
+		}
+		state_target = yes
+	  
+		on_map_mode = map_and_decisions_view 
+	  
+		target_array = controlled_states
+	  
+		target_trigger = {
+		  FROM = {
+			  OR = {
+				is_on_continent = africa
+				is_on_continent = asia
+			  }
+				NOT = {has_state_flag = fra_col_infa is_core_of = ROOT state = 783 has_state_category = wasteland has_state_category = enclave has_state_category = tiny_island  has_state_category = small_territory has_state_category = small_island }
+			  }
+		   }
+	  
+		fire_only_once = yes
+
+		cost = 40
+		days_remove = 1
+	  
+		complete_effect = {
+		}
+	  
+		remove_effect = {
+			FROM = { set_state_flag = fra_col_infa }
+			add_to_variable = { var = FRA_col_infra value = 1 }
+			FROM = { 
+				
+			} 
+		 }
+	  
+	  }
+
+	  FRA_colonial_infrastructure_indochina = {
+
+		icon  = GFX_decision_generic_construction
+		ai_will_do = {
+		  base = 0
+		  }
+		available = {
+			FIC = {
+				is_subject_of = ROOT
+				any_owned_state = {
+					NOT = {has_state_flag = fra_col_indus is_on_continent = europe is_on_continent = south_america is_on_continent = north_america }
+			}
+			}
+		}
+
+		visible = {has_country_flag = enable_fra_col_infa }
+	  
+		ai_will_do = {
+		  base = 1
+		}
+		state_target = yes
+	  
+		on_map_mode = map_and_decisions_view 
+	  
+		target_array = FIC.core_states
+	  
+		target_trigger = {
+		  FROM = {
+			  OR = {
+				is_on_continent = africa
+				is_on_continent = asia
+			  }
+				NOT = {has_state_flag = fra_col_infa is_core_of = ROOT state = 783 has_state_category = wasteland has_state_category = enclave has_state_category = tiny_island  has_state_category = small_territory has_state_category = small_island }
+			  }
+		   }
+	  
+		fire_only_once = yes
+
+		cost = 40
+		days_remove = 1
+	  
+		complete_effect = {
+		}
+	  
+		remove_effect = {
+			FROM = { set_state_flag = fra_col_infa }
+			add_to_variable = { var = FRA_col_infra value = 1 }
+			FROM = { 
+				
+			} 
+		 }
+	  
+	  }
+
+
+	  FRA_colonial_infrastructure_west_africa = {
+
+		icon  = GFX_decision_generic_construction
+		ai_will_do = {
+		  base = 0
+		  }
+		available = {
+			FWA = {
+				is_subject_of = ROOT
+				any_owned_state = {
+					NOT = {has_state_flag = fra_col_indus is_on_continent = europe is_on_continent = south_america is_on_continent = north_america }
+			}
+			}
+		}
+
+		visible = {has_country_flag = enable_fra_col_infa }
+	  
+		ai_will_do = {
+		  base = 1
+		}
+		state_target = yes
+	  
+		on_map_mode = map_and_decisions_view 
+	  
+		target_array = FWA.core_states
+	  
+		target_trigger = {
+		  FROM = {
+			  OR = {
+				is_on_continent = africa
+				is_on_continent = asia
+			  }
+				NOT = {has_state_flag = fra_col_infa is_core_of = ROOT state = 783 has_state_category = wasteland has_state_category = enclave has_state_category = tiny_island  has_state_category = small_territory has_state_category = small_island }
+			  }
+		   }
+	  
+		fire_only_once = yes
+
+		cost = 40
+		days_remove = 1
+	  
+		complete_effect = {
+		}
+	  
+		remove_effect = {
+			FROM = { set_state_flag = fra_col_infa }
+			add_to_variable = { var = FRA_col_infra value = 1 }
+			FROM = { 
+				
+			} 
+		 }
+	  
+	  }
+
+
+	  
+	  FRA_colonial_infrastructure_east_africa = {
+
+		icon  = GFX_decision_generic_construction
+		ai_will_do = {
+		  base = 0
+		  }
+		available = {
+			FEA = {
+				is_subject_of = ROOT
+				any_owned_state = {
+					NOT = {has_state_flag = fra_col_indus is_on_continent = europe is_on_continent = south_america is_on_continent = north_america }
+			}
+			}
+		}
+
+		visible = {has_country_flag = enable_fra_col_infa }
+	  
+		ai_will_do = {
+		  base = 1
+		}
+		state_target = yes
+	  
+		on_map_mode = map_and_decisions_view 
+	  
+		target_array = FEA.core_states
+	  
+		target_trigger = {
+		  FROM = {
+			  OR = {
+				is_on_continent = africa
+				is_on_continent = asia
+			  }
+				NOT = {has_state_flag = fra_col_infa is_core_of = ROOT state = 783 has_state_category = wasteland has_state_category = enclave has_state_category = tiny_island  has_state_category = small_territory has_state_category = small_island }
+			  }
+		   }
+	  
+		fire_only_once = yes
+
+		cost = 40
+		days_remove = 1
+	  
+		complete_effect = {
+		}
+	  
+		remove_effect = {
+			FROM = { set_state_flag = fra_col_infa }
+			add_to_variable = { var = FRA_col_infra value = 1 }
+			FROM = { 
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					  type = industrial_complex
+					   level = 1
+					   instant_build = yes
+					  }
+			} 
+		 }
+	  
+	  }
+
+
+	  FRA_colonial_industry = {
+
+		icon  = GFX_decision_generic_factory
+		ai_will_do = {
+		  base = 0
+		  }
+		available = {
+			any_owned_state = {
+			NOT = {has_state_flag = fra_col_indus is_core_of = ROOT }
+		  }
+		}
+
+		visible = {has_country_flag = enable_fra_col_indus }
+	  
+		ai_will_do = {
+		  base = 1
+		}
+		state_target = yes
+	  
+		on_map_mode = map_and_decisions_view 
+	  
+		target_array = controlled_states
+	  
+		target_trigger = {
+		  FROM = {
+			  OR = {
+				is_on_continent = africa
+				is_on_continent = asia
+			  }
+				NOT = {has_state_flag = fra_col_indus is_core_of = ROOT has_state_category = pastoral has_state_category = wasteland has_state_category = enclave has_state_category = tiny_island  has_state_category = small_territory has_state_category = small_island }
+			  }
+		   }
+	  
+		fire_only_once = yes
+
+		cost = 40
+		days_remove = 1
+	  
+		complete_effect = {
+		}
+	  
+		remove_effect = {
+			FROM = { set_state_flag = fra_col_indus }
+			add_to_variable = { var = fra_col_industry value = 1 }
+			FROM = { 
+				
+			} 
+		 }
+	  
+	  }
+
+
+
+	  FRA_colonial_industry_indochina = {
+
+		icon  = GFX_decision_generic_factory
+		ai_will_do = {
+		  base = 0
+		  }
+		available = {
+			FIC = {
+				is_subject_of = ROOT
+				any_owned_state = {
+					NOT = {has_state_flag = fra_col_indus is_on_continent = europe is_on_continent = south_america is_on_continent = north_america }
+			}
+		  }
+		}
+
+		visible = {has_country_flag = enable_fra_col_indus }
+	  
+		ai_will_do = {
+		  base = 1
+		}
+		state_target = yes
+	  
+		on_map_mode = map_and_decisions_view 
+	  
+		target_array = FIC.core_states 
+
+		target_trigger = {
+		  FROM = {
+			  OR = {
+				is_on_continent = africa
+				is_on_continent = asia
+			  }
+				NOT = {has_state_flag = fra_col_indus is_core_of = ROOT has_state_category = pastoral has_state_category = wasteland has_state_category = enclave has_state_category = tiny_island  has_state_category = small_territory has_state_category = small_island }
+			  }
+		   }
+	  
+		fire_only_once = yes
+
+		cost = 40
+		days_remove = 1
+	  
+		complete_effect = {
+		}
+	  
+		remove_effect = {
+			FROM = { set_state_flag = fra_col_indus }
+			add_to_variable = { var = fra_col_industry value = 1 }
+			FROM = { 
+				
+			} 
+		 }
+	  
+	  }
+
+
+	  FRA_colonial_industry_west_africa = {
+
+		icon  = GFX_decision_generic_factory
+		ai_will_do = {
+		  base = 0
+		  }
+		available = {
+			FWA = {
+				is_subject_of = ROOT
+				any_owned_state = {
+					NOT = {has_state_flag = fra_col_indus is_on_continent = europe is_on_continent = south_america is_on_continent = north_america }
+			}
+		  }
+		}
+
+		visible = {has_country_flag = enable_fra_col_indus }
+	  
+		ai_will_do = {
+		  base = 1
+		}
+		state_target = yes
+	  
+		on_map_mode = map_and_decisions_view 
+	  
+		target_array = FWA.core_states 
+
+		target_trigger = {
+		  FROM = {
+			  OR = {
+				is_on_continent = africa
+				is_on_continent = asia
+			  }
+				NOT = {has_state_flag = fra_col_indus is_core_of = ROOT has_state_category = pastoral has_state_category = wasteland has_state_category = enclave has_state_category = tiny_island  has_state_category = small_territory has_state_category = small_island }
+			  }
+		   }
+	  
+		fire_only_once = yes
+
+		cost = 40
+		days_remove = 1
+	  
+		complete_effect = {
+		}
+	  
+		remove_effect = {
+			FROM = { set_state_flag = fra_col_indus }
+			add_to_variable = { var = fra_col_industry value = 1 }
+			FROM = { 
+				
+			} 
+		 }
+	  
+	  }
+
+	  FRA_colonial_industry_east_africa = {
+
+		icon  = GFX_decision_generic_factory
+		ai_will_do = {
+		  base = 0
+		  }
+		available = {
+			FEA = {
+				is_subject_of = ROOT
+				any_owned_state = {
+					NOT = {has_state_flag = fra_col_indus is_on_continent = europe is_on_continent = south_america is_on_continent = north_america }
+			}
+		  }
+		}
+
+		visible = {has_country_flag = enable_fra_col_indus }
+	  
+		ai_will_do = {
+		  base = 1
+		}
+		state_target = yes
+	  
+		on_map_mode = map_and_decisions_view 
+	  
+		target_array = FEA.core_states 
+
+		target_trigger = {
+		  FROM = {
+			  OR = {
+				is_on_continent = africa
+				is_on_continent = asia
+			  }
+				NOT = {has_state_flag = fra_col_indus is_core_of = ROOT has_state_category = pastoral has_state_category = wasteland has_state_category = enclave has_state_category = tiny_island  has_state_category = small_territory has_state_category = small_island }
+			  }
+		   }
+	  
+		fire_only_once = yes
+
+		cost = 40
+		days_remove = 1
+	  
+		complete_effect = {
+		}
+	  
+		remove_effect = {
+			FROM = { set_state_flag = fra_col_indus }
+			add_to_variable = { var = fra_col_industry value = 1 }
+			FROM = { 
+				
+			} 
+		 }
+	  
+	  }
+
+}

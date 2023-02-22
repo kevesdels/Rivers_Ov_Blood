@@ -3856,14 +3856,26 @@ completion_reward = {
 		prerequisite = { focus = LIT_endtheanbomonpoly }
 		mutually_exclusive = { focus = LIT_encouragelithuanianmadeplanes }
 		completion_reward = {
-		 add_equipment_to_stockpile = {
-  type = fighter_equipment_0
-					amount = 60
-					producer = ENG
- }
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe
+						   amount = 60
+						   producer = ENG
+						   variant_name = "Hawker Fury"
+				   }
+				
+				else = {
+					add_equipment_to_stockpile = {
+						type = fighter_equipment_0
+										  amount = 60
+										  producer = ENG
+					   }
+				}
+			}
 
-}
 		}
+	}
 
 	#Focus for Encourage Lithuanian Made Planes
 	focus = {
@@ -3987,7 +3999,10 @@ completion_reward = {
 		cost = 5
 		available_if_capitulated = yes
 		bypass = {
-		 has_tech = early_bomber
+			OR = {
+				has_tech = early_bomber
+				has_tech = iw_medium_airframe
+			}
 		}
 		prerequisite = { focus = LIT_startmassproducementandexport }
 		mutually_exclusive = { 
@@ -3995,9 +4010,18 @@ completion_reward = {
 		}
 		
  completion_reward = {
-  set_technology = {
-    early_bomber = 1 
-}
+	if = {
+		limit = { has_dlc = "By Blood Alone" }
+		set_technology = {
+			iw_medium_airframe = 1 
+		}
+		
+		else = {
+			set_technology = {
+				early_bomber = 1 
+			}
+		}
+	}
  }
  } 
 
@@ -4289,13 +4313,25 @@ add_extra_state_shared_building_slots = 2
 		prerequisite = { focus = LIT_lithuanianstormtroopers }
 		mutually_exclusive = { focus = LIT_lithuaniantanks }
 		completion_reward = {
- add_equipment_to_stockpile = { 
-  type = light_tank_equipment_1
-					amount = 40
-					producer = GER
- }
- }
-		}
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+						   amount = 40
+						   producer = GER
+						   variant_name = "Panzer I Ausf. A"
+				   }
+				
+				else = {
+					add_equipment_to_stockpile = { 
+						type = light_tank_equipment_1
+										  amount = 40
+										  producer = GER
+					   }
+				}
+			}
+ 		}
+	}
 
 	#Focus for Lightning Attacks!
 	focus = {

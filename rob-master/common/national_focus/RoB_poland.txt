@@ -5161,21 +5161,45 @@ focus_tree = {
  	 	}
 		prerequisite = { focus = POL_infantry_standardisation  focus = POL_the_romanian_bridgehead_strategy  }
 		completion_reward = {
-			add_equipment_to_stockpile = {
-				type = gw_tank_equipment
-					amount = 52
-					producer = FRA
-			   }
-			add_equipment_to_stockpile = {
-				type = gw_tank_equipment
-					amount = 28
-					producer = ENG
-			   }
-			add_equipment_to_stockpile = {
-				type = gw_tank_equipment
-					amount = 33
-					producer = ITA
-			   }
+
+			if = {
+				limit = { has_dlc = "No Step Back" }
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_0
+						amount = 52
+						producer = FRA
+						variant_name = "FT mod. 31"
+				   }
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+						amount = 78
+						producer = ENG
+						variant_name = "Light Tank Mk. IV"
+				   }
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_0
+						amount = 55
+						producer = ITA
+						variant_name = "Fiat 3000"
+				   }			
+				else = {
+					add_equipment_to_stockpile = {
+						type = gw_tank_equipment
+							amount = 52
+							producer = FRA
+					   }
+					add_equipment_to_stockpile = {
+						type = gw_tank_equipment
+							amount = 28
+							producer = ENG
+					   }
+					add_equipment_to_stockpile = {
+						type = gw_tank_equipment
+							amount = 33
+							producer = ITA
+					   }
+				}
+			}
 		}
 	}
 
@@ -5596,13 +5620,29 @@ focus_tree = {
      	base = 3
  	 	}
 		prerequisite = { focus = POL_the_polish_airforce  }
-		bypass = { has_tech = fighter1 }
+		bypass = { 
+			Or = {
+			has_tech = fighter1  
+			has_tech = basic_small_airframe 
+			}
+		}
 		completion_reward = {
-			add_tech_bonus = {
-				name = fighter_bonus
-				bonus = 1.0
-				uses = 1
-				technology = fighter1
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				add_tech_bonus = {
+					name = cas_bonus
+					bonus = 1.0
+					uses = 1
+					technology = basic_small_airframe
+				}			
+				else = {
+					add_tech_bonus = {
+						name = fighter_bonus
+						bonus = 1.0
+						uses = 1
+						technology = fighter1
+					}
+				}
 			}
 		}
 	}
@@ -5621,13 +5661,29 @@ focus_tree = {
      	base = 3
  	 	}
 		prerequisite = { focus = POL_pzl_p11c  }
-		bypass = { has_tech = fighter2 }
+		bypass = { 
+			Or = {
+			has_tech = fighter2  
+			has_tech = improved_small_airframe 
+			}
+		}
 		completion_reward = {
-			add_tech_bonus = {
-				name = fighter_bonus
-				bonus = 1.0
-				uses = 1
-				technology = fighter2
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				add_tech_bonus = {
+					name = cas_bonus
+					bonus = 1.0
+					uses = 1
+					technology = improved_large_airframe
+				}			
+				else = {
+					add_tech_bonus = {
+						name = fighter_bonus
+						bonus = 1.0
+						uses = 1
+						technology = fighter2
+					}
+				}
 			}
 		}
 	}
@@ -5645,14 +5701,30 @@ focus_tree = {
 		ai_will_do = {
      	base = 3
  	 	}
-		bypass = { has_tech = strategic_bomber1 }
+		bypass = { 
+			Or = {
+			has_tech = strategic_bomber1  
+			has_tech = basic_large_airframe 
+			}
+		}
 		prerequisite = { focus = POL_the_polish_airforce  }
 		completion_reward = {
-			add_tech_bonus = {
-				name = bomber_bonus
-				bonus = 1.0
-				uses = 1
-				technology = strategic_bomber1
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				add_tech_bonus = {
+					name = cas_bonus
+					bonus = 1.0
+					uses = 1
+					technology = basic_large_airframe
+				}			
+				else = {
+					add_tech_bonus = {
+						name = fighter_bonus
+						bonus = 1.0
+						uses = 1
+						technology = strategic_bomber1
+					}
+				}
 			}
 		}
 	}
@@ -5671,14 +5743,30 @@ focus_tree = {
      	base = 3
  	 	}
 		prerequisite = { focus = POL_pzl23_karas  }
-		bypass = { has_tech = strategic_bomber2 }
+		bypass = { 
+			Or = {
+			has_tech = strategic_bomber2  
+			has_tech = improved_large_airframe 
+			}
+		}
 		mutually_exclusive = { focus = POL_light_bomber_priority  }
 		completion_reward = {
-			add_tech_bonus = {
-				name = bomber_bonus
-				bonus = 1.0
-				uses = 1
-				technology = strategic_bomber2
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				add_tech_bonus = {
+					name = cas_bonus
+					bonus = 1.0
+					uses = 1
+					technology = improved_large_airframe
+				}			
+				else = {
+					add_tech_bonus = {
+						name = fighter_bonus
+						bonus = 1.0
+						uses = 1
+						technology = strategic_bomber2
+					}
+				}
 			}
 		}
 	}
@@ -5723,13 +5811,29 @@ focus_tree = {
  	 	}
 		prerequisite = { focus = POL_pzl37_los  focus = POL_light_bomber_priority }
 		prerequisite = { focus = POL_continue_fighter_development } 
-		bypass = { has_tech = fighter3 }
+		bypass = { 
+			Or = {
+			has_tech = fighter3  
+			has_tech = advanced_small_airframe 
+			}
+		}
 		completion_reward = {
-			add_tech_bonus = {
-				name = fighter_bonus
-				bonus = 1.0
-				uses = 1
-				technology = fighter3
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				add_tech_bonus = {
+					name = cas_bonus
+					bonus = 1.0
+					uses = 1
+					technology = advanced_small_airframe
+				}			
+				else = {
+					add_tech_bonus = {
+						name = fighter_bonus
+						bonus = 1.0
+						uses = 1
+						technology = fighter3
+					}
+				}
 			}
 		}
 	}

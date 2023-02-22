@@ -19,8 +19,37 @@ ideas = {
       industrial_capacity_factory = -0.20
       industrial_capacity_dockyard = -0.20
       production_speed_buildings_factor = -0.1
-      conscription_factor = -0.2
      }
+}
+
+fra_lots_of_men_dead = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    conscription_factor = -0.40
+   }
+}
+
+fra_lots_of_men_dead_2 = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    conscription_factor = -0.20
+   }
 }
 
   fra_unstable_gov = {
@@ -394,6 +423,89 @@ picture = GFX_idea_overextendadsf
 
 ###Industry
 
+fra_inovation = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    research_speed_factor = 0.02
+    political_power_gain = -0.1
+   }
+}
+
+fra_inovation_2 = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    research_speed_factor = 0.03
+   }
+}
+
+fra_culinary_tourism = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    political_power_gain = 0.03
+    consumer_goods_factor = -0.01
+   }
+}
+
+
+fra_colonial_problems = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    production_factory_max_efficiency_factor = -0.20
+    consumer_goods_factor = 0.05
+    production_lack_of_resource_penalty_factor = 0.5
+   }
+}
+
+fra_colonial_problems_2 = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    min_export = 0.70
+    production_factory_max_efficiency_factor = -0.1
+    production_factory_efficiency_gain_factor = -0.2
+    production_dockyard_efficiency_gain_factor = -0.2
+   }
+}
+
 fra_eco_disaster_2 = {
  
   allowed = {
@@ -410,7 +522,6 @@ picture = GFX_idea_overextendadsf
     industrial_capacity_factory = -0.20
     industrial_capacity_dockyard = -0.20
     production_speed_buildings_factor = -0.1
-    conscription_factor = -0.2
    }
 }
 
@@ -430,7 +541,41 @@ picture = GFX_idea_overextendadsf
     production_factory_max_efficiency_factor = -0.05
     industrial_capacity_factory = -0.20
     industrial_capacity_dockyard = -0.20
-    conscription_factor = -0.1
+   }
+}
+
+fra_eco_disaster_4 = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    consumer_goods_factor = 0.10
+    production_factory_max_efficiency_factor = -0.05
+    industrial_capacity_factory = -0.10
+    industrial_capacity_dockyard = -0.10
+   }
+}
+
+fra_eco_disaster_5 = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    consumer_goods_factor = 0.05
+    industrial_capacity_factory = -0.10
+    industrial_capacity_dockyard = -0.10
    }
 }
 
@@ -467,6 +612,137 @@ picture = GFX_idea_overextendadsf
     production_speed_buildings_factor = 0.1
    }
 }
+
+fra_autarky_idea = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    production_lack_of_resource_penalty_factor = -0.2
+    local_resources_factor = 0.1
+   }
+}
+
+fra_resource_extracters = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    production_factory_efficiency_gain_factor = 0.05
+    production_factory_max_efficiency_factor = 0.03
+   }
+}
+
+fra_idl_prog = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    stability_factor = 0.05
+    political_power_gain = 0.10
+   }
+}
+
+fra_work_pat = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    war_support_factor = 0.05
+    political_power_gain = 0.1
+   }
+}
+
+fra_foreign_invest = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    consumer_goods_factor = 0.07
+    production_speed_buildings_factor = 0.1
+   }
+}
+
+
+fra_american_france = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    consumer_goods_factor = -0.02
+    production_speed_buildings_factor = 0.05
+   }
+}
+
+
+FRA_toil_away = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    production_lack_of_resource_penalty_factor = -0.2
+    local_resources_factor = 0.1
+   }
+}
+
+FRA_SNCF = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    production_speed_rail_way_factor	= 0.2
+    production_speed_supply_node_factor = 0.2
+   }
+}
+
 
 fra_market_regulation = {
  

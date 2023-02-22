@@ -977,6 +977,50 @@ THR_the_power_struggle = {
 	}
 }
 
+FRA_industry_investments = {
+	icon = GFX_decision_category_generic
+	visible = {
+		OR = {
+			tag = FRA
+			tag = FRS
+			tag = FRL
+			tag = FRR
+			tag = FRP
+		}
+	}
+	available = {
+		OR = {
+			tag = FRA
+			tag = FRS
+			tag = FRL
+			tag = FRR
+			tag = FRP
+		}
+	}
+}
+
+FRA_colonial_investments = {
+	icon = GFX_decision_category_generic
+	visible = {
+		OR = {
+			tag = FRA
+			tag = FRS
+			tag = FRL
+			tag = FRR
+			tag = FRP
+		}
+	}
+	available = {
+		OR = {
+			tag = FRA
+			tag = FRS
+			tag = FRL
+			tag = FRR
+			tag = FRP
+		}
+	}
+}
+
 
 ALL_executive = {
 
