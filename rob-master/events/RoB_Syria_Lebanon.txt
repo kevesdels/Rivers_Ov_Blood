@@ -110,6 +110,7 @@ country_event = {
     ai_chance = { factor = 8}
     add_manpower = 1000
     transfer_state = 960
+    hidden_effect = { 960 = { remove_core_of = SYR } }
     960 = { add_core_of = ARM }
     hidden_effect = {
     SYR = { country_event = { id = syrialeb.7 days = 1 } }
@@ -168,6 +169,7 @@ country_event = {
   option = {
     name = "Peace"
     ai_chance = { factor = 10 }
+    hidden_effect = { 960 = { remove_core_of = SYR } }
     transfer_state = 960
     960 = { add_core_of = ARM }
     white_peace = SYR
@@ -429,30 +431,37 @@ country_event = {
     if = {
       limit = { OR = { 344 = { is_controlled_by = TUR }  344 = { is_owned_by = SYR } } }
       transfer_state = 344
+      hidden_effect = { 344 = { remove_core_of = SYR } }
     }
     if = {
       limit = { OR = { 350 = { is_controlled_by = TUR }  350 = { is_owned_by = SYR } } }
       transfer_state = 350
+      hidden_effect = { 350 = { remove_core_of = SYR } }
     }
     if = {
       limit = { OR = { 877 = { is_controlled_by = TUR }  877 = { is_owned_by = SYR } } }
       transfer_state = 877
+      hidden_effect = { 877 = { remove_core_of = SYR } }
     }
     if = {
       limit = { OR = { 961 = { is_controlled_by = TUR }  961 = { is_owned_by = SYR } } }
       transfer_state = 961
+      hidden_effect = { 961 = { remove_core_of = SYR } }
     }
     if = {
       limit = { OR = { 1001 = { is_controlled_by = TUR }  1001 = { is_owned_by = SYR } } }
       transfer_state = 1001
+      hidden_effect = { 1001 = { remove_core_of = SYR } }
     }
     if = {
       limit = { OR = { 959 = { is_controlled_by = TUR }  959 = { is_owned_by = SYR } } }
       transfer_state = 959
+      hidden_effect = { 959 = { remove_core_of = SYR } }
     }
     if = {
       limit = { OR = { 960 = { is_controlled_by = TUR }  960 = { is_owned_by = SYR } } }
       transfer_state = 960
+      hidden_effect = { 960 = { remove_core_of = SYR } }
     }
     white_peace = SYR
     SYR = {
@@ -758,22 +767,27 @@ country_event = {
     if = {
       limit = { OR = { 946 = { is_controlled_by = HJZ }  946 = { is_controlled_by = SYR } 946 = { is_controlled_by = FRA } } }
       SYR = { transfer_state = 946 }
+      hidden_effect = { 946 = { remove_core_of = SYR } }
     }
     if = {
       limit = { OR = { 291 = { is_controlled_by = HJZ }  291 = { is_controlled_by = SYR } 291 = { is_controlled_by = FRA } } }
       SYR = { transfer_state = 291 }
+      hidden_effect = { 291 = { remove_core_of = SYR } }
     }
     if = {
       limit = { OR = { 656 = { is_controlled_by = HJZ }  656 = { is_controlled_by = SYR } 656 = { is_controlled_by = FRA } } }
       SYR = { transfer_state = 656 }
+      hidden_effect = { 656 = { remove_core_of = SYR } }
     }
     if = {
       limit = { OR = { 945 = { is_controlled_by = HJZ }  945 = { is_controlled_by = SYR } 945 = { is_controlled_by = FRA } } }
       SYR = { transfer_state = 945 }
+      hidden_effect = { 945 = { remove_core_of = SYR } }
     }
     if = {
       limit = { OR = { 554 = { is_controlled_by = HJZ }  554 = { is_controlled_by = SYR } 554 = { is_controlled_by = FRA } } }
       SYR = { transfer_state = 554 }
+      hidden_effect = { 544 = { remove_core_of = SYR } }
     }
   }
   ###We still can win?

@@ -25,6 +25,9 @@ GER_german_expansion = {
    tooltip = "Austrians Are Still Busy"
    }
    }
+   complete_effect = {
+    set_country_flag = GER_justifying
+    }
    days_remove = 10
   remove_effect = {
   if = {
@@ -64,6 +67,7 @@ GER_german_expansion = {
    limit = { AND = { ACM = { exists = no }  AUS = { exists = yes } } }
    GER = { declare_war_on = { target = AUS  type = annex_everything } }
     }
+    clr_country_flag = GER_justifying
   }
  }
 
@@ -94,6 +98,9 @@ GER_german_expansion = {
    }
   }
  }
+ complete_effect = {
+  set_country_flag = GER_justifying
+  }
  days_remove = 10
  remove_effect = {
   if = {
@@ -108,13 +115,23 @@ GER_german_expansion = {
    limit = { AUS = { exists = yes } }
    AUS = { country_event = { id = spartakus_germany.23 days = 3 } }
 }      
+clr_country_flag = GER_justifying
    }
  }
  
  GER_demand_sudetland = {
  cost = 30
  ai_will_do = {
-	base = 2000
+  base = 10
+   modifier = {
+   factor = 200
+    ROOT = {
+   strength_ratio = {
+    tag = CZE
+    ratio > 0.75
+   }
+  }
+   }
  }
  fire_only_once = yes
  available = {
@@ -130,6 +147,9 @@ GER_german_expansion = {
    74 = { is_owned_by = GER }
   }
  }
+ complete_effect = {
+  set_country_flag = GER_justifying
+  }
  days_remove = 10
  remove_effect = {
   CZE = { country_event =  { id = spartakus_germany.27 days = 3 } }
@@ -141,13 +161,23 @@ GER_german_expansion = {
     add_state_core = 69
     add_state_core = 74
     }
+    clr_country_flag = GER_justifying
    }
  }
 
  GER_subjugate_chechzs = {
  cost = 30
  ai_will_do = {
-	base = 2000
+  base = 10
+   modifier = {
+   factor = 200
+    ROOT = {
+   strength_ratio = {
+    tag = CZE
+    ratio > 0.75
+   }
+  }
+   }
  }
  fire_only_once = yes
  available = {
@@ -166,17 +196,29 @@ GER_german_expansion = {
     }
    } 
   }
+  complete_effect = {
+    set_country_flag = GER_justifying
+    }
   days_remove = 10
   remove_effect = {
   CZE = { country_event =  { id = spartakus_germany.28 days = 3 } }
-
+  clr_country_flag = GER_justifying
   }
  }
 
  GER_secure_denmark = {
  cost = 30
  ai_will_do = {
-	base = 2000
+  base = 10
+   modifier = {
+   factor = 200
+    ROOT = {
+   strength_ratio = {
+    tag = DEN
+    ratio > 0.75
+   }
+  }
+   }
  }
  fire_only_once = yes
  available = {
@@ -193,6 +235,9 @@ GER_german_expansion = {
  }
  
  days_remove = 10
+ complete_effect = {
+  set_country_flag = GER_justifying
+  }
  remove_effect = {
   GER = { 
     add_state_core = 804
@@ -207,6 +252,7 @@ GER_german_expansion = {
       }			
     }
   }
+  clr_country_flag = GER_justifying
  }
 
 }
@@ -214,7 +260,16 @@ GER_german_expansion = {
  GER_french_arent_watching = {
  cost = 30
  ai_will_do = {
-	base = 2000
+  base = 20
+   modifier = {
+   factor = 200
+    ROOT = {
+   strength_ratio = {
+    tag = RHN
+    ratio > 0.75
+   }
+  }
+   }
  }
  fire_only_once = yes
  visible = {
@@ -231,6 +286,9 @@ GER_german_expansion = {
    }
  
     days_remove = 10
+    complete_effect = {
+      set_country_flag = GER_justifying
+      }
   remove_effect = {
    every_state = {
     limit = { is_core_of = RHN }
@@ -245,6 +303,7 @@ GER_german_expansion = {
       }			
     }
   }
+  clr_country_flag = GER_justifying
  }
 
 }
@@ -252,7 +311,16 @@ GER_german_expansion = {
  GER_destroy_poles = {
  cost = 30
  ai_will_do = {
-	base = 2000
+  base = 10
+   modifier = {
+   factor = 200
+    ROOT = {
+   strength_ratio = {
+    tag = POL
+    ratio > 0.75
+   }
+  }
+   }
  }
  fire_only_once = yes
  available = {
@@ -263,7 +331,9 @@ GER_german_expansion = {
     any_country = { AND = { OR = { owns_state = 865 owns_state = 86 } has_war_with  = PRS } }
       }
  }
- 
+ complete_effect = {
+  set_country_flag = GER_justifying
+  }
     days_remove = 10
   remove_effect = {
   every_country = {
@@ -285,6 +355,7 @@ GER_german_expansion = {
      762 = { add_core_of = GER }
    
  }
+ clr_country_flag = GER_justifying
 
 }
 
@@ -310,7 +381,9 @@ GER_german_expansion = {
     any_country = { AND = { OR = { owns_state = 763 } has_war_with  = PRS } }
       }
  }
- 
+ complete_effect = {
+  set_country_flag = GER_justifying
+  }
    days_remove = 10
   remove_effect = {
   every_country = {
@@ -328,6 +401,7 @@ GER_german_expansion = {
    }
    
  }
+ clr_country_flag = GER_justifying
 
 }
 
@@ -343,11 +417,14 @@ GER_german_expansion = {
    RHN = { exists = yes }
    has_war = no
   }
-  
+  complete_effect = {
+    set_country_flag = GER_justifying
+    }
     days_remove = 10
   remove_effect = {
     FRA = { country_event = { id = spartakus_germany.29 days = 2 } } 
  }
+ clr_country_flag = GER_justifying
  }
  
  GER_destory_france = {
@@ -368,7 +445,9 @@ GER_german_expansion = {
       any_country = { AND = { OR = {  owns_state = 28 owns_state = 814 owns_state = 816 } has_war_with  = PRS } }
         }
   }
-  
+  complete_effect = {
+    set_country_flag = GER_justifying
+    }
     days_remove = 10
   remove_effect = {
 
@@ -384,6 +463,7 @@ GER_german_expansion = {
      814 = { add_core_of = GER }
 	 816 = { add_core_of = GER }
      28 = { add_core_of = GER }
+     clr_country_flag = GER_justifying
  }
  }
  
@@ -410,7 +490,9 @@ GER_german_expansion = {
    }
 
   }
-  
+  complete_effect = {
+    set_country_flag = GER_justifying
+    }
     days_remove = 10
   remove_effect = {
    every_country = {
@@ -446,6 +528,7 @@ GER_german_expansion = {
     country_event = { id = france.33 days = 15 } 
    }
   }
+  clr_country_flag = GER_justifying
  } 
 
 }
@@ -477,6 +560,9 @@ GER_german_export_revolution = {
    tooltip = "Austrians Are Still Busy"
    }
    }
+   complete_effect = {
+    set_country_flag = GER_justifying
+    }
     days_remove = 10
   remove_effect = {
   if = {
@@ -511,6 +597,7 @@ GER_german_export_revolution = {
    limit = { AND = { ACM = { exists = no }  AUS = { exists = yes } } }
    GER = { declare_war_on = { target = AUS  type = annex_everything } }
     }
+    clr_country_flag = GER_justifying
   }
  }
 
@@ -541,6 +628,9 @@ GER_german_export_revolution = {
    }
   }
  }
+ complete_effect = {
+  set_country_flag = GER_justifying
+  }
    days_remove = 10
   remove_effect = {
   if = {
@@ -555,6 +645,7 @@ GER_german_export_revolution = {
    limit = { AUS = { exists = yes } }
    AUS = { country_event =  { id = spartakus_germany.23 days = 3 } }
 }      
+clr_country_flag = GER_justifying
    }
 
 
@@ -563,8 +654,17 @@ GER_german_export_revolution = {
   GER_chezh_revolution = {
    cost = 30
    ai_will_do = {
-	base = 2000
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = CZE
+      ratio > 0.75
+     }
     }
+     }
+   }
    fire_only_once = yes
    available = {
    date > 1935.1.1
@@ -584,18 +684,31 @@ GER_german_export_revolution = {
       }
      }
     }
-   }
+   }   complete_effect = {
+    set_country_flag = GER_justifying
+    }
+
     days_remove = 10
   remove_effect = {
   GER = { declare_war_on = { target = CZE  type = annex_everything } }
+  clr_country_flag = GER_justifying
    }
   }
 
    GER_slovakian_revolution = {
    cost = 30
    ai_will_do = {
-	base = 2000
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = SLO
+      ratio > 0.75
+     }
     }
+     }
+   }
    fire_only_once = yes
    available = {
    date > 1936.3.1
@@ -614,16 +727,29 @@ GER_german_export_revolution = {
      }
     }
    }
+   complete_effect = {
+    set_country_flag = GER_justifying
+    }
     days_remove = 10
   remove_effect = {
   GER = { declare_war_on = { target = SLO  type = annex_everything } }
+  clr_country_flag = GER_justifying
    }
   }
    GER_hungarian_revolution = {
    cost = 30
    ai_will_do = {
-	base = 2000
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = HUN
+      ratio > 0.75
+     }
     }
+     }
+   }
    fire_only_once = yes
    available = {
    date > 1936.6.1
@@ -642,9 +768,13 @@ GER_german_export_revolution = {
     }
    }
    }
+   complete_effect = {
+    set_country_flag = GER_justifying
+    }
     days_remove = 10
   remove_effect = {
   GER = { declare_war_on = { target = HUN  type = annex_everything } }
+  clr_country_flag = GER_justifying
    }
 
  }
@@ -652,8 +782,17 @@ GER_german_export_revolution = {
    GER_polish_revolution = {
    cost = 30
    ai_will_do = {
-	base = 2000
+    base = 10
+     modifier = {
+     factor = 200
+      ROOT = {
+     strength_ratio = {
+      tag = POL
+      ratio > 0.75
+     }
     }
+     }
+   }
    fire_only_once = yes
    available = {
    date > 1936.9.1
@@ -669,9 +808,13 @@ GER_german_export_revolution = {
     }
    }
    }
+   complete_effect = {
+    set_country_flag = GER_justifying
+    }
     days_remove = 10
   remove_effect = {
   GER = { declare_war_on = { target = POL  type = annex_everything } }
+  clr_country_flag = GER_justifying
    }
  }
 
@@ -697,9 +840,13 @@ GER_german_export_revolution = {
     }
    }
     }
+    complete_effect = {
+      set_country_flag = GER_justifying
+      }
     days_remove = 10
   remove_effect = {
   GER = { declare_war_on = { target = PRS  type = annex_everything } }
+  clr_country_flag = GER_justifying
    }
  }
  
@@ -725,9 +872,13 @@ GER_german_export_revolution = {
     }
    }
     }
+    complete_effect = {
+      set_country_flag = GER_justifying
+      }
     days_remove = 10
   remove_effect = {
   GER = { declare_war_on = { target = LIT  type = annex_everything } }
+  clr_country_flag = GER_justifying
    }
  }
  
@@ -749,9 +900,14 @@ GER_german_export_revolution = {
    AUS = { is_puppet_of = GER }
     }
   }	
+  complete_effect = {
+    set_country_flag = GER_justifying
+    }
+  
     days_remove = 10
   remove_effect = {
   GER = { declare_war_on = { target = ITA  type = annex_everything } }
+  clr_country_flag = GER_justifying
    }
  }
  
@@ -766,10 +922,13 @@ GER_german_export_revolution = {
   ENG = { has_country_flag = ENG_civil_war }
   DEN = { exists = yes }
  }
- 
+ complete_effect = {
+  set_country_flag = GER_justifying
+  }
    days_remove = 10
   remove_effect = {
    GER = { declare_war_on = { target = DEN  type = annex_everything } }
+   clr_country_flag = GER_justifying
  }
 
 }
@@ -792,7 +951,9 @@ GER_german_export_revolution = {
      }
    }
   }
-  
+  complete_effect = {
+    set_country_flag = GER_justifying
+    }
     days_remove = 10
   remove_effect = {
     if = {
@@ -807,6 +968,7 @@ GER_german_export_revolution = {
       }
       FRA = { country_event = { id = spartakus_germany.29 days = 2 } }
     } 
+    clr_country_flag = GER_justifying
  }
  }
  
@@ -838,7 +1000,9 @@ GER_german_export_revolution = {
     }
    } 
  }
- 
+ complete_effect = {
+  set_country_flag = GER_justifying
+  }
    days_remove = 10
   remove_effect = {
  custom_effect_tooltip = GER_diplo_tt_1
@@ -873,6 +1037,7 @@ GER_german_export_revolution = {
     country_event = { id = france.33 days = 15 } 
    }
   }
+  clr_country_flag = GER_justifying
  }
 } 
  }

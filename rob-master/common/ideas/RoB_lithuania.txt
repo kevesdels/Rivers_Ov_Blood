@@ -893,6 +893,16 @@ lithuanian_stormtroopers = {
 				 }
 			}
 
+	LIT_darbinieku_milici_2 = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = GFX_idea_famine_of_1933asass
+			modifier = {
+				conscription  = 0.02
+				 }
+			}
+
 	 LIT_soc_work_con = {
 		allowed = { always = no }
 		allowed_civil_war = { always = yes }
@@ -900,6 +910,17 @@ lithuanian_stormtroopers = {
 		picture = GFX_idea_famine_of_1933asass
 		modifier = {
 			production_factory_max_efficiency_factor = 0.04
+			monthly_population = 0.15
+			 }
+		}
+
+	LIT_soc_work_con_2 = {
+		allowed = { always = no }
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GFX_idea_famine_of_1933asass
+		modifier = {
+			production_factory_max_efficiency_factor = 0.1
 			monthly_population = 0.15
 			 }
 		}
@@ -914,6 +935,16 @@ lithuanian_stormtroopers = {
 			 }
 		}
 
+	 LIT_urbanization_2 = {
+		allowed = { always = no }
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GFX_idea_famine_of_1933asass
+		modifier = {
+			monthly_population = 0.50
+			 }
+		}
+
 	LIT_soc_housing = {
 		allowed = { always = no }
 		allowed_civil_war = { always = yes }
@@ -921,6 +952,15 @@ lithuanian_stormtroopers = {
 		picture = GFX_idea_famine_of_1933asass
 		modifier = {
 			global_building_slots_factor = 0.20
+			 }
+		}
+	LIT_soc_housing_2 = {
+		allowed = { always = no }
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GFX_idea_famine_of_1933asass
+		modifier = {
+			global_building_slots_factor = 0.30
 			 }
 		}
 	LIT_lauzu_armija = {
@@ -943,6 +983,18 @@ lithuanian_stormtroopers = {
 			army_core_attack_factor = 0.15
 			army_core_defence_factor = 0.15
 			stability_weekly = 0.001
+			 }
+		}
+
+	LIT_collected_land = {
+		allowed = { always = no }
+		allowed_civil_war = { always = yes }
+		removal_cost = -1
+		picture = GFX_idea_famine_of_1933asass
+		modifier = {
+			consumer_goods_factor = -0.1
+			production_speed_buildings_factor = -0.15
+			production_factory_max_efficiency_factor = 0.1
 			 }
 		}
 

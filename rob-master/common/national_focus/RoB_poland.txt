@@ -2107,7 +2107,7 @@ focus_tree = {
 		x = 22
 		y = 11
 		cost = 5
-		bypass = { OR = { LIT = { is_puppet = yes } LIT = { exists = no } } }
+		bypass = { OR = { LIT = { is_puppet = yes } LIT = { exists = no } LIT = { has_government = national_socialist } } }
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
@@ -2137,7 +2137,7 @@ focus_tree = {
 		x = 22
 		y = 9
 		cost = 5
-		bypass = { OR = { LIT = { is_puppet = yes } LIT = { exists = no } } }
+		bypass = { OR = { LIT = { is_puppet = yes } LIT = { exists = no } LIT = { has_government = national_socialist } } }
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL
@@ -2176,7 +2176,7 @@ focus_tree = {
 		x = 22
 		y = 10
 		cost = 5
-		bypass = { OR = { LIT = { is_puppet = yes } LIT = { exists = no } } }
+		bypass = { OR = { LIT = { is_puppet = yes } LIT = { exists = no } LIT = { has_government = national_socialist }  } }
 		search_filters = {
 			
 						FOCUS_FILTER_POLITICAL

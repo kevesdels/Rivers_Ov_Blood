@@ -484,3 +484,604 @@ LIT_baltificiation = {
 
 
 }
+
+LIT_building_socialism = {
+
+  LIT_build_mission = {
+    icon = GFX_decision_generic_construction
+    ai_will_do = {
+      base = 0
+    }
+    visible = {
+      has_country_flag = LIT_comm_mission
+    }
+  activation = {
+  hidden_trigger = {
+  has_country_flag = LIT_comm_mission
+  }
+  NOT = {
+   LIT = {
+    has_built = {
+      type = arms_factory
+      value > 10
+    }
+    has_built = {
+      type = industrial_complex
+      value > 12
+     }
+     has_built = {
+      type = infrastructure
+      value > 5
+     }
+   } 
+  }
+   }
+   days_mission_timeout = 1825
+    complete_effect = {
+      set_country_flag = LIT_com_mission_completed
+      if = {
+        limit = {
+          has_built = {
+            type = arms_factory
+            value > 10
+          }
+        has_built = {
+          type = industrial_complex
+          value > 12
+         }
+         has_built = {
+          type = infrastructure
+          value > 5
+         }
+        }
+      add_stability = 0.1      
+      add_war_support = 0.1
+      11 = {
+        add_extra_state_shared_building_slots = 2
+         add_building_construction = {
+        type = industrial_complex
+        level = 2
+        instant_build = yes
+        }
+      }
+      784 = {
+        add_extra_state_shared_building_slots = 2
+         add_building_construction = {
+        type = industrial_complex
+        level = 2
+        instant_build = yes
+        }
+      }
+      189 = {
+        add_extra_state_shared_building_slots = 2
+         add_building_construction = {
+        type = industrial_complex
+        level = 2
+        instant_build = yes
+        }
+      }
+    }
+  }
+
+    timeout_effect = {
+      set_country_flag = LIT_com_mission_completed
+      if = {
+        limit = {
+          has_built = {
+            type = arms_factory
+            value > 10
+          }
+        has_built = {
+          type = industrial_complex
+          value > 12
+         }
+         has_built = {
+          type = infrastructure
+          value > 5
+         }
+        }
+      add_stability = 0.1      
+      add_war_support = 0.1
+      11 = {
+        add_extra_state_shared_building_slots = 2
+         add_building_construction = {
+        type = industrial_complex
+        level = 2
+        instant_build = yes
+        }
+      }
+      784 = {
+        add_extra_state_shared_building_slots = 2
+         add_building_construction = {
+        type = industrial_complex
+        level = 2
+        instant_build = yes
+        }
+      }
+      189 = {
+        add_extra_state_shared_building_slots = 2
+         add_building_construction = {
+        type = industrial_complex
+        level = 2
+        instant_build = yes
+        }
+      }
+    }
+  }
+
+  }
+
+
+}
+
+
+LIT_com_killing_lohs_lol = {
+
+  LIT__com_kill_ukros = {
+    target_trigger = { FROM = {tag = UKR } }
+    visible = {
+      NOT = { UKR = { is_puppet_of = LIT exists = no } }
+   }
+   available = {
+    UKR = {
+        exists = yes
+       }
+       OR = {
+         is_neighbor_of = UKR
+         UKR = {
+           any_neighbor_country = {
+           is_in_faction_with = LIT
+           }
+         }
+        }
+    NOT = {
+     is_in_faction_with = UKR
+     is_puppet_of = LIT
+     has_country_flag = LIT_com_justifying
+    }
+    has_war = no
+   }
+   priority = 10 
+   cost = 30
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LIT_com_justifying
+   }
+   remove_effect = {
+    every_state = {
+      limit = { is_core_of = UKR }
+        add_core_of = LIT
+    }
+    ROOT = {
+     declare_war_on = { target = UKR type = annex_everything }
+     clr_country_flag = LIT_com_justifying
+     set_country_flag = annex_ukr
+   }
+   }
+  }
+
+  LIT__com_kill_com_ukros = {
+    target_trigger = { FROM = {tag = DSU } }
+    visible = {
+      NOT = { DSU = { is_puppet_of = LIT exists = no } }
+   }
+   available = {
+    DSU = {
+        exists = yes
+       }
+       OR = {
+         is_neighbor_of = DSU
+         DSU = {
+           any_neighbor_country = {
+           is_in_faction_with = LIT
+           }
+         }
+        }
+    NOT = {
+     is_in_faction_with = DSU
+     is_puppet_of = LIT
+     has_country_flag = LIT_com_justifying
+    }
+    has_war = no
+   }
+   priority = 10 
+   cost = 30
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LIT_com_justifying
+   }
+   remove_effect = {
+    every_state = {
+      limit = { is_core_of = DSU }
+        add_core_of = LIT
+    }
+    ROOT = {
+     declare_war_on = { target = DSU type = annex_everything }
+     clr_country_flag = LIT_com_justifying
+     set_country_flag = annex_ukr
+   }
+   }
+  }
+
+  LIT__com_kill_pruss = {
+    target_trigger = { FROM = {tag = PRS } }
+    visible = {
+      NOT = { PRS = { is_puppet_of = LIT exists = no } }
+   }
+   available = {
+    PRS = {
+        exists = yes
+       }
+       OR = {
+         is_neighbor_of = PRS
+         PRS = {
+           any_neighbor_country = {
+           is_in_faction_with = LIT
+           }
+         }
+        }
+    NOT = {
+     is_in_faction_with = PRS
+     is_puppet_of = LIT
+     has_country_flag = LIT_com_justifying
+    }
+    has_war = no
+   }
+   priority = 10 
+   cost = 30
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LIT_com_justifying
+   }
+   remove_effect = {
+    188 = { add_core_of = LIT }
+    763 = {add_core_of = LIT  }
+    5 = { add_core_of = LIT }
+    980 = { add_core_of = LIT }
+    85 = { add_core_of = LIT }
+    ROOT = {
+     declare_war_on = { target = PRS type = annex_everything }
+     clr_country_flag = LIT_com_justifying
+     set_country_flag = annex_prs
+   }
+   }
+  }
+
+  LIT__com_kill_balts = {
+    visible = {
+      OR = {
+        LAT = { exists = yes NOT = { is_puppet_of = LIT } }
+        EST = { exists = yes NOT = { is_puppet_of = LIT } }
+        LPR = { exists = yes NOT = { is_puppet_of = LIT } }
+        LNC = { exists = yes NOT = { is_puppet_of = LIT } }
+        LDL = { exists = yes NOT = { is_puppet_of = LIT } }
+        LDF = { exists = yes NOT = { is_puppet_of = LIT } }
+        ECA = { exists = yes NOT = { is_puppet_of = LIT } }
+        ELP = { exists = yes NOT = { is_puppet_of = LIT } }
+        ELA = { exists = yes NOT = { is_puppet_of = LIT } }
+      }
+   }
+   available = {
+    OR = {
+      LAT = { exists = yes NOT = { is_puppet_of = LIT } }
+      EST = { exists = yes NOT = { is_puppet_of = LIT } }
+      LPR = { exists = yes NOT = { is_puppet_of = LIT } }
+      LNC = { exists = yes NOT = { is_puppet_of = LIT } }
+      LDL = { exists = yes NOT = { is_puppet_of = LIT } }
+      LDF = { exists = yes NOT = { is_puppet_of = LIT } }
+      ECA = { exists = yes NOT = { is_puppet_of = LIT } }
+      ELP = { exists = yes NOT = { is_puppet_of = LIT } }
+      ELA = { exists = yes NOT = { is_puppet_of = LIT } }
+    }
+       OR = {
+        OR = {
+          is_neighbor_of = LAT
+          is_neighbor_of = EST
+          is_neighbor_of = LPR
+          is_neighbor_of = LNC
+          is_neighbor_of = LDL
+          is_neighbor_of = LDF
+          is_neighbor_of = ECA
+          is_neighbor_of = ELP
+          is_neighbor_of = ELA
+        }
+        OR = {
+          LAT = { any_neighbor_country = { is_in_faction_with = LIT } }
+          EST = { any_neighbor_country = { is_in_faction_with = LIT } }
+          LPR = { any_neighbor_country = { is_in_faction_with = LIT } }
+          LNC = { any_neighbor_country = { is_in_faction_with = LIT } }
+          LDL = { any_neighbor_country = { is_in_faction_with = LIT } }
+          LDF = { any_neighbor_country = { is_in_faction_with = LIT } }
+          ECA = { any_neighbor_country = { is_in_faction_with = LIT } }
+          ELP = { any_neighbor_country = { is_in_faction_with = LIT } }
+          ELA = { any_neighbor_country = { is_in_faction_with = LIT } }
+        }
+        }
+    NOT = {
+     is_puppet_of = LIT
+     has_country_flag = LIT_com_justifying
+    }
+    has_war = no
+   }
+   priority = 10 
+   cost = 30
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LIT_com_justifying
+   }
+   remove_effect = {
+     190 = { add_core_of = LIT }
+     881 = { add_core_of = LIT }
+     1010 = { add_core_of = LIT }
+     880 = { add_core_of = LIT }
+     1266 = { add_core_of = LIT }
+     12 = { add_core_of = LIT }
+     191 = { add_core_of = LIT }
+     13 = { add_core_of = LIT }
+     882 = { add_core_of = LIT }
+     1267 = { add_core_of = LIT }
+     1268 = { add_core_of = LIT }
+    ROOT = {
+      if = { limit = { LAT = { exists = yes } }  declare_war_on = { target = LAT type = annex_everything }}
+      if = { limit = { EST = { exists = yes } }  declare_war_on = { target = EST type = annex_everything }}
+      if = { limit = { LPR = { exists = yes } }  declare_war_on = { target = LPR type = annex_everything }}
+      if = { limit = { LNC = { exists = yes } }  declare_war_on = { target = LNC type = annex_everything }}
+      if = { limit = { LDL = { exists = yes } }  declare_war_on = { target = LDL type = annex_everything }}
+      if = { limit = { LDF = { exists = yes } }  declare_war_on = { target = LDF type = annex_everything }}
+      if = { limit = { ECA = { exists = yes } }  declare_war_on = { target = ECA type = annex_everything }}
+      if = { limit = { ELP = { exists = yes } }  declare_war_on = { target = ELP type = annex_everything }}
+      if = { limit = { ELA = { exists = yes } }  declare_war_on = { target = ELA type = annex_everything }}
+     clr_country_flag = LIT_com_justifying
+     set_country_flag = annex_ubd
+   }
+   }
+  }
+
+  LIT__com_kill_poles = {
+      target_trigger = { FROM = {tag = POL } }
+      visible = {
+        NOT = { POL = { is_puppet_of = LIT exists = no } }
+     }
+      available = {
+        POL = {
+           exists = yes
+          }
+          OR = {
+            is_neighbor_of = POL
+            POL = {
+              any_neighbor_country = {
+              is_in_faction_with = LIT
+              }
+            }
+           }
+       NOT = {
+        is_in_faction_with = POL
+        is_puppet_of = LIT
+        has_country_flag = LIT_com_justifying
+       }
+       has_war = no
+      }
+      priority = 10 
+      cost = 30
+      fire_only_once = yes
+      days_remove = 20
+      complete_effect = {
+      set_country_flag = LIT_com_justifying
+      }
+      remove_effect = {
+        
+      every_state = {
+        limit = { is_core_of = POL }
+          add_core_of = LIT
+      }
+       ROOT = {
+        declare_war_on = { target = POL type = annex_everything }
+        clr_country_flag = LIT_com_justifying
+        set_country_flag = annex_pol
+      }
+      }
+  }
+
+  LIT__com_kill_moldavia = {
+    target_trigger = { FROM = {tag = ROM } }
+    visible = {
+      NOT = { ROM = { is_puppet_of = LIT exists = no } }
+   }
+   available = {
+    ROM = {
+        exists = yes
+       }
+       OR = {
+         is_neighbor_of = ROM
+         ROM = {
+           any_neighbor_country = {
+           is_in_faction_with = LIT
+           }
+         }
+        }
+    NOT = {
+     is_in_faction_with = ROM
+     is_puppet_of = LIT
+     has_country_flag = LIT_com_justifying
+    }
+    has_war = no
+   }
+   priority = 10 
+   cost = 30
+   fire_only_once = yes
+   days_remove = 20
+   complete_effect = {
+   set_country_flag = LIT_com_justifying
+   }
+   remove_effect = {
+    766 = { add_core_of = LIT }
+    78 = { add_core_of = LIT }
+    79 = { add_core_of = LIT }
+    830 = { add_core_of = LIT }
+    80 = { add_core_of = LIT }
+    ROOT = {
+     declare_war_on = { target = ROM type = annex_everything }
+     clr_country_flag = LIT_com_justifying
+     set_country_flag = annex_rom
+   }
+   }
+  }
+
+}
+
+
+LIT__population_transfers = {
+
+
+
+  LIT_pop_liths_to_Vilnus = {
+
+    available = {
+      tag = LIT
+      owns_state = 784
+      OR = {
+        owns_state = 763
+        owns_state = 933
+        owns_state = 95
+        owns_state = 96
+      }
+      has_country_flag = LIT_pop_transfer_enabled
+    }
+
+    state_target = yes
+
+    on_map_mode = map_and_decisions_view 
+  
+    target_array = controlled_states
+
+    target_trigger = { FROM = { OR = { state = 763 state = 933 state = 95 state = 96 } } NOT = {has_state_flag = LIT_transfer } }
+   fire_only_once = yes
+
+    cost = 35
+    days_remove = 90
+
+    complete_effect = {
+      add_stability = 0.03
+      add_war_support = 0.01
+      FROM = { add_manpower = -64683 set_state_flag = LIT_transfer }
+      784 = { add_manpower = 62683 }
+    }
+  }
+
+  LIT_pop_poles_to_Warsaw = {
+
+    available = {
+      tag = LIT
+      owns_state = 10
+      OR = {
+        owns_state = 66
+        owns_state = 67
+        owns_state = 801
+        owns_state = 803
+        owns_state = 5
+      }
+      has_country_flag = LIT_pop_transfer_enabled
+    }
+
+    state_target = yes
+
+    on_map_mode = map_and_decisions_view 
+  
+    target_array = controlled_states
+
+    target_trigger = { FROM = { OR = { state = 66 state = 67 state = 801 state = 803 state = 5 } } NOT = {has_state_flag = LIT_transfer } }
+   fire_only_once = yes
+
+    cost = 35
+    days_remove = 90
+
+    complete_effect = {
+      add_stability = 0.02
+      add_war_support = 0.01
+      FROM = { add_manpower = -74683 set_state_flag = LIT_transfer }
+      10 = { add_manpower = 732683 }
+    }
+  }
+
+
+  LIT_pop_ukros_to_kiev = {
+
+    visible = {
+      owns_state = 202
+    }
+    available = {
+      tag = LIT
+      owns_state = 202
+      OR = {
+        owns_state = 1096
+        owns_state = 91
+        owns_state = 89
+        owns_state = 92
+      }
+      has_country_flag = LIT_pop_transfer_enabled
+    }
+
+    state_target = yes
+
+    on_map_mode = map_and_decisions_view 
+  
+    target_array = controlled_states
+
+    target_trigger = { FROM = { OR = { state = 1096 state = 91 state = 89 state = 92 } } NOT = {has_state_flag = LIT_transfer } }
+   fire_only_once = yes
+
+    cost = 35
+    days_remove = 90
+
+    complete_effect = {
+      add_stability = 0.02
+      add_war_support = 0.01
+      FROM = { add_manpower = -234683 set_state_flag = LIT_transfer }
+      202 = { add_manpower = 232683 }
+    }
+  }
+
+  LIT_pop_germans_to_koneigsber = {
+    visible = {
+      owns_state = 763
+    }
+    available = {
+      tag = LIT
+      owns_state = 763
+      OR = {
+        owns_state = 1266
+        owns_state = 1267
+        owns_state = 188
+        owns_state = 865
+        owns_state = 980
+      }
+      has_country_flag = LIT_pop_transfer_enabled
+    }
+
+    state_target = yes
+
+    on_map_mode = map_and_decisions_view 
+  
+    target_array = controlled_states
+
+    target_trigger = { FROM = { OR = { state = 1266 state = 1267 state = 188 state = 865 state = 980 } } NOT = {has_state_flag = LIT_transfer } }
+   fire_only_once = yes
+
+    cost = 35
+    days_remove = 90
+
+    complete_effect = {
+      add_stability = 0.02
+      add_war_support = 0.01
+      FROM = { add_manpower = -43683 set_state_flag = LIT_transfer }
+      763 = { add_manpower = 42683 }
+    }
+  }
+
+
+
+}

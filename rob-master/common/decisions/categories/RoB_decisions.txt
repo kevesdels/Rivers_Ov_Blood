@@ -33,7 +33,51 @@ LIT_baltificiation = {
 		  base = 10
 		  }
 }
+LIT_building_socialism = {
+	icon = GFX_decision_generic_construction
+	  visible = {
+	  tag = LIT
+	  has_country_flag = LIT_comm_mission
+			}
+	  available = {
+	  tag = LIT
+	  has_country_flag = LIT_comm_mission
+	  NOT = { has_country_flag = LIT_com_mission_completed }
+	  }
+			priority = {
+			base = 10
+			}
+  }
+  
+  LIT_com_killing_lohs_lol = {
+	icon = GFX_decision_generic_prepare_civil_war
+	  visible = {
+	  tag = LIT
+	  has_country_flag = LIT_com_kill_lohs
+			}
+	  available = {
+	  tag = LIT
+	  has_country_flag = LIT_com_kill_lohs
+	  NOT = { has_country_flag = LIT_com_mission_completed }
+	  }
+			priority = {
+			base = 10
+			}
+  }
 
+  LIT__population_transfers = {
+	icon = GFX_decision_generic_police_action
+	visible = {
+	tag = LIT
+	has_country_flag = LIT_pop_transfer_enabled
+		  }
+	available = {
+	has_country_flag = LIT_pop_transfer_enabled
+	}
+		  priority = {
+		  base = 10
+		  }
+  }
 GER_german_partisans = {
   icon = GFX_decision_oppression
   picture = GFX_decision_germany_partisans

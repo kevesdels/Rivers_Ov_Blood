@@ -813,7 +813,8 @@ country_event = {
 			}
 		}
 	 name = "Peace on our terms"
-	 188 = { transfer_state_to = LIT }
+	 188 = { transfer_state_to = LIT add_core_of = LIT }
+	 
 	 white_peace = PRS
 	 }
 
@@ -826,8 +827,8 @@ country_event = {
 			}
 		}
 	 name = "Peace on our terms"
-	 188 = { transfer_state_to = LIT }
-	 763 = { transfer_state_to = LIT }
+	 188 = { transfer_state_to = LIT add_core_of = LIT }
+	 763 = { transfer_state_to = LIT add_core_of = LIT }
 	 white_peace = PRS
 	 }
 
@@ -841,7 +842,7 @@ country_event = {
 ###Place holder for commies
 country_event = { 
 	id = lithuania.38
-	title = "PLACE HOLDER: Communist plot rumoured"
+	title = "Rumors"
 	desc = lithuania.38.d
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -866,7 +867,7 @@ country_event = {
 ###Place holder for commies
 country_event = { 
 	id = lithuania.39
-	title = "PLACE HOLDER: Communist plot is true"
+	title = "Socialist plot?"
 	desc = lithuania.39.d
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -889,7 +890,7 @@ country_event = {
 ###Place holder for commies
 country_event = { 
 	id = lithuania.40
-	title = "PLACE HOLDER: Communist take over"
+	title = "Vanguardist take over"
 	desc = lithuania.40.d
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -913,14 +914,14 @@ country_event = {
 ###Place holder for commies
 country_event = { 
 	id = lithuania.41
-	title = "PLACE HOLDER: Event not done"
+	title = "DECLARATION OF UNSR"
 	desc = lithuania.41.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	
 	option = {
-	 name = "I can't breathe"
+	 name = "LONG LIVE THE REVOLUTION!"
 	 set_cosmetic_tag = LIT_Communist_formable
 	 }
 
@@ -931,14 +932,15 @@ country_event = {
 ###Place holder for commies
 country_event = { 
 	id = lithuania.42
-	title = lithuania.42.t
+	title = "The Congress of Kaunas"
 	desc = lithuania.42.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	
 	option = {
-	 name = lithuania.42.a
+	  name = "Long live the revolution!"
+	 add_political_power = 50
 
 	 }
 }
@@ -955,7 +957,8 @@ country_event = {
 	
 	option = {
 	 name = "Long live the revolution!"
-
+	 add_stability = 0.02
+	 add_war_support = 0.04
 	 }
 }
 
@@ -971,22 +974,55 @@ country_event = {
 	
 	option = {
 	 name = "Long live the revolution!"
-
+	 add_ideas = {
+		LIT_collected_land
+	 }
 	 }
 }
 
 ###Place holder for commies
 country_event = { 
 	id = lithuania.45
-	title = lithuania.45.t
+	title = "SOCIALISM PROGRESSES!"
 	desc = lithuania.45.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	
 	
 	option = {
-	 name = lithuania.45.a
-
+	 name = "Long live the revolution!"
+	 784 =  {
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+		   type = industrial_complex
+		   level = 1
+		   instant_build = yes
+	   }
+	 }
+	 11 =  {
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+		   type = industrial_complex
+		   level = 1
+		   instant_build = yes
+	   }
+	 }
+	 879 =  {
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+		   type = industrial_complex
+		   level = 1
+		   instant_build = yes
+	   }
+	 }
+	 189 =  {
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+		   type = industrial_complex
+		   level = 1
+		   instant_build = yes
+	   }
+	 }
 	 }
 }
 
@@ -1001,7 +1037,7 @@ country_event = {
 	
 	option = {
 	 name = "Long live the revolution!"
-
+	 add_war_support = 0.06
 	 }
 }
 
@@ -1017,6 +1053,205 @@ country_event = {
 	
 	option = {
 	 name = "Long live the revolution!"
-
+	 add_stability = 0.08
 	 }
+}
+
+###Place holder for commies
+country_event = { 
+	id = lithuania.48
+	title = ""
+	desc = lithuania.48.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+	 name = "Long live the revolution!"
+	 }
+}
+
+###Place holder for commies
+country_event = { 
+	id = lithuania.49
+	title = "OUR DUTY TOWARDS OUR NEIGHBOURS"
+	desc = lithuania.49.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+	 name = "Long live the revolution!"
+	 LIT = { declare_war_on = { target = BLR type = annex_everything } }
+	 LIT = { declare_war_on = { target = CBR type = annex_everything } }
+	 LIT = { declare_war_on = { target = DBR type = annex_everything } }
+	 }
+}
+
+###Place holder for commies
+country_event = { 
+	id = lithuania.50
+	title = "THE QUESTION OF UNITY"
+	desc = lithuania.50.d
+	fire_only_once = yes
+	trigger = {
+		tag = LIT
+		has_cosmetic_tag = LIT_Communist_formable
+		OR = {
+			CBR = { OR = { is_puppet_of = LIT is_subject_of = LIT } owns_state = 206 owns_state = 241 owns_state = 94 }
+			DBR = { OR = { is_puppet_of = LIT is_subject_of = LIT } owns_state = 206 owns_state = 241 owns_state = 94 }
+			BLR = { OR = { is_puppet_of = LIT is_subject_of = LIT } owns_state = 206 owns_state = 241 owns_state = 94 }
+		}
+	}
+	
+	
+	option = {
+	 name = "Long live the revolution!"
+	 if = {
+		limit = { CBR = { OR = { is_puppet_of = LIT is_subject_of = LIT } } }
+		CBR = {
+			every_state = {
+				limit = { is_core_of = CBR }
+				add_core_of = LIT
+			}
+		}
+		annex_country = {
+			target = CBR
+			transfer_troops = yes
+		}
+		set_country_flag = annex_blr
+	 }
+	 if = {
+		limit = { DBR = { OR = { is_puppet_of = LIT is_subject_of = LIT } } }
+		DBR = {
+			every_state = {
+				limit = { is_core_of = DBR }
+				add_core_of = LIT
+			}
+		}
+		annex_country = {
+			target = DBR
+			transfer_troops = yes
+		}
+		set_country_flag = annex_blr
+	 }
+	 if = {
+		limit = { BLR = { OR = { is_puppet_of = LIT is_subject_of = LIT } } }
+		BLR = {
+			every_state = {
+				limit = { is_core_of = BLR }
+				add_core_of = LIT
+			}
+		}
+		annex_country = {
+			target = BLR
+			transfer_troops = yes
+		}
+		set_country_flag = annex_blr
+	 }
+	 
+	 }
+	option = {
+	 name = "Too Far"
+	 add_stability = 0.2
+	 }
+}
+
+###Place holder for commies
+country_event = { 
+	id = lithuania.51
+	title = "NEW APPROACH"
+	desc = lithuania.51.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+	 name = "Look West"
+	 trigger = {
+		GER = {
+			is_puppet = no
+		}
+	 }
+		 GER = { country_event = { id = lithuania.52 days = 1 } }
+	}
+
+	option = {
+		name = "Look East"
+		trigger = {
+			SOV = {
+				is_puppet = no
+			}
+		 }
+		SOV = { country_event = { id = lithuania.52 days = 1 } }
+	}
+}
+
+###Place holder for commies
+country_event = { 
+	id = lithuania.52
+	title = "Alliance Offer"
+	desc = "UNSR is seeking an ally in us..what do we do?"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+	 name = "Accept them"
+	 add_to_faction = LIT
+	 hidden_effect = {
+		LIT = { set_country_flag = LIT_com_ally_agrees		country_event = { id = lithuania.53 days = 3 } }
+	 }
+
+	}
+
+	option = {
+		name = "Deny their hand"
+		hidden_effect = {
+			LIT = { set_country_flag = LIT_com_ally_DENIES		country_event = { id = lithuania.53 days = 3 } }
+		 }
+	}
+}
+
+###Place holder for commies
+country_event = { 
+	id = lithuania.53
+	title = "Response"
+	desc = "The response was.. "
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+	 name = "Positive"
+	 trigger = {
+		has_country_flag = LIT_com_ally_agrees
+	 }
+	 add_political_power = 50
+	}
+
+	option = {
+		name = "Negative"
+		trigger = {
+			has_country_flag = LIT_com_ally_DENIES
+		 }
+		 add_political_power = -50
+	}
+}
+
+
+###Place holder for commies
+country_event = { 
+	id = lithuania.54
+	title = "WHAT WE HAVE ACHIEVED"
+	desc = lithuania.54.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+	 name = "LONG LIVE THE REVOLUTION!"
+	 add_political_power = 150
+	}
+	
 }

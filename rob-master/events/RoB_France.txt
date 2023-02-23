@@ -611,6 +611,12 @@ FRS = {
 		add_core_of = FRS
 		}
 }
+FRA = {
+	every_state = {
+limit = { NOT = { is_core_of = FRA }  is_owned_by = FRA}
+add_claim_by = FRS
+}
+}
 }
 
 }
@@ -650,6 +656,12 @@ FRS = {
 		limit = { is_core_of = FRA }
 		add_core_of = FRS
 		}
+}
+FRA = {
+	every_state = {
+limit = { NOT = { is_core_of = FRA }  is_owned_by = FRA}
+add_claim_by = FRS
+}
 }
 }
 }
@@ -698,6 +710,12 @@ FRP = {
 		add_core_of = FRP
 		}
 }
+FRA = {
+	every_state = {
+limit = { NOT = { is_core_of = FRA }  is_owned_by = FRA}
+add_claim_by = FRP
+}
+}
 }
 }
 
@@ -733,6 +751,12 @@ FRP = {
 		limit = { is_core_of = FRA }
 		add_core_of = FRP
 		}
+}
+FRA = {
+	every_state = {
+limit = { NOT = { is_core_of = FRA }  is_owned_by = FRA}
+add_claim_by = FRP
+}
 }
 country_event = { id = rob_france.23 days = 2 }
 }
@@ -777,6 +801,12 @@ FRR = {
 		add_core_of = FRR
 		}
 }
+FRA = {
+	every_state = {
+limit = { NOT = { is_core_of = FRA }  is_owned_by = FRA}
+add_claim_by = FRR
+}
+}
 country_event = { id = rob_france.24 days = 2 }
 }
 }
@@ -807,6 +837,12 @@ FRR = {
 		limit = { is_core_of = FRA }
 		add_core_of = FRR
 		}
+}
+FRA = {
+	every_state = {
+limit = { NOT = { is_core_of = FRA }  is_owned_by = FRA}
+add_claim_by = FRR
+}
 }
 country_event = { id = rob_france.24 days = 2 }
 }
@@ -853,6 +889,12 @@ FRL = {
 		add_core_of = FRL
 		}
 }
+FRA = {
+	every_state = {
+limit = { NOT = { is_core_of = FRA }  is_owned_by = FRA}
+add_claim_by = FRL
+}
+}
 country_event = { id = rob_france.25 days = 2 }
 }
 }
@@ -886,6 +928,12 @@ FRL = {
 		limit = { is_core_of = FRA }
 		add_core_of = FRL
 		}
+}
+FRA = {
+	every_state = {
+limit = { NOT = { is_core_of = FRA }  is_owned_by = FRA}
+add_claim_by = FRL
+}
 }
 country_event = { id = rob_france.25 days = 2 }
 }

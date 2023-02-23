@@ -1,1 +1,195 @@
-﻿
+﻿##### Division Templates #####
+division_template = {
+	name = "Strelkovaya Diviziya"			# Rifle Division
+	division_names_group = SOV_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+	}
+}
+
+
+division_template = {
+	name = "Kavaleriyskaya Diviziya" 	# Cavalry Division
+	division_names_group = SOV_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+
+
+##### OOB #####
+units = {
+		
+	division= {		
+		location = 3224
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}			
+	division= {		
+		location = 3349
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+	division= {		
+		location = 6149
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+	division= {			
+		location = 12
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+	division= {			
+		location = 196
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+
+	division= {			
+		location = 9133
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+
+	division= {			
+		location = 6100
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+
+	division= {			
+		location = 9124
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+
+	division= {			
+		location = 6279
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+
+	division= {			
+		location = 11242
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+
+	division= {			
+		location = 11234
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+
+	division= {			
+		location = 11202
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+
+	division= {			
+		location = 3151
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+
+	division= {			
+		location = 306
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+
+	division= {			
+		location = 6380
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+
+	division= {			
+		location = 11375
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+
+	division= {			
+		location = 117
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.4
+	}	
+
+
+
+}
+		
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+	
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "SOV"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "SOV" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+}
+	#####################

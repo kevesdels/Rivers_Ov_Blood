@@ -5319,7 +5319,6 @@ add_tech_bonus = {
 			}
 			prerequisite = { focus = LIT_declare_land_reform  }
 			completion_reward = {
-				add_ideas = lit_force_collect
 				country_event = { id = lithuania.45 days = 1 }
 			}
 		}
@@ -5469,7 +5468,6 @@ add_tech_bonus = {
 			prerequisite = { focus = LIT_first_step_towards_lithuanian_socialism  }
 			completion_reward = {
 				country_event = { id = lithuania.47 days = 1 }
-				add_stability = 0.08
 			}
 		}
 	
@@ -5485,7 +5483,8 @@ add_tech_bonus = {
 			}
 			prerequisite = { focus = LIT_cult_of_progress  }
 			completion_reward = {
-				custom_effect_tooltip = "Mission to Build stuff in 5 years, reward at the end(WIP)"
+				custom_effect_tooltip = LIT_planas
+				set_country_flag = LIT_comm_mission
 			}
 		}
 	
@@ -5501,7 +5500,7 @@ add_tech_bonus = {
 			}
 			prerequisite = { focus = LIT_revolution_of_the_industry  } prerequisite = { focus = LIT_urbanise_the_nation  } prerequisite = { focus = LIT_penkmecioplanas  }
 			completion_reward = {
-				country_event = { id = lithuania.48 days = 1 }
+				custom_effect_tooltip = LIT_COM_PREP
 			}
 		}
 	
@@ -5534,9 +5533,11 @@ add_tech_bonus = {
 			}
 			prerequisite = { focus = LIT_declare_the_union_of_national_socialist_republics  }
 			completion_reward = {
-				custom_effect_tooltip = "Once Belarus unified, event for fusion(WIP)"
 				country_event = { id = lithuania.49 days = 1 }
 			}
+			will_lead_to_war_with = BLR
+			will_lead_to_war_with = CBR
+			will_lead_to_war_with = DBR
 		}
 	
 		#Socialist Diplomacy
@@ -5549,9 +5550,17 @@ add_tech_bonus = {
 			search_filters = {
 				FOCUS_FILTER_POLITICAL
 			}
+			available = {
+				has_war = NO
+				has_country_flag = annex_blr
+				OR = {
+					SOV = {exists = yes }
+					GER = {exists = yes }
+				}
+			}
 			prerequisite = { focus = LIT_intervene_in_belarus  }
 			completion_reward = {
-				custom_effect_tooltip = "Pick Germany or Russia as ally(WIP)"
+				country_event = { id = lithuania.51 days = 1 }
 			}
 		}
 	
@@ -5567,7 +5576,8 @@ add_tech_bonus = {
 			}
 			prerequisite = { focus = LIT_socialist_diplomacy  }
 			completion_reward = {
-				custom_effect_tooltip = "Invade people(WIP)"
+				custom_effect_tooltip = LIT_com_invade_tooltip
+				set_country_flag = LIT_com_kill_lohs
 			}
 		}
 	
@@ -5602,7 +5612,8 @@ add_tech_bonus = {
 			}	
 			prerequisite = { focus = LIT_ethnic_borders  }
 			completion_reward = {
-				custom_effect_tooltip = "Decisions to transfer Population(WIP)"
+				custom_effect_tooltip = LIT_com_transfer_tooltip
+				set_country_flag = LIT_pop_transfer_enabled
 			}
 	
 		}
@@ -5613,13 +5624,31 @@ add_tech_bonus = {
 			icon = GFX_goal_unknown
 			x = 50
 			y = 12
-			cost = 5
+			cost = 8
 			search_filters = {
 				FOCUS_FILTER_INDUSTRY
 			}
 			prerequisite = { focus = LIT_prepare_population_transfers  }
+			available = {
+				has_country_flag = annex_blr
+			}
 			completion_reward = {
-				custom_effect_tooltip = "Improves Older Ideas(WIP)"
+				swap_ideas = {
+					remove_idea = LIT_soc_work_con
+					add_idea = LIT_soc_work_con_2
+				}
+				swap_ideas = {
+					remove_idea = LIT_soc_housing
+					add_idea = LIT_soc_housing_2
+				}
+				swap_ideas = {
+					remove_idea = LIT_darbinieku_milici
+					add_idea = LIT_darbinieku_milici_2
+				}
+				swap_ideas = {
+					remove_idea = LIT_urbanization
+					add_idea = LIT_urbanization_2
+				}
 			}
 		}
 	
@@ -5635,7 +5664,7 @@ add_tech_bonus = {
 			}
 			prerequisite = { focus = LIT_aid_foreign_revolutions  } prerequisite = { focus = LIT_centralise_the_economies  }
 			completion_reward = {
-				country_event = { id = lithuania.50 days = 1 }
+				country_event = { id = lithuania.54 days = 1 }
 			}
 		}
 

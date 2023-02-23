@@ -47,7 +47,11 @@ option = {
 			id = "CAU"
 			value = 50000
 		}
- 
+    add_equipment_to_stockpile = {
+      type = infantry_equipment
+      amount = 4000
+      producer = CAA
+  }
  }
  CRM = {
  add_ai_strategy = {
@@ -60,7 +64,11 @@ option = {
 			id = "CAU"
 			value = 50000
 		}
- 
+    add_equipment_to_stockpile = {
+      type = infantry_equipment
+      amount = 4000
+      producer = CRM
+  }
  }
  CAU = {
  add_ai_strategy = {
@@ -73,7 +81,11 @@ option = {
 			id = "CRM"
 			value = 50000
 		}
- 
+    add_equipment_to_stockpile = {
+      type = infantry_equipment
+      amount = 4000
+      producer = CAU
+  }
  }
  CAA = { 
 every_state = {
