@@ -740,3 +740,172 @@ option = {
 
 
  }
+ 
+
+#### Bonapartist stuff
+ country_event = {
+  id = fra_annex.6
+  desc = "We are in position to restore Kingship in Italy, but who will sit on the throne?"
+  title = "Fate of Italy"
+  
+  mean_time_to_happen = { days = 1 }
+  trigger = {
+    tag = FRA
+    has_war = no
+    has_country_flag = fra_monarhcist_path
+    NOT = { has_country_flag = annex_ita }
+  }
+
+option = {
+  name = "Italian house will do"
+  trigger = { has_country_flag = fra_mon_ita_royals }
+  puppet = ITA
+  hidden_effect = { ITA = { promote_character = ITA_victor_emmanuel_iii } }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+    is_claim_or_core = yes
+   }
+      is_core_of = ITA
+  }
+  ITA = { transfer_state = PREV }
+  }
+
+}
+option = {
+  name = "Perhaps, a Bourbon?"
+  add_stability = -0.05
+  add_war_support = -0.05
+  puppet = ITA
+  hidden_effect = { ITA = { promote_character = ITA_ranieri_maria_gaetano } }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+    is_claim_or_core = yes
+   }
+      is_core_of = ITA
+  }
+  ITA = { transfer_state = PREV }
+  }
+
+}
+
+}
+
+country_event = {
+  id = fra_annex.7
+  desc = "We are in position to restore Kingship in Spain, but who will sit on the throne?"
+  title = "Fate of Spain"
+  
+  mean_time_to_happen = { days = 1 }
+  trigger = {
+    tag = FRA
+    has_war = no
+    has_country_flag = fra_monarhcist_path
+    NOT = { has_country_flag = annex_spr }
+  }
+
+option = {
+  name = "Put Bourbons back on throne"
+  trigger = { has_country_flag = fra_shelter_spanish_royalists }
+  puppet = SPR
+  hidden_effect = { SPR = { promote_character = SPR_Infante_Juan } }
+  every_owned_state = {
+    limit = { 
+     NOT = {
+    is_claim_or_core = yes
+   }
+      is_core_of = SPR
+  }
+  SPR = { transfer_state = PREV }
+  }
+
+}
+
+}
+
+country_event = {
+  id = fra_annex.8
+  desc = "We are in position to restore Kingship in Britain, but who will sit on the throne?"
+  title = "Fate of Britain"
+  
+  mean_time_to_happen = { days = 1 }
+  trigger = {
+    tag = FRA
+    has_war = no
+    has_country_flag = fra_monarhcist_path
+    NOT = { has_country_flag = annex_spr }
+  }
+
+
+  option = {
+    name = "Restore British Monarchy"
+    trigger = { has_country_flag = fra_mon_eng_royals }
+    puppet = BRU
+    every_owned_state = {
+      limit = { 
+       NOT = {
+      is_claim_or_core = yes
+     }
+     OR = {
+     is_core_of = ENG
+     is_core_of = BRU
+     is_core_of = BRL
+     is_core_of = BRC
+     is_core_of = BLF
+     }
+    }
+    add_core_of = BRU
+    BRU = { transfer_state = PREV }
+  }
+  
+  }
+
+
+  option = {
+    name = "What about...a Burbon Britain?"
+    trigger = { has_country_flag = fra_mon_eng_royals }
+    puppet = BRU
+    every_owned_state = {
+      limit = { 
+       NOT = {
+      is_claim_or_core = yes
+     }
+     OR = {
+     is_core_of = ENG
+     is_core_of = BRU
+     is_core_of = BRL
+     is_core_of = BRC
+     is_core_of = BLF
+     }
+    }
+    add_core_of = BRU
+    BRU = { transfer_state = PREV }
+  }
+  
+  }
+
+
+  option = {
+    name = "Create a puppet"
+    trigger = { NOT = {  has_country_flag = fra_mon_eng_royals } }
+    puppet = BRU
+    every_owned_state = {
+      limit = { 
+       NOT = {
+      is_claim_or_core = yes
+     }
+     OR = {
+     is_core_of = ENG
+     is_core_of = BRU
+     is_core_of = BRL
+     is_core_of = BRC
+     is_core_of = BLF
+     }
+    }
+    add_core_of = BRU
+    BRU = { transfer_state = PREV }
+  }
+    }
+  
+}

@@ -1557,6 +1557,7 @@ name = rob_france.34.a
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_sorel_win
+set_country_flag = fra_politics_chosen
 set_cosmetic_tag = FRS_victory 
 set_capital = { state = 16 }
 if = {
@@ -1761,6 +1762,7 @@ is_triggered_only = yes
 
 option = { 
 name = rob_france.36.a
+set_country_flag = fra_politics_chosen
 set_politics = {
 	ruling_party = democratic_socialist 
 	elections_allowed = no 
@@ -1782,6 +1784,7 @@ is_triggered_only = yes
 
 option = { 
 name = rob_france.52.a
+set_country_flag = fra_politics_chosen
 set_politics = {
 	ruling_party = socialist 
 	elections_allowed = no 
@@ -2084,6 +2087,7 @@ picture = GFX_picture_FRA_darlan_succeeds_petain
 option = { 
 name = rob_france.43.a
 set_cosmetic_tag = FRA_darlan
+set_country_flag = fra_politics_chosen
 set_politics = {
 	ruling_party = reactionary
 	elections_allowed = no 
@@ -2133,6 +2137,7 @@ picture = GFX_picture_FRA_desperey_after_petain
 
 option = { 
 name = rob_france.45.a
+set_country_flag = fra_politics_chosen
 set_politics = {
 	ruling_party = reactionary
 	elections_allowed = no 
@@ -2169,6 +2174,7 @@ picture = GFX_picture_FRA_delarocque_after_petain
 
 option = { 
 name = rob_france.46.a
+set_country_flag = fra_politics_chosen
 set_politics = {
 	ruling_party = authoritharian
 	elections_allowed = no 
@@ -2208,6 +2214,8 @@ name = rob_france.47.a
 ai_chance = {
 	factor = 100
 }
+set_country_flag = fra_politics_chosen
+set_country_flag = fra_monarhcist_path
 	create_country_leader = {
 	  name = "Jean III"
 	  desc = ""
@@ -2227,6 +2235,8 @@ option = { #Henry VI
 	ai_chance = {
 		factor = 0
 	}
+	set_country_flag = fra_politics_chosen
+set_country_flag = fra_monarhcist_path
 	create_country_leader = {
 		name = "Henry VI"
 		desc = ""
@@ -2415,6 +2425,7 @@ is_triggered_only = yes
 ####Maurras
 option = { 
 name = rob_france.50.a
+set_country_flag = fra_politics_chosen
 set_country_flag = fra_maurras_route
 create_country_leader = {
 	name = "Charles Maurras"
@@ -2431,6 +2442,7 @@ create_country_leader = {
 ####Dumezil
 option = { 
 	name = rob_france.50.b
+	set_country_flag = fra_politics_chosen
 	set_country_flag = fra_dumezil_route
 	create_country_leader = {
 		name = "Georges Dumézil"
@@ -3585,6 +3597,7 @@ is_triggered_only = yes
 
 option = {
 name = rob_france.104.a
+set_country_flag = fra_politics_chosen
 set_politics = {
 	ruling_party = social_democracy 
 	elections_allowed = no 
@@ -3612,6 +3625,7 @@ add_ideas = {
 
 option = {
 name = rob_france.104.b
+set_country_flag = fra_politics_chosen
 set_politics = {
 	ruling_party = social_democracy 
 	elections_allowed = no 
@@ -6719,7 +6733,6 @@ country_event = { ### Colonies, Radicals begin talks
 id = rob_france.126
 title = rob_france.126.t
 desc = rob_france.126.d
-fire_only_once = yes
 is_triggered_only = yes
 
 option = {####rape us daddy!
@@ -6755,7 +6768,6 @@ country_event = { ### Colonies, Radicals get answer
 id = rob_france.127
 title = rob_france.127.t
 desc = rob_france.127.d
-fire_only_once = yes
 is_triggered_only = yes
 
 option = {  #### incorporated
@@ -6834,23 +6846,38 @@ trigger = {
 
 	OR = {
 		AND = {
-			is_puppet_of = FRA
+			OR = {
+				is_puppet_of = FRA
+				is_subject_of = FRA
+			}
 			FRA = { has_completed_focus = FRA_break_up_colonial_oligarchies }
 		}
 		AND = {
-			is_puppet_of = FRL
+			OR = {
+				is_puppet_of = FRL
+				is_subject_of = FRL
+			}
 			FRL = { has_completed_focus = FRA_break_up_colonial_oligarchies }
 		}
 		AND = {
-			is_puppet_of = FRP
+			OR = {
+				is_puppet_of = FRP
+				is_subject_of = FRP
+			}
 			FRP = { has_completed_focus = FRA_break_up_colonial_oligarchies }
 		}
 		AND = {
-			is_puppet_of = FRS
+			OR = {
+				is_puppet_of = FRS
+				is_subject_of = FRS
+			}
 			FRS = { has_completed_focus = FRA_break_up_colonial_oligarchies }
 		}
 		AND = {
-			is_puppet_of = FRR
+			OR = {
+				is_puppet_of = FRR
+				is_subject_of = FRR
+			}
 			FRR = { has_completed_focus = FRA_break_up_colonial_oligarchies }
 		}
 	}
@@ -6882,23 +6909,38 @@ trigger = {
 
 	OR = {
 		AND = {
-			is_puppet_of = FRA
+			OR = {
+				is_puppet_of = FRA
+				is_subject_of = FRA
+			}
 			FRA = { has_completed_focus = FRA_modernize_colonial_agriculture }
 		}
 		AND = {
-			is_puppet_of = FRL
+			OR = {
+				is_puppet_of = FRL
+				is_subject_of = FRL
+			}
 			FRL = { has_completed_focus = FRA_modernize_colonial_agriculture }
 		}
 		AND = {
-			is_puppet_of = FRP
+			OR = {
+				is_puppet_of = FRP
+				is_subject_of = FRP
+			}
 			FRP = { has_completed_focus = FRA_modernize_colonial_agriculture }
 		}
 		AND = {
-			is_puppet_of = FRS
+			OR = {
+				is_puppet_of = FRS
+				is_subject_of = FRS
+			}
 			FRS = { has_completed_focus = FRA_modernize_colonial_agriculture }
 		}
 		AND = {
-			is_puppet_of = FRR
+			OR = {
+				is_puppet_of = FRR
+				is_subject_of = FRR
+			}
 			FRR = { has_completed_focus = FRA_modernize_colonial_agriculture }
 		}
 	}
@@ -6912,6 +6954,562 @@ option = {  ####
 		FRA_modern_agriculture
 	}
 	set_country_flag = fra_colonial_agri_checked
+	}
+
+}
+
+
+country_event = { ### hands out debuff if owns colony after civil war
+id = rob_france.131
+title = rob_france.131.t
+desc = rob_france.131.d
+trigger = {
+	NOT = { has_country_flag = fra_colonies_done }
+	OR = {
+		tag = FRP
+		tag = FRA
+		tag = FRP
+		tag = FRR
+		tag = FRS
+	}
+	has_country_flag = FRA_not_abandon_colonies
+	NOT = { has_idea = fra_colonial_problems  }
+	NOT = { has_idea = fra_colonial_problems_2  }
+	NOT = { has_idea = fra_colonial_problems_3  }
+	NOT = { has_idea = fra_colonial_problems_4  }
+	OR = {
+		FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+		FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+		FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+		SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+	}
+}
+
+option = {  #### 
+	name = rob_france.130.a
+	add_ideas = {
+		fra_colonial_problems
+	}
+
+	}
+
+}
+
+country_event = { ### hands out debuff if owns second colony after cw
+id = rob_france.132
+title = rob_france.132.t
+desc = rob_france.132.d
+trigger = {
+	NOT = { has_country_flag = fra_colonies_done }
+	OR = {
+		OR = {
+			AND = {
+				FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				NOT = { SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				has_idea = fra_colonial_problems
+			}
+			AND = {
+				FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				NOT = { SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				has_idea = fra_colonial_problems
+			}
+			AND = {
+				FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				NOT = { FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				has_idea = fra_colonial_problems
+			}
+			AND = {
+				FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				NOT = { FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				has_idea = fra_colonial_problems
+			}
+			AND = {
+				FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				NOT = { SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				has_idea = fra_colonial_problems
+			}
+			AND = {
+				SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				NOT = { FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				has_idea = fra_colonial_problems
+			}
+		}
+		OR = {
+			AND = {
+				FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				NOT = { has_idea = fra_colonial_problems_2 has_idea = fra_colonial_problems_3 has_idea = fra_colonial_problems_4 }
+			}
+			AND = {
+				FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				NOT = { has_idea = fra_colonial_problems_2 has_idea = fra_colonial_problems_3 has_idea = fra_colonial_problems_4 }
+			}
+			AND = {
+				FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				NOT = { has_idea = fra_colonial_problems_2 has_idea = fra_colonial_problems_3 has_idea = fra_colonial_problems_4 }
+			}
+			AND = {
+				FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				NOT = { has_idea = fra_colonial_problems_2 has_idea = fra_colonial_problems_3 has_idea = fra_colonial_problems_4 }
+			}
+		}
+	}
+}
+
+option = {  #### 
+	name = rob_france.132.a
+	swap_ideas = {
+		remove_idea = fra_colonial_problems
+		add_idea = fra_colonial_problems_2
+	}
+
+	}
+
+}
+
+country_event = { ### hands out debuff if owns second colony after cw
+id = rob_france.133
+title = rob_france.133.t
+desc = rob_france.133.d
+trigger = {
+	NOT = { has_country_flag = fra_colonies_done }
+	OR = {
+		OR = {
+			AND = {
+				FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				has_idea = fra_colonial_problems_2
+			}
+			AND = {
+				FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				has_idea = fra_colonial_problems_2
+			}
+			AND = {
+				FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				has_idea = fra_colonial_problems_2
+			}
+			AND = {
+				FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+				NOT = { FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } } }
+				has_idea = fra_colonial_problems_2
+			}
+		}
+		AND = {
+			FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+			FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+			FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+			SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+			NOT = { has_idea = fra_colonial_problems_3 has_idea = fra_colonial_problems_4 }
+		}
+	}
+}
+
+option = {  #### 
+	name = rob_france.133.a
+	IF = {
+		limit = { has_idea = fra_colonial_problems_2}
+		swap_ideas = {
+			remove_idea = fra_colonial_problems_2
+			add_idea = fra_colonial_problems_3
+		}
+	}
+
+	}
+
+}
+
+country_event = { ### hands out debuff if owns second colony after cw
+id = rob_france.134
+title = rob_france.134.t
+desc = rob_france.134.d
+trigger = {
+	NOT = { has_country_flag = fra_colonies_done }
+	has_idea = fra_colonial_problems_3
+	AND = {
+		FWA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+		FEA = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+		FIC = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+		SYR = { OR = { is_puppet_of = ROOT is_subject_of = ROOT } }
+	}
+}
+
+option = {  #### 
+	name = rob_france.134.a
+
+	IF = {
+		limit = { has_idea = fra_colonial_problems_2}
+		swap_ideas = {
+			remove_idea = fra_colonial_problems_2
+			add_idea = fra_colonial_problems_3
+		}
+	}
+
+	swap_ideas = {
+		remove_idea = fra_colonial_problems_3
+		add_idea = fra_colonial_problems_4
+	}
+
+	}
+
+}
+
+
+country_event = { ### colony give cfa frank if wasnt puppet
+id = rob_france.135
+title = rob_france.135.t
+desc = rob_france.135.d
+trigger = {
+	OR = {
+		tag = FIC
+		tag = FEA
+		tag = FWA
+		tag = SYR
+	}	
+
+	OR = {
+		AND = {
+			OR = {
+				is_puppet_of = FRA
+				is_subject_of = FRA
+			}
+			FRA = { has_completed_focus = FRA_increase_colonial_taxes }
+		}
+		AND = {
+			OR = {
+				is_puppet_of = FRL
+				is_subject_of = FRL
+			}
+			FRL = { has_completed_focus = FRA_increase_colonial_taxes }
+		}
+		AND = {
+			OR = {
+				is_puppet_of = FRP
+				is_subject_of = FRP
+			}
+			FRP = { has_completed_focus = FRA_increase_colonial_taxes }
+		}
+		AND = {
+			OR = {
+				is_puppet_of = FRS
+				is_subject_of = FRS
+			}
+			FRS = { has_completed_focus = FRA_increase_colonial_taxes }
+		}
+		AND = {
+			OR = {
+				is_puppet_of = FRR
+				is_subject_of = FRR
+			}
+			FRR = { has_completed_focus = FRA_increase_colonial_taxes }
+		}
+	}
+	NOT = { has_idea = fra_colonial_frank_colony }
+	NOT = { has_country_flag = fra_colonial_cfa_frank has_country_flag = fra_colonial_cfa_frank_checked }
+}
+
+option = {  #### 
+	name = rob_france.135.a
+	add_ideas = {
+		FRA_increase_colonial_taxes
+	}
+	set_country_flag = fra_colonial_cfa_frank_checked
+	}
+
+}
+
+country_event = { ### colony give colonial exploitation if wasnt puppet
+id = rob_france.135
+title = rob_france.135.t
+desc = rob_france.135.d
+trigger = {
+	OR = {
+		tag = FIC
+		tag = FEA
+		tag = FWA
+		tag = SYR
+	}	
+
+	OR = {
+		AND = {
+			OR = {
+				is_puppet_of = FRA
+				is_subject_of = FRA
+			}
+			FRA = { has_completed_focus = FRA_increase_raw_resource_aqusition }
+			NOT = { has_completed_focus = FRA_suppress_colonial_trade_unions }
+		}
+		AND = {
+			OR = {
+				is_puppet_of = FRL
+				is_subject_of = FRL
+			}
+			FRL = { has_completed_focus = FRA_increase_raw_resource_aqusition }
+			NOT = { has_completed_focus = FRA_suppress_colonial_trade_unions }
+		}
+		AND = {
+			OR = {
+				is_puppet_of = FRP
+				is_subject_of = FRP
+			}
+			FRP = { has_completed_focus = FRA_increase_raw_resource_aqusition }
+			NOT = { has_completed_focus = FRA_suppress_colonial_trade_unions }
+		}
+		AND = {
+			OR = {
+				is_puppet_of = FRS
+				is_subject_of = FRS
+			}
+			FRS = { has_completed_focus = FRA_increase_raw_resource_aqusition }
+			NOT = { has_completed_focus = FRA_suppress_colonial_trade_unions }
+		}
+		AND = {
+			OR = {
+				is_puppet_of = FRR
+				is_subject_of = FRR
+			}
+			FRR = { has_completed_focus = FRA_increase_raw_resource_aqusition }
+			NOT = { has_completed_focus = FRA_suppress_colonial_trade_unions }
+		}
+	}
+	NOT = { has_idea = fra_colonial_frank_colony }
+	NOT = { has_country_flag = fra_colonial_exploit_1 has_country_flag = fra_colonial_exploit_1_checked }
+}
+
+option = {  #### 
+	name = rob_france.135.a
+	add_ideas = {
+		fra_colonial_exploitation
+	}
+	set_country_flag = fra_colonial_exploit_1_checked
+	}
+
+}
+
+
+country_event = { ### colony give colonial_exploitation_2 if wasnt puppet
+id = rob_france.136
+title = rob_france.136.t
+desc = rob_france.136.d
+trigger = {
+	OR = {
+		tag = FIC
+		tag = FEA
+		tag = FWA
+		tag = SYR
+	}	
+
+	OR = {
+		AND = {
+			OR = {
+				is_puppet_of = FRA
+				is_subject_of = FRA
+			}
+			FRA = { has_completed_focus = FRA_suppress_colonial_trade_unions }
+		}
+		AND = {
+			OR = {
+				is_puppet_of = FRL
+				is_subject_of = FRL
+			}
+			FRL = { has_completed_focus = FRA_suppress_colonial_trade_unions }
+		}
+		AND = {
+			OR = {
+				is_puppet_of = FRP
+				is_subject_of = FRP
+			}
+			FRP = { has_completed_focus = FRA_suppress_colonial_trade_unions }
+		}
+		AND = {
+			OR = {
+				is_puppet_of = FRS
+				is_subject_of = FRS
+			}
+			FRS = { has_completed_focus = FRA_suppress_colonial_trade_unions }
+		}
+		AND = {
+			OR = {
+				is_puppet_of = FRR
+				is_subject_of = FRR
+			}
+			FRR = { has_completed_focus = FRA_suppress_colonial_trade_unions }
+		}
+	}
+	NOT = { has_idea = fra_colonial_frank_colony }
+	NOT = { has_country_flag = fra_colonial_exploit_2 has_country_flag = fra_colonial_exploit_2_checked }
+}
+
+option = {  #### 
+	name = rob_france.136.a
+
+	swap_ideas = {
+		remove_idea = fra_colonial_exploitation
+		add_idea = fra_colonial_exploitation_2
+	}
+
+	set_country_flag = fra_colonial_exploit_2_checked
+	}
+
+}
+
+country_event = { ### The genarlls
+id = rob_france.137
+title = rob_france.137.t
+desc = rob_france.137.d
+is_triggered_only = yes
+
+### FRS
+
+option = {  #### 
+	name = "No mercy for capitalist dogs!"
+	trigger = {
+		tag = FRS
+	}
+	add_political_power = 150
+	add_stability = 0.03
+	}
+
+option = {  #### 
+	name = "Their skill is needed"
+	trigger = {
+		tag = FRS
+	}
+	FRR = {
+		FRR_georges_catroux = {
+			set_nationality = {
+				target_country = FRS
+			}
+		}
+		FRR_joseph_putz = {
+			set_nationality = {
+				target_country = FRS
+			}
+		}
+		FRR_gaston_billote = {
+			set_nationality = {
+				target_country = FRS
+			}
+		}
+		FRR_raoul_magrinvernerey = {
+			set_nationality = {
+				target_country = FRS
+			}
+		}
+	}
+	}
+
+
+### FRA
+
+option = {  #### 
+	name = "Once a traitor, always a traitor"
+	trigger = {
+		tag = FRA
+	}
+	add_political_power = 150
+	add_stability = 0.03
+	}
+
+option = {  #### 
+	name = "Their skill is needed"
+	trigger = {
+		tag = FRA
+	}
+	FRL = {
+		FRL_rené_olry = {
+			set_nationality = {
+				target_country = FRA
+			}
+		}
+		FRL_françois_sevez = {
+			set_nationality = {
+				target_country = FRA
+			}
+		}
+		FRL_joseph_de_goislard = {
+			set_nationality = {
+				target_country = FRA
+			}
+		}
+		FRL_maurice_grisot = {
+			set_nationality = {
+				target_country = FRA
+			}
+		}
+	}
+	}
+
+### FRL
+
+option = {  #### 
+	name = "\(soyjack)/"
+	trigger = {
+		tag = FRL
+	}
+	add_political_power = 150
+	add_stability = 0.03
+	}
+
+option = {  #### 
+	name = "Their skill is needed"
+	trigger = {
+		tag = FRL
+	}
+	FRA = {
+		FRA_Maurice_Gamelin = {
+			set_nationality = {
+				target_country = FRL
+			}
+		}
+		FRA_maxime_weygand = {
+			set_nationality = {
+				target_country = FRL
+			}
+		}
+		FRA_henri_giraud = {
+			set_nationality = {
+				target_country = FRL
+			}
+		}
+		FRA_jeanmarie_charles_abrial = {
+			set_nationality = {
+				target_country = FRL
+			}
+		}
+	}
 	}
 
 }

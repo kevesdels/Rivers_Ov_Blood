@@ -1,0 +1,45 @@
+capital = 574
+
+set_research_slots = 3
+oob = "EVE_1934"
+
+set_technology = {
+	basic_train = 1
+	infantry_weapons = 1
+	tech_support = 1		
+}
+
+
+set_politics = {
+	ruling_party = conservative
+	last_election = "1933.10.12"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	national_socialist = 0
+	socialist = 0
+	democratic_socialist = 0
+	social_democracy = 23
+	social_liberal = 25
+	conservative = 40
+	authoritharian = 12
+	reactionary = 0
+	pelekist = 0
+}
+
+add_ideas = {
+limited_conscription
+ROB_russian_warlords
+}
+
+create_country_leader = {
+	
+	name = "N'iuku"
+	picture = "gfx/leaders/EVE/even_man.dds"
+	expire = "1965.1.1"
+	ideology = conservative_subtype
+	traits = {
+		
+	}
+}

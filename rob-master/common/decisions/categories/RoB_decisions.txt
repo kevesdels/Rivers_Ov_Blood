@@ -798,8 +798,7 @@ FRA_colony_reclaiming = {
 			tag = FRA
 			tag = FRL
 			}
-			has_war = no
-			has_country_flag = FRA_civil_war
+			has_country_flag = fra_cw_over
 			NOT = { has_country_flag = FRA_colonies_abandoned }
 		}
 		available = {
@@ -819,14 +818,28 @@ FRA_colony_reclaiming_radicals = {
 			tag = FRP
 			tag = FRS
 			}
-			has_war = no
-			has_country_flag = FRA_civil_war
+			has_country_flag = fra_cw_over
 			NOT = { has_country_flag = FRA_colonies_abandoned }
 		}
 		available = {
-			not = { has_country_flag = FRA_colony_negotiation }
+
 		}
 		priority = {
+		base = 120
+		}
+}
+
+FRA_monarchist_diplomacy = {
+	icon = GFX_decision_category_generic
+	visible = {
+		OR = {
+			tag = FRR
+		}
+	}
+	available = {
+		NOT = { is_puppet = yes }
+	}
+	priority = {
 		base = 120
 		}
 }

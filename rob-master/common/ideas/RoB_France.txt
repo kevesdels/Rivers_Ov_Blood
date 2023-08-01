@@ -12,7 +12,7 @@ ideas = {
        always = yes
      }
     removal_cost = -1
-  picture = GFX_idea_overextendadsf
+  picture = FRA_eco_disaster
     modifier = {
       consumer_goods_factor = 0.35
       production_factory_max_efficiency_factor = -0.15
@@ -48,7 +48,7 @@ allowed_civil_war = {
      always = yes
    }
   removal_cost = -1
-picture = GFX_idea_overextendadsf
+picture = FRA_ww1_aftermath
   modifier = {
     conscription_factor = -0.40
    }
@@ -63,7 +63,7 @@ allowed_civil_war = {
      always = yes
    }
   removal_cost = -1
-picture = GFX_idea_overextendadsf
+picture = FRA_ww1_aftermath
   modifier = {
     conscription_factor = -0.20
    }
@@ -78,7 +78,7 @@ allowed_civil_war = {
      always = yes
    }
   removal_cost = -1
-picture = GFX_idea_overextendadsf
+picture = FRA_unstable_gov
   modifier = {
     stability_factor = -0.20
     political_power_gain = -0.4
@@ -94,7 +94,7 @@ allowed_civil_war = {
      always = yes
    }
   removal_cost = -1
-picture = GFX_idea_overextendadsf
+picture = FRA_pol_violence
   modifier = {
     stability_factor = -0.05
    }
@@ -109,7 +109,7 @@ allowed_civil_war = {
      always = yes
    }
   removal_cost = -1
-picture = GFX_idea_overextendadsf
+picture = FRA_pol_violence
   modifier = {
     stability_factor = -0.1
    }
@@ -124,7 +124,7 @@ allowed_civil_war = {
      always = yes
    }
   removal_cost = -1
-picture = GFX_idea_overextendadsf
+picture = FRA_struggling_arm
   modifier = {
     conscription = -0.005
     war_support_factor = -0.1
@@ -140,7 +140,7 @@ allowed_civil_war = {
      always = yes
    }
   removal_cost = -1
-picture = GFX_idea_overextendadsf
+picture = FRA_mag_line
   modifier = {
     consumer_goods_factor = 0.05
     production_speed_bunker_factor = 0.10
@@ -516,7 +516,7 @@ allowed_civil_war = {
   removal_cost = -1
 picture = GFX_idea_overextendadsf
   modifier = {
-    production_factory_max_efficiency_factor = -0.1
+    production_factory_max_efficiency_factor = -0.05
     consumer_goods_factor = 0.05
     production_lack_of_resource_penalty_factor = 0.25
    }
@@ -533,7 +533,7 @@ allowed_civil_war = {
   removal_cost = -1
 picture = GFX_idea_overextendadsf
   modifier = {
-    production_factory_max_efficiency_factor = -0.15
+    production_factory_max_efficiency_factor = -0.1
     consumer_goods_factor = 0.075
     production_lack_of_resource_penalty_factor = 0.50
    }
@@ -550,7 +550,7 @@ allowed_civil_war = {
   removal_cost = -1
 picture = GFX_idea_overextendadsf
   modifier = {
-    production_factory_max_efficiency_factor = -0.20
+    production_factory_max_efficiency_factor = -0.15
     consumer_goods_factor = 0.1
     production_lack_of_resource_penalty_factor = 0.75
    }
@@ -567,10 +567,108 @@ allowed_civil_war = {
   removal_cost = -1
 picture = GFX_idea_overextendadsf
   modifier = {
-    production_factory_max_efficiency_factor = -0.25
+    production_factory_max_efficiency_factor = -0.20
     consumer_goods_factor = 0.125
     production_lack_of_resource_penalty_factor = 1.0
    }
+}
+
+FRA_french_supremacy = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    political_power_gain = 0.15
+    army_core_defence_factor = 0.2
+    army_core_attack_factor = 0.2
+    recruitable_population_factor = -0.2
+   }
+}
+
+
+fra_colonial_frank_france = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    consumer_goods_factor = -0.05
+   }
+}
+
+fra_colonial_frank_colony = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    production_speed_buildings_factor = -0.3
+    production_factory_max_efficiency_factor = -0.1
+   }
+}
+
+fra_colonial_frank_colony = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    production_speed_buildings_factor = -0.3
+    production_factory_max_efficiency_factor = -0.1
+   }
+}
+
+fra_colonial_exploitation = {
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    extra_trade_to_overlord_factor = 0.2
+    local_resources_factor = 0.15
+   }
+
+}
+
+fra_colonial_exploitation_2 = {
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    extra_trade_to_overlord_factor = 0.4
+    local_resources_factor = 0.3
+   }
+
 }
 
 fra_eco_disaster_2 = {

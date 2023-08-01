@@ -210,9 +210,12 @@ FRA_colony_reclaiming = {
 
 FRA_abandon_colonies_dec = {
 		fire_only_once = yes
+		visible = {
+			NOT = { has_country_flag = FRA_not_abandon_colonies }
+			NOT = { has_country_flag = FRA_colonies_abandoned }
+		}
 		available = {
 			has_country_flag = fra_cw_over
-			NOT = { has_country_flag = FRA_not_abandon_colonies }
 		  }
 		  ai_will_do = {
 			  base = 0
@@ -222,16 +225,30 @@ FRA_abandon_colonies_dec = {
 		  }
 	  }
 
+FRA_pursed_colonies_dec = {
+		fire_only_once = yes
+		visible = {
+			NOT = { has_country_flag = FRA_colonies_abandoned }
+			NOT = { has_country_flag = FRA_not_abandon_colonies }
+		}
+		available = {
+			has_country_flag = fra_cw_over
+		  }
+		  ai_will_do = {
+			  base = 40
+		  }
+		  complete_effect = {
+			  set_country_flag = FRA_not_abandon_colonies
+		  }
+	  }
 
 FRA_reenstablish_lordship_over_syr = {
   fire_only_once = yes
+  visible = {
+	has_country_flag = FRA_not_abandon_colonies
+  }
   available = {
 	  has_country_flag = fra_cw_over
-	  OR = {
-				has_country_flag = FRP_war_enable
-				has_country_flag = fra_main_colonies
-				has_country_flag = FRR_war_enable
-			}
 	SYR = { 
 		exists = yes 
 		is_puppet = no
@@ -253,13 +270,11 @@ FRA_reenstablish_lordship_over_syr = {
 
 FRA_assist_syr = {
 	fire_only_once = yes
+	visible = {
+		has_country_flag = FRA_not_abandon_colonies
+	  }
   	available = {
 		has_country_flag = fra_cw_over
-		OR = {
-				has_country_flag = FRP_war_enable
-				has_country_flag = fra_main_colonies
-				has_country_flag = FRR_war_enable
-			}
 	OR = {
   		SYR = { has_war_with = HJZ }
 		SYR = { has_war_with = TUR }
@@ -313,13 +328,11 @@ FRA_assist_syr = {
 
   FRA_reenstablish_lordship_over_FWA = {
 	fire_only_once = yes
+	visible = {
+		has_country_flag = FRA_not_abandon_colonies
+	  }
 	available = {
 		has_country_flag = fra_cw_over
-		OR = {
-				has_country_flag = FRP_war_enable
-				has_country_flag = fra_main_colonies
-				has_country_flag = FRR_war_enable
-			}
 	  FWA = { 
 		  exists = yes 
 		  is_puppet = no
@@ -342,13 +355,11 @@ FRA_assist_syr = {
 
   FRA_reenstablish_lordship_over_FIC = {
 	fire_only_once = yes
+	visible = {
+		has_country_flag = FRA_not_abandon_colonies
+	  }
 	available = {
 		has_country_flag = fra_cw_over
-		OR = {
-				has_country_flag = FRP_war_enable
-				has_country_flag = fra_main_colonies
-				has_country_flag = FRR_war_enable
-			}
 		FIC = { 
 		  exists = yes 
 		  is_puppet = no
@@ -374,30 +385,59 @@ FRA_colony_reclaiming_radicals = {
 
 
 
-	FRA_abandon_colonies_dec = {
+FRA_abandon_colonies_RAD_dec = {
 		fire_only_once = yes
+		visible = {
+			NOT = { has_country_flag = FRA_not_abandon_colonies }
+			NOT = { has_country_flag = FRA_colonies_abandoned }
+		}
 		available = {
 			has_country_flag = fra_cw_over
+			has_country_flag = fra_politics_chosen
 		  }
 		  ai_will_do = {
-			  base = 0
+			  base = 10
+			  modifier = { has_government = fra_cw_mil_win factor = 0 }
+			  modifier = { has_government = fra_maurras_route factor = 0 }
+			  modifier = { has_government = fra_dumezil_route factor = 2 }
 		  }
 		  complete_effect = {
 			  set_country_flag = FRA_colonies_abandoned
 		  }
 	  }
 
+FRA_pursed_colonies_RAD_dec = {
+		fire_only_once = yes
+		visible = {
+			NOT = { has_country_flag = FRA_colonies_abandoned }
+			NOT = { has_country_flag = FRA_not_abandon_colonies }
+		}
+		available = {
+			has_country_flag = fra_cw_over
+			has_country_flag = fra_politics_chosen
+		  }
+		  ai_will_do = {
+			base = 10
+		
+			modifier = { has_government = national_socialist factor = 0 }
+
+		}
+		  complete_effect = {
+			  set_country_flag = FRA_not_abandon_colonies
+		  }
+	  }
+
 	FRA_reenstablish_lordship_over_syr_rad = {
 	  fire_only_once = yes
+	  visible = {
+		has_country_flag = FRA_not_abandon_colonies
+		SYR = { NOT = { is_subject_of = ROOT } }
+	  }
 	  available = {
 		  has_country_flag = fra_cw_over
-		  OR = {
-				has_country_flag = FRP_war_enable
-				has_country_flag = fra_main_colonies
-				has_country_flag = FRR_war_enable
-			}
+		  NOT = { has_country_flag = FRA_colony_negotiation }
 		SYR = { 
-			exists = yes 
+			exists = yes
 			is_puppet = no
 			has_war = no
 			}
@@ -412,19 +452,18 @@ FRA_colony_reclaiming_radicals = {
 			set_country_flag = FRA_not_abandon_colonies
 		}
 		remove_effect = {
-			SYR = { country_event = { id = rob_france.126 days = 1 } }
+			SYR = { country_event = { id = rob_france.126 days = 1 } }	
 		}
 	}
 	
 	  FRA_reenstablish_lordship_over_FWA_rad = {
 		fire_only_once = yes
+		visible = {
+			has_country_flag = FRA_not_abandon_colonies
+		  }
 		available = {
 			has_country_flag = fra_cw_over
-			OR = {
-				has_country_flag = FRP_war_enable
-				has_country_flag = fra_main_colonies
-				has_country_flag = FRR_war_enable
-			}
+			NOT = { has_country_flag = FRA_colony_negotiation }
 		  FWA = { 
 			  exists = yes 
 			  is_puppet = no
@@ -442,18 +481,19 @@ FRA_colony_reclaiming_radicals = {
 		  }
 		  remove_effect = {
 			FWA = { country_event = { id = rob_france.126 days = 3 } }
+			FEA = { country_event = { id = rob_france.126 days = 3 } }
 		}
 	  }
 	
 	  FRA_reenstablish_lordship_over_FIC_rad = {
 		fire_only_once = yes
+		visible = {
+			FIC = { NOT = { is_subject_of = ROOT } }
+			has_country_flag = FRA_not_abandon_colonies
+		  }
 		available = {
 			has_country_flag = fra_cw_over
-			OR = {
-				has_country_flag = FRP_war_enable
-				has_country_flag = fra_main_colonies
-				has_country_flag = FRR_war_enable
-			}
+			NOT = { has_country_flag = FRA_colony_negotiation }
 			FIC = { 
 			  exists = yes 
 			  is_puppet = no
@@ -471,6 +511,7 @@ FRA_colony_reclaiming_radicals = {
 		  }
 		  remove_effect = {
 			FIC = { country_event = { id = rob_france.126 days = 3 } }
+			
 		  }
 	  }
 	###end of FRA_colony_reclaiming_radicals
@@ -1500,6 +1541,73 @@ FRP_war = {
 			}
 		}
 	  }
+
+}
+
+
+FRA_monarchist_diplomacy = {
+
+	fra_shelter_spanish_royalists = {
+	
+		visible = {
+			NOT = { SPR = { has_govenment = reactionary } }
+		  }
+		  available = {
+			has_country_flag = fra_mon_dip_enable
+		  }
+	
+		cost = 50
+		complete_effect = {
+			set_country_flag = fra_mon_spr_royals
+			custom_effect_tooltip = fra_mon_shelter_tooltip
+		}
+	}
+	
+	fra_shelter_italian_royalists = {
+		cost = 50
+		visible = {
+			NOT = { ITA = { has_govenment = reactionary } }
+		  }
+		  available = {
+			has_country_flag = fra_mon_dip_enable
+		  }
+		complete_effect = {
+			set_country_flag = fra_mon_ita_royals
+			custom_effect_tooltip = fra_mon_shelter_tooltip
+		}
+	}
+	
+	fra_shelter_english_royalists = {
+		cost = 50
+		visible = {
+			BRU = { exists = no }
+			ENG = { has_country_flag = ENG_civil_war }
+		  }
+		  available = {
+			has_country_flag = fra_mon_dip_enable
+		  }
+		complete_effect = {
+			set_country_flag = fra_mon_eng_royals
+			custom_effect_tooltip = fra_mon_shelter_tooltip
+		}
+	}
+	
+	fra_aid_german_royalists = {
+		cost = 50
+		visible = {
+			OR = {
+				PRS = { has_country_flag = kaiser_controls_everything has_govenment = reactionary }
+				BDB = { exists = yes }
+			}
+			NOT = { GER = { has_govenment = reactionary } }
+		  }
+		  available = {
+			has_country_flag = fra_mon_dip_enable
+		  }
+		complete_effect = {
+			set_country_flag = fra_mon_ger_royals
+		}
+	}
 
 }
 

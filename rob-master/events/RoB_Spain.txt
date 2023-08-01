@@ -48,7 +48,9 @@ option = {
  }
 option = {
  name = "Secure Cities First!"
-
+ ai_chance = {
+	factor = 0
+   }
  hidden_effect = {
   country_event = {
    id = rob_spain.5
@@ -102,6 +104,9 @@ country_event = {
   
   option = { ###use veterans
    name = "Mobilize Veterans!"
+   ai_chance = {
+	factor = 0
+   }
    add_popularity = {ideology = reactionary popularity = 0.05 }
    hidden_effect = {
     country_event = { id = rob_spain.6 days = 2 }

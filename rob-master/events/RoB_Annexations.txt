@@ -6,7 +6,7 @@ add_namespace = annex
 
 country_event = {
  id = annex.1
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Austria"
  
 
@@ -128,7 +128,7 @@ if = {
 
 country_event = {
  id = annex.2
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Switzerland"
  
  mean_time_to_happen = { days = 1 }
@@ -310,7 +310,7 @@ country_event = {
 
 country_event = {
  id = annex.3
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of France"
  
  mean_time_to_happen = { days = 1 }
@@ -444,7 +444,7 @@ if = {
 
 country_event = {
  id = annex.4
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Spain"
  
  mean_time_to_happen = { days = 1 }
@@ -456,7 +456,7 @@ country_event = {
    tag = SPR
    has_country_flag = annex_spr
   }
-  NOT = { AND = { tag = FRA has_country_flag = fra_admiral_route } }
+  NOT = { AND = { tag = FRA OR = { has_country_flag = fra_admiral_route has_country_flag = fra_monarhcist_path } } }
  }
  
  option = {
@@ -656,7 +656,7 @@ country_event = {
 
 country_event = {
  id = annex.5
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Portugal"
  
  mean_time_to_happen = { days = 1 }
@@ -728,7 +728,7 @@ country_event = {
 
 country_event = {
  id = annex.6
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of British Isles"
 
  mean_time_to_happen = { days = 1 }
@@ -861,7 +861,7 @@ if = {
 
 country_event = {
  id = annex.7
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Ireland"
  
  mean_time_to_happen = { days = 1 }
@@ -932,7 +932,7 @@ country_event = {
 
 country_event = {
  id = annex.8
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Luxembourg"
  
  mean_time_to_happen = { days = 1 }
@@ -1020,7 +1020,7 @@ country_event = {
 
 country_event = {
  id = annex.9
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Wallonia"
  
  mean_time_to_happen = { days = 1 }
@@ -1172,7 +1172,7 @@ country_event = {
 
 country_event = {
  id = annex.10
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Flanders"
  
  mean_time_to_happen = { days = 1 }
@@ -1296,7 +1296,7 @@ country_event = {
  
 country_event = {
  id = annex.11
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Netherlands"
  
  mean_time_to_happen = { days = 1 }
@@ -1367,7 +1367,7 @@ country_event = {
 
 country_event = {
  id = annex.12
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Denmark"
  
  mean_time_to_happen = { days = 1 }
@@ -1438,7 +1438,7 @@ country_event = {
 
 country_event = {
  id = annex.13
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Sweden"
  
  mean_time_to_happen = { days = 1 }
@@ -1509,7 +1509,7 @@ country_event = {
 
 country_event = {
  id = annex.14
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Finland"
  
  mean_time_to_happen = { days = 1 }
@@ -1581,7 +1581,7 @@ country_event = {
 
 country_event = {
  id = annex.15
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Poland"
  
  mean_time_to_happen = { days = 1 }
@@ -1707,7 +1707,7 @@ country_event = {
 
 country_event = {
  id = annex.16
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Czechia"
  
  mean_time_to_happen = { days = 1 }
@@ -1779,7 +1779,7 @@ country_event = {
 
 country_event = {
  id = annex.17
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Slovakia"
  
  mean_time_to_happen = { days = 1 }
@@ -1851,7 +1851,7 @@ country_event = {
 
 country_event = {
  id = annex.18
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Hungary"
  
  mean_time_to_happen = { days = 1 }
@@ -1933,7 +1933,7 @@ country_event = {
 
 country_event = {
  id = annex.19
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Croatia"
  
  mean_time_to_happen = { days = 1 }
@@ -2017,7 +2017,7 @@ country_event = {
 
 country_event = {
  id = annex.20
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Bosnia"
  
  mean_time_to_happen = { days = 1 }
@@ -2100,7 +2100,7 @@ country_event = {
 
 country_event = {
  id = annex.21
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Serbia"
  
  mean_time_to_happen = { days = 1 }
@@ -2172,7 +2172,7 @@ country_event = {
 
 country_event = {
  id = annex.22
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Romania"
  
  mean_time_to_happen = { days = 1 }
@@ -2247,7 +2247,7 @@ country_event = {
 
 country_event = {
  id = annex.23
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Bulgaria"
  
  mean_time_to_happen = { days = 1 }
@@ -2319,7 +2319,7 @@ country_event = {
 
 country_event = {
  id = annex.24
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Albania"
  
  mean_time_to_happen = { days = 1 }
@@ -2390,7 +2390,7 @@ country_event = {
 
 country_event = {
  id = annex.25
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Greece"
  
  mean_time_to_happen = { days = 1 }
@@ -2461,7 +2461,7 @@ country_event = {
 
 country_event = {
  id = annex.26
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Turkey"
  
  mean_time_to_happen = { days = 1 }
@@ -2532,7 +2532,7 @@ country_event = {
 
 country_event = {
  id = annex.27
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Lithuania"
  
  mean_time_to_happen = { days = 1 }
@@ -2690,7 +2690,7 @@ country_event = {
 
 country_event = {
  id = annex.28
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Norway"
  
  mean_time_to_happen = { days = 1 }
@@ -2762,7 +2762,7 @@ country_event = {
 
 country_event = {
  id = annex.29
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of White Ruthenia"
  
  mean_time_to_happen = { days = 1 }
@@ -2876,7 +2876,7 @@ if = {
 
 country_event = {
  id = annex.30
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Ukraine"
  
  mean_time_to_happen = { days = 1 }
@@ -3031,7 +3031,7 @@ country_event = {
 
 country_event = {
  id = annex.31
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Western Russia"
  
  mean_time_to_happen = { days = 1 }
@@ -3160,7 +3160,7 @@ if = {
 
 country_event = {
  id = annex.32
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Italy"
  
  mean_time_to_happen = { days = 1 }
@@ -3175,7 +3175,7 @@ country_event = {
    tag = LES
    has_country_flag = annex_ita
   }
-  NOT = { AND = { tag = FRA has_country_flag = fra_admiral_route } }
+  NOT = { AND = { tag = FRA OR = { has_country_flag = fra_admiral_route has_country_flag = fra_monarhcist_path } } }
  }
  
  option = {
@@ -3227,7 +3227,7 @@ country_event = {
 
 country_event = {
  id = annex.33
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Persia"
  
  mean_time_to_happen = { days = 1 }
@@ -3298,7 +3298,7 @@ country_event = {
 
 country_event = {
  id = annex.34
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Turkmenistan"
  
  mean_time_to_happen = { days = 1 }
@@ -3380,7 +3380,7 @@ country_event = {
 
 country_event = {
  id = annex.35
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Khiva"
  
  mean_time_to_happen = { days = 1 }
@@ -3451,7 +3451,7 @@ country_event = {
 
 country_event = {
  id = annex.36
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Kirghiz State"
  
  mean_time_to_happen = { days = 1 }
@@ -3524,7 +3524,7 @@ country_event = {
 
 country_event = {
  id = annex.37
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Alash Orda"
  
  mean_time_to_happen = { days = 1 }
@@ -3751,7 +3751,7 @@ country_event = {
 
 country_event = {
  id = annex.38
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Bukhara"
  
  mean_time_to_happen = { days = 1 }
@@ -3822,7 +3822,7 @@ country_event = {
 
 country_event = {
  id = annex.39
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of United Baltic Provinces"
  
  mean_time_to_happen = { days = 1 }
@@ -4028,7 +4028,7 @@ if = {
 
 country_event = {
  id = annex.40
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Prussia"
  
  mean_time_to_happen = { days = 1 }
@@ -4101,7 +4101,7 @@ country_event = {
 
 country_event = {
  id = annex.41
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Germany"
  
  mean_time_to_happen = { days = 1 }
@@ -4524,7 +4524,7 @@ if = {
 
 country_event = {
  id = annex.42
- desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+ desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
  title = "Fate of Afghanistan"
  
  mean_time_to_happen = { days = 1 }
@@ -4596,7 +4596,7 @@ country_event = {
  
 country_event = {
   id = annex.43
-  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+  desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
   title = "Fate of Mongolia"
   
   mean_time_to_happen = { days = 1 }
@@ -4738,7 +4738,7 @@ country_event = {
 
  country_event = {
   id = annex.44
-  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+  desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
   title = "Fate of Armenia"
   
   mean_time_to_happen = { days = 1 }
@@ -4808,7 +4808,7 @@ country_event = {
 
  country_event = {
   id = annex.45
-  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+  desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
   title = "Fate of Indonesia"
   
   mean_time_to_happen = { days = 1 }
@@ -4878,7 +4878,7 @@ country_event = {
 
  country_event = {
   id = annex.46
-  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+  desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
   title = "Fate of Azerbaijan"
   
   mean_time_to_happen = { days = 1 }
@@ -4957,7 +4957,7 @@ country_event = {
 
  country_event = {
   id = annex.47
-  desc = "All claims and cores will remain if you decide do puppet. Context specific peace deals have other options."
+  desc = "All claims and cores will remain if you decide to puppet. Context specific peace deals have other options."
   title = "Fate of Georgia"
   
   mean_time_to_happen = { days = 1 }
