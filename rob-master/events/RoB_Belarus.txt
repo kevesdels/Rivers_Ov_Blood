@@ -85,11 +85,7 @@ is_triggered_only = yes
 
 option = {
  name = "A Worthwhile Investment"
- add_equipment_to_stockpile = {
-			type = infantry_equipment
-			amount = 2000
-			producer = LIT 
-		}
+ add_stability = 0.01
 	set_country_flag = BLR_equipment_arrives
 }
 

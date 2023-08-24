@@ -623,22 +623,6 @@ picture = GFX_idea_overextendadsf
    }
 }
 
-fra_colonial_frank_colony = {
- 
-  allowed = {
-    always = yes
-  }
-allowed_civil_war = {
-     always = yes
-   }
-  removal_cost = -1
-picture = GFX_idea_overextendadsf
-  modifier = {
-    production_speed_buildings_factor = -0.3
-    production_factory_max_efficiency_factor = -0.1
-   }
-}
-
 fra_colonial_exploitation = {
   allowed = {
     always = yes

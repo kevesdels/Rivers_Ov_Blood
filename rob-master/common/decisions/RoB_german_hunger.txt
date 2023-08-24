@@ -1,4 +1,140 @@
 GER_german_expansion = {
   
-  
+  GER_hunger_countdown = {
+    icon = GFX_decision_revolt
+     ai_will_do = {
+       base = 0
+     }
+   available = {
+   hidden_trigger = {
+     NOT = { has_country_flag = GER_famine} 
+     }
+    }
+   activation = {
+   hidden_trigger = {
+   has_country_flag = GER_famine
+   }
+    }
+    days_mission_timeout = 120
+ 
+     timeout_effect = {
+ 
+       custom_effect_tooltip = ger_tt_i_am_hungry
+       hidden_effect = {
+
+
+        ### No relief
+        if = { 
+          limit = { has_country_flag = GER_no_relief }
+          swap_ideas = {
+            remove_idea = x
+            add_idea = zmaj
+          }
+          clr_country_flag = GER_no_relief
+          activate_mission = GER_hunger_countdown
+      }
+      ### Either relief or you had one check worse
+      if = { 
+        limit = { NOT = { has_country_flag = GER_no_relief } }
+        swap_ideas = {
+          remove_idea = x
+          add_idea = zmaj
+        }
+        activate_mission = GER_hunger_countdown
+    }
+
+    if = { 
+      limit = { has_idea = GER_managable_famine }
+      remove_ideas = { GER_managable_famine }
+    }
+
+       }
+     }
+   }
+
+   GER_buy_food = {
+    visible = { hidden_trigger = { tag = GER  } }
+    available = { hidden_trigger = { has_country_flag = GER_famine } }
+    icon = GFX_decision_generic_military
+    ai_will_do = {
+     base = 200
+   }
+    days_remove = 60
+    complete_effect = {
+
+   }
+    remove_effect = {
+    custom_effect_tooltip = ger_tt_i_am_hungry_2
+
+   }
+ }
+
+ GER_plead_for_help = {
+  visible = { hidden_trigger = { tag = GER  } }
+  available = { hidden_trigger = { has_country_flag = GER_famine } }
+  icon = GFX_decision_generic_military
+  ai_will_do = {
+   base = 200
+ }
+  days_remove = 60
+  complete_effect = {
+
+ }
+  remove_effect = {
+  custom_effect_tooltip = ger_tt_i_am_hungry_3
+
+ }
+}
+
+GER_plead_for_help = {
+  visible = { hidden_trigger = { tag = GER  } }
+  available = { hidden_trigger = { has_country_flag = GER_famine } }
+  icon = GFX_decision_generic_military
+  ai_will_do = {
+   base = 200
+ }
+  days_remove = 60
+  complete_effect = {
+
+ }
+  remove_effect = {
+  custom_effect_tooltip = ger_tt_i_am_hungry_3
+
+ }
+}
+
+GER_search_for_horders = {
+  visible = { hidden_trigger = { tag = GER  } }
+  available = { hidden_trigger = { has_country_flag = GER_famine } }
+  icon = GFX_decision_generic_military
+  ai_will_do = {
+   base = 200
+ }
+  days_remove = 60
+  complete_effect = {
+
+ }
+  remove_effect = {
+  custom_effect_tooltip = ger_tt_i_am_hungry_4
+
+ }
+}
+
+GER_raid_granaries = {
+  visible = { hidden_trigger = { tag = GER  } }
+  available = { hidden_trigger = { has_country_flag = GER_famine } }
+  icon = GFX_decision_generic_military
+  ai_will_do = {
+   base = 200
+ }
+  days_remove = 60
+  complete_effect = {
+
+ }
+  remove_effect = {
+  custom_effect_tooltip = ger_tt_i_am_hungry_5
+
+ }
+}
+
 }

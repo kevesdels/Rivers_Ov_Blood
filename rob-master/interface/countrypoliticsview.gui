@@ -204,13 +204,15 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "current_autonomy_name"
-				position = { x = 110 y = 8 }
-				font = "hoi_18mbs"
+				position = { x = 92 y = 8 }
+				font = "hoi_16mbs"
 				text = "autonomy"
-				maxWidth = 193
+				fixedsize = yes
+				maxWidth = 100
 				maxHeight = 20		
 				format = center
 			}
+			
 			
 			buttonType = {
 				name = "prev_autonomy_level"

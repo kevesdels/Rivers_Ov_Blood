@@ -21,26 +21,38 @@ mean_time_to_happen = { days = 1 }
 option = {
  name = lithuania.0.a
  add_stability = 0.05
+ hidden_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 3000
+		producer = ENG 
+	}
+ }
 }
 }
 
 ###Belarussians ask for help
 country_event = { 
 id = lithuania.1
-title = "Belarusian Nationalists Request Support"
+title = "The Belarusian Request"
 desc = lithuania.1.d
 fire_only_once = yes
 is_triggered_only = yes
 
 option = { ###accept
- name = "Communists and Poles are bigger enemies"
+ name = "They have requested support, and support they shall receive"
+ send_equipment = {
+    equipment = infantry_equipment
+    amount = 2000
+    target = GER
+}
  BLR = { country_event = { id = belarusia.14 days = 5 } }
    	ai_chance = {
 			factor = 200
 			}
  }
 option = { ###deny
- name = "We Can't Arm Our Future Enemies"
+ name = "The Lithuanian army has taken enough setbacks as a result of this policy"
  BLR = { country_event = { id = belarusia.13 days = 5 } }
    	ai_chance = {
 			factor = 20
@@ -341,7 +353,7 @@ set_country_flag = LIT_kazys_dead
  create_country_leader = {
 	name = "Lietuvos Respublikos Seimas"
 	desc = ""
-	picture = ".tga"
+	picture = "gfx/leaders/LIT/lith_saeima.dds"
 	expire = "1953.3.1"
 	ideology = social_democracy_subtype
 	traits = {
@@ -1251,7 +1263,8 @@ country_event = {
 	
 	option = {
 	 name = "LONG LIVE THE REVOLUTION!"
-	 add_political_power = 150
+	 add_stability = 0.10
+	 add_war_support = 0.10
 	}
 	
 }

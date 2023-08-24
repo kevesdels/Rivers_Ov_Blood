@@ -134,7 +134,7 @@ add_manpower = 2000
 	#Focus for Frunze Survives
 	focus = {
 		id = TRS_frunzesurvives
-		icon = GFX_goal_unknown
+		icon = GFX_TRS_Frunze_Survives
 		x = 13
 		y = 2
 		cost = 5
@@ -164,7 +164,7 @@ add_stability = 0.1
 	#Focus for March up the Coast
 	focus = {
 		id = TRS_marchupthecoast
-		icon = GFX_goal_unknown
+		icon = GFX_TRS_March_Up_Coast
 		x = 15
 		y = 8
 		cost = 5
@@ -243,7 +243,7 @@ add_stability = 0.1
 	#Focus for Battle for Krasnovodsk
 	focus = {
 		id = TRS_battleforkrasnovodsk
-		icon = GFX_goal_unknown
+		icon = GFX_TRS_Battle_for_Krasnovodsk
 		x = 15
 		y = 9
 		cost = 5
@@ -268,7 +268,7 @@ add_stability = 0.1
 	#Focus for A Better Defensive Line
 	focus = {
 		id = TRS_abetterdefensiveline
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_goal_TRS_A_Better_Defensive_Line
 		x = 14
 		y = 7
 		cost = 5
@@ -295,7 +295,7 @@ add_stability = 0.1
 	#Focus for Secure a Caspian Coast
 	focus = {
 		id = TRS_secureacaspiancoast
-		icon = GFX_goal_unknown
+		icon = GFX_TRS_Secure_the_Caspian_Coast
 		x = 16
 		y = 7
 		cost = 5
@@ -322,7 +322,7 @@ add_stability = 0.1
 	#Focus for Bomb Turkmen Industry
 	focus = {
 		id = TRS_bombturkmenindustry
-		icon = GFX_goal_unknown
+		icon = GFX_TRS_Bomb_Turkmen_Industry 
 		x = 15
 		y = 5
 		cost = 5
@@ -354,7 +354,7 @@ add_stability = 0.1
 	#Focus for Threaten the Capital
 	focus = {
 		id = TRS_threatenthecapital
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_TRS_Threaten_the_Capital
 		x = 15
 		y = 6
 		cost = 5
@@ -379,7 +379,7 @@ add_stability = 0.1
 	#Focus for Bomb Turkmen Roads
 	focus = {
 		id = TRS_bombturkmenroads
-		icon = GFX_goal_unknown
+		icon = GFX_TRS_Bomb_Turkmen_Roads
 		x = 15
 		y = 4
 		cost = 5
@@ -429,7 +429,7 @@ add_stability = 0.1
 	#Focus for Infiltrate the Coalition
 	focus = {
 		id = TRS_infiltratethecoalition
-		icon = GFX_goal_unknown
+		icon = GFX_TRS_Infiltrate_Coalition
 		x = 15
 		y = 3
 		cost = 5
@@ -839,7 +839,7 @@ add_ideas = TRS_welfare
 	focus = {
 		
 		id = TRS_thelongroadtoglory
-		icon = GFX_goal_unknown
+		icon = GFX_TRS_the_Long_Road_to_Glory
 		x = 15
 		y = 1
 		cost = 10
@@ -861,7 +861,7 @@ add_ideas = TRS_welfare
 	#Focus for New Leadership
 	focus = {
 		id = TRS_newleadership
-		icon = GFX_goal_unknown
+		icon = GFX_TRS_New_Leadership
 		x = 17
 		y = 2
 		cost = 5
@@ -951,9 +951,9 @@ add_timed_idea = {
 	#Focus for Finish the Job
 	focus = {
 		id = TRS_finishthejob
-		icon = GFX_goal_unknown
+		icon = GFX_TRS_Finish_the_Job
 		x = 15
-		y = 10
+		y = 11
 		cost = 5
 		available_if_capitulated = yes
 		available = { 

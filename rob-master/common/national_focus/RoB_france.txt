@@ -2080,11 +2080,12 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_dumezil_is_always_right  } prerequisite = { focus = FRA_the_senate_of_franks  } prerequisite = { focus = FRA_the_great_temple_of_taranis  } prerequisite = { focus = FRA_bread_and_circuses  }
 		completion_reward = {
+			custom_effect_tooltip = fra_dumezil_more_men_tooltip
 			add_ideas = {
 				fra_dum_trifunct
 			}
-			remove_ideas = {
-				fra_pol_violence
+			hidden_effect = {
+				country_event = { id = rob_france.149 days =  3 }
 			}
 		}
 	}
@@ -2407,7 +2408,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_indoeuropean_brotherhood  } prerequisite = { focus = FRA_aid_foreign_pelekists  }
 		completion_reward = {
-			
+			country_event = { id = rob_france.147 days =  3 }
 		}
 	}
 
@@ -2567,7 +2568,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_found_the_european_league  }
 		completion_reward = {
-			
+			country_event = { id = rob_france.145 days =  3 }
 		}
 	}
 
@@ -2601,7 +2602,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_found_the_european_league  }
 		completion_reward = {
-			
+			country_event = { id = rob_france.140 days =  3 }
 		}
 	}
 
@@ -2633,19 +2634,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_the_trifunctional_hierarchy  }
 		completion_reward = {
-			if = {
-				limit = { has_idea = fra_lots_of_men_dead }
-				swap_ideas = {
-					remove_idea = fra_lots_of_men_dead
-					add_idea = fra_lots_of_men_dead_2
-				}
-			}
-			if = {
-				limit = { has_idea = fra_lots_of_men_dead_2 }
-				remove_ideas = {
-					fra_lots_of_men_dead
-				}
-			}
+			country_event = { id = rob_france.138 days =  3 }
 		}
 	}
 
@@ -2661,7 +2650,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_europe__a_nation  } prerequisite = { focus = FRA_the_upcoming_golden_age  }
 		completion_reward = {
-			
+			country_event = { id = rob_france.148 days =  3 }
 		}
 	}
 
@@ -2677,7 +2666,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_indoeuropean_brotherhood  } prerequisite = { focus = FRA_expansionist_policy  }
 		completion_reward = {
-			
+			country_event = { id = rob_france.146 days =  3 }
 		}
 	}
 
@@ -2693,7 +2682,26 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_found_the_european_league  }
 		completion_reward = {
-			
+			custom_effect_tooltip = fra_dumezil_cores_tooltip
+			hidden_effect = {
+				981 = { add_claim_by = ROOT }
+				789 = { add_claim_by = ROOT }
+				813 = { add_claim_by = ROOT }
+				34 = { add_claim_by = ROOT }
+				6 = { add_claim_by = ROOT }
+				35 = { add_claim_by = ROOT }
+				812 = { add_claim_by = ROOT }
+				792 = { add_claim_by = ROOT }
+				51 = { add_claim_by = ROOT }
+				1088 = { add_claim_by = ROOT }
+				1089 = { add_claim_by = ROOT }
+				42 = { add_claim_by = ROOT }
+				791 = { add_claim_by = ROOT }
+				1215 = { add_claim_by = ROOT }
+				790 = { add_claim_by = ROOT }
+				974 = { add_claim_by = ROOT }
+				country_event = { id = rob_france.139 days =  3 }
+			}
 		}
 	}
 
@@ -4537,7 +4545,7 @@ focus_tree = {
 	#Control alchocloism
 	focus = {
 		id = FRA_loi_contre_l_alcoolisme
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_loi_contre_alchoholism
 		x = 62
 		y = 15
 		cost = 5
@@ -5063,7 +5071,7 @@ focus_tree = {
 	#culinary  tourism (cheese icon)
 	focus = {
 		id = FRA_culinary_tourism
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_Culinary_tourism
 		x = 62
 		y = 14
 		cost = 5
@@ -5230,7 +5238,7 @@ focus_tree = {
 	# gives 2 synth refineries The French Petroleum Company (Ernest Mercier) 
 	focus = {
 		id = FRA_nationalization_of_CFP
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_nationalization_of_CFP
 		x = 64
 		y = 16
 		cost = 5
@@ -5267,7 +5275,7 @@ focus_tree = {
 	# advisor
 	focus = {
 		id = FRA_hire_Ernest_Mercier
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_Hire_Ernest_Mercier
 		x = 62
 		y = 16
 		cost = 5
@@ -5325,7 +5333,7 @@ focus_tree = {
 	# decisons
 	focus = {
 		id = FRA_electric_availability
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_Ensure_Electrical_Avalibility
 		x = 64
 		y = 15
 		cost = 5
@@ -5349,7 +5357,7 @@ focus_tree = {
 	# idea
 	focus = {
 		id = FRA_revaluation_of_franc
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_Revaluation_Franc
 		x = 64
 		y = 14
 		cost = 15
@@ -5414,7 +5422,7 @@ focus_tree = {
 	#forcing mass production for certain goods
 	focus = {
 		id = FRA_force_mass_production_of_luxury_goods
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_Force_Production_of_Luxury_Goods
 		x = 62
 		y = 17
 		cost = 5
@@ -5461,7 +5469,7 @@ focus_tree = {
 	#increaseing wadges
 	focus = {
 		id = FRA_up_the_wadges
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_Up_the_Wages
 		x = 64
 		y = 17
 		cost = 5
@@ -5858,7 +5866,7 @@ focus_tree = {
 	#Rebuilding Paris
 	focus = {
 		id = FRA_rebuilding_paris
-		icon = GFX_FRA_rebuilding_paris
+		icon = GFX_FRA_Rebuilding_Paris
 		x = 67
 		y = 17
 		cost = 10

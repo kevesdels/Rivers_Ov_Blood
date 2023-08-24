@@ -1,6 +1,127 @@
 ideas = {
  country = {
  
+
+  GER_famine_managable = {
+  allowed = {
+       always = no
+     }
+	 allowed_civil_war = {
+				always = yes
+			}
+     removal_cost = -1
+	 picture = GFX_idea_balalbala
+	 modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				conscription_factor = -0.1
+			}
+  
+  }
+
+  GER_famine_mild = {
+	allowed = {
+		 always = no
+	   }
+	   allowed_civil_war = {
+				  always = yes
+			  }
+	   removal_cost = -1
+	   picture = GFX_idea_balalbala
+	   modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				conscription_factor = -0.2
+			  }
+	
+	}
+
+	GER_famine_concerning = {
+	allowed = {
+		 always = no
+	   }
+	   allowed_civil_war = {
+				  always = yes
+			  }
+	   removal_cost = -1
+	   picture = GFX_idea_balalbala
+	   modifier = {
+				  stability_factor = -0.15
+				  war_support_factor = -0.15
+				  conscription_factor = -0.3
+			  }
+	
+	}
+
+	GER_famine_severe = {
+	allowed = {
+		 always = no
+	   }
+	   allowed_civil_war = {
+				  always = yes
+			  }
+	   removal_cost = -1
+	   picture = GFX_idea_balalbala
+	   modifier = {
+				  stability_factor = -0.20
+				  war_support_factor = -0.20
+				  conscription_factor = -0.4
+			  }
+	
+	}
+
+	GER_famine_catasrophe = {
+		allowed = {
+			 always = no
+		   }
+		   allowed_civil_war = {
+					  always = yes
+				  }
+		   removal_cost = -1
+		   picture = GFX_idea_balalbala
+		   modifier = {
+				  stability_factor = -0.25
+				  war_support_factor = -0.25
+				  conscription_factor = -0.5
+				  }
+		
+		}
+
+		GER_famine_apocalypse = {
+		allowed = {
+			 always = no
+		   }
+		   allowed_civil_war = {
+					  always = yes
+				  }
+		   removal_cost = -1
+		   picture = GFX_idea_balalbala
+		   modifier = {
+				  stability_factor = -0.4
+				  war_support_factor = -0.4
+				  conscription_factor = -0.75
+				  }
+		
+		}
+
+
+		GER_famine_industry_focus = {
+		allowed = {
+			 always = no
+		   }
+		   allowed_civil_war = {
+					  always = yes
+				  }
+		   removal_cost = -1
+		   picture = GFX_idea_balalbala
+		   modifier = {
+			production_factory_max_efficiency_factor = 0.1
+			industrial_capacity_factory = 0.1
+			production_speed_buildings_factor = 0.1
+				  }
+		
+		}
+
  deutsche_volksarmee = {
  picture = GFX_idea_deutsche_volksarmee
  allowed = {
@@ -1002,7 +1123,7 @@ GER_local_defense = {
  
    GER_foreign_revolutionaries = {
  picture = GFX_idea_rampant_corruption
- research_bonus = { land_doctrine = 0.07 }
+ land_doctrine_cost_factor = -0.07
  allowed = {
        always = no
      }

@@ -830,6 +830,9 @@
 		y = 13
 		cost = 5
 		available_if_capitulated = yes
+		available = {
+			has_tech = anti_air_equipment_1
+		}
 		prerequisite = { focus = GER_luftwaffedivisions }
 		ai_will_do = {
 			factor = 1

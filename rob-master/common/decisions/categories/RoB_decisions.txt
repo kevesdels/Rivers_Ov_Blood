@@ -127,6 +127,23 @@ GER_german_expansion = {
 	}
 	}
 
+	GER_german_expansion = {
+		icon = GFX_decision_category_border_conflicts
+		picture = GFX_decision_cat_picture_gateway_to_europe
+		  available = {
+		  tag = GER
+		  has_country_flag = GER_famine
+		  }
+		  priority = {
+		   base = 120
+		  }
+		  visible = {
+			has_country_flag = GER_famine
+		  tag = GER
+		  }
+ }
+	  
+
 	
 BLR_power_struggle = {
   icon = GFX_decision_oppression

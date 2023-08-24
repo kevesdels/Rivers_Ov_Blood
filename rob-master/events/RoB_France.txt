@@ -2042,7 +2042,7 @@ set_politics = {
 	elections_allowed = no 
 	}
 	create_country_leader = {
-	  name = "Militar Junta"
+	  name = "Military Junta"
 	  desc = ""
 	  picture = "gfx/leaders/FRA/france_junta.dds"
 	  expire = "1953.3.1"
@@ -2062,9 +2062,9 @@ set_politics = {
 	elections_allowed = no 
 	}
 	create_country_leader = {
-	  name = "Militar Junta"
+	  name = "Military Junta"
 	  desc = ""
-	  picture = ""
+	  picture = "gfx/leaders/FRA/france_junta.dds"
 	  expire = "1953.3.1"
 	  ideology = military_junta
 	  traits = {
@@ -7251,9 +7251,9 @@ option = {  ####
 }
 
 country_event = { ### colony give colonial exploitation if wasnt puppet
-id = rob_france.135
-title = rob_france.135.t
-desc = rob_france.135.d
+id = rob_france.150
+title = rob_france.150.t
+desc = rob_france.150.d
 trigger = {
 	OR = {
 		tag = FIC
@@ -7309,7 +7309,7 @@ trigger = {
 }
 
 option = {  #### 
-	name = rob_france.135.a
+	name = rob_france.150.a
 	add_ideas = {
 		fra_colonial_exploitation
 	}
@@ -7513,6 +7513,256 @@ option = {  ####
 	}
 
 }
+
+	###Dumezil founds European league
+	country_event = {
+		id = rob_france.138
+		title = "Foundation of EL"
+		desc = rob_france.138.d
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = "Excellent"
+		 ai_chance = {
+		  factor = 100
+		 }
+		 remove_ideas = {
+			fra_pol_violence
+		}
+		create_faction = "European League"
+	
+		}
+	  
+	   }
+	
+	
+		   ###Dumezil moves on to gaming
+	country_event = {
+		id = rob_france.139
+		title = "Acknowledgment of Past"
+		desc = rob_france.139.d
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = "Excellent"
+		 ai_chance = {
+		  factor = 100
+		 }
+	
+		 ###enable custom puppets as well you filthy N
+	
+		}
+	   }
+	
+	###Dumezil tries to unite euros, sends allias, also has a glance at brown ppl
+	country_event = {
+		id = rob_france.140
+		title = "Blood Bonds"
+		desc = rob_france.140.d
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = "Excellent"
+		 ai_chance = {
+		  factor = 100
+		 }
+	
+	
+		}
+	  
+	   }
+
+
+	   	###Dumezil tries to unite euros, euro receives event to respond
+	country_event = {
+		id = rob_france.141
+		title = "Blood Bonds"
+		desc = rob_france.141.d
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = "Excellent"
+		 ai_chance = {
+		  factor = 100
+		 }
+	
+	
+		}
+	  
+	   }
+
+	   	   	###Dumezil tries to unite euros, dumezils receives response
+	country_event = {
+		id = rob_france.142
+		title = "Blood Bonds"
+		desc = rob_france.142.d
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = "Excellent"
+		 ai_chance = {
+		  factor = 100
+		 }
+	
+	
+		}
+	  
+	   }
+
+	   	###Dumezil has a glance at brown ppl, brownoids receive opportunity to be relevant
+	country_event = {
+		id = rob_france.143
+		title = "Blood Bonds"
+		desc = rob_france.143.d
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = "Excellent"
+		 ai_chance = {
+		  factor = 100
+		 }
+	
+	
+		}
+	  
+	   }
+
+	###Dumezil has a glance at brown ppl, brownoid response
+	country_event = {
+		id = rob_france.144
+		title = "Blood Bonds"
+		desc = rob_france.144.d
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = "Excellent"
+		 ai_chance = {
+		  factor = 100
+		 }
+	
+	
+		}
+	  
+	   }
+
+	###Dumezil begins covert operations
+	country_event = {
+		id = rob_france.145
+		title = "The European Awakening"
+		desc = rob_france.145.d
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = "Excellent"
+		 ai_chance = {
+		  factor = 100
+		 }
+	
+	
+		}
+	  
+	   }
+
+	   	###Dumezil is romanoboo
+	country_event = {
+		id = rob_france.146
+		title = rob_france.146.t
+		desc = rob_france.146.d
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = "Excellent"
+		 ai_chance = {
+		  factor = 100
+		 }
+	
+	
+		}
+	  
+	   }
+
+	###Dumezil is vedaboo as well but more in to romans
+	country_event = {
+		id = rob_france.147
+		title = rob_france.147.t
+		desc = rob_france.147.d
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = "Excellent"
+		 ai_chance = {
+		  factor = 100
+		 }
+	
+	
+		}
+	  
+	   }
+
+	   	###we are so epic and cool and based and redpille and back
+	country_event = {
+		id = rob_france.148
+		title = rob_france.148.t
+		desc = rob_france.148.d
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = "Excellent"
+		 ai_chance = {
+		  factor = 100
+		 }
+	
+	
+		}
+	  
+	   }
+
+
+	   	###EXPLAIN WHAat the fuck dumezil means by this
+	country_event = {
+		id = rob_france.149
+		title = rob_france.149.t
+		desc = rob_france.149.d
+		is_triggered_only = yes
+		
+		
+		option = { 
+		 name = "Excellent"
+		 ai_chance = {
+		  factor = 100
+		 }
+	###remove that shit debuff
+	if = {
+		limit = { has_idea = fra_lots_of_men_dead }
+		swap_ideas = {
+			remove_idea = fra_lots_of_men_dead
+			add_idea = fra_lots_of_men_dead_2
+		}
+	}
+	if = {
+		limit = { has_idea = fra_lots_of_men_dead_2 }
+		remove_ideas = {
+			fra_lots_of_men_dead
+		}
+	}
+		}
+	  
+}
+
+### rob_france.150 moved after 135 cuz i fucked up ids 
+
+
 
 ####debug events
 

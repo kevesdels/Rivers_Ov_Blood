@@ -273,13 +273,11 @@ characters={
 			slot = theorist
 			idea_token = LIT_stasys_rastikis_hc
 			cost = 200
-			available = { has_tech = trench_warfare }
+			available = { has_tech = superior_firepower }
 			modifier = {
-			 cat_mobile_warfare_cost_factor = 0.10 
-			 army_armor_attack_factor = 0.05
-			 army_armor_defence_factor = 0.05
-			 motorized_attack_factor = 0.05
-			 motorized_defence_factor = 0.05
+			 cat_superior_firepower_cost_factor = -0.10 
+			 army_artillery_attack_factor = 0.1
+			 army_artillery_defence_factor = 0.1
 			}
 		}
 		corps_commander={
@@ -324,11 +322,13 @@ characters={
 			slot = theorist
 			idea_token = LIT_kazys_musteikis_hc
 			cost = 200
-			available = { has_tech = trench_warfare }
+			available = { has_tech = mobile_warfare  }
 			modifier = {
-			 cat_superior_firepower_cost_factor = -0.10 
-			 army_artillery_attack_factor = 0.1
-			 army_artillery_defence_factor = 0.1
+			 cat_mobile_warfare_cost_factor = 0.10 
+			 army_armor_attack_factor = 0.05
+			 army_armor_defence_factor = 0.05
+			 motorized_attack_factor = 0.05
+			 motorized_defence_factor = 0.05
 			}
 		}
 	}

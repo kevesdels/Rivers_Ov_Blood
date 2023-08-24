@@ -526,7 +526,7 @@ add_ideas = {
 }
 
 option = { ###NB-L Coalition
-name = spartakus_germany.13.d
+name = spartakus_germany.13.f
 trigger = { has_country_flag = { 
 flag = GER_democrats 
 value < 3 
@@ -1096,18 +1096,53 @@ country_event = {
    
    option = {
     name = "Welcome Our New Brothers!"
+    trigger = {
+      tag = ACM
+    }
+    ai_chance = {
+      factor = 10
+     }
 	GER = { country_event = { id = spartakus_germany.24 days = 3 } }
-	ai_chance = {
-	 factor = 20
-	}
    }
-   
+
+   option = {
+    name = "Too much Austrian blood has been spilled already"
+    trigger = {
+      tag = ACM
+    }
+    ai_chance = {
+      factor = 0
+     }
+	GER = { country_event = { id = spartakus_germany.25 days = 3 } }
+   }
+
    option = {
     name = "Austria Won't Bend to Northern Will!"
-	GER = { country_event = { id = spartakus_germany.25 days = 3 } }
+    trigger = {
+      OR = {
+        tag = THR
+        tag = AUS
+      }
+    }
     ai_chance = {
-	 factor = 1
-	}
+      factor = 20
+     }
+	GER = { country_event = { id = spartakus_germany.25 days = 3 } }
+   }
+
+   
+   option = {
+    name = "Too much Austrian blood has been spilled already"
+    trigger = {
+      OR = {
+        tag = THR
+        tag = AUS
+      }
+    }
+    ai_chance = {
+      factor = 0
+     }
+	GER = { country_event = { id = spartakus_germany.24 days = 3 } }
    }
  }
  
@@ -1188,14 +1223,14 @@ country_event = {
    option = {
    name = "Refuse!"
    ai_chance = {
-    factor = 5
+    factor = 6
    }
    GER = { create_wargoal = { type = annex_everything target = CZE } }
   }
    option = {
    name = "Bend to German Will..."
    ai_chance = {
-    factor = 5
+    factor = 4
    }
    GER = { 
     transfer_state = 888
@@ -1715,4 +1750,106 @@ option = {
  BRP = {transfer_state = 1086 }
 }
 }
+
+
+
+############ FAMINE STUFF #############
+
+
+country_event = { ### Winter of 1935
+id = spartakus_germany.53
+title = spartakus_germany.53.t
+desc = spartakus_germany.53.d
+fire_only_once = yes
+picture = GFX_picture_blalballbalbab
+ 
+trigger = {
+ tag = GER
+ date > 1935.12.7
+}
+
+option = {
+ name = spartakus_germany.53.a
+
+}
+}
+
+
+country_event = { ### Spring of 1936
+id = spartakus_germany.54
+title = spartakus_germany.54.t
+desc = spartakus_germany.54.d
+fire_only_once = yes
+picture = GFX_picture_blalballbalbab
+ 
+trigger = {
+ tag = GER
+ date > 1936.3.20
+}
+
+option = {
+ name = spartakus_germany.54.a
+
+}
+}
+
+country_event = { ### Spring of 1936
+id = spartakus_germany.55
+title = spartakus_germany.55.t
+desc = spartakus_germany.55.d
+fire_only_once = yes
+picture = GFX_picture_blalballbalbab
+ 
+trigger = {
+ tag = GER
+ date > 1936.6.7
+}
+
+option = {
+ name = spartakus_germany.55.a
+
+ ###For nazbols
+ if = {
+  limit = { has_government = national_socialist }
+  country_event = { id = spartakus_germany.56 days = 14 }
+}
+
+
+}
+}
+
+#### Nazbols
+
+country_event = { ### Managable famine
+id = spartakus_germany.56
+title = spartakus_germany.56.t
+desc = spartakus_germany.56.d
+fire_only_once = yes
+picture = GFX_picture_blalballbalbab
+is_triggered_only = yes
+
+option = {
+ name = spartakus_germany.56.a
+
+ hidden_effect = {
+  country_event = { id = spartakus_germany.57 days = 48 }
+ }
+}
+}
+
+country_event = { ### event on locals
+id = spartakus_germany.57
+title = spartakus_germany.57.t
+desc = spartakus_germany.57.d
+fire_only_once = yes
+picture = GFX_picture_blalballbalbab
+is_triggered_only = yes
+
+option = {
+ name = spartakus_germany.57.a
+
+}
+}
+
+
 #end
