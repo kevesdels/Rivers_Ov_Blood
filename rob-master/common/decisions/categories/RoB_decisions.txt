@@ -285,6 +285,22 @@ DSU_ukrainian_ambition = {
 
 }
 
+FTT_ukrainian_ambition = {
+	icon = GFX_decision_oppression
+	picture = GFX_decision_germany_partisans
+	  visible = {
+	  tag = FTT
+	  }
+	  available = {
+		  NOT = { is_puppet = yes }
+	  }
+			priority = {
+			base = 100
+			}
+  
+  
+  }
+
 DSU_allies = {
   icon = GFX_decision_oppression
   picture = GFX_decision_germany_partisans

@@ -585,6 +585,7 @@ FRS = {
 	complete_national_focus = FRA_armeedeterre 
 	complete_national_focus = FRA_armeedelair 
 	complete_national_focus = FRA_marine_nationale
+	inherit_technology = FRA
 }
 FRS = { transfer_state = 16 }
 FRS = { transfer_state = 1279 }
@@ -631,6 +632,7 @@ FRS = {
 	complete_national_focus = FRA_armeedeterre 
 	complete_national_focus = FRA_armeedelair 
 	complete_national_focus = FRA_marine_nationale
+	inherit_technology = FRA
 }
 FRS = { transfer_state = 16 }
 FRS = { transfer_state = 1279 }
@@ -686,6 +688,7 @@ FRP = {
 	complete_national_focus = FRA_armeedeterre 
 	complete_national_focus = FRA_armeedelair 
 	complete_national_focus = FRA_marine_nationale
+	inherit_technology = FRA
 }
 FRP = { transfer_state = 23 }
 FRP = { transfer_state = 1007 }
@@ -729,6 +732,7 @@ FRP = {
 	complete_national_focus = FRA_armeedeterre 
 	complete_national_focus = FRA_armeedelair 
 	complete_national_focus = FRA_marine_nationale
+	inherit_technology = FRA
 }
 FRP = { transfer_state = 23 }
 FRP = { transfer_state = 1007 }
@@ -783,6 +787,7 @@ FRR = {
 	complete_national_focus = FRA_armeedeterre 
 	complete_national_focus = FRA_armeedelair 
 	complete_national_focus = FRA_marine_nationale
+	inherit_technology = FRA
 }
 FRR = { transfer_state = 819 }
 FRR = { transfer_state = 24 }
@@ -820,6 +825,7 @@ FRR = {
 	complete_national_focus = FRA_armeedeterre 
 	complete_national_focus = FRA_armeedelair 
 	complete_national_focus = FRA_marine_nationale
+	inherit_technology = FRA
 }
 FRR = { transfer_state = 819 }
 FRR = { transfer_state = 24 }
@@ -868,6 +874,7 @@ FRL = {
 	complete_national_focus = FRA_armeedeterre 
 	complete_national_focus = FRA_armeedelair 
 	complete_national_focus = FRA_marine_nationale
+	inherit_technology = FRA
 }
 FRL = { transfer_state = 25 }
 FRL = { transfer_state = 26 }
@@ -908,6 +915,7 @@ FRL = {
 	complete_national_focus = FRA_armeedeterre 
 	complete_national_focus = FRA_armeedelair 
 	complete_national_focus = FRA_marine_nationale
+	inherit_technology = FRA
 }
 FRL = { transfer_state = 25 }
 FRL = { transfer_state = 26 }
@@ -966,10 +974,10 @@ trigger = {
 	 }
 	SYR = { country_event = { id = syrialeb.1 days = 21 } }
 	FRA = { country_event = { id = rob_france.86 days = 1 }  }
-	FRL = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } inherit_technology = FRA }
-	FRR = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } inherit_technology = FRA }
-	FRP = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } inherit_technology = FRA }
-	FRS = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } inherit_technology = FRA }
+	FRL = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRR = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRP = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRS = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
 	random_list = {
 		20 = {
 			FRL = { country_event = { id = rob_france.84 days = 5 } }
@@ -1067,10 +1075,10 @@ country_lock_all_division_template = no
 	 }
 	SYR = { country_event = { id = syrialeb.1 days = 21 } }
 	FRA = { country_event = { id = rob_france.86 days = 1 }  }
-	FRL = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } inherit_technology = FRA }
-	FRR = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } inherit_technology = FRA }
-	FRP = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } inherit_technology = FRA }
-	FRS = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } inherit_technology = FRA }
+	FRL = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRR = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRP = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRS = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
 	random_list = {
 		20 = {
 			FRL = { country_event = { id = rob_france.84 days = 5 } }
@@ -1155,10 +1163,10 @@ hidden_effect = {
 	 }
 	SYR = { country_event = { id = syrialeb.1 days = 21 } }
 	FRA = { country_event = { id = rob_france.86 days = 1 }  }
-	FRL = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } inherit_technology = FRA }
-	FRR = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } inherit_technology = FRA }
-	FRP = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } inherit_technology = FRA }
-	FRS = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } inherit_technology = FRA }
+	FRL = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRR = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRP = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
+	FRS = { country_event = { id = rob_france.82 days = 1 }  country_event = { id = rob_france.83 days = 3 } }
 	random_list = {
 		20 = {
 			FRL = { country_event = { id = rob_france.84 days = 5 } }
@@ -1266,7 +1274,7 @@ trigger = {
 option = { ###destroy sorelians
 name = rob_france.26.a
 FRP = {
-remove_from_faction = FRR
+dismantle_faction = yes
 declare_war_on = { type = annex_everything target = FRR }
  	}
 }
@@ -1297,7 +1305,7 @@ mean_time_to_happen = { days = 1 }
 option = { ###destroy sorelians
 name = rob_france.26.a
 FRS = {
- remove_from_faction = FRR
+	dismantle_faction = yes
  declare_war_on = { type = annex_everything target = FRR }
  }
 }
@@ -2454,12 +2462,12 @@ option = {
 			#
 			}
 		}
+		
 		add_ideas = {
 			FRA_Dumezil
 			FRA_Xavier_Vallat
 			FRA_Jacques_Doriot
 			FRA_Georges_Lamirand
-			FRA_Joseph_Darnand
 		}
 	}
 
@@ -2883,6 +2891,14 @@ hidden_effect = {
 }
 }
 
+option = { ###in case of nothing
+name = "More foes..."
+trigger = {
+	NOT = { OR = { tag = FRR } }
+	FRA = { has_country_flag = FRA_socialists_united }
+}
+}
+
 option = { ###Pelekists get units
 name = "Welcome, fellow comrades"
 trigger = {
@@ -2914,6 +2930,10 @@ hidden_effect = {
 
 option = { ###in case of nothing
 name = "More foes..."
+trigger = {
+	NOT = { tag = FRP }
+	FRA = { NOT = { has_country_flag = FRA_pelekists_dead } }
+}
 }
 
 }
@@ -3728,7 +3748,7 @@ name = rob_france.106.a
 add_political_power = -10
 FWA = {
 	transfer_navy = {
-		target = FRA
+		target = ROOT
 	}
  }
 
@@ -3746,13 +3766,6 @@ if = {
 		maneuvering_skill = 3
 		coordination_skill = 3
 	}
-	add_ideas = {
-		FRA_Darlan
-		FRA_Henri_Massis
-		FRA_Eugene_Deloncle
-		FRA_Francois_Coty
-		FRA_Eugene_Bridoux
-	}
 }
 }
 
@@ -3761,7 +3774,7 @@ name = rob_france.106.b
 add_stability = -0.01
 FWA = {
 	transfer_navy = {
-		target = FRA
+		target = ROOT
 	}
  }
 if = {
@@ -4246,7 +4259,7 @@ country_event = {
   }
   
   option = {
-  name = rob_france.107.a
+  name = "This will come in handy"
   if = {###Montpellier 5p
 	  limit = {
 		  AND = {
@@ -4958,7 +4971,7 @@ trigger = {
 }
 
 option = {
-name = rob_france.107.a
+name = "This will come in handy"
 if = {###Montpellier 5p
 	limit = {
 		AND = {
@@ -5592,7 +5605,7 @@ trigger = {
 }
 
 option = {
-name = rob_france.107.a
+name = "This will come in handy"
 if = {###Montpellier 5p
 	limit = {
 		AND = {
@@ -6228,7 +6241,7 @@ trigger = {
 }
 
 option = {
-name = rob_france.107.a
+name = "This will come in handy"
 if = {###Montpellier 5p
 	limit = {
 		AND = {
@@ -6788,9 +6801,9 @@ option = { #### puppets at additional cost, keep current leader
 	FROM = { add_political_power = 100 }
 	add_political_power = -100
 	puppet = FROM
-	if = { limit = { has_country_flag = FRA_colony_syr_debate } clr_country_flag = FRA_colony_syr_debate }
-	if = { limit = { has_country_flag = FRA_colony_fic_debate } clr_country_flag = FRA_colony_fic_debate }
-	if = { limit = { has_country_flag = FRA_colony_fwa_debate } clr_country_flag = FRA_colony_fwa_debate }
+	if = { limit = { has_country_flag = FRA_colony_syr_debate } SYR = { set_politics = { ruling_party = authoritharian } } clr_country_flag = FRA_colony_syr_debate } 
+	if = { limit = { has_country_flag = FRA_colony_fic_debate } FIC = { set_politics = { ruling_party = reactionary } } clr_country_flag = FRA_colony_fic_debate } 
+	if = { limit = { has_country_flag = FRA_colony_fwa_debate } FWA = { set_politics = { ruling_party = authoritharian } } FEA = { set_politics = { ruling_party = authoritharian } }  clr_country_flag = FRA_colony_fwa_debate } 
 	clr_country_flag = FRA_colony_negotiation
 }
 
@@ -6964,6 +6977,7 @@ id = rob_france.131
 title = rob_france.131.t
 desc = rob_france.131.d
 trigger = {
+	has_country_flag = fra_cw_over
 	NOT = { has_country_flag = fra_colonies_done }
 	OR = {
 		tag = FRP
@@ -6986,11 +7000,8 @@ trigger = {
 }
 
 option = {  #### 
-	name = rob_france.130.a
-	add_ideas = {
-		fra_colonial_problems
-	}
-
+	name = rob_france.131.a
+		add_ideas = { fra_colonial_problems }
 	}
 
 }
@@ -7000,6 +7011,8 @@ id = rob_france.132
 title = rob_france.132.t
 desc = rob_france.132.d
 trigger = {
+	has_country_flag = fra_cw_over
+	has_country_flag = FRA_not_abandon_colonies
 	NOT = { has_country_flag = fra_colonies_done }
 	OR = {
 		OR = {
@@ -7090,11 +7103,13 @@ option = {  ####
 
 }
 
-country_event = { ### hands out debuff if owns second colony after cw
+country_event = { ### hands out debuff if owns third colony after cw
 id = rob_france.133
 title = rob_france.133.t
 desc = rob_france.133.d
 trigger = {
+	has_country_flag = fra_cw_over
+	has_country_flag = FRA_not_abandon_colonies
 	NOT = { has_country_flag = fra_colonies_done }
 	OR = {
 		OR = {
@@ -7151,11 +7166,13 @@ option = {  ####
 
 }
 
-country_event = { ### hands out debuff if owns second colony after cw
+country_event = { ### hands out debuff if owns forth colony after cw
 id = rob_france.134
 title = rob_france.134.t
 desc = rob_france.134.d
 trigger = {
+	has_country_flag = fra_cw_over
+	has_country_flag = FRA_not_abandon_colonies
 	NOT = { has_country_flag = fra_colonies_done }
 	has_idea = fra_colonial_problems_3
 	AND = {

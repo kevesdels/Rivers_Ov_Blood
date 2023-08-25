@@ -285,6 +285,10 @@ mean_time_to_happen = {days = 1}
 
 option = { ###Vlaslov dies
 name = bolshevik_russia.11.a
+retire_character = SOV_andrey_andreyevich_vlasov
+hidden_effect = {
+  retire_character = SOV_andrey_vlasov 
+}
 create_country_leader = {
 	name = "Vasily Blokhin"
 	desc = ""
@@ -297,7 +301,6 @@ create_country_leader = {
 }
 set_country_flag = vlaslov_is_dead
 add_popularity = {ideology = national_socialist popularity =0.05}
-remove_unit_leader = 412
 }
 
 option = { ###Vlaslov survives

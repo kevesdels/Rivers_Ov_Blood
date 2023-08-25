@@ -1,0 +1,30 @@
+FTT_ukrainian_ambition = {
+
+	FTT_secure_ukraine = {
+		cost = 80
+			 ai_will_do = {
+				   base = 200
+				   }
+		 fire_only_once = yes
+		 days_remove = 5
+		   available = {
+		  DSU = { exists = no }
+		  UKR = { exists = no }
+			OR = {
+				any_owned_state = {
+					is_core_of = DSU
+					}
+				any_owned_state = {
+					is_core_of = UKR
+					}
+			}
+		  }
+	   
+		  remove_effect = { 
+		  every_state = {
+		   limit = { OR = { is_core_of = DSU  is_core_of = UKR } }
+		   add_core_of = FTT
+	   }	   
+	   }
+}
+}
