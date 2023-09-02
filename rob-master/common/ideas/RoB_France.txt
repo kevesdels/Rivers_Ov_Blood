@@ -2097,7 +2097,7 @@ picture = GFX_idea_overextendadsf
 }
 
 
-fra_dum_patr_soc = {
+fra_dum_patr_soc_2 = {
  
   allowed = {
     always = yes
@@ -2109,8 +2109,9 @@ allowed_civil_war = {
 picture = GFX_idea_overextendadsf
   modifier = {
     political_power_gain = 0.1
-    MONTHLY_POPULATION = 0.35
+    MONTHLY_POPULATION = 0.45
     industrial_capacity_factory = -0.075
+    army_core_defence_factor = 0.1
    }
 }
 
@@ -2128,6 +2129,22 @@ picture = GFX_idea_overextendadsf
     stability_factor = -0.05
     war_support_factor = -0.05
     political_power_gain = 0.10
+   }
+}
+
+fra_dum_patr_soc = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    monthly_population = -0.20
+    army_core_defence_factor = 0.1
    }
 }
 

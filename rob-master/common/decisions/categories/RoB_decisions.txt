@@ -58,7 +58,6 @@ LIT_building_socialism = {
 	  available = {
 	  tag = LIT
 	  has_country_flag = LIT_com_kill_lohs
-	  NOT = { has_country_flag = LIT_com_mission_completed }
 	  }
 			priority = {
 			base = 10
@@ -1115,6 +1114,36 @@ FRA_colonial_investments = {
 	}
 }
 
+FRA_dum_convert_EUROPE_cat = {
+	icon = GFX_decision_category_generic
+	priority = {
+		base = 120
+		}	
+	visible = {
+		has_country_flag = FRA_DUMEZIL_REVOLUTIONS
+	}
+	available = {
+		hidden_trigger = {
+			has_country_flag = FRA_DUMEZIL_REVOLUTIONS	
+		}
+	}
+}
+
+
+FRA_dum_expansion = {
+	icon = GFX_decision_category_generic
+	priority = {
+		base = 120
+		}	
+	visible = {
+		has_country_flag = FRA_dum_expansion_enable
+	}
+	available = {
+		hidden_trigger = {
+			has_country_flag = FRA_dum_expansion_enable	
+		}
+	}
+}
 
 ALL_executive = {
 

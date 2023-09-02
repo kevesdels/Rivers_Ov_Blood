@@ -349,6 +349,8 @@ is_triggered_only = yes
 option = { ###Grinius dies
 name = lithuania.10.a
 kill_country_leader = yes
+add_stability = -0.20
+add_war_support = -0.20
 set_country_flag = LIT_kazys_dead
  create_country_leader = {
 	name = "Lietuvos Respublikos Seimas"
@@ -368,6 +370,9 @@ hidden_effect = {
 option = { ###grinuis hold
 name = lithuania.10.b
 add_stability = 0.1
+hidden_effect = {
+	country_event = { id = lithuania.38 days = 120 }
+   }
 }
 }
 
@@ -381,9 +386,12 @@ is_triggered_only = yes
 
 option = {
 name = lithuania.11.a
-add_popularity = {ideology = democratic_socialist popularity =0.2}
+add_popularity = {ideology =  popularity =0.2}
+set_country_flag = LIT_commie_takeover
+add_stability = -0.20
+add_war_support = -0.20
 set_politics = {
- ruling_party = democratic_socialist
+ ruling_party = national_socialist
  elections_allowed = no
 }
 add_ideas = {
@@ -911,13 +919,21 @@ country_event = {
 	option = {
 	 name = "...Oh"
 
+	 add_stability = -0.30
+    add_war_support = -0.30
 	 add_popularity = {ideology = national_socialist popularity =0.05}
 	 set_country_flag = LIT_commie_takeover
 	 set_politics = {
 	  ruling_party = national_socialist
 	  elections_allowed = no
 	 }
-
+	 add_ideas = {
+		LIT_antanas_snieckus_hog
+		LIT_icikas_meskupas_adomas_im
+		LIT_justas_paleckis_fm
+		LIT_aaron_soltz_em
+		LIT_vincas_vitauskas_dm
+		}
 	 }
 
 
@@ -1094,9 +1110,15 @@ country_event = {
 	
 	option = {
 	 name = "Long live the revolution!"
-	 LIT = { declare_war_on = { target = BLR type = annex_everything } }
-	 LIT = { declare_war_on = { target = CBR type = annex_everything } }
-	 LIT = { declare_war_on = { target = DBR type = annex_everything } }
+	 every_country = {
+		limit = { NOT = { OR = { tag = LIT is_in_faction_with = LIT } } OR = { owns_state = 206 owns_state = 241 owns_state = 94 } }
+		ROOT = { 
+			create_wargoal = {
+				type = annex_everything		
+				target = PREV
+			}			
+		}
+	}
 	 }
 }
 
@@ -1109,6 +1131,7 @@ country_event = {
 	trigger = {
 		tag = LIT
 		has_cosmetic_tag = LIT_Communist_formable
+		
 		OR = {
 			CBR = { OR = { is_puppet_of = LIT is_subject_of = LIT } owns_state = 206 owns_state = 241 owns_state = 94 }
 			DBR = { OR = { is_puppet_of = LIT is_subject_of = LIT } owns_state = 206 owns_state = 241 owns_state = 94 }
@@ -1163,10 +1186,6 @@ country_event = {
 	 }
 	 
 	 }
-	option = {
-	 name = "Too Far"
-	 add_stability = 0.2
-	 }
 }
 
 ###Place holder for commies
@@ -1196,6 +1215,11 @@ country_event = {
 			}
 		 }
 		SOV = { country_event = { id = lithuania.52 days = 1 } }
+	}
+
+	option = {
+		name = "We stand on our own"
+		add_war_support = 0.1
 	}
 }
 
@@ -1267,4 +1291,284 @@ country_event = {
 	 add_war_support = 0.10
 	}
 	
+}
+
+country_event = {
+	id = lithuania.55
+	title = "Liberation of Belarus"
+	desc = "If you havent gotten 'Interveene in Belaruss' focus, you should rush to it." 
+	
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		has_country_flag = LIT_commie_takeover
+		206 = { is_owned_and_controlled_by = ROOT }
+		241 = { is_owned_and_controlled_by = ROOT }
+		94 = { is_owned_and_controlled_by = ROOT }
+		NOT = { has_country_flag = annex_blr }
+	}
+	
+ 
+	option = { ###liberate Belarusian Socialist Republic
+	name = "Be free, brothers"
+	ai_chance = { factor = 150 }
+	puppet = CBR
+	CBR = { remove_ideas = { belarusian_civil_war CBR_russian_influence } }
+	every_owned_state = {
+	  limit = { 
+	   NOT = {
+		is_claim_or_core = yes
+	   }
+	   OR = {
+	   is_core_of = BLR
+	   is_core_of = CBR
+	   is_core_of = DBR
+	   }
+	  }
+	  add_core_of = CBR
+	  CBR = { transfer_state = PREV }
+  }
+   }
+}
+
+###ARMY event
+country_event = {
+	id = lithuania.56
+	desc = lithuania.56.d
+	title = lithuania.56.t
+	is_triggered_only = yes
+
+	option = {
+	name = lithuania.56.a
+	set_country_flag = LIT_defensive_doctrine
+	army_experience = 10
+   }
+
+	option = {
+	name = lithuania.56.b
+	set_country_flag = LIT_offensive_doctrine
+	army_experience = 10
+   }
+}
+
+
+
+###POLAND ANNEX COMMIES
+country_event = { 
+	id = lithuania.57
+	title = "INCORPORATION"
+	desc = "This republic will join our union, like it or not"
+	fire_only_once = yes
+	trigger = {
+		tag = LIT
+		has_cosmetic_tag = LIT_Communist_formable
+		POL = { OR = { is_puppet_of = LIT is_subject_of = LIT } }
+		NOT = { has_country_flag = annex_pol }
+	}
+	
+	
+	option = {
+	 name = "Long live the revolution!"
+	 if = {
+		limit = { POL = { OR = { is_puppet_of = LIT is_subject_of = LIT } } }
+		every_country = {
+			every_state = {
+				limit = { is_core_of = POL }
+				add_core_of = LIT
+			}
+		}
+		annex_country = {
+			target = POL
+			transfer_troops = yes
+		}
+		set_country_flag = annex_pol
+	 }
+	 
+	 }
+	option = {
+	 name = "Too Far"
+	 add_stability = 0.05
+	 set_country_flag = annex_pol
+	 }
+}
+
+
+###PRUSSIA ANNEX COMMIES
+country_event = { 
+	id = lithuania.58
+	title = "INCORPORATION"
+	desc = "This republic will join our union, like it or not"
+	fire_only_once = yes
+	trigger = {
+		tag = LIT
+		has_cosmetic_tag = LIT_Communist_formable
+		PRS = { OR = { is_puppet_of = LIT is_subject_of = LIT } }
+		NOT = { has_country_flag = annex_prs }
+	}
+	
+	
+	option = {
+	 name = "Long live the revolution!"
+	 if = {
+		limit = { PRS = { OR = { is_puppet_of = LIT is_subject_of = LIT } } }
+		every_country = {
+			every_state = {
+				limit = { is_core_of = PRS }
+				add_core_of = LIT
+			}
+		}
+		annex_country = {
+			target = PRS
+			transfer_troops = yes
+		}
+		set_country_flag = annex_prs
+	 }
+	 
+	 }
+	option = {
+	 name = "Too Far"
+	 add_stability = 0.05
+	 set_country_flag = annex_prs
+	 }
+}
+
+
+###LATVIA ANNEX COMMIES
+country_event = { 
+	id = lithuania.59
+	title = "INCORPORATION"
+	desc = "This republic will join our union, like it or not"
+	fire_only_once = yes
+	trigger = {
+		tag = LIT
+		has_cosmetic_tag = LIT_Communist_formable
+		LAT = { OR = { is_puppet_of = LIT is_subject_of = LIT } }
+		NOT = { has_country_flag = annex_lat }
+	}
+	
+	
+	option = {
+	 name = "Long live the revolution!"
+	 if = {
+		limit = { LAT = { OR = { is_puppet_of = LIT is_subject_of = LIT } } }
+		every_country = {
+			every_state = {
+				limit = { is_core_of = LAT }
+				add_core_of = LIT
+			}
+		}
+		annex_country = {
+			target = LAT
+			transfer_troops = yes
+		}
+		set_country_flag = annex_lat
+	 }
+	 
+	 }
+	option = {
+	 name = "Too Far"
+	 add_stability = 0.05
+	 set_country_flag = annex_lat
+	 }
+}
+
+
+###ESTONIA ANNEX COMMIES
+country_event = { 
+	id = lithuania.60
+	title = "INCORPORATION"
+	desc = "This republic will join our union, like it or not"
+	fire_only_once = yes
+	trigger = {
+		tag = LIT
+		has_cosmetic_tag = LIT_Communist_formable
+		ECA = { OR = { is_puppet_of = LIT is_subject_of = LIT } }
+		NOT = { has_country_flag = annex_eca }
+	}
+	
+	
+	option = {
+	 name = "Long live the revolution!"
+	 if = {
+		limit = { ECA = { OR = { is_puppet_of = LIT is_subject_of = LIT } } }
+		every_country = {
+			every_state = {
+				limit = { is_core_of = ECA }
+				add_core_of = LIT
+			}
+		}
+		annex_country = {
+			target = ECA
+			transfer_troops = yes
+		}
+		set_country_flag = annex_eca
+	 }
+	 
+	 }
+	option = {
+	 name = "Too Far"
+	 add_stability = 0.05
+	 set_country_flag = annex_eca
+	 }
+}
+
+###Ukraine ANNEX COMMIES
+country_event = { 
+	id = lithuania.61
+	title = "INCORPORATION"
+	desc = "This republic will join our union, like it or not"
+	fire_only_once = yes
+	trigger = {
+		tag = LIT
+		has_cosmetic_tag = LIT_Communist_formable
+		OR = {
+			UKR = { OR = { is_puppet_of = LIT is_subject_of = LIT } }
+			DSU = { OR = { is_puppet_of = LIT is_subject_of = LIT } }
+		}
+		NOT = { has_country_flag = annex_ukr }
+	}
+	
+	
+	option = {
+	 name = "Long live the revolution!"
+	 if = {
+		limit = { UKR = { OR = { is_puppet_of = LIT is_subject_of = LIT } } }
+		every_country = {
+			every_state = {
+				limit = { is_core_of = UKR }
+				add_core_of = LIT
+			}
+		}
+		annex_country = {
+			target = UKR
+			transfer_troops = yes
+		}
+		set_country_flag = annex_ukr
+	 }
+	 
+	 }
+
+	 option = {
+		name = "Long live the revolution!"
+		if = {
+		   limit = { DSU = { OR = { is_puppet_of = LIT is_subject_of = LIT } } }
+		   every_country = {
+			   every_state = {
+				   limit = { is_core_of = DSU }
+				   add_core_of = LIT
+			   }
+		   }
+		   annex_country = {
+			   target = DSU
+			   transfer_troops = yes
+		   }
+		   set_country_flag = annex_ukr
+		}
+		
+		}
+
+	option = {
+	 name = "Too Far"
+	 add_stability = 0.05
+	 set_country_flag = annex_ukr
+	 }
 }

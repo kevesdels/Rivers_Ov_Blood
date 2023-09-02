@@ -1,0 +1,1671 @@
+focus_tree = {
+	id = plc
+	continuous_focus_position = { x = -40 y = 1960 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PLC
+		}
+	}
+	#Jagiełło's Nation Reborn!
+	focus = {
+		id = PLC_jagiellosnationreborn
+		icon = GFX_goal_unknown
+		x = 14
+		y = 0
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Issue of Currency
+	focus = {
+		id = PLC_issue_of_currency
+		icon = GFX_goal_unknown
+		x = 13
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_jagiellosnationreborn  }
+	}
+
+	#The Issue of Administration
+	focus = {
+		id = PLC_the_issue_of_administration
+		icon = GFX_goal_unknown
+		x = 15
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_jagiellosnationreborn  }
+	}
+
+	#Merge the Banks
+	focus = {
+		id = PLC_merge_the_banks
+		icon = GFX_goal_unknown
+		x = 13
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_issue_of_currency  }
+	}
+
+	#The Sejm of Vilnius
+	focus = {
+		id = PLC_the_sejm_of_vilnius
+		icon = GFX_goal_unknown
+		x = 15
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_issue_of_administration  }
+	}
+
+	#The Return of Belarus
+	focus = {
+		id = PLC_the_return_of_belarus
+		icon = GFX_goal_unknown
+		x = 14
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_merge_the_banks  } prerequisite = { focus = PLC_the_sejm_of_vilnius  }
+	}
+
+	#The Legacy of Smolensk
+	focus = {
+		id = PLC_the_legacy_of_smolensk
+		icon = GFX_goal_unknown
+		x = 14
+		y = 4
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_return_of_belarus  }
+	}
+
+	#The Issue of Ukraine
+	focus = {
+		id = PLC_the_issue_of_ukraine
+		icon = GFX_goal_unknown
+		x = 14
+		y = 5
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_legacy_of_smolensk  }
+	}
+
+	#Remember Hadiach
+	focus = {
+		id = PLC_remember_hadiach
+		icon = GFX_goal_unknown
+		x = 12
+		y = 6
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_issue_of_ukraine  }
+	}
+
+	#The Spirit of Kniaź Jarema
+	focus = {
+		id = PLC_thespiritofkniazjarema
+		icon = GFX_goal_unknown
+		x = 16
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_issue_of_ukraine  }
+		mutually_exclusive = { focus = PLC_remember_hadiach  }
+	}
+
+	#Destroy Any Notion of Autonomy
+	focus = {
+		id = PLC_destroy_any_notion_of_autonomy
+		icon = GFX_goal_unknown
+		x = 15
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_thespiritofkniazjarema  }
+	}
+
+	#Ban the Orthodox Church
+	focus = {
+		id = PLC_ban_the_orthodox_church
+		icon = GFX_goal_unknown
+		x = 17
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_thespiritofkniazjarema  }
+	}
+
+	#The Great Mistake
+	focus = {
+		id = PLC_the_great_mistake
+		icon = GFX_goal_unknown
+		x = 15
+		y = 8
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_destroy_any_notion_of_autonomy  }
+	}
+
+	#Enlightement of Faith
+	focus = {
+		id = PLC_enlightement_of_faith
+		icon = GFX_goal_unknown
+		x = 17
+		y = 8
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_ban_the_orthodox_church  }
+	}
+
+	#Future Loyalism
+	focus = {
+		id = PLC_future_loyalism
+		icon = GFX_goal_unknown
+		x = 16
+		y = 11
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_great_population_exchange  }
+	}
+
+	#Cossacks Ablaze
+	focus = {
+		id = PLC_cossacks_ablaze
+		icon = GFX_goal_unknown
+		x = 16
+		y = 9
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_great_mistake  } prerequisite = { focus = PLC_enlightement_of_faith  }
+	}
+
+	#The Great Population Exchange
+	focus = {
+		id = PLC_the_great_population_exchange
+		icon = GFX_goal_unknown
+		x = 16
+		y = 10
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_cossacks_ablaze  }
+	}
+
+	#Tolerance of Faith
+	focus = {
+		id = PLC_tolerance_of_faith
+		icon = GFX_goal_unknown
+		x = 13
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = PLC_remember_hadiach  }
+	}
+
+	#Reform the Cossack Regiments
+	focus = {
+		id = PLC_reform_the_cossack_regiments
+		icon = GFX_goal_unknown
+		x = 13
+		y = 8
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_tolerance_of_faith  }
+	}
+
+	#Ruthenian Rights
+	focus = {
+		id = PLC_ruthenian_rights
+		icon = GFX_goal_unknown
+		x = 11
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_remember_hadiach  }
+	}
+
+	#Brotherhood of Both Nations
+	focus = {
+		id = PLC_brotherhood_of_both_nations
+		icon = GFX_goal_unknown
+		x = 11
+		y = 8
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_ruthenian_rights  }
+	}
+
+	#The Sejm of Kyiv
+	focus = {
+		id = PLC_the_sejm_of_kyiv
+		icon = GFX_goal_unknown
+		x = 12
+		y = 9
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_reform_the_cossack_regiments  } prerequisite = { focus = PLC_brotherhood_of_both_nations  }
+	}
+
+	#A Loving Ukraine!
+	focus = {
+		id = PLC_alovingukraine
+		icon = GFX_goal_unknown
+		x = 12
+		y = 10
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_sejm_of_kyiv  }
+	}
+
+	#Litwo! Ojczyzno moja
+	focus = {
+		id = PLC_litwoojczyznomoja
+		icon = GFX_goal_unknown
+		x = 23
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_legacy_of_smolensk  }
+	}
+
+	#A tale of two brothers
+	focus = {
+		id = PLC_a_tale_of_two_brothers
+		icon = GFX_goal_unknown
+		x = 22
+		y = 6
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_litwoojczyznomoja  }
+	}
+
+	#Deal with Traitorous Sentiments
+	focus = {
+		id = PLC_deal_with_traitorous_sentiments
+		icon = GFX_goal_unknown
+		x = 24
+		y = 6
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_litwoojczyznomoja  }
+	}
+
+	#Much Work Remains!
+	focus = {
+		id = PLC_muchworkremains
+		icon = GFX_goal_unknown
+		x = 23
+		y = 7
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_a_tale_of_two_brothers  } prerequisite = { focus = PLC_deal_with_traitorous_sentiments  }
+	}
+
+	#Guarantee Cultural Freedoms
+	focus = {
+		id = PLC_guarantee_cultural_freedoms
+		icon = GFX_goal_unknown
+		x = 22
+		y = 8
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_muchworkremains  }
+	}
+
+	#Lithuanian Autonomy
+	focus = {
+		id = PLC_lithuanian_autonomy
+		icon = GFX_goal_unknown
+		x = 22
+		y = 9
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_guarantee_cultural_freedoms  }
+	}
+
+	#Promote Members of the Szlachta
+	focus = {
+		id = PLC_promote_members_of_the_szlachta
+		icon = GFX_goal_unknown
+		x = 24
+		y = 8
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_muchworkremains  }
+	}
+
+	#Federation of Lithuanians
+	focus = {
+		id = PLC_federation_of_lithuanians
+		icon = GFX_goal_unknown
+		x = 24
+		y = 9
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_promote_members_of_the_szlachta  }
+	}
+
+	#Statutes of Lithuania
+	focus = {
+		id = PLC_statutes_of_lithuania
+		icon = GFX_goal_unknown
+		x = 23
+		y = 10
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_lithuanian_autonomy  } prerequisite = { focus = PLC_federation_of_lithuanians  }
+	}
+
+	#Statutes of Lithuania
+	focus = {
+		id = PLC_statutes_of_lithuania
+		icon = GFX_goal_unknown
+		x = 23
+		y = 10
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_lithuanian_autonomy  } prerequisite = { focus = PLC_federation_of_lithuanians  }
+	}
+
+	#The New Elections
+	focus = {
+		id = PLC_the_new_elections
+		icon = GFX_goal_unknown
+		x = 23
+		y = 11
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_statutes_of_lithuania  }
+	}
+
+	#Reformist Victory
+	focus = {
+		id = PLC_reformist_victory
+		icon = GFX_goal_unknown
+		x = 27
+		y = 12
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_new_elections  }
+	}
+
+	#The Szlachta Victorious
+	focus = {
+		id = PLC_the_szlachta_victorious
+		icon = GFX_goal_unknown
+		x = 19
+		y = 12
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_new_elections  }
+	}
+
+	#In Memory of the Past
+	focus = {
+		id = PLC_in_memory_of_the_past
+		icon = GFX_goal_unknown
+		x = 26
+		y = 13
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_reformist_victory  }
+	}
+
+	#Legacy of the Duchy
+	focus = {
+		id = PLC_legacy_of_the_duchy
+		icon = GFX_goal_unknown
+		x = 28
+		y = 13
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_reformist_victory  }
+	}
+
+	#The Question of Multiculturalism
+	focus = {
+		id = PLC_the_question_of_multiculturalism
+		icon = GFX_goal_unknown
+		x = 27
+		y = 14
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_in_memory_of_the_past  } prerequisite = { focus = PLC_legacy_of_the_duchy  }
+	}
+
+	#Enforce Lithuanian Identity
+	focus = {
+		id = PLC_enforce_lithuanian_identity
+		icon = GFX_goal_unknown
+		x = 26
+		y = 15
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_question_of_multiculturalism  }
+	}
+
+	#Cult of the Dukes
+	focus = {
+		id = PLC_cult_of_the_dukes
+		icon = GFX_goal_unknown
+		x = 26
+		y = 16
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_enforce_lithuanian_identity  }
+	}
+
+	#The Issue of Demography
+	focus = {
+		id = PLC_the_issue_of_demography
+		icon = GFX_goal_unknown
+		x = 25
+		y = 18
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_chaser_rides_forwards  }
+	}
+
+	#Legalise Polygamy
+	focus = {
+		id = PLC_legalise_polygamy
+		icon = GFX_goal_unknown
+		x = 25
+		y = 19
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_issue_of_demography  }
+	}
+
+	#Generous Subsidies
+	focus = {
+		id = PLC_generous_subsidies
+		icon = GFX_goal_unknown
+		x = 25
+		y = 20
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_legalise_polygamy  }
+	}
+
+	#Play on our Strengths
+	focus = {
+		id = PLC_play_on_our_strengths
+		icon = GFX_goal_unknown
+		x = 27
+		y = 18
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_chaser_rides_forwards  }
+	}
+
+	#Lithuanian State Language
+	focus = {
+		id = PLC_lithuanian_state_language
+		icon = GFX_goal_unknown
+		x = 28
+		y = 15
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_question_of_multiculturalism  }
+	}
+
+	#...But Protect Belarusian
+	focus = {
+		id = PLC_butprotectbelarusian
+		icon = GFX_goal_unknown
+		x = 28
+		y = 16
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_lithuanian_state_language  }
+	}
+
+	#The Chaser Rides Forwards
+	focus = {
+		id = PLC_the_chaser_rides_forwards
+		icon = GFX_goal_unknown
+		x = 27
+		y = 17
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_cult_of_the_dukes  } prerequisite = { focus = PLC_butprotectbelarusian  }
+	}
+
+	#Mistakes of Regionalism
+	focus = {
+		id = PLC_mistakes_of_regionalism
+		icon = GFX_goal_unknown
+		x = 29
+		y = 18
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_chaser_rides_forwards  }
+	}
+
+	#Golden Liberties
+	focus = {
+		id = PLC_golden_liberties
+		icon = GFX_goal_unknown
+		x = 19
+		y = 13
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = PLC_the_szlachta_victorious  }
+	}
+
+	#The Radziwiłł
+	focus = {
+		id = PLC_theradziwill
+		icon = GFX_goal_unknown
+		x = 8
+		y = 9
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_right_hand_man  }
+	}
+
+	#War Against Poverty
+	focus = {
+		id = PLC_war_against_poverty
+		icon = GFX_goal_unknown
+		x = 8
+		y = 10
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_theradziwill  }
+	}
+
+	#Right Hand Man
+	focus = {
+		id = PLC_right_hand_man
+		icon = GFX_goal_unknown
+		x = 6
+		y = 8
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_glories_of_the_past  } prerequisite = { focus = PLC_strengthen_the_szlachta  } prerequisite = { focus = PLC_vast_administration  }
+	}
+
+	#Great Triumph
+	focus = {
+		id = PLC_great_triumph
+		icon = GFX_goal_unknown
+		x = 6
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_polskoojczyznomoja  }
+	}
+
+	#Great Triumph
+	focus = {
+		id = PLC_great_triumph
+		icon = GFX_goal_unknown
+		x = 6
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_polskoojczyznomoja  }
+	}
+
+	#The Noble Welfare State
+	focus = {
+		id = PLC_the_noble_welfare_state
+		icon = GFX_goal_unknown
+		x = 17
+		y = 16
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = PLC_issues_of_the_bluebloods  }
+	}
+
+	#Pass the Agricultural Reform
+	focus = {
+		id = PLC_pass_the_agricultural_reform
+		icon = GFX_goal_unknown
+		x = 27
+		y = 19
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = PLC_play_on_our_strengths  }
+	}
+
+	#Return of Knighthood
+	focus = {
+		id = PLC_return_of_knighthood
+		icon = GFX_goal_unknown
+		x = 19
+		y = 17
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_subsidise_farmers  } prerequisite = { focus = PLC_national_tolerance  } prerequisite = { focus = PLC_the_noble_welfare_state  }
+	}
+
+	#History of Tolerance
+	focus = {
+		id = PLC_history_of_tolerance
+		icon = GFX_goal_unknown
+		x = 17
+		y = 13
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_szlachta_victorious  }
+	}
+
+	#Kindness of the Szlachta
+	focus = {
+		id = PLC_kindness_of_the_szlachta
+		icon = GFX_goal_unknown
+		x = 19
+		y = 14
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_golden_liberties  } prerequisite = { focus = PLC_suppress_nationalism  } prerequisite = { focus = PLC_history_of_tolerance  }
+	}
+
+	#Subsidise Farmers
+	focus = {
+		id = PLC_subsidise_farmers
+		icon = GFX_goal_unknown
+		x = 19
+		y = 16
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_issues_of_the_bluebloods  }
+	}
+
+	#National Tolerance
+	focus = {
+		id = PLC_national_tolerance
+		icon = GFX_goal_unknown
+		x = 21
+		y = 16
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_issues_of_the_bluebloods  }
+	}
+
+	#Suppress Nationalism
+	focus = {
+		id = PLC_suppress_nationalism
+		icon = GFX_goal_unknown
+		x = 21
+		y = 13
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_szlachta_victorious  }
+	}
+
+	#Curb the Aristocracy
+	focus = {
+		id = PLC_curb_the_aristocracy
+		icon = GFX_goal_unknown
+		x = 27
+		y = 20
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_pass_the_agricultural_reform  }
+	}
+
+	#Consolidate Political Power...
+	focus = {
+		id = PLC_consolidatepoliticalpower
+		icon = GFX_goal_unknown
+		x = 29
+		y = 19
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_mistakes_of_regionalism  }
+	}
+
+	#Declare Plechavičius as Hetman
+	focus = {
+		id = PLC_declareplechaviciusashetman
+		icon = GFX_goal_unknown
+		x = 29
+		y = 20
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_consolidatepoliticalpower  }
+	}
+
+	#The King Under a King
+	focus = {
+		id = PLC_the_king_under_a_king
+		icon = GFX_goal_unknown
+		x = 27
+		y = 21
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_curb_the_aristocracy  } prerequisite = { focus = PLC_declareplechaviciusashetman  } prerequisite = { focus = PLC_generous_subsidies  }
+	}
+
+	#Issues of the Blue-Bloods
+	focus = {
+		id = PLC_issues_of_the_bluebloods
+		icon = GFX_goal_unknown
+		x = 19
+		y = 15
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_kindness_of_the_szlachta  }
+	}
+
+	#Host Saber Tournaments
+	focus = {
+		id = PLC_host_saber_tournaments
+		icon = GFX_goal_unknown
+		x = 19
+		y = 18
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_return_of_knighthood  }
+	}
+
+	#The Common Language
+	focus = {
+		id = PLC_the_common_language
+		icon = GFX_goal_unknown
+		x = 21
+		y = 18
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_return_of_knighthood  }
+	}
+
+	#Spirit of the Rzeczpospolita
+	focus = {
+		id = PLC_spirit_of_the_rzeczpospolita
+		icon = GFX_goal_unknown
+		x = 17
+		y = 18
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_return_of_knighthood  }
+	}
+
+	#Return of Old Virtue
+	focus = {
+		id = PLC_return_of_old_virtue
+		icon = GFX_goal_unknown
+		x = 19
+		y = 19
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = PLC_host_saber_tournaments  } prerequisite = { focus = PLC_the_common_language  } prerequisite = { focus = PLC_spirit_of_the_rzeczpospolita  }
+	}
+
+	#Polsko! Ojczyzno Moja
+	focus = {
+		id = PLC_polskoojczyznomoja
+		icon = GFX_goal_unknown
+		x = 6
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_legacy_of_smolensk  }
+	}
+
+	#Great Triumph
+	focus = {
+		id = PLC_great_triumph
+		icon = GFX_goal_unknown
+		x = 6
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_polskoojczyznomoja  }
+	}
+
+	#Glories of the Past
+	focus = {
+		id = PLC_glories_of_the_past
+		icon = GFX_goal_unknown
+		x = 6
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_great_triumph  }
+	}
+
+	#Vast Administration
+	focus = {
+		id = PLC_vast_administration
+		icon = GFX_goal_unknown
+		x = 8
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_great_triumph  }
+	}
+
+	#Strengthen the Szlachta
+	focus = {
+		id = PLC_strengthen_the_szlachta
+		icon = GFX_goal_unknown
+		x = 4
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_great_triumph  }
+	}
+
+	#Merge Church and State
+	focus = {
+		id = PLC_merge_church_and_state
+		icon = GFX_goal_unknown
+		x = 8
+		y = 11
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_war_against_poverty  }
+	}
+
+	#Remember the Common Man
+	focus = {
+		id = PLC_remember_the_common_man
+		icon = GFX_goal_unknown
+		x = 10
+		y = 10
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_theradziwill  }
+	}
+
+	#Nobility to the Worthy
+	focus = {
+		id = PLC_nobility_to_the_worthy
+		icon = GFX_goal_unknown
+		x = 10
+		y = 11
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_remember_the_common_man  }
+	}
+
+	#Amends for the Past
+	focus = {
+		id = PLC_amends_for_the_past
+		icon = GFX_goal_unknown
+		x = 8
+		y = 12
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_merge_church_and_state  } prerequisite = { focus = PLC_nobility_to_the_worthy  }
+	}
+
+	#Anti Socialist Crackdown
+	focus = {
+		id = PLC_anti_socialist_crackdown
+		icon = GFX_goal_unknown
+		x = 2
+		y = 11
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_snub_the_commoners  }
+	}
+
+	#Reminder of Kosciuczko
+	focus = {
+		id = PLC_reminder_of_kosciuczko
+		icon = GFX_goal_unknown
+		x = 9
+		y = 13
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_amends_for_the_past  }
+	}
+
+	#Integration of the Lithuanians
+	focus = {
+		id = PLC_integration_of_the_lithuanians
+		icon = GFX_goal_unknown
+		x = 34
+		y = 0
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#All Equal Under God
+	focus = {
+		id = PLC_all_equal_under_god
+		icon = GFX_goal_unknown
+		x = 7
+		y = 13
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_amends_for_the_past  }
+	}
+
+	#Polish Deal
+	focus = {
+		id = PLC_polish_deal
+		icon = GFX_goal_unknown
+		x = 7
+		y = 14
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_all_equal_under_god  }
+	}
+
+	#Cult of the Heroes
+	focus = {
+		id = PLC_cult_of_the_heroes
+		icon = GFX_goal_unknown
+		x = 9
+		y = 14
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_reminder_of_kosciuczko  }
+	}
+
+	#Chancellor and King
+	focus = {
+		id = PLC_chancellor_and_king
+		icon = GFX_goal_unknown
+		x = 8
+		y = 15
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_polish_deal  } prerequisite = { focus = PLC_cult_of_the_heroes  }
+	}
+
+	#The Sapiega
+	focus = {
+		id = PLC_the_sapiega
+		icon = GFX_goal_unknown
+		x = 4
+		y = 9
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_right_hand_man  }
+	}
+
+	#Snub the Commoners
+	focus = {
+		id = PLC_snub_the_commoners
+		icon = GFX_goal_unknown
+		x = 2
+		y = 10
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_sapiega  }
+	}
+
+	#Limit the Sejm
+	focus = {
+		id = PLC_limit_the_sejm
+		icon = GFX_goal_unknown
+		x = 4
+		y = 10
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_sapiega  }
+	}
+
+	#Limit the Sejm
+	focus = {
+		id = PLC_limit_the_sejm
+		icon = GFX_goal_unknown
+		x = 4
+		y = 10
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_sapiega  }
+	}
+
+	#Further Empower the King
+	focus = {
+		id = PLC_further_empower_the_king
+		icon = GFX_goal_unknown
+		x = 4
+		y = 11
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_limit_the_sejm  }
+	}
+
+	#Family Connections
+	focus = {
+		id = PLC_family_connections
+		icon = GFX_goal_unknown
+		x = 6
+		y = 10
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_sapiega  }
+	}
+
+	#Family Connections
+	focus = {
+		id = PLC_family_connections
+		icon = GFX_goal_unknown
+		x = 6
+		y = 10
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_the_sapiega  }
+	}
+
+	#Dominance of the Military
+	focus = {
+		id = PLC_dominance_of_the_military
+		icon = GFX_goal_unknown
+		x = 6
+		y = 11
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_family_connections  }
+	}
+
+	#Krolestwo, nie Rzeczpospolita
+	focus = {
+		id = PLC_krolestwonierzeczpospolita
+		icon = GFX_goal_unknown
+		x = 4
+		y = 12
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_anti_socialist_crackdown  } prerequisite = { focus = PLC_further_empower_the_king  } prerequisite = { focus = PLC_dominance_of_the_military  }
+	}
+
+	#Cult of History
+	focus = {
+		id = PLC_cult_of_history
+		icon = GFX_goal_unknown
+		x = 5
+		y = 13
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_krolestwonierzeczpospolita  }
+	}
+
+	#Expand the Secret Service
+	focus = {
+		id = PLC_expand_the_secret_service
+		icon = GFX_goal_unknown
+		x = 3
+		y = 13
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_krolestwonierzeczpospolita  }
+	}
+
+	#Bread and Games
+	focus = {
+		id = PLC_bread_and_games
+		icon = GFX_goal_unknown
+		x = 4
+		y = 14
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_cult_of_history  } prerequisite = { focus = PLC_expand_the_secret_service  }
+	}
+
+	#Reform Lithuanian Units
+	focus = {
+		id = PLC_reform_lithuanian_units
+		icon = GFX_goal_unknown
+		x = 33
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_integration_of_the_lithuanians  }
+	}
+
+	#Accept Lithuanian Generals
+	focus = {
+		id = PLC_accept_lithuanian_generals
+		icon = GFX_goal_unknown
+		x = 35
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_integration_of_the_lithuanians  }
+	}
+
+	#Standardize the Forces
+	focus = {
+		id = PLC_standardize_the_forces
+		icon = GFX_goal_unknown
+		x = 34
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_reform_lithuanian_units  } prerequisite = { focus = PLC_accept_lithuanian_generals  }
+	}
+
+	#Two Militaries, One Army
+	focus = {
+		id = PLC_twomilitariesonearmy
+		icon = GFX_goal_unknown
+		x = 34
+		y = 3
+		cost = 1
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_standardize_the_forces  }
+	}
+
+	#Army of Poland
+	focus = {
+		id = PLC_army_of_poland
+		icon = GFX_goal_unknown
+		x = 30
+		y = 4
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_twomilitariesonearmy  }
+	}
+
+	#Army of Lithuania
+	focus = {
+		id = PLC_army_of_lithuania
+		icon = GFX_goal_unknown
+		x = 39
+		y = 4
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_twomilitariesonearmy  }
+	}
+
+	#Legacy of Kosciuszko
+	focus = {
+		id = PLC_legacy_of_kosciuszko
+		icon = GFX_goal_unknown
+		x = 30
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_army_of_poland  }
+	}
+
+	#Assault Corps "Katkus"
+	focus = {
+		id = PLC_assaultcorpskatkus
+		icon = GFX_goal_unknown
+		x = 42
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_modernize_the_force  }
+	}
+
+	#Modernize the Force
+	focus = {
+		id = PLC_modernize_the_force
+		icon = GFX_goal_unknown
+		x = 42
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_army_of_lithuania  }
+	}
+
+	#Remember David of Grodno!
+	focus = {
+		id = PLC_rememberdavidofgrodno
+		icon = GFX_goal_unknown
+		x = 38
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_restart_the_raids  }
+	}
+
+	#Spear of Algirdas
+	focus = {
+		id = PLC_spear_of_algirdas
+		icon = GFX_goal_unknown
+		x = 40
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_restart_the_raids  }
+	}
+
+	#Pagan Spirit
+	focus = {
+		id = PLC_pagan_spirit
+		icon = GFX_goal_unknown
+		x = 39
+		y = 5
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_army_of_lithuania  }
+	}
+
+	#Restart the Raids
+	focus = {
+		id = PLC_restart_the_raids
+		icon = GFX_goal_unknown
+		x = 39
+		y = 6
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_pagan_spirit  }
+	}
+
+	#Legacy of Siemienowicz
+	focus = {
+		id = PLC_legacy_of_siemienowicz
+		icon = GFX_goal_unknown
+		x = 42
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_assaultcorpskatkus  }
+	}
+
+	#Contracting the Companies
+	focus = {
+		id = PLC_contracting_the_companies
+		icon = GFX_goal_unknown
+		x = 36
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_army_of_lithuania  }
+	}
+
+	#Transform the Riflemen
+	focus = {
+		id = PLC_transform_the_riflemen
+		icon = GFX_goal_unknown
+		x = 36
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_contracting_the_companies  }
+	}
+
+	#Memory of the Revolts
+	focus = {
+		id = PLC_memory_of_the_revolts
+		icon = GFX_goal_unknown
+		x = 36
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_transform_the_riflemen  }
+	}
+
+	#Legacy of Grunwald
+	focus = {
+		id = PLC_legacy_of_grunwald
+		icon = GFX_goal_unknown
+		x = 39
+		y = 8
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_rememberdavidofgrodno  } prerequisite = { focus = PLC_spear_of_algirdas  } prerequisite = { focus = PLC_legacy_of_siemienowicz  } prerequisite = { focus = PLC_memory_of_the_revolts  }
+	}
+
+	#Prioritize Artillery Training
+	focus = {
+		id = PLC_prioritize_artillery_training
+		icon = GFX_goal_unknown
+		x = 30
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_legacy_of_kosciuszko  }
+	}
+
+	#Adoption of Infantry Guns
+	focus = {
+		id = PLC_adoption_of_infantry_guns
+		icon = GFX_goal_unknown
+		x = 30
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = PLC_prioritize_artillery_training  }
+	}
+
+	#Battalion "Sobieski"
+	focus = {
+		id = PLC_battalionsobieski
+		icon = GFX_goal_unknown
+		x = 30
+		y = 8
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_adoption_of_infantry_guns  }
+	}
+
+	#Expand the Cavalry Force
+	focus = {
+		id = PLC_expand_the_cavalry_force
+		icon = GFX_goal_unknown
+		x = 32
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_legacy_of_kosciuszko  }
+	}
+
+	#Motorize the Army
+	focus = {
+		id = PLC_motorize_the_army
+		icon = GFX_goal_unknown
+		x = 32
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_expand_the_cavalry_force  }
+	}
+
+	#Formation of a Reserve
+	focus = {
+		id = PLC_formation_of_a_reserve
+		icon = GFX_goal_unknown
+		x = 28
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_legacy_of_kosciuszko  }
+	}
+
+	#Speed of the Hussar
+	focus = {
+		id = PLC_speed_of_the_hussar
+		icon = GFX_goal_unknown
+		x = 32
+		y = 8
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_motorize_the_army  }
+	}
+
+	#Legacy of Jasna Gora
+	focus = {
+		id = PLC_legacy_of_jasna_gora
+		icon = GFX_goal_unknown
+		x = 28
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_formation_of_a_reserve  }
+	}
+
+	#Polish School of Warfare
+	focus = {
+		id = PLC_polish_school_of_warfare
+		icon = GFX_goal_unknown
+		x = 28
+		y = 8
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_legacy_of_jasna_gora  }
+	}
+
+	#As Unstoppable as the Hussars!
+	focus = {
+		id = PLC_asunstoppableasthehussars
+		icon = GFX_goal_unknown
+		x = 30
+		y = 9
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = PLC_battalionsobieski  } prerequisite = { focus = PLC_speed_of_the_hussar  } prerequisite = { focus = PLC_polish_school_of_warfare  }
+	}
+
+}

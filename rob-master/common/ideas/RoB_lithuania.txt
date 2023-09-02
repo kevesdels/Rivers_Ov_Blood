@@ -262,7 +262,7 @@ lithuanian_stormtroopers = {
 				always = yes
 			}
      removal_cost = -1
-	 picture = GFX_idea_famine_of_1933
+	 picture = LIT_stormtroopers
 	 modifier = {
 		army_attack_factor = 0.05
 		recon_factor = 0.05
@@ -291,7 +291,7 @@ lithuanian_stormtroopers = {
 				always = yes
 			}
      removal_cost = -1
-	 picture = GFX_idea_famine_of_1933
+	 picture = LIT_partizanai
 	 modifier = {
 		resistance_damage_to_garrison_on_our_occupied_states = 0.5
 			}
@@ -823,7 +823,7 @@ lithuanian_stormtroopers = {
 	 picture = GFX_idea_famine_of_1933
 	 modifier = {
      consumer_goods_factor = -0.03
-	 political_power_gain = 0.1
+	 political_power_gain = 0.05
 	 }
 	 }
 	 
@@ -852,7 +852,7 @@ lithuanian_stormtroopers = {
 	 picture = GFX_idea_famine_of_1933
 	 modifier = {
      consumer_goods_factor = -0.03
-	 political_power_gain = 0.15
+	 political_power_gain = 0.05
 	 production_factory_efficiency_gain_factor = 0.05 
 	 }
 	 }
@@ -991,9 +991,9 @@ lithuanian_stormtroopers = {
 		allowed = { always = no }
 		allowed_civil_war = { always = yes }
 		removal_cost = -1
-		picture = GFX_idea_famine_of_1933asass
+		picture = LIT_Rural_Socialism
 		modifier = {
-			consumer_goods_factor = -0.1
+			consumer_goods_factor = -0.03
 			production_speed_buildings_factor = -0.15
 			production_factory_max_efficiency_factor = 0.1
 			 }
@@ -1024,7 +1024,7 @@ lithuanian_stormtroopers = {
   allowed = { always = no }
   allowed_civil_war = { always = yes }
   removal_cost = -1
-  picture = GFX_idea_famine_of_1933
+  picture = LIT_expanded_conscription
   modifier = {
      conscription = 0.02
 	   }
@@ -1044,7 +1044,7 @@ lithuanian_stormtroopers = {
   allowed_civil_war = { always = yes }
   available = { NOT = { is_puppet_of = LIT } }
   removal_cost = -1
-  picture = GFX_idea_famine_of_1933
+  picture = LIT_partizanai
   targeted_modifier = {
    tag = LIT
    attack_bonus_against = -0.1
@@ -1062,7 +1062,7 @@ lithuanian_stormtroopers = {
   allowed_civil_war = { always = yes }
   available = { NOT = { is_puppet_of = LIT } }
   removal_cost = -1
-  picture = GFX_idea_famine_of_1933
+  picture = LIT_partizanai
   targeted_modifier = {
    tag = LIT
    attack_bonus_against = -0.1
@@ -1124,7 +1124,7 @@ lithuanian_stormtroopers = {
   allowed = { always = no }
   allowed_civil_war = { always = yes }
   removal_cost = -1
-  picture = GFX_idea_famine_of_1933
+  picture = GFX_idea_LIT_anbo_monopoly
   equipment_bonus = {
 	fighter_equipment = {
 			 build_cost_ic = -0.2 instant = yes
@@ -1138,7 +1138,7 @@ lithuanian_stormtroopers = {
   allowed = { always = no }
   allowed_civil_war = { always = yes }
   removal_cost = -1
-  picture = GFX_idea_famine_of_1933
+  picture = LIT_anbo_monopoly_broken
   modifier = {
     air_air_superiority_attack_factor = 0.07
 	air_air_superiority_defence_factor = 0.07

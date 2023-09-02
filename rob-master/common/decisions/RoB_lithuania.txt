@@ -503,15 +503,15 @@ LIT_building_socialism = {
    LIT = {
     has_built = {
       type = arms_factory
-      value > 10
+      value > 9
     }
     has_built = {
       type = industrial_complex
-      value > 12
+      value > 11
      }
      has_built = {
       type = infrastructure
-      value > 5
+      value > 4
      }
    } 
   }
@@ -523,15 +523,15 @@ LIT_building_socialism = {
         limit = {
           has_built = {
             type = arms_factory
-            value > 10
+            value > 9
           }
         has_built = {
           type = industrial_complex
-          value > 12
+          value > 11
          }
          has_built = {
           type = infrastructure
-          value > 5
+          value > 4
          }
         }
       add_stability = 0.1      
@@ -563,21 +563,21 @@ LIT_building_socialism = {
     }
   }
 
-    timeout_effect = {
+  timeout_effect = {
       set_country_flag = LIT_com_mission_completed
       if = {
         limit = {
           has_built = {
             type = arms_factory
-            value > 10
+            value > 9
           }
         has_built = {
           type = industrial_complex
-          value > 12
+          value > 11
          }
          has_built = {
           type = infrastructure
-          value > 5
+          value > 4
          }
         }
       add_stability = 0.1      
@@ -620,7 +620,12 @@ LIT_com_killing_lohs_lol = {
   LIT__com_kill_ukros = {
     target_trigger = { FROM = {tag = UKR } }
     visible = {
-      NOT = { UKR = { is_puppet_of = LIT exists = no } }
+      tag = LIT
+      NOT = { 
+        UKR = { 
+          OR = { is_puppet_of = LIT is_subject_of = LIT } 
+        } 
+      }
    }
    available = {
     UKR = {
@@ -943,6 +948,7 @@ LIT__population_transfers = {
     available = {
       tag = LIT
       owns_state = 784
+      
       OR = {
         owns_state = 763
         owns_state = 933
@@ -961,7 +967,7 @@ LIT__population_transfers = {
     target_trigger = { FROM = { OR = { state = 763 state = 933 state = 95 state = 96 } } NOT = {has_state_flag = LIT_transfer } }
    fire_only_once = yes
 
-    cost = 35
+    cost = 50
     days_remove = 90
 
     complete_effect = {
@@ -996,7 +1002,7 @@ LIT__population_transfers = {
     target_trigger = { FROM = { OR = { state = 66 state = 67 state = 801 state = 803 state = 5 } } NOT = {has_state_flag = LIT_transfer } }
    fire_only_once = yes
 
-    cost = 35
+    cost = 50
     days_remove = 90
 
     complete_effect = {
@@ -1034,7 +1040,7 @@ LIT__population_transfers = {
     target_trigger = { FROM = { OR = { state = 1096 state = 91 state = 89 state = 92 } } NOT = {has_state_flag = LIT_transfer } }
    fire_only_once = yes
 
-    cost = 35
+    cost = 50
     days_remove = 90
 
     complete_effect = {
@@ -1071,7 +1077,7 @@ LIT__population_transfers = {
     target_trigger = { FROM = { OR = { state = 1266 state = 1267 state = 188 state = 865 state = 980 } } NOT = {has_state_flag = LIT_transfer } }
    fire_only_once = yes
 
-    cost = 35
+    cost = 50
     days_remove = 90
 
     complete_effect = {

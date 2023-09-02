@@ -652,9 +652,6 @@ focus_tree = {
 		prerequisite = { focus = FRA_the_second_reign_of_terror  }
 		completion_reward = {
 			country_event = { id = rob_france.50 days = 1 }
-			hidden_effect = {
-				country_event = { id = rob_france.70 days = 47 }
-			}
 		}
 	}
 
@@ -2102,9 +2099,10 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_reverse_the_tides  }
 		completion_reward = {
-			add_ideas = {
-				fra_dum_patr_soc
-			}	
+			swap_ideas = {
+				remove_idea = fra_dum_patr_soc
+				add_idea = fra_dum_patr_soc_2
+			}
 		}
 	}
 
@@ -2195,6 +2193,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 120
+			hidden_effect = {
+				set_cosmetic_tag = FRA_DUM_notgaul	
+			}
 		}
 	}
 
@@ -2515,7 +2516,9 @@ focus_tree = {
 		}
 		prerequisite = { focus = FRA_augustus_of_franks  }
 		completion_reward = {
-			
+			add_ideas = {
+				fra_dum_patr_soc
+			}
 		}
 	}
 
@@ -2622,7 +2625,7 @@ focus_tree = {
 		}
 	}
 
-	#Found the European League
+	#Found the Pelekist League
 	focus = {
 		id = FRA_found_the_european_league
 		icon = GFX_FRA_found_the_european_league
@@ -2684,6 +2687,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = fra_dumezil_cores_tooltip
 			hidden_effect = {
+				set_cosmetic_tag = FRA_DUM_gaul
 				981 = { add_claim_by = ROOT }
 				789 = { add_claim_by = ROOT }
 				813 = { add_claim_by = ROOT }
@@ -2700,6 +2704,7 @@ focus_tree = {
 				1215 = { add_claim_by = ROOT }
 				790 = { add_claim_by = ROOT }
 				974 = { add_claim_by = ROOT }
+				set_country_flag = FRA_dum_expansion_enable
 				country_event = { id = rob_france.139 days =  3 }
 			}
 		}
@@ -4703,7 +4708,7 @@ focus_tree = {
 	#give way to inovation
 	focus = {
 		id = FRA_give_way_to_inovation
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_give_way_to_innovation
 		x = 50
 		y = 14
 		cost = 5
@@ -4721,7 +4726,7 @@ focus_tree = {
 	#civ i guess, Compagnie des compteurs
 	focus = {
 		id = FRA_merge_minor_electric_companies_with_CDC
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_merge_CDC_with_unprofitable_companies
 		x = 51
 		y = 15
 		cost = 3
@@ -4737,7 +4742,7 @@ focus_tree = {
 	#civ i guess, Compagnie des compteurs
 	focus = {
 		id = FRA_french_televion_company
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_french_television_company
 		x = 51
 		y = 16
 		cost = 5
@@ -4756,7 +4761,7 @@ focus_tree = {
 	#damb decisions
 	focus = {
 		id = FRA_damb
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_le_sautet_dam
 		x = 49
 		y = 16
 		cost = 2
@@ -5089,7 +5094,7 @@ focus_tree = {
 	#underground railway lines, increased iron production in lorraine
 	focus = {
 		id = FRA_underground_railway
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_underground_railway
 		x = 49
 		y = 15
 		cost = 10
@@ -5118,7 +5123,7 @@ focus_tree = {
 	#give way to inovation
 	focus = {
 		id = FRA_autarky
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_autarky
 		x = 50
 		y = 17
 		cost = 10
@@ -5137,7 +5142,7 @@ focus_tree = {
 	#unlocks Renault Citroen
 	focus = {
 		id = FRA_resurect_auto_industry
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_resurect_auto_industry
 		x = 47
 		y = 16
 		cost = 5
@@ -5183,7 +5188,7 @@ focus_tree = {
 	#railway improvments Raoul Dautry, Alstom
 	focus = {
 		id = FRA_SNCF_founding
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_founding_of_SNCF
 		x = 45
 		y = 16
 		cost = 5
@@ -5202,7 +5207,7 @@ focus_tree = {
 	# idea
 	focus = {
 		id = FRA_americanization
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_americanization
 		x = 45
 		y = 18
 		cost = 5
@@ -5220,7 +5225,7 @@ focus_tree = {
 	# foreign investors
 	focus = {
 		id = FRA_foreign_investors
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_foreign_investors
 		x = 43
 		y = 18
 		cost = 5
@@ -5297,7 +5302,7 @@ focus_tree = {
 	# fives idea
 	focus = {
 			id = FRA_workplace_paternalism
-			icon = GFX_FRA_aid_local_entrepreneurs
+			icon = GFX_FRA_workplace_paternalism
 			x = 49
 			y = 18
 			cost = 5
@@ -5315,7 +5320,7 @@ focus_tree = {
 	# fives idea
 	focus = {
 		id = FRA_toil_away
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_toil_away
 		x = 51
 		y = 18
 		cost = 5
@@ -5404,7 +5409,7 @@ focus_tree = {
 	#Proto UN shit Albert Thomas (International labour office )
 	focus = {
 		id = FRA_follow_itl_programms
-		icon = GFX_FRA_aid_local_entrepreneurs
+		icon = GFX_FRA_follow_ITL_programs
 		x = 47
 		y = 18
 		cost = 5
@@ -5564,7 +5569,7 @@ focus_tree = {
 	#Laissez-Faire
 	focus = {
 		id = FRA_laissezfaire
-		icon = GFX_FRA_laissezfaire
+		icon = GFX_FRA_laissez_faire
 		x = 44
 		y = 17
 		cost = 10

@@ -1565,6 +1565,7 @@ name = rob_france.34.a
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_sorel_win
+set_cosmetic_tag = FRA_cw_radical_France
 set_country_flag = fra_politics_chosen
 set_cosmetic_tag = FRS_victory 
 set_capital = { state = 16 }
@@ -1574,6 +1575,7 @@ if = {
 }
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
+	add_threat = -5
 }
 }
 
@@ -1599,6 +1601,7 @@ name = rob_france.35.a
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_comm_win
+set_cosmetic_tag = FRA_cw_radical_France
 set_country_flag = frs_minigame_trigger
 set_capital = { state = 16 }
 if = {
@@ -1607,6 +1610,7 @@ if = {
 }
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
+	add_threat = -5
 }
 }
 
@@ -1639,6 +1643,7 @@ if = {
 }
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
+	add_threat = -5
 }
 }
 
@@ -1677,6 +1682,7 @@ set_country_flag = fra_cw_mil_win
 set_capital = { state = 16 }
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
+	add_threat = -5
 }
 }
 
@@ -1719,6 +1725,7 @@ set_country_flag = fra_cw_mil_win
 set_capital = { state = 16 }
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
+	add_threat = -5
 }
 }
 
@@ -1744,6 +1751,7 @@ name = rob_france.48.a
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_plk_win
+set_cosmetic_tag = FRA_cw_radical_France
 set_capital = { state = 16 }
 if = {
 	limit = { has_idea = fra_civil_war }
@@ -1751,6 +1759,7 @@ if = {
 }
 hidden_effect = {
 	country_event = { id = rob_france.106 days = 9 }
+	add_threat = -5
 }
 }
 
@@ -2512,20 +2521,6 @@ is_triggered_only = yes
 option = { 
 name = rob_france.69.a
 add_stability = 0.03
-}
-
-}
-
-country_event = { ###New Internationale
-id = rob_france.70
-title = rob_france.70.t
-desc = rob_france.70.d
-fire_only_once = yes
-is_triggered_only = yes
-
-option = { 
-name = rob_france.70.a
-add_political_power = 50
 }
 
 }
@@ -7534,7 +7529,7 @@ option = {  ####
 	###Dumezil founds European league
 	country_event = {
 		id = rob_france.138
-		title = "Foundation of EL"
+		title = "Foundation of PI"
 		desc = rob_france.138.d
 		is_triggered_only = yes
 		
@@ -7547,7 +7542,7 @@ option = {  ####
 		 remove_ideas = {
 			fra_pol_violence
 		}
-		create_faction = "European League"
+		create_faction = "Pelekist International"
 	
 		}
 	  
@@ -7679,11 +7674,7 @@ option = {  ####
 		
 		option = { 
 		 name = "Excellent"
-		 ai_chance = {
-		  factor = 100
-		 }
-	
-	
+		 set_country_flag = FRA_DUMEZIL_REVOLUTIONS
 		}
 	  
 	   }
@@ -7780,6 +7771,258 @@ option = {  ####
 ### rob_france.150 moved after 135 cuz i fucked up ids 
 
 
+### Dumezil starts a pelekist civil war in a country through decisions
+	country_event = {
+		id = rob_france.151
+		title = rob_france.151.t
+		desc = rob_france.151.d
+		is_triggered_only = yes
+
+		### Italy
+		option = { 
+		 name = "Excellent"
+		 trigger = { tag = ITA }
+		 set_politics = { ruling_party = pelekist elections_allowed = no }
+		 create_country_leader = {
+			name = "Julius Evola"
+			desc = ""
+			picture = "gfx/leaders/ITA/ITA_Julius_Evola.tga"
+			expire = "1953.3.1"
+			ideology = pagan_pelekism
+			traits = {
+				#
+			}
+		}
+		add_popularity = { ideology = pelekist popularity = 0.3 }
+		load_focus_tree = generic_focus
+
+		 if = {
+			limit = { pelekist < 0.5 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.35
+			}
+		 }
+		 if = {
+			limit = { pelekist > 0.5 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.3
+			}
+		 }
+		 if = {
+			limit = { pelekist > 0.6 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.25
+			}
+		 }
+		 if = {
+			limit = { pelekist > 0.7 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.15
+			}
+		 }
+		}
+
+		### Dutch
+		option = { 
+		 name = "Excellent"
+		 trigger = { tag = ITA }
+		 set_politics = { ruling_party = pelekist elections_allowed = no }
+		 create_country_leader = {
+			name = "Julius Evola"
+			desc = ""
+			picture = "gfx/leaders/ITA/ITA_Julius_Evola.tga"
+			expire = "1953.3.1"
+			ideology = pagan_pelekism
+			traits = {
+				#
+			}
+		}
+		add_popularity = { ideology = pelekist popularity = 0.3 }
+		load_focus_tree = generic_focus
+
+		 if = {
+			limit = { pelekist < 0.5 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.35
+			}
+		 }
+		 if = {
+			limit = { pelekist > 0.5 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.3
+			}
+		 }
+		 if = {
+			limit = { pelekist > 0.6 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.25
+			}
+		 }
+		 if = {
+			limit = { pelekist > 0.7 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.15
+			}
+		 }
+		}
+	  
+}
+
+### Dumezil revolution shit gets noticed by a player nation, response
+country_event = {
+	id = rob_france.152
+	title = "French meddling"
+	desc = "Crypto-pelekist movement that has recently started to gather an attention has been confirmed to be French ploy."
+	trigger = {
+		is_ai = no
+		NOT = { has_country_flag = FRP_I_BANNED_your_shit_revolution }
+		OR = {
+			AND = {
+				tag = GER
+				pelekism > 0.15
+				FRP = { has_country_flag = FRA_dum_revolution_GER }
+			}
+			AND = {
+				tag = BDB
+				pelekism > 0.20
+				FRP = { has_country_flag = FRA_dum_revolution_BDB }
+			}
+			AND = {
+				tag = BAV
+				pelekism > 0.20
+				FRP = { has_country_flag = FRA_dum_revolution_BAV }
+			}
+			AND = {
+				tag = ITA
+				pelekism > 0.20
+				FRP = { has_country_flag = FRA_dum_revolution_ITA }
+			}
+			AND = {
+				tag = GRE
+				pelekism > 0.20
+				FRP = { has_country_flag = FRA_dum_revolution_GRE }
+			}
+			AND = {
+				tag = HOL
+				pelekism > 0.20
+				FRP = { has_country_flag = FRA_dum_revolution_HOL }
+			}
+			AND = {
+				tag = IRE
+				pelekism > 0.20
+				FRP = { has_country_flag = FRA_dum_revolution_IRE }
+			}
+		}
+	}
+
+	option = { 
+	 name = "Terminate this nonsense"
+	 add_popularity = { ideology = pelekist popularity = -0.15 }
+	 set_country_flag = FRP_I_BANNED_your_shit_revolution
+	 FRP = { clr_country_flag = FRA_dum_revolution_in_progress }
+	 hidden_effect = { FRP = { country_event = { id = rob_france.153 days = 3 } } }
+	 IF = {
+		limit = { tag = GER }
+		FRP = { clr_country_flag = FRA_dum_revolution_GER }
+	 }
+	 IF = {
+		limit = { tag = BDB }
+		FRP = { clr_country_flag = FRA_dum_revolution_BDB }
+	 }
+	 IF = {
+		limit = { tag = BAV }
+		FRP = { clr_country_flag = FRA_dum_revolution_BAV }
+	 }
+	 IF = {
+		limit = { tag = ITA }
+		FRP = { clr_country_flag = FRA_dum_revolution_ITA }
+	 }
+	 IF = {
+		limit = { tag = GRE }
+		FRP = { clr_country_flag = FRA_dum_revolution_GRE }
+	 }
+	 IF = {
+		limit = { tag = HOL }
+		FRP = { clr_country_flag = FRA_dum_revolution_HOL }
+	 }
+	 IF = {
+		limit = { tag = IRE }
+		FRP = { clr_country_flag = FRA_dum_revolution_IRE }
+	 }
+	}
+
+  	option = { 
+	 name = "What could go wrong?"
+	 
+	}
+}
+
+### Dumezil receives news of a failed revoltion
+country_event = {
+	id = rob_france.153
+	title = "It's over"
+	desc = "You tried to mess with a player and shieet, its over for your scheme bruv."
+	is_triggered_only = yes
+
+	option = { 
+	 name = "Shame"
+	}
+
+  	option = { 
+	 name = "Then we just have to get involved directly"
+	 create_wargoal = { target = FROM  type = annex_everything }
+	}
+}
+
+### Dumezil sends out ultimatum
+country_event = {
+	id = rob_france.154
+	title = "French 'Request'"
+	desc = "The French Government has sent out an demand for immediate establishment of military bases in our country"
+	is_triggered_only = yes
+
+	option = { 
+	 name = "Comply"
+	 set_country_flag = FRP_dumezil_ult_agreed
+	 country_event = { id = rob_france.155 days =  3 }
+	}
+
+  	option = { 
+	 name = "Uhh...no?"
+	 set_country_flag = FRP_dumezil_ult_denied
+	 country_event = { id = rob_france.155 days =  3 }
+	}
+}
+
+### Dumezil Gets yes or no from ultamated country
+country_event = {
+	id = rob_france.155
+	title = rob_france.155.t
+	desc = rob_france.155.d
+	is_triggered_only = yes
+
+	option = { 
+	trigger = { FROM = { has_country_flag = FRP_dumezil_ult_agreed } }
+	 name = "Brothers reclaimed"
+	 annex_country = {
+		target = FROM
+	 }
+	}
+
+  	option = { 
+	trigger = { FROM = { has_country_flag = FRP_dumezil_ult_denied } }
+	 name = "Then we shall exercise might"
+	 create_wargoal = { target = FROM  type = annex_everything }
+	}
+}
 
 ####debug events
 

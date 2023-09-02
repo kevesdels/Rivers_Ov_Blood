@@ -669,6 +669,7 @@ BAV = { transfer_state = 799 }
 BAV = { transfer_state = 798 }
 BAV = { transfer_state = 800 } 
 BAV = { load_oob = BAV_1934 } 
+BAV = { country_event = { id = rob_p_germany.0 hours = 4 } }
 declare_war_on = { 
 type = annex_everything 
 target = BAV 
@@ -769,6 +770,7 @@ add_core_of = BDB
 1093 = {
 add_core_of = BDB
 }
+BDB = { country_event = { id = rob_r_germany.0 hours = 4 } }
 BDB = { transfer_state = 58 }
 BDB = { transfer_state = 61 }
 BDB = { transfer_state = 62 }
@@ -802,7 +804,10 @@ name = "swwet cabbage soup"
 }
 
 
-country_event = { ###Reactionary Coup
+#### This shit be disabled and shiet
+
+
+country_event = { ###Reactionary Coup   
 id = spartakus_germany.15
 title = spartakus_germany.15.t
 desc = spartakus_germany.15.d
@@ -965,11 +970,15 @@ option = { ###Für Revolution!
 name = spartakus_germany.19.a
 add_stability = 0.2
 add_political_power = 150
-set_country_flag = GER_socialists_hold
-set_country_flag = south_holds
-set_country_flag = north_holds
-set_country_flag = GER_south_secured
-set_country_flag = GER_north_secured	 
+hidden_effect = {
+  set_country_flag = GER_socialists_hold
+  set_country_flag = south_holds
+  set_country_flag = north_holds
+  set_country_flag = GER_south_secured
+  set_country_flag = GER_north_secured	 
+  BAV = { clr_country_flag = BAV_partisan_uprising }
+  BDB = { clr_country_flag = BRB_partisan_uprising } 
+}
 }
 }
 
