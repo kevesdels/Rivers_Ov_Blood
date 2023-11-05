@@ -1,0 +1,312 @@
+focus_tree = {
+	id = ROB_FTT_2
+	continuous_focus_position = { x = 6800 y = 2610 } 
+	country = {
+		factor = 0
+	}
+	#The Eastern Commies
+	focus = {
+		id = ftt_the_eastern_commies
+		icon = GFX_ftt_the_eastern_commies-537531
+		x = 7
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_lookingoutwards  }
+	}
+
+	#Looking Outwards!
+	focus = {
+		id = ftt_lookingoutwards
+		icon = GFX_ftt_lookingoutwards-537530
+		x = 4
+		y = 0
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#The Southern Peninsula
+	focus = {
+		id = ftt_the_southern_peninsula
+		icon = GFX_ftt_the_southern_peninsula-537532
+		x = 4
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_lookingoutwards  }
+	}
+
+	#The Northern Occupation
+	focus = {
+		id = ftt_the_northern_occupation
+		icon = GFX_ftt_the_northern_occupation-537533
+		x = 1
+		y = 1
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_lookingoutwards  }
+	}
+
+	#Support Black Partisans
+	focus = {
+		id = ftt_support_black_partisans
+		icon = GFX_ftt_support_black_partisans-538749
+		x = 1
+		y = 2
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_the_northern_occupation  }
+	}
+
+	#Liberate the Region!
+	focus = {
+		id = ftt_liberatetheregion
+		icon = GFX_ftt_liberatetheregion-538760
+		x = 1
+		y = 5
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = ftt_build_defences  }
+	}
+
+	#The Wall of Crimea
+	focus = {
+		id = ftt_the_wall_of_crimea
+		icon = GFX_ftt_the_wall_of_crimea-538763
+		x = 4
+		y = 2
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ftt_the_southern_peninsula  }
+	}
+
+	#Readying the Army
+	focus = {
+		id = ftt_readying_the_army
+		icon = GFX_ftt_readying_the_army-538765
+		x = 3
+		y = 3
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ftt_the_wall_of_crimea  }
+		mutually_exclusive = { focus = ftt_readying_the_rebels  }
+	}
+
+	#Spread Propaganda
+	focus = {
+		id = ftt_spread_propaganda
+		icon = GFX_ftt_spread_propaganda-538756
+		x = 1
+		y = 3
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_support_black_partisans  }
+	}
+
+	#Send in Spies
+	focus = {
+		id = ftt_send_in_spies
+		icon = GFX_ftt_send_in_spies-538766
+		x = 4
+		y = 4
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = ftt_readying_the_army  focus = ftt_readying_the_rebels  }
+	}
+
+	#Build Defences
+	focus = {
+		id = ftt_build_defences
+		icon = GFX_ftt_build_defences-538757
+		x = 1
+		y = 4
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ftt_spread_propaganda  }
+	}
+
+	#Destroy the White Army!
+	focus = {
+		id = ftt_destroythewhitearmy
+		icon = GFX_ftt_destroythewhitearmy-538775
+		x = 4
+		y = 5
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = ftt_send_in_spies  }
+	}
+
+	#Destroy their Morale
+	focus = {
+		id = ftt_destroy_their_morale
+		icon = GFX_ftt_destroy_their_morale-539598
+		x = 7
+		y = 2
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = ftt_the_eastern_commies  }
+	}
+
+	#Send in Terrorists
+	focus = {
+		id = ftt_send_in_terrorists
+		icon = GFX_ftt_send_in_terrorists-539603
+		x = 7
+		y = 3
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_destroy_their_morale  }
+	}
+
+	#Destroy their Stockpiles
+	focus = {
+		id = ftt_destroy_their_stockpiles
+		icon = GFX_ftt_destroy_their_stockpiles-539604
+		x = 7
+		y = 4
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_send_in_terrorists  }
+	}
+
+	#Readying the Rebels
+	focus = {
+		id = ftt_readying_the_rebels
+		icon = GFX_ftt_readying_the_rebels-539626
+		x = 5
+		y = 3
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_the_wall_of_crimea  }
+		mutually_exclusive = { focus = ftt_readying_the_army  }
+	}
+
+	#Push Back the Red Fascists!
+	focus = {
+		id = ftt_pushbacktheredfascists
+		icon = GFX_ftt_pushbacktheredfascists-539605
+		x = 7
+		y = 5
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = ftt_destroy_their_stockpiles  }
+	}
+
+	#Eliminate Authoritarian Sympathies
+	focus = {
+		id = ftt_eliminate_authoritarian_sympathies
+		icon = GFX_ftt_eliminate_authoritarian_sympathies-539606
+		x = 3
+		y = 6
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+		prerequisite = { focus = ftt_liberatetheregion  } prerequisite = { focus = ftt_destroythewhitearmy  }
+	}
+
+	#Calm Political Rivalries
+	focus = {
+		id = ftt_calm_political_rivalries
+		icon = GFX_ftt_calm_political_rivalries-539609
+		x = 5
+		y = 6
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+		prerequisite = { focus = ftt_destroythewhitearmy  } prerequisite = { focus = ftt_pushbacktheredfascists  }
+	}
+
+	#Our Borders Secured!
+	focus = {
+		id = ftt_ourborderssecured
+		icon = GFX_ftt_ourborderssecured-539612
+		x = 4
+		y = 7
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+		prerequisite = { focus = ftt_eliminate_authoritarian_sympathies  } prerequisite = { focus = ftt_calm_political_rivalries  }
+	}
+
+	#Army Occupation
+	focus = {
+		id = ftt_army_occupation
+		icon = GFX_ftt_army_occupation-539620
+		x = 3
+		y = 8
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+		prerequisite = { focus = ftt_ourborderssecured  }
+		mutually_exclusive = { focus = ftt_communal_militias  }
+	}
+
+	#Communal Militias
+	focus = {
+		id = ftt_communal_militias
+		icon = GFX_ftt_communal_militias-539621
+		x = 5
+		y = 8
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_TFV_AUTONOMY
+		}
+		prerequisite = { focus = ftt_ourborderssecured  }
+		mutually_exclusive = { focus = ftt_army_occupation  }
+	}
+
+	#A Chance at Victory!
+	focus = {
+		id = ftt_achanceatvictory
+		icon = GFX_ftt_achanceatvictory-539623
+		x = 4
+		y = 9
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ftt_communal_militias  focus = ftt_army_occupation  }
+		completion_reward = {
+			load_focus_tree = ROB_FTT_3
+		}
+	}
+
+}

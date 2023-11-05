@@ -1,0 +1,24 @@
+add_namespace = rob_super_event
+
+#France Collapses! De gaulle
+news_event = {
+	id = rob_super_event.1
+	title = rob_super_event.1.t
+	desc = rob_super_event.1.d
+	fire_only_once = yes
+	is_triggered_only = yes ###For now
+
+	picture = france_collapses-534261
+	major = yes
+	option = {
+		name = rob_super_event.1.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}

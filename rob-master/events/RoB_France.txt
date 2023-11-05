@@ -1562,6 +1562,10 @@ trigger = {
 
 option = { 
 name = rob_france.34.a
+if = {
+	limit = { }
+}
+dismantle_faction = yes
 add_stability = 0.10
 set_country_flag = fra_cw_over
 set_country_flag = fra_cw_sorel_win
@@ -2531,6 +2535,7 @@ title = rob_france.71.t
 desc = rob_france.71.d
 fire_only_once = yes
 is_triggered_only = yes
+picture = GFX_picture_FRA_taranis_pic
 
 option = { 
 name = rob_france.71.a
@@ -2604,6 +2609,7 @@ country_event = { ##Dumezils France
 id = rob_france.76
 title = rob_france.76.t
 desc = rob_france.76.d
+picture = GFX_picture_FRA_rob_dum_france
 fire_only_once = yes
 trigger = {
 	has_completed_focus = FRA_bread_and_circuses	
@@ -2743,7 +2749,7 @@ fire_only_once = yes
 is_triggered_only = yes
 
 option = { 
-name = rob_france.70.a
+name = rob_france.79.a
 add_political_power = 30
 add_war_support = 0.05
 }
@@ -7531,6 +7537,7 @@ option = {  ####
 		id = rob_france.138
 		title = "Foundation of PI"
 		desc = rob_france.138.d
+		picture = GFX_picture_FRP_faction
 		is_triggered_only = yes
 		
 		
@@ -7552,18 +7559,19 @@ option = {  ####
 		   ###Dumezil moves on to gaming
 	country_event = {
 		id = rob_france.139
-		title = "Acknowledgment of Past"
+		title = "Via Gallica"
 		desc = rob_france.139.d
+		picture = GFX_picture_FRP_gallic_pic
 		is_triggered_only = yes
 		
 		
 		option = { 
-		 name = "Excellent"
+		 name = "This only the beginning"
 		 ai_chance = {
 		  factor = 100
 		 }
 	
-		 ###enable custom puppets as well you filthy N
+		 ###enable custom puppets as well you filthy Ni
 	
 		}
 	   }
@@ -7573,6 +7581,7 @@ option = {  ####
 		id = rob_france.140
 		title = "Blood Bonds"
 		desc = rob_france.140.d
+		picture = GFX_picture_FRP_blood_ties
 		is_triggered_only = yes
 		
 		
@@ -7684,6 +7693,7 @@ option = {  ####
 		id = rob_france.146
 		title = rob_france.146.t
 		desc = rob_france.146.d
+		picture = GFX_picture_FRP_soissons_pic
 		is_triggered_only = yes
 		
 		
@@ -7703,6 +7713,7 @@ option = {  ####
 		id = rob_france.147
 		title = rob_france.147.t
 		desc = rob_france.147.d
+		picture = GFX_picture_FRP_cycle_of_history_pic
 		is_triggered_only = yes
 		
 		
@@ -7722,6 +7733,7 @@ option = {  ####
 		id = rob_france.148
 		title = rob_france.148.t
 		desc = rob_france.148.d
+		picture = GFX_picture_FRP_pelekist_eagle_pic
 		is_triggered_only = yes
 		
 		
@@ -7743,7 +7755,7 @@ option = {  ####
 		title = rob_france.149.t
 		desc = rob_france.149.d
 		is_triggered_only = yes
-		
+		picture = GFX_picture_FRA_study_orientals_pic
 		
 		option = { 
 		 name = "Excellent"
@@ -7829,12 +7841,12 @@ option = {  ####
 		### Dutch
 		option = { 
 		 name = "Excellent"
-		 trigger = { tag = ITA }
+		 trigger = { tag = HOL }
 		 set_politics = { ruling_party = pelekist elections_allowed = no }
 		 create_country_leader = {
-			name = "Julius Evola"
+			name = "Jan de Vries"
 			desc = ""
-			picture = "gfx/leaders/ITA/ITA_Julius_Evola.tga"
+			picture = "gfx/leaders/HOL/HOL_Jan_de_Vries.dds"
 			expire = "1953.3.1"
 			ideology = pagan_pelekism
 			traits = {
@@ -7873,7 +7885,151 @@ option = {  ####
 			}
 		 }
 		}
-	  
+
+		### Ireland
+		option = { 
+		 name = "Excellent"
+		 trigger = { tag = IRE }
+		 set_politics = { ruling_party = pelekist elections_allowed = no }
+		 create_country_leader = {
+			name = "James Stephens"
+			desc = ""
+			picture = "gfx/leaders/IRE/IRE_James_Stephens.dds"
+			expire = "1953.3.1"
+			ideology = pagan_pelekism
+			traits = {
+				#
+			}
+		}
+		add_popularity = { ideology = pelekist popularity = 0.3 }
+		load_focus_tree = generic_focus
+
+		 if = {
+			limit = { pelekist < 0.5 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.35
+			}
+		 }
+		 if = {
+			limit = { pelekist > 0.5 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.3
+			}
+		 }
+		 if = {
+			limit = { pelekist > 0.6 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.25
+			}
+		 }
+		 if = {
+			limit = { pelekist > 0.7 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.15
+			}
+		 }
+		}
+
+		### Greece
+		option = { 
+		 name = "Excellent"
+		 trigger = { tag = GRE }
+		 set_politics = { ruling_party = pelekist elections_allowed = no }
+		 create_country_leader = {
+			name = "Giorgos Seferis"
+			desc = ""
+			picture = "gfx/leaders/GRE/GRE_Giorgos_Seferis.dds"
+			expire = "1953.3.1"
+			ideology = pagan_pelekism
+			traits = {
+				#
+			}
+		}
+		add_popularity = { ideology = pelekist popularity = 0.3 }
+		load_focus_tree = generic_focus
+
+		 if = {
+			limit = { pelekist < 0.5 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.35
+			}
+		 }
+		 if = {
+			limit = { pelekist > 0.5 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.3
+			}
+		 }
+		 if = {
+			limit = { pelekist > 0.6 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.25
+			}
+		 }
+		 if = {
+			limit = { pelekist > 0.7 }
+			start_civil_war = {
+				ideology = social_liberal
+				size = 0.15
+			}
+		 }
+		}
+
+
+		### Germany
+		option = { 
+			name = "Excellent"
+			trigger = { OR = { tag = GER tag = BDB tag = BAV } }
+			set_politics = { ruling_party = pelekist elections_allowed = no }
+			create_country_leader = {
+			   name = "Otto Höfler"
+			   desc = ""
+			   picture = "gfx/leaders/GER/GER_Otto_Höfler.dds"
+			   expire = "1953.3.1"
+			   ideology = pagan_pelekism
+			   traits = {
+				   #
+			   }
+		   }
+		   add_popularity = { ideology = pelekist popularity = 0.3 }
+		   load_focus_tree = generic_focus
+   
+			if = {
+			   limit = { pelekist < 0.5 }
+			   start_civil_war = {
+				   ideology = social_liberal
+				   size = 0.35
+			   }
+			}
+			if = {
+			   limit = { pelekist > 0.5 }
+			   start_civil_war = {
+				   ideology = social_liberal
+				   size = 0.3
+			   }
+			}
+			if = {
+			   limit = { pelekist > 0.6 }
+			   start_civil_war = {
+				   ideology = social_liberal
+				   size = 0.25
+			   }
+			}
+			if = {
+			   limit = { pelekist > 0.7 }
+			   start_civil_war = {
+				   ideology = social_liberal
+				   size = 0.15
+			   }
+			}
+		   }
 }
 
 ### Dumezil revolution shit gets noticed by a player nation, response
@@ -7986,19 +8142,101 @@ country_event = {
 country_event = {
 	id = rob_france.154
 	title = "French 'Request'"
-	desc = "The French Government has sent out an demand for immediate establishment of military bases in our country"
+	desc = rob_france.154.d
 	is_triggered_only = yes
 
 	option = { 
 	 name = "Comply"
+	 trigger = {
+		is_puppet = no
+	   }
+	 ai_chance = {
+		base = 5
+	
+		modifier = {
+		  add = 2
+		  has_opinion = {
+			target = POL
+			value > 50
+		  }
+		}
+	
+		modifier = {
+		  add = 4
+		  has_opinion = {
+			target = POL
+			value > 100
+		  }
+		}
+	
+		modifier = {
+		  add = 6
+		  has_opinion = {
+			target = POL
+			value > 175
+		  }
+		}
+	
+		modifier = {
+		  factor = 4
+		  strength_ratio = {
+			  tag = FROM
+			  ratio < 5
+		  }
+		}
+	
+		modifier = {
+		  factor = 2
+		  strength_ratio = {
+			  tag = FROM
+			  ratio < 3
+		  }
+		}
+	
+		modifier = {
+		  factor = 0.5
+		  strength_ratio = {
+			  tag = FROM
+			  ratio < 2
+		  }
+		}
+	
+	   }
 	 set_country_flag = FRP_dumezil_ult_agreed
-	 country_event = { id = rob_france.155 days =  3 }
+	 FROM = { country_event = { id = rob_france.155 days =  3 } }
 	}
 
   	option = { 
 	 name = "Uhh...no?"
+	 ai_chance = {
+		base  = 7
+	
+		modifier = {
+		  add = 4
+		  has_opinion = {
+			target = POL
+			value < 50
+		  }
+		}
+	
+		modifier = {
+		  add = 8
+		  has_opinion = {
+			target = POL
+			value < 100
+		  }
+		}
+	
+		modifier = {
+		  add = 12
+		  has_opinion = {
+			target = POL
+			value < 175
+		  }
+		}
+	   }
 	 set_country_flag = FRP_dumezil_ult_denied
-	 country_event = { id = rob_france.155 days =  3 }
+	 FROM = { country_event = { id = rob_france.155 days =  3 } }
 	}
 }
 
@@ -8011,18 +8249,37 @@ country_event = {
 
 	option = { 
 	trigger = { FROM = { has_country_flag = FRP_dumezil_ult_agreed } }
-	 name = "Brothers reclaimed"
+	 name = "Brothers reclaimed!"
 	 annex_country = {
 		target = FROM
 	 }
+
+	 
 	}
 
   	option = { 
 	trigger = { FROM = { has_country_flag = FRP_dumezil_ult_denied } }
-	 name = "Then we shall exercise might"
+	 name = "No? Then we shall exercise might"
 	 create_wargoal = { target = FROM  type = annex_everything }
 	}
 }
+
+### Dumezil Senate of Franks
+country_event = {
+	id = rob_france.156
+	title = rob_france.156.t
+	desc = rob_france.156.d
+	is_triggered_only = yes
+
+	option = { 
+		name = rob_france.156.a
+		swap_ideas = {
+			remove_idea = fra_dum_vot_right_gone
+			add_idea = fra_dum_vot_right_gone_2
+		}
+	}
+}
+
 
 ####debug events
 

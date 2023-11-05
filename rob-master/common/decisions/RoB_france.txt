@@ -553,6 +553,7 @@ FRA_war_Darlan = {
 		has_war = no
 		}
 		 days_remove = 10
+		 war_with_on_remove = ITA
 	   remove_effect = {
 		ROOT = { create_wargoal = { type = annex_everything target = ITA } }
 		}
@@ -609,6 +610,7 @@ FRA_war_Darlan = {
 		has_war = no
 		}
 		days_remove = 10
+		war_with_on_remove = SWI
 	   remove_effect = {
 		ROOT = { create_wargoal = { type = annex_everything target = SWI } }
 		}
@@ -754,6 +756,7 @@ FRA_war_Darlan = {
 		has_war = no
 		}
 		 days_remove = 10
+		 war_with_on_remove = PRS
 	   remove_effect = {
 		ROOT = { create_wargoal = { type = annex_everything target = PRS } }
 		}
@@ -773,6 +776,7 @@ FRA_war_Darlan = {
 		has_war = no
 		}
 		 days_remove = 10
+		 war_with_on_remove = POL
 	   remove_effect = {
 		ROOT = { create_wargoal = { type = annex_everything target = POL } }
 		}
@@ -891,6 +895,7 @@ FRA_war_Darlan = {
 		has_war = no
 		}
 		 days_remove = 10
+		 war_with_on_remove = MEX
 	   remove_effect = {
 		create_wargoal = { type = annex_everything target = MEX }
 		}
@@ -1101,6 +1106,7 @@ FRR_war = {
 	}
 	}
 	 days_remove = 10
+	 war_with_on_remove = CZE
    remove_effect = {
 	FRR = { create_wargoal = { type = annex_everything target = CZE } }
 	}
@@ -1127,6 +1133,7 @@ FRR_war = {
 	}
 	}
 	 days_remove = 10
+	 war_with_on_remove = POL
    remove_effect = {
 	 FRR = { create_wargoal = { type = annex_everything target = POL } }
 	}
@@ -1152,6 +1159,7 @@ FRR_war = {
 	}
 	}
 	 days_remove = 10
+	 war_with_on_remove = FRR
    remove_effect = {
 	FRR = { create_wargoal = { type = annex_everything target = SLO } }
 	}
@@ -1178,6 +1186,7 @@ FRR_war = {
 	}
 	}
 	 days_remove = 10
+	 war_with_on_remove = PRS
    remove_effect = {
 	FRR = { create_wargoal = { type = annex_everything target = PRS } }
 	}
@@ -1197,6 +1206,7 @@ FRR_war = {
 	NOT = { ITA = { has_government = national_socialist is_in_faction_with = FRR } }
 	}
 	 days_remove = 10
+	 war_with_on_remove = ITA
    remove_effect = {
 	FRR = { create_wargoal = { type = annex_everything target = ITA } }
 	}
@@ -1222,19 +1232,19 @@ FRR_war = {
    remove_effect = {
 	   if = {
 		   limit = {
-			SPR = { exists = yes }
+			SPR = { exists = yes NOT = { is_in_faction_with = FRR } }
 		   }
 		   FRR = { create_wargoal = { type = annex_everything target = SPR } }
 	   }
 	   if = {
 		 limit = {
-			CAT = { exists = yes }
+			CAT = { exists = yes NOT = { is_in_faction_with = FRR } }
 		 }
 		 FRR = { create_wargoal = { type = annex_everything target = CAT } }
 	 }
 	   if = {
 		 limit = {
-			BSQ = { exists = yes }
+			BSQ = { exists = yes NOT = { is_in_faction_with = FRR } }
 		 }
 		 FRR = { create_wargoal = { type = annex_everything target = BSQ } }
 	 }
@@ -1262,6 +1272,7 @@ FRR_war = {
 	}
 	}
 	 days_remove = 10
+	 war_with_on_remove = POR
    remove_effect = {
 	FRR = { create_wargoal = { type = annex_everything target = POR } }
 	}
@@ -1295,6 +1306,7 @@ FRR_war = {
 	}
 	}
 	 days_remove = 10
+	 war_with_on_remove = SWI
    remove_effect = {
 	FRR = { create_wargoal = { type = annex_everything target = SWI } }
 	}
@@ -1363,6 +1375,7 @@ FRP_war = {
 		NOT = { WLL = { is_in_faction_with = GER } }
 		}
 		days_remove = 10
+		war_with_on_remove = WLL
 	    remove_effect = {
 			34 = { add_core_of = FRP }
 			813 = { add_core_of = FRP }
@@ -3070,6 +3083,7 @@ FRS_post_minigame_wars = {
 		NOT = { SPR = { is_in_faction_with = FRS } }
 		}
 		 days_remove = 10
+		 war_with_on_remove = SPR
 	   remove_effect = {
 		 FRR = { create_wargoal = { type = annex_everything target = SPR } }
 		}
@@ -3089,6 +3103,7 @@ FRS_post_minigame_wars = {
 		NOT = { ITA = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } }
 		}
 		 days_remove = 10
+		 war_with_on_remove = ITA
 	   remove_effect = {
 		FRS = { create_wargoal = { type = annex_everything target = ITA } }
 		}
@@ -4016,6 +4031,7 @@ FRA_dum_convert_EUROPE_cat = {
 		icon = hol_draw_up_staff_plans
 		fire_only_once = yes
 		cost = 10
+		target_trigger = { FROM = { tag = ITA } }
 		visible = {
 			ITA = { exists = yes }
 		}
@@ -4046,7 +4062,6 @@ FRA_dum_convert_EUROPE_cat = {
 		}
 		available = {
 			ITA = { exists = yes has_war = no  NOT = { has_government = pelekist } }
-			has_country_flag = FRA_dum_revolution_ITA
 			FROM = {
 				is_core_of = ITA
 				owner = { tag = ITA }
@@ -4155,7 +4170,6 @@ FRA_dum_convert_EUROPE_cat = {
 
 		available = {
 			ITA = { exists = yes has_war = no  NOT = { has_government = pelekist } }
-			has_country_flag = FRA_dum_revolution_ITA
 			FROM = {
 				hidden_trigger = {
 					is_core_of = ITA
@@ -4247,6 +4261,7 @@ FRA_dum_revolution_in_HOL = {
 	visible = {
 		HOL = { exists = yes }
 	}
+	target_trigger = { FROM = { tag = HOL } }
 	available = {
 		if = {
 			limit = { is_ai = yes }
@@ -4275,7 +4290,6 @@ FRA_dum_march_in_HOL_state = {
 	}
 	available = {
 		HOL = { exists = yes has_war = no  NOT = { has_government = pelekist } }
-		has_country_flag = FRA_dum_revolution_HOL
 		FROM = {
 			is_core_of = HOL
 			owner = { tag = HOL }
@@ -4384,7 +4398,6 @@ FRA_dum_march_in_HOL_capital = {
 
 	available = {
 		HOL = { exists = yes has_war = no  NOT = { has_government = pelekist } }
-		has_country_flag = FRA_dum_revolution_HOL
 		FROM = {
 			hidden_trigger = {
 				is_core_of = HOL
@@ -4477,6 +4490,7 @@ FRA_dum_revolution_in_IRE = {
 	visible = {
 		IRE = { exists = yes }
 	}
+	target_trigger = { FROM = { tag = IRE } }
 	available = {
 		if = {
 			limit = { is_ai = yes }
@@ -4504,7 +4518,6 @@ FRA_dum_march_in_IRE_state = {
 	}
 	available = {
 		IRE = { exists = yes has_war = no  NOT = { has_government = pelekist } }
-		has_country_flag = FRA_dum_revolution_IRE
 		FROM = {
 			is_core_of = IRE
 			owner = { tag = IRE }
@@ -4613,7 +4626,6 @@ FRA_dum_march_in_IRE_capital = {
 
 	available = {
 		IRE = { exists = yes has_war = no  NOT = { has_government = pelekist } }
-		has_country_flag = FRA_dum_revolution_IRE
 		FROM = {
 			hidden_trigger = {
 				is_core_of = IRE
@@ -4701,6 +4713,8 @@ FRA_dum_revolution_in_GRE = {
 	icon = hol_draw_up_staff_plans
 	fire_only_once = yes
 	cost = 10
+	target_trigger = { FROM = { tag = GRE } }
+
 	visible = {
 		GRE = { exists = yes }
 	}
@@ -4732,7 +4746,6 @@ FRA_dum_march_in_GRE_state = {
 	}
 	available = {
 		GRE = { exists = yes has_war = no  NOT = { has_government = pelekist } }
-		has_country_flag = FRA_dum_revolution_GRE
 		FROM = {
 			is_core_of = GRE
 			owner = { tag = GRE }
@@ -4841,7 +4854,6 @@ FRA_dum_march_in_GRE_capital = {
 
 	available = {
 		GRE = { exists = yes has_war = no  NOT = { has_government = pelekist } }
-		has_country_flag = FRA_dum_revolution_GRE
 		FROM = {
 			hidden_trigger = {
 				is_core_of = GRE
@@ -4960,7 +4972,6 @@ FRA_dum_march_in_GER_state = {
 	}
 	available = {
 		GER = { exists = yes has_war = no  NOT = { has_government = pelekist } }
-		has_country_flag = FRA_dum_revolution_GER
 		FROM = {
 			is_core_of = GER
 			owner = { tag = GER }
@@ -5069,7 +5080,6 @@ FRA_dum_march_in_GER_capital = {
 
 	available = {
 		GER = { exists = yes has_war = no  NOT = { has_government = pelekist } }
-		has_country_flag = FRA_dum_revolution_GER
 		FROM = {
 			hidden_trigger = {
 				is_core_of = GER
@@ -5189,7 +5199,6 @@ FRA_dum_march_in_BDB_state = {
 	}
 	available = {
 		BDB = { exists = yes has_war = no  NOT = { has_government = pelekist } }
-		has_country_flag = FRA_dum_revolution_BDB
 		FROM = {
 			is_core_of = BDB
 			owner = { tag = BDB }
@@ -5415,7 +5424,6 @@ FRA_dum_march_in_BAV_state = {
 	}
 	available = {
 		BAV = { exists = yes has_war = no  NOT = { has_government = pelekist } }
-		has_country_flag = FRA_dum_revolution_BAV
 		FROM = {
 			is_core_of = BAV
 			owner = { tag = BAV }
@@ -5524,7 +5532,6 @@ FRA_dum_march_in_BAV_capital = {
 
 	available = {
 		BAV = { exists = yes has_war = no  NOT = { has_government = pelekist } }
-		has_country_flag = FRA_dum_revolution_BAV
 		FROM = {
 			hidden_trigger = {
 				is_core_of = BAV
@@ -5631,15 +5638,15 @@ FRP_dum_invade_benelux = {
 		complete_effect = {
 			if = {
 				limit = [ WLL = { exists = yes NOT = { OR = { is_puppet_of = FRP is_in_faction_with = FRP } } } 
-				country_event = { id = rob_france.154 days = 2 }
+				WLL = { country_event = { id = rob_france.154 days = 2 } }
 			}
 			if = {
 				limit = [ LUX = { exists = yes NOT = { OR = { is_puppet_of = FRP is_in_faction_with = FRP } } } 
-				country_event = { id = rob_france.154 days = 2 }
+				LUX = { country_event = { id = rob_france.154 days = 2 } }
 			}
 			if = {
 				limit = [ FLA = { exists = yes NOT = { OR = { is_puppet_of = FRP is_in_faction_with = FRP } } } 
-				country_event = { id = rob_france.154 days = 2 }
+				FLA = { country_event = { id = rob_france.154 days = 2 } }
 			}
 		}
 	 
@@ -5710,19 +5717,35 @@ FRP_coring_benelux_dec = {
 	has_war = no
 	}
 	days_remove = 10
+	war_with_on_remove = SPR
 	remove_effect = {
-		FRP = { create_wargoal = { type = annex_everything target = SPR } }
+		if = {
+			limit = {
+			 SPR = { exists = yes NOT = { is_in_faction_with = FRP } }
+			}
+			FRP = { create_wargoal = { type = annex_everything target = SPR } }
+		}
+		if = {
+		  limit = {
+			 CAT = { exists = yes NOT = { is_in_faction_with = FRP } }
+		  }
+		  FRP = { create_wargoal = { type = annex_everything target = CAT } }
+	  }
+		if = {
+		  limit = {
+			 BSQ = { exists = yes NOT = { is_in_faction_with = FRP } }
+		  }
+		  FRP = { create_wargoal = { type = annex_everything target = BSQ } }
+	  }
+	  if = {
+		limit = {
+		   POR = { exists = yes NOT = { is_in_faction_with = FRP } }
+		}
+		FRP = { create_wargoal = { type = annex_everything target = POR } }
 	}
+	 }
 }
 
-FRP_dum_core_benelux = {
-	cost = 30
-	ai_will_do = {
-	 base = 2000
-	 }
-	fire_only_once = yes
- 
-}
 
 FRP_dum_invade_england = {
 	cost = 30
@@ -5731,24 +5754,61 @@ FRP_dum_invade_england = {
 	 }
 	fire_only_once = yes
 	visible = {
-		SPR = { exists = yes NOT = { OR = { is_puppet_of = FRP is_in_faction_with = SPR } } }
-	}
-	available = {
-	has_war = no
-	}
+		OR = {
+			AND = {
+				ENG = { exists = yes }
+				NOT = { ENG = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+			}
+			AND = {
+				BRL = { exists = yes }
+				NOT = { BRL = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+			}
+			AND = {
+				BRC = { exists = yes }
+				NOT = { BRC = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+			}				
+			AND = {
+				BRU = { exists = yes }
+				NOT = { BRU = { OR = { SOCIALIST_ALIGNED_GOVERNMENT = yes is_in_faction_with = FRS } } }
+			}
+		   }
+		   has_war = no
+		}
 	days_remove = 10
+	war_with_on_remove = ENG
+	war_with_on_remove = BRL
+	war_with_on_remove = BRC
+	war_with_on_remove = BRU
 	remove_effect = {
-		FRP = { create_wargoal = { type = annex_everything target = SPR } }
+		if = {
+		  limit = {
+			 ENG = { exists = yes }
+			 NOT = { ENG = { is_in_faction_with = FRS } }
+			}
+			FRP = { create_wargoal = { type = annex_everything target = ENG } }
+	  }
+		if = {
+		  limit = {
+			 BRL = { exists = yes }
+			 NOT = { BRL = { is_in_faction_with = FRS }  }
+		  }
+		  FRP = { create_wargoal = { type = annex_everything target = BRL } }
+	  }
+	  if = {
+		  limit = {
+			 BRC = { exists = yes }
+			 NOT = { BRC = { is_in_faction_with = FRS } }
+		  }
+		  FRP = { create_wargoal = { type = annex_everything target = BRC } }
+	  }
+	  if = {
+		limit = {
+		   BRU = { exists = yes }
+		   NOT = { BRU = { is_in_faction_with = FRS } }
+		}
+		FRP = { create_wargoal = { type = annex_everything target = BRU } }
 	}
 }
-
-FRP_dum_core_benelux = {
-	cost = 30
-	ai_will_do = {
-	 base = 2000
-	 }
-	fire_only_once = yes
- 
 }
 
 }

@@ -27,4 +27,71 @@ FTT_ukrainian_ambition = {
 	   }	   
 	   }
 }
+
+
 }
+
+
+
+FTT_the_black_army = {
+	FTT_purchase_some_artillery = {
+		icon = decision_icon_purchase_some_artillery
+		cost = 100
+		days_remove = 1
+		days_re_enable = 30
+		complete_effect = {
+			add_equipment_to_stockpile = { type = artillery_equipment amount = 150 producer = ENG }
+		}
+	}
+
+FTT_get_new_weapons = {
+		icon = decision_icon_get_new_weapons
+		cost = 75
+		fire_only_once = yes
+	complete_effect = {
+		add_equipment_to_stockpile = { type = infantry_equipment amount = 500 producer = ENG }
+	}
+}
+
+FTT_hire_construction_workers = {
+		icon = decision_icon_hire_construction_workers
+		cost = 200
+		days_remove = 1
+		days_re_enable = 50
+		available = {
+			any_owned_state = {
+				NOT = { has_state_flag = FTT_construction }
+			}
+		}
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					NOT = { has_state_flag = FTT_construction }
+				}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			set_state_flag = FTT_construction
+		}
+	}
+}
+
+FTT_get_some_uniforms = {
+		icon = decision_icon_get_some_uniforms
+		cost = 30
+		days_remove = 1
+		days_re_enable = 30
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 120 producer = ENG }
+		}
+	}
+}
+

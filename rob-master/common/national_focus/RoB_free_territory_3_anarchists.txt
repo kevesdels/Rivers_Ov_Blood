@@ -1,0 +1,317 @@
+focus_tree = {
+	id = ROB_FTT_3
+	continuous_focus_position = { x = 3000 y = 270 } 
+	country = {
+		factor = 0
+	}
+	#Mother Anarchy Loves Her Sons
+	focus = {
+		id = ftt_mother_anarchy_loves_her_sons
+		icon = GFX_ftt_mother_anarchy_loves_her_sons-262118
+		x = 5
+		y = 7
+		cost = 4
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ftt_create_the_western_free_reconstruction_zone  } prerequisite = { focus = ftt_create_the_eastern_free_reconstruction_zone  }
+	}
+
+	#Use Incendiary Bombs
+	focus = {
+		id = ftt_use_incendiary_bombs
+		icon = GFX_focus_generic_cryptologic_bomb
+		x = 9
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_expand_armament_programs  focus = ftt_crush_their_supplies  }
+		mutually_exclusive = { focus = ftt_use_cluster_bombs  }
+	}
+
+	#Create the Eastern Free Reconstruction Zone
+	focus = {
+		id = ftt_create_the_eastern_free_reconstruction_zone
+		icon = GFX_ftt_create_the_eastern_free_reconstruction_zone-262102
+		x = 8
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+		prerequisite = { focus = ftt_use_cluster_bombs  focus = ftt_use_incendiary_bombs  }
+	}
+
+	#The War for the West!
+	focus = {
+		id = ftt_thewarforthewest
+		icon = GFX_ftt_thewarforthewest-540179
+		x = 2
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = ftt_formotheranarchy  }
+	}
+
+	#For Mother Anarchy!
+	focus = {
+		id = ftt_formotheranarchy
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		x = 5
+		y = 0
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#The War for the East!
+	focus = {
+		id = ftt_thewarfortheeast
+		icon = GFX_ftt_thewarfortheeast-540173
+		x = 8
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+		prerequisite = { focus = ftt_formotheranarchy  }
+	}
+
+	#Request Aid from Russian Anarchists
+	focus = {
+		id = ftt_request_aid_from_russian_anarchists
+		icon = GFX_ftt_request_aid_from_russian_anarchists-540187
+		x = 5
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ftt_thewarforthewest  focus = ftt_thewarfortheeast  }
+	}
+
+	#Convert Factories
+	focus = {
+		id = ftt_convert_factories
+		icon = GFX_goal_continuous_non_factory_construct
+		x = 3
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ftt_thewarforthewest  }
+	}
+
+	#Smuggle New Weapons
+	focus = {
+		id = ftt_smuggle_new_weapons
+		icon = GFX_focus_focus_fra_maquis
+		x = 3
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ftt_convert_factories  } prerequisite = { focus = ftt_expand_armament_programs  }
+		mutually_exclusive = { focus = ftt_force_new_recruits  }
+	}
+
+	#Force New Recruits
+	focus = {
+		id = ftt_force_new_recruits
+		icon = GFX_focus_BUL_the_return_of_ferdinand
+		x = 1
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ftt_convert_factories  } prerequisite = { focus = ftt_expand_armament_programs  }
+		mutually_exclusive = { focus = ftt_smuggle_new_weapons  }
+	}
+
+	#Bomb the Cities
+	focus = {
+		id = ftt_bomb_the_cities
+		icon = GFX_ftt_bomb_the_cities-262134
+		x = 1
+		y = 4
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_force_new_recruits  focus = ftt_smuggle_new_weapons  }
+		mutually_exclusive = { focus = ftt_bomb_the_soldiers  }
+	}
+
+	#Bomb The Soldiers
+	focus = {
+		id = ftt_bomb_the_soldiers
+		icon = GFX_goal_generic_air_bomber
+		x = 3
+		y = 4
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_force_new_recruits  focus = ftt_smuggle_new_weapons  }
+		mutually_exclusive = { focus = ftt_bomb_the_cities  }
+	}
+
+	#Black Terrorism
+	focus = {
+		id = ftt_black_terrorism
+		icon = GFX_ftt_black_terrorism-262024
+		x = 1
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_bomb_the_cities  focus = ftt_bomb_the_soldiers  }
+		mutually_exclusive = { focus = ftt_honorable_liberators  }
+	}
+
+	#Honorable Liberators
+	focus = {
+		id = ftt_honorable_liberators
+		icon = GFX_focus_por_workers_of_iberia
+		x = 3
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ftt_bomb_the_soldiers  focus = ftt_bomb_the_cities  }
+		mutually_exclusive = { focus = ftt_black_terrorism  }
+	}
+
+	#Create the Western Free Reconstruction Zone
+	focus = {
+		id = ftt_create_the_western_free_reconstruction_zone
+		icon = GFX_ftt_create_the_western_free_reconstruction_zone-262089
+		x = 2
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_FRA_OCCUPATION_COST
+		}
+		prerequisite = { focus = ftt_honorable_liberators  focus = ftt_black_terrorism  }
+	}
+
+	#Steal from the Statists
+	focus = {
+		id = ftt_steal_from_the_statists
+		icon = GFX_focus_generic_combined_arms
+		x = 9
+		y = 4
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_a_free_force  focus = ftt_temporary_conscription  }
+		mutually_exclusive = { focus = ftt_steal_from_the_people  }
+	}
+
+	#Temporary Conscription
+	focus = {
+		id = ftt_temporary_conscription
+		icon = GFX_ftt_temporary_conscription-262075
+		x = 7
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ftt_start_the_black_revolt  } prerequisite = { focus = ftt_crush_their_supplies  }
+		mutually_exclusive = { focus = ftt_a_free_force  }
+	}
+
+	#Start the Black Revolt
+	focus = {
+		id = ftt_start_the_black_revolt
+		icon = GFX_focus_BUL_support_macedonian_organizations
+		x = 7
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_thewarfortheeast  }
+	}
+
+	#Steal from the People
+	focus = {
+		id = ftt_steal_from_the_people
+		icon = GFX_ftt_steal_from_the_people-262127
+		x = 7
+		y = 4
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ftt_a_free_force  focus = ftt_temporary_conscription  }
+		mutually_exclusive = { focus = ftt_steal_from_the_statists  }
+	}
+
+	#A Free Force
+	focus = {
+		id = ftt_a_free_force
+		icon = GFX_ftt_a_free_force-341
+		x = 9
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = ftt_start_the_black_revolt  } prerequisite = { focus = ftt_crush_their_supplies  }
+		mutually_exclusive = { focus = ftt_temporary_conscription  }
+	}
+
+	#Expand Armament Programs
+	focus = {
+		id = ftt_expand_armament_programs
+		icon = GFX_goal_generic_dangerous_deal
+		x = 1
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = ftt_thewarforthewest  }
+	}
+
+	#Crush their Supplies
+	focus = {
+		id = ftt_crush_their_supplies
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 9
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = ftt_thewarfortheeast  }
+	}
+
+	#Use Cluster Bombs
+	focus = {
+		id = ftt_use_cluster_bombs
+		icon = GFX_focus_rocketry
+		x = 7
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
+		}
+		prerequisite = { focus = ftt_steal_from_the_people  focus = ftt_steal_from_the_statists  }
+		mutually_exclusive = { focus = ftt_use_incendiary_bombs  }
+	}
+
+}

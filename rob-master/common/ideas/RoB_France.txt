@@ -2132,6 +2132,21 @@ picture = GFX_idea_overextendadsf
    }
 }
 
+fra_dum_vot_right_gone_2 = {
+ 
+  allowed = {
+    always = yes
+  }
+allowed_civil_war = {
+     always = yes
+   }
+  removal_cost = -1
+picture = GFX_idea_overextendadsf
+  modifier = {
+    political_power_gain = 0.10
+   }
+}
+
 fra_dum_patr_soc = {
  
   allowed = {

@@ -1,0 +1,224 @@
+focus_tree = {
+	id = RoB_ftt
+	continuous_focus_position = { x = 7750 y = 2610 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FTT
+		}
+	}
+	#Backed Into a Corner
+	focus = {
+		id = ftt_backed_into_a_corner
+		icon = GFX_ftt_backed_into_a_corner
+		x = 4
+		y = 0
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+	#Any Guns We Have
+	focus = {
+		id = ftt_any_guns_we_have
+		icon = GFX_ftt_any_guns_we_have
+		x = 6
+		y = 1
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ftt_backed_into_a_corner  }
+	}
+
+	#EVERY Gun We Have
+	focus = {
+		id = ftt_every_gun_we_have
+		icon = GFX_ftt_every_gun_we_have
+		x = 6
+		y = 2
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ftt_any_guns_we_have  }
+	}
+
+	#Counting our Supplies
+	focus = {
+		id = ftt_counting_our_supplies
+		icon = GFX_ftt_counting_our_supplies
+		x = 6
+		y = 3
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ftt_every_gun_we_have  }
+	}
+
+	#Securing Ammo
+	focus = {
+		id = ftt_securing_ammo
+		icon = GFX_ftt_securing_ammo
+		x = 6
+		y = 4
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ftt_counting_our_supplies  }
+	}
+
+	#Take From the Citizens
+	focus = {
+		id = ftt_take_from_the_citizens
+		icon = GFX_ftt_take_from_the_citizens
+		x = 5
+		y = 5
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ftt_securing_ammo  }
+		mutually_exclusive = { focus = ftt_hope_for_the_best  }
+	}
+
+	#Hope for the Best
+	focus = {
+		id = ftt_hope_for_the_best
+		icon = GFX_ftt_hope_for_the_best
+		x = 7
+		y = 5
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ftt_securing_ammo  }
+		mutually_exclusive = { focus = ftt_take_from_the_citizens  }
+	}
+
+	#An Army, Finally Armed
+	focus = {
+		id = ftt_anarmyfinallyarmed
+		icon = GFX_ftt_anarmyfinallyarmed
+		x = 6
+		y = 6
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ftt_take_from_the_citizens  focus = ftt_hope_for_the_best  }
+	}
+
+	#A Starving State
+	focus = {
+		id = ftt_a_starving_state
+		icon = GFX_ftt_a_starving_state
+		x = 2
+		y = 1
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = ftt_backed_into_a_corner  }
+	}
+
+	#Buying some Bread
+	focus = {
+		id = ftt_buying_some_bread
+		icon = GFX_ftt_buying_some_bread
+		x = 2
+		y = 2
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = ftt_a_starving_state  }
+	}
+
+	#Sickles and Hammers
+	focus = {
+		id = ftt_sickles_and_hammers
+		icon = GFX_ftt_sickles_and_hammers
+		x = 2
+		y = 3
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = ftt_buying_some_bread  }
+	}
+
+	#Bakers of Liberation
+	focus = {
+		id = ftt_bakers_of_liberation
+		icon = GFX_ftt_bakers_of_liberation
+		x = 2
+		y = 4
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = ftt_sickles_and_hammers  }
+	}
+
+	#Following our Ideals
+	focus = {
+		id = ftt_following_our_ideals
+		icon = GFX_ftt_following_our_ideals
+		x = 1
+		y = 5
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = ftt_bakers_of_liberation  }
+	}
+
+	#Instate Food Rationing
+	focus = {
+		id = ftt_instate_food_rationing
+		icon = GFX_ftt_instate_food_rationing
+		x = 3
+		y = 5
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = ftt_bakers_of_liberation  }
+		mutually_exclusive = { focus = ftt_following_our_ideals  }
+	}
+
+	#A Little Less Starved
+	focus = {
+		id = ftt_a_little_less_starved
+		icon = GFX_ftt_a_little_less_starved
+		x = 2
+		y = 6
+		cost = 25
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = ftt_following_our_ideals  focus = ftt_instate_food_rationing  }
+	}
+
+	#A Ray of Hope
+	focus = {
+		id = ftt_a_ray_of_hope
+		icon = GFX_ftt_a_ray_of_hope
+		x = 4
+		y = 7
+		cost = 15
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = ftt_anarmyfinallyarmed  } prerequisite = { focus = ftt_a_little_less_starved  }
+		completion_reward = {
+			load_focus_tree = ROB_FTT_2
+		}
+	}
+
+}
